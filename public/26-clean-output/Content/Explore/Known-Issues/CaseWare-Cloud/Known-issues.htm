@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us" xml:lang="en-us">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Known issues in CaseWare Cloud</title>
+        <meta name="description" content="The following known issues affect the current version of CaseWare Cloud." />
+    </head>
+    <body>
+        <h1>Known issues in CaseWare Cloud</h1>
+        <p>This topic describes known issues when using CaseWare Cloud.</p>
+        <h2>Error when importing entities from a CSV&#160;file</h2>
+        <p>Importing 95 entities or more from a CSV&#160;file will result in an error. To work around this issue, import entities in batches of 94 or less. </p>
+        <p><a href="https://bugs.caseware.com/browse/CSERV-1132">CSERV-1132</a>
+        </p>
+        <h2 id="Errors">Errors with removed Time users</h2>
+        <p>Currently, users who are logged in and have their Time access revoked by an administrator will get multiple error messages when they attempt to access Time.</p>
+        <p><a href="https://bugs.caseware.com/browse/CORE-46707">CORE-46707</a>
+        </p>
+        <h2 id="Internet">Internet Explorer entity selection issue</h2>
+        <p>Users accessing Cloud using Internet Explorer may experience an issue in the Engagements page when attempting to create a new engagement. When users select New and the engagement type, they are asked to select an entity from a drop-down list, but it takes several clicks before the entity is selected and the drop-down list clears.  To work around this issue, use an alternative browser (such as Chrome or Firefox) when using the Engagements app.</p>
+        <p><a href="https://bugs.caseware.com/browse/COLB-444">COLB-444</a>
+        </p>
+        <h2>Error messages on the Working Papers page</h2>
+        <p>Inaccurate error messages are sometimes displayed when abandoning a sync copy or when clearing sync information on the Working Papers page. To work around this issue, wait a few minutes and then refresh the page to confirm the intended action took place.</p>
+        <p><a href="https://bugs.caseware.com/browse/COLB-347">COLB-347</a>
+        </p>
+    </body>
+</html>

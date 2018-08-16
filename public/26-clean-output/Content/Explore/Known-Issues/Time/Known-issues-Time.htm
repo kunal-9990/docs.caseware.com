@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us" xml:lang="en-us">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../../SkinSupport/MadCap.css" rel="stylesheet" type="text/css" /><title>Known issues in CaseWareCloud Time</title>
+        <meta name="description" content="The following known issues affect the current version of CaseWareCloud Time." />
+    </head>
+    <body>
+        <h1>Known issues in CaseWareCloud Time</h1>
+        <p>The following known issues affect the current version of CaseWareCloud Time. </p>
+        <h2>Invoice status may fail to update automatically after upgrading to Time 27.0 </h2>
+        <p style="font-weight: normal;">Invoices created before upgrading to Time 27.0 may fail to transition from <b>Finalized</b> to <b>Closed</b> automatically even if they have been marked as paid in QuickBooks Online (QBO). This issue only applies to invoices created more than 48 hours before upgrading to Time 27.0. </p>
+        <p style="font-weight: normal;">To work around this issue: </p>
+        <ol>
+            <li style="font-weight: normal;" value="1">Disable QBO integration.</li>
+            <li style="font-weight: normal;" value="2">Mark any affected invoices as <b>Closed</b>. </li>
+            <li style="font-weight: normal;" value="3">Re-enable QBO&#160;integration.</li>
+        </ol>
+        <p style="font-weight: normal;"> To learn more, see <a href="../../../Practice/Time-and-Billing/Integrate-Cloud-with-QuickBooks-Online.htm" class="MCXref_0">Integrate Cloud with QuickBooks Online</a> and  <a href="../../../Practice/Time-and-Billing/Send-an-invoice-to-a-client.htm#Close" class="MCXref_0">Close an invoice</a>.</p>
+        <p style="font-weight: normal;"><a href="https://bugs.caseware.com/browse/TIMECL-832">TIMECL-832</a>
+        </p>
+        <h2>Invoices exported to QuickBooks Online can be assigned inactive taxes </h2>
+        <p>During the export process, invoices can be incorrectly assigned inactive taxes. To work around this issue, manually select a new tax in&#160;QuickBooks Online for each affected invoice. </p>
+        <h2>Integration with Time desktop</h2>
+        <p>When using <b>Detail</b> view in the Time app, pending entries display the <b>Not submitted</b> icon(<img src="../../../Resources/Icons/time-integrated-not-submitted-icon-16x16.png" style="vertical-align: text-bottom;"></img>) instead of the <b>Pending</b>(<img src="../../../Resources/Icons/pending-entry-icon-16x16.png" style="vertical-align: text-bottom;"></img>) icon. To work around this issue, display the entries in <b>Basic</b> view.</p>
+        <p>
+            <img src="../../../Resources/Images/time-basic-view-640x232.png" />
+        </p>
+        <p><a href="https://bugs.caseware.com/browse/WTIME-7897">WTIME-7897</a>
+        </p>
+        <h2>Internet Explorer 11 issues</h2>
+        <p>There are a number of known issues when accessing Cloud using Internet Explorer 11: </p>
+        <ul>
+            <li value="1">
+                <p>Tags may change location when creating <b>On demand</b> email notifications for short hours.</p>
+            </li>
+            <li value="2">
+                <p>The <b>Analysis</b> page does not expand to fill available empty space when the chat window is dismissed.</p>
+            </li>
+            <li value="3">
+                <p>Error messages display incorrectly when adding a new work code in <b>Settings</b>.</p>
+            </li>
+            <li value="4">
+                <p>Columns do not appear as expected when printing generated WIP reports.</p>
+            </li>
+        </ul>
+        <p>To work around these issues, use another browser such as Chrome or Firefox. </p>
+        <p><a href="https://bugs.caseware.com/browse/TIMECL-20">TIMECL-20</a>
+        </p>
+        <p><a href="https://bugs.caseware.com/browse/TIMECL-42">TIMECL-42</a>
+        </p>
+        <p><a href="https://bugs.caseware.com/browse/WTIME-6846">WTIME-6846</a>
+        </p>
+        <p><a href="https://bugs.caseware.com/browse/WTIME-7314">WTIME-7314</a>
+        </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

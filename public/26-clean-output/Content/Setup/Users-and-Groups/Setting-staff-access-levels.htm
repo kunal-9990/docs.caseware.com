@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us" xml:lang="en-us">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../SkinSupport/MadCap.css" rel="stylesheet" type="text/css" /><title>Setting staff access levels</title>
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Administrators and managers can assign roles to users in order to grant them the appropriate levels of access and enable them to work on and view content in Cloud." />
+    </head>
+    <body>
+        <h1>Setting staff access levels</h1>
+        <ul class="topiccontents">
+            <li value="1"><a href="#Assigning-roles" class="selected">Assigning roles</a>
+            </li>
+            <li value="2"><a href="#Setting-access-to-Cloud-apps" class="selected">Setting access to Cloud apps</a>
+            </li>
+        </ul>
+        <p>If staff has been added using an imported list, you will need to configure their role settings and app access at either the individual or group level to ensure that they can perform their tasks and view the appropriate organization content.</p>
+        <h2 id="Assigning-roles">Assigning roles</h2>
+        <p>You can assign <b>system-wide</b> roles to users or groups. These roles grant users the ability to view or modify specific types of content across your entire organization. For example, the <i>Viewer</i> role grants users the ability to view files and activities contained in entities and leave comments, while the <i>Entity Access</i> role only lets users view information about the entity itself, such as when the entity was added or its organizational structure.</p>
+        <p>Alternatively, you can assign <b>entity-specific</b>, <b>file-specific</b> or <b>activity-specific</b> roles. You may want to assign a combination of these roles to a user or group.</p>
+        <p>For example, assume that you want certain staff to be able to view all client entities (and any activities or files associated with entities) but only edit a specific set of entities that they have specific duties on. You can do this by assigning the appropriate system-wide and entity roles to these employees.</p>
+        <p>Cloud comes with a set of built-in roles. You can view the details of these roles, or create new ones, from <b>Settings | Security | Role Permissions</b>.</p>
+        <p><b>To grant system-wide access</b>:</p>
+        <ol>
+            <li value="1">
+                <p>Ensure that you have <i>Staff Admin</i> role or equivalent privileges.</p>
+            </li>
+            <li value="2">
+                <p>From the Cloud menu, select <b>Groups</b> or <b>Staff</b>.</p>
+            </li>
+            <li value="3">
+                <p>Select the user or group you want to edit the roles for, then select <b>Edit</b>(<img src="../../Resources/Icons/Edit-16x16.png" style="vertical-align: text-bottom;" /> ).</p>
+            </li>
+            <li value="4">
+                <p>Select the <b>System-Wide Roles</b> tab and select the appropriate roles.</p>
+                <p>
+                    <img src="../../Resources/Images/staff-edit-edit-dialog-system-wide-roles.png" />
+                </p>
+            </li>
+            <li value="5">
+                <p>Select <b>Save</b>.</p>
+            </li>
+        </ol>
+        <p>The user or group’s overall access settings are updated.</p>
+        <p><b>To grant client-wide access:</b>
+        </p>
+        <ol>
+            <li value="1">
+                <p>Ensure that you have the <i>Owner</i> role or equivalent privileges to the entity.</p>
+            </li>
+            <li value="2">
+                <p>From the Cloud menu, select <b>Groups</b>, <b>Staff</b> or <b>Contacts</b>.</p>
+            </li>
+            <li value="3">
+                <p>Select the user or group you want to edit the roles for, then select <b>Ellipsis (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;" />) | Assign to Entities</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/Screenshots/Set-entity-access-levels-group-632x167.png" style="border: 1px solid #3f66a3;" alt="Select the Assign to Entities command." />
+                </p>
+            </li>
+            <li value="4">
+                <p>Select the entities you want the user to have access to, then select <b>Assign Roles to (#)</b> and the appropriate role. Any roles that users already have due to previous settings appear under <b>Inherited</b>.</p>
+                <p>
+                    <img src="../../Resources/Project Files/StaffAndContacts/Images/Edit-Entity-Specific-Roles-630-369.png" style="border: 1px solid #3f66a3;" alt="Select a role to grant it to your user or group." />
+                </p>
+            </li>
+            <li value="5">
+                <p>Select <b>Share</b>.</p>
+            </li>
+        </ol>
+        <p>The selected users or groups’ access levels are updated.</p>
+        <p><b>To grant access to selected content:</b>
+        </p>
+        <ol>
+            <li value="1">
+                <p>Ensure that you have the <i>Owner</i> role or equivalent rights to the file or activity.</p>
+            </li>
+            <li value="2">
+                <p>Select the files or activities you want to assign roles for, then select <b>Share</b> (<img src="../../Resources/Icons/Share-16x16.png" />).</p>
+                <p>
+                    <img src="../../Resources/Project Files/Activities/Images/Share-activity-or-file-630x62.png" style="border: 1px solid #3f66a3;" alt="Select the Share icon." />
+                </p>
+            </li>
+            <li value="3">
+                <p>Select the users or groups you want to have access to the file or activity, then select <b>Assign Roles to (#)</b> and the appropriate roles. Any roles that users already have due to previous settings appear under <b>Inherited</b>.</p>
+                <p>
+                    <img src="../../Resources/Images/Screenshots/Share-file-or-activity-assign-roles-630x208.png" style="border: 1px solid #3f66a3;" alt="Select a role to grant it to your user or group." />
+                </p>
+            </li>
+            <li value="4">Select <b>Share</b>.</li>
+        </ol>
+        <p>The selected users or groups’ access levels are updated.</p>
+        <h2 id="Setting-access-to-Cloud-apps"><a name="Setting"></a>Setting access to Cloud apps</h2>
+        <p>Managing app access with CaseWare Cloud is easy. App access can be assigned to staff or contacts individually, or by using a group.</p>
+        <p>Some apps, such as CaseWareCloud Time, have permissions associated with them. For example, to access the <b>Billing</b> page, a user needs the <i>Process</i>permission which is associated with the Time app. Any user with access to an app can be assigned one of these permissions, and they are added or removed in the same ways as app access - either individually using the <b>Staff</b> and <b>Contact</b> pages, or through a group.</p>
+        <p>
+            <img src="../../Resources/Images/personal-settings-apps-time-781x265.png" alt="The Apps tab of the Edit user dialog displays which apps a user has access to, and what roles have been granted by those apps. " />
+        </p>
+        <p>From the <b>Staff</b> or <b>Contacts</b> page, you can manage app access and permissions on an individual basis. You might do this if you wanted to grant app access to a single user. For example, if your organization hires consultants, you might want to grant them access to some apps, while restricting their access to others.</p>
+        <p>In most cases, using groups is the quickest way to manage app access and permissions. When you assign an app to a group, each member of that group inherits a license for that app. For example, you could assign the Working Papers app to the <b>All Staff</b> group to quickly give every member of your organization access to that app. You could also modify app assignments for the <b>All Contacts</b> group to restrict which apps contacts can access when they log in.  If you have sufficient licenses, any new member added to a group in the future will gain access to any app or role assigned to that group.</p>
+        <p><b>To set app access for a user or group:</b>
+        </p>
+        <ol>
+            <li value="1">
+                <p style="font-style: normal;">To set app access for a staff account, ensure you have the <i>Staff Admin</i> role. To set app access for a contact, ensure you have the <i>Entities Admin</i> role. Users with either the <i>Staff Admin</i> role or the <i>Entities Admin</i> role can set app access for groups. </p>
+            </li>
+            <li value="2">
+                <p>From the Cloud menu, select <b>Groups</b>, <b>Staff</b>, or <b>Contacts</b>.</p>
+            </li>
+            <li value="3">
+                <p>Select the user or group you want to set the access levels for, then select <b>Edit</b> (<img src="../../Resources/Icons/Edit-16x16.png" style="vertical-align: text-bottom;" />).</p>
+                <p>
+                    <img src="../../Resources/Images/Screenshots/Select-Edit-Group-630x66.png" alt="Select Edit on a user or group to access their settings" />
+                </p>
+            </li>
+            <li value="4">
+                <p>Select <b>Apps</b>, then choose the appropriate options.</p>
+                <p>
+                    <img src="../../Resources/Images/groups-edit-apps-872x519.png" />
+                </p>
+            </li>
+            <li value="5">
+                <p>Select <b>Save</b>.</p>
+            </li>
+        </ol>
+        <p>The user or group’s app access levels are updated.</p>
+    </body>
+</html>

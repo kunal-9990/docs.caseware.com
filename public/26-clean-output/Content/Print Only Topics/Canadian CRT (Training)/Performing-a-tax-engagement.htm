@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-us" xml:lang="en-us">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Performing a tax engagement</title>
+    </head>
+    <body>
+        <h1>Performing a tax engagement</h1>
+        <p>Canadian CRT enables you to perform the required tasks of a tax engagement along with the Compilation and Review functionality.</p>
+        <ul>
+            <li value="1">
+                <p>complete the Tax Optimizer checklist</p>
+            </li>
+            <li value="2">
+                <p>upload your client's tax data</p>
+            </li>
+            <li value="3">
+                <p>complete the  <b>Tax Preparer</b> profile</p>
+            </li>
+            <li value="4">
+                <p>complete the provincial and federal forms using the Tax <b>worksheets</b></p>
+            </li>
+            <li value="5">
+                <p>run a diagnostic check to ensure there are no outstanding errors</p>
+            </li>
+            <li value="6">
+                <p>file the return electronically via EFILE or create a PDF for your client if required</p>
+            </li>
+        </ul>
+        <h2>Setting up the tax engagement</h2>
+        <p>As with the Compilation and Review engagements, a tax engagement starts with an Optimizer checklist - in this case, the <b>Tax Optimizer</b>. </p>
+        <p class="note inline"><b>Note</b>: This checklist will only display when you have specified in the first Optimizer that you will be performing a tax engagement.</p>
+        <p>
+            <img src="../../Resources/Images/Tax-optimizer-contents.png" />
+        </p>
+        <p>Complete these procedures as follows:</p>
+        <table>
+            <col style="width: 50%" />
+            <col style="width: 50%" />
+            <tbody>
+                <tr>
+                    <th>Procedure</th>
+                    <th>Response</th>
+                </tr>
+                <tr>
+                    <td>Is the corporation filing an amended tax return?</td>
+                    <td><b>Yes</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Is this corporation a member of a partnership?</td>
+                    <td><b>No</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Is this corporation part of an association or related group?</td>
+                    <td><b>No</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Does amalgamation / dissolution / year-end close, etc. apply?</td>
+                    <td><b>No</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Is the corporation a resident of Canada?</td>
+                    <td><b>Yes</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Province of jurisdiction of the corporation</td>
+                    <td><b>Ontario</b>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Complete the document with the details of the entity you're performing the tax engagement for, as well as the characteristics of the engagement.</p>
+        <p>The engagement will automatically populate with the appropriate provincial and federal tax forms, as well as Review and Compilation – Canada's worksheets. These documents will appear in the <b>Document Map</b> on the left panel. You can choose to complete the new documents as they appear with each answered procedure, or finish the checklist and complete the added documents later.</p>
+        <h2>Import tax data</h2>
+        <p>Cdn CorpRevTax gives you a few different ways to import the engagement's tax data, Open any document in the Tax section.</p>
+        <p>Select <b>Import</b> to view the import options.</p>
+        <p class="note inline"><b>Note</b>: If you have already imported a trial balance and assigned groupings for a Compilation or Review engagement, the same values will automatically update the tax engagement's GIFI forms.</p>
+        <p>
+            <img src="../../Resources/Images/Tax-import.png" />
+        </p>
+        <p>&#160;</p>
+        <h4>GIFI import</h4>
+        <p>Select this option to browse your computer for a GIFI output file from your desktop accounting package.</p>
+        <h4>TaxPrep CSV Import</h4>
+        <p>Select this option to upload a .csv output file generated from <b>TaxPrep v2017 v1.1</b>.</p>
+        <p><b>To export a .csv file from TaxPrep</b>:</p>
+        <ol>
+            <li value="1">Open the client file in TaxPrep.</li>
+            <li value="2">Perform a <b>Roll Forward</b>.</li>
+            <li value="3">Select <b>File | Export Tax Return...</b>.</li>
+            <li value="4">Make sure the File Type is set to <b>.csv</b>, then select <b>OK</b>.</li>
+            <li value="5">Enter a file name and path, then select <b>Save</b>.</li>
+        </ol>
+        <h4>T2 Auto-fill</h4>
+        <p>If you've registered for the CRA's <a href="https://www.canada.ca/en/revenue-agency/services/e-services/e-services-businesses/about-t2-auto-fill.html">T2 Auto-fill</a> program, you can import the engagement's tax data automatically based on the client's previously filed returns. </p>
+        <p><b>To transfer tax engagement data from the CRA</b>:</p>
+        <ol>
+            <li value="1">
+                <p>In any open Tax document, select <b>Import | T2 Auto-fill</b>.</p>
+            </li>
+            <li value="2">
+                <p>Select <b>Yes</b> in the following prompt.</p>
+            </li>
+            <p>
+                <img src="../../Resources/Images/T2-auto-fill-prompt.png" alt="The prompt that redirects you to the CRA website when you select the T2 Auto-fill option." />
+            </p>
+            <li value="3">
+                <p>The CRA website opens in a new browser tab. Log into your CRA account using your credentials. On the request confirmation page, select <b>Next</b>.</p>
+            </li>
+            <li value="4">
+                <p>The data from CRA is now linked. select the data types you want to import into your engagement, then select <b>Download</b>.</p>
+            </li>
+            <p>
+                <img src="../../Resources/Images/T2-autofill-data-types.png" alt="Select the types of tax data you want to import from the CRA." />
+            </p>
+            <li value="5">
+                <p>Before you can complete the import, you will be asked to compare the values from the CRA against the existing values that have already been entered for the fields, if any. The CRA values are displayed in the left column, while the engagement's current values are displayed on the right. For each line, select the checkbox on the right to use the CRA value. To use the CRA values for all lines, select the large checkbox at the top of the modal. When you're done, select <b>Transfer</b>.</p>
+            </li>
+            <p>
+                <img src="../../Resources/Images/T2-autofill-select-values.png" alt="Before you can complete the T2 Auto-fill, you'll need to confirm whether or not there are any existing values you want to retain." />
+            </p>
+            <li value="6">
+                <p>The values are transferred to your engagement and a confirmation modal is displayed. Select <b>5 Year History</b> to review the historical data, or select <b>Close</b>.</p>
+            </li>
+        </ol>
+        <p>&#160;</p>
+        <h4>Download TaxBridge</h4>
+        <p>TaxBridge is an add-on for CaseWare Working Papers that enables you to link a Working Papers engagement file to a Cloud entity in order to import your engagement's tax data into your Cloud apps. You should use this option if you already have a Working Papers engagement file that contains GIFI data.</p>
+        <p>Select <b>Download TaxBridge</b> from the Import menu to download the latest version of TaxBridge. </p>
+        <p><b>To create a link for the TaxBridge</b>:</p>
+        <ol>
+            <li value="1">
+                <p>Open and run the TaxBridge install package you downloaded from CaseWare Cloud.</p>
+            </li>
+            <li value="2">
+                <p>Open your client file in CaseWare Working Papers.</p>
+            </li>
+            <li value="3">
+                <p>In the Document Manager,  right click and select <b>New | Document Link</b>.</p>
+            </li>
+            <p>
+                <img src="../../Resources/Project Files/Tax/Images/Tax-new-document-link-633x245.png" />
+            </p>
+            <li value="4">
+                <p>In the <b>New Document Link dialog</b>, enter <i>TaxBridge</i> as the Name. In the <b>File/URL</b> field enter the following address: <i>cw:program/scripts/taxbridge/index.html</i>.</p>
+                <p>
+                    <img src="../../Resources/Project Files/Tax/Images/Tax-new-document-link-dialog-643x477.png" />
+                </p>
+            </li>
+            <li value="5">
+                <p>Click <b>OK</b> to add the document link.</p>
+            </li>
+            <li value="6">
+                <p>Double-click to open the link.</p>
+            </li>
+        </ol>
+        <p>With the link created, select <b>TaxBridge</b> from the Document Manager. This will open TaxBridge in your Working Papers browser. Follow the instructions in TaxBridge to transfer the data.</p>
+        <p>
+            <img src="../../Resources/Images/TaxBridge.png" />
+        </p>
+        <h2>Complete the Tax Preparer profile document</h2>
+        <p>The <b>TPP - Tax Preparer Profile</b> document requires you to enter key information about the entity performing the tax engagement.</p>
+        <p>
+            <img src="../../Resources/Images/Tax-preparer-profile.png" />
+        </p>
+        <p>Once this document is completed and signed off on, you're ready to begin your tax engagement work.</p>
+        <h2>Complete the tax documents</h2>
+        <p>With the tax data imported and the profile documents completed, you're ready to begin completing the engagement's federal and provincial tax forms. Since you completed the Tax Optimizer document, Review and Compilation – Canada should only list the forms that are relevant to your tax engagement. </p>
+        <p>To see the complete list of available tax forms, not just the ones that Review and Compilation – Canada has determined are relevant to your engagement, select the <b>Edit</b> icon (<img src="../../Resources/Images/Tax-edit-icon.png" />) on the Documents page, or open the <b>Tax Forms List</b> document. Use your browser's search function (<b>ctrl-f</b>) to help locate specific documents.</p>
+        <p>Your selections also determine which  <b>workcharts</b>, if any, are listed. Workcharts are documents designed to streamline your engagement work. </p>
+        <h3>Navigate between related tax documents</h3>
+        <p>Review and Compilation – Canada makes it easy to navigate between workcharts and their linked schedule documents. The CompTax interface offers two options for moving between these documents.</p>
+        <h4>Jump To Source</h4>
+        <p>When you select a field that has a single source, you will see this dialog:</p>
+        <p>
+            <img src="../../Resources/Images/Jump-to-source-613x191.png" />
+        </p>
+        <div class="pagebreak">
+        </div>
+        <p>When you select Jump To Source,  the source document opens and jumps to the appropriate line, with the exact source field highlighted in flashing blue.</p>
+        <p>
+            <img src="../../Resources/Images/Tax-highlighted-field-744x404.png" />
+        </p>
+        <h4>Viewer</h4>
+        <p>In documents where an entire row of data is derived from one specific document, you’ll see a <b>Viewer</b> icon (<img src="../../Resources/Images/Viewer-icon-25x23.png" />) to the right of the row. This feature opens the linked document in a pop-up display without opening a new browser window. For example, each class listed in the <b>S8 - Capital Class Allocation</b> document is linked to its corresponding page from the CCA Worksheet.</p>
+        <p>
+            <img src="../../Resources/Images/CompTax-select-viewer-1330x450.png" />
+        </p>
+        <h2>Example workflow</h2>
+        <p>In this example, your client has purchased a new fixed asset, in this case, a newly purchased building. The <b>S8 - CCA Workchart</b> is used to manage fixed assets, so this is the workchart you would select.</p>
+        <p>With the workchart open, you will want to select the appropriate class for the firm's new fixed asset. Select the <b>add</b> icon (<img src="../../Resources/Images/Tax-add-icon.png" />) in the CCA Class field.</p>
+        <p>
+            <img src="../../Resources/Images/Tax-add-asset-class.png" />
+        </p>
+        <p>Select the appropriate CCA class, then select <b>OK</b>.</p>
+        <p>
+            <img src="../../Resources/Images/Tax-select-asset-class.png" />
+        </p>
+        <div class="pagebreak">
+        </div>
+        <p>Scroll to the bottom of the workchart, then select <b>add</b> (<img src="../../Resources/Images/SE-add-icon.png" />). On the new line, select the <b>Viewer</b> icon (<img src="../../Resources/Images/Viewer-icon-25x23.png" />). A new modal opens, and you can enter the new asset's information.</p>
+        <p>
+            <img src="../../Resources/Images/Tax-enter-new-asset-info.png" />
+        </p>
+        <h2>Correct outstanding errors or issues</h2>
+        <p>If there are any outstanding issues with your return, you will be unable to file it. Select the  <b>DIAG - Diagnostics Workchart</b> document to view the engagement's outstanding issues. Select <b>E-File Diagnostics</b> to filter the list of issues to only display those that will prevent an electronic filing.</p>
+        <p>
+            <img src="../../Resources/Images/Diagnostics-workchart.png" />
+        </p>
+        <p>To view and fix an issue, select it, then select <b>Jump To</b>.</p>
+        <p>
+            <img src="../../Resources/Images/Diagnostic-jump-to-issue.png" />
+        </p>
+        <h2>E-filing the return to the CRA</h2>
+        <p>With the tax data imported, the engagement work complete, and all outstanding issues fixed, you can begin to plan your electronic filing via the CRA's <b>EFILE</b> program. Select <b>EFILE</b> from the top menu.</p>
+        <p class="note inline"><b>Note</b>: Review and Compilation – Canada currently does not enable you to submit an <b>RC4649 - Country by Country Return</b> form.</p>
+        <p>
+            <img src="../../Resources/Images/Tax-EFILE.png" />
+        </p>
+        <p>From the <b>EI - Efile Information</b> document, you can file your return to the CRA via one of two sets of credentials - if your firm is a Certified Tax Preparer, you can enter your CRA <b>Login Information</b>; alternatively, you can enter a <b>WACode</b> (Web Access Code) provided by the client.</p>
+        <p>If you require a Web Access Code and have not yet been provided with one, select <b>WAC - Web Access Code Online Request</b> and complete the request form.</p>
+        <h2>Printing the return</h2>
+        <p>If your client requests a copy of the return for their records, you can create a PDF file which can then be saved to disk and shared with the client electronically</p>
+        <p>Select <b>Print</b> from any open tax document to select the document you want to print.</p>
+        <p>
+            <img src="../../Resources/Images/Tax-print-options.png" />
+        </p>
+    </body>
+</html>

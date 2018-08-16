@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us" xml:lang="en-us">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Time role requirements</title>
+    </head>
+    <body>
+        <h1>Time role requirements</h1>
+        <p>Time has an integrated security model with CaseWare Cloud. The existing object types in Cloud will extend to features in Time. </p>
+        <p>The following table outlines the role requirements to perform actions in Time.</p>
+        <table class="table table-striped">
+            <col />
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Area</th>
+                    <th>Action</th>
+                    <th>Minimum built-in role</th>
+                    <th>Permissions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4">Time and Expense</td>
+                    <td>Entering own</td>
+                    <td><i>Time and Expense - Own</i>
+                    </td>
+                    <td>No permissions required</td>
+                </tr>
+                <tr>
+                    <td>Entering on client</td>
+                    <td><i>Entity Access</i> role on entity</td>
+                    <td><b>Read</b> permission on <b>Entity - Summary</b> object</td>
+                </tr>
+                <tr>
+                    <td>Entering for other staff</td>
+                    <td><i>Time and Expense - All</i> role</td>
+                    <td><b>Read</b> permission on <b>Staff - Details</b> object</td>
+                </tr>
+                <tr>
+                    <td>Editing pending entries for other staff</td>
+                    <td><i>Time and Expense - All</i> role</td>
+                    <td><b>Edit</b> permission on <b>Time and Expense - All Staff</b> object</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Analysis</td>
+                    <td>Viewing own</td>
+                    <td>-</td>
+                    <td>No permissions required</td>
+                </tr>
+                <tr>
+                    <td>Viewing other staff</td>
+                    <td><i>Staff Admin</i> role</td>
+                    <td><b>Read</b> permission on <b>Staff - Details</b> object</td>
+                </tr>
+                <tr>
+                    <td>Filtering by staff</td>
+                    <td>-</td>
+                    <td>No permissions required.</td>
+                </tr>
+                <tr>
+                    <td>Filtering by client</td>
+                    <td><i>Entity Access</i> role on entity</td>
+                    <td><b>Read</b> permission on <b>Entity - Summary</b> object</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Staff rates</td>
+                    <td>Viewing staff rates</td>
+                    <td><i>Staff Admin</i> role</td>
+                    <td><b>Read</b> permission on <b>Staff - Details</b> object</td>
+                </tr>
+                <tr>
+                    <td>Editing staff rates</td>
+                    <td><i>Staff Admin</i> role</td>
+                    <td><b>Edit</b> permission on <b>Staff - Details</b> object</td>
+                </tr>
+                <tr>
+                    <td>Work codes</td>
+                    <td>Viewing or Editing Work Codes</td>
+                    <td><i>Settings Admin</i> role</td>
+                    <td><b>Edit</b> permission on <b>Organization Profile</b> object</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

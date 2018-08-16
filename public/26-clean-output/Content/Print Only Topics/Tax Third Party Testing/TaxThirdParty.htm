@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us" xml:lang="en-us">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>CompTax Third Party Testing</title>
+    </head>
+    <body>
+        <h3>Introduction</h3>
+        <p>This guide contains instructions on exporting data from a TaxPrep file, sanitizing the data to remove proprietary information, and sending the sanitized data to CaseWare for testing purposes.</p>
+        <h3>Requirements</h3>
+        <p>You will need to have <b>Corporate TaxPrep 2017 v1.1</b> installed on your system.</p>
+        <p>You will also need the <b>SanitizeCSV.zip</b> file package and the <b>comprehensive.xuf</b> filter file. Both can be found in the email you received from your point of contact at CaseWare.</p>
+        <h3>Setup</h3>
+        <p>Before you can export your data from TaxPrep. You’ll need to install the Xpress filter using the .xuf file contained in the email.</p>
+        <h4>Installing the Filter</h4>
+        <ol>
+            <li value="1">
+                <p>If TaxPrep is currently open, close it.</p>
+            </li>
+            <li value="2">
+                <p>Download the <b>comprehensive.xuf</b> file from the email you received from CaseWare.</p>
+            </li>
+            <li value="3">
+                <p>Open Windows Explorer and copy the file to the following folder path:</p>
+                <p><i>%userprofile%\Documents\CCH\T2 Taxprep 2017-1\Xpress</i>
+                </p>
+            </li>
+        </ol>
+        <p>You have installed the required Xpress filter, and will be able to locate it from the TaxPrep interface.</p>
+        <h3>Exporting from TaxPrep</h3>
+        <p>With the Xpress filter installed, you can now export your data in the required .csv format.</p>
+        <h4>Exporting TaxPrep data in .csv format</h4>
+        <ol>
+            <li value="1">
+                <p>Open the desired client file in TaxPrep.</p>
+            </li>
+            <li value="2">
+                <p>Select <b>File | Export Tax Return…</b>.</p>
+            </li>
+            <li value="3">
+                <p>In the Export Tax Return dialog, select <b>Xpress Filters...</b>...<br /><img src="../../Resources/Images/Xpress-filters-taxprep.png" /><br /></p>
+            </li>
+            <li value="4">
+                <p>In the Cells to export pane, select <b>comprehensive</b>, then select <b>OK</b>.<br /><img src="../../Resources/Images/Comprehensive-filter-taxprep.png" /><br /></p>
+            </li>
+            <li value="5">
+                <p>Make sure that the File Type is set to <b>.csv</b>, then select <b>OK</b>.</p>
+            </li>
+            <li value="6">
+                <p>Enter a file name and path, then select <b>Save</b>.</p>
+            </li>
+        </ol>
+        <h3>Sanitizing the Data</h3>
+        <p>Before you send the data to CaseWare, please sanitize the data to remove all proprietary references. This will involve installing Node.js and running a sanitization script file.</p>
+        <h4>Installing Node.js</h4>
+        <ol>
+            <li value="1">
+                <p>Go to the <a href="https://nodejs.org/">Node.js</a> site and download the appropriate install package.<br /></p>
+            </li>
+            <li value="2">
+                <p>Run the install package and complete the installation wizard.</p>
+            </li>
+            <li value="3">
+                <p>Download and unpack the <b>SanitizeCSV.zip</b> package anywhere on your computer.</p>
+            </li>
+        </ol>
+        <h4>The sanitization script</h4>
+        <p>The sanitization file contained in the <b>SanitizeCSV</b> package runs a Node.js script that produces two sets of sanitized files:</p>
+        <ul>
+            <li value="1">
+                <p>The files saved to the <b>/output</b> folder have all proprietary information removed, but keep the original filenames intact.</p>
+            </li>
+            <li value="2">
+                <p>The files saved to the <b>/output_anonymized</b> folder have all proprietary information removed, and anonymize the filenames. These are the files you will send to CaseWare for testing.</p>
+            </li>
+        </ul>
+        <h4>Running the sanitization script</h4>
+        <ol>
+            <li value="1">
+                <p>Copy your .csv output files to the <b>input</b> subfolder of the extracted <b>SanitizeCSV</b> folder.</p>
+            </li>
+            <li value="2">
+                <p>In the main SanitizeCSV folder, double-click <b>run.bat</b>. This will open a command prompt window with a confirmation message.<br /><img src="../../Resources/Images/Sanitization-script.png" /><br /></p>
+            </li>
+            <li value="3">
+                <p>Press <b>Enter</b> to run the script.</p>
+            </li>
+            <li value="4">
+                <p>Open a file in the <b>/output_anonymized</b> folder in a text editor such as Excel to ensure that all proprietary data has been removed and that the filenames have been anonymized. Repeat as desired for the remaining files.</p>
+            </li>
+            <li value="5">
+                <p>In Windows Explorer, compress the <b>/output_anonymized</b> folder into a <b>.zip file</b>.</p>
+            </li>
+            <p class="note inline"><b>Note</b>: Keep the files in the /output folder for reference and testing purposes.</p>
+            <li value="6">
+                <p>Send the compressed data to your point of contact at CaseWare.</p>
+            </li>
+        </ol>
+        <h3>Contacts</h3>
+        <table class="table table-unbordered">
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td><b>Sandra Park</b>
+                    </td>
+                    <td>sandra.park@caseware.com</td>
+                    <td>416-867-9504 x1224</td>
+                </tr>
+                <tr>
+                    <td><b>Bucky Nguyen</b>
+                    </td>
+                    <td>bucky.nguyen@caseware.com</td>
+                    <td>416-867-9504 x1147
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Ashley Pereira</b>
+                    </td>
+                    <td>ashley.pereira@caseware.com</td>
+                    <td>416-867-9504 x1155</td>
+                </tr>
+                <tr>
+                    <td><b>Alnoor Ebrahim</b>
+                    </td>
+                    <td>alnoor.ebrahim@caseware.com</td>
+                    <td>416-867-9504 x1337</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
