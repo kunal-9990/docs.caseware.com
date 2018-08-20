@@ -1,5 +1,4 @@
 let mix = require('laravel-mix');
-const devUrl = 'http://127.0.0.1:8000';
 
 /*
  |--------------------------------------------------------------------------
@@ -12,6 +11,5 @@ const devUrl = 'http://127.0.0.1:8000';
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css')
-   .browserSync(devUrl);
+mix.react('resources/assets/js/app.js', 'public/js')
+   .sass('resources/assets/sass/app.scss', 'public/css');
