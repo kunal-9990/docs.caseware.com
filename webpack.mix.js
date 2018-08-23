@@ -1,5 +1,8 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+
 const BROWSERSYNC_URL = '127.0.0.1:8000';
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,6 +14,25 @@ const BROWSERSYNC_URL = '127.0.0.1:8000';
  |
  */
 
-mix.react('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css')
-   .browserSync(BROWSERSYNC_URL);
+mix.webpackConfig({
+  module: {
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.js/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  plugins: [
+    new StyleLintPlugin({
+      files: './resources/assets/sass/**/*.scss',
+    }),
+  ],
+});
+
+mix
+  .react('resources/assets/js/app.js', 'public/js')
+  .sass('resources/assets/sass/app.scss', 'public/css')
+  .browserSync(BROWSERSYNC_URL);

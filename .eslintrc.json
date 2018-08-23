@@ -1,0 +1,19 @@
+{
+    "extends": "airbnb",
+    "rules": {
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    },
+    "overrides": [
+        {
+          "files": [ "bin/*.js", "lib/*.js" ],
+          "excludedFiles": "*.bootstrap.js"
+        }
+    ],
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "jquery": true
+    }
+}
