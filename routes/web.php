@@ -12,6 +12,11 @@
 */
 $current_version = env("CURRENT_VERSION");
 
+//home
+Route::get('/', 'PageController@home');
+
+//topics
 Route::get('/'.$current_version.'/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic');
 
+//sub category
 Route::get('/'.$current_version.'/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');

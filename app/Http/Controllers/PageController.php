@@ -24,5 +24,7 @@ class PageController extends Controller
         return view('pages.topic', compact('maincontentarea'));
     }
 
-
+    function home() {
+        return view('welcome');
+    }
 }

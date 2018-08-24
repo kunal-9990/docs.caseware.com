@@ -16,10 +16,19 @@
         "browser-sync": "^2.24.6",
         "browser-sync-webpack-plugin": "^2.2.2",
         "cross-env": "^5.1",
+        "eslint": "^5.4.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-loader": "^2.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-jsx-a11y": "^6.1.1",
+        "eslint-plugin-react": "^7.11.1",
         "jquery": "^3.2",
         "laravel-mix": "^1.0",
         "lodash": "^4.17.4",
         "react": "^15.4.2",
-        "react-dom": "^15.4.2"
+        "react-dom": "^15.4.2",
+        "stylelint": "^9.5.0",
+        "stylelint-config-standard": "^18.2.0",
+        "stylelint-webpack-plugin": "^0.10.5"
     }
 }
