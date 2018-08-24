@@ -7,6 +7,11 @@ use Sunra\PhpSimple\HtmlDomParser;
 
 class PageController extends Controller
 {
+    //default
+    function home() {
+        return view('default');
+    }
+
     // topic
     function showTopic($lang, $category, $subcategory, $topic){
         $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'26-clean-output/Content/'.$category."/".$subcategory."/".$topic.".htm" );
@@ -33,9 +38,5 @@ class PageController extends Controller
         $maincontentarea = $dom->find('div[class=maincontentarea]', 0);
 
         return view('pages.topic', compact('maincontentarea'));
-    }
-
-    function home() {
-        return view('welcome');
     }
 }
