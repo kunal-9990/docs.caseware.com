@@ -9,7 +9,7 @@ class PageController extends Controller
 {
     //default
     function home() {
-        return view('default');
+        return view('partials.test');
     }
 
     // topic
