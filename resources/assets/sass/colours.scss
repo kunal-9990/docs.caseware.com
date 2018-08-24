@@ -1,0 +1,186 @@
+// $text-black: #32363a;
+// $white: #ffffff;
+// $dark-blue: #002d72;
+// $yellow: #c99700;
+// $light-blue: #0085ad;
+// $red: #a81a4c;
+// $purple: #800080;
+// $orange: #e57200;
+// $green: #009933;
+// $light-grey: #c1c6c8;
+// $really-light-grey: #f6f6f6;
+// $dark-gray: #323232;
+
+// $cloud-light-blue: #4263eb;
+// $workingpapers-purple: #563aaf;
+// $review-teal: #03a59d;
+
+// // Text Colours
+// .c--black {
+//     color: $text-black;
+// }
+// .c--white {
+//     color: $white;
+// }
+// .c--dark-blue {
+//     color: $dark-blue;
+// }
+// .c--yellow {
+//     color: $yellow;
+// }
+// .c--light-blue {
+//     color: $light-blue;
+// }
+// .c--light-grey {
+//     color: $light-grey;
+// }
+// .c--red {
+//     color: $red;
+// }
+// .c--purple {
+//     color: $purple;
+// }
+// .c--orange {
+//     color: $orange;
+// }
+// .c--green {
+//     color: $green;
+// }
+// .c--cloud-light-blue {
+//     color: $cloud-light-blue;
+// }
+// .c--workingpapers-purple {
+//     color: $workingpapers-purple;
+// }
+// .c--review-teal {
+//     color: $review-teal;
+// }
+
+// // Background Colours
+// .bg--white {
+//     background: $white;
+// }
+// .bg--dark-blue {
+//     background: $dark-blue;
+// }
+// .bg--black {
+//     background: $text-black;
+// }
+// .bg--yellow {
+//     background: $yellow;
+// }
+// .bg--light-blue {
+//     background: $light-blue;
+// }
+// .bg--light-grey {
+//     background: $light-grey;
+// }
+// .bg--red {
+//     background: $red;
+// }
+// .bg--purple {
+//     background: $purple;
+// }
+// .bg--orange {
+//     background: $orange;
+// }
+// .bg--green {
+//     background: $green;
+// }
+// .bg--really-light-grey {
+//     background: $really-light-grey;
+// }
+// .bg--cloud-light-blue {
+//     background: $cloud-light-blue;
+// }
+// .bg--workingpapers-purple {
+//     background: $workingpapers-purple;
+// }
+// .bg--review-teal {
+//     background: $review-teal;
+// }
+// .bg--dark-gray {
+//     background: $dark-gray;
+// }
+
+// .bg--grad--dark-blue {
+//     background-color: $dark-blue;
+//     background-image: linear-gradient(
+//         45deg,
+//         lighten($dark-blue, 4%),
+//         $dark-blue
+//     );
+// }
+
+// // Used on solutions inner pages
+// section:not(.bg--dark-blue):not(.no-head-style) .container > h1,
+// section.pane-points h3,
+// section.solution-diagram h3 {
+//     body.page--gold & {
+//         color: $yellow;
+//     }
+//     body.page--dark-blue & {
+//         color: $dark-blue;
+//     }
+//     body.page--light-grey & {
+//         color: $light-grey;
+//     }
+//     body.page--purple & {
+//         color: $purple;
+//     }
+//     body.page--orange & {
+//         color: $orange;
+//     }
+//     body.page--light-blue & {
+//         color: $light-blue;
+//     }
+//     body.page--red & {
+//         color: $red;
+//     }
+//     body.page--cloud-light-blue & {
+//         color: $cloud-light-blue;
+//     }
+//     body.page--workingpapers-purple & {
+//         color: $workingpapers-purple;
+//     }
+//     body.page--review-teal & {
+//         color: $review-teal;
+//     }
+//     body.page--grey & {
+//         color: #c1c6c8;
+//     }
+// }
+
+// .big-btn.active,
+// .solution-product.active {
+//     body.page--gold & {
+//         background-color: $yellow;
+//     }
+//     body.page--dark-blue & {
+//         background-color: $dark-blue;
+//     }
+//     body.page--light-grey & {
+//         background-color: $light-grey;
+//     }
+//     body.page--orange & {
+//         background-color: $orange;
+//     }
+//     body.page--purple & {
+//         background-color: $purple;
+//     }
+//     body.page--light-blue & {
+//         background-color: $light-blue;
+//     }
+//     body.page--red & {
+//         background-color: $red;
+//     }
+//     body.page--cloud-light-blue & {
+//         background-color: $cloud-light-blue;
+//     }
+//     body.page--workingpapers-purple & {
+//         background-color: $workingpapers-purple;
+//     }
+//     body.page--review-teal & {
+//         background-color: $red;
+//     }
+// }
