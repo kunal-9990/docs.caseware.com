@@ -20,3 +20,6 @@ Route::get('/'.$current_version.'/{lang}/{category}/{subcategory}/{topic}', 'Pag
 
 //sub category
 Route::get('/'.$current_version.'/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');
+
+//category
+Route::get('/'.$current_version.'/{lang}/{category}', 'PageController@showCategory');
