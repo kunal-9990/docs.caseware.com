@@ -14,5 +14,3 @@ require('./bootstrap');
  */
 
 require('./components/Example');
-
-console.log('this is working');
