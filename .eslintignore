@@ -1,3 +1,4 @@
 resources/assets/js/modules/*
 resources/assets/js/components/*
 resources/assets/js/bootstrap.js
+public/js/app.js
