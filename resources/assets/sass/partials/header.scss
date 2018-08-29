@@ -1,3 +1,16 @@
-header {
+header.header {
     padding: 10px;
+
+    .container {
+        display: flex;
+    }
+
+    .header__nav {
+        display: flex;
+        
+    }
+
+    .header__lang-picker {
+        display: none;
+    }
 }

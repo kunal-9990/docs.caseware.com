@@ -1,6 +1,6 @@
 {
     "extends": "stylelint-config-recommended",
-    "ignoreFiles": "./node_modules/*",
+    "ignoreFiles": ["./node_modules/*", "./public/css/**"],
     "rules": {
         "indentation": 4
     }

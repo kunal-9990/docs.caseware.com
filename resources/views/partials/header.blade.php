@@ -1,11 +1,14 @@
 <header class="header">
     <div class="container">
-        <img src="img/caseware-cloud-logo.png" alt="">
+        <div>
+            <img src="img/caseware-cloud-logo.png" alt="CaseWare Cloud logo">
+            <input type="text" placeholder="Search">
+        </div>
         <nav>
-            <ul>
+            <ul class="header__nav">
                 <li>
                     <a href="#">EN</a>
-                    <ul>
+                    <ul class="header__lang-picker">
                         <li>English</li>
                         <li>French</li>
                         <li>Spanish</li>

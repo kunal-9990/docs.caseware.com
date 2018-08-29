@@ -30,7 +30,7 @@ mix.webpackConfig({
     },
     plugins: [
         new StyleLintPlugin({
-            files: './resources/assets/sass/**/*.scss',
+            files: './resources/assets/sass/*.scss',
         }),
         new CopyWebpackPlugin([{
             from: 'resources/assets/images',

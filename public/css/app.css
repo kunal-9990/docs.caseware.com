@@ -8354,8 +8354,24 @@ button.close {
 	Partials
    ================= */
 
-header {
+header.header {
   padding: 10px;
+}
+
+header.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header.header .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header.header .header__lang-picker {
+  display: none;
 }
 
 /* =================
