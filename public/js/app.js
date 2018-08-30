@@ -10251,6 +10251,15 @@ __webpack_require__(90);
 
 __webpack_require__(115);
 
+var Header = __webpack_require__(229);
+
+$(document).ready(function () {
+  // nav init
+  if (document.querySelector('header.header')) {
+    Header.setup();
+  }
+});
+
 /***/ }),
 /* 90 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -53737,6 +53746,36 @@ module.exports = ReactDOMInvalidARIAHook;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */
+/***/ (function(module, exports) {
+
+var Header = {
+    langDropdown: document.querySelector('.header__lang-picker--js'),
+    headerNav: document.querySelector('.header__nav'),
+
+    setup: function setup() {
+        this.langDropdown.addEventListener('click', this.toggleLangDropdown.bind(this));
+    },
+    toggleLangDropdown: function toggleLangDropdown() {
+        var langToggle = this.headerNav.classList;
+        event.preventDefault();
+        langToggle.contains('lang-list--is-open') ? langToggle.remove('lang-list--is-open') : langToggle.add('lang-list--is-open');
+    }
+};
+
+module.exports = Header;
 
 /***/ })
 /******/ ]);

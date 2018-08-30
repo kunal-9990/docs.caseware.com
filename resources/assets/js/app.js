@@ -14,3 +14,12 @@ require('./bootstrap');
  */
 
 require('./components/Example');
+
+const Header = require('./modules/header');
+
+$(document).ready(() => {
+    // nav init
+    if (document.querySelector('header.header')) {
+        Header.setup();
+    }
+});
