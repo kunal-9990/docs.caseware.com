@@ -13,10 +13,10 @@
 @section('content')
 	<div class="container">
         <div class="row">
-            <div class="col-sm-2">
+            <div class="col-sm-3">
                 @include('partials.toc')
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-7">
                 @include('partials.toc-content')
             </div>
             <div class="col-sm-2">
