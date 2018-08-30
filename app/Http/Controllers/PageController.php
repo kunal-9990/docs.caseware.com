@@ -7,9 +7,14 @@ use Sunra\PhpSimple\HtmlDomParser;
 
 class PageController extends Controller
 {
-    //default
+    // default
     function home() {
-        return view('partials.test');
+        return view('partials.home');
+    }
+
+    // documentation home
+    function documentationHome() {
+        return view('pages.documentation');
     }
 
     // topic
