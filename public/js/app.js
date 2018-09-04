@@ -10227,7 +10227,7 @@ module.exports = getHostComponentFromComposite;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(89);
-module.exports = __webpack_require__(219);
+module.exports = __webpack_require__(220);
 
 
 /***/ }),
@@ -10252,7 +10252,7 @@ __webpack_require__(90);
 __webpack_require__(115);
 
 var Header = __webpack_require__(218);
-var TOC = __webpack_require__(230);
+var TOC = __webpack_require__(219);
 
 $(document).ready(function () {
     // nav init
@@ -53758,7 +53758,7 @@ var Header = {
     setup: function setup() {
         this.langDropdown.addEventListener('click', this.toggleLangDropdown.bind(this));
     },
-    toggleLangDropdown: function toggleLangDropdown() {
+    toggleLangDropdown: function toggleLangDropdown(event) {
         var langToggle = this.headerNav.classList;
         event.preventDefault();
         langToggle.contains('lang-list--is-open') ? langToggle.remove('lang-list--is-open') : langToggle.add('lang-list--is-open');
@@ -53769,22 +53769,6 @@ module.exports = Header;
 
 /***/ }),
 /* 219 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */
 /***/ (function(module, exports) {
 
 module.exports = function () {
@@ -53806,6 +53790,12 @@ module.exports = function () {
         });
     });
 };
+
+/***/ }),
+/* 220 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

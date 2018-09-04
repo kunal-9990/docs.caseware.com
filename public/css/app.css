@@ -8440,10 +8440,6 @@ header.header .header__input-search-wrapper input {
   padding: 0px 8px;
 }
 
-/* =================
-	Pages
-   ================= */
-
 .toc__container a {
   color: #32363a;
 }
@@ -8500,6 +8496,10 @@ header.header .header__input-search-wrapper input {
 .toc__container .toc__topic-wrap.toc__topic-wrap--is-expanded {
   display: block;
 }
+
+/* =================
+	Pages
+   ================= */
 
 /* =================
 	Overrides
