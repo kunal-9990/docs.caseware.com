@@ -7,9 +7,24 @@
 // Variables
 @import "variables";
 
+// sass-mq breakpoints. These bp's follow bootstraps
+// bps other than large BP which is changed from 
+// 1200>1430 for our layout
+$mq-breakpoints: (
+    xs:  480px,
+    sm:  768px,
+    md:  992px,
+    lg:  1430px
+);
+
+// Sass-MQ [https://github.com/sass-mq/sass-mq]
+@import "node_modules/sass-mq/_mq";
+
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+// Global styles
+@import "global";
 
 /* =================
 	Partials
@@ -17,12 +32,11 @@
 
 @import "partials/header";
 @import "partials/toc";
+@import "partials/toc-content";
 
 /* =================
 	Pages
    ================= */
-
-
 
 /* =================
 	Overrides

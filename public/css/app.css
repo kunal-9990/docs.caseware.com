@@ -8350,6 +8350,16 @@ button.close {
   }
 }
 
+.qwrqwrqwr {
+  display: inline;
+}
+
+@media (min-width: 48em) {
+  .qwrqwrqwr {
+    display: block;
+  }
+}
+
 /* =================
 	Partials
    ================= */
@@ -8495,6 +8505,10 @@ header.header .header__input-search-wrapper input {
 
 .toc__container .toc__topic-wrap.toc__topic-wrap--is-expanded {
   display: block;
+}
+
+.toc-content img {
+  max-width: 100%;
 }
 
 /* =================
