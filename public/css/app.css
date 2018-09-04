@@ -8441,6 +8441,67 @@ header.header .header__input-search-wrapper input {
 }
 
 /* =================
+	Pages
+   ================= */
+
+.toc__container a {
+  color: #32363a;
+}
+
+.toc__container ul {
+  list-style: none;
+}
+
+.toc__container ul.toc {
+  padding: 0;
+}
+
+.toc__container .toc__category,
+.toc__container .toc__sub-category {
+  position: relative;
+}
+
+.toc__container a.chevron::before {
+  position: absolute;
+  left: -13px;
+  margin-top: 1rem;
+  content: '';
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.toc__container .toc__category.toc__category--is-open > a.chevron:before,
+.toc__container .toc__sub-category.toc__category--is-open > a.chevron:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.toc__container .toc__sub-category-wrap {
+  display: none;
+}
+
+.toc__container .toc__sub-category-wrap.toc__sub-category-wrap--is-expanded {
+  display: block;
+}
+
+.toc__container .toc__topic-wrap {
+  display: none;
+}
+
+.toc__container .toc__topic-wrap.toc__topic-wrap--is-expanded {
+  display: block;
+}
+
+/* =================
 	Overrides
    ================= */
 

@@ -10227,7 +10227,7 @@ module.exports = getHostComponentFromComposite;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(89);
-module.exports = __webpack_require__(218);
+module.exports = __webpack_require__(219);
 
 
 /***/ }),
@@ -10251,13 +10251,19 @@ __webpack_require__(90);
 
 __webpack_require__(115);
 
-var Header = __webpack_require__(229);
+var Header = __webpack_require__(218);
+var TOC = __webpack_require__(230);
 
 $(document).ready(function () {
-  // nav init
-  if (document.querySelector('header.header')) {
-    Header.setup();
-  }
+    // nav init
+    if (document.querySelector('header.header')) {
+        Header.setup();
+    }
+
+    // toc js init (might split up files later if it gets too big)
+    if (document.querySelector('.toc__container')) {
+        TOC();
+    }
 });
 
 /***/ }),
@@ -53745,22 +53751,6 @@ module.exports = ReactDOMInvalidARIAHook;
 /* 218 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */
-/***/ (function(module, exports) {
-
 var Header = {
     langDropdown: document.querySelector('.header__lang-picker--js'),
     headerNav: document.querySelector('.header__nav'),
@@ -53776,6 +53766,46 @@ var Header = {
 };
 
 module.exports = Header;
+
+/***/ }),
+/* 219 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */
+/***/ (function(module, exports) {
+
+module.exports = function () {
+    var tocLinks = document.querySelectorAll('.toc__container a');
+
+    tocLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            var nextElementSibling = event.target.nextElementSibling;
+            if (nextElementSibling !== null) {
+                var nextElementSiblingClassList = nextElementSibling.classList;
+
+                if (nextElementSiblingClassList.contains('toc__sub-category-wrap')) {
+                    nextElementSiblingClassList.contains('toc__sub-category-wrap--is-expanded') ? nextElementSiblingClassList.remove('toc__sub-category-wrap--is-expanded') : nextElementSiblingClassList.add('toc__sub-category-wrap--is-expanded');
+                } else if (nextElementSiblingClassList.contains('toc__topic-wrap')) {
+                    nextElementSiblingClassList.contains('toc__topic-wrap--is-expanded') ? nextElementSiblingClassList.remove('toc__topic-wrap--is-expanded') : nextElementSiblingClassList.add('toc__topic-wrap--is-expanded');
+                }
+            }
+        });
+    });
+};
 
 /***/ })
 /******/ ]);
