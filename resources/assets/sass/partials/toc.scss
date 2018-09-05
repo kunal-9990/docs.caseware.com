@@ -1,33 +1,57 @@
 .toc__container {
-    a { color: $text-black; }
+    font-size: 0.938em;
+    line-height: 2;
+    display: none;
 
-    ul { list-style: none; }
+    @include mq(sm) {
+        display: block;
+    }
 
-    ul.toc { padding: 0; }
+    a {
+        color: $text-black;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    ul.toc {
+        padding: 0;
+    }
 
     .toc__category,
-    .toc__sub-category { position: relative; }
+    .toc__sub-category {
+        position: relative;
+    }
 
-    a.chevron::before {
-        position: absolute;
-        left: -13px;
-        margin-top: 1rem;
-        content: '';
-        border-right: 1px solid black;
-        border-bottom: 1px solid black;
-        width: 7px; height: 7px;
-        margin-right: 5px;
-        transform: rotate(-45deg);
-        transition: transform 1s;
+    a.chevron {
+        padding-left: 3px;
+
+        &::before {
+            position: absolute;
+            left: -13px;
+            margin-top: 12px;
+            content: '';
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            width: 7px; height: 7px;
+            margin-right: 5px;
+            transform: rotate(-45deg);
+            transition: transform 1s;
+        }
     }
 
     .toc__category.toc__category--is-open,
     .toc__sub-category.toc__category--is-open {
-        & > a.chevron:before {
+        & > a.chevron::before {
             transform: rotate(45deg);
         }
     }
 
+    .toc__sub-category-wrap,
+    .toc__topic-wrap {
+        padding-left: 16px;
+    }
 
     .toc__sub-category-wrap {
         display: none;

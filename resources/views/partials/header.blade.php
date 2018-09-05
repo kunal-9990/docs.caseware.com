@@ -6,7 +6,7 @@
                 <input type="text" placeholder="Search">
             </div>
         </div>
-        <nav>
+        <div>
             <ul class="header__nav">
                 <li>
                     <a href="google.com" class="header__lang-picker--js">EN</a>
@@ -23,6 +23,6 @@
                     <a href="#">Filters</a>
                 </li>
             </ul>
-        </nav>
+        </div>
     </div>
 </header>
