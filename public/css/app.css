@@ -2040,7 +2040,11 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
+<<<<<<< HEAD
+    width: 1170px;
+=======
     width: 1460px;
+>>>>>>> acd664973d60c9e3953e72547ca6337ed2c1d302
   }
 }
 
