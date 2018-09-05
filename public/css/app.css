@@ -8542,9 +8542,17 @@ header.header .header__input-search-wrapper input {
   max-width: 100%;
 }
 
+.toc-topics.affix {
+  top: 20px;
+}
+
 .toc-topics h5 {
   font-size: 1em;
   font-weight: bold;
+}
+
+.toc-topics .nav > li > a {
+  padding: 0;
 }
 
 .toc-topics ul {
@@ -8578,8 +8586,8 @@ header.header .header__input-search-wrapper input {
 }
 
 .docs__container .docs__sub-toc {
-  -ms-flex-preferred-size: 450px;
-      flex-basis: 450px;
+  -ms-flex-preferred-size: 550px;
+      flex-basis: 550px;
   display: none;
 }
 

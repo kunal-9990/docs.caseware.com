@@ -1,13 +1,16 @@
 .toc-topics {
-    // display: none;
-
-    // @include mq(lg) {
-    //     display: block;
-    // }
+    &.affix {
+        top: 20px;
+    }
 
     h5 {
         font-size: 1em;
         font-weight: bold;
+    }
+
+    // bootstrap override
+    .nav > li > a {
+        padding: 0;
     }
 
     ul {

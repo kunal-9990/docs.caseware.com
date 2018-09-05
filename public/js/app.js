@@ -10251,18 +10251,24 @@ __webpack_require__(90);
 
 __webpack_require__(115);
 
-var Header = __webpack_require__(218);
+var HEADER = __webpack_require__(218);
 var TOC = __webpack_require__(219);
+var TOC_SUBNAV = __webpack_require__(231);
 
 $(document).ready(function () {
     // nav init
     if (document.querySelector('header.header')) {
-        Header.setup();
+        HEADER.setup();
     }
 
     // toc js init (might split up files later if it gets too big)
     if (document.querySelector('.toc__container')) {
         TOC();
+    }
+
+    // toc subnav
+    if (document.querySelector('.toc-topics')) {
+        TOC_SUBNAV();
     }
 });
 
@@ -53796,6 +53802,25 @@ module.exports = function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */
+/***/ (function(module, exports) {
+
+module.exports = function () {
+    var SUB_TOC = document.querySelector('.toc-topics');
+    console.log(SUB_TOC.getBoundingClientRect());
+};
 
 /***/ })
 /******/ ]);
