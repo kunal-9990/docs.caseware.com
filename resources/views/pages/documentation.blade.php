@@ -11,7 +11,7 @@
 @stop
 
 @section('content')
-	<div class="container">
+	{{-- <div class="container">
         <div class="row">
             <div class="col-sm-3">
                 @include('partials.toc')
@@ -21,6 +21,23 @@
             </div>
             <div class="col-sm-2">
                 @include('partials.sub-toc')
+            </div>
+        </div>
+    </div> --}}
+    <div class="container sm-min-to-sm-max-container">
+        <div class="row">
+            <div class="col-sm-3 col-md-2">
+                @include('partials.toc')
+            </div>
+            <div class="col-sm-9 col-md-10">
+                <div class="docs__container">
+                    <div class="docs__content">
+                        @include('partials.toc-content')
+                    </div>
+                    <div class="docs__sub-toc">
+                        @include('partials.sub-toc')
+                    </div>
+                </div>
             </div>
         </div>
     </div>
