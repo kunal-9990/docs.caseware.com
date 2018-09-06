@@ -1,5 +1,4 @@
 module.exports = () => {
-    // Scrollspy for toc-subnav
     $(window).scroll(() => {
         const windscroll = $(window).scrollTop();
         if (windscroll >= 100) {

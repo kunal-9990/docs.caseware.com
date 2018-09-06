@@ -16,8 +16,7 @@ require('./bootstrap');
 require('./components/Example');
 
 const HEADER = require('./modules/header');
-const TOC = require('./modules/toc');
-const TOC_SUBNAV = require('./modules/toc-subnav');
+const DOCS = require('./modules/docs/docs');
 
 $(document).ready(() => {
     // nav init
@@ -25,13 +24,8 @@ $(document).ready(() => {
         HEADER.setup();
     }
 
-    // toc js init (might split up files later if it gets too big)
-    if (document.querySelector('.toc__container')) {
-        TOC();
-    }
-
-    // toc subnav
-    if (document.querySelector('.toc-topics')) {
-        TOC_SUBNAV();
+    // documentation page
+    if (document.querySelector('.documentation')) {
+        DOCS();
     }
 });
