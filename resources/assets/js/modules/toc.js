@@ -60,7 +60,6 @@ module.exports = () => {
 
                     tocLinks.forEach((link) => {
                         link.addEventListener('click', (event) => {
-                            event.preventDefault();
                             const nextElementSibling = event.target.nextElementSibling;
                             if (nextElementSibling !== null) {
                                 const nextElementSiblingClassList = nextElementSibling.classList;
