@@ -1,4 +1,33 @@
 <section class="toc-content">
+        <p>Working Papers <a href="#">2018 users</a> can now view key engagement metrics directly on the <a href="#">Engagement page</a>. Using Cloud, staff can monitor metrics - including document status, issues, <a href="#">deliverable dates</a>, adjusting entries and more - across multiple engagements simultaneously.</p><p>Working Papers <a href="#">2018 users</a> can now view key engagement metrics directly on the <a href="#">Engagement page</a>. Using Cloud, staff can monitor metrics - including document status, issues, <a href="#">deliverable dates</a>, adjusting entries and more - across multiple engagements simultaneously.</p><p>Working Papers <a href="#">2018 users</a> can now view key engagement metrics directly on the <a href="#">Engagement page</a>. Using Cloud, staff can monitor metrics - including document status, issues, <a href="#">deliverable dates</a>, adjusting entries and more - across multiple engagements simultaneously.</p><p>Working Papers <a href="#">2018 users</a> can now view key engagement metrics directly on the <a href="#">Engagement page</a>. Using Cloud, staff can monitor metrics - including document status, issues, <a href="#">deliverable dates</a>, adjusting entries and more - across multiple engagements simultaneously.</p><p>Working Papers <a href="#">2018 users</a> can now view key engagement metrics directly on the <a href="#">Engagement page</a>. Using Cloud, staff can monitor metrics - including document status, issues, <a href="#">deliverable dates</a>, adjusting entries and more - across multiple engagements simultaneously.</p><p>Working Papers <a href="#">2018 users</a> can now view key engagement metrics directly on the <a href="#">Engagement page</a>. Using Cloud, staff can monitor metrics - including document status, issues, <a href="#">deliverable dates</a>, adjusting entries and more - across multiple engagements simultaneously.</p><p>Working Papers <a href="#">2018 users</a> can now view key engagement metrics directly on the <a href="#">Engagement page</a>. Using Cloud, staff can monitor metrics - including document status, issues, <a href="#">deliverable dates</a>, adjusting entries and more - across multiple engagements simultaneously.</p><p>Working Papers <a href="#">2018 users</a> can now view key engagement metrics directly on the <a href="#">Engagement page</a>. Using Cloud, staff can monitor metrics - including document status, issues, <a href="#">deliverable dates</a>, adjusting entries and more - across multiple engagements simultaneously.</p><p>Working Papers <a href="#">2018 users</a> can now view key engagement metrics directly on the <a href="#">Engagement page</a>. Using Cloud, staff can monitor metrics - including document status, issues, <a href="#">deliverable dates</a>, adjusting entries and more - across multiple engagements simultaneously.</p><p>Working Papers <a href="#">2018 users</a> can now view key engagement metrics directly on the <a href="#">Engagement page</a>. Using Cloud, staff can monitor metrics - including document status, issues, <a href="#">deliverable dates</a>, adjusting entries and more - across multiple engagements simultaneously.</p>
+        <div id="introduction" class="section scrollspy">
+            <p>Content intro </p><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+        </div>
+    
+        <div id="structure" class="section scrollspy">
+            <p>Content structure </p><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+        </div>
+    
+        <div id="initialization" class="section scrollspy">
+            <p>Content init</p><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <h1>What's new - Cloud 27.0</h1>
     <h2>Improved engagement management</h2>
     <p>Working Papers <a href="#">2018 users</a> can now view key engagement metrics directly on the <a href="#">Engagement page</a>. Using Cloud, staff can monitor metrics - including document status, issues, <a href="#">deliverable dates</a>, adjusting entries and more - across multiple engagements simultaneously.</p>
@@ -18,7 +47,7 @@
         <li value="4"><a href="#Customize-terminology">Customize terminology</a>
         </li>
     </ul>
-    <p>When setting up your organization, you can enter your organization's details on the <b>Profile</b> page on the <b>Settings</b> page and customize the organization sign-in page, as well as specifying the appropriate regional settings for date, time, and number display.</p>
+    <div id="introduction" class="section scrollspy"><p>When setting up your organization, you can enter your organization's details on the <b>Profile</b> page on the <b>Settings</b> page and customize the organization sign-in page, as well as specifying the appropriate regional settings for date, time, and number display.</p></div>
     <h2 id="Complete-the-firm-profile">Complete your profile</h2>
     <p>You can add your organization’s details (such as its address and contact information) in your <b>Profile</b>.</p>
     <p><b>To complete your profile:</b></p>
@@ -63,4 +92,7 @@
                 <p>Select <b>Save</b> to apply your changes.</p>
             </li>
         </ol>
+        <div id="foobar">
+                <p>Content init</p><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
+            </div>
 </section>

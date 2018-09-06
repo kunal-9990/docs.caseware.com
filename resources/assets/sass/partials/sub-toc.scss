@@ -8,10 +8,16 @@
         font-weight: bold;
     }
 
-    // bootstrap override
+    // bootstrap overrides
     .nav > li > a {
         padding: 0;
     }
+
+    .nav > li > a:hover,
+    .nav > li > a:focus {
+        background-color: inherit;
+    }
+    // end bootstrap overrides
 
     ul {
         list-style: none;
@@ -20,10 +26,10 @@
         li {
             padding-left: 5px;
             border-left: 3px solid transparent;
-        }
 
-        li:first-of-type {
-            border-left: 3px solid $blue-horizon;
+            &.toc-topics--active-nav {
+                border-left: 3px solid $blue-horizon;
+            }
         }
     }
 }

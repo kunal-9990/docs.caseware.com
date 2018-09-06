@@ -2,8 +2,9 @@
 <section class="toc-topics" data-spy="affix" data-offset-top="86">
     <h5>in this article</h5>
     <ul class="nav">
-        <li><a href="#">What are security policies?</a></li>
-        <li><a href="#">Who can edit security policies?</a></li>
-        <li><a href="#">Next steps</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#initialization">Intialization</a></li>
+        <li><a href="#foobar">foobar</a></li>
     </ul>
 </section>
