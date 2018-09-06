@@ -3,7 +3,7 @@ module.exports = () => {
     $(window).scroll(() => {
         const windscroll = $(window).scrollTop();
         if (windscroll >= 100) {
-            $('.toc-content div').each(function updateActiveSubToc(i) {
+            $('.toc-content h2').each(function updateActiveSubToc(i) {
                 if ($(this).position().top <= windscroll - 20) {
                     $('ul.nav li.toc-topics--active-nav').removeClass('toc-topics--active-nav');
                     $('ul.nav li').eq(i).addClass('toc-topics--active-nav');

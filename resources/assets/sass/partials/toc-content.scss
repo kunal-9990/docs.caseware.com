@@ -8,4 +8,10 @@
     img {
         max-width: 100%;
     }
+
+    .topiccontents {
+        @include mq(lg) {
+            display: none;
+        }
+    }
 }
