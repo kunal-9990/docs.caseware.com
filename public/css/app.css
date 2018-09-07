@@ -1524,8 +1524,8 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  line-height: 1.1;
   font-weight: 500;
+  line-height: 1.1;
   color: inherit;
 }
 
@@ -1564,7 +1564,7 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 0;
+  margin-top: 25px;
   margin-bottom: 12.5px;
 }
 
@@ -1589,7 +1589,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 0;
+  margin-top: 12.5px;
   margin-bottom: 12.5px;
 }
 
@@ -2040,11 +2040,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-<<<<<<< HEAD
     width: 1170px;
-=======
-    width: 1460px;
->>>>>>> acd664973d60c9e3953e72547ca6337ed2c1d302
   }
 }
 

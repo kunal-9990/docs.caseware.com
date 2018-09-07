@@ -23,7 +23,7 @@ class PageController extends Controller
 
         $maincontentarea = $dom->find('div[class=maincontentarea]', 0);
 
-        return view('pages.topic', compact('maincontentarea'));
+        return view('pages.documentation', compact('maincontentarea'));
     }
 
     // subcategory
@@ -32,7 +32,7 @@ class PageController extends Controller
 
         $maincontentarea = $dom->find('div[class=maincontentarea]', 0);
 
-        return view('pages.topic', compact('maincontentarea'));
+        return view('pages.documentation', compact('maincontentarea'));
     }
     
     // category
@@ -42,6 +42,6 @@ class PageController extends Controller
 
         $maincontentarea = $dom->find('div[class=maincontentarea]', 0);
 
-        return view('pages.topic', compact('maincontentarea'));
+        return view('pages.documentation', compact('maincontentarea'));
     }
 }
