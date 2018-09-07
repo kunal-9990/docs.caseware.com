@@ -40,20 +40,12 @@
         <MadCap:snippetBlock src="../../Resources/Project Files/Billing/Snippets/To-generate-a-PDF-from-a-finalized-invoice.flsnp" />
         <p> You have generated a PDF invoice which can be printed and mailed or sent as an attachment.</p>
         <h2 id="closeinvoice">Close an invoice</h2>
-<<<<<<< HEAD
-        <p>When you are finished with an invoice, you can change its status to <b>Closed</b> to indicate it no longer needs attention.  For example, you would change the status of an invoice to <b>Closed</b> after it is paid in full. After an invoice is closed, it is hidden on the <b>Invoices</b> tab. You can display closed invoices using the <b>Closed</b> filter. To learn more, see <MadCap:xref href="#Display">Display closed invoices</MadCap:xref>.</p>
-=======
         <p>When you are done with an invoice, you can change its status to <b>Closed</b> to show it no longer needs attention.  For example, you can change the status of an invoice to <b>Closed</b> after a client pays in full. After you close an invoice, it is removed from the <b>Invoices</b> tab. You can display closed invoices on the <b>Invoices</b> tab again by using the <b>Closed</b> filter. To learn more, see <MadCap:xref href="#Display">Display closed invoices</MadCap:xref>.</p>
->>>>>>> 39d8ac4... [TIMECL-833] Further topic corrections
         <MadCap:snippetBlock src="../../Resources/Project Files/Billing/Snippets/To-close-an-invoice.flsnp" />
         <p> You have closed an invoice. Closed invoices are hidden on the <b>Invoices</b> tab, but you can display them using the <b>Closed</b> filter.</p>
         <h3 id="displayclosed"><a name="Display"></a>Display closed invoices</h3>
         <p>By default, closed invoices are hidden on the <b>Invoices</b> tab. You can display them using the <b>Closed</b> filter.</p>
         <MadCap:snippetBlock src="../../Resources/Project Files/Billing/Snippets/To-display-closed-invoices.flsnp" />
-<<<<<<< HEAD
-        <p>Closed invoices are displayed on the <b>Invoices</b> tab. If you need to modify a closed invoice, first revert it's status to <b>Finalized</b> by selecting the <b>ellipsis</b> button (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;" />) | <b>Revert to Finalized</b>.</p>
-=======
         <p>Closed invoices are displayed on the <b>Invoices</b> tab. If you need to modify a closed invoice, first change its status to <b>Finalized</b> by selecting the <b>ellipsis</b> button (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;" />) | <b>Revert to Finalized</b>.</p>
->>>>>>> 39d8ac4... [TIMECL-833] Further topic corrections
     </body>
 </html>

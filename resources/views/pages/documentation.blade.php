@@ -31,8 +31,8 @@
             </div>
             <div class="col-sm-9 col-md-10">
                 <div class="docs__container">
-                    <div class="docs__content">
-                        @include('partials.toc-content')
+                    <div class="docs__content"> 
+                        @include('partials.toc-content', ['content' => $maincontentarea])
                     </div>
                     <div class="docs__sub-toc">
                         @include('partials.sub-toc')
