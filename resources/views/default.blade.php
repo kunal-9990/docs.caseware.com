@@ -11,6 +11,7 @@
 </head>
 <body>
     @include('partials.header')
+    @include('partials.header-mobile')
 
     <main id="main">
         @yield('content')

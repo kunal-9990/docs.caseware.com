@@ -1,6 +1,14 @@
-<header class="header">
-    <div class="container">
-        <div class="header__search-wrap">
+<header class="header-mobile">
+        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        <div class="header__input-search-wrapper">
+            <img src="img/caseware-cloud-logo.png" alt="CaseWare Cloud logo">
+            <input type="text" placeholder="Search">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </div>
+</header>
+
+
+{{-- <div class="header__search-wrap">
             <img src="img/caseware-cloud-logo.png" alt="CaseWare Cloud logo">
             <div class="header__input-search-wrapper">
                 <input type="text" placeholder="Search">
@@ -23,11 +31,4 @@
                     <a href="#">Filters</a>
                 </li>
             </ul>
-        </div>
-    </div>
-</header>
-
-{{-- import for filters popup with desktop style wrapper --}}
-{{-- <div class="content-filter--desktop-only">
-    @include('partials.content-filter')
-</div> --}}
+        </div> --}}

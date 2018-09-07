@@ -32,7 +32,9 @@
             <div class="col-sm-9 col-md-10">
                 <div class="docs__container">
                     <div class="docs__content"> 
+                        @if(isset($maincontentarea))
                         @include('partials.toc-content', ['content' => $maincontentarea])
+                        @endif
                     </div>
                     <div class="docs__sub-toc">
                         @include('partials.sub-toc')
