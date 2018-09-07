@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1290" MadCap:lastWidth="1078">
-=======
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1283" MadCap:lastWidth="1078">
->>>>>>> hotfix/CSERV-984-add-translated-documents-to-26.0
     <head>
     </head>
     <body>
@@ -16,11 +12,7 @@
             <li>
                 <p>From the Cloud menu, select <b>Billing</b>, then select the <b>Invoices</b> tab.</p>
                 <p>
-<<<<<<< HEAD
-                    <img src="../../../Images/billing-wip-new-button.png" alt="The WIP and Invoices tabs." />
-=======
                     <img src="../../../Images/billing-invoices-invoices-tab.png" alt="The Invoices tab." />
->>>>>>> hotfix/CSERV-984-add-translated-documents-to-26.0
                 </p>
             </li>
             <li>

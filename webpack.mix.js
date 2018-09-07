@@ -18,16 +18,16 @@ const BROWSERSYNC_URL = '127.0.0.1:8000';
  */
 
 mix.webpackConfig({
-    // module: {
-    //     rules: [
-    //         {
-    //             enforce: 'pre',
-    //             test: /\.js/,
-    //             loader: 'eslint-loader',
-    //             exclude: /node_modules/,
-    //         },
-    //     ],
-    // },
+    module: {
+        rules: [
+            {
+                enforce: 'pre',
+                test: /\.js/,
+                loader: 'eslint-loader',
+                exclude: /node_modules/,
+            },
+        ],
+    },
     plugins: [
         new StyleLintPlugin({
             files: './resources/assets/sass/*.scss',

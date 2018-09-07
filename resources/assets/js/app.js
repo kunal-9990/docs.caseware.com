@@ -15,17 +15,17 @@ require('./bootstrap');
 
 require('./components/Example');
 
-const Header = require('./modules/header');
-const TOC = require('./modules/toc');
+const HEADER = require('./modules/header');
+const DOCS = require('./modules/docs/docs');
 
 $(document).ready(() => {
     // nav init
     if (document.querySelector('header.header')) {
-        Header.setup();
+        HEADER.setup();
     }
 
-    // toc js init (might split up files later if it gets too big)
-    if (document.querySelector('.toc__container')) {
-        TOC();
+    // documentation page
+    if (document.querySelector('.documentation')) {
+        DOCS();
     }
 });

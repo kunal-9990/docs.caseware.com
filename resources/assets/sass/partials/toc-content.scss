@@ -8,4 +8,189 @@
     img {
         max-width: 100%;
     }
+
+    .topiccontents {
+        @include mq(lg) {
+            display: none;
+        }
+    }
+
+    .reqtime {
+        margin: 30px 0;
+        display: flex;
+        padding: 25px;
+        align-items: center;
+
+        .prdsectiontext {
+            padding: 0 0 0 25px;
+            font-style: italic;
+        }
+
+        .prdsectionlogo {
+            // position: relative;
+            // float: left;
+            // top: 15px;
+            // right: -10px;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .sesectiontext            { background-color: rgba(107, 48, 119, 0.10); }
+        .analyticssectiontext     { background-color: rgba(229, 114, 0, 0.10); }
+        .timesectiontext          { background-color: rgba(183, 49, 44, 0.10); }
+        .taxsectiontext           { background-color: rgba(76, 140, 43, 0.10); }
+        .workingpaperssectiontext { background-color: rgba(0, 45, 114, 0.10); }
+        .auditsectiontext         { background-color: rgba(201, 151, 0, 0.10); }
+    }
 }
+
+
+
+
+// css that is used in the old site
+// that we will reuse for the new version
+// MUST BE REFACTORED BEFORE USE
+// MUST BE REFACTORED BEFORE USE
+// MUST BE REFACTORED BEFORE USE
+// MUST BE REFACTORED BEFORE USE
+// MUST BE REFACTORED BEFORE USE
+// MUST BE REFACTORED BEFORE USE
+.note {
+    padding-left: 10px !important;
+    background-color: rgba(0, 80, 255, 0.1);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-left: 7px solid rgba(0, 80, 255, 0.66);
+}
+.divAltText {
+    font-style: italic;
+}
+.tip {
+    padding-left: 10px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(2, 145, 0, 0.23);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    padding: 5px;
+    border-left: 7px solid rgba(2, 145, 0, 0.66);
+}
+.bestpractice {
+    padding-left: 10px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 149, 11, 0.1);
+    padding: 5px;
+    border-left: 7px solid rgba(255, 149, 11, 0.66);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+}
+
+
+//   .prdsectionlogo {
+//     /*max-height: 35px;*/
+//     /*max-width: 40px;*/
+//     position: relative;
+//     float: left;
+//     top: 15px;
+//     right: -10px;
+//   }
+// .prdsectiontext {
+//     padding-left: 70px;
+//     padding-right: 10px;
+//       padding-top:10px;
+//       font-style:italic;
+//       padding-bottom:15px;
+//   }
+//   .sesectiontext {
+//       background-color: rgba(107,48,119, 0.10);
+//   }
+//   .analyticssectiontext {
+//       background-color: rgba(229,114,0, 0.10);
+//   }
+//   .timesectiontext {
+//       background-color: rgba(183,49,44, 0.10);
+//   }
+//   .taxsectiontext {
+//       background-color: rgba(76,140,43, 0.10);
+//   }
+//   .workingpaperssectiontext {
+//       background-color: rgba(0, 45, 114, 0.10);
+//   }
+//   .auditsectiontext {
+//       background-color: rgba(201,151,0, 0.10);
+//   }
+
+  .reqanalyticsinline {
+    background-repeat: no-repeat;
+    margin-top: 30px;
+  }
+  .reqtimeinline {
+    /*border-top: solid #B7312C 1.5px;*/
+    /*border-bottom: solid #B7312C 1.5px;*/
+    margin-top: 30px;
+  }
+  .reqworkingpapersinline {
+    /*border-top: solid #002D72 1.5px;*/
+    /*border-bottom: solid #002D72 1.5px;*/
+    margin-top: 30px;
+  }
+  .reqauditinline {
+    /*border-top: solid #c99700 1.5px;*/
+    /*border-bottom: solid #c99700 1.5px;*/
+    margin-top: 30px;
+  }
+  .reqtaxinline {
+    /*border-top: solid #4C8C2B 1.5px;*/
+    /*border-bottom: solid #4C8C2B 1.5px;*/
+    margin-top: 30px;
+  }
+  .reqseinline {
+    /*border-top: solid #0085AD 1.5px;*/
+    /*border-bottom: solid #0085AD 1.5px;*/
+    margin-top: 30px;
+  }
+  
+  .reqse {
+    /*border-top: solid #0085AD 1.5px;*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .reqanalytics {
+    /*border-top: solid #E57200 1.5px;*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+  
+  }
+//   .reqtime {
+//     /*border-top: solid #B7312C 1.5px;*/
+//     margin-top: 30px;
+//       margin-bottom: 30px;
+//   }
+  .reqworkingpapers {
+    /*border-top: solid #002D72 1.5px;*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .reqaudit {
+    /*border-top: solid #c99700 1.5px;*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .reqtax {
+    /*border-top: solid #4C8C2B 1.5px;*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }

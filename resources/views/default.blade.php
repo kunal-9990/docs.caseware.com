@@ -10,7 +10,6 @@
     <link href="{{'/css/app.css'}}" rel="stylesheet" type="text/css">
 </head>
 <body>
-
     @include('partials.header')
 
     <main id="main">
@@ -18,6 +17,5 @@
     </main>
 
     <script src="{{'/js/app.js'}}"></script>
-
 </body>
 </html>
