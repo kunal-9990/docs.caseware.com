@@ -15,13 +15,13 @@ require('./bootstrap');
 
 require('./components/Example');
 
-const HEADER = require('./modules/header');
+const HEADER = require('./modules/header/header');
 const DOCS = require('./modules/docs/docs');
 
 $(document).ready(() => {
     // nav init
     if (document.querySelector('header.header')) {
-        HEADER.setup();
+        HEADER();
     }
 
     // documentation page

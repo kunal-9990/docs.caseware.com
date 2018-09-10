@@ -1,7 +1,7 @@
 <header class="header">
     <div class="container">
         <div class="header__search-wrap">
-            <img src="img/caseware-cloud-logo.png" alt="CaseWare Cloud logo">
+            <img src="/img/caseware-cloud-logo.png" alt="CaseWare Cloud logo">
             <div class="header__input-search-wrapper">
                 <input type="text" placeholder="Search">
             </div>
