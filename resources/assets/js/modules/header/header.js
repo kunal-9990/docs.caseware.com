@@ -3,5 +3,5 @@ const HEADER_DESKTOP = require('./header-desktop');
 
 module.exports = () => {
     HEADER_MOBILE();
-    HEADER_DESKTOP.setup();
+    HEADER_DESKTOP();
 };

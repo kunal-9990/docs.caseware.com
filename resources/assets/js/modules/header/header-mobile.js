@@ -7,6 +7,9 @@ module.exports = () => {
         BODY.classList.contains('mobile-nav--is-open')
             ? BODY.classList.remove('mobile-nav--is-open')
             : BODY.classList.add('mobile-nav--is-open');
+
+        // close search if open
+        BODY.classList.remove('mobile-search--is-open');
     }
 
     function toggleMobilesearch() {
@@ -22,8 +25,6 @@ module.exports = () => {
     MOBILE_SEARCH_TOGGLE.forEach((btn) => {
         btn.addEventListener('click', () => toggleMobilesearch());
     });
-
-    // MOBILE_SEARCH_TOGGLE.addEventListener('click', () => toggleMobilesearch());
 
     // close mobile nav if click is outside nav bounds
     window.addEventListener('click', (event) => {

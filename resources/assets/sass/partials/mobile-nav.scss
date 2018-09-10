@@ -1,4 +1,7 @@
 // full page mobile nav wrapper for darkened bg
+// which is also used for desktop search
+// TODO: move to a file that makes sense to handle
+// both cases
 .mobile-nav__wrapper {
     position: fixed;
     top: 0px;
@@ -9,7 +12,8 @@
     transition: background-color 0.2s ease-out 0s;
     z-index: -1;
 
-    body.mobile-nav--is-open & {
+    body.mobile-nav--is-open &,
+    body.desktop-search--is-open & {
         background-color: rgba(24, 48, 85, 0.3);
         z-index: 25;
     }
