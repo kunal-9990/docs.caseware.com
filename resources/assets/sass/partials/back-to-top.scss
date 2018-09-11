@@ -1,0 +1,25 @@
+.back-to-top {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 15px;
+    line-height: 1.2;
+    bottom: 15px;
+    font-size: 0.9em;
+    padding: 7px 9px;
+    background-color: rgb(236, 236, 236);
+    border: 1px solid #d4dadf;
+    border-radius: 3px;
+    font-weight: 100;
+    cursor: pointer;
+
+    &--is-shown {
+        display: flex;
+    }
+
+    .glyphicon-chevron-up {
+        margin-bottom: 7px;
+    }
+}

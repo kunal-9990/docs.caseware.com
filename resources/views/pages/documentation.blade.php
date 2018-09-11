@@ -30,4 +30,6 @@
             </div>
         </div>
     </div>
+
+    @include('partials.back-to-top')
 @stop

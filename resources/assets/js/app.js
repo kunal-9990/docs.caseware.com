@@ -17,6 +17,7 @@ require('./components/Example');
 
 const HEADER = require('./modules/header/header');
 const DOCS = require('./modules/docs/docs');
+const BACK_TO_TOP = require('./modules/back-to-top');
 
 $(document).ready(() => {
     // nav init
@@ -27,5 +28,10 @@ $(document).ready(() => {
     // documentation page
     if (document.querySelector('.documentation')) {
         DOCS();
+    }
+
+    // back to top button
+    if (document.querySelector('.back-to-top')) {
+        BACK_TO_TOP();
     }
 });
