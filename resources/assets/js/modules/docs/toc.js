@@ -56,11 +56,24 @@ module.exports = () => {
 
                     $(".toc__container").append(ul_main);
 
+                    ifSiblingElementExists();
+
                     tocExpandToggle();
                 }
             });
         }
     });
+
+    // if an anchor in the toc doesn't have a ul as a next sibling
+    // remove the chevron
+    function ifSiblingElementExists() {
+        const tocLinks = document.querySelectorAll('.toc__container a');
+        tocLinks.forEach((btn) => {
+            if (btn.nextElementSibling === null) {
+                btn.classList.remove('chevron');
+            }
+        });
+    }
 
     // toc event listener to expand and collapse navs
     function tocExpandToggle() {
@@ -69,17 +82,18 @@ module.exports = () => {
         tocLinks.forEach((link) => {
             link.addEventListener('click', (event) => {
                 const nextElementSibling = event.target.nextElementSibling;
+                
                 if (nextElementSibling !== null) {
                     const nextElSiblingClass = nextElementSibling.classList;
 
                     if (nextElSiblingClass.contains('toc__sub-category-wrap')) {
-                        nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded') ?
-                            nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded') :
-                            nextElSiblingClass.add('toc__sub-category-wrap--is-expanded');
+                        nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded')
+                            ? nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded')
+                            : nextElSiblingClass.add('toc__sub-category-wrap--is-expanded');
                     } else if (nextElSiblingClass.contains('toc__topic-wrap')) {
-                        nextElSiblingClass.contains('toc__topic-wrap--is-expanded') ?
-                            nextElSiblingClass.remove('toc__topic-wrap--is-expanded') :
-                            nextElSiblingClass.add('toc__topic-wrap--is-expanded');
+                        nextElSiblingClass.contains('toc__topic-wrap--is-expanded')
+                            ? nextElSiblingClass.remove('toc__topic-wrap--is-expanded')
+                            : nextElSiblingClass.add('toc__topic-wrap--is-expanded');
                     }
                 }
             });
