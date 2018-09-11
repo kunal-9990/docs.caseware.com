@@ -17,6 +17,11 @@
         background-color: rgba(24, 48, 85, 0.3);
         z-index: 25;
     }
+
+    .mobile-nav__toc .toc__container {
+        display: block;
+        padding: 15px 15px 15px 25px;
+    }
 }
 
 .mobile-nav {
