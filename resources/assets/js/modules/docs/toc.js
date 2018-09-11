@@ -82,21 +82,37 @@ module.exports = () => {
         tocLinks.forEach((link) => {
             link.addEventListener('click', (event) => {
                 const nextElementSibling = event.target.nextElementSibling;
+                const thisElParentNode = event.target.parentNode;                
                 
                 if (nextElementSibling !== null) {
                     const nextElSiblingClass = nextElementSibling.classList;
 
                     if (nextElSiblingClass.contains('toc__sub-category-wrap')) {
-                        nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded')
-                            ? nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded')
-                            : nextElSiblingClass.add('toc__sub-category-wrap--is-expanded');
+                        if (nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded')) {
+                            nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded');
+                            toggleParentisExpandClass(thisElParentNode);
+                        } else {
+                            nextElSiblingClass.add('toc__sub-category-wrap--is-expanded');
+                            toggleParentisExpandClass(thisElParentNode);
+                        }
                     } else if (nextElSiblingClass.contains('toc__topic-wrap')) {
-                        nextElSiblingClass.contains('toc__topic-wrap--is-expanded')
-                            ? nextElSiblingClass.remove('toc__topic-wrap--is-expanded')
-                            : nextElSiblingClass.add('toc__topic-wrap--is-expanded');
+                        if (nextElSiblingClass.contains('toc__topic-wrap--is-expanded')) {
+                            nextElSiblingClass.remove('toc__topic-wrap--is-expanded');
+                            toggleParentisExpandClass(thisElParentNode);
+                        } else {
+                            nextElSiblingClass.add('toc__topic-wrap--is-expanded');
+                            toggleParentisExpandClass(thisElParentNode);
+                        }
                     }
                 }
             });
         });
+    }
+
+    // toggle class that handles rotating chevron
+    function toggleParentisExpandClass(el) {
+        el.classList.contains('toc__category--is-open')
+            ? el.classList.remove('toc__category--is-open')
+            : el.classList.add('toc__category--is-open')
     }
 };
