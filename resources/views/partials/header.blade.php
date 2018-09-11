@@ -28,6 +28,6 @@
 </header>
 
 {{-- import for filters popup with desktop style wrapper --}}
-<div class="content-filter--desktop-only">
+{{-- <div class="content-filter--desktop-only">
     @include('partials.content-filter')
-</div>
+</div> --}}

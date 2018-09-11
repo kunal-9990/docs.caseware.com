@@ -1,6 +1,11 @@
 header.header {
     border-bottom: 1px solid #d4dadf;
     box-shadow: 0 1px 1px 0 rgba(116, 129, 141, 0.1);
+    display: none;
+
+    @include mq(sm) {
+        display: block;
+    }
 
     .container {
         display: flex;
@@ -41,12 +46,16 @@ header.header {
         align-items: center;
         border-radius: 4px;
         background: #f1f1f1;
-        border: 1px solid #E6ECF1;
         font-size: 16px;
         line-height: 1.625;
         font-weight: 400;
-        transition: flex 1s;
-        margin-right: 10px;
+        transition: flex 0.2s;
+        margin: 0 10px;
+
+        .desktop-search--is-open & {
+            flex: 1;
+            z-index: 30;
+        }
 
         input {
             font-size: inherit;
@@ -60,6 +69,7 @@ header.header {
             border-radius: 3px;
             height: 38px;
             padding: 0px 8px;
+            width: 100%;
         }
     }
 }
