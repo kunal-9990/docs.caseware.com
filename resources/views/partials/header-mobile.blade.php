@@ -16,10 +16,8 @@
         <div class="mobile-nav__close-bar-wrap">
             <span class="glyphicon glyphicon-chevron-left header-mobile__nav-toggle" aria-hidden="true"></span>
         </div>
-        <ul>
-            <li>1</li>
-            <li>23</li>
-            <li>35</li>
-        </ul>
+        <div class="mobile-nav__toc">
+            @include('partials.toc')
+        </div>
     </div>
 </div>
