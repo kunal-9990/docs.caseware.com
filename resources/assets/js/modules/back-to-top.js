@@ -2,14 +2,14 @@ module.exports = () => {
     const backToTopBtn = document.querySelector('.back-to-top');
     const windowInnerHeight = window.innerHeight;
     const windowFullClientHeight = document.body.clientHeight;
-    const isLongerThanFourViewports = windowFullClientHeight >= (windowInnerHeight * 3);
+    const isLongerThanThreeViewports = windowFullClientHeight >= (windowInnerHeight * 3);
 
     backToTopBtn.addEventListener('click', () => {
         document.documentElement.scrollTop = 0;
     });
 
     function isBackToTopShown() {
-        isLongerThanFourViewports && document.documentElement.scrollTop > windowInnerHeight
+        isLongerThanThreeViewports && document.documentElement.scrollTop > windowInnerHeight
             ? backToTopBtn.classList.add('back-to-top--is-shown')
             : backToTopBtn.classList.remove('back-to-top--is-shown');
     }
