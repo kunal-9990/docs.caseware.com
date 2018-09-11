@@ -24,7 +24,7 @@
             </div>
         </div>
     </div> --}}
-    <div class="container sm-min-to-sm-max-container documentation">
+    <div class="container documentation">
         <div class="row">
             <div class="col-sm-3 col-md-2">
                 @include('partials.toc')

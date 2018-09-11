@@ -2,6 +2,7 @@
     font-size: 0.938em;
     line-height: 2;
     display: none;
+    padding-left: 25px;
 
     @include mq(sm) {
         display: block;
