@@ -46,6 +46,6 @@
         <h3 id="displayclosed"><a name="Display"></a>Display closed invoices</h3>
         <p>By default, closed invoices are hidden on the <b>Invoices</b> tab. You can display them using the <b>Closed</b> filter.</p>
         <MadCap:snippetBlock src="../../Resources/Project Files/Billing/Snippets/To-display-closed-invoices.flsnp" />
-        <p>Closed invoices are displayed on the <b>Invoices</b> tab. If you need to modify a closed invoice, first change its status to <b>Finalized</b> by selecting the <b>ellipsis</b> button (<img src="../../Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;" />) | <b>Revert to Finalized</b>.</p>
+        <p>Closed invoices are displayed on the <b>Invoices</b> tab. If you need to modify a closed invoice, first change its status to <b>Finalized</b> by selecting the <b>ellipsis</b> button (<img src="/Resources/Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;" />) | <b>Revert to Finalized</b>.</p>
     </body>
 </html>
