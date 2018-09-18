@@ -32,4 +32,5 @@
     </div>
 
     @include('partials.back-to-top')
+    @include('partials.image-modal')
 @stop
