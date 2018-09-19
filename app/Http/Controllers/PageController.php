@@ -19,7 +19,12 @@ class PageController extends Controller
 
     // topic
     function showTopic($lang, $category, $subcategory, $topic){
-        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'26-clean-output/Content/'.$category."/".$subcategory."/".$topic.".htm" );
+
+        if(!endsWith($topic,".htm")){
+            $topic .= ".htm";
+        }
+
+        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'26-clean-output/Content/'.$category."/".$subcategory."/".$topic );
 
         $maincontentarea = $dom->find('body', 0);
 
@@ -28,7 +33,12 @@ class PageController extends Controller
 
     // subcategory
     function showSubCategory($lang, $category, $subcategory){
-        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'26-clean-output/Content/'.$category."/".$subcategory.".htm" );
+
+        if(!endsWith($subcategory,".htm")){
+            $subcategory .= ".htm";
+        }
+
+        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'26-clean-output/Content/'.$category."/".$subcategory );
 
         $maincontentarea = $dom->find('body', 0);
 
@@ -37,8 +47,12 @@ class PageController extends Controller
     
     // category
     function showCategory($lang, $category){
+
+        if(!endsWith($category,".htm")){
+            $category .= ".htm";
+        }
         
-        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'26-clean-output/Content/'.$category.".htm" );
+        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'26-clean-output/Content/'.$category );
 
         $maincontentarea = $dom->find('div[class=maincontentarea]', 0);
 
