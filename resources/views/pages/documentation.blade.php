@@ -31,5 +31,9 @@
         </div>
     </div>
 
+    {{-- back to top button --}}
     @include('partials.back-to-top')
+
+    {{-- modal overlay for images in content --}}
+    @include('partials.image-modal')
 @stop
