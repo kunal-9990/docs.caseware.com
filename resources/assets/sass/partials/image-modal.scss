@@ -13,6 +13,10 @@
         display: none;
         max-width: 100%;
         max-height: 100%;
+
+        @include mq(xs) {
+            max-height: 70vh;
+        }
     }
 
     figure {
@@ -33,6 +37,7 @@
         right: 15px;
         font-size: 2em;
         cursor: pointer;
+        color: $white;
     }
 
     .image-modal--shown & {
