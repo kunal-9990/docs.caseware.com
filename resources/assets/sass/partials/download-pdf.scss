@@ -1,0 +1,19 @@
+.pdf-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(24, 48, 85, 0.0);
+    transition: background-color 0.2s ease-out 0s;
+
+    .pdf-modal--shown & {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        background-color: rgba(24, 48, 85, 0.3);
+    }
+}

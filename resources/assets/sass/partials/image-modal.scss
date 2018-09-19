@@ -9,6 +9,23 @@
     background-color: rgba(0, 0, 0, 0);
     transition: background-color 0.2s ease-out 0s;
 
+    .image-modal--shown & {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.75);
+
+        .image-modal__img {
+            display: inline;
+        }
+
+        .image-modal__close,
+        .image-modal__caption {
+            display: block;
+        }
+    }
+
     .image-modal__img {
         display: none;
         max-width: 100%;
@@ -38,23 +55,6 @@
         font-size: 2em;
         cursor: pointer;
         color: $white;
-    }
-
-    .image-modal--shown & {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, 0.75);
-
-        .image-modal__img {
-            display: inline;
-        }
-
-        .image-modal__close,
-        .image-modal__caption {
-            display: block;
-        }
     }
 }
 
