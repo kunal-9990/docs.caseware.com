@@ -18,7 +18,6 @@ require('./components/Example');
 const HEADER = require('./modules/header/header');
 const DOCS = require('./modules/docs/docs');
 const BACK_TO_TOP = require('./modules/back-to-top');
-const IMG_MODAL = require('./modules/docs/image-modal');
 
 $(document).ready(() => {
     // nav init
@@ -34,10 +33,5 @@ $(document).ready(() => {
     // back to top button
     if (document.querySelector('.back-to-top')) {
         BACK_TO_TOP();
-    }
-
-    // modal overlay for images in content
-    if (document.querySelector('.image-modal')) {
-        IMG_MODAL();
     }
 });

@@ -8,7 +8,7 @@ module.exports = () => {
     TOC();
     DOCS_CONTAINER();
 
-    if (document.querySelector('#myimgModal')) {
+    if (document.querySelector('.image-modal')) {
         IMG_MODAL();
     }
 };
