@@ -4,6 +4,7 @@ module.exports = () => {
     const MODAL_OVERLAY = document.querySelector('.image-modal');
     const MODAL_IMAGE = document.querySelector('.image-modal').querySelector('img.image-modal__img');
     const MODAL_CLOSE = document.querySelector('.image-modal__close');
+    const MODAL_CAPTION = document.querySelector('.image-modal__caption');
     const FILTERED_IMAGES = filterImages(CONTENT_IMAGES);
 
     // filter out any images that are icons or CW logos
@@ -18,8 +19,9 @@ module.exports = () => {
     }
 
     // adds/updates the image src to the img inside the modal
-    function setImgSrc(img) {
+    function setModalContent(img) {
         MODAL_IMAGE.setAttribute('src', img.getAttribute('src'));
+        MODAL_CAPTION.innerHTML = img.getAttribute('alt');
         toggleImgModalOverLay();
     }
 
@@ -34,7 +36,7 @@ module.exports = () => {
 
     // event listener for all images inside the content
     FILTERED_IMAGES.forEach((img) => {
-        img.addEventListener('click', () => setImgSrc(img));
+        img.addEventListener('click', () => setModalContent(img));
     });
 
     window.addEventListener('click', event => closeModal(event));
