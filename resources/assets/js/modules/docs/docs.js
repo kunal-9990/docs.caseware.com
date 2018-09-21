@@ -8,7 +8,11 @@ module.exports = () => {
     SUB_TOPIC_SCROLLSPY();
     TOC();
     DOCS_CONTAINER();
-    DOWNLOAD_PDF();
+
+    // ensure there are pdf downloads available
+    if (document.querySelector('.downloadLink')) {
+        DOWNLOAD_PDF();
+    }
 
     if (document.querySelector('.image-modal')) {
         IMG_MODAL();
