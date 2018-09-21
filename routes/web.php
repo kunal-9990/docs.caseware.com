@@ -19,10 +19,10 @@ Route::get('/', 'PageController@home');
 Route::get('/documentation', 'PageController@documentationHome');
 
 // topics
-Route::get('/'.$current_version.'/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic');
+Route::get('/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic');
 
 // sub category
-Route::get('/'.$current_version.'/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');
+Route::get('/{product}/{version}/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');
 
 // category
-Route::get('/'.$current_version.'/{lang}/{category}', 'PageController@showCategory');
+Route::get('/{product}/{version}/{lang}/{category}', 'PageController@showCategory');

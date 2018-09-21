@@ -18,13 +18,13 @@ class PageController extends Controller
     }
 
     // topic
-    function showTopic($lang, $category, $subcategory, $topic){
+    function showTopic($product, $version, $lang, $category, $subcategory, $topic){
 
         if(!endsWith($topic,".htm")){
             $topic .= ".htm";
         }
-
-        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'26-clean-output/Content/'.$category."/".$subcategory."/".$topic );
+        // dd($version);
+        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category."/".$subcategory."/".$topic );
 
         $maincontentarea = $dom->find('body', 0);
 
@@ -32,13 +32,13 @@ class PageController extends Controller
     }
 
     // subcategory
-    function showSubCategory($lang, $category, $subcategory){
+    function showSubCategory($product, $version, $lang, $category, $subcategory){
 
         if(!endsWith($subcategory,".htm")){
             $subcategory .= ".htm";
         }
 
-        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'26-clean-output/Content/'.$category."/".$subcategory );
+        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category."/".$subcategory );
 
         $maincontentarea = $dom->find('body', 0);
 
@@ -46,15 +46,15 @@ class PageController extends Controller
     }
     
     // category
-    function showCategory($lang, $category){
+    function showCategory($product, $version, $lang, $category){
 
         if(!endsWith($category,".htm")){
             $category .= ".htm";
         }
         
-        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'26-clean-output/Content/'.$category );
+        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category );
 
-        $maincontentarea = $dom->find('div[class=maincontentarea]', 0);
+        $maincontentarea = $dom->find('body', 0);
 
         return view('pages.documentation', compact('maincontentarea'));
     }
