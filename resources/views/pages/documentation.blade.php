@@ -36,4 +36,7 @@
 
     {{-- modal overlay for images in content --}}
     @include('partials.image-modal')
+
+    {{-- modal overlay for email subscription and pdf download --}}
+    @include('partials.download-pdf')
 @stop
