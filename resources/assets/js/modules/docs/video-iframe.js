@@ -14,6 +14,7 @@ module.exports = () => {
 
     function showVideo() {
         BODY.classList.add('video-iframe-is-shown');
+        window.Waypoint.refreshAll();
     }
 
     THUMBNAIL_CONTAINER.addEventListener('click', () => showVideo());
