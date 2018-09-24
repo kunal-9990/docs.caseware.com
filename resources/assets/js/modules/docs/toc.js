@@ -25,15 +25,21 @@ module.exports = () => {
                         if ($(this).children().length) {
                             var topicList = $('<ul class="toc__topic-wrap">');
                             $(this).children().each(function () {
-                                var producttags;
+                                var classes;
                                 if (($(this).attr("conditions"))) {
                                     producttags = $(this).attr("conditions").replace("Product.", "").toLowerCase();
                                 };
-                                if (producttags) {
-                                    topicList.append('<li><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
-                                } else {
-                                    topicList.append('<li><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
+                                if(loc.includes($(this).attr("Link"))){
+                                    topicList.append('<li class="current-page"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
                                 }
+                                else{
+                                    topicList.append('<li><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');                                    
+                                }
+                                // if (producttags) {
+                                //     topicList.append('<li><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
+                                // } else {
+                                //     topicList.append('<li><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
+                                // }
                             });
                             var link;
                             if ($(this).attr("Link")) {
@@ -54,6 +60,10 @@ module.exports = () => {
             });
 
             $(".toc__container").append(ul_main);
+            
+            //expand section of current page
+            $(".current-page").parent().addClass("toc__topic-wrap--is-expanded");
+            $(".current-page").parent().parent().parent().addClass("toc__sub-category-wrap--is-expanded");
 
             ifSiblingElementExists();
 
