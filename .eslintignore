@@ -2,3 +2,4 @@ resources/assets/js/modules/old/*
 resources/assets/js/components/*
 resources/assets/js/bootstrap.js
 /resources/assets/js/modules/docs/toc.js
+resources/assets/js/vendor/*
