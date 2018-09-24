@@ -91,25 +91,29 @@ module.exports = () => {
             link.addEventListener('click', (event) => {
                 const nextElementSibling = event.target.nextElementSibling;
                 const thisElParentNode = event.target.parentNode;
+                
+                if (link.classList.contains('chevron')) {
+                    event.preventDefault();
 
-                if (nextElementSibling !== null) {
-                    const nextElSiblingClass = nextElementSibling.classList;
+                    if (nextElementSibling !== null) {
+                        const nextElSiblingClass = nextElementSibling.classList;
 
-                    if (nextElSiblingClass.contains('toc__sub-category-wrap')) {
-                        if (nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded')) {
-                            nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded');
-                            toggleParentisExpandClass(thisElParentNode);
-                        } else {
-                            nextElSiblingClass.add('toc__sub-category-wrap--is-expanded');
-                            toggleParentisExpandClass(thisElParentNode);
-                        }
-                    } else if (nextElSiblingClass.contains('toc__topic-wrap')) {
-                        if (nextElSiblingClass.contains('toc__topic-wrap--is-expanded')) {
-                            nextElSiblingClass.remove('toc__topic-wrap--is-expanded');
-                            toggleParentisExpandClass(thisElParentNode);
-                        } else {
-                            nextElSiblingClass.add('toc__topic-wrap--is-expanded');
-                            toggleParentisExpandClass(thisElParentNode);
+                        if (nextElSiblingClass.contains('toc__sub-category-wrap')) {
+                            if (nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded')) {
+                                nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded');
+                                toggleParentisExpandClass(thisElParentNode);
+                            } else {
+                                nextElSiblingClass.add('toc__sub-category-wrap--is-expanded');
+                                toggleParentisExpandClass(thisElParentNode);
+                            }
+                        } else if (nextElSiblingClass.contains('toc__topic-wrap')) {
+                            if (nextElSiblingClass.contains('toc__topic-wrap--is-expanded')) {
+                                nextElSiblingClass.remove('toc__topic-wrap--is-expanded');
+                                toggleParentisExpandClass(thisElParentNode);
+                            } else {
+                                nextElSiblingClass.add('toc__topic-wrap--is-expanded');
+                                toggleParentisExpandClass(thisElParentNode);
+                            }
                         }
                     }
                 }
