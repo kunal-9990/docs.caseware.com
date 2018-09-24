@@ -17,6 +17,9 @@
                 @include('partials.toc')
             </div>
             <div class="col-sm-9">
+                <div class="docs__video-iframe-wrap">
+                    @include('partials.video-iframe')
+                </div>
                 <div class="docs__container">
                     <div class="docs__content"> 
                         @if(isset($maincontentarea))
@@ -24,6 +27,10 @@
                         @endif
                     </div>
                     <div class="docs__sub-toc">
+                        <div class="docs__video-iframe-thumbnail-container">
+                            <img class="docs__video-iframe-thumbnail" src="" alt="">
+                            <img class="docs__video-iframe-thumbnail__yt-icon" src="/img/yt_icon_rgb.png" alt="">
+                        </div>
                         @include('partials.sub-toc')
                     </div>
                 </div>

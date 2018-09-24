@@ -12,7 +12,6 @@ module.exports = () => {
     var linkPrefix = "/" + product + "/" + version + "/" + lang;
     var TOCxml = "/documentation_files/" + product + "/" + version + "/OnlineOutput.xml";
 
-    console.log("test");
     $.ajax({
         type: "GET",
         url: TOCxml,
