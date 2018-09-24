@@ -1,4 +1,4 @@
-.toc-topics {
+.toc-subtopics {
     &.affix {
         top: 20px;
     }
@@ -28,7 +28,7 @@
             padding: 7px 0 7px 5px;
             border-left: 3px solid transparent;
 
-            &.toc-topics--active-nav {
+            &.toc-subtopics--active-nav {
                 border-left: 3px solid $blue-horizon;
             }
         }

@@ -1,0 +1,43 @@
+.docs__video-iframe-thumbnail-container {
+    position: relative;
+    margin-bottom: 1.5em;
+    cursor: pointer;
+
+    .video-iframe-is-shown & {
+        display: none;
+    }
+
+    .docs__video-iframe-thumbnail {
+        width: 100%;
+    }
+
+    .docs__video-iframe-thumbnail__yt-icon {
+        position: absolute;
+        width: 70px;
+        height: 49px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.docs__video-iframe-wrap {
+    margin-bottom: 1.5em;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 51%;
+    display: none;
+
+    iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .video-iframe-is-shown & {
+        display: block;
+    }
+}

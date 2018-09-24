@@ -11,6 +11,7 @@ module.exports = () => {
     var lang = routeComponents[3];
     var linkPrefix = "/" + product + "/" + version + "/" + lang;
     var TOCxml = "/documentation_files/" + product + "/" + version + "/OnlineOutput.xml";
+
     $.ajax({
         type: "GET",
         url: TOCxml,
