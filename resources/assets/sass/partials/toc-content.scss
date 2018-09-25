@@ -9,6 +9,10 @@
         max-width: 100%;
     }
 
+    ol {
+        padding-left: 16px;
+    }
+
     .topiccontents {
         @include mq(lg) {
             display: none;
@@ -24,13 +28,6 @@
         .prdsectiontext {
             padding: 0 0 0 25px;
             font-style: italic;
-        }
-
-        .prdsectionlogo {
-            // position: relative;
-            // float: left;
-            // top: 15px;
-            // right: -10px;
         }
 
         p {

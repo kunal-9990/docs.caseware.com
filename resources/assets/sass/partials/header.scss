@@ -7,7 +7,7 @@ header.header {
         display: block;
     }
 
-    .container {
+    .header__container {
         display: flex;
         align-items: center;
         min-height: 80px;
@@ -17,11 +17,15 @@ header.header {
         display: flex;
         list-style: none;
         padding: 0;
-        margin: 0;
+        margin: 0 0 0 10px;
         font-weight: bold;
         
         a {
-            padding: 0 5px;
+            padding: 0 10px;
+
+            .glyphicon-chevron-down {
+                font-size: 0.875em;
+            }
         }
 
         .header__lang-picker {
@@ -33,6 +37,11 @@ header.header {
                 display: block;
             }
         }
+    }
+
+    .header__nav-wrap {
+        display: flex;
+        align-items: center;
     }
 
     .header__search-wrap {
