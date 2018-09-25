@@ -31,5 +31,8 @@
         "commonjs": true,
         "es6": true,
         "jquery": true
+    },
+    "globals": {
+        "_": false
     }
 }

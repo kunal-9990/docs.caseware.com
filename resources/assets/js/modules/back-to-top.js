@@ -15,5 +15,5 @@ module.exports = () => {
     }
     isBackToTopShown();
 
-    window.addEventListener('scroll', () => isBackToTopShown());
+    window.addEventListener('scroll', _.debounce(isBackToTopShown, 250));
 };
