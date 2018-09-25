@@ -13,32 +13,6 @@ header.header {
         min-height: 80px;
     }
 
-    .header__nav {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0 0 0 10px;
-        font-weight: bold;
-        
-        a {
-            padding: 0 10px;
-
-            .glyphicon-chevron-down {
-                font-size: 0.875em;
-            }
-        }
-
-        .header__lang-picker {
-            display: none;
-        }
-
-        &.lang-list--is-open {
-            .header__lang-picker {
-                display: block;
-            }
-        }
-    }
-
     .header__nav-wrap {
         display: flex;
         align-items: center;
