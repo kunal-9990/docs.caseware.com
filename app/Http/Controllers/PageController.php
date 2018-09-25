@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Sunra\PhpSimple\HtmlDomParser;
+use Illuminate\Support\Facades\Cache;
 
 class PageController extends Controller
 {
+
+
     // default
     function home() {
+
         return view('partials.home');
     }
 
@@ -19,7 +23,6 @@ class PageController extends Controller
 
     // topic
     function showTopic($product, $version, $lang, $category, $subcategory, $topic){
-
         if(!endsWith($topic,".htm")){
             $topic .= ".htm";
         }
@@ -28,7 +31,10 @@ class PageController extends Controller
 
         $maincontentarea = $dom->find('body', 0);
 
-        return view('pages.documentation', compact('maincontentarea'));
+        $recent = getRecentlyViewed();
+
+
+        return view('pages.documentation', compact('maincontentarea', 'recent'));
     }
 
     // subcategory
@@ -42,7 +48,9 @@ class PageController extends Controller
 
         $maincontentarea = $dom->find('body', 0);
 
-        return view('pages.documentation', compact('maincontentarea')); 
+        $recent = getRecentlyViewed();
+
+        return view('pages.documentation', compact('maincontentarea', 'recent'));
     }
     
     // category
@@ -56,6 +64,8 @@ class PageController extends Controller
 
         $maincontentarea = $dom->find('body', 0);
 
-        return view('pages.documentation', compact('maincontentarea'));
+        $recent = getRecentlyViewed();
+
+        return view('pages.documentation', compact('maincontentarea', 'recent'));
     }
 }
