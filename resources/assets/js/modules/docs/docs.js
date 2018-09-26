@@ -4,11 +4,13 @@ const DOCS_CONTAINER = require('./grid');
 const IMG_MODAL = require('./image-modal');
 const DOWNLOAD_PDF = require('./download-pdf');
 const VIDEO_IFRAME = require('./video-iframe');
+const FEEDBACK = require('./user-feedback');
 
 module.exports = () => {
     SUB_TOPIC_SCROLLSPY();
     TOC();
     DOCS_CONTAINER();
+    FEEDBACK();
 
     if (document.querySelector('.downloadLink')) {
         DOWNLOAD_PDF();
