@@ -1,4 +1,4 @@
-<h5>recently viewed</h5>
+<h5>Recently viewed</h5>
 <ul class="nav">
     @foreach (array_reverse($recent) as $topic)
         @php
@@ -7,8 +7,6 @@
             $title = str_replace('-', ' ', $title);
             $title = str_replace('.htm', '', $title);
         @endphp
-        <a href="{{$topic}}">
-            <li>{{$title}}</li>
-        </a>
+        <li><a href="{{$topic}}">{{$title}}</a></li>
     @endforeach
 </ul>
