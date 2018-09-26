@@ -2,7 +2,7 @@
     display: flex;
 
     .docs__sub-toc {
-        flex: 1 1 100%;
+        flex: 1 0 250px;
         display: none;
 
         @include mq(lg) {
