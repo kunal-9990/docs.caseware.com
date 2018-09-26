@@ -10,4 +10,4 @@ module.exports = () => {
             btn.classList.add('feedback-given');
         });
     });
-}
+};
