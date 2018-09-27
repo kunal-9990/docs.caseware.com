@@ -22,8 +22,4 @@
             </form>
         </div>
     </div>
-    {{-- <a class="report-a-problem">Provide feedback about this article</a> --}}
 </div>
-
-
-<hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>

@@ -11,8 +11,37 @@
         margin-right: 10px;
     }
 
+    .was-this-helpful-no-reason-menu {
+        position: relative;
+    }
+
+    .reason-radio-box {
+        min-width: 150px;
+        margin: 10px;
+    }
+
     .was-this-helpful-no-reason-dropdown {
         display: none;
+        top: calc(100% + 2px);
+        background-color: #FFF;
+        border-radius: 3px;
+        border: 1px solid #DFE1E6;
+        box-shadow: 0 2px 5px 1px #F4F5F7;
+        position: absolute;
+        right: 0;
+
+        &.is-expanded {
+            display: block;
+        }
+
+        label {
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            margin: 3px 3px 0px 5px;
+        }
     }
 
     .was-this-helpful {
@@ -49,6 +78,7 @@
 
         &.feedback-given {
             background-color: $blue-horizon;
+            border-color: $blue-horizon;
             color: $white;
         }
     }
