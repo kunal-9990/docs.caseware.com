@@ -29,7 +29,8 @@ module.exports = () => {
                                 if (($(this).attr("conditions"))) {
                                     producttags = $(this).attr("conditions").replace("Product.", "").toLowerCase();
                                 };
-                                if(loc.includes($(this).attr("Link"))){
+                                
+                                if(loc.includes($(this).attr("Link").replace(".htm",""))){
                                     topicList.append('<li class="current-page"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
                                 }
                                 else{
