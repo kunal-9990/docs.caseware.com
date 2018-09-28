@@ -18,6 +18,9 @@ Route::get('/', 'PageController@home');
 // documentation home
 Route::get('/documentation', 'PageController@documentationHome');
 
+// search
+Route::get('/{product}/{version}/{lang}/search', 'PageController@search');
+
 // topics
 Route::get('/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic');
 
@@ -26,3 +29,6 @@ Route::get('/{product}/{version}/{lang}/{category}/{subcategory}', 'PageControll
 
 // category
 Route::get('/{product}/{version}/{lang}/{category}', 'PageController@showCategory');
+
+
+
