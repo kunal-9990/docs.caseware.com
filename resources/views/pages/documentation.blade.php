@@ -25,6 +25,9 @@
                         @if(isset($maincontentarea))
                             @include('partials.toc-content', ['content' => $maincontentarea])
                         @endif
+                        <div class="docs__user-feedback">
+                            @include('partials.user-feedback')
+                        </div>
                     </div>
                     <div class="docs__sub-toc">
                         <div class="docs__video-iframe-thumbnail-container">
