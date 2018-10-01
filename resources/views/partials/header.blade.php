@@ -6,7 +6,11 @@
                 @include('partials.header-nav')
             </div>
             <div class="header__input-search-wrapper">
-                <input type="text" placeholder="Search">
+                <form method="GET" action="../../search">
+                    <input type="text" name="search" placeholder="Search">
+
+                    {{-- <button type="submit">submit</button> --}}
+                </form>
             </div>
         </div>
     </div>

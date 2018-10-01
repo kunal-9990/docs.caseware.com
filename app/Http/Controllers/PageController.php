@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Sunra\PhpSimple\HtmlDomParser;
 use Illuminate\Support\Facades\Cache;
-
+use Illuminate\Support\Facades\Redirect;
 class PageController extends Controller
 {
 
@@ -21,6 +21,24 @@ class PageController extends Controller
         return view('pages.documentation');
     }
 
+    // topic
+    function search($product, $version, $lang){
+        // if(!endsWith($topic,".htm")){
+        //     $topic .= ".htm";
+        // }
+        // // dd($version);
+        // $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category."/".$subcategory."/".$topic );
+
+        // $maincontentarea = $dom->find('body', 0);
+
+        // $recent = getRecentlyViewed();
+        
+
+
+        return Redirect::to('/documentation_files/webapps/28/Content/Search.htm#search-'.request('search'));
+        // return view('pages.search', compact('recent'));
+
+    }
     // topic
     function showTopic($product, $version, $lang, $category, $subcategory, $topic){
         if(!endsWith($topic,".htm")){
