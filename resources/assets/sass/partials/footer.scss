@@ -1,0 +1,54 @@
+footer.footer {
+    background-color: $blue-horizon;
+    color: $white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .footer__flex-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include mq(md) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer__cw-logo {
+            width: 250px;
+
+            @include mq(md) {
+                width: 270px;
+            }
+        }
+
+        .footer__social-media {
+            @include mq(md) {
+                flex-basis: 270px;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            a {
+                color: $white;
+                font-size: 2em;
+                display: inline-flex;
+
+                &:not(:last-of-type) {
+                    margin-right: 3px;
+                }
+            }
+        }
+    }
+
+    p {
+        margin: 15px 0 15px 0;
+        font-size: 0.875em;
+        line-height: 1;
+
+        @include mq(md) {
+            margin: 0 0 0 0;
+        }
+    }
+}
