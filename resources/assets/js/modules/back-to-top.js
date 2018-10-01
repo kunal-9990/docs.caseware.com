@@ -8,12 +8,24 @@ module.exports = () => {
         document.documentElement.scrollTop = 0;
     });
 
+    // show the back-to-top btn if the total page length is greater
+    // than x3 viewport height && is scrolled beyond the "above the fold" content
+    // also checks if page if page is scrolled down all the way and sets element just
+    // above the footer
     function isBackToTopShown() {
+        const FOOTER_HEIGHT = document.querySelector('.footer').clientHeight + 15;
+
         isLongerThanThreeViewports && document.documentElement.scrollTop > windowInnerHeight
             ? backToTopBtn.classList.add('back-to-top--is-shown')
             : backToTopBtn.classList.remove('back-to-top--is-shown');
+
+        if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 2) {
+            backToTopBtn.style = `bottom: ${FOOTER_HEIGHT}px;`;
+        } else {
+            backToTopBtn.style = 'bottom: 15px;';
+        }
     }
     isBackToTopShown();
 
-    window.addEventListener('scroll', _.debounce(isBackToTopShown, 250));
+    window.addEventListener('scroll', _.debounce(isBackToTopShown, 75));
 };
