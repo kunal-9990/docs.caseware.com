@@ -34,6 +34,7 @@ footer.footer {
                 color: $white;
                 font-size: 2em;
                 display: inline-flex;
+                text-decoration: none;
 
                 &:not(:last-of-type) {
                     margin-right: 3px;
