@@ -69,8 +69,20 @@ module.exports = () => {
             ifSiblingElementExists();
 
             tocExpandToggle();
+
+            CheckExpandedLists();
         }
     });
+
+    // checks to see where to add class to rotate the chevron for expanded toc lists
+    function CheckExpandedLists() {
+        const CURRENT_PAGE = document.querySelectorAll('.current-page') || null;
+        CURRENT_PAGE.forEach(el => {
+            el.closest('.toc__sub-category').classList.add('toc__category--is-open');
+            el.closest('.toc__category').classList.add('toc__category--is-open');
+        })
+        
+    }
 
 
     // if an anchor in the toc doesn't have a ul as a next sibling
