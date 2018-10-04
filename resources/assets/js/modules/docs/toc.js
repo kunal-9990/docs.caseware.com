@@ -75,6 +75,7 @@ module.exports = () => {
     });
 
     // checks to see where to add class to rotate the chevron for expanded toc lists
+    // TODO: might have to polyfill .closest() for IE
     function CheckExpandedLists() {
         const CURRENT_PAGE = document.querySelectorAll('.current-page') || null;
         CURRENT_PAGE.forEach(el => {
