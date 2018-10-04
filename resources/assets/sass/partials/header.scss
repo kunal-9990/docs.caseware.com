@@ -58,4 +58,10 @@ header.header {
             width: 100%;
         }
     }
+
+    .expanded-filters {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s;
+    }
 }

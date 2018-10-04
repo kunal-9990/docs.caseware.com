@@ -13,16 +13,14 @@ module.exports = () => {
     // also checks if page if page is scrolled down all the way and sets element just
     // above the footer
     function isBackToTopShown() {
-        const FOOTER_HEIGHT = document.querySelector('.footer').clientHeight + 15;
-
         isLongerThanThreeViewports && document.documentElement.scrollTop > windowInnerHeight
             ? backToTopBtn.classList.add('back-to-top--is-shown')
             : backToTopBtn.classList.remove('back-to-top--is-shown');
 
         if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 2) {
-            backToTopBtn.style = `bottom: ${FOOTER_HEIGHT}px;`;
+            backToTopBtn.style = 'display: none;';
         } else {
-            backToTopBtn.style = 'bottom: 15px;';
+            backToTopBtn.style = 'display: flex;';
         }
     }
     isBackToTopShown();
