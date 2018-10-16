@@ -1,5 +1,7 @@
 <?php
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +22,10 @@ Route::get('/documentation', 'PageController@documentationHome');
 
 // search
 Route::get('/{product}/{version}/{lang}/search', 'PageController@search');
+
+// search
+Route::get('/{product}/{version}/{lang}/search1', 'PageController@search1')->middleware('processsearch')->name('search1');
+
 
 // topics
 Route::get('/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic');

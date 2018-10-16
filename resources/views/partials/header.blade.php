@@ -1,3 +1,7 @@
+@php
+use Illuminate\Http\Request;
+
+@endphp
 <header class="header">
     <div class="container header__container">
         {{-- <div class="row"> --}}
@@ -7,19 +11,20 @@
                 @include('partials.nav')
             </div>
             <div class="header__input-search-wrapper">
-                <form method="GET" action="../../search">
+                @php
+                $product = Route::current()->parameters()["product"];
+                $version = Route::current()->parameters()["version"];
+                $lang = Route::current()->parameters()["lang"];
+                $searchURL = route('search1', [$product, $version, $lang]);
+                @endphp
+                <form method="GET" action="{{$searchURL}}">
                     <input type="text" name="search" placeholder="Search">
-
-                    {{-- <button type="submit">submit</button> --}}
                 </form>
             </div>
         </div>
-        {{-- </div> --}}
-        {{-- <div class="expanded-filters">hihi</div> --}}
+
     </div>
     <div class="container">
-        {{-- <div class="row"> --}}
-        <div class="expanded-filters">hihi</div>
-        {{-- </div> --}}
+        <div class="expanded-filters"></div>
     </div>
 </header>

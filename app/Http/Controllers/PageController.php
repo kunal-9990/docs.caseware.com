@@ -21,7 +21,7 @@ class PageController extends Controller
         return view('pages.documentation');
     }
 
-    // topic
+    // search1
     function search($product, $version, $lang){
         // if(!endsWith($topic,".htm")){
         //     $topic .= ".htm";
@@ -35,10 +35,19 @@ class PageController extends Controller
         
 
 
-        return Redirect::to('/documentation_files/webapps/28/Content/Search.htm#search-'.request('search'));
-        // return view('pages.search', compact('recent'));
+        // return Redirect::to('/documentation_files/webapps/28/Content/Search.htm#search-'.request('search'));
+        return view('pages.search', compact('recent'));
+        // return redirect('/');
 
     }
+    // topic
+    function search1($product, $version, $lang){
+
+        // return redirect('/'.$product.'/'.$version.'/'.$lang.'/search#search-'.request()->search);
+        return view('pages.search', compact('recent'));
+
+    }
+    
     // topic
     function showTopic($product, $version, $lang, $category, $subcategory, $topic){
         if(!endsWith($topic,".htm")){
