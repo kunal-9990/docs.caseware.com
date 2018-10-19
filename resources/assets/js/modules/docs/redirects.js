@@ -1,6 +1,3 @@
-/* eslint-disable */
-
-
 module.exports = () => {
     String.prototype.replaceAll = function (strReplace, strWith) {
         // See http://stackoverflow.com/a/3561711/556609

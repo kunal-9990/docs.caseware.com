@@ -40,6 +40,6 @@ $(document).ready(() => {
 
     // back to top button
     if (document.querySelector('.search-page')) {
-        SEARCH();        
+        SEARCH();
     }
 });

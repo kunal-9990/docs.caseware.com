@@ -2,4 +2,7 @@ resources/assets/js/modules/old/*
 resources/assets/js/components/*
 resources/assets/js/bootstrap.js
 /resources/assets/js/modules/docs/toc.js
+/resources/assets/js/modules/search.js
+/resources/assets/js/modules/docs/filter.js
+/resources/assets/js/modules/docs/redirects.js
 resources/assets/js/vendor/*

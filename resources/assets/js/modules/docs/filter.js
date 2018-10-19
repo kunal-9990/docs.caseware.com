@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 module.exports = () => {
 
     $(document).on('click', '.filters__item', function(event){
