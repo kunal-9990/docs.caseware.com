@@ -21,14 +21,13 @@ Route::get('/', 'PageController@home');
 Route::get('/documentation', 'PageController@documentationHome');
 
 // search
-Route::get('/{product}/{version}/{lang}/search', 'PageController@search');
-
-// search
-Route::get('/{product}/{version}/{lang}/search1', 'PageController@search1')->middleware('processsearch')->name('search1');
-
+Route::get('/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
 
 // topics
 Route::get('/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic');
+
+// topics
+Route::get('/{product}/{version}/{lang}/{category}/{subcategory}/{subsubcategory}/{topic}', 'PageController@showTopic2');
 
 // sub category
 Route::get('/{product}/{version}/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');

@@ -20,6 +20,7 @@ require('./vendor/noframework.waypoints');
 const HEADER = require('./modules/header/header');
 const DOCS = require('./modules/docs/docs');
 const BACK_TO_TOP = require('./modules/back-to-top');
+const SEARCH = require('./modules/search');
 
 $(document).ready(() => {
     // nav init
@@ -35,5 +36,10 @@ $(document).ready(() => {
     // back to top button
     if (document.querySelector('.back-to-top')) {
         BACK_TO_TOP();
+    }
+
+    // back to top button
+    if (document.querySelector('.search-page')) {
+        SEARCH();        
     }
 });

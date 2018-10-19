@@ -24,4 +24,17 @@
 </script>
 <script src="/documentation_files/webapps/28/Content/Resources/Scripts/MadCapAll.js">
 </script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+
+{{-- GOOGLE ANALYTICS TAG --}}
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+</script>
+
+
 {{-- <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"> --}}

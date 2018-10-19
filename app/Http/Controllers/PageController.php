@@ -21,27 +21,8 @@ class PageController extends Controller
         return view('pages.documentation');
     }
 
-    // search1
-    function search($product, $version, $lang){
-        // if(!endsWith($topic,".htm")){
-        //     $topic .= ".htm";
-        // }
-        // // dd($version);
-        // $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category."/".$subcategory."/".$topic );
-
-        // $maincontentarea = $dom->find('body', 0);
-
-        // $recent = getRecentlyViewed();
-        
-
-
-        // return Redirect::to('/documentation_files/webapps/28/Content/Search.htm#search-'.request('search'));
-        return view('pages.search', compact('recent'));
-        // return redirect('/');
-
-    }
     // topic
-    function search1($product, $version, $lang){
+    function search($product, $version, $lang){
 
         // return redirect('/'.$product.'/'.$version.'/'.$lang.'/search#search-'.request()->search);
         return view('pages.search', compact('recent'));
@@ -53,8 +34,27 @@ class PageController extends Controller
         if(!endsWith($topic,".htm")){
             $topic .= ".htm";
         }
+        // $product =  strtolower($product);
         // dd($version);
         $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category."/".$subcategory."/".$topic );
+
+        $maincontentarea = $dom->find('body', 0);
+
+        $recent = getRecentlyViewed();
+
+
+        return view('pages.documentation', compact('maincontentarea', 'recent'));
+    }
+
+    // topic
+    function showTopic2($product, $version, $lang, $category, $subcategory, $subsubcategory, $topic){
+        if(!endsWith($topic,".htm")){
+            $topic .= ".htm";
+        }
+        // $product =  strtolower($product);
+
+        // dd($version);
+        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category."/".$subcategory."/".$subsubcategory."/".$topic );
 
         $maincontentarea = $dom->find('body', 0);
 

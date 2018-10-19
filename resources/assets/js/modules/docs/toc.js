@@ -31,10 +31,10 @@ module.exports = () => {
                                 };
                                 
                                 if(loc.includes($(this).attr("Link").replace(".htm",""))){
-                                    topicList.append('<li class="current-page"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
+                                    topicList.append('<li class="current-page ' + "test" + '"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
                                 }
                                 else{
-                                    topicList.append('<li><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');                                    
+                                    topicList.append('<li ' + "test" + '><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');                                    
                                 }
                                 // if (producttags) {
                                 //     topicList.append('<li><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');

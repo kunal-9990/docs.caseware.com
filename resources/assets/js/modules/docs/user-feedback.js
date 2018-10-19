@@ -4,6 +4,7 @@ module.exports = () => {
     const WAS_HELPFUL_BTN = document.querySelector('.was-this-helpful-yes');
     const NOT_HELPFUL_DROPDOWN = document.querySelector('.was-this-helpful-no-reason-dropdown');
     const NOT_HELPFUL_REASON = document.querySelectorAll('input[name=was-this-helpful-no-reason]');
+    
     // variable for the ga script object
     let FEEDBACK = null; // eslint-disable-line
 
@@ -24,6 +25,8 @@ module.exports = () => {
 
     window.addEventListener('beforeunload', () => {
         // fire ga script with built object FEEDBACK
+        ga('global.send', 'event', FEEDBACK, 'User Feedback', window.location.href);
+        ga('caseware.send', 'event', FEEDBACK, 'User Feedback', window.location.href);
     });
 
     NOT_HELPFUL_REASON.forEach((input) => {

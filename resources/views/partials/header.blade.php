@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
                 $product = Route::current()->parameters()["product"];
                 $version = Route::current()->parameters()["version"];
                 $lang = Route::current()->parameters()["lang"];
-                $searchURL = route('search1', [$product, $version, $lang]);
+                $searchURL = route('search', [$product, $version, $lang]);
                 @endphp
                 <form method="GET" action="{{$searchURL}}">
                     <input type="text" name="search" placeholder="Search" autocomplete="off">

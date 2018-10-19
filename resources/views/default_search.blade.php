@@ -34,7 +34,7 @@
 
     @include('partials.footer')
 
-    <script>
+    {{-- <script>
         function getParameterByName(name, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, "\\$&");
@@ -45,7 +45,7 @@
         }
         var search = getParameterByName('search', window.location.href);
         window.location.hash = 'search-' + search;    
-    </script>
+    </script> --}}
     <script src="{{'/js/app.js'}}"></script>
     <script src="/documentation_files/webapps/28/Content/Resources/Scripts/custom.modernizr.js"></script>
     <script src="/documentation_files/webapps/28/Content/Resources/Scripts/jquery.min.js"></script>
