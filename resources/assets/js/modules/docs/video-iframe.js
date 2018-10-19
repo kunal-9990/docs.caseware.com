@@ -8,7 +8,7 @@ module.exports = () => {
     const YT_VIDEO_ID = IFRAME_SRC.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
 
     ORIGINAL_VID_CONTAINER.remove();
-
+    BODY.classList.add('page-has-video');
 
     // base youtube img thumbnail url
     // http://img.youtube.com/vi/[video-id]/[thumbnail-number].jpg
