@@ -10,17 +10,14 @@ module.exports = () => {
 
     // show the back-to-top btn if the total page length is greater
     // than x3 viewport height && is scrolled beyond the "above the fold" content
-    // also checks if page if page is scrolled down all the way and sets element just
-    // above the footer
+    // also hides the btn if user is scrolled to the bottom to not overlay the footer
     function isBackToTopShown() {
         isLongerThanThreeViewports && document.documentElement.scrollTop > windowInnerHeight
             ? backToTopBtn.classList.add('back-to-top--is-shown')
             : backToTopBtn.classList.remove('back-to-top--is-shown');
 
-        if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - 2) {
-            backToTopBtn.style = 'display: none;';
-        } else {
-            backToTopBtn.style = 'display: flex;';
+        if ((window.innerHeight + window.pageYOffset) >= document.body.scrollHeight - 2) {
+            backToTopBtn.classList.remove('back-to-top--is-shown');
         }
     }
     isBackToTopShown();
