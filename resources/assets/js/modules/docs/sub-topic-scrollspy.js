@@ -20,8 +20,8 @@ module.exports = () => {
     var waypoint = new Waypoint({
         element: TOC_SUBTOPIC_CONTAINER,
         handler: function(direction) {
-          if (direction === 'down') {
-            TOC_SUBTOPIC_CONTAINER.classList.add('affix');
+          if (direction === 'down' && window.pageYOffset !== 0) {
+            TOC_SUBTOPIC_CONTAINER.classList.add('affix');            
           } else {
             TOC_SUBTOPIC_CONTAINER.classList.remove('affix');
           }
