@@ -1,5 +1,18 @@
 module.exports = () => {
     const TOC_SUBTOPIC_CONTAINER = document.querySelector('.toc-subtopics__in-this-article');
+    const TOC_SUBTOPIC_NAV = TOC_SUBTOPIC_CONTAINER.querySelector('ul.nav');
+    const TOC_CONTENT_CONTAINER = document.querySelector('.toc-content').querySelectorAll('h2');
+
+    // create the sub-toc
+    TOC_CONTENT_CONTAINER.forEach((el) => {
+        const LI = document.createElement('li');
+        const ANCHOR = document.createElement('a');
+
+        ANCHOR.textContent = el.id;
+        ANCHOR.setAttribute('href', `#${el.id}`);
+        LI.appendChild(ANCHOR);
+        TOC_SUBTOPIC_NAV.appendChild(LI);
+    });
 
     $(window).scroll(() => {
         const windscroll = $(window).scrollTop();
