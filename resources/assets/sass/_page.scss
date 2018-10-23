@@ -1,3 +1,11 @@
 #main {
     margin-top: 1.5em;
+    flex-grow: 1;
+}
+
+.flex-page-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }

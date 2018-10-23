@@ -15,14 +15,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
 </head>
 <body>
-    @include('partials.header')
-    @include('partials.header-mobile')
+    <div class="flex-page-container">
+        @include('partials.header')
+        @include('partials.header-mobile')
 
-    <main id="main">
-        @yield('content')
-    </main>
-
-    @include('partials.footer')
+    {{-- <div class="flex-page-container"> --}}
+        <main id="main">
+            @yield('content')
+        </main>
+    
+        @include('partials.footer')
+    </div>
 
     <script src="{{'/js/app.js'}}"></script>
 </body>
