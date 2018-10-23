@@ -12,7 +12,7 @@ module.exports = () => {
     TOC_CONTENT_CONTAINER.forEach((el) => {
         const LI = document.createElement('li');
         const ANCHOR = document.createElement('a');
-        const ANCHOR_TEXT = el.id.replace(/-/g, ' ');
+        const ANCHOR_TEXT = el.id.replace(/[^A-Za-z0-9]+/g, ' ');
         ANCHOR.textContent = ANCHOR_TEXT;
         ANCHOR.setAttribute('href', `#${el.id}`);
         LI.appendChild(ANCHOR);
