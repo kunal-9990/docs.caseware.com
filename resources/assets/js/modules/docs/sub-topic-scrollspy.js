@@ -3,6 +3,11 @@ module.exports = () => {
     const TOC_SUBTOPIC_NAV = TOC_SUBTOPIC_CONTAINER.querySelector('ul.nav');
     const TOC_CONTENT_CONTAINER = document.querySelector('.toc-content').querySelectorAll('h2');
 
+    if (TOC_CONTENT_CONTAINER.length === 0) {
+        TOC_SUBTOPIC_CONTAINER.removeChild(TOC_SUBTOPIC_CONTAINER.querySelector('h5'));
+        return;
+    }
+
     // create the sub-toc
     TOC_CONTENT_CONTAINER.forEach((el) => {
         const LI = document.createElement('li');
