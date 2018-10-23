@@ -7,8 +7,8 @@ module.exports = () => {
     TOC_CONTENT_CONTAINER.forEach((el) => {
         const LI = document.createElement('li');
         const ANCHOR = document.createElement('a');
-
-        ANCHOR.textContent = el.id;
+        const ANCHOR_TEXT = el.id.replace(/-/g, ' ');
+        ANCHOR.textContent = ANCHOR_TEXT;
         ANCHOR.setAttribute('href', `#${el.id}`);
         LI.appendChild(ANCHOR);
         TOC_SUBTOPIC_NAV.appendChild(LI);
