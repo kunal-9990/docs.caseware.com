@@ -15,7 +15,10 @@
 $current_version = env("CURRENT_VERSION");
 
 // home
-Route::get('/', 'PageController@home');
+Route::get('/', 'PageController@home'); 
+
+// home
+Route::get('/home', 'PageController@home'); 
 
 // documentation home
 Route::get('/documentation', 'PageController@documentationHome');
@@ -24,7 +27,7 @@ Route::get('/documentation', 'PageController@documentationHome');
 Route::get('/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
 
 // topics
-Route::get('/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic');
+Route::get('/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');
 
 // topics
 Route::get('/{product}/{version}/{lang}/{category}/{subcategory}/{subsubcategory}/{topic}', 'PageController@showTopic2');
