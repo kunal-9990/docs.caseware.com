@@ -35,49 +35,77 @@
     }
     
     .filters__dropdown {
-        position: relative;
         margin-left: 15px;
         font-weight: bold;
 
         > a {
             font-weight: bold;
         }
+    }
+}
 
-        .filters__menu {
-            padding: 25px;
-            white-space: nowrap;
-            display: flex;
+header.header {
+    .expanded-filters {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 5s;
+
+        .filter-dropdown-is-expanded & {
+            max-height: 100px;
         }
+    }
+
+    .filters__menu {
+        display: flex;
+        margin-bottom: 20px;
 
         .filters__item {
-            border: 1px solid $blue-horizon;
-            border-radius: 4px;
-            padding: 5px 15px;
-            color: $blue-horizon;
+            background-color: #f1f1f1;
+            color: #a8a8a8;
+            padding: 7px 10px;
+            border-radius: 50px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
             cursor: pointer;
-            min-width: 60px;
-            text-align: center;
 
-            @include mq(sm) {
-                &:not(:last-of-type) {
-                    margin-right: 10px;
+            .fa-circle {
+                color: $white;
+                font-size: 0.7em;
+                margin-right: 5px;
+            }
+
+            &.se {
+                .fa-circle { color: rgba(66, 99, 235, 0.4); }
+            }
+            &.analytics {
+                .fa-circle { color: rgba(229, 114, 0, 0.4); }
+            }
+            &.time {
+                .fa-circle { color: rgba(168, 26, 76, 0.4); }
+            }
+            &.working-papers {
+                .fa-circle { color: rgba(86, 58, 175, 0.4); }
+            }
+
+            &.active-filter {
+                color: $white;
+
+                .fa-circle {
+                    color: $white;
                 }
             }
 
             &.active-filter {
-                background-color: $blue-horizon;
-                color: $white;
+                &.se { background-color: $solution-cloud; }
+                &.analytics { background-color: $solution-analytics; }
+                &.time { background-color: $solution-time; }
+                &.working-papers { background-color: $solution-workingpapers; }
+            }
+
+            &:not(:last-of-type) {
+                margin-right: 5px;
             }
         }
-    }
-}
-
-.mobile-nav__wrapper {
-    .filters__menu {
-        flex-direction: column;
-    }
-
-    .filters__dropdown .dropdown-content {
-        left: -45px;
     }
 }
