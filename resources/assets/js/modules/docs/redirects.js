@@ -1,10 +1,11 @@
 module.exports = () => {
+
     String.prototype.replaceAll = function (strReplace, strWith) {
         // See http://stackoverflow.com/a/3561711/556609
         var esc = strReplace.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
         var reg = new RegExp(esc, 'ig');
         return this.replace(reg, strWith);
-      };
+      }; 
 
       var routeParams = window.location.href.split("/");
       var product = routeParams[3];
@@ -17,7 +18,8 @@ module.exports = () => {
       
       $.ajax({
         type: "GET",
-        url: "/documentation_files/" + product + "/" + version + "/" + "csh_redirect.xml",
+        // url: "/documentation_files/webapps/29/csh_redirect.xml",
+        url: "/documentation_files/" + product + "/" + version + "/csh_redirect.xml",
         dataType: "xml",
         success: function (xml) {
           url = window.location.href.split("?")[0];
@@ -30,16 +32,16 @@ module.exports = () => {
         }
       });
       
-      $(document).ready(function () {
-        if (!accordianID) {
-          accordianID = "About_WebApps";
-        }
-        $("#" + accordianID).addClass("in");
-        $("#" + accordianID).prev("div.reverse").addClass("redreverse");
-        $("body, html").animate({
-          scrollTop: $("#" + accordianID).offset().top - 100
-        }, 600);
-      });
+      // $(document).ready(function () {
+      //   if (!accordianID) {
+      //     accordianID = "About_WebApps";
+      //   }
+      //   $("#" + accordianID).addClass("in");
+      //   $("#" + accordianID).prev("div.reverse").addClass("redreverse");
+      //   $("body, html").animate({
+      //     scrollTop: $("#" + accordianID).offset().top - 100
+      //   }, 600);
+      // });
       
 
 

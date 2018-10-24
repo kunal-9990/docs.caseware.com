@@ -13,7 +13,7 @@ class PageController extends Controller
     // default
     function home() {
 
-        return view('partials.home');
+        return view('pages.home');
     }
 
     // documentation home
@@ -21,9 +21,8 @@ class PageController extends Controller
         return view('pages.documentation');
     }
 
-    // topic
+    // search
     function search($product, $version, $lang){
-
         // return redirect('/'.$product.'/'.$version.'/'.$lang.'/search#search-'.request()->search);
         return view('pages.search', compact('recent'));
 
@@ -36,12 +35,11 @@ class PageController extends Controller
         }
         // $product =  strtolower($product);
         // dd($version);
-        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category."/".$subcategory."/".$topic );
+        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."Content/".$category."/".$subcategory."/".$topic ));
 
         $maincontentarea = $dom->find('body', 0);
 
         $recent = getRecentlyViewed();
-
 
         return view('pages.documentation', compact('maincontentarea', 'recent'));
     }
@@ -54,7 +52,7 @@ class PageController extends Controller
         // $product =  strtolower($product);
 
         // dd($version);
-        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category."/".$subcategory."/".$subsubcategory."/".$topic );
+        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."Content/".$category."/".$subcategory."/".$subsubcategory."/".$topic ));
 
         $maincontentarea = $dom->find('body', 0);
 
@@ -71,7 +69,7 @@ class PageController extends Controller
             $subcategory .= ".htm";
         }
 
-        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category."/".$subcategory );
+        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."Content/".$category."/".$subcategory ));
 
         $maincontentarea = $dom->find('body', 0);
 
@@ -87,10 +85,10 @@ class PageController extends Controller
             $category .= ".htm";
         }
         
-        $dom = HtmlDomParser::file_get_html( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category );
+        $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category ));
 
         $maincontentarea = $dom->find('body', 0);
-
+        // dd($maincontentarea);
         $recent = getRecentlyViewed();
 
         return view('pages.documentation', compact('maincontentarea', 'recent'));
