@@ -1,3 +1,20 @@
+@php
+// $en = Route::current();
+// $en = Route::current();
+// $en->setParameter('lang', 'en');
+// // dd($en->urir());
+// $fr = Route::current();
+// $fr->setParameter('lang', 'fr');
+// $es = Route::current();
+// $es->setParameter('lang', 'es');
+// $nl = Route::current();
+// $nl->setParameter('lang', 'nl');
+// $cn = Route::current();
+// $cn->setParameter('lang', 'cn');
+// $de = Route::current();
+// $de->setParameter('lang', 'de');
+
+@endphp
 <div class="language__dropdown">
     <a href="#">English <i class="fas fa-angle-down"></i></a>
     <div class="dropdown-content">

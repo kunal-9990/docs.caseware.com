@@ -7,7 +7,9 @@ module.exports = () => {
     function updateFilter(){
 
 
-        $('.test').hide();
+        $('.time').hide();
+
+        //load
     // $.post("/assets/phpfunctions/productFilter.php",
     // {
     //     'function': 'updateFilter',

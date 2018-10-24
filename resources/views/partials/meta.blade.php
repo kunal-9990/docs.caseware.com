@@ -6,6 +6,10 @@
 <meta property="og:image" content="/path/to/image.jpg" />
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
+
+{{-- While WIP on live server to prevent indexing --}}
+<meta name="robots" content="noindex">
+
 <link rel="canonical" href="{{ $canonical or ''}}" />
 
           

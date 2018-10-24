@@ -1,7 +1,3 @@
-@php
-use Illuminate\Http\Request;
-
-@endphp
 <header class="header">
     <div class="container header__container">
         {{-- <div class="row"> --}}

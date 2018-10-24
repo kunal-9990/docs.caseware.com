@@ -28,19 +28,18 @@ module.exports = () => {
                                 var classes;
                                 if (($(this).attr("conditions"))) {
                                     producttags = $(this).attr("conditions").replace("Product.", "").toLowerCase();
+                                }
+                                else {
+                                    producttags= " ";
                                 };
                                 
                                 if(loc.includes($(this).attr("Link").replace(".htm",""))){
-                                    topicList.append('<li class="current-page ' + "test" + '"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
+                                    topicList.append('<li class="current-page ' + producttags + '"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
                                 }
                                 else{
-                                    topicList.append('<li ' + "test" + '><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');                                    
+                                    topicList.append('<li class="' + producttags + '"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');                                    
                                 }
-                                // if (producttags) {
-                                //     topicList.append('<li><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
-                                // } else {
-                                //     topicList.append('<li><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
-                                // }
+
                             });
                             var link;
                             if ($(this).attr("Link")) {
