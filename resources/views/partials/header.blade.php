@@ -22,9 +22,17 @@ use Illuminate\Http\Request;
                 </form>
             </div>
         </div>
-
     </div>
     <div class="container">
-        <div class="expanded-filters"></div>
+        <div class="expanded-filters">
+            <div class="dropdown-content">
+                <div class="filters__menu">
+                    <div class="filters__item"><i class="fas fa-circle"></i> SE</div>
+                    <div class="filters__item"><i class="fas fa-circle"></i> Working papers</div>
+                    <div class="filters__item"><i class="fas fa-circle"></i> Analytics</div>
+                    <div class="filters__item"><i class="fas fa-circle"></i> Time</div>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
