@@ -8688,10 +8688,10 @@ header.header .filters__menu {
 }
 
 header.header .filters__menu .filters__item {
-  background-color: hotpink;
-  color: #ffffff;
-  padding: 3px 9px;
-  border-radius: 2px;
+  background-color: #f1f1f1;
+  color: #a8a8a8;
+  padding: 7px 10px;
+  border-radius: 50px;
   line-height: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8699,15 +8699,56 @@ header.header .filters__menu .filters__item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-header.header .filters__menu .filters__item:not(:last-of-type) {
-  margin-right: 5px;
+  cursor: pointer;
 }
 
 header.header .filters__menu .filters__item .fa-circle {
   color: #ffffff;
   font-size: 0.7em;
+  margin-right: 5px;
+}
+
+header.header .filters__menu .filters__item.se .fa-circle {
+  color: rgba(66, 99, 235, 0.4);
+}
+
+header.header .filters__menu .filters__item.analytics .fa-circle {
+  color: rgba(229, 114, 0, 0.4);
+}
+
+header.header .filters__menu .filters__item.time .fa-circle {
+  color: rgba(168, 26, 76, 0.4);
+}
+
+header.header .filters__menu .filters__item.working-papers .fa-circle {
+  color: rgba(86, 58, 175, 0.4);
+}
+
+header.header .filters__menu .filters__item.active-filter {
+  color: #ffffff;
+}
+
+header.header .filters__menu .filters__item.active-filter .fa-circle {
+  color: #ffffff;
+}
+
+header.header .filters__menu .filters__item.active-filter.se {
+  background-color: #4263eb;
+}
+
+header.header .filters__menu .filters__item.active-filter.analytics {
+  background-color: #e57200;
+}
+
+header.header .filters__menu .filters__item.active-filter.time {
+  background-color: #a81a4c;
+}
+
+header.header .filters__menu .filters__item.active-filter.working-papers {
+  background-color: #563aaf;
+}
+
+header.header .filters__menu .filters__item:not(:last-of-type) {
   margin-right: 5px;
 }
 
