@@ -1,12 +1,15 @@
 module.exports = () => {
-    const FILTER_ITEMS = document.querySelectorAll('.filters__dropdown .filters__item');
+    const BODY = document.querySelector('body');
+    const FILTER_DROPDOWN = document.querySelector('.filters__dropdown');
+    const FILTER_ITEMS = document.querySelectorAll('.expanded-filters .filters__item');
+
+    FILTER_DROPDOWN.addEventListener('click', () => {
+        BODY.classList.toggle('filter-dropdown-is-expanded');
+    });
 
     FILTER_ITEMS.forEach((item) => {
-        item.addEventListener('click', (event) => {
-            event.preventDefault();
-            item.classList.contains('active-filter')
-                ? item.classList.remove('active-filter')
-                : item.classList.add('active-filter');
+        item.addEventListener('click', () => {
+            item.classList.toggle('active-filter');
         });
     });
 };

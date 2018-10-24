@@ -18,9 +18,17 @@
                 </form>
             </div>
         </div>
-
     </div>
     <div class="container">
-        <div class="expanded-filters"></div>
+        <div class="expanded-filters">
+            <div class="dropdown-content">
+                <div class="filters__menu">
+                    <div class="filters__item se"><i class="fas fa-circle"></i> SE</div>
+                    <div class="filters__item working-papers"><i class="fas fa-circle"></i> Working papers</div>
+                    <div class="filters__item analytics"><i class="fas fa-circle"></i> Analytics</div>
+                    <div class="filters__item time"><i class="fas fa-circle"></i> Time</div>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
