@@ -6,271 +6,271 @@
   <row> 
     <Page>Firm Profile</Page> 
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_FirmProfile</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Firm.htm#Profile</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Firm.htm#Profile</Redirectto>
   </row> 
   <row>
     <Page>Sign In Page Customization</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_LoginPage</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Firm.htm#Sign</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Firm.htm#Sign</Redirectto>
   </row>
   <row>
     <Page>Email Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Email</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Email.htm#Settings</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Email.htm#Settings</Redirectto>
   </row>
   <row>
     <Page>Email Log</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_EmailLog</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Email.htm#Email</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Email.htm#Email</Redirectto>
   </row>
   <row>
     <Page>Password Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Passwords</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Security.htm#Password</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Security.htm#Password</Redirectto>
   </row>
   <row>
     <Page>Session Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_SessionManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Security.htm#Session</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Security.htm#Session</Redirectto>
   </row>
   <row>
     <Page>Views Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ViewsManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Views</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Views</Redirectto>
   </row>
   <row>
     <Page>Terminology</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Terminology</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Terminol</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Terminol</Redirectto>
   </row>
   <row>
     <Page>Tag Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_TagManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Tag</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Tag</Redirectto>
   </row>
   <row>
     <Page>Links Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=Firm_Apps</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Links</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Links</Redirectto>
   </row>
   <row>
     <Page>Enable/Disable Features</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_EnableFeatures</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Enable</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Enable</Redirectto>
   </row>
   <row>
     <Page>Regional Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_RegionalSettings</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Regional</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Regional</Redirectto>
   </row>
   <row>
     <Page>Custom Entity Types</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Custom_Entity_Type</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
   </row>
   <row>
     <Page>Custom Entity Properties</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Custom_Entity_Properties</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
   </row>
   <row>
     <Page>Workflow Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Workflow</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Workflow</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Customization.htm#Workflow</Redirectto>
   </row>
   <row>
     <Page>Error Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ErrorManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
   </row>
   <row>
 	<Page>Error Management</Page>
 	<InlineHelpLink>webapps.htm#CSHID=Error_Management</InlineHelpLink>
-	<Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
+	<Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
   </row>
   <row>
     <Page>Site Statistics</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_SiteStatistics</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/System.htm#Site</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/System.htm#Site</Redirectto>
   </row>
   <row>
     <Page>Cloud Billing</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_CloudBilling</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/System.htm#Cloud</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/System.htm#Cloud</Redirectto>
   </row>
   <row>
     <Page>Import Client Files</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ImportClientFiles</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Firm-Settings/Working-Papers.htm#Import</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Firm-Settings/Working-Papers.htm#Import</Redirectto>
   </row>
   <row>
     <Page>Global Notifications</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Notifications_Global</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
   </row>
   <row>
     <Page>Subscribed Items</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Notifications_Selected</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Personal-Settings/Subscribed-items.htm</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Personal-Settings/Subscribed-items.htm</Redirectto>
   </row>
   <row>
     <Page>Account Password</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Passwords</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Personal-Settings/Account-password.htm</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Personal-Settings/Account-password.htm</Redirectto>
   </row>
   <row>
     <Page>Google Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Google</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-google</Redirectto>
+    <Redirectto>/webapps/29/en/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-google</Redirectto>
   </row>
   <row>
     <Page>Microsoft Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_SkyDrive</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-onedrive</Redirectto>
+    <Redirectto>/webapps/29/en/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-onedrive</Redirectto>
   </row>
   <row>
     <Page>SharePoint Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_SharePoint</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-sharepoint</Redirectto>
+    <Redirectto>/webapps/29/en/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-sharepoint</Redirectto>
   </row>
    <row>
   <Page>Office 365</Page>
   <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Office365</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-office-365</Redirectto>
+  <Redirectto>/webapps/29/en/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-office-365</Redirectto>
   </row>
   <row>
     <Page>Startup Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_StartupApp</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Personal-Settings/Startup-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Personal-Settings/Startup-settings.htm</Redirectto>
   </row>
   <row>
     <Page>Regional Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_RegionalSettings</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Personal-Settings/Personal-regional-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Personal-Settings/Personal-regional-settings.htm</Redirectto>
   </row>
   <row>
     <Page>My Picture</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_MyPicture</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Personal-Settings/My-profile-picture.htm</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Personal-Settings/My-profile-picture.htm</Redirectto>
   </row>
   <row>
     <Page>VoIP Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_VOIP</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Personal-Settings/Voip-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/en/Explore/Interface/Personal-Settings/Voip-settings.htm</Redirectto>
   </row>
 
   <row>
    <Page>What's New</Page>
    <InlineHelpLink>webapps.htm#CSHID=WhatsNew</InlineHelpLink>
-   <Redirectto>/docsmk2/webapps/29/en/Explore/Whats-New/Whats-new-Cloud-v28.htm</Redirectto>
+   <Redirectto>/webapps/29/en/Explore/Whats-New/Whats-new-Cloud-v28.htm</Redirectto>
   </row>
 
   <row>
   <page>Firm-wide roles</page>
   <InlineHelpLink>webapps.htm#InlineHelp_UserSettings_FirmWideRoles</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Setup/Security/Built-in-roles.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Setup/Security/Built-in-roles.htm</Redirectto>
   </row>
 
   <row>
   <Page>Getting started</Page>
   <InlineHelpLink>webapps.htm#CSHID=Getting_Started</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Explore/Getting-started.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Explore/Getting-started.htm</Redirectto>
   </row>
 
   <row>
   <Page>Organization</Page>
   <InlineHelpLink>webapps.htm#CSHID=Organization</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Setup/Organization.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Setup/Organization.htm</Redirectto>
   </row>
 
   <row>
   <Page>Users and groups</Page>
   <InlineHelpLink>webapps.htm#CSHID=Users_and_Groups</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Setup/Users-and-Groups.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Setup/Users-and-Groups.htm</Redirectto>
   </row>
 
   <row>
   <Page>Workflow examples</Page>
   <InlineHelpLink>webapps.htm#CSHID=Workflow_Examples</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Setup/Organization/Workflow-examples.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Setup/Organization/Workflow-examples.htm</Redirectto>
   </row>
 
   <row>
   <Page>Standardizing the display for all users</Page>
   <InlineHelpLink>webapps.htm#CSHID=Standardizing_The_Display_For_All_Users</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Setup/Organization/Create-views-for-all-users.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Setup/Organization/Create-views-for-all-users.htm</Redirectto>
   </row>
 
   <row>
   <Page>Viewing overall engagement status</Page>
   <InlineHelpLink>webapps.htm#CSHID=Viewing_Overall_Engagement_Status</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Explore/Scenarios/Viewing-overall-engagement-status.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Explore/Scenarios/Viewing-overall-engagement-status.htm</Redirectto>
   </row>
 
   <row>
   <Page>Managing your CaseWare Cloud subscription</Page>
   <InlineHelpLink>webapps.htm#CSHID=Managing_Your_Caseware_Cloud_Subscription</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Setup/Administration-and-Settings/Managing-your-CaseWare-Cloud-subscription.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Setup/Administration-and-Settings/Managing-your-CaseWare-Cloud-subscription.htm</Redirectto>
   </row>
 
   <row>
   <Page>Time and billing</Page>
   <InlineHelpLink>webapps.htm#CSHID=Time_And_Billing</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Practice/Time-and-billing.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Practice/Time-and-billing.htm</Redirectto>
   </row>
 
   <row>
   <Page>File preparation</Page>
   <InlineHelpLink>webapps.htm#CSHID=File_Preparation</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Engagements/File-Preparation.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Engagements/File-Preparation.htm</Redirectto>
   </row>
 
   <row>
   <Page>Engagements</Page>
   <InlineHelpLink>webapps.htm#CSHID=Engagements</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Engagements.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Engagements.htm</Redirectto>
   </row>
 
   <row>
   <Page>Reviews and reporting</Page>
   <InlineHelpLink>webapps.htm#CSHID=Reviews_And_Reporting</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Engagements/Reviews-and-reporting.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Engagements/Reviews-and-reporting.htm</Redirectto>
   </row>
 
   <row>
   <Page>Client requests</Page>
   <InlineHelpLink>webapps.htm#CSHID=Client_Requests</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Engagements/Planning/Client-requests.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Engagements/Planning/Client-requests.htm</Redirectto>
   </row>
 
   <row>
   <Page>Documentation and testing</Page>
   <InlineHelpLink>webapps.htm#CSHID=Documentation_And_Testing</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Engagements/Documentation-and-Review.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Engagements/Documentation-and-Review.htm</Redirectto>
   </row>
 
   <row>
   <Page>About notification settings</Page>
   <InlineHelpLink>webapps.htm#CSHID=About_Notification_Settings</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
   </row>
 
   <row>
   <Page>Maintenance</Page>
   <InlineHelpLink>webapps.htm#CSHID=Maintenance</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Practice/Maintenance.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Practice/Maintenance.htm</Redirectto>
   </row>
 
   <row>
   <Page>Staff Rates and Work Codes</Page>
   <InlineHelpLink>webapps.htm#CSHID=StaffRates_and_WorkCodes</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Setup/Administration-and-Settings/Set-staff-rates-and-work-codes.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Setup/Administration-and-Settings/Set-staff-rates-and-work-codes.htm</Redirectto>
   </row>
 
   <row>
   <Page>Staff Rates and Work Codes</Page>
   <InlineHelpLink>webapps.htm#Troubleshooting/r_Troubleshooting_Java_plugin.htm</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/en/Explore/Known-Issues/CaseWare-Cloud/Java-Applet-is-not-loading.htm</Redirectto>
+  <Redirectto>/webapps/29/en/Explore/Known-Issues/CaseWare-Cloud/Java-Applet-is-not-loading.htm</Redirectto>
   </row>
 
    <!-- Cloud 28.0 Inline Links FR-->
@@ -278,174 +278,174 @@
   <row>
     <Page>Firm Profile</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_FirmProfile</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Firm.htm#Profile</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Firm.htm#Profile</Redirectto>
   </row>
   <row>
     <Page>Sign In Page Customization</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_LoginPage</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Firm.htm#Sign</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Firm.htm#Sign</Redirectto>
   </row>
   <row>
     <Page>Email Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Email</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Resources/References/Email-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/fr/Resources/References/Email-settings.htm</Redirectto>
   </row>
   <row>
     <Page>Email Log</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_EmailLog</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Email.htm#Email</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Email.htm#Email</Redirectto>
   </row>
   <row>
     <Page>Password Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Passwords</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Security.htm#Password</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Security.htm#Password</Redirectto>
   </row>
   <row>
     <Page>Session Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_SessionManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Security.htm#Session</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Security.htm#Session</Redirectto>
   </row>
   <row>
     <Page>Views Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ViewsManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Views</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Views</Redirectto>
   </row>
   <row>
     <Page>Terminology</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Terminology</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Terminol</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Terminol</Redirectto>
   </row>
   <row>
     <Page>Tag Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_TagManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Tag</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Tag</Redirectto>
   </row>
   <row>
     <Page>Links Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=Firm_Apps</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Links</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Links</Redirectto>
   </row>
   <row>
     <Page>Enable/Disable Features</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_EnableFeatures</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Enable</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Enable</Redirectto>
   </row>
   <row>
     <Page>Regional Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_RegionalSettings</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Regional</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Regional</Redirectto>
   </row>
   <row>
     <Page>Custom Entity Types</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Custom_Entity_Type</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
   </row>
   <row>
     <Page>Custom Entity Properties</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Custom_Entity_Properties</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
   </row>
   <row>
     <Page>Workflow Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Workflow</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Workflow</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Customization.htm#Workflow</Redirectto>
   </row>
   <row>
     <Page>Error Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ErrorManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/System.htmt#Error</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/System.htmt#Error</Redirectto>
   </row>
   <row>
 	<Page>Error Management</Page>
 	<InlineHelpLink>webapps.htm#CSHID=Error_Management</InlineHelpLink>
-	<Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
+	<Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
   </row>
   <row>
     <Page>Site Statistics</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_SiteStatistics</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/System.htm#Site</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/System.htm#Site</Redirectto>
   </row>
   <row>
     <Page>Cloud Billing</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_CloudBilling</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/System.htm#Cloud</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/System.htm#Cloud</Redirectto>
   </row>
   <row>
     <Page>Import Client Files</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ImportClientFiles</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Firm-Settings/Working-Papers.htm#Import</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Firm-Settings/Working-Papers.htm#Import</Redirectto>
   </row>
   <row>
     <Page>Global Notifications</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Notifications_Global</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
   </row>
   <row>
     <Page>Subscribed Items</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Notifications_Selected</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Personal-Settings/Subscribed-items.htm</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Personal-Settings/Subscribed-items.htm</Redirectto>
   </row>
   <row>
     <Page>Account Password</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Passwords</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Personal-Settings/Account-password.htm</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Personal-Settings/Account-password.htm</Redirectto>
   </row>
   <row>
     <Page>Google Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Google</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-google</Redirectto>
+    <Redirectto>/webapps/29/fr/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-google</Redirectto>
   </row>
   <row>
     <Page>Microsoft Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_SkyDrive</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-onedrive</Redirectto>
+    <Redirectto>/webapps/29/fr/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-onedrive</Redirectto>
   </row>
   <row>
     <Page>SharePoint Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_SharePoint</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-sharepoint</Redirectto>
+    <Redirectto>/webapps/29/fr/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-sharepoint</Redirectto>
   </row>
    <row>
   <Page>Office 365</Page>
   <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Office365</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-office-365</Redirectto>
+  <Redirectto>/webapps/29/fr/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-office-365</Redirectto>
   </row>
   <row>
     <Page>Startup Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_StartupApp</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Personal-Settings/Startup-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Personal-Settings/Startup-settings.htm</Redirectto>
   </row>
   <row>
     <Page>Regional Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_RegionalSettings</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Personal-Settings/Personal-regional-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Personal-Settings/Personal-regional-settings.htm</Redirectto>
   </row>
   <row>
     <Page>My Picture</Page>
     <InlineHelpLink>:webapps.htm#CSHID=InlineHelp_UserSettings_MyPicture</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Personal-Settings/My-profile-picture.htm</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Personal-Settings/My-profile-picture.htm</Redirectto>
   </row>
   <row>
     <Page>VoIP Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_VOIP</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Personal-Settings/Voip-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/fr/Explore/Interface/Personal-Settings/Voip-settings.htm</Redirectto>
   </row>
   <row>
    <Page>What's New</Page>
    <InlineHelpLink>webapps.htm#CSHID=WhatsNew</InlineHelpLink>
-   <Redirectto>/docsmk2/webapps/29/fr/Explore/Whats-New/Whats-new-Cloud-v28.htm</Redirectto>
+   <Redirectto>/webapps/29/fr/Explore/Whats-New/Whats-new-Cloud-v28.htm</Redirectto>
   </row>
 
 <row>
  <page>Firm-wide roles</page>
  <InlineHelpLink>webapps.htm#InlineHelp_UserSettings_FirmWideRoles</InlineHelpLink>
- <Redirectto>/docsmk2/webapps/29/fr/Setup/Security/Built-in-roles.htm</Redirectto>
+ <Redirectto>/webapps/29/fr/Setup/Security/Built-in-roles.htm</Redirectto>
 </row>
 
 <row>
 <Page>Staff Rates and Work Codes</Page>
 <InlineHelpLink>webapps.htm#Troubleshooting/r_Troubleshooting_Java_plugin.htm</InlineHelpLink>
-<Redirectto>/docsmk2/webapps/29/fr/Explore/Known-Issues/CaseWare-Cloud/Java-Applet-is-not-loading.htm</Redirectto>
+<Redirectto>/webapps/29/fr/Explore/Known-Issues/CaseWare-Cloud/Java-Applet-is-not-loading.htm</Redirectto>
 </row>
 
   <!-- Welcome Page links for 28.0 FR -->
@@ -453,97 +453,97 @@
   <row>
   <Page>Getting started</Page>
   <InlineHelpLink>webapps.htm#CSHID=Getting_Started</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Explore/Getting-started.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Explore/Getting-started.htm</Redirectto>
   </row>
 
   <row>
   <Page>Organization</Page>
   <InlineHelpLink>webapps.htm#CSHID=Organization</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Setup/Organization.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Setup/Organization.htm</Redirectto>
   </row>
 
   <row>
   <Page>Users and groups</Page>
   <InlineHelpLink>webapps.htm#CSHID=Users_and_Groups</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Setup/Users-and-Groups.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Setup/Users-and-Groups.htm</Redirectto>
   </row>
 
   <row>
   <Page>Workflow examples</Page>
   <InlineHelpLink>webapps.htm#CSHID=Workflow_Examples</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Setup/Organization/Workflow-examples.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Setup/Organization/Workflow-examples.htm</Redirectto>
   </row>
 
   <row>
   <Page>Standardizing the display for all users</Page>
   <InlineHelpLink>webapps.htm#CSHID=Standardizing_The_Display_For_All_Users</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Setup/Organization/Standardizing-the-display-for-all-users.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Setup/Organization/Standardizing-the-display-for-all-users.htm</Redirectto>
   </row>
 
   <row>
   <Page>Viewing overall engagement status</Page>
   <InlineHelpLink>webapps.htm#CSHID=Viewing_Overall_Engagement_Status</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Explore/Scenarios/Viewing-overall-engagement-status.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Explore/Scenarios/Viewing-overall-engagement-status.htm</Redirectto>
   </row>
 
   <row>
   <Page>Managing your CaseWare Cloud subscription</Page>
   <InlineHelpLink>webapps.htm#CSHID=Managing_Your_Caseware_Cloud_Subscription</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Setup/Administration-and-Settings/Managing-your-CaseWare-Cloud-subscription.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Setup/Administration-and-Settings/Managing-your-CaseWare-Cloud-subscription.htm</Redirectto>
   </row>
 
   <row>
   <Page>Time and billing</Page>
   <InlineHelpLink>webapps.htm#CSHID=Time_And_Billing</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Practice/Time-and-billing.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Practice/Time-and-billing.htm</Redirectto>
   </row>
 
   <row>
   <Page>File preparation</Page>
   <InlineHelpLink>webapps.htm#CSHID=File_Preparation</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Engagements/File-Preparation.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Engagements/File-Preparation.htm</Redirectto>
   </row>
 
   <row>
   <Page>Engagements</Page>
   <InlineHelpLink>webapps.htm#CSHID=Engagements</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Engagements.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Engagements.htm</Redirectto>
   </row>
 
   <row>
   <Page>Reviews and reporting</Page>
   <InlineHelpLink>webapps.htm#CSHID=Reviews_And_Reporting</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Engagements/Reviews-and-reporting.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Engagements/Reviews-and-reporting.htm</Redirectto>
   </row>
 
   <row>
   <Page>Client requests</Page>
   <InlineHelpLink>webapps.htm#CSHID=Client_Requests</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Engagements/Planning/Client-requests.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Engagements/Planning/Client-requests.htm</Redirectto>
   </row>
 
   <row>
   <Page>Documentation and testing</Page>
   <InlineHelpLink>webapps.htm#CSHID=Documentation_And_Testing</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Engagements/Documentation-and-Review.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Engagements/Documentation-and-Review.htm</Redirectto>
   </row>
 
   <row>
   <Page>About notification settings</Page>
   <InlineHelpLink>webapps.htm#CSHID=About_Notification_Settings</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
   </row>
 
   <row>
   <Page>Maintenance</Page>
   <InlineHelpLink>webapps.htm#CSHID=Maintenance</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Practice/Maintenance.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Practice/Maintenance.htm</Redirectto>
   </row>
 
   <row>
   <Page>Staff Rates and Work Codes</Page>
   <InlineHelpLink>webapps.htm#CSHID=StaffRates_and_WorkCodes</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/fr/Setup/Administration-and-Settings/Set-staff-rates-and-work-codes.htm</Redirectto>
+  <Redirectto>/webapps/29/fr/Setup/Administration-and-Settings/Set-staff-rates-and-work-codes.htm</Redirectto>
   </row>
 
   <!-- Cloud 28.0 Inline Links /de/-->
@@ -551,271 +551,271 @@
   <row>
     <Page>Staff Rates and Work Codes</Page>
     <InlineHelpLink>webapps.htm#Troubleshooting/r_Troubleshooting_Java_plugin.htm</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Known-Issues/CaseWare-Cloud/Java-Applet-is-not-loading.htm</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Known-Issues/CaseWare-Cloud/Java-Applet-is-not-loading.htm</Redirectto>
   </row>
 
   <row>
     <Page>Firm Profile</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_FirmProfile</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Firm.htm#Profile</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Firm.htm#Profile</Redirectto>
   </row>
   <row>
     <Page>Sign In Page Customization</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_LoginPage</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Firm.htm#Sign</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Firm.htm#Sign</Redirectto>
   </row>
   <row>
     <Page>Email Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Email</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Email.htm#Settings</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Email.htm#Settings</Redirectto>
   </row>
   <row>
     <Page>Email Log</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_EmailLog</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Email.htm#Email</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Email.htm#Email</Redirectto>
   </row>
   <row>
     <Page>Password Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Passwords</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Security.htm#Password</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Security.htm#Password</Redirectto>
   </row>
   <row>
     <Page>Session Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_SessionManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Security.htm#Session</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Security.htm#Session</Redirectto>
   </row>
   <row>
     <Page>Views Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ViewsManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Views</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Views</Redirectto>
   </row>
   <row>
     <Page>Terminology</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Terminology</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Terminol</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Terminol</Redirectto>
   </row>
   <row>
     <Page>Tag Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_TagManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Tag</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Tag</Redirectto>
   </row>
   <row>
     <Page>Links Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=Firm_Apps</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Links</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Links</Redirectto>
   </row>
   <row>
     <Page>Enable/Disable Features</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_EnableFeatures</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Enable</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Enable</Redirectto>
   </row>
   <row>
     <Page>Regional Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_RegionalSettings</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Regional</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Regional</Redirectto>
   </row>
   <row>
     <Page>Custom Entity Types</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Custom_Entity_Type</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
   </row>
   <row>
     <Page>Custom Entity Properties</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Custom_Entity_Properties</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
   </row>
   <row>
     <Page>Workflow Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Workflow</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Workflow</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Customization.htm#Workflow</Redirectto>
   </row>
   <row>
     <Page>Error Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ErrorManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
   </row>
   <row>
 	<Page>Error Management</Page>
 	<InlineHelpLink>webapps.htm#CSHID=Error_Management</InlineHelpLink>
-	<Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
+	<Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
   </row>
   <row>
     <Page>Site Statistics</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_SiteStatistics</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/System.htm#Site</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/System.htm#Site</Redirectto>
   </row>
   <row>
     <Page>Cloud Billing</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_CloudBilling</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/System.htm#Cloud</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/System.htm#Cloud</Redirectto>
   </row>
   <row>
     <Page>Import Client Files</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ImportClientFiles</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Firm-Settings/Working-Papers.htm#Import</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Firm-Settings/Working-Papers.htm#Import</Redirectto>
   </row>
   <row>
     <Page>Global Notifications</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Notifications_Global</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
   </row>
   <row>
     <Page>Subscribed Items</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Notifications_Selected</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Personal-Settings/Subscribed-items.htm</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Personal-Settings/Subscribed-items.htm</Redirectto>
   </row>
   <row>
     <Page>Account Password</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Passwords</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Personal-Settings/Account-password.htm</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Personal-Settings/Account-password.htm</Redirectto>
   </row>
   <row>
     <Page>Google Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Google</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-google</Redirectto>
+    <Redirectto>/webapps/29/de/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-google</Redirectto>
   </row>
   <row>
     <Page>Microsoft Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_SkyDrive</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-onedrive</Redirectto>
+    <Redirectto>/webapps/29/de/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-onedrive</Redirectto>
   </row>
   <row>
     <Page>SharePoint Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_SharePoint</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-sharepoint</Redirectto>
+    <Redirectto>/webapps/29/de/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-sharepoint</Redirectto>
   </row>
    <row>
   <Page>Office 365</Page>
   <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Office365</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-office-365</Redirectto>
+  <Redirectto>/webapps/29/de/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-office-365</Redirectto>
   </row>
   <row>
     <Page>Startup Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_StartupApp</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Personal-Settings/Startup-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Personal-Settings/Startup-settings.htm</Redirectto>
   </row>
   <row>
     <Page>Regional Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_RegionalSettings</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Personal-Settings/Personal-regional-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Personal-Settings/Personal-regional-settings.htm</Redirectto>
   </row>
   <row>
     <Page>My Picture</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_MyPicture</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Personal-Settings/My-profile-picture.htm</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Personal-Settings/My-profile-picture.htm</Redirectto>
   </row>
   <row>
     <Page>VoIP Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_VOIP</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Personal-Settings/Voip-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/de/Explore/Interface/Personal-Settings/Voip-settings.htm</Redirectto>
   </row>
 
   <row>
    <Page>What's New</Page>
    <InlineHelpLink>webapps.htm#CSHID=WhatsNew</InlineHelpLink>
-   <Redirectto>/docsmk2/webapps/29/de/Explore/Whats-New/Whats-new-Cloud-v28.htm</Redirectto>
+   <Redirectto>/webapps/29/de/Explore/Whats-New/Whats-new-Cloud-v28.htm</Redirectto>
   </row>
 
   <row>
   <page>Firm-wide roles</page>
   <InlineHelpLink>webapps.htm#InlineHelp_UserSettings_FirmWideRoles</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Setup/Security/Built-in-roles.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Setup/Security/Built-in-roles.htm</Redirectto>
   </row>
 
   <row>
   <Page>Getting started</Page>
   <InlineHelpLink>webapps.htm#CSHID=Getting_Started</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Explore/Getting-started.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Explore/Getting-started.htm</Redirectto>
   </row>
 
   <row>
   <Page>Organization</Page>
   <InlineHelpLink>webapps.htm#CSHID=Organization</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Setup/Organization.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Setup/Organization.htm</Redirectto>
   </row>
 
   <row>
   <Page>Users and groups</Page>
   <InlineHelpLink>webapps.htm#CSHID=Users_and_Groups</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Setup/Users-and-Groups.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Setup/Users-and-Groups.htm</Redirectto>
   </row>
 
   <row>
   <Page>Workflow examples</Page>
   <InlineHelpLink>webapps.htm#CSHID=Workflow_Examples</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Setup/Organization/Workflow-examples.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Setup/Organization/Workflow-examples.htm</Redirectto>
   </row>
 
   <row>
   <Page>Standardizing the display for all users</Page>
   <InlineHelpLink>webapps.htm#CSHID=Standardizing_The_Display_For_All_Users</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Setup/Organization/Create-views-for-all-users.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Setup/Organization/Create-views-for-all-users.htm</Redirectto>
   </row>
 
   <row>
   <Page>Viewing overall engagement status</Page>
   <InlineHelpLink>webapps.htm#CSHID=Viewing_Overall_Engagement_Status</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Explore/Scenarios/Viewing-overall-engagement-status.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Explore/Scenarios/Viewing-overall-engagement-status.htm</Redirectto>
   </row>
 
   <row>
   <Page>Managing your CaseWare Cloud subscription</Page>
   <InlineHelpLink>webapps.htm#CSHID=Managing_Your_Caseware_Cloud_Subscription</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Setup/Administration-and-Settings/Managing-your-CaseWare-Cloud-subscription.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Setup/Administration-and-Settings/Managing-your-CaseWare-Cloud-subscription.htm</Redirectto>
   </row>
 
   <row>
   <Page>Time and billing</Page>
   <InlineHelpLink>webapps.htm#CSHID=Time_And_Billing</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Practice/Time-and-billing.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Practice/Time-and-billing.htm</Redirectto>
   </row>
 
   <row>
   <Page>File preparation</Page>
   <InlineHelpLink>webapps.htm#CSHID=File_Preparation</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Engagements/File-Preparation.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Engagements/File-Preparation.htm</Redirectto>
   </row>
 
   <row>
   <Page>Engagements</Page>
   <InlineHelpLink>webapps.htm#CSHID=Engagements</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Engagements.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Engagements.htm</Redirectto>
   </row>
 
   <row>
   <Page>Reviews and reporting</Page>
   <InlineHelpLink>webapps.htm#CSHID=Reviews_And_Reporting</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Engagements/Reviews-and-reporting.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Engagements/Reviews-and-reporting.htm</Redirectto>
   </row>
 
   <row>
   <Page>Client requests</Page>
   <InlineHelpLink>webapps.htm#CSHID=Client_Requests</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Engagements/Planning/Client-requests.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Engagements/Planning/Client-requests.htm</Redirectto>
   </row>
 
   <row>
   <Page>Documentation and testing</Page>
   <InlineHelpLink>webapps.htm#CSHID=Documentation_And_Testing</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Engagements/Documentation-and-Review.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Engagements/Documentation-and-Review.htm</Redirectto>
   </row>
 
   <row>
   <Page>About notification settings</Page>
   <InlineHelpLink>webapps.htm#CSHID=About_Notification_Settings</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
   </row>
 
   <row>
   <Page>Maintenance</Page>
   <InlineHelpLink>webapps.htm#CSHID=Maintenance</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Practice/Maintenance.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Practice/Maintenance.htm</Redirectto>
   </row>
 
   <row>
   <Page>Staff Rates and Work Codes</Page>
   <InlineHelpLink>webapps.htm#CSHID=StaffRates_and_WorkCodes</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/de/Setup/Administration-and-Settings/Set-staff-rates-and-work-codes.htm</Redirectto>
+  <Redirectto>/webapps/29/de/Setup/Administration-and-Settings/Set-staff-rates-and-work-codes.htm</Redirectto>
   </row>
 
   <!-- Cloud 28.0 Inline Links /es/-->
@@ -823,174 +823,174 @@
   <row>
     <Page>Staff Rates and Work Codes</Page>
     <InlineHelpLink>webapps.htm#Troubleshooting/r_Troubleshooting_Java_plugin.htm</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Known-Issues/CaseWare-Cloud/Java-Applet-is-not-loading.htm</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Known-Issues/CaseWare-Cloud/Java-Applet-is-not-loading.htm</Redirectto>
   </row>  
 
   <row>
     <Page>Firm Profile</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_FirmProfile</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Firm.htm#Profile</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Firm.htm#Profile</Redirectto>
   </row>
   <row>
     <Page>Sign In Page Customization</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_LoginPage</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Firm.htm#Sign</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Firm.htm#Sign</Redirectto>
   </row>
   <row>
     <Page>Email Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Email</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Resources/References/Email-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/es/Resources/References/Email-settings.htm</Redirectto>
   </row>
   <row>
     <Page>Email Log</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_EmailLog</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Email.htm#Email</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Email.htm#Email</Redirectto>
   </row>
   <row>
     <Page>Password Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Passwords</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Security.htm#Password</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Security.htm#Password</Redirectto>
   </row>
   <row>
     <Page>Session Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_SessionManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Security.htm#Session</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Security.htm#Session</Redirectto>
   </row>
   <row>
     <Page>Views Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ViewsManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Views</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Views</Redirectto>
   </row>
   <row>
     <Page>Terminology</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Terminology</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Terminol</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Terminol</Redirectto>
   </row>
   <row>
     <Page>Tag Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_TagManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Tag</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Tag</Redirectto>
   </row>
   <row>
     <Page>Links Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=Firm_Apps</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Links</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Links</Redirectto>
   </row>
   <row>
     <Page>Enable/Disable Features</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_EnableFeatures</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Enable</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Enable</Redirectto>
   </row>
   <row>
     <Page>Regional Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_RegionalSettings</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Regional</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Regional</Redirectto>
   </row>
   <row>
     <Page>Custom Entity Types</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Custom_Entity_Type</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
   </row>
   <row>
     <Page>Custom Entity Properties</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Custom_Entity_Properties</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Custom</Redirectto>
   </row>
   <row>
     <Page>Workflow Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_Workflow</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Workflow</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Customization.htm#Workflow</Redirectto>
   </row>
   <row>
     <Page>Error Management</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ErrorManagement</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/System.htmt#Error</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/System.htmt#Error</Redirectto>
   </row>
   <row>
 	<Page>Error Management</Page>
 	<InlineHelpLink>webapps.htm#CSHID=Error_Management</InlineHelpLink>
-	<Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
+	<Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/System.htm#Error</Redirectto>
   </row>
   <row>
     <Page>Site Statistics</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_SiteStatistics</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/System.htm#Site</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/System.htm#Site</Redirectto>
   </row>
   <row>
     <Page>Cloud Billing</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_CloudBilling</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/System.htm#Cloud</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/System.htm#Cloud</Redirectto>
   </row>
   <row>
     <Page>Import Client Files</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_FirmSettings_ImportClientFiles</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Firm-Settings/Working-Papers.htm#Import</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Firm-Settings/Working-Papers.htm#Import</Redirectto>
   </row>
   <row>
     <Page>Global Notifications</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Notifications_Global</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
   </row>
   <row>
     <Page>Subscribed Items</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Notifications_Selected</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Personal-Settings/Subscribed-items.htm</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Personal-Settings/Subscribed-items.htm</Redirectto>
   </row>
   <row>
     <Page>Account Password</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Passwords</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Personal-Settings/Account-password.htm</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Personal-Settings/Account-password.htm</Redirectto>
   </row>
   <row>
     <Page>Google Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Google</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-google</Redirectto>
+    <Redirectto>/webapps/29/es/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-google</Redirectto>
   </row>
   <row>
     <Page>Microsoft Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_SkyDrive</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-onedrive</Redirectto>
+    <Redirectto>/webapps/29/es/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-onedrive</Redirectto>
   </row>
   <row>
     <Page>SharePoint Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_SharePoint</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-sharepoint</Redirectto>
+    <Redirectto>/webapps/29/es/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-sharepoint</Redirectto>
   </row>
    <row>
   <Page>Office 365</Page>
   <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_Office365</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-office-365</Redirectto>
+  <Redirectto>/webapps/29/es/Setup/Environments-and-Configuration/Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm#integrate-office-365</Redirectto>
   </row>
   <row>
     <Page>Startup Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_StartupApp</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Personal-Settings/Startup-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Personal-Settings/Startup-settings.htm</Redirectto>
   </row>
   <row>
     <Page>Regional Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_RegionalSettings</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Personal-Settings/Personal-regional-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Personal-Settings/Personal-regional-settings.htm</Redirectto>
   </row>
   <row>
     <Page>My Picture</Page>
     <InlineHelpLink>:webapps.htm#CSHID=InlineHelp_UserSettings_MyPicture</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Personal-Settings/My-profile-picture.htm</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Personal-Settings/My-profile-picture.htm</Redirectto>
   </row>
   <row>
     <Page>VoIP Settings</Page>
     <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_VOIP</InlineHelpLink>
-    <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Personal-Settings/Voip-settings.htm</Redirectto>
+    <Redirectto>/webapps/29/es/Explore/Interface/Personal-Settings/Voip-settings.htm</Redirectto>
   </row>
   <row>
    <Page>What's New</Page>
    <InlineHelpLink>webapps.htm#CSHID=WhatsNew</InlineHelpLink>
-   <Redirectto>/docsmk2/webapps/29/es/Explore/Whats-New/Whats-new-Cloud-v28.htm</Redirectto>
+   <Redirectto>/webapps/29/es/Explore/Whats-New/Whats-new-Cloud-v28.htm</Redirectto>
   </row>
 
  <row>
  <page>Firm-wide roles</page>
  <InlineHelpLink>webapps.htm#InlineHelp_UserSettings_FirmWideRoles</InlineHelpLink>
- <Redirectto>/docsmk2/webapps/29/es/Setup/Security/Built-in-roles.htm</Redirectto>
+ <Redirectto>/webapps/29/es/Setup/Security/Built-in-roles.htm</Redirectto>
 </row> 
   
   <!-- Welcome Page links for 28.0 /es/-->
@@ -998,97 +998,97 @@
   <row>
   <Page>Getting started</Page>
   <InlineHelpLink>webapps.htm#CSHID=Getting_Started</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Explore/Getting-started.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Explore/Getting-started.htm</Redirectto>
   </row>
 
   <row>
   <Page>Organization</Page>
   <InlineHelpLink>webapps.htm#CSHID=Organization</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Setup/Organization.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Setup/Organization.htm</Redirectto>
   </row>
 
   <row>
   <Page>Users and groups</Page>
   <InlineHelpLink>webapps.htm#CSHID=Users_and_Groups</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Setup/Users-and-Groups.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Setup/Users-and-Groups.htm</Redirectto>
   </row>
 
   <row>
   <Page>Workflow examples</Page>
   <InlineHelpLink>webapps.htm#CSHID=Workflow_Examples</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Setup/Organization/Workflow-examples.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Setup/Organization/Workflow-examples.htm</Redirectto>
   </row>
 
   <row>
   <Page>Standardizing the display for all users</Page>
   <InlineHelpLink>webapps.htm#CSHID=Standardizing_The_Display_For_All_Users</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Setup/Organization/Standardizing-the-display-for-all-users.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Setup/Organization/Standardizing-the-display-for-all-users.htm</Redirectto>
   </row>
 
   <row>
   <Page>Viewing overall engagement status</Page>
   <InlineHelpLink>webapps.htm#CSHID=Viewing_Overall_Engagement_Status</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Explore/Scenarios/Viewing-overall-engagement-status.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Explore/Scenarios/Viewing-overall-engagement-status.htm</Redirectto>
   </row>
 
   <row>
   <Page>Managing your CaseWare Cloud subscription</Page>
   <InlineHelpLink>webapps.htm#CSHID=Managing_Your_Caseware_Cloud_Subscription</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Setup/Administration-and-Settings/Managing-your-CaseWare-Cloud-subscription.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Setup/Administration-and-Settings/Managing-your-CaseWare-Cloud-subscription.htm</Redirectto>
   </row>
 
   <row>
   <Page>Time and billing</Page>
   <InlineHelpLink>webapps.htm#CSHID=Time_And_Billing</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Practice/Time-and-billing.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Practice/Time-and-billing.htm</Redirectto>
   </row>
 
   <row>
   <Page>File preparation</Page>
   <InlineHelpLink>webapps.htm#CSHID=File_Preparation</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Engagements/File-Preparation.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Engagements/File-Preparation.htm</Redirectto>
   </row>
 
   <row>
   <Page>Engagements</Page>
   <InlineHelpLink>webapps.htm#CSHID=Engagements</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Engagements.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Engagements.htm</Redirectto>
   </row>
 
   <row>
   <Page>Reviews and reporting</Page>
   <InlineHelpLink>webapps.htm#CSHID=Reviews_And_Reporting</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Engagements/Reviews-and-reporting.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Engagements/Reviews-and-reporting.htm</Redirectto>
   </row>
 
   <row>
   <Page>Client requests</Page>
   <InlineHelpLink>webapps.htm#CSHID=Client_Requests</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Engagements/Planning/Client-requests.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Engagements/Planning/Client-requests.htm</Redirectto>
   </row>
 
   <row>
   <Page>Documentation and testing</Page>
   <InlineHelpLink>webapps.htm#CSHID=Documentation_And_Testing</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Engagements/Documentation-and-Review.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Engagements/Documentation-and-Review.htm</Redirectto>
   </row>
 
   <row>
   <Page>About notification settings</Page>
   <InlineHelpLink>webapps.htm#CSHID=About_Notification_Settings</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Explore/Interface/Personal-Settings/About-notification-settings.htm</Redirectto>
   </row>
 
   <row>
   <Page>Maintenance</Page>
   <InlineHelpLink>webapps.htm#CSHID=Maintenance</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Practice/Maintenance.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Practice/Maintenance.htm</Redirectto>
   </row>
 
   <row>
   <Page>Staff Rates and Work Codes</Page>
   <InlineHelpLink>webapps.htm#CSHID=StaffRates_and_WorkCodes</InlineHelpLink>
-  <Redirectto>/docsmk2/webapps/29/es/Setup/Administration-and-Settings/Set-staff-rates-and-work-codes.htm</Redirectto>
+  <Redirectto>/webapps/29/es/Setup/Administration-and-Settings/Set-staff-rates-and-work-codes.htm</Redirectto>
   </row>
   
  <!--RoTG Retirement Announcement Links - REMOVE AFTER 28.0-->
@@ -1098,7 +1098,7 @@
 	  <row>
 	  <Page>Review on the Go retirement announcement</Page>
 	  <InlineHelpLink>https://docs.caseware.com/2018/WebApps/webapps/29/cn/webapps.htm#CSHID=#RotG_Retirement </InlineHelpLink>
-	  <Redirectto>/docsmk2/webapps/29/cn/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
+	  <Redirectto>/webapps/29/cn/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
 	  </row>
  
 	<!--DE-->
@@ -1106,7 +1106,7 @@
 	  <row>
 	  <Page>Review on the Go retirement announcement</Page>
 	  <InlineHelpLink>webapps.htm#CSHID=#RotG_Retirement </InlineHelpLink>
-	  <Redirectto>/docsmk2/webapps/29/de/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
+	  <Redirectto>/webapps/29/de/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
 	  </row>
   
 	<!--EN--> 
@@ -1114,7 +1114,7 @@
 	  <row>
 	  <Page>Review on the Go retirement announcement</Page>
 	  <InlineHelpLink>webapps.htm#CSHID=#RotG_Retirement </InlineHelpLink>
-	  <Redirectto>/docsmk2/webapps/29/en/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
+	  <Redirectto>/webapps/29/en/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
 	  </row>
   
 	<!--ES--> 
@@ -1122,14 +1122,14 @@
 	  <row>
 	  <Page>Review on the Go retirement announcement</Page>
 	  <InlineHelpLink>webapps.htm#CSHID=#RotG_Retirement </InlineHelpLink>
-	  <Redirectto>/docsmk2/webapps/29/es/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
+	  <Redirectto>/webapps/29/es/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
 	  </row>
   
 	<!--FR-->
 	  <row>
 	  <Page>Review on the Go retirement announcement</Page>
 	  <InlineHelpLink>webapps.htm#CSHID=#RotG_Retirement </InlineHelpLink>
-	  <Redirectto>/docsmk2/webapps/29/fr/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
+	  <Redirectto>/webapps/29/fr/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
 	  </row>
  
  
@@ -1138,13 +1138,13 @@
 	  <row>
 	  <Page>Review on the Go retirement announcement</Page>
 	  <InlineHelpLink>webapps.htm#CSHID=#RotG_Retirement </InlineHelpLink>
-	  <Redirectto>/docsmk2/webapps/29/nl/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
+	  <Redirectto>/webapps/29/nl/Explore/Whats-New/Whats-new-Cloud-v28.htm#review</Redirectto>
 	  </row>
   
 	  <row>
 	  <Page>Review on the Go retirement announcement</Page>
 	  <InlineHelpLink>http://localhost:8000/webapps/webapps/29/en/webapps.htm#CSHID=#RotG_Retirement</InlineHelpLink>
-	  <Redirectto>/docsmk2/webapps/webapps/29/en/Explore/Getting-Started/Setting-up-standards-and-workflows.htm</Redirectto>
+	  <Redirectto>/webapps/webapps/29/en/Explore/Getting-Started/Setting-up-standards-and-workflows.htm</Redirectto>
 	  </row>
   
 </root>

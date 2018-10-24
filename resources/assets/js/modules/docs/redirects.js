@@ -18,8 +18,8 @@ module.exports = () => {
       
       $.ajax({
         type: "GET",
-        // url: "/documentation_files/webapps/29/csh_redirect.xml",
-        url: "/documentation_files/" + product + "/" + version + "/csh_redirect.xml",
+        url: "/documentation_files/webapps/29/csh_redirect.xml",
+        // url: "/documentation_files/" + product + "/" + version + "/csh_redirect.xml",
         dataType: "xml",
         success: function (xml) {
           url = window.location.href.split("?")[0];

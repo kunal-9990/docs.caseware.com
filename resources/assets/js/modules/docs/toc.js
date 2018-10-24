@@ -6,11 +6,12 @@ module.exports = () => {
     var pathname = new URL(loc).pathname;
     pathname = pathname.replace(/\/\/+/g, '/');
     var routeComponents = pathname.split("/");
-    var product = routeComponents[1];
-    var version = routeComponents[2];
-    var lang = routeComponents[3];
-    var linkPrefix = "/" + product + "/" + version + "/" + lang;
-    var TOCxml = "/documentation_files/" + product + "/" + version + "/OnlineOutput.xml";
+    var year = routeComponents[1];
+    var product = routeComponents[2];
+    var version = routeComponents[3];
+    var lang = routeComponents[4];
+    var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
+    var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
 
     $.ajax({
         type: "GET",

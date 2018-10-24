@@ -27,16 +27,16 @@ Route::get('/documentation', 'PageController@documentationHome');
 Route::get('/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
 
 // topics
-Route::get('/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');
+Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');
 
 // topics
-Route::get('/{product}/{version}/{lang}/{category}/{subcategory}/{subsubcategory}/{topic}', 'PageController@showTopic2');
+Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{subsubcategory}/{topic}', 'PageController@showTopic2');
 
 // sub category
-Route::get('/{product}/{version}/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');
+Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');
 
 // category
-Route::get('/{product}/{version}/{lang}/{category}', 'PageController@showCategory');
+Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory');
 
 
 

@@ -29,13 +29,13 @@ class PageController extends Controller
     }
     
     // topic
-    function showTopic($product, $version, $lang, $category, $subcategory, $topic){
+    function showTopic($year, $product, $version, $lang, $category, $subcategory, $topic){
         if(!endsWith($topic,".htm")){
             $topic .= ".htm";
         }
         // $product =  strtolower($product);
         // dd($version);
-        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."Content/".$category."/".$subcategory."/".$topic ));
+        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$topic ));
 
         $maincontentarea = $dom->find('body', 0);
 
@@ -44,15 +44,15 @@ class PageController extends Controller
         return view('pages.documentation', compact('maincontentarea', 'recent'));
     }
 
-    // topic
-    function showTopic2($product, $version, $lang, $category, $subcategory, $subsubcategory, $topic){
+    // topics with subsubcategory
+    function showTopic2($year, $product, $version, $lang, $category, $subcategory, $subsubcategory, $topic){
         if(!endsWith($topic,".htm")){
             $topic .= ".htm";
         }
         // $product =  strtolower($product);
 
         // dd($version);
-        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."Content/".$category."/".$subcategory."/".$subsubcategory."/".$topic ));
+        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$subsubcategory."/".$topic ));
 
         $maincontentarea = $dom->find('body', 0);
 
@@ -63,13 +63,13 @@ class PageController extends Controller
     }
 
     // subcategory
-    function showSubCategory($product, $version, $lang, $category, $subcategory){
+    function showSubCategory($year, $product, $version, $lang, $category, $subcategory){
 
         if(!endsWith($subcategory,".htm")){
             $subcategory .= ".htm";
         }
 
-        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."Content/".$category."/".$subcategory ));
+        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory ));
 
         $maincontentarea = $dom->find('body', 0);
 
@@ -79,13 +79,13 @@ class PageController extends Controller
     }
     
     // category
-    function showCategory($product, $version, $lang, $category){
+    function showCategory($year, $product, $version, $lang, $category){
 
         if(!endsWith($category,".htm")){
             $category .= ".htm";
         }
         
-        $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$product."/".$version."/"."/Content/".$category ));
+        $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."/Content/".$category ));
 
         $maincontentarea = $dom->find('body', 0);
         // dd($maincontentarea);
