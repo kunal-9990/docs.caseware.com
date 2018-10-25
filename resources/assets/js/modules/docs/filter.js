@@ -6,8 +6,9 @@ module.exports = () => {
 
     function updateFilter(){
 
-
-        $('.time').hide();
+        //this messes up other tags that use the .time class
+        //use a more specific selector
+        // $('.time').hide();
 
         //load
     // $.post("/assets/phpfunctions/productFilter.php",

@@ -10,11 +10,12 @@ module.exports = () => {
 
     // create the sub-toc
     TOC_CONTENT_CONTAINER.forEach((el) => {
+        const EL_ID = el.id || el.querySelector('a[name]').getAttribute('name');
         const LI = document.createElement('li');
         const ANCHOR = document.createElement('a');
-        const ANCHOR_TEXT = el.id.replace(/[^A-Za-z0-9]+/g, ' ');
+        const ANCHOR_TEXT = EL_ID.replace(/[^A-Za-z0-9]+/g, ' ');
         ANCHOR.textContent = ANCHOR_TEXT;
-        ANCHOR.setAttribute('href', `#${el.id}`);
+        ANCHOR.setAttribute('href', `#${EL_ID}`);
         LI.appendChild(ANCHOR);
         TOC_SUBTOPIC_NAV.appendChild(LI);
     });
