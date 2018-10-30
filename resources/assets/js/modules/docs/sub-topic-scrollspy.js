@@ -10,12 +10,24 @@ module.exports = () => {
 
     // create the sub-toc
     TOC_CONTENT_CONTAINER.forEach((el) => {
-        const EL_ID = el.id || el.querySelector('a[name]').getAttribute('name');
+        let EL_ID = null;
         const LI = document.createElement('li');
         const ANCHOR = document.createElement('a');
-        const ANCHOR_TEXT = EL_ID.replace(/[^A-Za-z0-9]+/g, ' ');
-        ANCHOR.textContent = ANCHOR_TEXT;
-        ANCHOR.setAttribute('href', `#${EL_ID}`);
+        let ANCHOR_TEXT = null;
+
+        if (el.id || el.querySelector('a[name]') !== null) {
+            EL_ID = el.id || el.querySelector('a[name]').getAttribute('name');
+            ANCHOR_TEXT = EL_ID.replace(/[^A-Za-z0-9]+/g, ' ');
+            ANCHOR.textContent = ANCHOR_TEXT;
+            ANCHOR.setAttribute('href', `#${EL_ID}`);
+        } else {
+            EL_ID = el.innerHTML.replace(/\s/g, '-');
+            ANCHOR_TEXT = el.innerHTML;
+            ANCHOR.textContent = ANCHOR_TEXT;
+            ANCHOR.setAttribute('href', `#${EL_ID}`);
+            el.setAttribute('id', EL_ID);
+        }
+
         LI.appendChild(ANCHOR);
         TOC_SUBTOPIC_NAV.appendChild(LI);
     });
