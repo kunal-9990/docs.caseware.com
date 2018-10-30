@@ -17,6 +17,9 @@ require('./components/Example');
 
 require('./vendor/noframework.waypoints');
 
+// Polyfills
+require('./polyfill');
+
 const HEADER = require('./modules/header/header');
 const DOCS = require('./modules/docs/docs');
 const BACK_TO_TOP = require('./modules/back-to-top');
