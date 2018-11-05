@@ -12,8 +12,7 @@ module.exports = () => {
     SUB_TOPIC_SCROLLSPY();
     TOC();
     DOCS_CONTAINER();
-    FEEDBACK();
-    REDIRECTS();
+    FEEDBACK();    
     FILTER();
 
     if (document.querySelector('.downloadLink')) {
@@ -26,5 +25,9 @@ module.exports = () => {
 
     if (document.querySelector('#vid') || document.querySelector('#vidcenter')) {
         VIDEO_IFRAME();
+    }
+
+    if (document.querySelector('.helpaccordiancol')) {
+        REDIRECTS();
     }
 };
