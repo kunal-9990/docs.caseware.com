@@ -12,7 +12,7 @@ module.exports = () => {
     SUB_TOPIC_SCROLLSPY();
     TOC();
     DOCS_CONTAINER();
-    FEEDBACK();    
+    FEEDBACK();
     FILTER();
 
     if (document.querySelector('.downloadLink')) {
