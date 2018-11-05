@@ -24,7 +24,7 @@ module.exports = () => {
         IMG_MODAL();
     }
 
-    if (document.querySelector('#vid')) {
+    if (document.querySelector('#vid') || document.querySelector('#vidcenter')) {
         VIDEO_IFRAME();
     }
 };
