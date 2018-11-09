@@ -1,4 +1,5 @@
 module.exports = () => {
+    // const filter = require('../filter');
     const BODY = document.querySelector('body');
     const FILTER_DROPDOWN = document.querySelector('.filters__dropdown');
     const FILTER_ITEMS = document.querySelectorAll('.expanded-filters .filters__item');
@@ -8,8 +9,9 @@ module.exports = () => {
     });
 
     FILTER_ITEMS.forEach((item) => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', () => {            
             item.classList.toggle('active-filter');
+            // filter();
         });
     });
 };

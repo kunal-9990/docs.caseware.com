@@ -84,7 +84,7 @@ header.header {
             &.time {
                 .fa-circle { color: rgba(168, 26, 76, 0.4); }
             }
-            &.working-papers {
+            &.wp {
                 .fa-circle { color: rgba(86, 58, 175, 0.4); }
             }
 
@@ -100,7 +100,7 @@ header.header {
                 &.se { background-color: $solution-cloud; }
                 &.analytics { background-color: $solution-analytics; }
                 &.time { background-color: $solution-time; }
-                &.working-papers { background-color: $solution-workingpapers; }
+                &.wp { background-color: $solution-workingpapers; }
             }
 
             &:not(:last-of-type) {

@@ -9,10 +9,10 @@ const REDIRECTS = require('./redirects');
 const FILTER = require('./filter');
 
 module.exports = () => {
-    SUB_TOPIC_SCROLLSPY();
     TOC();
+    SUB_TOPIC_SCROLLSPY();
     DOCS_CONTAINER();
-    FEEDBACK();    
+    FEEDBACK();
     FILTER();
 
     if (document.querySelector('.downloadLink')) {
@@ -30,4 +30,6 @@ module.exports = () => {
     if (document.querySelector('.helpaccordiancol')) {
         REDIRECTS();
     }
+
+
 };

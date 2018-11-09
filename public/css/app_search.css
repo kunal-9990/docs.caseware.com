@@ -8720,7 +8720,7 @@ header.header .filters__menu .filters__item.time .fa-circle {
   color: rgba(168, 26, 76, 0.4);
 }
 
-header.header .filters__menu .filters__item.working-papers .fa-circle {
+header.header .filters__menu .filters__item.wp .fa-circle {
   color: rgba(86, 58, 175, 0.4);
 }
 
@@ -8744,7 +8744,7 @@ header.header .filters__menu .filters__item.active-filter.time {
   background-color: #a81a4c;
 }
 
-header.header .filters__menu .filters__item.active-filter.working-papers {
+header.header .filters__menu .filters__item.active-filter.wp {
   background-color: #563aaf;
 }
 

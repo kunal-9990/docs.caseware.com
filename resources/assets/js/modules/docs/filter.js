@@ -1,57 +1,88 @@
 module.exports = () => {
+    
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            } 
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function applyFilter(filterSettings){
+        console.log("---------------------------------------");
+        var exclusiveTo = $("html").data("mc-conditions").toLowerCase().replace("product.", "");
+        console.log(exclusiveTo); 
+        
+        for (var property in filterSettings) {
+            if (filterSettings.hasOwnProperty(property)) {
+                if(filterSettings[property] == true){
+                    $( ".toc__filters--" + property + "-js" ).show();
+                    $("." + property).addClass("active-filter");
+                    $("div").find("[data-mc-conditions='Product." + property.toUpperCase() + "']").show();
+                    if(property == exclusiveTo){
+                        $('.col-sm-9').show();
+                    }
+                    console.log("showing:" + property);
+                    
+                }
+                else{
+                    $( ".toc__filters--" + property + "-js" ).hide();
+                    $("." + property).removeClass("active-filter");
+                    $("div").find("[data-mc-conditions='Product." + property.toUpperCase() + "']").hide();
+
+                    if(property == exclusiveTo){
+                        $('.col-sm-9').hide();
+                    }
+                    console.log("hiding:" + property);
+
+
+                }
+            }
+        }
+        console.log("---------------------------------------");
+    }
+
+
+    function updateFilter(){
+        var filterSettings = {
+            time: $('.filters__item.time').hasClass("active-filter"),
+            se: $('.filters__item.se').hasClass("active-filter"),
+            wp: $('.filters__item.wp').hasClass("active-filter"),
+            analytics: $('.filters__item.analytics').hasClass("active-filter")
+        };
+
+        applyFilter(filterSettings);
+
+        setCookie("filterSettings",  JSON.stringify(filterSettings), 5);
+
+    }
+
 
     $(document).on('click', '.filters__item', function(event){
         updateFilter();
-      });
+    });
 
-    function updateFilter(){
+    $( document ).ready(function() {
+        applyFilter(filterSettings);
+    });
 
-        //this messes up other tags that use the .time class
-        //use a more specific selector
-        // $('.time').hide();
+    var filterSettings = JSON.parse(getCookie("filterSettings"));
 
-        //load
-    // $.post("/assets/phpfunctions/productFilter.php",
-    // {
-    //     'function': 'updateFilter',
-    //     'sefilter': !$('#sefilter').hasClass("deselected"),
-    //     'analyticsfilter': !$('#analyticsfilter').hasClass("deselected"),
-    //     'timefilter': !$('#timefilter').hasClass("deselected"),
-    //     'taxfilter': !$('#taxfilter').hasClass("deselected"),
-    //     'wpfilter': !$('#wpfilter').hasClass("deselected"),
-    //     'auditfilter': !$('#auditfilter').hasClass("deselected"),
-    // }
-    // ,
-    // function(data) {
-    //     var productNames = { analytics: "Analytics", time: "Time", se: "SE", wp: "Working Papers" }; 
-    //     var filtersettings = JSON.parse(data);
-    //     var topicExclusiveProduct = $("html").data("mc-conditions");
-    //     for (var product in filtersettings) {
-    //     // check if the property/key is defined in the object itself, not in parent
-    //     if(filtersettings[product]=="false"){
-    //         if(topicExclusiveProduct == "Product."+product.toUpperCase() && $(".maincontentarea").is(":visible")){
-    //         $(".maincontentarea").hide();
-    //         $(".rightcol").hide();
-    //         $( ".toccol" ).after( '<div class="col-xs-12 col-lg-6 col-md-8 col-sm-8 filtermsg "> This content is exclusively related to ' + productNames[product] + ' and has been filtered out. Select the <span class="glyphicon glyphicon-filter"></span> in the top navigation to modify your filter settings. </div>');
-    //         }
-    //         $("div").find("[data-mc-conditions='Product." + product.toUpperCase() + "']").hide();
-    //         $('.'+product).hide();
-    //     }
-    //     else{
-    //         // alert(product+"="+filtersettings[product]);
-    //         $("div").find("[data-mc-conditions='Product." + product.toUpperCase() + "']").show();
-    //         $('.'+product).show();
-    //         if(topicExclusiveProduct == "Product."+product.toUpperCase()){
-    //         $(".maincontentarea").show();
-    //         $(".rightcol").show();
-    //         $(".filtermsg").hide();
-    //         }
-    
-    //     };
-    //     }
-    
-    // });
-    }
-
+    // applyFilter(filterSettings);
 
 };

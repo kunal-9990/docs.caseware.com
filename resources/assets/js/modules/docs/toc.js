@@ -1,5 +1,7 @@
 module.exports = () => {
 
+    // const filter = require('../filter');
+
     $(".toc__container").html("");
 
     var loc = window.location.href;
@@ -28,7 +30,7 @@ module.exports = () => {
                             $(this).children().each(function () {
                                 var classes;
                                 if (($(this).attr("conditions"))) {
-                                    producttags = $(this).attr("conditions").replace("Product.", "").toLowerCase();
+                                    producttags = $(this).attr("conditions").replace("Product.", "toc__filters--").toLowerCase() + "-js";
                                 }
                                 else {
                                     producttags= " ";
@@ -141,4 +143,6 @@ module.exports = () => {
             el.classList.remove('toc__category--is-open') :
             el.classList.add('toc__category--is-open')
     }
+
+    
 };
