@@ -38,10 +38,13 @@ class PageController extends Controller
         $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$topic ));
 
         $maincontentarea = $dom->find('body', 0);
+        $htmlElement = $dom->find('html', 0);
+
+        (isset($htmlElement->attr['data-mc-conditions'])) ? $exclusiveTo = $htmlElement->attr['data-mc-conditions'] : $exclusiveTo = '' ;
 
         $recent = getRecentlyViewed();
 
-        return view('pages.documentation', compact('maincontentarea', 'recent'));
+        return view('pages.documentation', compact('maincontentarea', 'recent', 'exclusiveTo'));
     }
 
     // topics with subsubcategory

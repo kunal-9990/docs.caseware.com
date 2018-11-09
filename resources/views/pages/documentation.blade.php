@@ -1,5 +1,11 @@
 @extends('default')
 
+@section('html')
+    @include('partials.html', [
+        'exclusiveTo' => $exclusiveTo
+    ])
+@stop
+
 @section('meta')
     @include('partials.meta', [
         'canonical' => url('/'),
