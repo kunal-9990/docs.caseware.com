@@ -65,7 +65,9 @@ module.exports = () => {
             time: $('.filters__item.time').hasClass("active-filter"),
             se: $('.filters__item.se').hasClass("active-filter"),
             wp: $('.filters__item.wp').hasClass("active-filter"),
-            analytics: $('.filters__item.analytics').hasClass("active-filter")
+            analytics: $('.filters__item.analytics').hasClass("active-filter"),
+            pcr: $('.filters__item.pcr').hasClass("active-filter"),
+            rct: $('.filters__item.rct').hasClass("active-filter")
         };
 
         applyFilter(filterSettings);
