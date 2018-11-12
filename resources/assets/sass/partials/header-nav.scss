@@ -87,6 +87,12 @@ header.header {
             &.wp {
                 .fa-circle { color: rgba(86, 58, 175, 0.4); }
             }
+            &.pcr {
+                .fa-circle { color: rgba(0, 0, 0, 0.4); }
+            }
+            &.rct {
+                .fa-circle { color: rgba(0, 0, 0, 0.4); }
+            }
 
             &.active-filter {
                 color: $white;
@@ -101,6 +107,8 @@ header.header {
                 &.analytics { background-color: $solution-analytics; }
                 &.time { background-color: $solution-time; }
                 &.wp { background-color: $solution-workingpapers; }
+                &.pcr { background-color: $solution-pcr; }
+                &.rct { background-color: $solution-rct; }
             }
 
             &:not(:last-of-type) {

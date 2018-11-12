@@ -27,6 +27,8 @@
                     <div class="filters__item wp"><i class="fas fa-circle"></i> Working papers</div>
                     <div class="filters__item analytics"><i class="fas fa-circle"></i> Analytics</div>
                     <div class="filters__item time"><i class="fas fa-circle"></i> Time</div>
+                    <div class="filters__item pcr"><i class="fas fa-circle"></i> PCR</div>
+                    <div class="filters__item rct"><i class="fas fa-circle"></i> RCT</div>
                 </div>
             </div>
         </div>

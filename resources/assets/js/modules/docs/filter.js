@@ -25,7 +25,9 @@ module.exports = () => {
 
     function applyFilter(filterSettings){
         console.log("---------------------------------------");
-        var exclusiveTo = $("html").data("mc-conditions").toLowerCase().replace("product.", "");
+        if (typeof $("html").data("mc-conditions") !== 'undefined') {
+            var exclusiveTo = $("html").data("mc-conditions").toLowerCase().replace("product.", "");
+        }        
         console.log(exclusiveTo); 
         
         for (var property in filterSettings) {
@@ -34,7 +36,7 @@ module.exports = () => {
                     $( ".toc__filters--" + property + "-js" ).show();
                     $("." + property).addClass("active-filter");
                     $("div").find("[data-mc-conditions='Product." + property.toUpperCase() + "']").show();
-                    if(property == exclusiveTo){
+                    if(exclusiveTo && property == exclusiveTo){
                         $('.col-sm-9').show();
                     }
                     console.log("showing:" + property);
@@ -45,7 +47,7 @@ module.exports = () => {
                     $("." + property).removeClass("active-filter");
                     $("div").find("[data-mc-conditions='Product." + property.toUpperCase() + "']").hide();
 
-                    if(property == exclusiveTo){
+                    if(exclusiveTo && property == exclusiveTo){
                         $('.col-sm-9').hide();
                     }
                     console.log("hiding:" + property);
