@@ -14,20 +14,7 @@
 
           
           
-<script src="/documentation_files/webapps/28/Content/Resources/Scripts/custom.modernizr.js">
-</script>
-<script src="/documentation_files/webapps/28/Content/Resources/Scripts/jquery.min.js">
-</script>
-<script src="/documentation_files/webapps/28/Content/Resources/Scripts/require.min.js">
-</script>
-<script src="/documentation_files/webapps/28/Content/Resources/Scripts/require.config.js">
-</script>
-<script src="/documentation_files/webapps/28/Content/Resources/Scripts/foundation.min.js">
-</script>
-<script src="/documentation_files/webapps/28/Content/Resources/Scripts/plugins.min.js">
-</script>
-<script src="/documentation_files/webapps/28/Content/Resources/Scripts/MadCapAll.js">
-</script>
+
 <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 
 {{-- GOOGLE ANALYTICS TAG --}}

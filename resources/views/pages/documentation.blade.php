@@ -2,7 +2,7 @@
 
 @section('html')
     @include('partials.html', [
-        'exclusiveTo' => $exclusiveTo
+        'exclusiveTo' =>  isset($exclusiveTo) ? $exclusiveTo : false,
     ])
 @stop
 

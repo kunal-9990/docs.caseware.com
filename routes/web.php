@@ -24,7 +24,7 @@ Route::get('/home', 'PageController@home');
 Route::get('/documentation', 'PageController@documentationHome');
 
 // search
-Route::get('/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
+Route::get('/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
 
 // topics
 Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');

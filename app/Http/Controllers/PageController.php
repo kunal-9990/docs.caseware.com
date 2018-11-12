@@ -22,7 +22,7 @@ class PageController extends Controller
     }
 
     // search
-    function search($product, $version, $lang){
+    function search($year, $product, $version, $lang){
         // return redirect('/'.$product.'/'.$version.'/'.$lang.'/search#search-'.request()->search);
         return view('pages.search', compact('recent'));
 
