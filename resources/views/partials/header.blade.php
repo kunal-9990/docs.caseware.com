@@ -24,12 +24,48 @@
         <div class="expanded-filters">
             <div class="dropdown-content">
                 <div class="filters__menu">
-                    <div class="filters__item se"><i class="fas fa-circle"></i> SE</div>
-                    <div class="filters__item wp"><i class="fas fa-circle"></i> Working papers</div>
-                    <div class="filters__item analytics"><i class="fas fa-circle"></i> Analytics</div>
-                    <div class="filters__item time"><i class="fas fa-circle"></i> Time</div>
-                    <div class="filters__item pcr"><i class="fas fa-circle"></i> PCR</div>
-                    <div class="filters__item rct"><i class="fas fa-circle"></i> RCT</div>
+                    <div class="switch-wrap">                    
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="switch-name">SE</span>
+                    </div>
+                    <div class="switch-wrap">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="switch-name">Working papers</span>
+                    </div>
+                    <div class="switch-wrap">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="switch-name">Analytics</span>
+                    </div>
+                    <div class="switch-wrap">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="switch-name">Time</span>
+                    </div>
+                    <div class="switch-wrap">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="switch-name">PCR</span>
+                    </div>
+                    <div class="switch-wrap">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="switch-name">RCT</span>
+                    </div>
                 </div>
             </div>
         </div>
