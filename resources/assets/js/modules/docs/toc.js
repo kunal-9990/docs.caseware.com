@@ -12,7 +12,7 @@ module.exports = () => {
     var product = routeComponents[2];
     var version = routeComponents[3];
     var lang = routeComponents[4];
-    var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
+    var linkPrefix = "/docsmk2/" + year + "/" + product + "/" + version + "/" + lang;
     var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
 
     $.ajax({
