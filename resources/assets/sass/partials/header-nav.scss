@@ -58,62 +58,88 @@ header.header {
     .filters__menu {
         display: flex;
         margin-bottom: 20px;
+        // align-items: center;
+        flex-wrap: wrap;
 
-        .filters__item {
-            background-color: #f1f1f1;
-            color: #a8a8a8;
-            padding: 7px 10px;
-            border-radius: 50px;
-            line-height: 1;
+        .switch-wrap {
             display: flex;
             align-items: center;
-            cursor: pointer;
-
-            .fa-circle {
-                color: $white;
-                font-size: 0.7em;
-                margin-right: 5px;
-            }
-
-            &.se {
-                .fa-circle { color: rgba(66, 99, 235, 0.4); }
-            }
-            &.analytics {
-                .fa-circle { color: rgba(229, 114, 0, 0.4); }
-            }
-            &.time {
-                .fa-circle { color: rgba(168, 26, 76, 0.4); }
-            }
-            &.wp {
-                .fa-circle { color: rgba(86, 58, 175, 0.4); }
-            }
-            &.pcr {
-                .fa-circle { color: rgba(0, 0, 0, 0.4); }
-            }
-            &.rct {
-                .fa-circle { color: rgba(0, 0, 0, 0.4); }
-            }
-
-            &.active-filter {
-                color: $white;
-
-                .fa-circle {
-                    color: $white;
-                }
-            }
-
-            &.active-filter {
-                &.se { background-color: $solution-cloud; }
-                &.analytics { background-color: $solution-analytics; }
-                &.time { background-color: $solution-time; }
-                &.wp { background-color: $solution-workingpapers; }
-                &.pcr { background-color: $solution-pcr; }
-                &.rct { background-color: $solution-rct; }
-            }
 
             &:not(:last-of-type) {
-                margin-right: 5px;
+                margin-right: 25px;
             }
+
+            .switch-name {
+                font-size: 18px;
+                font-weight: bold;
+                color: #CCC;
+                transition: color .4s;
+            }
+
+            &.is-active .switch-name {
+                color: $text-black;
+            }
+        }
+
+
+        /* The switch - the box around the slider */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 24px;
+            margin: 0 5px 0 0;
+        }
+        
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: $white;
+            transition: .4s;
+        }
+        
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(16px);
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
         }
     }
 }
