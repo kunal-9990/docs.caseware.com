@@ -1,1 +1,1 @@
-home page
+@extends('default')
