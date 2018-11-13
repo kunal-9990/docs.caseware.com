@@ -17,8 +17,11 @@
 </head>
 <body>
     <div class="flex-page-container">
+
+        @if(!$noHeader)
         @include('partials.header')
         @include('partials.header-mobile')
+        @endif
 
     {{-- <div class="flex-page-container"> --}}
         <main id="main">

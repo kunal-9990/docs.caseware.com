@@ -18,7 +18,7 @@ $current_version = env("CURRENT_VERSION");
 Route::get('/', 'PageController@home'); 
 
 // home
-Route::get('/2018/webapps/29/{lang}/home', 'PageController@home'); 
+Route::get('/home', 'PageController@home'); 
 
 // documentation home
 Route::get('/documentation', 'PageController@documentationHome');

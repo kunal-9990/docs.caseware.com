@@ -13,7 +13,9 @@ class PageController extends Controller
     // default
     function home() {
 
-        return view('pages.home', compact('recent'));
+        $noHeader = true;
+        
+        return view('pages.home', compact('recent','noHeader'));
     }
 
     // documentation home
