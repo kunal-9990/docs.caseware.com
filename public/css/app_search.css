@@ -8672,8 +8672,8 @@ body.mobile-nav--is-open .mobile-nav {
 header.header .expanded-filters {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 5s;
-  transition: max-height 5s;
+  -webkit-transition: max-height .4s;
+  transition: max-height .4s;
 }
 
 .filter-dropdown-is-expanded header.header .expanded-filters {
@@ -8687,10 +8687,6 @@ header.header .filters__menu {
   margin-bottom: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  /* The switch - the box around the slider */
-  /* Hide default HTML checkbox */
-  /* The slider */
-  /* Rounded sliders */
 }
 
 header.header .filters__menu .switch-wrap {

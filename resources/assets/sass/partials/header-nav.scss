@@ -48,7 +48,7 @@ header.header {
     .expanded-filters {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 5s;
+        transition: max-height .4s;
 
         .filter-dropdown-is-expanded & {
             max-height: 100px;
@@ -58,7 +58,6 @@ header.header {
     .filters__menu {
         display: flex;
         margin-bottom: 20px;
-        // align-items: center;
         flex-wrap: wrap;
 
         .switch-wrap {
@@ -81,8 +80,6 @@ header.header {
             }
         }
 
-
-        /* The switch - the box around the slider */
         .switch {
             position: relative;
             display: inline-block;
@@ -91,14 +88,12 @@ header.header {
             margin: 0 5px 0 0;
         }
         
-        /* Hide default HTML checkbox */
         .switch input {
             opacity: 0;
             width: 0;
             height: 0;
         }
         
-        /* The slider */
         .slider {
             position: absolute;
             cursor: pointer;
@@ -133,7 +128,6 @@ header.header {
             transform: translateX(16px);
         }
         
-        /* Rounded sliders */
         .slider.round {
             border-radius: 34px;
         }
