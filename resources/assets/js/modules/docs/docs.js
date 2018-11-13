@@ -30,6 +30,4 @@ module.exports = () => {
     if (document.querySelector('.helpaccordiancol')) {
         REDIRECTS();
     }
-
-
 };

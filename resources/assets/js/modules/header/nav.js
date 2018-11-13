@@ -9,9 +9,8 @@ module.exports = () => {
     });
 
     FILTER_ITEMS.forEach((item) => {
-        item.addEventListener('click', () => {            
+        item.addEventListener('click', () => {
             item.classList.toggle('active-filter');
-            // filter();
         });
     });
 };
