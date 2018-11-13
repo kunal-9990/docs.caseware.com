@@ -13,7 +13,7 @@ class PageController extends Controller
     // default
     function home() {
 
-        return view('pages.home');
+        return view('pages.home', compact('recent'));
     }
 
     // documentation home
