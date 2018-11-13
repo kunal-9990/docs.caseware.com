@@ -34,7 +34,9 @@ module.exports = () => {
             if (filterSettings.hasOwnProperty(property)) {
                 if(filterSettings[property] == true){
                     $( ".toc__filters--" + property + "-js" ).show();
-                    $("." + property).addClass("active-filter");
+                    $("." + property).addClass("is-active");
+                    $("." + property).children().children().first().prop('checked', true);
+
                     $("div").find("[data-mc-conditions='Product." + property.toUpperCase() + "']").show();
                     if(exclusiveTo && property == exclusiveTo){
                         $('.col-sm-9').show();
@@ -44,7 +46,9 @@ module.exports = () => {
                 }
                 else{
                     $( ".toc__filters--" + property + "-js" ).hide();
-                    $("." + property).removeClass("active-filter");
+                    $("." + property).removeClass("is-active");
+                    $("." + property).children().children().first().prop('checked', false);
+
                     $("div").find("[data-mc-conditions='Product." + property.toUpperCase() + "']").hide();
 
                     if(exclusiveTo && property == exclusiveTo){
@@ -62,12 +66,12 @@ module.exports = () => {
 
     function updateFilter(){
         var filterSettings = {
-            time: $('.filters__item.time').hasClass("active-filter"),
-            se: $('.filters__item.se').hasClass("active-filter"),
-            wp: $('.filters__item.wp').hasClass("active-filter"),
-            analytics: $('.filters__item.analytics').hasClass("active-filter"),
-            pcr: $('.filters__item.pcr').hasClass("active-filter"),
-            rct: $('.filters__item.rct').hasClass("active-filter")
+            time: $('.switch-wrap.time').hasClass("is-active"),
+            se: $('.switch-wrap.se').hasClass("is-active"),
+            wp: $('.switch-wrap.wp').hasClass("is-active"),
+            analytics: $('.switch-wrap.analytics').hasClass("is-active"),
+            pcr: $('.switch-wrap.pcr').hasClass("is-active"),
+            rct: $('.switch-wrap.rct').hasClass("is-active")
         };
 
         applyFilter(filterSettings);
@@ -77,7 +81,7 @@ module.exports = () => {
     }
 
 
-    $(document).on('click', '.filters__item', function(event){
+    $(document).on('click', '.switch-wrap', function(event){
         updateFilter();
     });
 
@@ -87,8 +91,9 @@ module.exports = () => {
     }
     //if no cookies set, enable all and show dropdown
     else{
-        $(".filters__item").each(function(  ) {
-            $( this ).addClass('active-filter');
+        $(".switch-wrap").each(function(  ) {
+            $( this ).addClass('is-active');
+            $( this ).children().children().first().prop('checked', true);
         });
         $("body").addClass("filter-dropdown-is-expanded");
         updateFilter();
