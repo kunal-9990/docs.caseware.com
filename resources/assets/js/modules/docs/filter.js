@@ -24,11 +24,11 @@ module.exports = () => {
     }
 
     function applyFilter(filterSettings){
-        console.log("---------------------------------------");
+        // console.log("---------------------------------------");
         if (typeof $("html").data("mc-conditions") !== 'undefined') {
             var exclusiveTo = $("html").data("mc-conditions").toLowerCase().replace("product.", "");
         }        
-        console.log(exclusiveTo); 
+        // console.log(exclusiveTo); 
         
         for (var property in filterSettings) {
             if (filterSettings.hasOwnProperty(property)) {
@@ -39,7 +39,7 @@ module.exports = () => {
                     if(exclusiveTo && property == exclusiveTo){
                         $('.col-sm-9').show();
                     }
-                    console.log("showing:" + property);
+                    // console.log("showing:" + property);
                     
                 }
                 else{
@@ -50,13 +50,13 @@ module.exports = () => {
                     if(exclusiveTo && property == exclusiveTo){
                         $('.col-sm-9').hide();
                     }
-                    console.log("hiding:" + property);
+                    // console.log("hiding:" + property);
 
 
                 }
             }
         }
-        console.log("---------------------------------------");
+        // console.log("---------------------------------------");
     }
 
 
@@ -81,12 +81,23 @@ module.exports = () => {
         updateFilter();
     });
 
+
+    if(getCookie("filterSettings")){
+        var filterSettings = JSON.parse(getCookie("filterSettings"));
+    }
+    //if no cookies set, enable all and show dropdown
+    else{
+        $(".filters__item").each(function(  ) {
+            $( this ).addClass('active-filter');
+        });
+        $("body").addClass("filter-dropdown-is-expanded");
+        updateFilter();
+    }
+
     $( document ).ready(function() {
         applyFilter(filterSettings);
+
     });
 
-    var filterSettings = JSON.parse(getCookie("filterSettings"));
-
-    // applyFilter(filterSettings);
 
 };

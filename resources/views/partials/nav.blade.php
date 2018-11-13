@@ -16,14 +16,31 @@
 
 @endphp
 <div class="language__dropdown">
-    <a href="#">English <i class="fas fa-angle-down"></i></a>
+    @php
+    $languages = array("en"=>"English", "fr"=>"French", "es"=>"Spanish", "nl"=>"Dutch","cn"=>"Chinese", "de"=>"German");
+    $segments = Request::segments();
+    $segments[3] = 'en';
+    $enLink = '/' . implode('/', $segments);
+    $segments[3] = 'fr';
+    $frLink = '/' . implode('/', $segments);
+    $segments[3] = 'es';
+    $esLink = '/' . implode('/', $segments);
+    $segments[3] = 'nl';
+    $nlLink = '/' . implode('/', $segments);
+    $segments[3] = 'cn';
+    $cnLink = '/' . implode('/', $segments);
+    $segments[3] = 'de';
+    $deLink = '/' . implode('/', $segments);
+    $currentLanguage = $languages[Request::segments()[3]];
+    @endphp
+    <a href="#">{{$currentLanguage}} <i class="fas fa-angle-down"></i></a>
     <div class="dropdown-content">
-        <a href="#">English</a>
-        <a href="#">French</a>
-        <a href="#">Spanish</a>
-        <a href="#">Dutch</a>
-        <a href="#">Chinese</a>
-        <a href="#">German</a>
+        <a href="{{$enLink}}">English</a>
+        <a href="{{$frLink}}">French</a>
+        <a href="{{$esLink}}">Spanish</a>
+        <a href="{{$nlLink}}">Dutch</a>
+        <a href="{{$cnLink}}">Chinese</a>
+        <a href="{{$deLink}}">German</a>
     </div>
 </div>
 <div class="filters__dropdown">
