@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="194" MadCap:lastWidth="1009">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title></title>
+        <link href="../Stylesheets/StylesForHomePage.css" rel="stylesheet" type="text/css" />
+        <link href="../Stylesheets/CaseWare_Styles_v3.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+			var myURL = document.location.href;
+		
+			if(myURL.indexOf("/en/") !== -1){
+			document.cookie="googtrans" + "=" + "/en/en/";
+			}else if(myURL.indexOf("/fr/") !== -1){
+			document.cookie="googtrans" + "=" + "/en/fr/";
+			}else if (myURL.indexOf("/es/") !== -1){
+			document.cookie="googtrans" + "=" + "/en/es/";
+			}else if (myURL.indexOf("/de/") !== -1){
+			document.cookie="googtrans" + "=" + "/en/de/";
+			}else if (myURL.indexOf("/nl/") !== -1){
+			document.cookie="googtrans" + "=" + "/en/nl/";
+			}else if (myURL.indexOf("/cn/") !== -1){
+			document.cookie="googtrans" + "=" + "/en/zh-CN/";
+			}else if (myURL.indexOf("/tw/") !== -1){
+			document.cookie="googtrans" + "=" + "/en/zh-TW/";
+			}else{
+			document.cookie="googtrans" + "=" + "/en/en/";
+			}
+			
+			function play(id)
+			{
+			if(document.getElementById('animated'+id).style.cssText.match('display: none;'))
+			{
+				
+			document.getElementById('animated'+id).style.cssText = 'display:inline';
+			document.getElementById('fixed'+id).style.cssText = 'display: none';
+				
+			}else{
+			
+			document.getElementById('animated'+id).style.cssText = 'display:none';
+			document.getElementById('fixed'+id).style.cssText = 'display: inline';
+				
+			}
+			}
+		</script>
+        <script src="js/tabs.js">
+        </script>
+        <script type="text/javascript">
+			function googleTranslateElementInit() {
+			new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,nl,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-37974433-24'}, 'google_translate_element');
+			}
+		</script>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+    </head>
+    <body>
+        <div id="contentBody" class="off-canvas-main">
+            <MadCap:bodyProxy />
+            <div class="footer center">
+                <div class="row outer-row">
+                    <div class="small-12 medium-3 columns"><a href="../../Home.htm"><img src="../CaseWare_Logos/Flat_Help_CW_Footer.svg" /></a>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                        <p class="Copyright">Copyright © 2017 CaseWare International</p>
+                        <p class="Copyright">Visit us:&#160;<a href="http://www.caseware.com" target="_blank">www.caseware.com</a></p>
+                    </div>
+                    <div class="small-12 medium-3 footer-icons columns"><a href="http://www.linkedin.com/groups?gid=1935174&amp;trk=hb_side_g" target="_blank"><img alt="LinkedIn" src="https://www.caseware.com/++theme++Products.CaseWareTheme.browser/sample/ico/24x24-linkedin.png" /></a><a href="http://www.facebook.com/pages/CaseWare-International-Inc/54418196590?ref=ts" target="_blank"><img alt="Facebook" src="https://www.caseware.com/++theme++Products.CaseWareTheme.browser/sample/ico/24x24-facebook.png" /></a><a href="https://twitter.com/CaseWare" target="_blank"><img alt="Twitter" src="https://www.caseware.com/++theme++Products.CaseWareTheme.browser/sample/ico/24x24-twitter.png" /></a><a href="http://www.youtube.com/user/casewarevids?feature=results_main" target="_blank"><img alt="YouTube" src="https://www.caseware.com/++theme++Products.CaseWareTheme.browser/sample/ico/24x24-youtube.png" /></a><a href=" https://www.caseware.com/caseware-rss" target="_blank"><img alt="RSS feed" src="https://www.caseware.com/++theme++Products.CaseWareTheme.browser/sample/ico/24x24-rss.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -13,6 +13,22 @@
 <link rel="canonical" href="{{ $canonical or ''}}" />
 
 
+{{-- json ld --}}
+<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org/",
+	  "@type": "WebSite",
+	  "name": "CaseWare Documentation",
+	  "url": "docs.caseware.com",
+	  "potentialAction": {
+		"@type": "SearchAction",
+		"target": "https://docs.caseware.com/2018/webapps/29/de/search?search=test#search-{search_term_string}",
+		"query-input": "required name=search_term_string"
+	  }
+	}
+</script>
+
+
 {{-- Tell Google about localized versions of our pages --}}
 @php
 $segments = Request::segments();

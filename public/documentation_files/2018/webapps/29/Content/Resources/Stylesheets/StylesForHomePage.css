@@ -1,3 +1,4 @@
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
 /*<meta />*/
 
 /* Home Page General Styles*/
@@ -137,8 +138,9 @@ p.Copyright
 {
 	padding-top: 60px;
 	padding-bottom: 60px;
-	background-color: #e6e6e6;
+	background-color: #f8f8f8;
 	margin-top: -50px;
+    min-height:435px;
 }
 
 #content-section h3
@@ -189,7 +191,7 @@ p.Copyright
 #content-section.mc-blurb .mc-bullets > li
 {
 	color: #5a5a5a;
-	list-style-image: url('../Icons/Bullet1.png');
+	list-style-image: url('../Images/Bullet1.png');
 	font-size: 14px;
 	margin-top: 8px;
 	line-height: 1.6em;
@@ -199,26 +201,26 @@ p.Copyright
 
 div.topichero
 {
-	background-image: url('../Project Files/CaseWareCloud/Images/BackgroundImage.png');
 	background-size: cover;
-	background-repeat: no-repeat;
 	padding-top: 20px;
 	height: auto;
 	padding-bottom: 150px;
+	background-image: url('images/tile_bkrnd.png');
+	background-repeat: repeat;
 }
 
 div.topichero h1
 {
-	font-size: 3.6em;
+	font-size: 3.2em;
 	margin-top: 1.11em;
-	margin-bottom: 0.5em;
+	
 	line-height: 100%;
 }
 
 div.topichero h3
 {
-	font-size: 1.8em;
-	margin-bottom: 80px;
+	font-size: 2.3em;
+	margin-bottom: 50px;
 	line-height: 100%;
 }
 
@@ -283,7 +285,7 @@ div.slidingshow
 
 .footer
 {
-	background-color: #292928;
+	background-color: #205081;
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
@@ -320,12 +322,24 @@ div.slidingshow
 	text-align: right;
 }
 
-.footer-icons > a:first-of-type
-{
-	padding-right: 10px;
-}
 
 /* Mad Cap proxy/editor assigned styles */
+
+MadCap|searchBarProxy
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	float: none;
+	width: 50%;
+}
+
+MadCap|topicToolbarProxy
+{
+	float: none;
+}
 
 p.TOC2
 {
@@ -333,9 +347,41 @@ p.TOC2
 	display: none;
 }
 
+MadCap|menuProxy.menu1
+{
+	mc-toc-depth: 1;
+	mc-context-sensitive: True;
+}
+
+MadCap|menuProxy.menu2
+{
+	mc-toc-depth: 1;
+	mc-context-sensitive: True;
+}
+
+MadCap|slideshow
+{
+	border-style: none;
+	box-shadow: none;
+}
+
+MadCap|slideshowCaption
+{
+	background: none;
+	color: #000000;
+	padding: 0px;
+	padding-top: 0px;
+}
+
 html.HomePage
 {
 	mc-master-page: url('../MasterPages/HomePage.flmsp');
+	mc-community-features: disabled;
+}
+
+html.TestBuildHomePage
+{
+	mc-master-page: url('../MasterPages/TestBuildHomePage.flmsp');
 	mc-community-features: disabled;
 }
 
@@ -370,6 +416,11 @@ html.HomePage
 
 @media screen and (max-width: 40em)
 {
+	MadCap|searchBarProxy.homeSearchBar
+	{
+		width: 100%;
+	}
+
 	div.topichero h1
 	{
 		font-size: 2em;

@@ -13,11 +13,14 @@ class PageController extends Controller
     // default
     function home() {
 
-        return view('pages.home', compact('recent'));
+        $noHeader = true;
+
+        return view('pages.home', compact('recent','noHeader'));
     }
 
     // documentation home
     function documentationHome() {
+        
         return view('pages.documentation');
     }
 
@@ -30,6 +33,8 @@ class PageController extends Controller
     
     // topic
     function showTopic($year, $product, $version, $lang, $category, $subcategory, $topic){
+        $noHeader = true;
+
         if(!endsWith($topic,".htm")){
             $topic .= ".htm";
         }

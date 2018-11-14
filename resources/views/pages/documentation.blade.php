@@ -43,6 +43,9 @@
                         @include('partials.sub-toc')
                     </div>
                 </div>
+                @include('partials.filter-msg', [
+                    'exclusiveTo' =>  isset($exclusiveTo) ? $exclusiveTo : false,
+                ])
             </div>
         </div>
     </div>

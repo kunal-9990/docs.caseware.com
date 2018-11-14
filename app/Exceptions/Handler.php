@@ -46,8 +46,14 @@ class Handler extends ExceptionHandler
      * @param  \Exception  $exception
      * @return \Illuminate\Http\Response
      */
-    public function render($request, Exception $exception)
-    {
-        return parent::render($request, $exception);
+    protected function prepareResponse($request, Exception $e)
+{
+    if ($this->isHttpException($e)) {
+        return $this->toIlluminateResponse($this->renderHttpException($e), $e);
+    } elseif (! config('app.debug')) {
+        return response()->view('errors.500', [], 500);
+    } else {
+        return $this->toIlluminateResponse($this->convertExceptionToResponse($e), $e);
     }
+}
 }

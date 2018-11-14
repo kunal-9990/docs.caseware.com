@@ -17,8 +17,16 @@
 </head>
 <body>
     <div class="flex-page-container">
+        
+        @php
+        if(!isset($noHeader)){
+            $noHeader = false;
+        }
+        @endphp
+        @if(!$noHeader)
         @include('partials.header')
         @include('partials.header-mobile')
+        @endif
 
     {{-- <div class="flex-page-container"> --}}
         <main id="main">
