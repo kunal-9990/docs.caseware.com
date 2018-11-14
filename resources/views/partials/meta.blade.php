@@ -11,7 +11,7 @@
 <meta name="robots" content="noindex">
 
 <link rel="canonical" href="{{ $canonical or ''}}" />
-
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 
 {{-- json ld --}}
 <script type="application/ld+json">

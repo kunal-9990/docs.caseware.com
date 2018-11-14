@@ -48,8 +48,9 @@ class PageController extends Controller
         (isset($htmlElement->attr['data-mc-conditions'])) ? $exclusiveTo = $htmlElement->attr['data-mc-conditions'] : $exclusiveTo = '' ;
 
         $recent = getRecentlyViewed();
+        $title = strip_tags($dom->find('h1', 0));
 
-        return view('pages.documentation', compact('maincontentarea', 'recent', 'exclusiveTo'));
+        return view('pages.documentation', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
     }
 
     // topics with subsubcategory
@@ -64,41 +65,43 @@ class PageController extends Controller
 
         $maincontentarea = $dom->find('body', 0);
 
-        $recent = getRecentlyViewed();
-
-
-        return view('pages.documentation', compact('maincontentarea', 'recent'));
-    }
-
-    // subcategory
-    function showSubCategory($year, $product, $version, $lang, $category, $subcategory){
-
-        if(!endsWith($subcategory,".htm")){
-            $subcategory .= ".htm";
-        }
-
-        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory ));
-
-        $maincontentarea = $dom->find('body', 0);
+        (isset($htmlElement->attr['data-mc-conditions'])) ? $exclusiveTo = $htmlElement->attr['data-mc-conditions'] : $exclusiveTo = '' ;
 
         $recent = getRecentlyViewed();
+        $title = strip_tags($dom->find('h1', 0));
 
-        return view('pages.documentation', compact('maincontentarea', 'recent'));
+        return view('pages.documentation', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
     }
+
+    // // subcategory
+    // function showSubCategory($year, $product, $version, $lang, $category, $subcategory){
+
+    //     if(!endsWith($subcategory,".htm")){
+    //         $subcategory .= ".htm";
+    //     }
+
+    //     $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory ));
+
+    //     $maincontentarea = $dom->find('body', 0);
+
+    //     $recent = getRecentlyViewed();
+
+    //     return view('pages.documentation', compact('maincontentarea', 'recent'));
+    // }
     
-    // category
-    function showCategory($year, $product, $version, $lang, $category){
+    // // category
+    // function showCategory($year, $product, $version, $lang, $category){
 
-        if(!endsWith($category,".htm")){
-            $category .= ".htm";
-        }
+    //     if(!endsWith($category,".htm")){
+    //         $category .= ".htm";
+    //     }
         
-        $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."/Content/".$category ));
+    //     $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."/Content/".$category ));
 
-        $maincontentarea = $dom->find('body', 0);
-        // dd($maincontentarea);
-        $recent = getRecentlyViewed();
+    //     $maincontentarea = $dom->find('body', 0);
+    //     // dd($maincontentarea);
+    //     $recent = getRecentlyViewed();
 
-        return view('pages.documentation', compact('maincontentarea', 'recent'));
-    }
+    //     return view('pages.documentation', compact('maincontentarea', 'recent'));
+    // }
 }

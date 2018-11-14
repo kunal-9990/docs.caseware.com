@@ -8,11 +8,10 @@
 
 @section('meta')
     @include('partials.meta', [
-        'canonical' => url('/'),
-        'url' => url('/'),
-        'title' => 'documentation',
-        'og_description' => 'test description',
-        'canonical' => 'test canonical url'
+        'canonical' => URL::current(),
+        'url' => URL::current(),
+        'title' => $title,
+        'og_description' => $title
     ])
 @stop
 

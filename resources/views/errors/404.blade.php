@@ -14,7 +14,7 @@ $noHeader = true;
 @include('partials.meta', [
 'canonical' => url('/'),
 'url' => url('/'),
-'title' => 'documentation',
+'title' => 'Page not found',
 'og_description' => 'test description',
 'canonical' => 'test canonical url'
 ])
