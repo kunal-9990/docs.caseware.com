@@ -39,7 +39,8 @@ module.exports = () => {
 
                     $("div").find("[data-mc-conditions='Product." + property.toUpperCase() + "']").show();
                     if(exclusiveTo && property == exclusiveTo){
-                        $('.col-sm-9').show();
+                        $('.docs__container').show();
+                        $('.filtermsg').hide();
                     }
                     // console.log("showing:" + property);
                     
@@ -52,7 +53,9 @@ module.exports = () => {
                     $("div").find("[data-mc-conditions='Product." + property.toUpperCase() + "']").hide();
 
                     if(exclusiveTo && property == exclusiveTo){
-                        $('.col-sm-9').hide();
+                        $('.docs__container').hide();
+                        $('.filtermsg').show();
+
                     }
                     // console.log("hiding:" + property);
 
