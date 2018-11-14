@@ -10,8 +10,8 @@
     @include('partials.meta', [
         'canonical' => URL::current(),
         'url' => URL::current(),
-        'title' => $title,
-        'og_description' => $title
+        'title' =>  isset($title) ? $title : false,
+        'og_description' => isset($title) ? $title : false,
     ])
 @stop
 
