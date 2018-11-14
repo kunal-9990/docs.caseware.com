@@ -1532,8 +1532,8 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
   line-height: 1.1;
+  font-weight: 500;
   color: inherit;
 }
 
@@ -1572,7 +1572,7 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 25px;
+  margin-top: 0;
   margin-bottom: 12.5px;
 }
 
@@ -1597,7 +1597,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 12.5px;
+  margin-top: 0;
   margin-bottom: 12.5px;
 }
 
@@ -8505,6 +8505,10 @@ body.mobile-search--is-open .header-mobile .header-mobile__input-search-wrapper 
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.header-mobile .header-mobile__input-search-wrapper form {
+  width: 100%;
 }
 
 .header-mobile .header-mobile__input-search-wrapper input {

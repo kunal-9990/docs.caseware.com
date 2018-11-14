@@ -4,7 +4,16 @@
             <img class="header-mobile__logo" src="/img/caseware-cloud-logo.png" alt="CaseWare Cloud logo">
         </div>
         <div class="header-mobile__input-search-wrapper">
-            <input type="text" placeholder="Search">
+            @php
+            $year = Route::current()->parameters()["year"];
+            $product = Route::current()->parameters()["product"];
+            $version = Route::current()->parameters()["version"];
+            $lang = Route::current()->parameters()["lang"];
+            $searchURL = route('search', [$year, $product, $version, $lang]);
+            @endphp
+            <form method="GET" action="{{$searchURL}}">
+                <input type="text" name="search" placeholder="Search" autocomplete="off">
+            </form>
             <span class="glyphicon glyphicon-remove header-mobile__close-search header-mobile__search--js" aria-hidden="true"></span>
         </div>
         <span class="glyphicon glyphicon-search header-mobile__open-search header-mobile__search--js" aria-hidden="true"></span>
@@ -16,6 +25,9 @@
         <div class="mobile-nav__close-bar-wrap">
             <span class="glyphicon glyphicon-chevron-left header-mobile__nav-toggle" aria-hidden="true"></span>
             @include('partials.nav')
+            <div class="mobile-nav__filters-wrap">
+                {{-- @include('partials.filters') --}}
+            </div>
         </div>
         <div class="mobile-nav__toc">
             @include('partials.toc')
