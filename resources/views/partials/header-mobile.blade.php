@@ -1,36 +1,79 @@
 <header class="header-mobile">
-        <span class="glyphicon glyphicon-menu-hamburger header-mobile__nav-toggle" aria-hidden="true"></span>
-        <div>
-            <img class="header-mobile__logo" src="/img/caseware-cloud-logo.png" alt="CaseWare Cloud logo">
-        </div>
-        <div class="header-mobile__input-search-wrapper">
-            @php
-            $year = Route::current()->parameters()["year"];
-            $product = Route::current()->parameters()["product"];
-            $version = Route::current()->parameters()["version"];
-            $lang = Route::current()->parameters()["lang"];
-            $searchURL = route('search', [$year, $product, $version, $lang]);
-            @endphp
-            <form method="GET" action="{{$searchURL}}">
-                <input type="text" name="search" placeholder="Search" autocomplete="off">
-            </form>
-            <span class="glyphicon glyphicon-remove header-mobile__close-search header-mobile__search--js" aria-hidden="true"></span>
-        </div>
-        <span class="glyphicon glyphicon-search header-mobile__open-search header-mobile__search--js" aria-hidden="true"></span>
+    <span class="glyphicon glyphicon-menu-hamburger header-mobile__nav-toggle" aria-hidden="true"></span>
+    <div>
+        <img class="header-mobile__logo" src="/img/caseware-cloud-logo.png" alt="CaseWare Cloud logo">
+    </div>
+    <div class="header-mobile__input-search-wrapper">
+        @php
+        $year = Route::current()->parameters()["year"];
+        $product = Route::current()->parameters()["product"];
+        $version = Route::current()->parameters()["version"];
+        $lang = Route::current()->parameters()["lang"];
+        $searchURL = route('search', [$year, $product, $version, $lang]);
+        @endphp
+        <form method="GET" action="{{$searchURL}}">
+            <input type="text" name="search" placeholder="Search" autocomplete="off">
+        </form>
+        <span class="glyphicon glyphicon-remove header-mobile__close-search header-mobile__search--js" aria-hidden="true"></span>
+    </div>
+    <span class="glyphicon glyphicon-search header-mobile__open-search header-mobile__search--js" aria-hidden="true"></span>
 </header>
 
 {{-- mobile overlay & nav(TOC) --}}
 <div class="mobile-nav__wrapper">
-    <div class="mobile-nav">
-        <div class="mobile-nav__close-bar-wrap">
-            <span class="glyphicon glyphicon-chevron-left header-mobile__nav-toggle" aria-hidden="true"></span>
-            @include('partials.nav')
-        </div>
-        <div class="mobile-nav__filters-wrap">
-            @include('partials.filters')
-        </div>
-        <div class="mobile-nav__toc">
-            @include('partials.toc')
+<div class="mobile-nav">
+    <div class="mobile-nav__close-bar-wrap">
+        <span class="glyphicon glyphicon-chevron-left header-mobile__nav-toggle" aria-hidden="true"></span>
+        @include('partials.nav')
+    </div>
+    <div class="mobile-nav__filters-wrap">
+        <div class="filters__menu">
+            <div class="switch-wrap mobile se">                    
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <span class="switch-name">SE</span>
+            </div>
+            <div class="switch-wrap mobile wp">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <span class="switch-name">Working papers</span>
+            </div>
+            <div class="switch-wrap mobile analytics">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <span class="switch-name">Analytics</span>
+            </div>
+            <div class="switch-wrap mobile time">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <span class="switch-name">Time</span>
+            </div>
+            <div class="switch-wrap mobile pcr">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <span class="switch-name">PCR</span>
+            </div>
+            <div class="switch-wrap mobile rct">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <span class="switch-name">RCT</span>
+            </div>
         </div>
     </div>
+    <div class="mobile-nav__toc">
+        @include('partials.toc')
+    </div>
+</div>
 </div>
