@@ -18,7 +18,7 @@
 	{
 	  "@context": "http://schema.org/",
 	  "@type": "WebSite",
-	  "name": "CaseWare Cloud Documentation",
+	  "name": "CaseWare Documentation",
 	  "url": "docs.caseware.com",
 	  "potentialAction": {
 		"@type": "SearchAction",
