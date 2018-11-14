@@ -20,6 +20,9 @@ $noHeader = true;
     ])
 @stop
 
-500 error
-
-somethin wrong
+<div "col-sm-12">
+    <h1>
+        500 error
+        somethin wrong
+    </h1>
+</div>
