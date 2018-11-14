@@ -63,7 +63,7 @@
             <li value="2">
                 <p>From the left-hand navigation pane, select <b>Azure Active Directory | App registrations | New application registration</b>.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources/Images/firm-settings-sso-azure-new-app.png" alt="Registering a new app in Azure Active Directory" />
+                    <img src="../../Resources/Images/firm-settings-sso-azure-new-app.png" alt="Registering a new app in Azure Active Directory" />
                 </p>
             </li>
             <li value="3">
@@ -96,7 +96,7 @@
             <li value="2">
                 <p>Select your app, then select <b>Settings | Keys</b>.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources/Images/firm-settings-sso-azure-app-settings-keys.png" alt="The Keys button in the Settings pane." />
+                    <img src="../../Resources/Images/firm-settings-sso-azure-app-settings-keys.png" alt="The Keys button in the Settings pane." />
                 </p>
             </li>
             <li value="3">
@@ -106,7 +106,7 @@
             <li value="4">
                 <p>Your key value is displayed. Save a copy of your key value; you’ll need it when you set your single sign-on endpoint in Cloud.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources/Images/firm-settings-sso-azure-app-settings-key-value.png" alt="A key with its key value displayed." />
+                    <img src="../../Resources/Images/firm-settings-sso-azure-app-settings-key-value.png" alt="A key with its key value displayed." />
                 </p>
             </li>
         </ol>
@@ -122,7 +122,7 @@
             <li value="2">
                 <p>Copy your Directory ID.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources/Images/firm-settings-sso-azure-user-settings-directory-ID.png" alt="The Copy button on the Properties pane." />
+                    <img src="../../Resources/Images/firm-settings-sso-azure-user-settings-directory-ID.png" alt="The Copy button on the Properties pane." />
                 </p>
             </li>
             <li value="3">
@@ -161,13 +161,13 @@
                     </li>
                 </ul>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources/Images/firm-settings-sso-identity-provider.png" alt="The Single Sign-On page in Settings." />
+                    <img src="../../Resources/Images/firm-settings-sso-identity-provider.png" alt="The Single Sign-On page in Settings." />
                 </p>
             </li>
             <li value="4">
                 <p>Select <b>Add</b>. Your reply URL is displayed. Save a copy of the reply URL; you’ll need to add it to your app in Azure AD.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources/Images/firm-settings-sso-azure-reply-url.png" alt="A reply URL displayed on the Single Sign-On page." />
+                    <img src="../../Resources/Images/firm-settings-sso-azure-reply-url.png" alt="A reply URL displayed on the Single Sign-On page." />
                 </p>
             </li>
         </ol>
@@ -180,13 +180,13 @@
             <li value="1">
                 <p>Select <b>Azure Active Directory | App Registration</b>, then select your app.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources/Images/firm-settings-sso-azure-select-app.png" alt="An app displayed on the App registrations pane." />
+                    <img src="../../Resources/Images/firm-settings-sso-azure-select-app.png" alt="An app displayed on the App registrations pane." />
                 </p>
             </li>
             <li value="2">
                 <p>Select <b>Settings | Reply URLs</b>.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources/Images/firm-settings-sso-azure-app-set-reply-url.png" alt="The Reply URLs button displayed on the Settings pane." />
+                    <img src="../../Resources/Images/firm-settings-sso-azure-app-set-reply-url.png" alt="The Reply URLs button displayed on the Settings pane." />
                 </p>
             </li>
             <li value="3">
@@ -213,6 +213,13 @@
         <p><b>What happens if I add a staff member’s account to Cloud before I add it to Azure AD?</b>
         </p>
         <p>If you have added a staff account to Cloud but not Azure AD, that user will not be able to sign in using SSO. To allow a staff member to sign in with SSO, add a new user to Azure AD using the email address associated with that staff member’s Cloud account as the user name. For example, to allow a staff member with the email address john.smith@peakstreak.com to sign in using SSO,  add a user to Azure AD with john.smith@peakstreak.com in the User name field.</p>
+        <hr width="100%" size="0" align="center" />
+        <p><b>A staff member whose account status is Inactive is still able to sign in to Cloud. Why?</b>&#160;</p>
+        <p>After enabling single sign-on, account access is managed through Azure AD. To prevent a user from accessing Cloud, you must delete their account. To learn more, see <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory">How to: Add or delete users using Azure Active Directory</a>. </p>
+        <hr width="100%" size="0" align="center" />
+        <p><b>Why can't I&#160;edit account names, email addresses or passwords in Cloud?</b>&#160;</p>
+        <p>After enabling single sign-on, account names, email addresses and passwords are managed through Azure AD. To learn more, see <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal">How to: Add or update a user's profile information using Azure Active Directory</a>.</p>
+        <hr width="100%" size="0" align="center" />
         <h3><a name="Why"></a>Why am I receiving an error message?</h3>
         <p>If Cloud or Azure AD is misconfigured, you may see one of the error messages listed below when you attempt to sign in.</p>
         <hr width="100%" size="0" align="center" />
@@ -228,7 +235,7 @@
                 <p>From the Cloud menu, select <b>Firm | Single Sign-On | Identity Provider</b>.</p>
             </li>
             <li value="3">
-                <p>Select the Delete icon(<img src="/documentation_files/2018/webapps/29/Content/Resources/Icons/Delete-16x16.png" style="vertical-align: text-bottom;" />) to remove your identity provider.</p>
+                <p>Select the Delete icon(<img src="../../Resources/Icons/Delete-16x16.png" style="vertical-align: text-bottom;" />) to remove your identity provider.</p>
             </li>
             <li value="4">
                 <p>Add your identity provider again, and confirm that you added the correct client secret.</p>
@@ -247,7 +254,7 @@ When configuring Azure AD, you may entered an incorrect identity provider. </p>
                 <p>From the Cloud menu, select <b>Firm | Single Sign-On | Identity Provider</b>.</p>
             </li>
             <li value="3">
-                <p>Select the  Delete icon(<img src="/documentation_files/2018/webapps/29/Content/Resources/Icons/Delete-16x16.png" style="vertical-align: text-bottom;" />) your identity provider.</p>
+                <p>Select the  Delete icon(<img src="../../Resources/Icons/Delete-16x16.png" style="vertical-align: text-bottom;" />) your identity provider.</p>
             </li>
             <li value="4">
                 <p>Add your identity provider again, and confirm that you added the correct client ID.</p>

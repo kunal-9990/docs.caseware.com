@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<MadCapLog Protocol="2" Description="MadCap Flare 2017 Generated Online Output/HTML5 - Production (MII).fltar" Date="2018-09-19T15:43:36.4801441-04:00">
+<MadCapLog Protocol="2" Description="MadCap Flare 2017 Generated Online Output/HTML5 - Production (MII).fltar" Date="2018-11-14T15:43:55.5558739-05:00">
     <Messages>Compiling target HTML5 - Production (MII)...
 Removing previously generated content...
 Loading skin info...
@@ -21,6 +21,11 @@ Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Pr
 Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Print Only Topics/Canadian CRT (Training)/Starting-an-engagement.htm.
 Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Print Only Topics/Canadian CRT (Training)/Title.htm.
 Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Print Only Topics/Canadian CRT (Training)/What-is-CompReview-Canada.htm.
+Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Print Only Topics/CaseWare Cloud Migration Manager/Content.htm.
+Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Print Only Topics/CaseWare Cloud Migration Manager/Copyright.htm.
+Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Print Only Topics/CaseWare Cloud Migration Manager/Revision.htm.
+Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Print Only Topics/CaseWare Cloud Migration Manager/Title.htm.
+Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Print Only Topics/CaseWare Cloud Migration Manager/TOC.htm.
 Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Print Only Topics/CaseWare PDF Template/Content.htm.
 Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Print Only Topics/CaseWare PDF Template/Copyright.htm.
 Excluded from output:file:///C:/Users/andrew.franklin/Documents/cloud/Content/Print Only Topics/CaseWare PDF Template/Revision.htm.
@@ -92,9 +97,9 @@ Generated webapps.htm
 Processing topic: Explore\Whats-new.htm...
 Applying master page Empty.flmsp...
 Generated Explore\Whats-new.htm
-Processing topic: Explore\Whats-New\Whats-new-Cloud-v28.htm...
+Processing topic: Explore\Whats-New\Whats-new-Cloud-v29.htm...
 Applying master page Empty.flmsp...
-Generated Explore\Whats-New\Whats-new-Cloud-v28.htm
+Generated Explore\Whats-New\Whats-new-Cloud-v29.htm
 Processing topic: Explore\Whats-New\Release-history-Cloud.htm...
 Applying master page Empty.flmsp...
 Generated Explore\Whats-New\Release-history-Cloud.htm
@@ -191,10 +196,15 @@ Processing topic: Explore\Scenarios\Testing-client-data.htm...
 Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png
 Applying master page Empty.flmsp...
 Generated Explore\Scenarios\Testing-client-data.htm
-Processing topic: Explore\Scenarios\Reviewing-documents-from-Cloud.htm...
-Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png
+Processing topic: Explore\Scenarios\Performing-an-engagement-in-OnPoint-PCR.htm...
 Applying master page Empty.flmsp...
-Generated Explore\Scenarios\Reviewing-documents-from-Cloud.htm
+Generated Explore\Scenarios\Performing-an-engagement-in-OnPoint-PCR.htm
+Processing topic: Explore\Scenarios\Performing-an-engagement-in-Fusion-RCT.htm...
+Applying master page Empty.flmsp...
+Generated Explore\Scenarios\Performing-an-engagement-in-Fusion-RCT.htm
+Processing topic: Explore\Scenarios\Performing-a-Canadian-tax-engagement.htm...
+Applying master page Empty.flmsp...
+Generated Explore\Scenarios\Performing-a-Canadian-tax-engagement.htm
 Processing topic: Explore\Scenarios\Reviewing-fieldwork-in-an-engagement-file.htm...
 Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png
 Applying master page Empty.flmsp...
@@ -228,6 +238,9 @@ Generated Explore\Products\CaseWareCloud-Time.htm
 Processing topic: Explore\Products\OnPoint-PCR.htm...
 Applying master page Empty.flmsp...
 Generated Explore\Products\OnPoint-PCR.htm
+Processing topic: Explore\Products\Fusion-RCT.htm...
+Applying master page Empty.flmsp...
+Generated Explore\Products\Fusion-RCT.htm
 Processing topic: Explore\Known-issues.htm...
 Applying master page Empty.flmsp...
 Generated Explore\Known-issues.htm
@@ -442,10 +455,6 @@ Generated Setup\Environments-and-Configuration\Integrate-Q-with-Working-Papers.h
 Processing topic: Setup\Environments-and-Configuration\Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm...
 Applying master page Empty.flmsp...
 Generated Setup\Environments-and-Configuration\Integrate-productivity-tools-with-Cloud-(Google-Sharepoint-OneDrive).htm
-Processing topic: Setup\Environments-and-Configuration\Integrate-Working-Papers-with-Cloud-(Terminal-Server).htm...
-Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png
-Applying master page Empty.flmsp...
-Generated Setup\Environments-and-Configuration\Integrate-Working-Papers-with-Cloud-(Terminal-Server).htm
 Processing topic: Setup\Licenses.htm...
 Applying master page Empty.flmsp...
 Generated Setup\Licenses.htm
@@ -503,6 +512,10 @@ Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Res
 Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png
 Applying master page Empty.flmsp...
 Generated Engagements\File-Preparation\Create-an-engagement-file.htm
+Processing topic: Engagements\File-Preparation\Carry-forward-an-engagement.htm...
+Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png
+Applying master page Empty.flmsp...
+Generated Engagements\File-Preparation\Carry-forward-an-engagement.htm
 Processing topic: Engagements\File-Preparation\Create-a-consolidation-engagement.htm...
 Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png
 Applying master page Empty.flmsp...
@@ -511,6 +524,10 @@ Processing topic: Engagements\File-Preparation\Import-clients-financial-data-to-
 Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png
 Applying master page Empty.flmsp...
 Generated Engagements\File-Preparation\Import-clients-financial-data-to-an-engagement-file.htm
+Processing topic: Engagements\File-Preparation\Supported-third-party-accounting-packages.htm...
+Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png
+Applying master page Empty.flmsp...
+Generated Engagements\File-Preparation\Supported-third-party-accounting-packages.htm
 Processing topic: Engagements\File-Preparation\Viewing-your-assigned-work.htm...
 Applying master page Empty.flmsp...
 Generated Engagements\File-Preparation\Viewing-your-assigned-work.htm
@@ -611,18 +628,6 @@ Generated Engagements\Documentation-and-Review\Download-documents-created-from-G
 Processing topic: Engagements\Documentation-and-Review\Share-reports-and-documents.htm...
 Applying master page Empty.flmsp...
 Generated Engagements\Documentation-and-Review\Share-reports-and-documents.htm
-Processing topic: Engagements\Documentation-and-Review\Send-documents-for-review-in-Cloud.htm...
-Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png
-Applying master page Empty.flmsp...
-Generated Engagements\Documentation-and-Review\Send-documents-for-review-in-Cloud.htm
-Processing topic: Engagements\Documentation-and-Review\Review-documents-in-Cloud.htm...
-Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png
-Applying master page Empty.flmsp...
-Generated Engagements\Documentation-and-Review\Review-documents-in-Cloud.htm
-Processing topic: Engagements\Documentation-and-Review\Re-submit documents for review or end a review.htm...
-Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png
-Applying master page Empty.flmsp...
-Generated Engagements\Documentation-and-Review\Re-submit documents for review or end a review.htm
 Processing topic: Engagements\Documentation-and-Review\Giving-feedback-to-others-in-Cloud.htm...
 Applying master page Empty.flmsp...
 Generated Engagements\Documentation-and-Review\Giving-feedback-to-others-in-Cloud.htm
@@ -791,6 +796,9 @@ Generated Practice\Budgets-and-Scheduling\Track-the-audit-progress-with-Q.htm
 Processing topic: Practice\Budgets-and-Scheduling\Track-the-engagement-progress.htm...
 Applying master page Empty.flmsp...
 Generated Practice\Budgets-and-Scheduling\Track-the-engagement-progress.htm
+Processing topic: Engagements\File-Preparation\Import-clients-tax-data.htm...
+Applying master page Empty.flmsp...
+Generated Engagements\File-Preparation\Import-clients-tax-data.htm
 Processing topic: Explore\Interface\Personal-Settings\Personal-regional-settings.htm...
 Applying master page Empty.flmsp...
 Generated Explore\Interface\Personal-Settings\Personal-regional-settings.htm
@@ -819,9 +827,17 @@ Generated Resources\Project Files\CaseWareCloud\References\Tools-for-importing-c
 Processing topic: Explore\Interface\Personal-Settings\Subscribed-items.htm...
 Applying master page Empty.flmsp...
 Generated Explore\Interface\Personal-Settings\Subscribed-items.htm
-Processing topic: Explore\Getting-Started\Setting-up-your-Cloud-account.htm...
+Processing topic: Resources\TranslatedDocs\FR\CaseWare-Cloud-Services-Agreement.htm...
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js
+Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png
 Applying master page Empty.flmsp...
-Generated Explore\Getting-Started\Setting-up-your-Cloud-account.htm
+Generated Resources\TranslatedDocs\FR\CaseWare-Cloud-Services-Agreement.htm
 Processing topic: Explore\Interface\Personal-Settings\Voip-settings.htm...
 Applying master page Empty.flmsp...
 Generated Explore\Interface\Personal-Settings\Voip-settings.htm
@@ -838,27 +854,76 @@ Generated Explore\Interface\Personal-Settings\Startup-settings.htm
 Processing topic: Explore\Interface\Personal-Settings\My-profile-picture.htm...
 Applying master page Empty.flmsp...
 Generated Explore\Interface\Personal-Settings\My-profile-picture.htm
+Processing topic: Resources\TranslatedDocs\FR\User_Terms_and_Acceptable_Use.htm...
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js
+Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png
+Applying master page Empty.flmsp...
+Generated Resources\TranslatedDocs\FR\User_Terms_and_Acceptable_Use.htm
+Processing topic: Resources\TranslatedDocs\ES\User_Terms_and_Acceptable_Use.htm...
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js
+Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png
+Applying master page Empty.flmsp...
+Generated Resources\TranslatedDocs\ES\User_Terms_and_Acceptable_Use.htm
 Processing topic: Resources\Project Files\FirmSettings\References\Cloud-billing.htm...
 Applying master page Empty.flmsp...
 Generated Resources\Project Files\FirmSettings\References\Cloud-billing.htm
+Processing topic: Resources\TranslatedDocs\ES\CaseWare-Cloud-Services-Agreement.htm...
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js
+Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png
+Applying master page Empty.flmsp...
+Generated Resources\TranslatedDocs\ES\CaseWare-Cloud-Services-Agreement.htm
+Processing topic: Resources\TranslatedDocs\FR\CaseWare_Cloud_Privacy_Policy.htm...
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js
+Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png
+Applying master page Empty.flmsp...
+Generated Resources\TranslatedDocs\FR\CaseWare_Cloud_Privacy_Policy.htm
 Processing topic: Explore\Interface\Staff-and-Contacs\Activation-of-staff-and-contact-accounts.htm...
 Applying master page Empty.flmsp...
 Generated Explore\Interface\Staff-and-Contacs\Activation-of-staff-and-contact-accounts.htm
 Processing topic: Explore\Interface\Personal-Settings\Account-password.htm...
 Applying master page Empty.flmsp...
 Generated Explore\Interface\Personal-Settings\Account-password.htm
-Processing topic: Explore\Products\Fusion-RCT.htm...
-Applying master page Empty.flmsp...
-Generated Explore\Products\Fusion-RCT.htm
 Processing topic: Explore\Interface\CaseWare-Cloud\Cloud-billing.htm...
 Applying master page Empty.flmsp...
 Generated Explore\Interface\CaseWare-Cloud\Cloud-billing.htm
-Processing topic: Explore\Scenarios\Performing-an-engagement-in-OnPoint-PCR.htm...
-Applying master page Empty.flmsp...
-Generated Explore\Scenarios\Performing-an-engagement-in-OnPoint-PCR.htm
 Processing topic: Setup\Organization\Association-sharing.htm...
 Applying master page Empty.flmsp...
 Generated Setup\Organization\Association-sharing.htm
+Processing topic: Resources\TranslatedDocs\ES\CaseWare_Cloud_Privacy_Policy.htm...
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js
+Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js
+Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png
+Applying master page Empty.flmsp...
+Generated Resources\TranslatedDocs\ES\CaseWare_Cloud_Privacy_Policy.htm
 Generating output skins...
 Generating synonyms file...
 Generating alias file...
@@ -904,8 +969,8 @@ Writing search entry cache...
 Generating final output...
 Generated Default.htm
 Saving result set...
-Ignored Compiler Warnings: 726
-Output generated in 1 minute(s) and 23 second(s).
+Ignored Compiler Warnings: 735
+Output generated in 1 minute(s) and 45 second(s).
 
 Done
 Saving log to "C:\Users\andrew.franklin\Documents\cloud\Output\andrew_franklin\Online Output\HTML5 - Production (MII)\HTML5 - Production (MII).mclog"
@@ -929,7 +994,6 @@ Saving log to "C:\Users\andrew.franklin\Documents\cloud\Output\andrew_franklin\O
         <LogEntry File="../../../../Content/Explore/Scenarios/Reporting-engagement-results.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Explore/Scenarios/Working-in-an-engagement-file.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Explore/Scenarios/Testing-client-data.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
-        <LogEntry File="../../../../Content/Explore/Scenarios/Reviewing-documents-from-Cloud.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Explore/Scenarios/Reviewing-fieldwork-in-an-engagement-file.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Explore/Scenarios/Tracking-productivity-and-profitability.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/timelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Explore/Scenarios/Viewing-overall-engagement-status.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/auditlogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
@@ -947,15 +1011,16 @@ Saving log to "C:\Users\andrew.franklin\Documents\cloud\Output\andrew_franklin\O
         <LogEntry File="../../../../Content/Setup/Security/Controlling-access-to-Working-Papers-files.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Setup/Environments-and-Configuration/Integrate-your-Working-Papers-with-Cloud.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Setup/Environments-and-Configuration/Integrate-Q-with-Working-Papers.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/auditlogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
-        <LogEntry File="../../../../Content/Setup/Environments-and-Configuration/Integrate-Working-Papers-with-Cloud-(Terminal-Server).htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/Planning/Review-the-prior-years-engagement.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/Planning/Review-the-prior-years-engagement.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/timelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/Planning/Share-a-Working-Papers-SmartSync-file-on-Cloud.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/Planning/Request-information-from-a-client.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/File-Preparation/Create-an-engagement-file.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/File-Preparation/Create-an-engagement-file.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
+        <LogEntry File="../../../../Content/Engagements/File-Preparation/Carry-forward-an-engagement.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/File-Preparation/Create-a-consolidation-engagement.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/File-Preparation/Import-clients-financial-data-to-an-engagement-file.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
+        <LogEntry File="../../../../Content/Engagements/File-Preparation/Supported-third-party-accounting-packages.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/File-Preparation/Create-placeholders-in-the-engagement-file.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/File-Preparation/Import-clients-financial-data-from-another-software-for-analysis.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/File-Preparation/Import-clients-financial-data-from-a-CSV-file-for-analysis.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
@@ -975,9 +1040,6 @@ Saving log to "C:\Users\andrew.franklin\Documents\cloud\Output\andrew_franklin\O
         <LogEntry File="../../../../Content/Engagements/Documentation-and-Review/Adding-tickmarks-and-annotations.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/Documentation-and-Review/Adding-review-notes.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/Documentation-and-Review/Completing-review-notes.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
-        <LogEntry File="../../../../Content/Engagements/Documentation-and-Review/Send-documents-for-review-in-Cloud.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
-        <LogEntry File="../../../../Content/Engagements/Documentation-and-Review/Review-documents-in-Cloud.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
-        <LogEntry File="../../../../Content/Engagements/Documentation-and-Review/Re-submit documents for review or end a review.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/workingpaperslogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/Statements-and-Conclusions/Summary-of-misstatements.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/Statements-and-Conclusions/Posting-tax-adjustments.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/Statements-and-Conclusions/Preparing-financial-statements.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
@@ -1010,7 +1072,55 @@ Saving log to "C:\Users\andrew.franklin\Documents\cloud\Output\andrew_franklin\O
         <LogEntry File="../../../../Content/Practice/Budgets-and-Scheduling/Track-the-audit-progress-with-Q.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/auditlogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Search-ex.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Explore/Interface/Staff-and-Contacs/Staff-rate-properties.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/timelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare-Cloud-Services-Agreement.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry File="../../../../Content/Engagements/Planning/Client-requests.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/casewarelogo.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/User_Terms_and_Acceptable_Use.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/User_Terms_and_Acceptable_Use.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/User_Terms_and_Acceptable_Use.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare-Cloud-Services-Agreement.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare-Cloud-Services-Agreement.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/FR/CaseWare_Cloud_Privacy_Policy.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\custom.modernizr.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\jquery.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\require.config.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\foundation.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\plugins.min.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare_Cloud_Privacy_Policy.htm" Message="Missing linked source file: C:\Users\andrew.franklin\Documents\cloud\Content\Resources\Resources\Scripts\MadCapAll.js" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10001" />
+        <LogEntry File="../../../../Content/Resources/TranslatedDocs/ES/CaseWare_Cloud_Privacy_Policy.htm" Message="Link points outside project file:///C:/Users/andrew.franklin/Documents/cloud/Resources/CaseWare_Logos/Cloud-logo_103x47.png" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="10056" />
         <LogEntry Message="Generating alias file: Missing topic: /Content/CaseWare_Cloud_Collaborate/c_Overview_About.htm" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="20016" />
         <LogEntry Message="Generating alias file: Missing topic: /Content/CaseWare_Cloud_Collaborate/c_Overview_About.htm" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="20016" />
         <LogEntry Message="Generating alias file: Missing topic: /Content/Collaboration/File_Sharing/r_Files_Uploading_and_Java_Plugin.htm" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="HTML5 - Production (MII)" ErrorID="20016" />

@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="How to integrate the Working Papers desktop application with CaseWare Cloud" /><title>Integrate your Working Papers with Cloud</title>
+        <meta name="description" content="How to integrate the Working Papers desktop application with CaseWare Cloud" /><title>Integrate Working Papers with Cloud</title>
         <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
         <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
@@ -29,44 +29,66 @@
         </script>
     </head>
     <body>
-        <h1>Integrate your Working Papers with Cloud</h1>
+        <h1>Integrate Working Papers with Cloud</h1>
         <div class="reqworkingpapers workingpaperssectiontext">
-            <img src="/documentation_files/2018/webapps/29/Content/Resources/CaseWare_Logos/workingpaperslogo.png" class="prdsectionlogo" />
+            <img src="/Resources/CaseWare_Logos/workingpaperslogo.png" class="prdsectionlogo" />
             <div class="prdsectiontext">
                 <p>This feature is only available with CaseWare Working Papers.</p>
                 <p><a href="https://www.caseware.com/products/working-papers" target="_blank">Learn more about Working Papers.</a>
                 </p>
             </div>
         </div>
-        <p>Integration with CaseWare Cloud provides additional functionality to Working Papers. Connecting these products enables the use of Cloud as a file management and storage center, while also providing new ways to track and complete your engagement online.</p>
+        <p>Integrating Working Papers with CaseWare Cloud  provides additional functionality. Cloud can act as a file management and storage center, as well as provide expanded options to track and complete your engagement. </p>
+        <p>When Cloud is integrated with Working Papers in a terminal server environment, all staff that launch Cloud are able to sign in with their own credentials. </p>
         <p><b>To integrate Working Papers with Cloud:</b>
         </p>
         <ol>
             <li value="1">
-                <p>Ensure you have <i>Working Papers 2016</i> or higher.</p>
+                <p>Launch Working Papers.</p>
             </li>
             <li value="2">
-                <p>Launch the Working Papers application.</p>
-            </li>
-            <li value="3">
                 <p>On the <b>File</b> menu, select <b>Options | CaseWare Cloud</b>.</p>
                 <p>
                     <img style="border: 1px solid #3f66a3;" src="../../Resources/Project Files/WorkingPapersDesktop/Images/integrate-wp-cloud-01-630x135.png" alt="Options | CaseWare Cloud" />
                 </p>
             </li>
-            <li value="4">
+            <li value="3">
                 <p>Ensure <b>Integrate with CaseWare Cloud</b> is selected. In the <b>Server</b> field, enter the URL of your organization’s CaseWare Cloud site. You do not need to enter the web protocol (http:// or https://). Click <b>OK</b>.</p>
                 <p>
                     <img style="border: 1px solid #3f66a3;" src="../../Resources/Project Files/WorkingPapersDesktop/Images/integrate-wp-cloud-02-630x120.png" alt="Enable Cloud integration" />
                 </p>
             </li>
-            <li value="5">
+            <li value="4">
                 <p>A <b>CaseWare Cloud Login</b> prompt is displayed. Enter your <b>User name</b> and <b>Password</b>, then select <b>OK</b>.</p>
                 <p>
                     <img style="border: 1px solid #3f66a3;" src="../../Resources/Project Files/WorkingPapersDesktop/Images/integrate-wp-cloud-03-630x205.png" alt="CaseWare Cloud Login" />
                 </p>
             </li>
         </ol>
-        <p>Your copy of Working Papers is now integrated with Cloud.</p><iframe id="vidcenter" src="https://www.youtube.com/embed/WvdFNI_gkEA" frameborder="0"></iframe>
+        <p>Your copy of Working Papers is now integrated with Cloud. If you are operating Working Papers in a terminal server environment, you can now set a default Cloud URL for your organization to help save time when signing in. </p>
+        <h2 id="set-firm-url">Set a default Cloud URL</h2>
+        <p>When working in a terminal server environment, staff members will need to enter their credentials, including a Cloud URL, each time they open Working Papers. To save time during sign in, you can set a default Cloud URL&#160;that is automatically added when Working Papers is opened. </p>
+        <p><b>To set the default Cloud URL in Working Papers:</b>
+        </p>
+        <p>The registry key is located in:</p>
+        <ul>
+            <li value="1">
+                <p><i>HKEY_CURRENT_USER\SOFTWARE\CaseWare International\Working Papers\2016.00\Core</i>
+                </p>
+            </li>
+        </ul>
+        <ol>
+            <li value="1">
+                <p>Right-click the <b>Server</b> key and select <b>Modify...</b>.</p>
+            </li>
+            <li value="2">
+                <p>In the <b>Value data:</b> field, enter your Cloud URL. Do not include the web protocol (http:// or https://) in the URL.</p>
+            </li>
+            <li value="3">
+                <p>Click <b>OK</b> to apply your changes.</p>
+            </li>
+        </ol>
+        <p>A default Cloud URL&#160;is set. </p>
+        <p>&#160;</p><iframe id="vidcenter" src="https://www.youtube.com/embed/WvdFNI_gkEA" frameborder="0"></iframe>
     </body>
 </html>
