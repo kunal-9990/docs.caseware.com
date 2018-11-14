@@ -23,8 +23,8 @@
     <div class="container">
         <div class="expanded-filters">
             {{-- <div class="dropdown-content"> --}}
-                @include('partials.filters')
-            {{-- </div> --}}
+                @include('partials.filters', ['mobile' => false])
+                {{-- </div> --}}
         </div>
     </div>
 </header>

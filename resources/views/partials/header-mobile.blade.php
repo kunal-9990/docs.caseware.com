@@ -27,50 +27,7 @@
         @include('partials.nav')
     </div>
     <div class="mobile-nav__filters-wrap">
-        <div class="filters__menu">
-            <div class="switch-wrap mobile se">                    
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <span class="switch-name">SE</span>
-            </div>
-            <div class="switch-wrap mobile wp">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <span class="switch-name">Working papers</span>
-            </div>
-            <div class="switch-wrap mobile analytics">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <span class="switch-name">Analytics</span>
-            </div>
-            <div class="switch-wrap mobile time">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <span class="switch-name">Time</span>
-            </div>
-            <div class="switch-wrap mobile pcr">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <span class="switch-name">PCR</span>
-            </div>
-            <div class="switch-wrap mobile rct">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <span class="switch-name">RCT</span>
-            </div>
-        </div>
+        @include('partials.filters', ['mobile' => true])
     </div>
     <div class="mobile-nav__toc">
         @include('partials.toc')
