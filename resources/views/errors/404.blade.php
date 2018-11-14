@@ -20,6 +20,7 @@ $noHeader = true;
     ])
 @stop
 
-500 error
 
-somethin wrong
+404 error
+
+can't find it
