@@ -1,3 +1,4 @@
+<span class="notranslate">
 <div class="filters__menu">
         <div class="switch-wrap se @if($mobile == true) mobile @endif">                    
             <label class="switch">
@@ -42,3 +43,4 @@
             <span class="switch-name">RCT</span>
         </div>
     </div>
+</span>
