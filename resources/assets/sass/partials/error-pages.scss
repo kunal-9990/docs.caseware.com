@@ -1,0 +1,28 @@
+.page-404 {
+    color: rgb(121, 121, 121);
+    font-size: 2em;
+
+    .page-404__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        line-height: 1;
+        margin: 50px 0;
+    
+        @include mq(sm) {
+            flex-direction: row;
+        }
+    
+        span.big-text {
+            font-size: 2em;
+            color: $blue-horizon;
+            font-weight: bold;
+            margin: 0 0 25px;
+    
+            @include mq(sm) {
+                margin: 0 25px 0 0;
+            }
+        }
+    }
+}

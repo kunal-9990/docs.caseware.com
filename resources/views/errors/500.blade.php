@@ -6,7 +6,7 @@ $noHeader = true;
 
 @section('html')
     @include('partials.html', [
-        'exclusiveTo' =>  isset($exclusiveTo) ? $exclusiveTo : false,
+        'exclusiveTo' => isset($exclusiveTo) ? $exclusiveTo : false,
     ])
 @stop
 
@@ -20,9 +20,17 @@ $noHeader = true;
     ])
 @stop
 
-<div "col-sm-12">
-    <h1>
-        500 error
-        somethin wrong
-    </h1>
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="page-404 col-sm-12 text-center">
+            <div class="page-404__header">
+                <span class="big-text">500</span> <span>It's not you<br /> it's us</span>
+            </div>
+            <div class="page-404__back-home">
+                Let's go back <a href="/2018/webapps/29/en/webapps.htm">home</a>
+            </div>
+        </div>
+    </div>
 </div>
+@stop
