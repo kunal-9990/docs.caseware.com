@@ -36,7 +36,7 @@ Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{subsubc
 Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');
 
 // category
-Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory');Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory');
+Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory');
 
 Route::post('logemail', 'Controller@logEmail');
 
