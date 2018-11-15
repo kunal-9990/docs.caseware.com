@@ -20,7 +20,7 @@
 
     .mobile-nav__toc .toc__container {
         display: block;
-        padding: 15px 15px 15px 25px;
+        padding: 0 15px 15px 25px;
     }
 }
 
@@ -53,6 +53,36 @@
         .glyphicon-chevron-left {
             padding-left: 15px;
             font-size: 1.5em;
+        }
+
+        i.fa-angle-down {
+            transition: transform .4s;
+        }
+    
+        .mobile-filters--is-open & .filters__dropdown {
+            i.fa-angle-down {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    
+
+    .mobile-nav__filters-wrap {
+        height: 0;
+        overflow: hidden;
+        padding: 10px 5px 0 15px;
+
+        .mobile-filters--is-open & {
+            height: initial;
+        }
+
+        .filters__menu {
+            flex-direction: column;
+        }
+
+        .switch-wrap:not(:last-of-type) {
+            margin: 0 0 5px 0;
         }
     }
 }

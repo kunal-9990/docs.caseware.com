@@ -35,7 +35,7 @@ module.exports = () => {
                 if(filterSettings[property] == true){
                     $( ".toc__filters--" + property + "-js" ).show();
                     $("." + property).addClass("is-active");
-                    $("." + property).children().children().first().prop('checked', true);
+                    $("." + property).children().children().prop('checked', true);
 
                     $("div").find("[data-mc-conditions='Product." + property.toUpperCase() + "']").show();
                     if(exclusiveTo && property == exclusiveTo){
@@ -48,7 +48,7 @@ module.exports = () => {
                 else{
                     $( ".toc__filters--" + property + "-js" ).hide();
                     $("." + property).removeClass("is-active");
-                    $("." + property).children().children().first().prop('checked', false);
+                    $("." + property).children().children().prop('checked', false);
 
                     $("div").find("[data-mc-conditions='Product." + property.toUpperCase() + "']").hide();
 
@@ -69,12 +69,12 @@ module.exports = () => {
 
     function updateFilter(){
         var filterSettings = {
-            time: $('.switch-wrap.time').hasClass("is-active"),
-            se: $('.switch-wrap.se').hasClass("is-active"),
-            wp: $('.switch-wrap.wp').hasClass("is-active"),
-            analytics: $('.switch-wrap.analytics').hasClass("is-active"),
-            pcr: $('.switch-wrap.pcr').hasClass("is-active"),
-            rct: $('.switch-wrap.rct').hasClass("is-active")
+            time: $('.switch-wrap.time:not(.mobile)').hasClass("is-active"),
+            se: $('.switch-wrap.se:not(.mobile)').hasClass("is-active"),
+            wp: $('.switch-wrap.wp:not(.mobile)').hasClass("is-active"),
+            analytics: $('.switch-wrap.analytics:not(.mobile)').hasClass("is-active"),
+            pcr: $('.switch-wrap.pcr:not(.mobile)').hasClass("is-active"),
+            rct: $('.switch-wrap.rct:not(.mobile)').hasClass("is-active")
         };
 
         applyFilter(filterSettings);
@@ -83,9 +83,28 @@ module.exports = () => {
 
     }
 
+    function updateFilterMobile(){
+        var filterSettings = {
+            time: $('.switch-wrap.time.mobile').hasClass("is-active"),
+            se: $('.switch-wrap.se.mobile').hasClass("is-active"),
+            wp: $('.switch-wrap.wp.mobile').hasClass("is-active"),
+            analytics: $('.switch-wrap.analytics.mobile').hasClass("is-active"),
+            pcr: $('.switch-wrap.pcr.mobile').hasClass("is-active"),
+            rct: $('.switch-wrap.rct.mobile').hasClass("is-active")
+        };
 
-    $(document).on('click', '.switch-wrap', function(event){
+        applyFilter(filterSettings);
+
+        setCookie("filterSettings",  JSON.stringify(filterSettings), 5);
+
+    }
+
+    $(document).on('click', '.switch-wrap:not(.mobile)', function(event){
         updateFilter();
+    });
+
+    $(document).on('click', '.switch-wrap.mobile', function(event){
+        updateFilterMobile();
     });
 
 
