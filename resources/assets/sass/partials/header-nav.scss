@@ -29,8 +29,7 @@
         background-color: #f1f1f1;
     }
     
-    .language__dropdown:hover .dropdown-content,
-    .filters__dropdown:hover .dropdown-content {
+    .language__dropdown:hover .dropdown-content {
         display: block;
     }
     
@@ -40,6 +39,16 @@
 
         > a {
             font-weight: bold;
+        }
+
+        i.fa-angle-down {
+            transition: transform .4s;
+        }
+
+        .filter-dropdown-is-expanded & {
+            i.fa-angle-down {
+                transform: rotate(-180deg);
+            }
         }
     }
 }

@@ -54,7 +54,19 @@
             padding-left: 15px;
             font-size: 1.5em;
         }
+
+        i.fa-angle-down {
+            transition: transform .4s;
+        }
+    
+        .mobile-filters--is-open & .filters__dropdown {
+            i.fa-angle-down {
+                transform: rotate(-180deg);
+            }
+        }
     }
+
+    
 
     .mobile-nav__filters-wrap {
         height: 0;
