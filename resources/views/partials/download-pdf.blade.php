@@ -29,6 +29,7 @@
                 <div class="pdf-modal__input-wrap">
                     <input type="text" class="email-sub-for-pdf" placeholder="Enter your email">
                 </div>
+                <div id="error">Please enter a valid email.</div>
                 <button type="button" class="pdf-modal__subscribe-btn">Subscribe</button>
             </div>
             <a href="#" class="pdf-modal__file-download-btn">No thanks, I just want the file.</a>

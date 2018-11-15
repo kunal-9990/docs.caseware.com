@@ -33,33 +33,39 @@ module.exports = () => {
         const USERS_EMAIL = EMAIL_INPUT_VALUE.value;
 
         if (validateEmail(USERS_EMAIL)) {
+            $('#error').hide();
             $.post(
-                '/assets/phpfunctions/email.php',
+                window.location.origin + '/logemail',
                 {
+                    '_token': $('meta[name=csrf-token]').attr('content'),
                     page: window.location.href,
                     title: document.title,
                     email: USERS_EMAIL,
                     file: fileName,
                 },
             );
+            downloadPDF();
+        } else {
+            $('#error').show();
         }
-        togglePDFModalOverLay();
     }
 
-    function downloadPDF() {
+    function noEmail() {
         $.post(
-            '/assets/phpfunctions/email.php',
+            window.location.origin + '/logemail',
             {
+                '_token': $('meta[name=csrf-token]').attr('content'),
                 page: window.location.href,
                 title: document.title,
                 file: fileName,
             },
         );
+        downloadPDF();
+    }
+    
+    function downloadPDF() {
         togglePDFModalOverLay();
-        // window.open("/downloads/" + fileName, "_blank");
-        window.location.assign("/downloads/" + fileName);
-
-
+        window.open("/downloads/" + fileName, "_blank");
     }
 
     DOWNLOAD_LINKS.forEach((link) => {
@@ -78,6 +84,6 @@ module.exports = () => {
     });
 
     SUBSCRIBE.addEventListener('click', () => subscribe());
-    DOWNLOAD_FILE.addEventListener('click', () => downloadPDF());
+    DOWNLOAD_FILE.addEventListener('click', () => noEmail());
     window.addEventListener('click', event => closeModal(event));
 };

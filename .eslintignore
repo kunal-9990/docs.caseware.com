@@ -8,3 +8,4 @@ resources/assets/js/bootstrap.js
 /resources/assets/js/modules/docs/redirects.js
 resources/assets/js/vendor/*
 resources/assets/js/polyfill.js
+/resources/assets/js/modules/docs/download-pdf.js
