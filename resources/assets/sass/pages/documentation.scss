@@ -1,8 +1,12 @@
 .docs__container {
     display: flex;
 
+    .docs__content {
+        flex: 1;
+    }
+
     .docs__sub-toc {
-        flex: 1 0 250px;
+        flex: 0 0 250px;
         display: none;
 
         @include mq(lg) {
