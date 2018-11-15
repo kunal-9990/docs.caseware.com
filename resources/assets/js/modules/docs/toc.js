@@ -51,11 +51,11 @@ module.exports = () => {
                             } else {
                                 link = '';
                             }
-                            var li = $('<li class="toc__sub-category"><a class="chevron" href="#">' + $(this).attr("Title") + '</a>');
+                            var li = $('<li class="toc__sub-category"><a class="chevron" href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a>');
 
                             subCatList.append(li.append(topicList));
                         } else {
-                            subCatList.append('<li class="toc__sub-category"><a class="chevron" href="#">' + $(this).attr("Title") + '</a>');
+                            subCatList.append('<li class="toc__sub-category"><a class="chevron" href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a>');
                         }
                     });
                     var li = $('<li class="toc__category"><a class="chevron" href="#">' + $(this).attr("Title") + '</a>');
@@ -78,7 +78,7 @@ module.exports = () => {
     });
 
     // checks to see where to add class to rotate the chevron for expanded toc lists
-    // TODO: might have to polyfill .closest() for IE
+    // TODO: might have to polyfill .closest() for IE`
     function CheckExpandedLists() {
         const CURRENT_PAGE = document.querySelectorAll('.current-page') || null;
         CURRENT_PAGE.forEach(el => {
