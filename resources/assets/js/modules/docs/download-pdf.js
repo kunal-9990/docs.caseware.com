@@ -56,6 +56,10 @@ module.exports = () => {
             },
         );
         togglePDFModalOverLay();
+        // window.open("/downloads/" + fileName, "_blank");
+        window.location.assign("/downloads/" + fileName);
+
+
     }
 
     DOWNLOAD_LINKS.forEach((link) => {

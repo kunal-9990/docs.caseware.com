@@ -6,7 +6,8 @@
         'url' => url('/'),
         'title' => 'documentation',
         'og_description' => 'test description',
-        'canonical' => 'test canonical url'
+        'canonical' => 'test canonical url',
+        'doNotTranslate' => isset($doNotTranslate) ? $doNotTranslate : false
     ])
 @stop
 
