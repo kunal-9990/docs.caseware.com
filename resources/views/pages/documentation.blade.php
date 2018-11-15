@@ -12,6 +12,7 @@
         'url' => URL::current(),
         'title' =>  isset($title) ? $title : false,
         'og_description' => isset($title) ? $title : false,
+        'doNotTranslate' => isset($doNotTranslate) ? $doNotTranslate : false,
     ])
 @stop
 

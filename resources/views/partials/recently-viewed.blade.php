@@ -5,6 +5,7 @@
             $splitUrl = explode("/", $topic);
             $title = end($splitUrl);
             $title = str_replace('-', ' ', $title);
+            $title = str_replace('_', ' ', $title);
             $title = str_replace('.htm', '', $title);
         @endphp
         <li><a href="{{$topic}}">{{$title}}</a></li>

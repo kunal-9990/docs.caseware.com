@@ -61,6 +61,9 @@ class PageController extends Controller
         // $product =  strtolower($product);
 
         // dd($version);
+        if($subcategory == "TranslatedDocs"){
+            $doNotTranslate = true;
+        }
         $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$subsubcategory."/".$topic ));
 
         $maincontentarea = $dom->find('body', 0);
@@ -70,11 +73,12 @@ class PageController extends Controller
         $recent = getRecentlyViewed();
         $title = strip_tags($dom->find('h1', 0));
 
-        return view('pages.documentation', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
+        return view('pages.documentation', compact('maincontentarea', 'recent', 'exclusiveTo','title', 'doNotTranslate'));
     }
 
     // subcategory
     function showSubCategory($year, $product, $version, $lang, $category, $subcategory){
+        
 
         if(!endsWith($subcategory,".htm")){
             $subcategory .= ".htm";
