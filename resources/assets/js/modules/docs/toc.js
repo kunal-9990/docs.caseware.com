@@ -21,7 +21,7 @@ module.exports = () => {
         url: TOCxml,
         success: function (xml) {
 
-            var ul_main = $('<ul class="toc">');
+            var ul_main = $('<ul class="toc notranslate">');
             $(xml).find("TocEntry").each(function () {
                 if ($(this).children().length && $(this).parent().is("CatapultToc")) {
                     var subCatList = $('<ul class="toc__sub-category-wrap">');
