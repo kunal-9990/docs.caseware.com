@@ -1,7 +1,4 @@
-module.exports = () => { 
-
-
-
+module.exports = () => {
     const HELPFUL_REASON_BTN = document.querySelectorAll('.was-this-helpful-btn ');
     const NOT_HELPFUL_BTN = document.querySelector('.was-this-helpful-no');
     const WAS_HELPFUL_BTN = document.querySelector('.was-this-helpful-yes');
