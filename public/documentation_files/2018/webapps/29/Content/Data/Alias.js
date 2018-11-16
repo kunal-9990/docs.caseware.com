@@ -53,7 +53,6 @@ xmlAliasData += '    <Map Name=\"Tax\" Link=\"webapps.htm\" ResolvedId=\"1067\" 
 xmlAliasData += '    <Map Name=\"InlineHelp_FirmSettings_Passwords\" Link=\"Setup/Security/Login-settings.htm\" ResolvedId=\"1003\" />';
 xmlAliasData += '    <Map Name=\"InlineHelp_UserSettings_Startup_App\" Link=\"Explore/Interface/Personal-Settings/Startup-settings.htm\" ResolvedId=\"1022\" />';
 xmlAliasData += '    <Map Name=\"InlineHelp_FirmSettings_ImportClientFiles\" Link=\"Explore/Interface/Firm-Settings/Working-Papers.htm\" ResolvedId=\"1030\" />';
-xmlAliasData += '    <Map Name=\"Java_Troubleshooting\" Link=\"Explore/Known-Issues/CaseWare-Cloud/Java-Applet-is-not-loading.htm\" ResolvedId=\"1050\" />';
 xmlAliasData += '    <Map Name=\"Getting_Started\" Link=\"Explore/Getting-started.htm\" ResolvedId=\"1071\" />';
 xmlAliasData += '    <Map Name=\"Organization\" Link=\"Setup/Organization.htm\" ResolvedId=\"1072\" />';
 xmlAliasData += '    <Map Name=\"Users_and_Groups\" Link=\"Setup/Users-and-Groups.htm\" ResolvedId=\"1074\" />';
@@ -64,7 +63,6 @@ xmlAliasData += '    <Map Name=\"Time_And_Billing\" Link=\"Practice/Time-and-bil
 xmlAliasData += '    <Map Name=\"File_Preparation\" Link=\"Engagements/File-Preparation.htm\" ResolvedId=\"1080\" />';
 xmlAliasData += '    <Map Name=\"Engagements\" Link=\"Engagements.htm\" ResolvedId=\"1081\" />';
 xmlAliasData += '    <Map Name=\"Reviews_And_Reporting\" Link=\"Engagements/Reviews-and-reporting.htm\" ResolvedId=\"1082\" />';
-xmlAliasData += '    <Map Name=\"Client_Requests\" Link=\"Engagements/Planning/Client-requests.htm\" ResolvedId=\"1083\" />';
 xmlAliasData += '    <Map Name=\"About_Notification_Settings\" Link=\"Explore/Interface/Personal-Settings/About-notification-settings.htm\" ResolvedId=\"1085\" />';
 xmlAliasData += '    <Map Name=\"Maintenance\" Link=\"Practice/Maintenance.htm\" ResolvedId=\"1086\" />';
 xmlAliasData += '    <Map Name=\"InlineHelp_UserSettings_FirmWideRoles\" Link=\"Setup/Security/Built-in-roles.htm\" ResolvedId=\"1087\" />';
