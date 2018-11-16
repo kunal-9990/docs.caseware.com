@@ -1,4 +1,7 @@
-module.exports = () => {
+module.exports = () => { 
+
+
+
     const HELPFUL_REASON_BTN = document.querySelectorAll('.was-this-helpful-btn ');
     const NOT_HELPFUL_BTN = document.querySelector('.was-this-helpful-no');
     const WAS_HELPFUL_BTN = document.querySelector('.was-this-helpful-yes');
@@ -25,8 +28,8 @@ module.exports = () => {
 
     window.addEventListener('beforeunload', () => {
         // fire ga script with built object FEEDBACK
-        ga('global.send', 'event', FEEDBACK, 'User Feedback', window.location.href); // eslint-disable-line
-        ga('caseware.send', 'event', FEEDBACK, 'User Feedback', window.location.href); // eslint-disable-line
+        ga('Global.send', 'event', FEEDBACK, 'User Feedback', window.location.href); // eslint-disable-line
+        ga('Cloud.send', 'event', FEEDBACK, 'User Feedback', window.location.href); // eslint-disable-line
     });
 
     NOT_HELPFUL_REASON.forEach((input) => {

@@ -14,11 +14,9 @@
 */
 $current_version = env("CURRENT_VERSION");
 
-// home
-Route::get('/', 'PageController@home'); 
-
-// home
-Route::get('/home', 'PageController@home'); 
+Route::get('/', function () {
+    return redirect('/2018/webapps/29/en/webapps');
+});
 
 // documentation home
 Route::get('/documentation', 'PageController@documentationHome');

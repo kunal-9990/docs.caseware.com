@@ -6,27 +6,15 @@ use Illuminate\Http\Request;
 use Sunra\PhpSimple\HtmlDomParser;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redirect;
+use Exception;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+
 class PageController extends Controller
 {
 
 
-    // default
-    function home() {
-
-        $noHeader = true;
-
-        return view('pages.home', compact('recent','noHeader'));
-    }
-
-    // documentation home
-    function documentationHome() {
-        
-        return view('pages.documentation');
-    }
-
     // search
     function search($year, $product, $version, $lang){
-        // return redirect('/'.$product.'/'.$version.'/'.$lang.'/search#search-'.request()->search);
         return view('pages.search', compact('recent'));
 
     }
@@ -38,15 +26,18 @@ class PageController extends Controller
         if(!endsWith($topic,".htm")){
             $topic .= ".htm";
         }
-        // $product =  strtolower($product);
-        // dd($version);
-        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$topic ));
+
+        $product =  strtolower($product);
+
+        try {
+            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$topic ));
+        } catch (Exception $e) {
+            return response()->view('errors.404');
+        }
 
         $maincontentarea = $dom->find('body', 0);
         $htmlElement = $dom->find('html', 0);
-
         (isset($htmlElement->attr['data-mc-conditions'])) ? $exclusiveTo = $htmlElement->attr['data-mc-conditions'] : $exclusiveTo = '' ;
-
         $recent = getRecentlyViewed();
         $title = strip_tags($dom->find('h1', 0));
 
@@ -58,18 +49,21 @@ class PageController extends Controller
         if(!endsWith($topic,".htm")){
             $topic .= ".htm";
         }
-        // $product =  strtolower($product);
 
-        // dd($version);
+        $product =  strtolower($product);
+
         if($subcategory == "TranslatedDocs"){
             $doNotTranslate = true;
         }
-        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$subsubcategory."/".$topic ));
+
+        try {
+            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$subsubcategory."/".$topic ));
+        } catch (Exception $e) {
+            return response()->view('errors.404');
+        }
 
         $maincontentarea = $dom->find('body', 0);
-
         (isset($htmlElement->attr['data-mc-conditions'])) ? $exclusiveTo = $htmlElement->attr['data-mc-conditions'] : $exclusiveTo = '' ;
-
         $recent = getRecentlyViewed();
         $title = strip_tags($dom->find('h1', 0));
 
@@ -84,12 +78,16 @@ class PageController extends Controller
             $subcategory .= ".htm";
         }
 
-        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory ));
+        $product =  strtolower($product);
+
+        try {
+            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory ));
+        } catch (Exception $e) {
+            return response()->view('errors.404');
+        }
 
         $maincontentarea = $dom->find('body', 0);
-
         $recent = getRecentlyViewed();
-
         return view('pages.documentation', compact('maincontentarea', 'recent'));
     }
     
@@ -99,13 +97,18 @@ class PageController extends Controller
         if(!endsWith($category,".htm")){
             $category .= ".htm";
         }
-        
-        $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."/Content/".$category ));
+
+        $product =  strtolower($product);
+
+        try {
+            $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."/Content/".$category ));
+
+        } catch (Exception $e) {
+            return response()->view('errors.404');
+        }
 
         $maincontentarea = $dom->find('body', 0);
-        // dd($maincontentarea);
         $recent = getRecentlyViewed();
-
         return view('pages.documentation', compact('maincontentarea', 'recent'));
     }
 }
