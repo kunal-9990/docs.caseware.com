@@ -17,7 +17,7 @@
 @endphp
 <div class="language__dropdown">
     @php
-    $languages = array("en"=>"English", "fr"=>"French", "es"=>"Spanish", "nl"=>"Dutch","cn"=>"Chinese", "de"=>"German");
+    $languages = array("en"=>"EN", "fr"=>"FR", "es"=>"ES", "nl"=>"NL","cn"=>"CN", "de"=>"DE");
     $segments = Request::segments();
     $segments[3] = 'en';
     $enLink = '/' . implode('/', $segments);
