@@ -18,7 +18,7 @@
         position: absolute;
         background-color: #f9f9f9;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
     }
     
@@ -76,6 +76,7 @@ header.header {
 
         .filter-dropdown-is-expanded & {
             max-height: 100px;
+            overflow: initial;
         }
     }
 
@@ -161,5 +162,31 @@ header.header {
     
     .slider.round:before {
         border-radius: 50%;
+    }
+}
+
+// hover over effects for filter items in nav
+.filters__menu {
+    .switch-name__hover-msg {
+        padding: 12px 16px;
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        background-color: #f9f9f9;
+        box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    @include mq(sm) {
+        .switch-wrap {
+            position: relative;
+
+            &:hover .switch-name__hover-msg {
+                display: block;
+            }
+
+            
+        }
     }
 }

@@ -36,7 +36,11 @@ header.header {
         transition: flex 0.2s;
         margin-left: 10px;
         border: 1px solid rgb(230, 236, 241); 
-        min-width: 280px;
+        min-width: 210px;
+
+        @media (min-width: 850px) {
+            min-width: 280px;
+        }
 
         .desktop-search--is-open & {
             flex: 1;
