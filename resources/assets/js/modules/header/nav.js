@@ -18,14 +18,17 @@ module.exports = () => {
     function toggleProductFilterInnerHTMLSpacing() {
         if (window.innerWidth < 950) {
             BREAK_SPACES.forEach((el) => {
-                el.innerHTML = ' ';
+                const elem = el;
+                elem.innerHTML = ' ';
             });
         } else {
             BREAK_SPACES.forEach((el) => {
-                el.innerHTML = '&nbsp;';
+                const elem = el;
+                elem.innerHTML = '&nbsp;';
             });
         }
     }
+    toggleProductFilterInnerHTMLSpacing();
 
     window.addEventListener('resize', _.throttle(toggleProductFilterInnerHTMLSpacing, 1000));
 };
