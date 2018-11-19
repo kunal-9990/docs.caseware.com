@@ -8,18 +8,24 @@ module.exports = () => {
     var pathname = new URL(loc).pathname;
     pathname = pathname.replace(/\/\/+/g, '/');
     var routeComponents = pathname.split("/");
-    var year = routeComponents[2];
-    var product = routeComponents[3];
-    var version = routeComponents[4];
-    var lang = routeComponents[5];
 
     // for dev
-    // var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
-    // var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
+    var year = routeComponents[1];
+    var product = routeComponents[2];
+    var version = routeComponents[3];
+    var lang = routeComponents[4];
+    var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
+    var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
+    // end for dev
 
     // for prob
-    var linkPrefix = "/docsmk2/" + year + "/" + product + "/" + version + "/" + lang;
-    var TOCxml = "/docsmk2/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
+    // var linkPrefix = "/docsmk2/" + year + "/" + product + "/" + version + "/" + lang;
+    // var TOCxml = "/docsmk2/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
+    // var year = routeComponents[2];
+    // var product = routeComponents[3];
+    // var version = routeComponents[4];
+    // var lang = routeComponents[5];
+    // // end for prob
 
     $.ajax({
         type: "GET",
