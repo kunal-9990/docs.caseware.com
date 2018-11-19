@@ -12,7 +12,7 @@
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>
-            <span class="switch-name">Working papers</span>
+            <span class="switch-name">Working Papers</span>
         </div>
         <div class="switch-wrap analytics @if($mobile == true) mobile @endif">
             <label class="switch">

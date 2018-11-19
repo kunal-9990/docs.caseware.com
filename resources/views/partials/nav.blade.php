@@ -33,7 +33,7 @@
     $deLink = '/' . implode('/', $segments);
     $currentLanguage = $languages[Request::segments()[3]];
     @endphp
-    <a href="#">{{$currentLanguage}} <i class="fas fa-angle-down"></i></a>
+    <a href="#">{{$currentLanguage}} <i class="fas fa-globe-americas"></i><i class="fas fa-angle-down"></i></a>
     <div class="dropdown-content">
         <a href="{{$enLink}}">English</a>
         <a href="{{$frLink}}">French</a>
@@ -44,5 +44,5 @@
     </div>
 </div>
 <div class="filters__dropdown">
-    <a href="#">Filters <i class="fas fa-angle-down"></i></a>
+    <a href="#">PRODUCTS <i class="fas fa-filter"></i><i class="fas fa-angle-down"></i></a>
 </div>
