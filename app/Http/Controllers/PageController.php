@@ -109,6 +109,6 @@ class PageController extends Controller
 
         $maincontentarea = $dom->find('body', 0);
         $recent = getRecentlyViewed();
-        return view('pages.documentation', compact('maincontentarea', 'recent'));
+        return view('pages.one-column', compact('maincontentarea', 'recent'));
     }
 }
