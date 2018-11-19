@@ -3,7 +3,7 @@
         {{-- <div class="row"> --}}
         <div class="header__search-wrap">
             <div class="header__nav-wrap">
-                <img src="/img/caseware-cloud-logo.png" alt="CaseWare Cloud logo">
+                <a href="#"><img src="/img/caseware-cloud-logo.png" alt="CaseWare Cloud logo"></a>
                 @include('partials.nav')
             </div>
             <div class="header__input-search-wrapper">
