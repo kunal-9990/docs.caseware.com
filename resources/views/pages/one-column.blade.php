@@ -17,12 +17,12 @@
 @stop
 
 @section('content')
-    <div class="container documentation">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div class="docs__video-iframe-wrap">
+                {{-- <div class="docs__video-iframe-wrap">
                     @include('partials.video-iframe')
-                </div>
+                </div> --}}
                 <div class="docs__container">
                     <div class="docs__content"> 
                         @if(isset($maincontentarea))
@@ -41,11 +41,11 @@
     </div>
 
     {{-- back to top button --}}
-    @include('partials.back-to-top')
+    {{-- @include('partials.back-to-top') --}}
 
     {{-- modal overlay for images in content --}}
-    @include('partials.image-modal')
+    {{-- @include('partials.image-modal') --}}
 
     {{-- modal overlay for email subscription and pdf download --}}
-    @include('partials.download-pdf')
+    {{-- @include('partials.download-pdf') --}}
 @stop

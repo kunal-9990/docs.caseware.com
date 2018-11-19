@@ -24,6 +24,7 @@ const HEADER = require('./modules/header/header');
 const DOCS = require('./modules/docs/docs');
 const BACK_TO_TOP = require('./modules/back-to-top');
 const SEARCH = require('./modules/search');
+const USER_FEEDBACK = require('./modules/user-feedback');
 
 $(document).ready(() => {
     // nav init
@@ -44,5 +45,10 @@ $(document).ready(() => {
     // back to top button
     if (document.querySelector('.search-page')) {
         SEARCH();
+    }
+
+    // user feedback
+    if (document.querySelector('.docs__user-feedback')) {
+        USER_FEEDBACK();
     }
 });

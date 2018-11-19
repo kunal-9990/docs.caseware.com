@@ -4,7 +4,6 @@ const DOCS_CONTAINER = require('./grid');
 const IMG_MODAL = require('./image-modal');
 const DOWNLOAD_PDF = require('./download-pdf');
 const VIDEO_IFRAME = require('./video-iframe');
-const FEEDBACK = require('./user-feedback');
 const REDIRECTS = require('./redirects');
 const FILTER = require('./filter');
 
@@ -12,7 +11,6 @@ module.exports = () => {
     TOC();
     SUB_TOPIC_SCROLLSPY();
     DOCS_CONTAINER();
-    FEEDBACK();
     FILTER();
 
     if (document.querySelector('.downloadLink')) {
