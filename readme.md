@@ -7,19 +7,38 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Deployment
+# Where things are:
 
-composer install
-npm install
-npm run production
+    - Content and mapping xml files for each version can be found in public/documentation_files in their respective subfolder
+    - Downloads throughout the site are kept in public/downloads
+    - Tearch "Data" folders are found in public/year/product/version/
+    - Bash scripts are found in scripts/
+    - Logged emails are found in storage/logs/emails.log
 
-update the .env variable PATH_TO_PUBLIC
+# Deployment
 
-## Adding a help version
+    - composer install
+    - update the .env variable PATH_TO_PUBLIC and DOMAIN
+    - npm install
+    - npm run production
 
-Help content is organized by product and then version within /public/documentation_files. Each version directory must contain:
+# Adding a new help version:
 
-- csh_redirect.xml
-- Online Epics.xml
-- OnlineOutput.xml
+Place a folder named as the new version into the tmp directory as shown below.
+----------------------------
+/docsmk2/
+│
+└───/tmp/
+│   │  
+│   └───/30/
+│       │   
+│       └─── /Content/
+│       │    Online Output.fltoc
+│       │    csh_redirect.xml
+----------------------------
+Run "npm run build" and supply the year, product, and version as parameters.
+Example:
+npm run build 2018 webapps 30
+wait until the script says "done." 
+
 
