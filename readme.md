@@ -17,10 +17,10 @@
 
 # Deployment
 
-composer install
-update the .env variable PATH_TO_PUBLIC and DOMAIN
-npm install
-npm run production
+    - composer install
+    - update the .env variable PATH_TO_PUBLIC and DOMAIN
+    - npm install
+    - npm run production
 
 # Adding a new help version:
 
