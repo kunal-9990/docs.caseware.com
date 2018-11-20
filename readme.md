@@ -24,7 +24,7 @@
 
 # Adding a new help version:
 
-    - Place a folder named as the new version into the tmp directory as shown below.
+    Place a folder named as the new version into the tmp directory as shown below.
     - ----------------------------
     - /docsmk2/
     - │
