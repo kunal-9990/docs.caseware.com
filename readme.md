@@ -24,21 +24,21 @@
 
 # Adding a new help version:
 
-Place a folder named as the new version into the tmp directory as shown below.
-----------------------------
-/docsmk2/
-│
-└───/tmp/
-│   │  
-│   └───/30/
-│       │   
-│       └─── /Content/
-│       │    Online Output.fltoc
-│       │    csh_redirect.xml
-----------------------------
-Run "npm run build" and supply the year, product, and version as parameters.
-Example:
-npm run build 2018 webapps 30
-wait until the script says "done." 
+    - Place a folder named as the new version into the tmp directory as shown below.
+    - ----------------------------
+    - /docsmk2/
+    - │
+    - └───/tmp/
+    - │   │  
+    - │   └───/30/
+    - │       │   
+    - │       └─── /Content/
+    - │       │    Online Output.fltoc
+    - │       │    csh_redirect.xml
+    - ----------------------------
+    - Run "npm run build" and supply the year, product, and version as parameters.
+    - Example:
+    - npm run build 2018 webapps 30
+    - wait until the script says "done." 
 
 
