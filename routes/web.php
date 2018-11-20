@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 // documentation home
-Route::get('/documentation', 'PageController@documentationHome');
+Route::get('/documentation', 'PageController@documentationHome'); 
 
 // search
 Route::get('/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
@@ -34,7 +34,7 @@ Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{subsubc
 Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');
 
 // category
-Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory');
+Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory')->name('category');
 
 Route::post('logemail', 'Controller@logEmail');
 
