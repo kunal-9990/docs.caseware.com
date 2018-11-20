@@ -1,4 +1,5 @@
 module.exports = () => {
+    const SUB_IFRAMES = require('./sub-video-iframes'); // eslint-disable-line
     const BODY = document.querySelector('body');
     const THUMBNAIL_CONTAINER = document.querySelector('.docs__video-iframe-thumbnail-container');
     const THEATRE_VIEW_CONTAINER = document.querySelector('.yt-video-iframe');
@@ -24,4 +25,8 @@ module.exports = () => {
     }
 
     THUMBNAIL_CONTAINER.addEventListener('click', () => showVideo());
+
+    if (document.querySelector('p #vidcenter')) {
+        SUB_IFRAMES();
+    }
 };
