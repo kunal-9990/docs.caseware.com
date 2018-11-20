@@ -14,8 +14,12 @@ module.exports = () => {
         const LI = document.createElement('li');
         const ANCHOR = document.createElement('a');
         let ANCHOR_TEXT = null;
-
-        if (el.id || el.querySelector('a[name]') !== null) {
+        if (el.innerHTML) {
+            EL_ID = el.id || el.querySelector('a[name]').getAttribute('name');
+            ANCHOR_TEXT = el.innerHTML.replace(/[^A-Za-z0-9]+/g, ' ');
+            ANCHOR.textContent = ANCHOR_TEXT;
+            ANCHOR.setAttribute('href', `#${EL_ID}`);
+        } else if (el.id || el.querySelector('a[name]') !== null) {
             EL_ID = el.id || el.querySelector('a[name]').getAttribute('name');
             ANCHOR_TEXT = EL_ID.replace(/[^A-Za-z0-9]+/g, ' ');
             ANCHOR.textContent = ANCHOR_TEXT;
