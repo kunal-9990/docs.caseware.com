@@ -8,8 +8,9 @@
 
 
 {{-- While WIP on live server to prevent indexing --}}
+@if(env('APP_ENV') != "production")
 <meta name="robots" content="noindex">
-
+@endif
 <link rel="canonical" href="{{ $canonical or ''}}" />
 <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 

@@ -36,9 +36,11 @@
     │       │    Online Output.fltoc
     │       │    csh_redirect.xml
     ----------------------------
-    - Run "npm run build" and supply the year, product, and version as parameters.
+    - From the project root ( docsmk2/ ) run "scripts/build.sh" OR "npm run build" and supply the year, product, and version as parameters.
     - Example:
-    - npm run build 2018 webapps 30
+    - scripts/build.sh 2018 webapps 30
+      OR
+    - npm run build 2018 webapps 30 (only works locally)
     - wait until the script says "done." 
 
 
