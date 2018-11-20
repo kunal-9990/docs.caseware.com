@@ -25,6 +25,7 @@ const DOCS = require('./modules/docs/docs');
 const BACK_TO_TOP = require('./modules/back-to-top');
 const SEARCH = require('./modules/search');
 const USER_FEEDBACK = require('./modules/user-feedback');
+const LAYOUT_GRID = require('./modules/grid');
 
 $(document).ready(() => {
     // nav init
@@ -51,4 +52,7 @@ $(document).ready(() => {
     if (document.querySelector('.docs__user-feedback')) {
         USER_FEEDBACK();
     }
+
+    // for switching between full width and contained width
+    LAYOUT_GRID();
 });
