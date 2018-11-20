@@ -30,7 +30,6 @@
 
 .reqtimeinline .reqworkingpapersinline .reqauditinline .reqtaxinline .reqseinline 
 .reqse .reqanalytics .reqtime .reqworkingpapers .reqaudit .reqtax .reqpcr .reqrct {
-    /*border-top: solid #4C8C2B 1.5px;*/
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -51,35 +50,11 @@
     padding-bottom: 15px;
 }
 
-.pcrsectiontext {
-    background-color: rgba(142, 142, 142, 0.1);
-}
-
-
-.rctsectiontext {
-    background-color: rgba(142, 142, 142, 0.1);
-}
-
-.sesectiontext {
-    background-color: rgba(107, 48, 119, 0.10);
-}
-
-.analyticssectiontext {
-    background-color: rgba(229, 114, 0, 0.10);
-}
-
-.timesectiontext {
-    background-color: rgba(183, 49, 44, 0.10);
-}
-
-.taxsectiontext {
-    background-color: rgba(76, 140, 43, 0.10);
-}
-
-.workingpaperssectiontext {
-    background-color: rgba(0, 45, 114, 0.10);
-}
-
-.auditsectiontext {
-    background-color: rgba(201, 151, 0, 0.10);
-}
+.pcrsectiontext { background-color: rgba(142, 142, 142, 0.1); }
+.rctsectiontext { background-color: rgba(142, 142, 142, 0.1); }
+.sesectiontext { background-color: rgba(107, 48, 119, 0.10); }
+.analyticssectiontext { background-color: rgba(229, 114, 0, 0.10); }
+.timesectiontext { background-color: rgba(183, 49, 44, 0.10); }
+.taxsectiontext { background-color: rgba(76, 140, 43, 0.10); }
+.workingpaperssectiontext { background-color: rgba(0, 45, 114, 0.10); }
+.auditsectiontext { background-color: rgba(201, 151, 0, 0.10); }
