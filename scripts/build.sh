@@ -1,5 +1,6 @@
 # Adding a new help version:
 #
+# Place a folder named as the new version into the tmp directory as shown below.
 # ----------------------------
 # /docsmk2/
 # │
@@ -13,12 +14,11 @@
 #
 # ----------------------------
 #
-# run npm build and supply the year, product, and version as parameters.
-# for example:
+# Run "npm run build" and supply the year, product, and version as parameters.
+# Example:
 # npm run build 2018 webapps 30
-
-
-
+#
+# wait until the script says "done." 
 
 sudo chmod -R 777 .
 
@@ -30,13 +30,11 @@ cd public/documentation_files/$1/$2/$3
 
 sudo chmod -R 777 .
 
-
 echo 'Renaming stuff...'
 
 find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content//g'
 
 sudo mv Online\ Output.fltoc OnlineOutput.xml
-
 
 prefix="\/documentation_files\/$1\/$2\/$3\/Content\/Resources\/"
 prefix="$prefix"
@@ -48,16 +46,13 @@ find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/Resources/src="'"$prefi
 find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/..\/Resources/src="'"$prefix"'/g'
 find . -type f -print0 | xargs -0 sed -i 's/src="\/Resources/src="'"$prefix"'/g'
 
-
 cd ../../../../..
-
 
 echo 'Copying Data folders into place...'
 
 sudo mkdir -p public/$1/$2/$3/en
 sudo cp -R tmp/$3/Content/Data public/$1/$2/$3/en
 cd public/$1/$2/$3
-
 
 sudo cp -R en fr
 sudo cp -R en es
