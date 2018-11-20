@@ -16,8 +16,8 @@ module.exports = () => {
         let ANCHOR_TEXT = null;
 
         if (el.innerHTML) {
-            EL_ID = el.innerHTML.replace(/\s/g, '-');
-            ANCHOR_TEXT = el.innerHTML;
+            EL_ID = el.textContent.replace(/\s/g, '-');
+            ANCHOR_TEXT = el.textContent;
             ANCHOR.textContent = ANCHOR_TEXT;
             ANCHOR.setAttribute('href', `#${EL_ID}`);
             el.setAttribute('id', EL_ID);
