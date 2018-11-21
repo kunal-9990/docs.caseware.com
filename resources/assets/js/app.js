@@ -27,6 +27,7 @@ const SEARCH = require('./modules/search');
 const USER_FEEDBACK = require('./modules/user-feedback');
 const LAYOUT_GRID = require('./modules/grid');
 const TOC = require('./modules/toc');
+const REDIRECTS = require('./modules/redirects');
 
 $(document).ready(() => {
     // nav init
@@ -60,5 +61,9 @@ $(document).ready(() => {
     // build the toc
     if (document.querySelector('.toc__container')) {
         TOC();
+    }
+
+    if (document.querySelector('.helpaccordiancol')) {
+        REDIRECTS();
     }
 });

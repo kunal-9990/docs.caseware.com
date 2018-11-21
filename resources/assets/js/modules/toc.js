@@ -1,6 +1,4 @@
-module.exports = () => {
-    console.log('toc.js');
-    
+module.exports = () => {    
     // const filter = require('../filter');
 
     $(".toc__container").html("");
