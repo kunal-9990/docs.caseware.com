@@ -1,4 +1,9 @@
 .docs__container {
+
+    h1 + ul {
+        display: none;
+    }
+
     display: flex;
 
     .docs__content {

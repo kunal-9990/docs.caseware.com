@@ -11,7 +11,7 @@
 
     - Content and mapping xml files for each version can be found in public/documentation_files in their respective subfolder
     - Downloads throughout the site are kept in public/downloads
-    - Tearch "Data" folders are found in public/year/product/version/
+    - Search "Data" folders are found in public/year/product/version/
     - Bash scripts are found in scripts/
     - Logged emails are found in storage/logs/emails.log
 
