@@ -19,7 +19,7 @@
 @section('content')
     <div class="container documentation">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-3 table-of-contents">
                 @include('partials.toc')
             </div>
             <div class="col-sm-9">

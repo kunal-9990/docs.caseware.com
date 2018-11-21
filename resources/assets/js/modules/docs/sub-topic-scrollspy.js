@@ -1,4 +1,5 @@
 module.exports = () => {
+    const SUB_TOC_CONTAINER = document.querySelector('.toc-subtopics');
     const TOC_SUBTOPIC_CONTAINER = document.querySelector('.toc-subtopics__in-this-article');
     const TOC_SUBTOPIC_NAV = TOC_SUBTOPIC_CONTAINER.querySelector('ul.nav');
     const TOC_CONTENT_CONTAINER = document.querySelector('.toc-content').querySelectorAll('h2');
@@ -49,14 +50,15 @@ module.exports = () => {
 
     /* eslint-disable */
     var waypoint = new Waypoint({
-        element: TOC_SUBTOPIC_CONTAINER,
+        element: SUB_TOC_CONTAINER,
         handler: function(direction) {
           if (direction === 'down' && window.pageYOffset !== 0) {
-            TOC_SUBTOPIC_CONTAINER.classList.add('affix');            
+            SUB_TOC_CONTAINER.classList.add('affix');            
           } else {
-            TOC_SUBTOPIC_CONTAINER.classList.remove('affix');
+            SUB_TOC_CONTAINER.classList.remove('affix');
           }
-        }
+        },
+        offset: 20
     })
     /* eslint-enable */
 };

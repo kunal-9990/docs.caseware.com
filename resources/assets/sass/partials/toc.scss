@@ -1,3 +1,7 @@
+.documentation .table-of-contents {
+    border-right: 1px solid #d4dadf;
+}
+
 .toc__container {
     font-size: 0.938em;
     line-height: 2;
@@ -10,6 +14,11 @@
 
     a {
         color: $text-black;
+
+        &:hover {
+            color: #00ace0 !important;
+            text-decoration: none;
+        }
     }
 
     ul {
@@ -23,6 +32,7 @@
     .toc__category,
     .toc__sub-category {
         position: relative;
+        margin: 5px 0;
     }
 
     .toc__sub-category {
