@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
 
-  <!-- Cloud 28.0 Inline Links -->
+  <!-- Cloud 29.0 Inline Links -->
 
   <row> 
     <Page>Firm Profile</Page> 
@@ -162,7 +162,7 @@
   <row>
    <Page>What's New</Page>
    <InlineHelpLink>webapps.htm#CSHID=WhatsNew</InlineHelpLink>
-   <Redirectto>/Explore/Whats-New/Whats-new-Cloud-v28.htm</Redirectto>
+   <Redirectto>/Explore/Whats-New/Whats-new-Cloud-v29.htm</Redirectto>
   </row>
 
   <row>
@@ -174,19 +174,19 @@
   <row>
   <Page>Getting started</Page>
   <InlineHelpLink>webapps.htm#CSHID=Getting_Started</InlineHelpLink>
-  <Redirectto>/Explore/Getting-started.htm</Redirectto>
+  <Redirectto>/Explore/Getting-Started/Getting-started-guide.htm</Redirectto>
   </row>
 
   <row>
   <Page>Organization</Page>
   <InlineHelpLink>webapps.htm#CSHID=Organization</InlineHelpLink>
-  <Redirectto>/Setup/Organization.htm</Redirectto>
+  <Redirectto>/Setup/Organization/Create-client-workspaces.htm</Redirectto>
   </row>
 
   <row>
   <Page>Users and groups</Page>
   <InlineHelpLink>webapps.htm#CSHID=Users_and_Groups</InlineHelpLink>
-  <Redirectto>/Setup/Users-and-Groups.htm</Redirectto>
+  <Redirectto>/Setup/Users-and-Groups/Users-and-Groups/Create-an-account-for-staff-or-contacts.htm</Redirectto>
   </row>
 
   <row>
@@ -216,25 +216,25 @@
   <row>
   <Page>Time and billing</Page>
   <InlineHelpLink>webapps.htm#CSHID=Time_And_Billing</InlineHelpLink>
-  <Redirectto>/Practice/Time-and-billing.htm</Redirectto>
+  <Redirectto>/Practice/Time-and-Billing/Tracking-WIP-in-Cloud.htm</Redirectto>
   </row>
 
   <row>
   <Page>File preparation</Page>
   <InlineHelpLink>webapps.htm#CSHID=File_Preparation</InlineHelpLink>
-  <Redirectto>/Engagements/File-Preparation.htm</Redirectto>
+  <Redirectto>/Engagements/File-Preparation/Create-an-engagement-file.htm</Redirectto>
   </row>
 
   <row>
   <Page>Engagements</Page>
   <InlineHelpLink>webapps.htm#CSHID=Engagements</InlineHelpLink>
-  <Redirectto>/Engagements.htm</Redirectto>
+  <Redirectto>/Engagements/File-Preparation/Create-an-engagement-file.htm</Redirectto>
   </row>
 
   <row>
   <Page>Reviews and reporting</Page>
   <InlineHelpLink>webapps.htm#CSHID=Reviews_And_Reporting</InlineHelpLink>
-  <Redirectto>/Engagements/Reviews-and-reporting.htm</Redirectto>
+  <Redirectto>/Engagements/Documentation-and-Review/Adding-review-notes.htm</Redirectto>
   </row>
 
   <row>
@@ -246,7 +246,7 @@
   <row>
   <Page>Documentation and testing</Page>
   <InlineHelpLink>webapps.htm#CSHID=Documentation_And_Testing</InlineHelpLink>
-  <Redirectto>/Engagements/Documentation-and-Review.htm</Redirectto>
+  <Redirectto>/Engagements/Documentation-and-Review/Giving-feedback-to-others-in-Cloud.htm</Redirectto>
   </row>
 
   <row>
@@ -258,7 +258,7 @@
   <row>
   <Page>Maintenance</Page>
   <InlineHelpLink>webapps.htm#CSHID=Maintenance</InlineHelpLink>
-  <Redirectto>/Practice/Maintenance.htm</Redirectto>
+  <Redirectto>/Practice/Maintenance/Check-system-and-file-history.htm</Redirectto>
   </row>
 
   <row>
@@ -272,6 +272,23 @@
   <InlineHelpLink>webapps.htm#Troubleshooting/r_Troubleshooting_Java_plugin.htm</InlineHelpLink>
   <Redirectto>/Explore/Known-Issues/CaseWare-Cloud/Java-Applet-is-not-loading.htm</Redirectto>
   </row>
+  
+  <row>
+  <page>Timeline</page>
+  <InlineHelpLink>webapps.htm#CSHID=Timeline</InlineHelpLink>
+  <Redirectto>/Explore/Scenarios/Viewing-overall-engagement-status.htm#Using-the-Timeline</Redirectto>
+  </row> 
 
+   <row>
+   <Page>Profile</Page>
+   <InlineHelpLink>webapps.htm#CSHID=Firm_Profile</InlineHelpLink>
+   <Redirectto>/Explore/Interface/Firm-Settings/Firm.htm#Profile</Redirectto>
+   </row>
+   
+   <row>
+   <page>Automatic Time Entries</page>
+   <InlineHelpLink>webapps.htm#CSHID=InlineHelp_UserSettings_AutomaticTimeEntries</InlineHelpLink>
+   <Redirectto>/Setup/Administration-and-Settings/Automate-time-entries-using-your-calendar.htm</Redirectto>
+   </row>
   
 </root>
