@@ -15,7 +15,7 @@
     - Bash scripts are found in scripts/
     - Logged emails are found in storage/logs/emails.log
 
-# Deployment
+# Deployment:
 
     - composer install
     - update the .env variable PATH_TO_PUBLIC and DOMAIN
