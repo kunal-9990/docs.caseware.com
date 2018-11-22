@@ -11,7 +11,7 @@ $indexURL = route('category', [$year, $product, $version, $lang, 'webapps']);
         {{-- <div class="row"> --}}
         <div class="header__search-wrap">
             <div class="header__nav-wrap">
-                <a href="{{$indexURL}}"><img src="/img/caseware-cloud-logo.png" alt="CaseWare Cloud logo"></a>
+                <a href="{{$indexURL}}"><img class="header__logo" src="/img/caseware-cloud-logo.png" alt="CaseWare Cloud logo"></a>
                 @include('partials.nav')
             </div>
             <div class="header__input-search-wrapper">
