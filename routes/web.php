@@ -17,7 +17,7 @@ $current_version = env("CURRENT_VERSION");
 //------temporary redirects----- 
 
 Route::get('/2018/webapps/28/en/Resources/Project Files/CaseWareCloud/References/Tools-for-importing-client-data.htm', function () {
-    return redirect('/2018/webapps/28/en/Engagements/File-Preparation/Import-clients-financial-data-to-an-engagement-file.htm#Importing-from-third-party-desktop-accounting-software');
+    return redirect('/2018/webapps/28/en/Engagements/File-Preparation/Import-clients-financial-data-to-an-engagement-file.htm#Importin');
 });
 //------------------------------
 
