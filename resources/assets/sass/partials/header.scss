@@ -23,6 +23,14 @@ header.header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        .header__logo {
+            max-width: 200px;
+
+            @include mq(md) {
+                max-width: initial;
+            }
+        }
     }
 
     .header__input-search-wrapper {
