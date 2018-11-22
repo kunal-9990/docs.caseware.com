@@ -14,12 +14,17 @@
 */
 $current_version = env("CURRENT_VERSION");
 
+//------temporary redirects----- 
+
+Route::get('/2018/webapps/28/en/Resources/Project Files/CaseWareCloud/References/Tools-for-importing-client-data.htm', function () {
+    return redirect('/2018/webapps/28/en/Engagements/File-Preparation/Import-clients-financial-data-to-an-engagement-file.htm#Importing-from-third-party-desktop-accounting-software');
+});
+//------------------------------
+
+// cloud index
 Route::get('/', function () {
     return redirect('/2018/webapps/29/en/webapps');
 });
-
-// documentation home
-Route::get('/documentation', 'PageController@documentationHome'); 
 
 // search
 Route::get('/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
@@ -37,6 +42,7 @@ Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}', 'PageC
 Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory')->name('category');
 
 Route::post('logemail', 'Controller@logEmail');
+
 
 
 
