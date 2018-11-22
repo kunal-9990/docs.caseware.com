@@ -24,7 +24,7 @@ module.exports = () => {
     // var lang = routeComponents[5];
     // var linkPrefix = "/docsmk2/" + year + "/" + product + "/" + version + "/" + lang;
     // var TOCxml = "/docsmk2/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
-    // // end for prob
+    // end for prob
 
     $.ajax({
         type: "GET",
