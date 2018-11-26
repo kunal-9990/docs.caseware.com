@@ -51,18 +51,20 @@
 .workingpaperssectiontext { background-color: rgba(0, 45, 114, 0.10); }
 .auditsectiontext { background-color: rgba(201, 151, 0, 0.10); }
 
-.prdsectionlogo {
-    position: relative;
-    float: left;
-    right: -10px;
-    top: 12px;
-    max-width: 50px!important;
-}
+.feature-availability {
+    display: flex;
+    align-items: center;
+    padding: 25px;
 
-.prdsectiontext {
-    padding-left: 70px;
-    padding-right: 10px;
-    padding-top: 10px;
-    font-style: italic;
-    padding-bottom: 15px;
+    .prdsectionlogo {
+        max-width: 50px;
+    }
+
+    .prdsectiontext {
+        font-style: italic;
+    }
+
+    p {
+        margin: 0 0 0 10px;
+    }
 }
