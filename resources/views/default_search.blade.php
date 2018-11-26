@@ -17,7 +17,7 @@
 
     @yield('meta')
 
-    <link href="{{'/css/app_search.css'}}" rel="stylesheet" type="text/css">
+    <link href="{{ mix('/css/app_search.css') }}" rel="stylesheet" type="text/css">
     
     {{-- FontAwesome icons --}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
@@ -34,19 +34,7 @@
 
     @include('partials.footer')
 
-    {{-- <script>
-        function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return "";
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-        var search = getParameterByName('search', window.location.href);
-        window.location.hash = 'search-' + search;    
-    </script> --}}
-    <script src="{{'/js/app.js'}}"></script>
+    <script src="{{ mix('/js/app.js') }}"></script>
     <script src="/documentation_files/2018/webapps/29/Content/Resources/Scripts/custom.modernizr.js">
     </script>
     <script src="/documentation_files/2018/webapps/29/Content/Resources/Scripts/jquery.min.js">

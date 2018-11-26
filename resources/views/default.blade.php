@@ -8,7 +8,6 @@
 
     @yield('meta')
 
-    {{-- <link href="{{'/css/app.css'}}" rel="stylesheet" type="text/css"> --}}
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
     
     {{-- FontAwesome icons --}}
@@ -37,7 +36,6 @@
         @include('partials.footer')
     </div>
 
-    {{-- <script src="{{'/js/app.js'}}"></script> --}}
     <script src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>
