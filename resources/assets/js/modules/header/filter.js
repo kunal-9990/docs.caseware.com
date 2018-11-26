@@ -122,14 +122,11 @@ module.exports = () => {
     }
 
     $(document).on('click', '.switch-wrap:not(.mobile)', function (event) {
-        updateFilter();
-        console.log('hihi');
-        
+        updateFilter();        
     });
 
     $(document).on('click', '.switch-wrap.mobile', function (event) {
         updateFilterMobile();
-        console.log('hihi');
     });
 
     var prodList = getQueryString('prod');
