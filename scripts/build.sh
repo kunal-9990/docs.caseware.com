@@ -65,6 +65,7 @@ cd ../../../..
 echo 'Setting File permissions...'
 
 sudo find . ! -name '*.sh' -type f -exec chmod 644 {} \;    
-sudo find . ! -name '*.sh' -type d -exec chmod 755 {} \;
+sudo find . ! -name 'scripts' -type d -exec chmod 755 {} \;
+# sudo chmod -R 777 .
 
 echo 'Done.'
