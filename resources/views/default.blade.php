@@ -8,7 +8,7 @@
 
     @yield('meta')
 
-    <link href="{{'/css/app.css'}}" rel="stylesheet" type="text/css">
+    <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
     
     {{-- FontAwesome icons --}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
@@ -36,6 +36,6 @@
         @include('partials.footer')
     </div>
 
-    <script src="{{'/js/app.js'}}"></script>
+    <script src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>
