@@ -4,7 +4,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
-const BROWSERSYNC_URL = '127.0.0.1:8000';
+const BROWSERSYNC_URL = 'http://dev.docs';
 
 /*
  |--------------------------------------------------------------------------

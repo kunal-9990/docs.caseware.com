@@ -18,7 +18,8 @@
             "named": "never",
             "asyncArrow": "always"
         }],
-        "no-use-before-define": ["error", { "functions": false }]
+        "no-use-before-define": ["error", { "functions": false }],
+        "linebreak-style": 0
     },
     "overrides": [
         {
