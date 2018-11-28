@@ -4,7 +4,7 @@ module.exports = () => {
     $(".toc__container").html("");
 
     var loc = window.location.href;
-    var pathname = new URL(loc).pathname;
+    var pathname = window.location.pathname;
     pathname = pathname.replace(/\/\/+/g, '/');
     var routeComponents = pathname.split("/");
 
