@@ -20,11 +20,11 @@ module.exports = () => {
         var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
     } else {
         // used for live
-        var year = routeComponents[2];
-        var product = routeComponents[3];
-        var version = routeComponents[4];
-        var lang = routeComponents[5];
-        var linkPrefix = "/docsmk2/" + year + "/" + product + "/" + version + "/" + lang;
+        var year = routeComponents[1];
+        var product = routeComponents[2];
+        var version = routeComponents[3];
+        var lang = routeComponents[4];
+        var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
         var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
     }
     
