@@ -273,5 +273,11 @@
   <Redirectto>/Explore/Known-Issues/CaseWare-Cloud/Java-Applet-is-not-loading.htm</Redirectto>
   </row>
 
+  <row>
+  <Page>Staff Rates and Work Codes</Page>
+  <InlineHelpLink>webapps.htm#Import_Data</InlineHelpLink>
+  <Redirectto>/Engagements/File-Preparation/Import-clients-financial-data-to-an-engagement-file.htm#Importing-from-CaseWare-Working-Papers</Redirectto>
+  </row>
+
   
 </root>
