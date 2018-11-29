@@ -8,7 +8,12 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     };
 }
 
-// Element.closest() (IE support)
+// For browsers that do not support Element.closest(), but carry support for element.matches()
+// (or a prefixed equivalent, meaning IE9+), a polyfill exists:
+if (!Element.prototype.matches)
+    Element.prototype.matches = Element.prototype.msMatchesSelector || 
+                                Element.prototype.webkitMatchesSelector;
+
 if (!Element.prototype.closest) {
     Element.prototype.closest = function(s) {
         var el = this;
