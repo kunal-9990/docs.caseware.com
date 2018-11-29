@@ -8,24 +8,28 @@ module.exports = () => {
     pathname = pathname.replace(/\/\/+/g, '/');
     var routeComponents = pathname.split("/");
 
-    // for dev
-    var year = routeComponents[1];
-    var product = routeComponents[2];
-    var version = routeComponents[3];
-    var lang = routeComponents[4];
-    var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
-    var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
-    // end for dev
-
-    // for prob
-    // var year = routeComponents[2];
-    // var product = routeComponents[3];
-    // var version = routeComponents[4];
-    // var lang = routeComponents[5];
-    // var linkPrefix = "/docsmk2/" + year + "/" + product + "/" + version + "/" + lang;
-    // var TOCxml = "/docsmk2/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
-    // end for prob
-
+    // they are the same for now but might change in the future to
+    // to have different TOCxml routes
+    if (process.env.NODE_ENV === 'development') {
+        // used for staging
+        console.log('process.env.NODE_ENV = ', process.env.NODE_ENV, '<- should be "development"');
+        var year = routeComponents[1];
+        var product = routeComponents[2];
+        var version = routeComponents[3];
+        var lang = routeComponents[4];
+        var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
+        var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
+    } else {
+        // used for live
+        console.log('process.env.NODE_ENV = ', process.env.NODE_ENV, '<- should be "production"');
+        var year = routeComponents[2];
+        var product = routeComponents[3];
+        var version = routeComponents[4];
+        var lang = routeComponents[5];
+        var linkPrefix = "/docsmk2/" + year + "/" + product + "/" + version + "/" + lang;
+        var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
+    }
+    
     $.ajax({
         type: "GET",
         url: TOCxml,
