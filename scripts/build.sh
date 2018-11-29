@@ -20,21 +20,21 @@
 #
 # wait until the script says "done." 
 
-sudo chmod -R 777 .
+chmod -R 777 .
 
 echo 'Moving stuff around...'
 
-sudo mkdir -p public/documentation_files/$1/$2/$3
-sudo cp -R tmp/$3/* public/documentation_files/$1/$2/$3
+mkdir -p public/documentation_files/$1/$2/$3
+cp -R tmp/$3/* public/documentation_files/$1/$2/$3
 cd public/documentation_files/$1/$2/$3
 
-sudo chmod -R 777 .
+chmod -R 777 .
 
 echo 'Renaming stuff...'
 
 find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content//g'
 
-sudo mv Online\ Output.fltoc OnlineOutput.xml
+mv Online\ Output.fltoc OnlineOutput.xml
 
 prefix="\/documentation_files\/$1\/$2\/$3\/Content\/Resources\/"
 prefix="$prefix"
@@ -50,22 +50,22 @@ cd ../../../../..
 
 echo 'Copying Data folders into place...'
 
-sudo mkdir -p public/$1/$2/$3/en
-sudo cp -R tmp/$3/Content/Data public/$1/$2/$3/en
+mkdir -p public/$1/$2/$3/en
+cp -R tmp/$3/Content/Data public/$1/$2/$3/en
 cd public/$1/$2/$3
 
-sudo cp -R en fr
-sudo cp -R en es
-sudo cp -R en nl
-sudo cp -R en cn
-sudo cp -R en de
+cp -R en fr
+cp -R en es
+cp -R en nl
+cp -R en cn
+cp -R en de
 
-cd ../../../..
+# cd ../../../..
 
-echo 'Setting File permissions...'
+# echo 'Setting File permissions...'
 
-sudo find . ! -name '*.sh' -type f -exec chmod 644 {} \;    
-sudo find . ! -name 'scripts' -type d -exec chmod 755 {} \;
-# sudo chmod -R 777 .
+# find . ! -name '*.sh' -type f -exec chmod 644 {} \;    
+# find . ! -name 'scripts' -type d -exec chmod 755 {} \;
+# # chmod -R 777 .
 
 echo 'Done.'

@@ -208,7 +208,7 @@
         <hr width="100%" size="0" align="center" />
         <p><b>After removing my identity provider and re-adding it, some users are unable to sign in. Why?</b>
         </p>
-        <p>If you have removed your identity provider and re-added it, users authenticated before the removal will be unable to sign in. For those users to sign in again, create new credentials for them in Azure AD. Note that this process will not be required in future releases.</p>
+        <p>If you have removed your identity provider and re-added it, users authenticated before the removal will be unable to sign in. For those users to sign in again, create new credentials for them in Azure AD. This process will not be required in future releases.</p>
         <hr width="100%" size="0" align="center" />
         <p><b>What happens if I add a staff member’s account to Cloud before I add it to Azure AD?</b>
         </p>
@@ -282,6 +282,12 @@ When configuring Azure AD, you may entered an incorrect identity provider. </p>
         <p><b>No available Cloud access licenses. To obtain additional licenses, contact your administrator.</b> <![CDATA[ ]]></p>
         <p>
 The number of users in your Active Directory domain exceeds the number of available Cloud licenses. When the number of users in your Active Directory domain exceeds the number of available licenses, some staff will be unable to sign in. To permit all staff members to sign in, purchase a license from MyCaseWare for each staff member or contact your local distributor.</p>
+        <hr width="100%" size="0" align="center" />
+        <p><b>Account already exists. User with email ... already exists. How do you want to continue?</b>
+        </p>
+        <p>This error occurs after a user is removed from Azure and another user is added using the same email address. <br /></p>
+        <p>To work around this issue, delete the Cloud account associated with the email address displayed in the error message and have the user sign in again using SSO. <br /></p>
+        <p>This process will not be required in future releases.</p>
         <hr width="100%" size="0" align="center" />
     </body>
 </html>
