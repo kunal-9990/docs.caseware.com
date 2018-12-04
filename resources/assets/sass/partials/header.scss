@@ -11,6 +11,12 @@ header.header {
         display: flex;
         align-items: center;
         min-height: 80px;
+
+        &:after {
+            content: '';
+            min-height: inherit;
+            font-size: 0;
+        }
     }
 
     .header__nav-wrap {

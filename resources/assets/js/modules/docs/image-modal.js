@@ -21,7 +21,9 @@ module.exports = () => {
     // adds/updates the image src to the img inside the modal
     function setModalContent(img) {
         MODAL_IMAGE.setAttribute('src', img.getAttribute('src'));
-        MODAL_CAPTION.innerHTML = img.getAttribute('alt');
+        if (img.getAttribute('alt') !== null) {
+            MODAL_CAPTION.innerHTML = img.getAttribute('alt');
+        }
         toggleImgModalOverLay();
     }
 

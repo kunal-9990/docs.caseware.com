@@ -450,6 +450,10 @@
         VolumeNumberReset="same"
         ChapterNumberReset="continue" />
       <TocEntry
+        Title="Create an engagement for an interim period"
+        Link="/Engagements/File-Preparation/Create-an-engagement-for-an-interim-period.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.SE" />
+      <TocEntry
         Title="Create a consolidation engagement"
         Link="/Engagements/File-Preparation/Create-a-consolidation-engagement.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.SE"

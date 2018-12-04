@@ -4,7 +4,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
-const BROWSERSYNC_URL = '127.0.0.1:8000';
+const BROWSERSYNC_URL = 'http://dev.docs';
 
 /*
  |--------------------------------------------------------------------------
@@ -51,5 +51,8 @@ mix
     .react('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css')
     .sass('resources/assets/sass/app_search.scss', 'public/css')
-    // .version()
     .browserSync(BROWSERSYNC_URL);
+
+if (mix.inProduction()) {
+    mix.version();
+}
