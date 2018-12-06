@@ -91,10 +91,15 @@ class PageController extends Controller
         $product =  strtolower($product);
 
         try {
-            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$category."/".$subcategory ));
+            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$lang."/".$category."/".$subcategory ));
+            $doNotTranslate = true;        
         } catch (Exception $e) {
-            return response()->view('errors.404');
-        }
+            try {
+            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/en/".$category."/".$subcategory ));
+                } catch (Exception $e) {
+                    return response()->view('errors.404');
+                }
+        }          
 
         $maincontentarea = $dom->find('body', 0);
         $recent = getRecentlyViewed();
@@ -111,11 +116,15 @@ class PageController extends Controller
         $product =  strtolower($product);
 
         try {
-            $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."/Content/".$category ));
-
+            $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."/Content/".$lang."/".$category ));
+            $doNotTranslate = true;        
         } catch (Exception $e) {
-            return response()->view('errors.404');
-        }
+            try {
+            $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."/Content/en/".$category ));
+                } catch (Exception $e) {
+                    return response()->view('errors.404');
+                }
+        }          
 
         $maincontentarea = $dom->find('body', 0);
         $recent = getRecentlyViewed();
