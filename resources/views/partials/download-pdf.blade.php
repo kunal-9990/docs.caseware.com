@@ -32,7 +32,7 @@
                 <div id="error">Please enter a valid email.</div>
                 <button type="button" class="pdf-modal__subscribe-btn">Subscribe</button>
             </div>
-            <a href="#" class="pdf-modal__file-download-btn">No thanks, I just want the file.</a>
+            <a class="pdf-modal__file-download-btn">No thanks, I just want the file.</a>
         </div>
         <div class="pdf-modal__footer">
             <p>Don't have a cloud yet? <a href="https://casewarecloud.com/" target="_blank">Click to learn more</a></p>
