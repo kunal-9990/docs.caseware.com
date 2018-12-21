@@ -38,6 +38,8 @@ module.exports = () => {
                       // var linkPrefix = "/" + product + "/" + version + "/" + lang;
                       var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
                       window.location.replace(linkPrefix + $(this).find("Redirectto").text());
+                      $("body, html").animate({ scrollTop: $("#" + accordianID).offset().top - 100 }, 600);  
+    
             return false;
           }
         });
