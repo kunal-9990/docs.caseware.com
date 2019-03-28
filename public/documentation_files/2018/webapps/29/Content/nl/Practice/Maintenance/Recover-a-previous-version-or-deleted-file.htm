@@ -5,98 +5,90 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="description" content="CaseWare Cloud stores information on the Amazon Web Services Server infrastructure which may be located outside the country you are working from. CaseWare Cloud utilizes Amazon Web Servers in the United States for the Americas, in Australia for Asia-Pacific clients, and in Ireland for other jurisdictions. All of your data, including backups, is in the same region." /><title>Recover a previous version or deleted file</title>
-        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <meta name="description" content="CaseWare Cloud stores information on the Amazon Web Services Server infrastructure which may be located outside the country you are working from. CaseWare Cloud utilizes Amazon Web Servers in the United States for the Americas, in Australia for Asia-Pacific clients, and in Ireland for other jurisdictions. All of your data, including backups, is in the same region." /><title>Herstel een eerdere versie of verwijderd bestand</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
         <link href="../../Resources/Stylesheets/Empty.css" rel="stylesheet" />
-        <script src="../../Resources/Scripts/custom.modernizr.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/custom.modernizr.js">
         </script>
-        <script src="../../Resources/Scripts/jquery.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/jquery.min.js">
         </script>
-        <script src="../../Resources/Scripts/require.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/require.min.js">
         </script>
-        <script src="../../Resources/Scripts/require.config.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/require.config.js">
         </script>
-        <script src="../../Resources/Scripts/foundation.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/foundation.min.js">
         </script>
-        <script src="../../Resources/Scripts/plugins.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/plugins.min.js">
         </script>
-        <script src="../../Resources/Scripts/MadCapAll.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/MadCapAll.js">
         </script>
     </head>
     <body>
-        <h1>Recover a previous version or deleted file</h1>
-        <ul class="topiccontents">
-            <li value="1"><a href="#Recovering-previous-versions-of-uploaded-files" class="selected">Recovering previous versions of uploaded files</a>
-            </li>
-            <li value="2"><a href="#Recovering-folders-and-files-from-the-Recycle-bin" class="selected">Recovering folders and files from the Recycle bin</a>
-            </li>
-            <li value="3"><a href="#Restoration-limitations" class="selected">Restoration limitations</a>
-            </li>
-        </ul>
-        <p>CaseWare Cloud stores information on the Amazon Web Services Server infrastructure which may be located outside the country you are working from. CaseWare Cloud utilizes Amazon Web Servers in the United States for the Americas, in Australia for Asia-Pacific clients, and in Ireland for other jurisdictions. All of your data, including backups, is in the same region.</p>
-        <p>CaseWare Cloud utilizes Amazon Glacier for backup storage. Glacier data is specific to a single region <a href="https://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-data-model.html">[1]</a> <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#glacier_region">[2]</a> and is not automatically replicated anywhere else. So, if you have legal requirements that your data must be geographically stored in Australia (for example), your data will only be stored there.</p>
-        <h2 id="Recovering-previous-versions-of-uploaded-files">Recovering previous versions of uploaded files</h2>
-        <p>When you replace an uploaded file on Cloud, you can easily recover previous versions of that file. Access the file details to find previous copies of your document.</p>
-        <p style="font-weight: bold;">To recover a previous version of an uploaded file:</p>
+        <h1>Herstel een eerdere versie of verwijderd bestand</h1>
+        <p>Gegevens in CaseWare Cloud worden opgeslagen in de Amazon Web Services Server infrastructuur; het kan zijn dat deze servers op een locatie zijn gevestigd buiten het land waar u werkt. CaseWare Cloud gebruikt de Amazon Web Servers in de Verenigde Staten voor gebruikers in Noord- en Zuid-Amerika, in Australië voor gebruikers in Oceanië, en in Ierland voor gebruikers in andere gebieden. Al uw gegevens, inclusief back-ups, worden in hetzelfde gebied opgeslagen. Er wordt dus niets verspreid over verschillende servers.</p>
+        <p>CaseWare Cloud maakt gebruik van Amazon Glacier voor de opslag van back-ups. Opslag van data in Glacier wordt beperkt tot een enkele regio <a href="https://docs.aws.amazon.com/amazonglacier/latest/dev/amazon-glacier-data-model.html">[1]</a> <a href="http://docs.aws.amazon.com/general/latest/gr/rande.html#glacier_region">[2]</a> waardoor het niet nog naar een andere opslaglocatie wordt gekopieerd. Als u juridisch verplicht bent om uw data geografisch in, bijvoorbeeld, Europa op te slaan, dan wordt uw data ook alleen op die locatie opgeslagen.</p>
+        <h2 id="Recovering-previous-versions-of-uploaded-files">Een eerdere versie herstellen van geüploade bestanden</h2>
+        <p>Als u een geüpload bestand vervangt in Cloud kunt u alsnog makkelijk een vorige versie van dat bestand herstellen. Selecteer een bestand voor meer opties om een vorige kopie op te zoeken.</p>
+        <p style="font-weight: bold;">Een eerdere versie herstellen van een geüpload bestand</p>
         <ol>
             <li value="1">
-                <p>Open the <b>Files</b> page and select an entity from the Entity Selector.</p>
+                <p>Selecteer de gewenste entiteit op de pagina <b>Bestanden</b>.</p>
             </li>
             <li value="2">
-                <p>Select the file.</p>
+                <p>Selecteer het bestand.</p>
             </li>
             <li value="3">
-                <p>On the <b>File Details</b> pane, under the <b>Previous Versions</b> menu, select the previous version of the file.</p>
+                <p>In het deelvenster <b>Bestanddetails</b> kunt u onder het kopje <b>Vorige versies</b> een eerdere versie van het bestand selecteren.</p>
             </li>
             <li value="4">
-                <p>Select the <b>More Actions</b> (<img src="../../../Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;" />):</p>
+                <p>Klik op <b>Meer acties</b> (<img src="/documentation_files/2018/webapps/29/Content/nl/Resources//Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;" />):</p>
                 <p>
-                    <img src="../../../Images/Screenshots/Previous-version-630x530.png" />
+                    <img src="/documentation_files/2018/webapps/29/Content/nl/Resources//Images/Screenshots/Previous-version-630x530.png" />
                 </p>
                 <ul>
                     <li value="1">
-                        <p><b>Download</b> - Download the file to your computer</p>
+                        <p><b>Downloaden</b> - Download het bestand</p>
                     </li>
                     <li value="2">
-                        <p><b>View</b> - View the file in CaseWare Cloud</p>
+                        <p><b>Bekijken</b> - Bekijk het bestand in CaseWare Cloud</p>
                     </li>
                     <li value="3">
-                        <p><b>Delete</b> - Delete the previous version permanently. This file will not appear in the Recycle Bin.</p>
+                        <p><b>Verwijderen</b> - Verwijder de eerdere versie permanent. Het bestand komt dan niet nog in de Prullenbak.</p>
                     </li>
                 </ul>
             </li>
         </ol>
         <p>&#160;</p>
-        <h2 id="Recovering-folders-and-files-from-the-Recycle-bin">Recovering folders and files from the Recycle Bin</h2>
-        <p>When you delete a file or folder, it is sent to the Recycle Bin. You can retrieve any deleted folder or file from the Recycle Bin.</p>
-        <p style="font-weight: bold;">To recover folders and files from the Recycle Bin:</p>
+        <h2 id="Recovering-folders-and-files-from-the-Recycle-bin">Mappen en bestanden herstellen uit de Prullenbak</h2>
+        <p>Als u een map of bestand verwijderd wordt het verplaatst naar de Prullenbak. Vanuit de Prullenbak kunt u nog items terugzetten.</p>
+        <p style="font-weight: bold;">Mappen en bestanden herstellen uit de Prullenbak:</p>
         <ol>
             <li value="1">
-                <p>Open the <b>Files</b> page.</p>
+                <p>Ga naar de pagina <b>Bestanden</b>.</p>
             </li>
             <li value="2">
-                <p>Select the <b>Recycle Bin</b> from the left pane to access your deleted files.</p>
+                <p>In het linkerpaneel klikt u bij mappen op de <b>Prullenbak</b> om van daaruit toegang te krijgen tot uw verwijderde bestanden.</p>
                 <p>
-                    <img src="../../../Images/Screenshots/Recycle-Bin630x350.png" />
+                    <img src="/documentation_files/2018/webapps/29/Content/nl/Resources//Images/Screenshots/Recycle-Bin630x350.png" />
                 </p>
             </li>
             <li value="3">
-                <p>Select the files from the list you want to restore</p>
+                <p>Selecteer de bestanden die u wilt terugzetten</p>
             </li>
             <li value="4">
-                <p>In the <b>File details</b> pane, select the <b>More Actions</b>(<img src="../../../Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;" />) <b>| Restore</b> to move this file back to its original entity.</p>
+                <p>In het detailvenster <b>Bestanddetails</b> klikt u op <b>Meer acties</b> (<img src="/documentation_files/2018/webapps/29/Content/nl/Resources//Icons/Ellipsis-20x16.png" style="vertical-align: text-bottom;" />) <b>| Terugzetten</b> om het bestand weer te herstellen naar de originele entiteit.</p>
                 <p>
-                    <img src="../../../Images/Screenshots/Restore-630x480.png" />
+                    <img src="/documentation_files/2018/webapps/29/Content/nl/Resources//Images/Screenshots/Restore-630x480.png" />
                 </p>
             </li>
         </ol>
-        <h2 id="Restoration-limitations">Restoration Limitations </h2>
-        <p>If you are still having problems recovering then you can send a recovery request to our support team. However, Data may be restored up to 80 days after the backup date. CaseWare International restores backup client data for a fee dependent on the number of files restored. Restores can take several hours depending on the volume of data.</p>
-        <p>Depending on the amount of data required, there with a minimum charge of $75 per recovery request. The process may take a minimum of 24 hours for us to recover the files.</p>
+        <h2 id="Restoration-limitations">Limiet voor herstel </h2>
+        <p>Mocht u nog problemen hebben met bestanden herstellen dan kunt u een herstelverzoek indienen bij ons supportteam. Let wel, data kan tot 80 dagen na de back-updatum nog hersteld worden. CaseWare International kan klantgegevens herstellen; het tarief en de benodigde tijd hiervoor ligt aan de hoeveelheid te herstellen bestanden. </p>
+        <p>De kosten bedragen minimaal €75 per verzoek. Het herstelproces kan minstens een dag in beslag nemen.</p>
     </body>
 </html>

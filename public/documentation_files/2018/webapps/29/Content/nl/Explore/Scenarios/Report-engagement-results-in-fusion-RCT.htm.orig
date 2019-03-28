@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<html MadCap:lastBlockDepth="9" MadCap:lastHeight="1853" MadCap:lastWidth="1062" class="Default-1col" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.RCT">
+=======
+<html class="Default-1col" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.RCT">
+>>>>>>> develop
+    <head><title>Report engagement results in Fusion RCT</title>
+        <link href="../../Resources/Stylesheets/CWI.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Once you have finished with all of the fieldwork for your online engagement, your next step is to create a report based on your results." />
+    </head>
+    <body>
+        <h1>Report engagement results in Fusion RCT</h1>
+        <MadCap:snippetBlock src="/documentation_files/2018/webapps/29/Content/nl/Resources//Snippets/TopicRequiresRCT.flsnp" />
+        <p>Once you finish the fieldwork for your online engagement, your next step is to conclude the engagement. </p>
+        <h2>Prepare the financial statements</h2>
+        <p>You can create a financial statements document for the client where you explain your findings and present a conclusion. The financial statements document is automatically populated with some data as you complete other documents. However, you need to  customize the financial statements document for your client.</p>
+        <p>To prepare the financial statements in Fusion RCT, see <a href="../../Engagements/Statements-and-Conclusions/Prepare-financial-statements-in-fusion-RCT.htm">Prepare financial statements</a> and <a href="../../Practice/Templates-and-Authoring/Customize-financial-statements-in-Fusion-RCT.htm">Customize financial statements</a>.</p>
+        <h2>Review changes in the financial statements</h2>
+        <p>You can review the changes  made by your engagement team members to the financial statements. This includes added, modified and deleted content. Review tools mark the changes made by your team    from the original template  created by the author. The following tools are available:</p>
+        <p>
+            <img src="/documentation_files/2018/webapps/29/Content/nl/Resources//Images/review-tools-filter.PNG" style="width: 253px;height: 175px;" />
+        </p>
+        <p>You can also filter the displayed changes. For example, if you are reviewing dynamic tables, you can filter out all other types of changes and show dynamic table changes only.</p>
+        <MadCap:snippetBlock src="/documentation_files/2018/webapps/29/Content/nl/Resources//Snippets/RCT-to-review-changes-in-a-financial-statement.flsnp" />
+        <h2 id="Print-the-financial-statements">Print the financial statements</h2>
+        <p>If you require a physical or digital copy of a financial statement, you can print the statement. The Print option converts the document to a PDF format which you can print or save.</p>
+        <MadCap:snippetBlock src="/documentation_files/2018/webapps/29/Content/nl/Resources//Snippets/RCT-to-print-the-financial-statement.flsnp" />
+        <p>The financial statement is converted to a PDF file that displays on a new browser tab. </p>
+        <h2 id="archiving">Archive engagement information</h2>
+        <p>You can download archival engagement information for offline storage.</p>
+        <h3 id="download-ref-file">Download a reference copy</h3>
+        <p>You can download a .zip file containing all of the documents in your engagement’s document manager. Forms and checklists will be in PDF format. Documents that you uploaded to the engagement file are included unchanged.</p>
+        <MadCap:snippetBlock src="/documentation_files/2018/webapps/29/Content/nl/Resources//Snippets/downloading-reference-copy.flsnp" />
+        <h3 id="download-xbrl-file">Download an XBRL file</h3>
+        <p>If your engagement includes eXtensible Business Reporting Language (XBRL) information, you can download an .xml file containing this information.</p>
+        <MadCap:snippetBlock src="/documentation_files/2018/webapps/29/Content/nl/Resources//Snippets/downloading-xbrl-file.flsnp" />
+    </body>
+</html>

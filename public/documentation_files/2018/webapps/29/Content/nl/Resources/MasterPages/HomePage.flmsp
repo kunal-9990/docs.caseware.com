@@ -16,7 +16,7 @@
                     </div>
                     <div class="small-12 medium-6 columns">
                         <div class="footer-links">PDFsTipsFAQsCompany</div>
-                        <p class="Copyright">Copyright © 2015 <MadCap:variable name="General.CompanyName"/></p>
+                        <p class="Copyright">Copyright © 2015 <MadCap:variable name="General.CompanyName" /></p>
                     </div>
                     <div class="small-12 medium-3 footer-icons columns"><a href="https://twitter.com/#!/MadCapDocTeam" target="_blank"><img src="../Icons/TwitterIcon.png" alttext="" class="Hyperlinked"/></a><a href="http://www.facebook.com/madcapdocteam" target="_blank"><img src="../Icons/FacebookIcon.png" alttext="" class="Hyperlinked"/></a>
                     </div>

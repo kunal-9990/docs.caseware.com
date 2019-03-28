@@ -3,6 +3,8 @@ module.exports = () => {
 
     $(".toc__container").html("");
 
+    
+
     var loc = window.location.href;
     var pathname = window.location.pathname;
     pathname = pathname.replace(/\/\/+/g, '/');
@@ -12,12 +14,14 @@ module.exports = () => {
     // to have different TOCxml routes
     if (process.env.NODE_ENV === 'development') {
         // used for staging
+        
         var year = routeComponents[1];
+        console.log(year);
         var product = routeComponents[2];
         var version = routeComponents[3];
         var lang = routeComponents[4];
         var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
-        var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
+        var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
     } else {
         // used for live
         var year = routeComponents[1];
@@ -25,7 +29,7 @@ module.exports = () => {
         var version = routeComponents[3];
         var lang = routeComponents[4];
         var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
-        var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/OnlineOutput.xml";
+        var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
     }
     
     $.ajax({

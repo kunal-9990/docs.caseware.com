@@ -75,7 +75,7 @@
                     <div class="left mobileleft">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                            </button><a class="navbar-brand iconcontainer" href="#"><img src="/documentation_files/2018/webapps/29/Content/Resources//CaseWare_Logos/Cloud-logo_103x47.png" class="navicon" /></a>
+                            </button><a class="navbar-brand iconcontainer" href="#"><img src="/documentation_files/2018/webapps/29/Content/en/Resources//CaseWare_Logos/Cloud-logo_103x47.png" class="navicon" /></a>
                         </div>
                     </div>
                     <div class="wrapmiddle">
@@ -94,7 +94,7 @@
                     <div class="left fullleft">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                            </button><a class="navbar-brand iconcontainer" href="#"><img src="/documentation_files/2018/webapps/29/Content/Resources//CaseWare_Logos/Cloud-logo_103x47.png" class="navicon" /></a>
+                            </button><a class="navbar-brand iconcontainer" href="#"><img src="/documentation_files/2018/webapps/29/Content/en/Resources//CaseWare_Logos/Cloud-logo_103x47.png" class="navicon" /></a>
                         </div>
                     </div>
                     <div class="right">
@@ -110,7 +110,7 @@
         <footer class="footer">
             <div class="row footer">
                 <div class="col-xs-4">
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources//CaseWare_Logos/Flat_Help_CW_Footer.svg" class="footerlogo" width="280" /><a href="https://www.caseware.com"></a>
+                    <img src="/documentation_files/2018/webapps/29/Content/en/Resources//CaseWare_Logos/Flat_Help_CW_Footer.svg" class="footerlogo" width="280" /><a href="https://www.caseware.com"></a>
                 </div>
                 <div class="footertext col-xs-4">
                     <p class="footertext text-center">Copyright © 2018 CaseWare International</p>

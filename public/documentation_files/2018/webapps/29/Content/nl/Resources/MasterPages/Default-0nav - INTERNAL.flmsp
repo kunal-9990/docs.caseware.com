@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="11" MadCap:lastHeight="349" MadCap:lastWidth="691">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="11" MadCap:lastHeight="349" MadCap:lastWidth="1025">
     <head>
         <link rel="shortcut icon" href="/Resources/CaseWare_Logos/favicon.ico" type="image/x-icon" />
         <meta name="google-translate-customization" content="ad1fc64b68ce99cb-1145fc38ed0101e8-g15336b4538df18af-1a">
         </meta>
-		<meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex" />
         <script>/*<![CDATA[*/</script>
 
 			<!-- load jQuery 3.1.1 -->
@@ -57,8 +57,9 @@
 			}
 			}
 		</script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script type="text/javascript">/* <![CDATA[ */
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+        </script>
+        <script type="text/javascript">/* <![CDATA[ */
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,es,fr,nl,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-37974433-25'}, 'google_translate_element');
       }
@@ -97,12 +98,12 @@
         <footer class="footer">
             <div class="row footer">
                 <div class="col-xs-4">
-                    <img src="/Resources/CaseWare_Logos/Flat_Help_CW_Footer.svg" class="footerlogo" width="280"/><a href="https://www.caseware.com"></a>
+                    <img src="/documentation_files/2018/webapps/29/Content/nl/Resources//CaseWare_Logos/Flat_Help_CW_Footer.svg" class="footerlogo" width="280"/><a href="https://www.caseware.com"></a>
                 </div>
                 <div class="footertext col-xs-4">
-                    <p class="footertext text-center">Copyright © 2017 CaseWare International</p>
+                    <p class="footertext text-center">Copyright © 2018 CaseWare International</p>
                 </div>
-                <div class="footertext col-xs-4 text-center"><a href="https://www.linkedin.com/groups/1935174/profile"><i class="fa fa-linkedin-square sociallink fa-2x"></i></a><a href="http://www.facebook.com/pages/CaseWare-International-Inc/54418196590?ref=ts"><i class="fa fa-facebook-square sociallink fa-2x"></i></a><a href="https://twitter.com/CaseWare"><i class="fa fa-twitter-square sociallink fa-2x"></i></a><a href="http://www.youtube.com/user/casewarevids?feature=results_main"><i class="fa fa-youtube-square sociallink fa-2x"></i></a><a href="https://www.caseware.com/caseware-rss"><i class="fa fa-rss-square sociallink fa-2x"></i></a>
+                <div class="footertext col-xs-4 text-center"><a href="https://www.linkedin.com/groups/1935174/profile"><i class="fa fa-linkedin-square sociallink fa-2x"></i></a><a href="http://www.facebook.com/pages/CaseWare-International-Inc/54418196590?ref=ts"><i class="fa fa-facebook-square sociallink fa-2x"></i></a><a href="https://twitter.com/CaseWare"><i class="fa fa-twitter-square sociallink fa-2x"></i></a><a href="http://www.youtube.com/user/casewarevids?feature=results_main"><i class="fa fa-youtube-square sociallink fa-2x"></i></a>
                 </div>
             </div>
         </footer>
@@ -123,9 +124,9 @@
         </script>
         <script src="/assets/js/fromWorkflowFlash.js">
         </script>
-		<script src="/assets/js/helpers.js">
-		</script>
-		<script src="/assets/js/enableDownload.js">
-		</script>
+        <script src="/assets/js/helpers.js">
+        </script>
+        <script src="/assets/js/enableDownload.js">
+        </script>
     </body>
 </html>

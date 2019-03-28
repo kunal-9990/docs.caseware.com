@@ -1,55 +1,35 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-searchable="False" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="robots" content="noindex" /><title>Integrate single sign-on</title>
-        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
         <link href="../../Resources/Stylesheets/Empty.css" rel="stylesheet" />
-        <script src="/documentation_files/2018/webapps/29/Content/Resources//Scripts/custom.modernizr.js">
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/custom.modernizr.js">
         </script>
-        <script src="/documentation_files/2018/webapps/29/Content/Resources//Scripts/jquery.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/jquery.min.js">
         </script>
-        <script src="/documentation_files/2018/webapps/29/Content/Resources//Scripts/require.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/require.min.js">
         </script>
-        <script src="/documentation_files/2018/webapps/29/Content/Resources//Scripts/require.config.js">
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/require.config.js">
         </script>
-        <script src="/documentation_files/2018/webapps/29/Content/Resources//Scripts/foundation.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/foundation.min.js">
         </script>
-        <script src="/documentation_files/2018/webapps/29/Content/Resources//Scripts/plugins.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/plugins.min.js">
         </script>
-        <script src="/documentation_files/2018/webapps/29/Content/Resources//Scripts/MadCapAll.js">
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/MadCapAll.js">
         </script>
     </head>
     <body>
         <h1>Integrate single sign-on</h1>
-        <ul class="topiccontents">
-            <li value="1"><a href="#Register" class="selected">Register a new app for single sign-on in Azure</a>
-            </li>
-            <li value="2"><a href="#Generate" class="selected">Generate a client secret</a>
-            </li>
-            <li value="3"><a href="#Generate2" class="selected">Generate a metadata endpoint</a>
-            </li>
-            <li value="4"><a href="#Generate3" class="selected">Generate a reply URL in Cloud</a>
-            </li>
-            <li value="5"><a href="#SetReply" class="selected">Set your Reply URL in Azure</a>
-            </li>
-            <li value="6"><a href="#TestYour" class="selected">Test your single sign-on integration</a>
-            </li>
-            <li value="7"><a href="#FAQ" class="selected">Frequently Asked Questions</a>
-                <ul>
-                    <li value="1"><a href="#Why" class="selected">Why am I receiving an error message?</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
         <p>Cloud supports single sign-on (SSO) with Azure Active Directory (Azure AD). Using SSO with Cloud reduces the number of passwords staff members are required to memorize and helps administrators manage account issues (such as password resets) from a single location.
 </p>
         <h2><a name="Register"></a>Register a new app for single sign-on in Azure</h2>
@@ -63,7 +43,7 @@
             <li value="2">
                 <p>From the left-hand navigation pane, select <b>Azure Active Directory | App registrations | New application registration</b>.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources//Images/firm-settings-sso-azure-new-app.png" alt="Registering a new app in Azure Active Directory" />
+                    <img src="/documentation_files/2018/webapps/29/Content/en/Resources//Images/firm-settings-sso-azure-new-app.png" alt="Registering a new app in Azure Active Directory" />
                 </p>
             </li>
             <li value="3">
@@ -96,7 +76,7 @@
             <li value="2">
                 <p>Select your app, then select <b>Settings | Keys</b>.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources//Images/firm-settings-sso-azure-app-settings-keys.png" alt="The Keys button in the Settings pane." />
+                    <img src="/documentation_files/2018/webapps/29/Content/en/Resources//Images/firm-settings-sso-azure-app-settings-keys.png" alt="The Keys button in the Settings pane." />
                 </p>
             </li>
             <li value="3">
@@ -106,7 +86,7 @@
             <li value="4">
                 <p>Your key value is displayed. Save a copy of your key value; you’ll need it when you set your single sign-on endpoint in Cloud.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources//Images/firm-settings-sso-azure-app-settings-key-value.png" alt="A key with its key value displayed." />
+                    <img src="/documentation_files/2018/webapps/29/Content/en/Resources//Images/firm-settings-sso-azure-app-settings-key-value.png" alt="A key with its key value displayed." />
                 </p>
             </li>
         </ol>
@@ -122,7 +102,7 @@
             <li value="2">
                 <p>Copy your Directory ID.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources//Images/firm-settings-sso-azure-user-settings-directory-ID.png" alt="The Copy button on the Properties pane." />
+                    <img src="/documentation_files/2018/webapps/29/Content/en/Resources//Images/firm-settings-sso-azure-user-settings-directory-ID.png" alt="The Copy button on the Properties pane." />
                 </p>
             </li>
             <li value="3">
@@ -151,23 +131,23 @@
                         <p><b>Identity provider display name</b>: Enter a meaningful name for you identity provider. For example, Azure. This name will be displayed next to your Reply URL to identify it.</p>
                     </li>
                     <li value="2">
-                        <p><b>Identity provider metadata endpoint</b>: Enter your metadata endpoint. To learn more, see <a href="#Generate2" class="MCXref xref selected">Generate a metadata endpoint</a>.</p>
+                        <p><b>Identity provider metadata endpoint</b>: Enter your metadata endpoint. To learn more, see <a href="#Generate2" class="MCXref xref">Generate a metadata endpoint</a>.</p>
                     </li>
                     <li value="3">
-                        <p><b>Client ID</b>: Enter your Application ID. To learn more about generating an Application ID, see <a href="#Register" class="MCXref xref selected">Register a new app for single sign-on in Azure</a>.</p>
+                        <p><b>Client ID</b>: Enter your Application ID. To learn more about generating an Application ID, see <a href="#Register" class="MCXref xref">Register a new app for single sign-on in Azure</a>.</p>
                     </li>
                     <li value="4">
-                        <p><b>Client secret</b>: Enter your client secret. To learn more, <a href="#Generate2" class="MCXref xref selected">Generate a metadata endpoint</a>.</p>
+                        <p><b>Client secret</b>: Enter your client secret. To learn more, <a href="#Generate2" class="MCXref xref">Generate a metadata endpoint</a>.</p>
                     </li>
                 </ul>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources//Images/firm-settings-sso-identity-provider.png" alt="The Single Sign-On page in Settings." />
+                    <img src="/documentation_files/2018/webapps/29/Content/en/Resources//Images/firm-settings-sso-identity-provider.png" alt="The Single Sign-On page in Settings." />
                 </p>
             </li>
             <li value="4">
                 <p>Select <b>Add</b>. Your reply URL is displayed. Save a copy of the reply URL; you’ll need to add it to your app in Azure AD.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources//Images/firm-settings-sso-azure-reply-url.png" alt="A reply URL displayed on the Single Sign-On page." />
+                    <img src="/documentation_files/2018/webapps/29/Content/en/Resources//Images/firm-settings-sso-azure-reply-url.png" alt="A reply URL displayed on the Single Sign-On page." />
                 </p>
             </li>
         </ol>
@@ -180,17 +160,17 @@
             <li value="1">
                 <p>Select <b>Azure Active Directory | App Registration</b>, then select your app.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources//Images/firm-settings-sso-azure-select-app.png" alt="An app displayed on the App registrations pane." />
+                    <img src="/documentation_files/2018/webapps/29/Content/en/Resources//Images/firm-settings-sso-azure-select-app.png" alt="An app displayed on the App registrations pane." />
                 </p>
             </li>
             <li value="2">
                 <p>Select <b>Settings | Reply URLs</b>.</p>
                 <p>
-                    <img src="/documentation_files/2018/webapps/29/Content/Resources//Images/firm-settings-sso-azure-app-set-reply-url.png" alt="The Reply URLs button displayed on the Settings pane." />
+                    <img src="/documentation_files/2018/webapps/29/Content/en/Resources//Images/firm-settings-sso-azure-app-set-reply-url.png" alt="The Reply URLs button displayed on the Settings pane." />
                 </p>
             </li>
             <li value="3">
-                <p>Clear the Reply URL field, then enter your reply URL. To learn more, see <a href="#Generate3" class="MCXref xref selected">Generate a reply URL in Cloud</a>.</p>
+                <p>Clear the Reply URL field, then enter your reply URL. To learn more, see <a href="#Generate3" class="MCXref xref">Generate a reply URL in Cloud</a>.</p>
             </li>
             <li value="4">
                 <p>Select <b>Save</b>.</p>
@@ -198,7 +178,7 @@
         </ol>
         <p>Your reply URL is set.</p>
         <h2 id="TestYour">Test your single sign-on integration</h2>
-        <p>Now that Cloud is integrated with your Active Directory domain, you can test the integration by selecting <b>Go to Single Sign-On</b> from your Cloud sign-in page and completing the sign-in process. If it fails, see <a href="#Why" class="MCXref xref selected">Why am I receiving an error message?</a> for more information.</p>
+        <p>Now that Cloud is integrated with your Active Directory domain, you can test the integration by selecting <b>Go to Single Sign-On</b> from your Cloud sign-in page and completing the sign-in process. If it fails, see <a href="#Why" class="MCXref xref">Why am I receiving an error message?</a> for more information.</p>
         <h2 id="FAQ">Frequently Asked Questions</h2>
         <p>This section contains frequently asked questions about integrating single sign-on with Cloud.</p>
         <hr width="100%" size="0" align="center" />
@@ -235,7 +215,7 @@
                 <p>From the Cloud menu, select <b>Firm | Single Sign-On | Identity Provider</b>.</p>
             </li>
             <li value="3">
-                <p>Select the Delete icon(<img src="/documentation_files/2018/webapps/29/Content/Resources//Icons/Delete-16x16.png" style="vertical-align: text-bottom;" />) to remove your identity provider.</p>
+                <p>Select the Delete icon(<img src="/documentation_files/2018/webapps/29/Content/en/Resources//Icons/Delete-16x16.png" style="vertical-align: text-bottom;" />) to remove your identity provider.</p>
             </li>
             <li value="4">
                 <p>Add your identity provider again, and confirm that you added the correct client secret.</p>
@@ -254,7 +234,7 @@ When configuring Azure AD, you may entered an incorrect identity provider. </p>
                 <p>From the Cloud menu, select <b>Firm | Single Sign-On | Identity Provider</b>.</p>
             </li>
             <li value="3">
-                <p>Select the  Delete icon(<img src="/documentation_files/2018/webapps/29/Content/Resources//Icons/Delete-16x16.png" style="vertical-align: text-bottom;" />) your identity provider.</p>
+                <p>Select the  Delete icon(<img src="/documentation_files/2018/webapps/29/Content/en/Resources//Icons/Delete-16x16.png" style="vertical-align: text-bottom;" />) your identity provider.</p>
             </li>
             <li value="4">
                 <p>Add your identity provider again, and confirm that you added the correct client ID.</p>
@@ -279,7 +259,7 @@ When configuring Azure AD, you may entered an incorrect identity provider. </p>
             </li>
         </ol>
         <hr width="100%" size="0" align="center" />
-        <p><b>No available Cloud access licenses. To obtain additional licenses, contact your administrator.</b> <![CDATA[ ]]></p>
+        <p><b>No available Cloud access licenses. To obtain additional licenses, contact your administrator.</b> </p>
         <p>
 The number of users in your Active Directory domain exceeds the number of available Cloud licenses. When the number of users in your Active Directory domain exceeds the number of available licenses, some staff will be unable to sign in. To permit all staff members to sign in, purchase a license from MyCaseWare for each staff member or contact your local distributor.</p>
         <hr width="100%" size="0" align="center" />
