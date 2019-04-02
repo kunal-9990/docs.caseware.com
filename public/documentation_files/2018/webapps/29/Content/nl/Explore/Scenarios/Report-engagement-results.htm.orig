@@ -54,12 +54,7 @@
         <p>If you add custom headers or footers to a Page Break section, that header and footer will be used on all of the pages that follow the page break. If you add them to a Grouping section, the header and footer will be applied to all pages that contain group content.</p>
         <h2 id="Print-the-financial-statements">Print the financial statements</h2>
         <p>If you require a physical or digital copy of the current financial statement, you can print the statement. The Print option converts the current statement into PDF format, which you can print or mail as required. </p>
-<<<<<<< HEAD
         <MadCap:snippetBlock src="/documentation_files/2018/webapps/29/Content/nl/Resources//Project Files/SmartEngagement/Snippets/To-print-the-financial-statements.flsnp" />
-=======
-        <p class="note inline"><b>Note</b>: If you're using the old design for financial statements, see <MadCap:xref href="#Print">Print the financial statements (Old Design)</MadCap:xref>.</p>
-        <MadCap:snippetBlock src="/documentation_files/2018/webapps/29/Content/nl/Resources//Snippets/To-print-the-financial-statements.flsnp" />
->>>>>>> develop
         <p>The financial statement is converted to a PDF file which is displayed on a new browser tab. You can save or print the PDF&#160;file from the new tab.</p>
         <h2 id="archiving">Archive engagement information</h2>
         <p>You can download archival engagement information for offline storage.</p>

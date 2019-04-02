@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <html MadCap:lastBlockDepth="9" MadCap:lastHeight="1853" MadCap:lastWidth="1062" class="Default-1col" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.RCT">
-=======
-<html class="Default-1col" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.RCT">
->>>>>>> develop
     <head><title>Report engagement results in Fusion RCT</title>
         <link href="../../Resources/Stylesheets/CWI.css" rel="stylesheet" type="text/css" />
         <meta name="description" content="Once you have finished with all of the fieldwork for your online engagement, your next step is to create a report based on your results." />

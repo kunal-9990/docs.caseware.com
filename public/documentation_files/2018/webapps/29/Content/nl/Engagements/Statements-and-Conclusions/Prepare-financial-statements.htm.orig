@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Product.SE">
-=======
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="7196" MadCap:lastWidth="1548" MadCap:conditions="Product.SE">
->>>>>>> develop
     <head><title>Prepare financial statements </title>
         <meta name="description" content="As you set up your engagement, the financial statement will begin populating data automatically. You can continue preparing the financial statement by selecting Documents and then the Financial statements document." />
     </head>

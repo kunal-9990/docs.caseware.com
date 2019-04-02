@@ -42,11 +42,7 @@
             </Content>
         </Frame>
     </Page>
-<<<<<<< HEAD
     <Page Width="7in" Height="9in" Padding="20px" PageSize="Letter" PageType="normal" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BackgroundImage="../../Images/review_page1_pt.png" BackgroundPositionX="left" BackgroundPositionY="top" BleedLeft="0.25in" BleedRight="0.25in" BleedTop="0.25in" BleedBottom="0.25in" BackgroundRepeat="stretch">
-=======
-    <Page Width="7in" Height="9in" Padding="20px" PageSize="Letter" PageType="left" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BackgroundImage="../../Project Files/CaseWare PDF Template/Images/review_page1_pt.png" BackgroundPositionX="left" BackgroundPositionY="top" BleedLeft="0.25in" BleedRight="0.25in" BleedTop="0.25in" BleedBottom="0.25in" BackgroundRepeat="stretch">
->>>>>>> develop
         <Frame X="-0.5in" Y="1in" Width="7.5in" Height="8.5in" Flow="body" Right="-48px" Bottom="-48px" Anchors="" FlowIndex="1" />
         <Frame X="-0.5in" Y="-0.6041667in" Width="4.5in" Height="0.75in" Flow="header" Right="240px" Bottom="850px" Anchors="" FlowIndex="0" VerticalAlign="top">
             <Content>
@@ -59,11 +55,7 @@
             </Content>
         </Frame>
     </Page>
-<<<<<<< HEAD
     <Page Width="7in" Height="9in" Padding="20px" PageSize="Letter" PageType="firstright" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BackgroundImage="../../Images/review_page1_pt.png" BackgroundPositionX="left" BackgroundPositionY="top" BleedLeft="0.25in" BleedRight="0.25in" BleedTop="0.25in" BleedBottom="0.25in" BackgroundRepeat="stretch">
-=======
-    <Page Width="7in" Height="9in" Padding="20px" PageSize="Letter" PageType="normal" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" Orientation="portrait" BackgroundImage="../../Project Files/CaseWare PDF Template/Images/review_page1_pt.png" BackgroundPositionX="left" BackgroundPositionY="top" BleedLeft="0.25in" BleedRight="0.25in" BleedTop="0.25in" BleedBottom="0.25in" BackgroundRepeat="stretch">
->>>>>>> develop
         <Frame X="-0.5in" Y="1in" Width="7.5in" Height="8.5in" Flow="body" Right="-48px" Bottom="-48px" Anchors="" FlowIndex="1" />
         <Frame X="-0.5in" Y="-0.6041667in" Width="4.5in" Height="0.75in" Flow="header" Right="240px" Bottom="850px" Anchors="" FlowIndex="0" VerticalAlign="top">
             <Content>
