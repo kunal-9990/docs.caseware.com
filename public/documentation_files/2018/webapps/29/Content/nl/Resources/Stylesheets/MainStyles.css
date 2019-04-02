@@ -938,3 +938,9 @@ html.templateTopic div.sideContent
 	}
 }
 
+ul.discBullet
+{
+	list-style-image: none;
+	list-style-type: disc;
+}
+

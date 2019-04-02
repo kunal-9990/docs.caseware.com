@@ -4,9 +4,9 @@
     @include('partials.meta', [
         'canonical' => url('/'),
         'url' => url('/'),
-        'title' => 'documentation',
-        'og_description' => 'test description',
-        'canonical' => 'test canonical url',
+        'title' => 'CaseWare Cloud Search Results', 
+        'og_description' => 'CaseWare Cloud Search Results',
+        'canonical' => 'CaseWare Cloud Search Results',
         'doNotTranslate' => isset($doNotTranslate) ? $doNotTranslate : false
     ])
 @stop

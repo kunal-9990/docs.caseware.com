@@ -6,41 +6,33 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Administrators can import a large number of users at once using a .csv file or block of delimited text; recommended for large firms" /><title>Medewerkers of contactpersonen importeren vanuit een lijst</title>
-        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
-        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
         <link href="../../Resources/Stylesheets/Empty.css" rel="stylesheet" />
-        <script src="../../Resources/Scripts/custom.modernizr.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/custom.modernizr.js">
         </script>
-        <script src="../../Resources/Scripts/jquery.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/jquery.min.js">
         </script>
-        <script src="../../Resources/Scripts/require.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/require.min.js">
         </script>
-        <script src="../../Resources/Scripts/require.config.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/require.config.js">
         </script>
-        <script src="../../Resources/Scripts/foundation.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/foundation.min.js">
         </script>
-        <script src="../../Resources/Scripts/plugins.min.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/plugins.min.js">
         </script>
-        <script src="../../Resources/Scripts/MadCapAll.js">
+        <script src="/documentation_files/2018/webapps/29/Content/nl/Resources//Scripts/MadCapAll.js">
         </script>
     </head>
     <body>
         <h1>Medewerkers of contactpersonen importeren vanuit een lijst</h1>
-        <ul class="topiccontents">
-            <li value="1"><a href="#Preparing-a-list-for-import">Een lijst maken om te importeren</a>
-            </li>
-            <li value="2"><a href="#Importing-the-list-to-Cloud">De lijst naar Cloud importeren</a>
-            </li>
-            <li value="3"><a href="#After-the-import">Afronding</a>
-            </li>
-        </ul>
-        <p>In CaseWare Cloud heeft u twee mogelijkheden om medewerkers of contactpersonen aan uw organisatie toe te voegen: een lijst importeren vanuit een .csv-bestand of tekstbestand met gescheiden waarden, of door gebruikers individueel toe te voegen in de Cloud. Als u meer dan 50 medewerkers en/of contactpersonen wilt invoeren raden wij aan om een gebruikerslijst te importeren.</p>
+        <p>In CaseWare Cloud heeft u twee mogelijkheden om medewerkers of contactpersonen aan uw organisatie toe te voegen: een lijst importeren vanuit een .csv-bestand of met een tekstbestand met gescheiden waarden, of door gebruikers individueel toe te voegen in Cloud. Als u meer dan 50 medewerkers en/of contactpersonen wilt invoeren raden wij aan om een gebruikerslijst te importeren.</p>
         <h2 id="Preparing-a-list-for-import">Een lijst maken om te importeren</h2>
-        <p>Door gebruikers te importeren vanuit een lijst kunt u in één keer een groot aantal gebruikers tegelijk toevoegen. Het bestand met de lijst of de tekst kan het gebruikersprofiel en de contactinformatie toevoegen en ook aan welke groep de gebruiker is toegewezen. Als een opgegeven groep nog niet bestaat in Cloud, wordt bij het importeren de groep meteen aangemaakt.</p>
+        <p>Door gebruikers te importeren vanuit een lijst kunt u in één keer een groot aantal gebruikers tegelijk toevoegen. Vanuit het bestand of de ingevoerde tekst wordt het gebruikersprofiel en de contactinformatie toegevoegd. Ook kunt u direct opgeven in welke groep de gebruiker is toegewezen. Als een opgegeven groep nog niet bestaat in Cloud, wordt bij het importeren de groep meteen aangemaakt.</p>
         <p>U heeft een lijst met gebruikers nodig in een <b>.csv-bestand</b> of in een <b>onopgemaakte tekst met gescheiden waarden</b>. </p>
         <p>Welke manier u ook gebruikt, let er op dat:</p>
         <ul>
@@ -48,8 +40,52 @@
             <li value="2">iedere kolom één waarde bevat, zoals de naam, het e-mailadres of de gebruikersgroep. Als u een gebruiker in meer dan één groep wilt opnemen, plaats dan een tilde (~) tussen iedere groepsnaam.</li>
         </ul>
         <p>Hier volgt een voorbeeld. Een beheerder wil vier medewerkers aan Cloud toevoegen:</p>
-        <p><i>Achternaam, Voornaam, E-mailadres, Initialen, Functienaam, Telefoonnummer, Groep<br />Barnett, Betsy, betsy.barnett@peakstreak.com, BB, Senior, 416-555-5117 Ext: 128, G1<br />Henry, Isabel, isabel.henry@peakstreak.com, IH, Supervisor, 416-555-5117 Ext: 176, G1~G2<br />Holt, Ben, ben.holt@peakstreak.com, BH, Senior, 416-555-2115, G2<br />Nguyen, Nicholas, nicholas.nguyen@peakstreak.com, NN, Junior, 416-555-1956, G2</i>
+        <p><i>Achternaam, Voornaam, E-mailadres, Initialen, Titel, Telefoonnummer, Groep<br />Brooy, Jan, J.Brooy@cwtestgebruiker.nl, JB, Senior, 416-555-5117 Ext: 128, G1<br />de Graaf, Nicole, NGra@cwtestgebruiker.nl, NG, Teamleider, 416-555-5117 Ext: 176, G1~G2<br />Holt, Ben, ben.holt@cwtestgebruiker.nl, BH, Senior, 416-555-2115, G2<br />Hartman, Ron, Ron.Hartman@cwtestgebruiker.nl, NN, Stagiair, 416-555-1956, G2</i>
         </p>
         <h2 id="Importing-the-list-to-Cloud">De lijst naar Cloud importeren</h2>
-        <p>Zodra u de lijst klaar heeft kunt u de gebruikers importeren naar Cloud.</p>(missing or bad snippet)<p>Na afronding verschijnt een bevestigingsvenster in beeld waarop te zien is hoeveel gebruikers zijn toegevoegd of gewijzigd. Als u ook groepen heeft opgegeven worden deze ook toegevoegd of gewijzigd.</p><h2 id="After-the-import">Afronding</h2><p>Als u een lijst met gebruikers heeft geïmporteerd verstuurd Cloud automatisch een e-mail naar deze gebruikers met een link naar de inlogpagina. U vindt het bericht in deze e-mail onder <b>Instellingen | E-mail | E-mail Log</b>.</p><p>Als gebruikers op de inlogpagina komen wordt hen gevraagd hun e-mailadres in te vullen en hun wachtwoord te bevestigen. Er kan een norm worden ingevoerd over de sterkte van een wachtwoord en hoe vaak medewerkers deze moeten vervangen. Zie <b>Instellingen | Beveiliging | Wachtwoordinstellingen.</b></p></body>
+        <p>Zodra u de lijst klaar heeft kunt u de gebruikers importeren naar Cloud.</p>
+        <p><b>Een lijst met gebruikers importeren:</b>
+        </p>
+        <ol>
+            <li value="1">
+                <p>U heeft de rol <i>Beheerder personeel</i> nodig of vergelijkbare machtigingen.</p>
+            </li>
+            <li value="2">
+                <p>Klik in het Cloudmenu op <b>Personeel</b> of <b>Contactpersonen</b>.</p>
+            </li>
+            <li value="3">
+                <p>Klik op de knop Nieuw en onder het kopje import of <b>Personeel</b> of op <b>Contactpersonen</b>.</p>
+            </li>
+            <li value="4">
+                <p>In het venster Importeer Medewerkers kunt u met een vinkje aangeven wat bij de import moet gebeuren met al bestaande gebruikers. </p>
+                <p class="note inline"><b>Let op</b>: Vink alleen het tweede selectievakje aan als u een volledige lijst met medewerkers of contactpersonen importeert.</p>
+                <p>
+                    <img src="/documentation_files/2018/webapps/29/Content/nl/Resources//Project Files/StaffAndContacts/Images/Staff-Contacts-Import-Users-798x150.png" style="border: 1px solid #3f66a3;" alt="De eerste twee opties in het scherm Personeel Importeren" />
+                </p>
+            </li>
+            <li value="5">
+                <p>Geef aan of uw tekst of CSV-bestand wel of geen <b>koptekst</b> bevat en welk soort <b>scheidingsteken</b> u heeft gebruikt.</p>
+                <p>
+                    <img src="/documentation_files/2018/webapps/29/Content/nl/Resources//Project Files/StaffAndContacts/Images/Staff-Contacts-Import-Users-2-798x55.png" style="border: 1px solid #3f66a3;" alt="De tweede set vakjes in het scherm Personeel Importeren" />
+                </p>
+            </li>
+            <li value="6">
+                <p>Klik op <b>Importeer uit CSV</b> om uw .csv-bestand op te zoeken op de computer, of plak de tekst met gescheiden waarden in het tekstveld. Klik dan op <b>Volgende</b>.</p>
+            </li>
+            <li value="7">
+                <p>Geef aan welke waarden in de kolommen worden gebruikt. Bestaande gebruikers met hetzelfde <b>e-mailadres</b> hebben worden bijgewerkt.</p>
+                <p class="note inline"><b>Tip</b>: Als u een lijst met contactpersonen importeert en u heeft een aantal contactpersonen die u geen account wilt toewijzen in Cloud, laat het e-mailadres dan leeg.</p>
+                <p>
+                    <img src="/documentation_files/2018/webapps/29/Content/nl/Resources//Project Files/StaffAndContacts/Images/Staff-Contacts-Import-3-829x595.png" style="border: 1px solid #3f66a3;" alt="Zet de kolommen goed bij de import om het proces af te ronden" />
+                </p>
+            </li>
+            <li value="8">
+                <p>Klik op <b>Importeren</b> om af te ronden.</p>
+            </li>
+        </ol>
+        <p>Na afronding verschijnt een bevestigingsvenster in beeld waarop te zien is hoeveel gebruikers zijn toegevoegd of gewijzigd. Als u ook groepen heeft opgegeven worden deze ook toegevoegd of gewijzigd.</p>
+        <h2 id="After-the-import">Afronding</h2>
+        <p>Als u een lijst met gebruikers heeft geïmporteerd verstuurt Cloud automatisch een e-mail naar deze gebruikers met een link naar de inlogpagina. U vindt het bericht in deze e-mail onder <b>Instellingen | E-mail | E-mail Log</b>.</p>
+        <p>Als gebruikers op de inlogpagina komen wordt hen gevraagd hun e-mailadres in te vullen en hun wachtwoord te bevestigen. Er kan een norm worden ingevoerd over de sterkte van een wachtwoord en hoe vaak medewerkers deze moeten vervangen. Zie <b>Instellingen | Beveiliging | Wachtwoordinstellingen.</b></p>
+    </body>
 </html>

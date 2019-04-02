@@ -35,19 +35,19 @@
     @include('partials.footer')
 
     <script src="{{ mix('/js/app.js') }}"></script>
-    <script src="/documentation_files/2018/webapps/29/Content/Resources/Scripts/custom.modernizr.js">
+    <script src="/documentation_files/2018/webapps/29/Content/en/Resources/Scripts/custom.modernizr.js">
     </script>
-    <script src="/documentation_files/2018/webapps/29/Content/Resources/Scripts/jquery.min.js">
+    <script src="/documentation_files/2018/webapps/29/Content/en/Resources/Scripts/jquery.min.js">
     </script>
-    <script src="/documentation_files/2018/webapps/29/Content/Resources/Scripts/require.min.js">
+    <script src="/documentation_files/2018/webapps/29/Content/en/Resources/Scripts/require.min.js">
     </script>
-    <script src="/documentation_files/2018/webapps/29/Content/Resources/Scripts/require.config.js">
+    <script src="/documentation_files/2018/webapps/29/Content/en/Resources/Scripts/require.config.js">
     </script>
-    <script src="/documentation_files/2018/webapps/29/Content/Resources/Scripts/foundation.min.js">
+    <script src="/documentation_files/2018/webapps/29/Content/en/Resources/Scripts/foundation.min.js">
     </script>
-    <script src="/documentation_files/2018/webapps/29/Content/Resources/Scripts/plugins.min.js">
+    <script src="/documentation_files/2018/webapps/29/Content/en/Resources/Scripts/plugins.min.js">
     </script>
-    <script src="/documentation_files/2018/webapps/29/Content/Resources/Scripts/MadCapAll.js">
+    <script src="/documentation_files/2018/webapps/29/Content/en/Resources/Scripts/MadCapAll.js">
     </script>
 </body>
 </html>

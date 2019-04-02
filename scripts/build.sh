@@ -20,45 +20,49 @@
 #
 # wait until the script says "done." 
 
-chmod -R 777 .
+# chmod -R 777 .
 
-echo 'Moving stuff around...'
+# echo 'Moving stuff around...'
 
-mkdir -p public/documentation_files/$1/$2/$3
-cp -R tmp/$3/* public/documentation_files/$1/$2/$3
-cd public/documentation_files/$1/$2/$3
+# mkdir -p public/documentation_files/$1/$2/$3
+# cp -R tmp/$3/* public/documentation_files/$1/$2/$3
+# cd public/documentation_files/$1/$2/$3
 
-chmod -R 777 .
+sudo chmod -R 777 .
 
-echo 'Renaming stuff...'
+# echo 'Renaming stuff...'
 
-find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content//g'
+# find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content//g'
 
-mv Online\ Output.fltoc OnlineOutput.xml
+# mv Online\ Output.fltoc OnlineOutput.xml
 
-prefix="\/documentation_files\/$1\/$2\/$3\/Content\/Resources\/"
+prefix="\/documentation_files\/$1\/$2\/$3\/Content\/$4\/Resources\/"
 prefix="$prefix"
 
+echo $prefix
+
 echo 'Updating img src paths...'
+
+cd public/documentation_files/$1/$2/$3/Content/$4
 
 find . -type f -print0 | xargs -0 sed -i 's/src="\/...\/...\/Resources/src="'"$prefix"'/g'
 find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/Resources/src="'"$prefix"'/g'
 find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/..\/Resources/src="'"$prefix"'/g'
 find . -type f -print0 | xargs -0 sed -i 's/src="\/Resources/src="'"$prefix"'/g'
 
-cd ../../../../..
+# cd ../../../../..
 
-echo 'Copying Data folders into place...'
+# echo 'Copying Data folders into place...'
 
-mkdir -p public/$1/$2/$3/en
-cp -R tmp/$3/Content/Data public/$1/$2/$3/en
-cd public/$1/$2/$3
+# mkdir -p public/$1/$2/$3/en
+# cp -R tmp/$3/Content/Data public/$1/$2/$3/en
+# cd public/$1/$2/$3
 
-cp -R en fr
-cp -R en es
-cp -R en nl
-cp -R en cn
-cp -R en de
+# cp -R en fr
+# cp -R en es
+# cp -R en nl
+# cp -R en cn
+# cp -R en de
 
 # cd ../../../..
 
