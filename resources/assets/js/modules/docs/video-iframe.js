@@ -16,7 +16,7 @@ module.exports = () => {
     // YT provides 4 thumbnails that can be used [0, 1, 2, 3].
     const URL = `https://img.youtube.com/vi/${YT_VIDEO_ID}/0.jpg`;
 
-    THEATRE_VIEW_CONTAINER.setAttribute('src', `https://www.youtube.com/embed/${YT_VIDEO_ID}?autoplay=1?rel=0`);
+    THEATRE_VIEW_CONTAINER.setAttribute('src', `https://www.youtube.com/embed/${YT_VIDEO_ID}?rel=0`);
     IMG_THUMBNAIL.setAttribute('src', URL);
 
     function showVideo() {
