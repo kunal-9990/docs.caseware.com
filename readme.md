@@ -14,6 +14,7 @@
     - Search "Data" folders are found in public/year/product/version/
     - Bash scripts are found in scripts/
     - Logged emails are found in storage/logs/emails.log
+    - Content backups created upon running the build script are kept in tmp/Content_backups
 
 # Deployment:
 
@@ -24,6 +25,8 @@
 
 # Adding a new help version:
 
+    This script deploys content for all languages other than DUTCH, which we have proper translations of and will need to be published manually as updates are necessary.
+    
     Place a folder named as the new version into the tmp directory as shown below.
     ----------------------------
     /docsmk2/
@@ -36,11 +39,11 @@
     │       │    Online Output.fltoc
     │       │    csh_redirect.xml
     ----------------------------
-    - From the project root ( docsmk2/ ) run "scripts/build.sh" OR "npm run build" and supply the year, product, and version as parameters.
+    - From the project root ( docsmk2/ ) run "scripts/build.sh" OR "npm run build" and supply the year, product, version, and "en" as parameters.
     - Example:
-    - scripts/build.sh 2018 webapps 30
+    - scripts/build.sh 2018 webapps 30 en
       OR
-    - npm run build 2018 webapps 30 (only works locally)
+    - npm run build 2018 webapps 30 en (only works locally)
     - wait until the script says "done." 
 
 
