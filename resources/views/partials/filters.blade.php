@@ -46,7 +46,7 @@
                 <span class="slider round"></span>
             </label>
             <span class="switch-name">RCT</span>
-            <div class="switch-name__hover-msg">Fusion<span class="switch-name__no-wrap">&nbsp;</span>RCT<span class="switch-name__no-wrap">&nbsp;</span>(Review<span class="switch-name__no-wrap">&nbsp;</span>Compilation<span class="switch-name__no-wrap">&nbsp;</span>Tax)</div>
+            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span class="switch-name__no-wrap">&nbsp;</span>ReviewCompTax</div>
         </div>
     </div>
-</span>
+</span>F
