@@ -149,6 +149,8 @@ module.exports = () => {
   } else if (prodList) {
     var prodArr = prodList.split(",");
     if (prodArr.includes("WorkingPapersBundle")) {
+      console.log("1");
+
       var filterSettings = {
         time: prodArr.includes("TimeWebSheet"),
         se: false,
@@ -160,12 +162,25 @@ module.exports = () => {
     }
     //entering through Neither
     if (!prodArr.includes("WorkingPapersBundle")) {
+      console.log("2");
+
       var filterSettings = {
         time: prodArr.includes("TimeWebSheet"),
         se: true,
         wp: prodArr.includes("WorkingPapersBundle"),
         analytics: prodArr.includes("AnalyticsObject"),
         pcr: true,
+        rct: true
+      };
+    }
+    if (prodArr.includes("RCT")) {
+      console.log("3");
+      var filterSettings = {
+        time: false,
+        se: false,
+        wp: false,
+        analytics: true,
+        pcr: false,
         rct: true
       };
     }
