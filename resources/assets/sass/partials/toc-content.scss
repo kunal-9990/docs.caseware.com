@@ -43,6 +43,18 @@
     margin-bottom: 10px;
     border-left: 7px solid rgba(0, 80, 255, 0.66);
 }
+.warning {
+    padding-left: 10px !important;
+    background-color: rgba(255, 253, 0, 0.23);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-left: 7px solid rgba(255, 149, 11, 0.66);
+}
 .divAltText {
     font-style: italic;
 }
