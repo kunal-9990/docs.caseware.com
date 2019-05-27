@@ -110,6 +110,7 @@ module.exports = () => {
       se: $(".switch-wrap.se:not(.mobile)").hasClass("is-active"),
       wp: $(".switch-wrap.wp:not(.mobile)").hasClass("is-active"),
       analytics: $(".switch-wrap.analytics:not(.mobile)").hasClass("is-active"),
+      analyticsai: $(".switch-wrap.analyticsai:not(.mobile)").hasClass("is-active"),
       pcr: $(".switch-wrap.pcr:not(.mobile)").hasClass("is-active"),
       rct: $(".switch-wrap.rct:not(.mobile)").hasClass("is-active")
     };
@@ -124,7 +125,7 @@ module.exports = () => {
       time: $(".switch-wrap.time.mobile").hasClass("is-active"),
       se: $(".switch-wrap.se.mobile").hasClass("is-active"),
       wp: $(".switch-wrap.wp.mobile").hasClass("is-active"),
-      analytics: $(".switch-wrap.analytics.mobile").hasClass("is-active"),
+      analyticsai: $(".switch-wrap.analyticsai.mobile").hasClass("is-active"),
       pcr: $(".switch-wrap.pcr.mobile").hasClass("is-active"),
       rct: $(".switch-wrap.rct.mobile").hasClass("is-active")
     };

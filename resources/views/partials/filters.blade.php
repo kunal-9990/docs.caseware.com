@@ -24,6 +24,14 @@
             <span class="switch-name">Analytics</span>
             <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span>Cloud<span class="switch-name__no-wrap">&nbsp;</span>Analytics</div>
         </div>
+        <div class="switch-wrap analyticsai @if($mobile == true) mobile @endif">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="switch-name">Analytics.AI</span>
+            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span>Cloud<span class="switch-name__no-wrap">&nbsp;</span>Analytics</div>
+        </div>
         <div class="switch-wrap time @if($mobile == true) mobile @endif">
             <label class="switch">
                 <input type="checkbox">
@@ -49,4 +57,4 @@
             <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span class="switch-name__no-wrap">&nbsp;</span>ReviewCompTax</div>
         </div>
     </div>
-</span>F
+</span>
