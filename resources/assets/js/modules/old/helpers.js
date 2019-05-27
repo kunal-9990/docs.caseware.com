@@ -55,7 +55,7 @@ function updateFilter(){
 }
   ,
   function(data) {
-    var productNames = { analytics: "Analytics", time: "Time", se: "SE", wp: "Working Papers" }; 
+    var productNames = { analytics: "Analytics", time: "Time", se: "SE", wp: "Working Papers", analyticsai: "CaseWare Analytics.AI" }; 
     var filtersettings = JSON.parse(data);
     var topicExclusiveProduct = $("html").data("mc-conditions");
     for (var product in filtersettings) {
