@@ -15,7 +15,7 @@ $noHeader = true;
         'canonical' => url('/'),
         'url' => url('/'),
         'title' => 'Page not found',
-        'og_description' => 'test description',
+        'og_description' => 'Page not found',
         'canonical' => 'test canonical url',
         'doNotTranslate' => isset($doNotTranslate) ? $doNotTranslate : false
     ])

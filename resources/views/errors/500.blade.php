@@ -14,8 +14,8 @@ $noHeader = true;
     @include('partials.meta', [
         'canonical' => url('/'),
         'url' => url('/'),
-        'title' => 'Something is wrong..',
-        'og_description' => 'test description',
+        'title' => 'Something went wrong..',
+        'og_description' => '500 Something went wrong..',
         'canonical' => 'test canonical url',
         'doNotTranslate' => isset($doNotTranslate) ? $doNotTranslate : false
     ])

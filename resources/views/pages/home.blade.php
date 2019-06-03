@@ -10,8 +10,8 @@
     @include('partials.meta', [
         'canonical' => url('/'),
         'url' => url('/'),
-        'title' => 'documentation',
-        'og_description' => 'test description',
+        'title' => 'CaseWare Cloud Docs Home',
+        'og_description' => 'CaseWare Cloud Docs Home',
         'canonical' => 'test canonical url'
     ])
 @stop
