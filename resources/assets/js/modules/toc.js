@@ -29,14 +29,21 @@ module.exports = () => {
         var version = routeComponents[3];
         var lang = routeComponents[4];
         var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
-        var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
+        //hardcoding which toc to return based on language. currently, NL is the only language to have a properly translated TOC
+        //this should be changed so that if a properly translated toc doesn't exist, it defaults to english
+        if(lang == "nl"){
+            var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
+        }
+        else{
+            var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + "en" + "/OnlineOutput.xml";
+
+        }
     }
     
     $.ajax({
         type: "GET",
         url: TOCxml,
         success: function (xml) {
-
             var ul_main = $('<ul class="toc notranslate">');
             $(xml).find("TocEntry").each(function () {
                 if ($(this).children().length && $(this).parent().is("CatapultToc")) {
