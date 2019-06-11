@@ -21,7 +21,6 @@
             <a href="http://www.facebook.com/pages/CaseWare-International-Inc/54418196590?ref=ts"><i class="fab fa-facebook-square"></i></a>
             <a href="https://twitter.com/CaseWare"><i class="fab fa-twitter-square"></i></a>
             <a href="http://www.youtube.com/user/casewarevids?feature=results_main"><i class="fab fa-youtube-square"></i></a>
-            <a href="https://www.caseware.com/caseware-rss"><i class="fas fa-rss-square"></i></a>
         </div>
         </div>
     </div>
