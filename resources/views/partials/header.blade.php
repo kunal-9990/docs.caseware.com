@@ -12,7 +12,9 @@ $indexURL = route('category', [$year, $product, $version, $lang, 'webapps']);
         <div class="header__search-wrap">
             <div class="header__nav-wrap">
                 <a href="{{$indexURL}}"><img class="header__logo" src="/img/caseware-cloud-logo.png" alt="CaseWare Cloud logo"></a>
-                @include('partials.nav')
+                @if(strpos(Request::url(), '/SE-Authoring/') == false)
+                    @include('partials.nav')
+                @endif
             </div>
             <div class="header__input-search-wrapper">
                 <form method="GET" action="{{$searchURL}}">

@@ -37,6 +37,7 @@ echo 'Renaming stuff...'
 find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content//g'
 
 mv Online\ Output.fltoc OnlineOutput.xml
+mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml
 
 prefix="\/documentation_files\/$1\/$2\/$3\/Content\/$4\/Resources\/"
 prefix="$prefix"
@@ -47,6 +48,7 @@ echo 'Updating img src paths...'
 #cd public/documentation_files/$1/$2/$3/Content/$4
 
 find . -type f -print0 | xargs -0 sed -i 's/src="\/...\/...\/Resources/src="'"$prefix"'/g'
+find . -type f -print0 | xargs -0 sed -i 's/src="..\/Resources/src="'"$prefix"'/g'
 find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/Resources/src="'"$prefix"'/g'
 find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/..\/Resources/src="'"$prefix"'/g'
 find . -type f -print0 | xargs -0 sed -i 's/src="\/Resources/src="'"$prefix"'/g'

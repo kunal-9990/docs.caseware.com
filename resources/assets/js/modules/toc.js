@@ -3,16 +3,16 @@ module.exports = () => {
 
     $(".toc__container").html("");
 
-    
 
     var loc = window.location.href;
+    console.log(loc);
     var pathname = window.location.pathname;
     pathname = pathname.replace(/\/\/+/g, '/');
     var routeComponents = pathname.split("/");
 
     // they are the same for now but might change in the future to
     // to have different TOCxml routes
-    if (process.env.NODE_ENV === 'development') {
+    if (0) { 
         // used for staging
         
         var year = routeComponents[1];
@@ -33,6 +33,10 @@ module.exports = () => {
         //this should be changed so that if a properly translated toc doesn't exist, it defaults to english
         if(lang == "nl"){
             var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
+        }
+        else if(window.location.href.indexOf("SE-Authoring") > -1){
+            
+            var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + "en" + "/SE-Authoring-TOC.xml";
         }
         else{
             var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + "en" + "/OnlineOutput.xml";
@@ -78,8 +82,13 @@ module.exports = () => {
 
                             subCatList.append(li.append(topicList));
                         } else {
-                            subCatList.append('<li class="toc__sub-category"><a class="chevron" href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a>');
-                        }
+
+                                if(loc.includes($(this).attr("Link").replace(".htm",""))){
+                                    subCatList.append('<li class="current-page toc__sub-category"><a class="chevron" href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a>');
+                                }
+                                else{
+                                    subCatList.append('<li class="toc__sub-category"><a class="chevron" href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a>');
+                                }                        }
                     });
                     var li = $('<li class="toc__category"><a class="chevron" href="#">' + $(this).attr("Title") + '</a>');
                     ul_main.append(li.append(subCatList));
@@ -90,6 +99,10 @@ module.exports = () => {
             
             //expand section of current page
             $(".current-page").parent().addClass("toc__topic-wrap--is-expanded");
+            $(".current-page").parent().parent().parent().addClass("toc__sub-category-wrap--is-expanded");
+
+  
+            $(".current-page").parent().addClass("toc__sub-category-wrap--is-expanded");
             $(".current-page").parent().parent().parent().addClass("toc__sub-category-wrap--is-expanded");
 
             ifSiblingElementExists();

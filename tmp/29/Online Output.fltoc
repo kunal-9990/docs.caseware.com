@@ -10,14 +10,28 @@
       Title="What's New">
       <TocEntry
         Title="What's new - Cloud 29.0"
-        Link="/Content/Explore/Whats-New/Whats-new-Cloud-v29.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Whats-New/Whats-new-Cloud.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       <TocEntry
-        Title="Release history - Cloud"
-        Link="/Content/Explore/Whats-New/Release-history-Cloud.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Title="What's new - OnPoint PCR"
+        Link="/Content/Explore/Whats-New/Whats-new-OnPointPCR.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.PCR" />
+      <TocEntry
+        Title="What's new - Analytics.AI"
+        Link="/Content/Explore/Whats-New/Whats-new-analytics-ai.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.ANALYTICSAI"
+        StartSection="false" />
       <TocEntry
         Title="Release history - Analytics"
         Link="/Content/Explore/Whats-New/Release-history-Analytics.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.ANALYTICS" />
+      <TocEntry
+        Title="Release history - Cloud"
+        Link="/Content/Explore/Whats-New/Release-history-Cloud.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Release history - OnPoint PCR"
+        conditions="Product.PCR"
+        StartSection="false"
+        Link="/Content/Explore/Whats-New/Release-history-OnPoint-PCR.htm" />
       <TocEntry
         Title="Release history - Time"
         Link="/Content/Explore/Whats-New/Release-history-Time.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
@@ -30,22 +44,22 @@
       Title="Features" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
       <TocEntry
         Title="Engagements page"
-        Link="/Content/Explore/Features/Engagements-page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Features/Engagements-page.htm" />
       <TocEntry
         Title="File management"
-        Link="/Content/Explore/Features/File-management.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Features/File-management.htm" />
       <TocEntry
         Title="Notifications"
-        Link="/Content/Explore/Features/Notifications.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Features/Notifications.htm" />
       <TocEntry
         Title="Integrated Time and Billing"
-        Link="/Content/Explore/Features/Integrated-time-and-billing.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Features/Integrated-time-and-billing.htm" />
       <TocEntry
         Title="Other Engagements"
-        Link="/Content/Explore/Features/Other-Engagements.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Features/Other-Engagements.htm" />
       <TocEntry
         Title="Timeline"
-        Link="/Content/Explore/Features/Timeline.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Features/Timeline.htm" />
     </TocEntry>
     <TocEntry
       Title="Getting Started">
@@ -56,8 +70,8 @@
         Title="CaseWare Cloud - Getting Started Guide"
         Link="/Content/Explore/Getting-Started/Getting-started-guide.htm" />
       <TocEntry
-        Title="Adding custom branding to Cloud"
-        Link="/Content/Explore/Getting-Started/Adding-custom-branding-to-Cloud.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Title="Add custom branding to Cloud"
+        Link="/Content/Explore/Getting-Started/Add-custom-branding-to-Cloud.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       <TocEntry
         Title="Onboarding staff (1 to 10 people)"
         Link="/Content/Explore/Getting-Started/Onboarding-staff-(1-to-10-people).htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
@@ -85,48 +99,66 @@
         conditions="Product.PCR" />
     </TocEntry>
     <TocEntry
+      Title="Products" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="CaseWareCloud Analytics"
+        Link="/Content/Explore/Products/CaseWareCloud-Analytics.htm" />
+      <TocEntry
+        Title="CaseWareCloud Time"
+        Link="/Content/Explore/Products/CaseWareCloud-Time.htm" />
+      <TocEntry
+        Title="OnPoint PCR – Preparation, Compilation and Reviews"
+        Link="/Content/Explore/Products/OnPoint-PCR.htm" />
+      <TocEntry
+        Title="CaseWare RCT – Review, Compilation and Tax"
+        Link="/Content/Explore/Products/CaseWare-RCT.htm" />
+      <TocEntry
+        Title="CaseWare Analytics.AI"
+        Link="/Content/Explore/Products/Analytics-ai.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
       Title="Scenarios">
+      <TocEntry
+        Title="Conclude the engagement"
+        Link="/Content/Explore/Scenarios/Conclude-the-engagement.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.RCT,Product.PCR,Product.SE" />
       <TocEntry
         Title="Planning an audit engagement"
         Link="/Content/Explore/Scenarios/Planning-an-audit-engagement.htm"
         conditions="Product.WP" />
       <TocEntry
-        Title="Gathering data for an engagement"
-        Link="/Content/Explore/Scenarios/Gathering-data-for-an-engagement.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="Collect data for your engagement"
+        Link="/Content/Explore/Scenarios/Collect-data-for-your-engagement.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.SE" />
       <TocEntry
-        Title="Setting up an engagement file"
-        Link="/Content/Explore/Scenarios/Setting-up-an-engagement-file.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="Set up an engagement file"
+        Link="/Content/Explore/Scenarios/Set-up-an-engagement-file.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.SE" />
       <TocEntry
-        Title="Reporting engagement results"
-        Link="/Content/Explore/Scenarios/Reporting-engagement-results.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
-        conditions="Product.SE" />
-      <TocEntry
-        Title="Working in an engagement file"
-        Link="/Content/Explore/Scenarios/Working-in-an-engagement-file.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="Perform fieldwork"
+        Link="/Content/Explore/Scenarios/Perform-fieldwork.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.SE" />
       <TocEntry
         Title="Testing client data"
         Link="/Content/Explore/Scenarios/Testing-client-data.htm"
         conditions="Product.ANALYTICS" />
       <TocEntry
-        Title="Performing an engagement in OnPoint PCR"
-        Link="/Content/Explore/Scenarios/Performing-an-engagement-in-OnPoint-PCR.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="Perform an engagement in OnPoint PCR"
+        Link="/Content/Explore/Scenarios/Perform-an-engagement-in-OnPoint-PCR.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.PCR" />
       <TocEntry
-        Title="Performing an engagement in Fusion RCT"
-        Link="/Content/Explore/Scenarios/Performing-an-engagement-in-Fusion-RCT.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="Perform an engagement in CaseWare RCT"
+        Link="/Content/Explore/Scenarios/Perform-an-engagement-in-CaseWare-RCT.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.RCT"
         StartSection="false" />
       <TocEntry
-        Title="Performing a Canadian tax engagement"
-        Link="/Content/Explore/Scenarios/Performing-a-Canadian-tax-engagement.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="Perform a Canadian tax engagement"
+        Link="/Content/Explore/Scenarios/Perform-a-Canadian-tax-engagement.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.RCT"
         StartSection="false" />
       <TocEntry
-        Title="Reviewing field work in an engagement file"
-        Link="/Content/Explore/Scenarios/Reviewing-fieldwork-in-an-engagement-file.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="Review fieldwork in an engagement file"
+        Link="/Content/Explore/Scenarios/Review-fieldwork-in-an-engagement-file.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.SE" />
       <TocEntry
         Title="Tracking my assigned work"
@@ -143,105 +175,82 @@
       <TocEntry
         Title="Security considerations"
         Link="/Content/Explore/Scenarios/Security-considerations-for-firm-work.htm" />
-    </TocEntry>
-    <TocEntry
-      Title="Products" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
       <TocEntry
-        Title="CaseWareCloud Analytics"
-        Link="/Content/Explore/Products/CaseWareCloud-Analytics.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
-      <TocEntry
-        Title="CaseWareCloud Time"
-        Link="/Content/Explore/Products/CaseWareCloud-Time.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
-      <TocEntry
-        Title="OnPoint PCR – Preparation, Compilation and Reviews"
-        Link="/Content/Explore/Products/OnPoint-PCR.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
-      <TocEntry
-        Title="Fusion RCT – Review, Compilation and Tax"
-        Link="/Content/Explore/Products/Fusion-RCT.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Title="Edit the engagement letter"
+        Link="/Content/Explore/Scenarios/Edit-the-engagement-letter.htm"
+        conditions="Product.PCR,Product.SE,Product.RCT" />
     </TocEntry>
     <TocEntry
       Title="Known Issues" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
       <TocEntry
         Title="Known issues in Analytics"
-        Link="/Content/Explore/Known-Issues/Analytics/Analytics-known-issues.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Explore/Known-Issues/Analytics/Analytics-known-issues.htm"
         conditions="Product.ANALYTICS"></TocEntry>
       <TocEntry
         Title="Analytics troubleshooting"
-        Link="/Content/Explore/Known-Issues/Analytics/Analytics-troubleshooting.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Explore/Known-Issues/Analytics/Analytics-troubleshooting.htm"
         conditions="Product.ANALYTICS" />
       <TocEntry
         Title="Known issues in CaseWare Cloud"
-        Link="/Content/Explore/Known-Issues/CaseWare-Cloud/Known-issues.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Known-Issues/CaseWare-Cloud/Known-issues.htm" />
       <TocEntry
         Title="Known issues in CaseWareCloud Time"
-        Link="/Content/Explore/Known-Issues/Time/Known-issues-Time.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Explore/Known-Issues/Time/Known-issues-Time.htm"
         conditions="Product.TIME" />
     </TocEntry>
     <TocEntry
       Title="The Interface" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
       <TocEntry
         Title="Cloud icons"
-        Link="/Content/Explore/Interface/CaseWare-Cloud/Cloud-icons.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Interface/CaseWare-Cloud/Cloud-icons.htm" />
       <TocEntry
         Title="Quick search fields"
-        Link="/Content/Explore/Interface/CaseWare-Cloud/Quick-search-fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Interface/CaseWare-Cloud/Quick-search-fields.htm" />
       <TocEntry
         Title="Organization (Settings)"
-        Link="/Content/Explore/Interface/Firm-Settings/Firm.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Interface/Firm-Settings/Firm.htm" />
       <TocEntry
         Title="Email (Settings)"
-        Link="/Content/Explore/Interface/Firm-Settings/Email.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Interface/Firm-Settings/Email.htm" />
       <TocEntry
         Title="Security (Settings)"
-        Link="/Content/Explore/Interface/Firm-Settings/Security.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Interface/Firm-Settings/Security.htm" />
       <TocEntry
         Title="Customization (Settings)"
-        Link="/Content/Explore/Interface/Firm-Settings/Customization.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Interface/Firm-Settings/Customization.htm" />
       <TocEntry
         Title="System (Settings)"
-        Link="/Content/Explore/Interface/Firm-Settings/System.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Interface/Firm-Settings/System.htm" />
       <TocEntry
         Title="Working Papers (Settings)"
-        Link="/Content/Explore/Interface/Firm-Settings/Working-Papers.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Explore/Interface/Firm-Settings/Working-Papers.htm"
         conditions="Product.WP"
         StartSection="false" />
       <TocEntry
         Title="Time (Settings)"
-        Link="/Content/Explore/Interface/Firm-Settings/Time.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Explore/Interface/Firm-Settings/Time.htm"
         conditions="Product.TIME" />
       <TocEntry
         Title="Staff rate properties"
-        Link="/Content/Explore/Interface/Staff-and-Contacs/Staff-rate-properties.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Explore/Interface/Staff-and-Contacs/Staff-rate-properties.htm"
         conditions="Product.TIME" />
       <TocEntry
         Title="Analytics (Settings)"
-        Link="/Content/Explore/Interface/Firm-Settings/Analytics.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Explore/Interface/Firm-Settings/Analytics.htm"
         conditions="Product.ANALYTICS" />
       <TocEntry
         Title="Entity creation"
-        Link="/Content/Explore/Interface/Entities/Entity-creation.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Interface/Entities/Entity-creation.htm" />
       <TocEntry
         Title="Permissions"
-        Link="/Content/Explore/Interface/CaseWare-Cloud/Permissions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Interface/CaseWare-Cloud/Permissions.htm" />
       <TocEntry
         Title="Gadget list (Dashboards)"
-        Link="/Content/Explore/Interface/Dashboards/Gadget-list.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Explore/Interface/Dashboards/Gadget-list.htm" />
       <TocEntry
         Title="Advanced Operations in Analytics"
-        Link="/Content/Explore/Interface/Analytics/Analytics-advanced.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Explore/Interface/Analytics/Analytics-advanced.htm"
         conditions="Product.ANALYTICS" />
-      <TocEntry
-        Title="Navigating the trial balance (SE)"
-        Link="/Content/Explore/Interface/CaseWareCloud-SE/Navigating-the-trial-balance.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
-        conditions="Product.SE" />
-      <TocEntry
-        Title="The Documents page (SE)"
-        Link="/Content/Explore/Interface/CaseWareCloud-SE/The-Documents-page.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
-        conditions="Product.SE" />
-      <TocEntry
-        Title="Convenient file browsing and information viewing (SE)"
-        Link="/Content/Explore/Interface/CaseWareCloud-SE/Convenient-file-browsing-and-information-viewing.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
-        conditions="Product.SE" />
     </TocEntry>
   </TocEntry>
   <TocEntry
@@ -258,8 +267,8 @@
         Title="Importing staff members or contacts from a list"
         Link="/Content/Setup/Users-and-Groups/Importing-staff-members-or-contacts-from-a-list.htm" />
       <TocEntry
-        Title="Setting staff access levels"
-        Link="/Content/Setup/Users-and-Groups/Setting-staff-access-levels.htm" />
+        Title="Set staff access levels"
+        Link="/Content/Setup/Users-and-Groups/Set-staff-access-levels.htm" />
       <TocEntry
         Title="Change notification settings"
         Link="/Content/Setup/Users-and-Groups/Change-notification-settings.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
@@ -269,10 +278,6 @@
     </TocEntry>
     <TocEntry
       Title="Administration and Settings">
-      <TocEntry
-        Title="Customize content at the firm level"
-        Link="/Content/Setup/Administration-and-Settings/Customize-content-at-the-firm-level.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
-        conditions="Product.SE" />
       <TocEntry
         Title="Create custom fields, tags and workflows"
         Link="/Content/Setup/Administration-and-Settings/Create-custom-fields-tags-and-workflows.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
@@ -297,7 +302,7 @@
         Title="Organize files by folders and tags"
         Link="/Content/Setup/Administration-and-Settings/Organize-files-by-folders-and-tags.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /><TocEntry
         Title="Setting up general ledger accounts"
-        Link="/Content/Setup/Administration-and-Settings/Setting-up-firm-accounts.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /><TocEntry
+        Link="/Content/Setup/Administration-and-Settings/Set-up-general-ledger-accounts.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /><TocEntry
         Title="Automate time entries using your calendar"
         Link="/Content/Setup/Administration-and-Settings/Automate-time-entries-using-your-calendar.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.TIME" /><TocEntry
@@ -319,7 +324,7 @@
         Link="/Content/Setup/Organization/Create-client-workspaces.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       <TocEntry
         Title="Organizing internal workspaces"
-        Link="/Content/Setup/Organization/Organizing-internal-workspaces.htm" />
+        Link="/Content/Setup/Organization/Organize-internal-workspaces.htm" />
       <TocEntry
         Title="Create workspace associations"
         Link="/Content/Setup/Organization/Create-workspace-associations.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
@@ -414,8 +419,8 @@
         Title="Set deadlines and budgets for a new engagement"
         Link="/Content/Engagements/Planning/Set-deadlines-and-budgets-for-a-new-engagement.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       <TocEntry
-        Title="Defining materiality"
-        Link="/Content/Engagements/Planning/Defining-materiality.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="Define materiality"
+        Link="/Content/Engagements/Planning/Define-materiality.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.SE"
         StartSection="false"
         SectionNumberReset="continue"
@@ -435,6 +440,10 @@
       <TocEntry
         Title="Request information from a client"
         Link="/Content/Engagements/Planning/Request-information-from-a-client.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Customize a client request"
+        conditions="Product.SE,Product.RCT,Product.PCR"
+        Link="/Content/Practice/Templates-and-Authoring/Customize-a-client-request.htm" />
     </TocEntry>
     <TocEntry
       Title="File Preparation">
@@ -461,7 +470,7 @@
         VolumeNumberReset="same"
         ChapterNumberReset="continue" />
       <TocEntry
-        Title="Import client's financial data to an engagement file"
+        Title="Import a client's financial data to an engagement file"
         Link="/Content/Engagements/File-Preparation/Import-clients-financial-data-to-an-engagement-file.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.SE" />
       <TocEntry
@@ -477,20 +486,24 @@
         Link="/Content/Engagements/File-Preparation/Create-placeholders-in-the-engagement-file.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.WP" />
       <TocEntry
-        Title="Import client's financial data from another software for analysis"
+        Title="Import a client's financial data from another software for analysis"
         Link="/Content/Engagements/File-Preparation/Import-clients-financial-data-from-another-software-for-analysis.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.ANALYTICS" />
       <TocEntry
-        Title="Import client's financial data from a CSV file for analysis"
+        Title="Import a client's financial data from a CSV file for analysis"
         Link="/Content/Engagements/File-Preparation/Import-clients-financial-data-from-a-CSV-file-for-analysis.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.ANALYTICS" />
       <TocEntry
         Title="Import a client's tax data"
         Link="/Content/Engagements/File-Preparation/Import-clients-tax-data.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.RCT"></TocEntry>
+      <TocEntry
+        Title="Import engagement data from CaseWare Working Papers to CaseWare RCT"
+        Link="/Content/Engagements/File-Preparation/Import-engagement-data-from-CaseWare-Working-Papers-to-CW-RCT.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.RCT" />
       <TocEntry
-        Title="Defining materiality"
-        Link="/Content/Engagements/Planning/Defining-materiality.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+        Title="Define materiality"
+        Link="/Content/Engagements/Planning/Define-materiality.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
       <TocEntry
         Title="Create an engagement file for the next period (roll forward)"
         Link="/Content/Engagements/File-Preparation/Create-an-engagement-file-for-the-next-period-(roll-forward).htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
@@ -503,41 +516,77 @@
     <TocEntry
       Title="Accounts and Analysis" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
       <TocEntry
+        Title="Navigate the trial balance"
+        Link="/Content/Explore/Interface/CaseWareCloud-SE/Navigate-the-trial-balance.htm"
+        conditions="Product.SE,Product.PCR,Product.RCT" />
+      <TocEntry
         Title="Post adjustments to the trial balance"
-        Link="/Content/Engagements/Accounts-and-Analysis/Post-adjustments-to-the-trial-balance.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Engagements/Accounts-and-Analysis/Post-adjustments-to-the-trial-balance.htm"
         conditions="Product.SE" />
       <TocEntry
         Title="Complete a checklist"
-        Link="/Content/Engagements/Accounts-and-Analysis/Complete-a-checklist.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Engagements/Accounts-and-Analysis/Complete-a-checklist.htm"
         conditions="Product.SE" />
       <TocEntry
-        Title="Analyzing accounts from checklists"
-        Link="/Content/Engagements/Accounts-and-Analysis/Analyzing-accounts-from-checklists.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="View account analysis in checklists"
+        Link="/Content/Engagements/Accounts-and-Analysis/View-account-analysis-in-checklists.htm"
         conditions="Product.SE" />
       <TocEntry
         Title="View material groups and accounts in the trial balance"
-        Link="/Content/Engagements/Accounts-and-Analysis/View-material-groups-and-accounts-in-the-trial-balance.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Engagements/Accounts-and-Analysis/View-material-groups-and-accounts-in-the-trial-balance.htm"
         conditions="Product.SE" />
       <TocEntry
         Title="Add an account or group to the trial balance"
-        Link="/Content/Engagements/Accounts-and-Analysis/Add-an-account-or-group-to-the-trial-balance.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Engagements/Accounts-and-Analysis/Add-an-account-or-group-to-the-trial-balance.htm"
         conditions="Product.SE" />
       <TocEntry
-        Title="Assign an account to a grouping"
-        Link="/Content/Engagements/Accounts-and-Analysis/Assign-an-account-to-a-grouping.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="Assign accounts to groups"
+        Link="/Content/Engagements/Accounts-and-Analysis/Assign-accounts-to-groups.htm"
         conditions="Product.SE" />
       <TocEntry
         Title="Run tests on your client data"
-        Link="/Content/Engagements/Accounts-and-Analysis/Run-tests-on-your-client-data.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Engagements/Accounts-and-Analysis/Run-tests-on-your-client-data.htm"
         conditions="Product.ANALYTICS" />
       <TocEntry
         Title="Detecting misstatements in your file"
-        Link="/Content/Engagements/Accounts-and-Analysis/Detecting-misstatements-in-your-file.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Engagements/Accounts-and-Analysis/Detecting-misstatements-in-your-file.htm"
         conditions="Product.ANALYTICS" />
       <TocEntry
         Title="Visualizing business data"
-        Link="/Content/Engagements/Accounts-and-Analysis/Visualizing-business-data.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Link="/Content/Engagements/Accounts-and-Analysis/Visualizing-business-data.htm"
         conditions="Product.ANALYTICS" />
+      <TocEntry
+        Title="Analytics.AI workflow"
+        Link="/Content/Engagements/Accounts-and-Analysis/Analytics-ai-workflow.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.ANALYTICSAI" />
+      <TocEntry
+        Title="Upload trial balance in Analytics.AI"
+        Link="/Content/Engagements/Accounts-and-Analysis/Upload-trial-balance-analytics-ai.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.ANALYTICSAI" />
+      <TocEntry
+        Title="Upload transactions in Analytics.AI"
+        Link="/Content/Engagements/Accounts-and-Analysis/Upload-transactions-analytics-ai.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.ANALYTICSAI" />
+      <TocEntry
+        Title="Check data completeness"
+        Link="/Content/Engagements/Accounts-and-Analysis/Check-data-completeness.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.ANALYTICSAI" />
+      <TocEntry
+        Title="Adjust influencers"
+        Link="/Content/Engagements/Accounts-and-Analysis/Adjust-influencers.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.ANALYTICSAI" />
+      <TocEntry
+        Title="Analytical review"
+        Link="/Content/Engagements/Accounts-and-Analysis/Analytical-review.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.ANALYTICSAI" />
+      <TocEntry
+        Title="Analytics.AI test results"
+        Link="/Content/Engagements/Accounts-and-Analysis/Analytics-ai-test-results.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.ANALYTICSAI" />
+      <TocEntry
+        Title="Analytics.AI configuration"
+        Link="/Content/Engagements/Accounts-and-Analysis/Analytics-ai-configuration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.ANALYTICSAI" />
     </TocEntry>
     <TocEntry
       Title="Documentation and Review">
@@ -549,15 +598,15 @@
         Link="/Content/Engagements/Documentation-and-Review/Attach-documents-to-an-engagement-file.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.SE" />
       <TocEntry
-        Title="Adding tickmarks and annotations"
-        Link="/Content/Engagements/Documentation-and-Review/Adding-tickmarks-and-annotations.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="Add annotations"
+        Link="/Content/Engagements/Documentation-and-Review/Add-annotations.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.SE" />
       <TocEntry
-        Title="Adding review notes"
-        Link="/Content/Engagements/Documentation-and-Review/Adding-review-notes.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Title="Add review notes (issues)"
+        Link="/Content/Engagements/Documentation-and-Review/Add-review-notes-(issues).htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       <TocEntry
-        Title="Completing review notes"
-        Link="/Content/Engagements/Documentation-and-Review/Completing-review-notes.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Title="Complete review notes"
+        Link="/Content/Engagements/Documentation-and-Review/Complete-review-notes.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       <TocEntry
         Title="Download documents created from Google Drive"
         Link="/Content/Engagements/Documentation-and-Review/Download-documents-created-from-Google-Drive.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
@@ -567,21 +616,30 @@
       <TocEntry
         Title="Giving feedback to others in Cloud"
         Link="/Content/Engagements/Documentation-and-Review/Giving-feedback-to-others-in-Cloud.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Review prepared documents (Review Tools)"
+        conditions="Product.SE,Product.PCR,Product.RCT"
+        Link="/Content/Explore/Interface/CaseWareCloud-SE/Review-prepared-documents-(Review-Tools).htm" />
     </TocEntry>
     <TocEntry
       Title="Statements and Conclusions">
+      <TocEntry
+        Title="Prepare financial statements"
+        Link="/Content/Engagements/Statements-and-Conclusions/Prepare-financial-statements.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.RCT,Product.PCR,Product.SE"
+        StartSection="false" />
       <TocEntry
         Title="Summary of misstatements"
         Link="/Content/Engagements/Statements-and-Conclusions/Summary-of-misstatements.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.SE" />
       <TocEntry
-        Title="Posting tax adjustments"
-        Link="/Content/Engagements/Statements-and-Conclusions/Posting-tax-adjustments.htm"
+        Title="Post tax adjustments"
+        Link="/Content/Engagements/Statements-and-Conclusions/Post-tax-adjustments.htm"
         conditions="Product.SE" />
       <TocEntry
-        Title="Preparing financial statements"
-        Link="/Content/Engagements/Statements-and-Conclusions/Preparing-financial-statements.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
-        conditions="Product.SE" />
+        Title="Export Analytics.AI results"
+        Link="/Content/Engagements/Statements-and-Conclusions/Export-analytics-ai-results.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.ANALYTICSAI" />
       <TocEntry
         Title="Finalizing deliverables"
         Link="/Content/Engagements/Statements-and-Conclusions/Finalizing-deliverables.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
@@ -606,12 +664,61 @@
         Link="/Content/Practice/Management/Tracking-staff-work-during-the-engagement.htm"
         conditions="Product.TIME" />
       <TocEntry
-        Title="Tracking the engagement file status"
-        Link="/Content/Practice/Management/Tracking-the-engagment-file-status.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        Title="Track the engagement file status"
+        Link="/Content/Practice/Management/Track-the-engagement-file-status.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.SE" />
+      <TocEntry
+        Title="Manage the engagement documents"
+        Link="/Content/Explore/Interface/CaseWareCloud-SE/Manage-the-engagement-documents.htm"
+        conditions="Product.SE,Product.RCT,Product.PCR" />
     </TocEntry>
     <TocEntry
       Title="Templates and Authoring">
+      <TocEntry
+        Title="Manage the firm template"
+        Link="/Content/Practice/Templates-and-Authoring/Manage-the-firm-template.htm"
+        conditions="Product.SE,Product.RCT,Product.PCR" />
+      <TocEntry
+        Title="Customize display options , formats and settings for your firm template"
+        Link="/Content/Practice/Templates-and-Authoring/Customize-display-options-formats-and-settings-for-your-firm-template.htm"
+        conditions="Product.RCT,Product.SE,Product.PCR" />
+      <TocEntry
+        Title="Add a firm logo and letterhead"
+        Link="/Content/Practice/Templates-and-Authoring/Add-a-firm-logo-and-letterhead.htm"
+        conditions="Product.SE,Product.RCT,Product.PCR" />
+      <TocEntry
+        Title="Modify or add visibility settings"
+        Link="/Content/Practice/Templates-and-Authoring/Modify-or-add-visibility-settings.htm"
+        conditions="Product.RCT,Product.PCR,Product.SE" />
+      <TocEntry
+        Title="Modify or add a letter or memo"
+        Link="/Content/Practice/Templates-and-Authoring/Modify-or-add-a-letter-or-memo.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.SE,Product.RCT,Product.PCR" />
+      <TocEntry
+        Title="Modify or add a checklist"
+        Link="/Content/Practice/Templates-and-Authoring/Modify-or-add-a-checklist.htm"
+        conditions="Product.SE,Product.RCT,Product.PCR" />
+      <TocEntry
+        Title="Customize the financial statements content"
+        Link="/Content/Practice/Templates-and-Authoring/Customize-the-financial-statements-content.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Product.RCT,Product.PCR,Product.SE"></TocEntry>
+      <TocEntry
+        Title="Customize the financial statements layout"
+        Link="/Content/Practice/Templates-and-Authoring/Customize-the-financial-statements-layout.htm"
+        conditions="Product.PCR,Product.RCT,Product.SE"
+        ComputeToc="false" />
+      <TocEntry
+        Title="Add guidance information for staff members"
+        Link="/Content/Practice/Templates-and-Authoring/Add-guidance-information-for-staff-members.htm"
+        conditions="Product.RCT,Product.PCR,Product.SE" />
+      <TocEntry
+        Title="Set up the Notes library"
+        Link="/Content/Practice/Templates-and-Authoring/Set-up-the-Notes-library.htm"
+        conditions="Product.RCT,Product.SE,Product.PCR" />
+      <TocEntry
+        Title="Suppress content in the firm template"
+        Link="/Content/Practice/Templates-and-Authoring/Suppress-content-in-the-firm-template.htm"
+        conditions="Product.SE,Product.RCT,Product.PCR" />
       <TocEntry
         Title="Change the appearance of default invoices"
         Link="/Content/Practice/Templates-and-Authoring/Change-the-appearance-of-default-invoices.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
@@ -620,18 +727,6 @@
         Title="Create invoice templates"
         Link="/Content/Practice/Templates-and-Authoring/Create-invoice-templates.htm"
         conditions="Product.TIME"></TocEntry>
-      <TocEntry
-        Title="Adding a letter or memo"
-        Link="/Content/Practice/Templates-and-Authoring/Adding-a-letter-or-memo.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
-        conditions="Product.SE" />
-      <TocEntry
-        Title="Customize a client request"
-        Link="/Content/Practice/Templates-and-Authoring/Customize-a-client-request.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
-        conditions="Product.SE" />
-      <TocEntry
-        Title="Customize financial statements"
-        Link="/Content/Practice/Templates-and-Authoring/Customize-financial-statements.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
-        conditions="Product.SE" />
     </TocEntry>
     <TocEntry
       Title="Time and Billing">
@@ -698,7 +793,7 @@
         Link="/Content/Practice/Maintenance/Reorganize-files-and-set-file-retention-dates.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       <TocEntry
         Title="Managing sync copies"
-        Link="/Content/Practice/Maintenance/Managing-sync-copies.htm"
+        Link="/Content/Practice/Maintenance/Manage-sync-copies.htm"
         conditions="Product.WP" />
       <TocEntry
         Title="Reorganize staff and groups"

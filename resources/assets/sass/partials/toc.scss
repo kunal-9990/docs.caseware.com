@@ -73,6 +73,10 @@
         &.toc__sub-category-wrap--is-expanded {
             display: block;
         }
+        
+        .current-page {
+            font-weight: bold !important;
+        }
     }
 
     .toc__topic-wrap {
@@ -92,7 +96,7 @@
         }
 
         .current-page {
-            font-weight: bold;
+            font-weight: bold !important;
         }
     }
 }

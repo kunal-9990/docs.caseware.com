@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "92a63c1e38e105b7cf53773ec1d194f3",
+    "content-hash": "c6ab9d898d6d0f2aeb1561730df60906",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -216,6 +216,49 @@
                 "validator"
             ],
             "time": "2018-09-25T20:47:26+00:00"
+        },
+        {
+            "name": "elic-dev/laravel-site-protection",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elic-dev/laravel-site-protection.git",
+                "reference": "885a64f1f42dfa41d523f6c261844fa373cf6ad2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elic-dev/laravel-site-protection/zipball/885a64f1f42dfa41d523f6c261844fa373cf6ad2",
+                "reference": "885a64f1f42dfa41d523f6c261844fa373cf6ad2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ElicDev\\SiteProtection\\SiteProtectionServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ElicDev\\SiteProtection\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Lill",
+                    "email": "m.lill@gmx.de"
+                }
+            ],
+            "description": "Protect your site with a simple password form",
+            "time": "2018-06-02T09:54:48+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -3370,6 +3413,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2018-08-09T05:50:03+00:00"
         },
         {
