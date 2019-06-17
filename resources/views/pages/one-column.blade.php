@@ -10,8 +10,8 @@
     @include('partials.meta', [
         'canonical' => URL::current(),
         'url' => URL::current(),
-        'title' =>  isset($title) ? $title : false,
-        'og_description' => isset($title) ? $title : false,
+        'title' =>  isset($title) ? $title : null,
+        'og_description' => isset($title) ? $title : null,
         'doNotTranslate' => isset($doNotTranslate) ? $doNotTranslate : false,
     ])
 @stop
