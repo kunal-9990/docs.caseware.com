@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redirect;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use App;
 
 class PageController extends Controller
 {
@@ -21,6 +22,9 @@ class PageController extends Controller
     
     // topic
     function showTopic($year, $product, $version, $lang, $category, $subcategory, $topic){
+
+        App::setLocale($lang);
+
         $noHeader = true;
 
         if(!endsWith($topic,".htm")){
@@ -51,6 +55,9 @@ class PageController extends Controller
 
     // topics with subsubcategory
     function showTopic2($year, $product, $version, $lang, $category, $subcategory, $subsubcategory, $topic){
+
+        App::setLocale($lang);
+                
         if(!endsWith($topic,".htm")){
             $topic .= ".htm";
         }
@@ -82,7 +89,9 @@ class PageController extends Controller
 
     // subcategory
     function showSubCategory($year, $product, $version, $lang, $category, $subcategory){
-        
+
+        App::setLocale($lang);
+                
 
         if(!endsWith($subcategory,".htm")){
             $subcategory .= ".htm";
@@ -109,6 +118,8 @@ class PageController extends Controller
     // category
     function showCategory($year, $product, $version, $lang, $category){
 
+        App::setLocale($lang);
+        
         if(!endsWith($category,".htm")){
             $category .= ".htm";
         }

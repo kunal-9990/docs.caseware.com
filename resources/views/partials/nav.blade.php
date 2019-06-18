@@ -44,5 +44,5 @@
     </div>
 </div>
 <div class="filters__dropdown">
-    <a href="#"><i class="fas fa-filter"></i> PRODUCTS <i class="fas fa-angle-down"></i></a>
+    <a href="#"><i class="fas fa-filter"></i> {{ __('strings.products') }} <i class="fas fa-angle-down"></i></a>
 </div>

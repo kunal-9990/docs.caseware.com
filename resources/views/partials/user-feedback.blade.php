@@ -1,5 +1,5 @@
 <div class="was-this-helpful">
-    <p class="was-this-helpful-question-text">Was this helpful?</p>
+    <p class="was-this-helpful-question-text">{{ __('strings.was_this_helpful') }}</p>
     <a class="was-this-helpful-btn was-this-helpful-yes">Yes</a>
 
     <div class="was-this-helpful-no-reason-menu">

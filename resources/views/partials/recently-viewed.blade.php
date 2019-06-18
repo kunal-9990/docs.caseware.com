@@ -1,4 +1,4 @@
-<h5>Recently viewed</h5>
+<h5>{{ __('strings.recently_viewed') }}</h5>
 <ul class="nav">
     @foreach (array_reverse($recent) as $topic)
         @php
