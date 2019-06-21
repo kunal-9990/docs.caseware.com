@@ -18,7 +18,7 @@ $indexURL = route('category', [$year, $product, $version, $lang, 'webapps']);
             </div>
             <div class="header__input-search-wrapper">
                 <form method="GET" action="{{$searchURL}}">
-                    <input type="text" name="search" placeholder="Search" autocomplete="off">
+                    <input type="text" name="search" placeholder="{{ __('strings.search') }}" autocomplete="off">
                 </form>
             </div>
         </div>
