@@ -17,7 +17,7 @@ module.exports = () => {
         let ANCHOR_TEXT = null;
 
         if (el.innerHTML) {
-            EL_ID = el.textContent.replace(/\s/g, '-');
+            EL_ID = el.textContent.replace(/\s/g, '');
             ANCHOR_TEXT = el.textContent;
             ANCHOR.textContent = ANCHOR_TEXT;
             ANCHOR.setAttribute('href', `#${EL_ID}`);
@@ -48,15 +48,22 @@ module.exports = () => {
         }
     }).scroll();
 
+    $(document).ready(() => {
+        if (window.location.hash) {
+            const anchor = document.getElementById(window.location.hash.substr(1));
+            anchor.scrollIntoView();
+        }
+    });
+
     /* eslint-disable */
     var waypoint = new Waypoint({
         element: SUB_TOC_CONTAINER,
         handler: function(direction) {
-          if (direction === 'down' && window.pageYOffset !== 0) {
-            SUB_TOC_CONTAINER.classList.add('affix');            
-          } else {
-            SUB_TOC_CONTAINER.classList.remove('affix');
-          }
+            if (window.location.hash || (direction === 'down' && window.pageYOffset !== 0)) {
+                SUB_TOC_CONTAINER.classList.add('affix');            
+            } else {
+                SUB_TOC_CONTAINER.classList.remove('affix');
+            }
         },
         offset: 20
     })
