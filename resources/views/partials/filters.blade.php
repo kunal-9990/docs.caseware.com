@@ -56,5 +56,13 @@
             <span class="switch-name">RCT</span>
             <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span class="switch-name__no-wrap">&nbsp;</span>ReviewCompTax</div>
         </div>
+        <div class="switch-wrap pbc @if($mobile == true) mobile @endif">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="switch-name">PBC</span>
+            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span class="switch-name__no-wrap">&nbsp;</span>PBC</div>
+        </div>
     </div>
 </span>

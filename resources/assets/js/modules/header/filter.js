@@ -112,7 +112,8 @@ module.exports = () => {
       analytics: $(".switch-wrap.analytics:not(.mobile)").hasClass("is-active"),
       analyticsai: $(".switch-wrap.analyticsai:not(.mobile)").hasClass("is-active"),
       pcr: $(".switch-wrap.pcr:not(.mobile)").hasClass("is-active"),
-      rct: $(".switch-wrap.rct:not(.mobile)").hasClass("is-active")
+      rct: $(".switch-wrap.rct:not(.mobile)").hasClass("is-active"),
+      pbc: $(".switch-wrap.pbc:not(.mobile)").hasClass("is-active")
     };
 
     applyFilter(filterSettings);
@@ -127,7 +128,8 @@ module.exports = () => {
       wp: $(".switch-wrap.wp.mobile").hasClass("is-active"),
       analyticsai: $(".switch-wrap.analyticsai.mobile").hasClass("is-active"),
       pcr: $(".switch-wrap.pcr.mobile").hasClass("is-active"),
-      rct: $(".switch-wrap.rct.mobile").hasClass("is-active")
+      rct: $(".switch-wrap.rct.mobile").hasClass("is-active"),
+      pbc: $(".switch-wrap.pbc.mobile").hasClass("is-active")
     };
 
     applyFilter(filterSettings);

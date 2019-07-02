@@ -40,6 +40,7 @@ module.exports = () => {
         }
         else{
             var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + "en" + "/OnlineOutput.xml";
+            console.log("regular toc");
 
         }
     }

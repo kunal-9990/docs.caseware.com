@@ -1,3 +1,6 @@
+
+/resources/assets/js/*
+resources/assets/js/*
 resources/assets/js/modules/old/*
 resources/assets/js/components/*
 resources/assets/js/bootstrap.js
@@ -10,3 +13,4 @@ resources/assets/js/vendor/*
 resources/assets/js/polyfill.js
 /resources/assets/js/modules/docs/download-pdf.js
 /resources/assets/js/modules/header/filter.js
+
