@@ -33,9 +33,20 @@ module.exports = () => {
         TOC_SUBTOPIC_NAV.appendChild(LI);
     });
 
+    $(document).ready(() => {
+        if (window.location.hash) {
+            const anchor = document.getElementById(window.location.hash.substr(1));
+            if (anchor) {
+                SUB_TOC_CONTAINER.classList.add('affix');
+                anchor.scrollIntoView();
+            }
+        }
+    });
+
     $(window).scroll(() => {
         const windscroll = $(window).scrollTop();
-        if (windscroll >= 100) {
+        if (windscroll >= 250) {
+            SUB_TOC_CONTAINER.classList.add('affix');
             $('.toc-content h2').each(function updateActiveSubToc(i) {
                 if ($(this).position().top <= windscroll - 20) {
                     $('.toc-subtopics__in-this-article ul.nav li.toc-subtopics--active-nav').removeClass('toc-subtopics--active-nav');
@@ -43,22 +54,9 @@ module.exports = () => {
                 }
             });
         } else {
+            SUB_TOC_CONTAINER.classList.remove('affix');
             $('.toc-subtopics__in-this-article ul.nav li.toc-subtopics--active-nav').removeClass('toc-subtopics--active-nav');
             $('.toc-subtopics__in-this-article ul.nav li:first').addClass('toc-subtopics--active-nav');
         }
     }).scroll();
-
-    /* eslint-disable */
-    var waypoint = new Waypoint({
-        element: SUB_TOC_CONTAINER,
-        handler: function(direction) {
-          if (direction === 'down' && window.pageYOffset !== 0) {
-            SUB_TOC_CONTAINER.classList.add('affix');            
-          } else {
-            SUB_TOC_CONTAINER.classList.remove('affix');
-          }
-        },
-        offset: 20
-    })
-    /* eslint-enable */
 };
