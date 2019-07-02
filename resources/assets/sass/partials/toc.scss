@@ -65,6 +65,10 @@
     .toc__sub-category-wrap,
     .toc__topic-wrap {
         padding-left: 16px;
+        
+        li a:not(.chevron) {
+            color: $blue-horizon;
+        }
     }
 
     .toc__sub-category-wrap {
@@ -89,10 +93,6 @@
 
         li {
             padding: 5px 0;
-
-            a {
-                color: $blue-horizon;
-            }
         }
 
         .current-page {
