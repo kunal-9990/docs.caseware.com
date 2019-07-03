@@ -35,7 +35,7 @@ module.exports = () => {
             var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
         }
         else if(window.location.href.indexOf("SE-Authoring") > -1){
-            
+            console.log("se authoring");
             var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + "en" + "/SE-Authoring-TOC.xml";
         }
         else{
