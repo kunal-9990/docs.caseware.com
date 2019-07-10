@@ -23,17 +23,19 @@
     foreach ($languages as $key => $language) {
         $segments[3] = $key;
         ${$key . 'Link'} = '/' . implode('/', $segments);
-        ${$key . 'TranslatedFile'} = env('PATH_TO_PUBLIC') . 'documentation_files/' . implode('/', array_slice($segments, 0, 3)) . '/Content/en/Resources/TranslatedDocs/' . strtoupper($segments[3]) . '/' . ($segments[5] != 'TranslatedDocs' ? $segments[6] : $segments[7]);
-        if ($segments[5] != 'TranslatedDocs') {
-            if (isset($exclusiveTo) && $exclusiveTo != '' && file_exists(${$key . 'TranslatedFile'})) {
-                ${$key . 'Link'} = '/' . implode('/', array_slice($segments, 0, 3)) . '/en/Resources/TranslatedDocs/' . strtoupper($key) . '/' . $segments[6];
-            }
-        } else {
-            $currentLanguage = $languages[strtolower(Request::segments()[6])];
-            if (file_exists(${$key . 'TranslatedFile'})) {
-                ${$key . 'Link'} = '/' . implode('/', array_slice($segments, 0, 3)) . '/en/Resources/TranslatedDocs/' . strtoupper($key) . '/' . $segments[7];
+        if (isset($segments[5])) {
+            ${$key . 'TranslatedFile'} = env('PATH_TO_PUBLIC') . 'documentation_files/' . implode('/', array_slice($segments, 0, 3)) . '/Content/en/Resources/TranslatedDocs/' . strtoupper($segments[3]) . '/' . ($segments[5] != 'TranslatedDocs' ? $segments[6] : $segments[7]);
+            if ($segments[5] != 'TranslatedDocs') {
+                if (isset($exclusiveTo) && $exclusiveTo != '' && file_exists(${$key . 'TranslatedFile'})) {
+                    ${$key . 'Link'} = '/' . implode('/', array_slice($segments, 0, 3)) . '/en/Resources/TranslatedDocs/' . strtoupper($key) . '/' . $segments[6];
+                }
             } else {
-                ${$key . 'Link'} = '/' . implode('/', array_slice($segments, 0, 3)) . '/' . $key . '/Setup/Licenses/' . $segments[7];
+                $currentLanguage = $languages[strtolower(Request::segments()[6])];
+                if (file_exists(${$key . 'TranslatedFile'})) {
+                    ${$key . 'Link'} = '/' . implode('/', array_slice($segments, 0, 3)) . '/en/Resources/TranslatedDocs/' . strtoupper($key) . '/' . $segments[7];
+                } else {
+                    ${$key . 'Link'} = '/' . implode('/', array_slice($segments, 0, 3)) . '/' . $key . '/Setup/Licenses/' . $segments[7];
+                }
             }
         }
     }
