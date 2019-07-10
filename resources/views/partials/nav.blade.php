@@ -23,7 +23,7 @@
     foreach ($languages as $key => $language) {
         $segments[3] = $key;
         ${$key . 'Link'} = '/' . implode('/', $segments);
-        if (isset($segments[5], $segments[6], $segments[7])) {
+        if (isset($segments[5]) || isset($segments[6]) || isset($segments[7])) {
             ${$key . 'TranslatedFile'} = env('PATH_TO_PUBLIC') . 'documentation_files/' . implode('/', array_slice($segments, 0, 3)) . '/Content/en/Resources/TranslatedDocs/' . strtoupper($segments[3]) . '/' . ($segments[5] != 'TranslatedDocs' ? $segments[6] : $segments[7]);
             if ($segments[5] != 'TranslatedDocs') {
                 if (isset($exclusiveTo) && $exclusiveTo != '' && file_exists(${$key . 'TranslatedFile'})) {
