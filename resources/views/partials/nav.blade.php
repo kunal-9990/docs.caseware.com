@@ -19,28 +19,27 @@
     @php
     $languages = array("en"=>"EN", "fr"=>"FR", "es"=>"ES", "nl"=>"NL","cn"=>"CN", "de"=>"DE");
     $segments = Request::segments();
-    $segments[3] = 'en';
-    $enLink = '/' . implode('/', $segments);
-    $segments[3] = 'fr';
-    $frLink = '/' . implode('/', $segments);
-    $segments[3] = 'es';
-    $esLink = '/' . implode('/', $segments);
-    $segments[3] = 'nl';
-    $nlLink = '/' . implode('/', $segments);
-    $segments[3] = 'cn';
-    $cnLink = '/' . implode('/', $segments);
-    $segments[3] = 'de';
-    $deLink = '/' . implode('/', $segments);
+
+    foreach ($languages as $key => $language) {
+        $segments[3] = $key;
+        ${$key . 'Link'} = '/' . implode('/', $segments);
+        if (isset($exclusiveTo) && $exclusiveTo != '') {
+            ${$key . 'TranslatedFile'} = env('PATH_TO_PUBLIC') . 'documentation_files/' . implode('/', array_slice($segments, 0, 3)) . '/Content/en/Resources/TranslatedDocs/' . strtoupper($segments[3]) . '/' . $segments[6];
+            if (file_exists(${$key . 'TranslatedFile'})) {
+                ${$key . 'Link'} = '/' . implode('/', array_slice($segments, 0, 3)) . '/en/Resources/TranslatedDocs/' . strtoupper($key) . '/' . $segments[6];
+            }
+        }
+    }
     $currentLanguage = $languages[Request::segments()[3]];
     @endphp
     <a href="#"><i class="fas fa-globe-americas"></i> {{$currentLanguage}} <i class="fas fa-angle-down"></i></a>
     <div class="dropdown-content">
-        <a href="{{$enLink}}">English</a>
-        <a href="{{$frLink}}">French</a>
-        <a href="{{$esLink}}">Spanish</a>
-        <a href="{{$nlLink}}">Dutch</a>
-        <a href="{{$cnLink}}">Chinese</a>
-        <a href="{{$deLink}}">German</a>
+        <a href="{{ $enLink }}">English</a>
+        <a href="{{ $frLink }}">French</a>
+        <a href="{{ $esLink }}">Spanish</a>
+        <a href="{{ $nlLink }}">Dutch</a>
+        <a href="{{ $cnLink }}">Chinese</a>
+        <a href="{{ $deLink }}">German</a>
     </div>
 </div>
 <div class="filters__dropdown">
