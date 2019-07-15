@@ -17,5 +17,6 @@ yarn-error.log
 public/mix-manifest.json
 /public/documentation_files
 /tmp/*
+/public/2020
 /public/2019
 /public/2018
