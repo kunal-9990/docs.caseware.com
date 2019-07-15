@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Groupings">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Import groupings</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/Empty.css" rel="stylesheet" />
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/custom.modernizr.js">
+        </script>
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/jquery.min.js">
+        </script>
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/require.min.js">
+        </script>
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/require.config.js">
+        </script>
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/foundation.min.js">
+        </script>
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/plugins.min.js">
+        </script>
+        <script src="/documentation_files/2018/webapps/29/Content/en/Resources//Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1>Import groupings</h1>
+        <p>You can import groupings from CSV or Excel files. For CSV imports, you need to properly prepare the files first. If you have groupings that have been defined in Working Papers, you can export them to an Excel file and import the file.</p>
+        <p>To import groupings from a CSV file:</p>
+        <ol>
+            <li value="1"><a href="#Prepare">Prepare the CSV file</a>
+            </li>
+            <li value="2"><a href="#Import">Import groupings</a>
+            </li>
+        </ol>
+        <p>To import groupings from Working Papers:</p>
+        <ol>
+            <li value="1"><a href="#Export">Export groupings from Working Papers to Excel</a>
+            </li>
+            <li value="2"><a href="#Import">Import groupings</a>
+            </li>
+        </ol>
+        <h2><a name="Prepare"></a>Prepare a CSV file for import</h2>
+        <p>The CSV file must include the following five columns, they can have empty values but each column must be available in the file:</p>
+        <ul>
+            <li value="1">
+                <p>Map number (known as group number in SE)</p>
+            </li>
+            <li value="2">
+                <p>Account name (known as group name in SE)</p>
+            </li>
+            <li value="3">
+                <p>Postable (accounts can be assigned to the grouping)</p>
+            </li>
+            <li value="4">
+                <p>Type (balance sheet or income statement)</p>
+            </li>
+            <li value="5">
+                <p>Sign (debit or credit)</p>
+            </li>
+        </ul>
+        <p>You can optionally include the following columns:</p>
+        <ul>
+            <li value="1">
+                <p>Classification</p>
+            </li>
+            <li value="2">
+                <p>Weight</p>
+            </li>
+            <li value="3">
+                <p>Allow</p>
+            </li>
+        </ul>
+        <p>You can use these columns to help set up automapping (automatic assignment of accounts to groupings) when users import a new trial balance.</p>
+        <p>The following table describes all the information columns:</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Column</p>
+                    </td>
+                    <td style="font-weight: bold;background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Description</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Map Number</p>
+                        <p>(mandatory)</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Enter a map number for the grouping. Also known as <i>group number</i> in SE. </p>
+                        <p>Can contain alphanumeric characters, decimal points, hyphens and underscores.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Account Name</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Enter a name for the grouping. Also known as group name in SE. </p>
+                        <p>Can contain alphanumeric characters, decimal points, hyphens and underscores. </p>
+                        <p>If this field is left blank, the grouping will be named <b>“[Untitled]”</b> by default.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Postable</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Indicate whether accounts can be assigned to the grouping. </p>
+                        <p>Can contain a single letter. Expected values: </p>
+                        <ul>
+                            <li value="1"><b>Y</b> - accounts cannot be assigned to the grouping. </li>
+                            <li value="2"><b>N</b> - accounts can be assigned to the grouping. </li>
+                        </ul>
+                        <p>If this field is left blank, you will be able to assign accounts to the grouping by default. </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Type</p>
+                        <p>(mandatory)</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Indicate whether the grouping belongs to the balance sheet or to the income statement. </p>
+                        <p>Can contain a single letter. Expected values: </p>
+                        <ul>
+                            <li value="1"><b>B</b> - balance sheet</li>
+                            <li value="2"><b>I</b> - income statement</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Sign</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Indicate whether the grouping should be for debit accounts or credit accounts. </p>
+                        <p>Can contain a single letter. Expected values: </p>
+                        <ul>
+                            <li value="1"><b>D</b> - debit</li>
+                            <li value="2"><b>C</b> - credit</li>
+                        </ul>
+                        <p>If this field is left blank, the grouping will be have the debit sign by default.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Classification</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Enter a classification for the grouping. </p>
+                        <p>Can contain alphanumeric characters, decimal points, hyphens and underscores. </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Weight</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Enter a weight for the grouping. In cases where multiple groupings have the same classification, then any account with that classification will be assigned to the grouping with the highest weighting number. </p>
+                        <p>Can contain a decimal number from 1 to -1. </p>
+                        <p>If this field is left blank, the grouping will have a weight of 0 by default.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Allow</p>
+                    </td>
+                    <td style="background-color: #f5f5f5;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-right-style: solid;border-right-width: 1px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 1px;border-top-color: #ffffff;">
+                        <p>Indicate whether the grouping has any account balance restrictions. </p>
+                        <p>Can contain a single character. Expected values:</p>
+                        <ul>
+                            <li value="1"><b>+</b> - only accounts with a debit (positive) balance can be assigned.</li>
+                            <li value="2"><b>-</b> - only accounts with a credit (negative) balance can be assigned. </li>
+                            <li value="3"><b>*</b> - accounts with debit or credit balances can be assigned.</li>
+                        </ul>
+                        <p>If this field is left blank, you will be able to assign accounts with debit or credit balances by default.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2><a name="Export"></a>Export groupings from Working Papers to Excel</h2>
+        <p>To use the grouping structure you've defined in Working Papers, you need to export it to an Excel file, then convert the file to a .csv.</p>
+        <p>Open Working Papers and follow the steps below.</p>
+        <p style="font-weight: bold;">To export a grouping from Working papers to an Excel file:</p>
+        <ol>
+            <li value="1">
+                <p>Open the file that you want to export.</p>
+            </li>
+            <li value="2">
+                <p>On the ribbon, click <b>Engagement | Groupings.</b></p>
+            </li>
+            <p>The Groupings worksheet displays.</p>
+            <li value="3">
+                <p>Right-click a column heading and click <b>Reorder columns.</b></p>
+            </li>
+            <p>In the Reorder Table Columns dialog, arrange the Active Columns as: Number &gt; Name &gt; Title &gt; Type &gt; Sign</p>
+            <li value="4">
+                <p>Click <b>OK.</b></p>
+            </li>
+            <p>Ensure that each group contains a unique number, a defined type and sign.</p>
+            <li value="5">
+                <p>On the ribbon, click <b>Tools | Options.</b></p>
+            </li>
+            <li value="6">
+                <p>On the General tab, in the Table List Field Style drop-down menu, select <b>Entry Codes.</b></p>
+            </li>
+            <li value="7">
+                <p>Click <b>OK.</b></p>
+            </li>
+            <li value="8">
+                <p>On the worksheet, select all the groups by clicking any group number, then pressing the <b>CTRL+A</b> on your keyboard.</p>
+            </li>
+            <li value="9">
+                <p>Copy the selection by pressing <b>CTRL+C</b> on your keyboard.</p>
+            </li>
+            <li value="10">
+                <p>Open a new Excel workbook.</p>
+            </li>
+            <li value="11">
+                <p>Paste the groups by clicking cell <b>A1</b>, then hitting the <b>CTRL+V</b> keys on your keyboard.</p>
+            </li>
+            <li value="12">
+                <p>Verify that the information is correct in Excel:</p>
+                <ul>
+                    <li value="1">
+                        <p>Check for duplicate group numbers by selecting the whole column and pressing <b>Home | Conditional Formatting | Highlight Cell Rules | Duplicate Values.</b></p>
+                    </li>
+                    <li value="2">
+                        <p>Check for missing or empty values in the Name, Title, and Type columns.</p>
+                    </li>
+                    <li value="3">
+                        <p>Check the Type column to ensure the classification is correct for each line.</p>
+                    </li>
+                    <li value="4">
+                        <p>Check the Sign column to ensure the sign is correct for each line. If the sign is blank, it will default to <b>Debit.</b></p>
+                    </li>
+                </ul>
+            </li>
+            <li value="13">
+                <p>Save the Excel workbook as a .csv file.</p>
+            </li>
+        </ol>
+        <h2><a name="Import"></a>Import groupings from a CSV or an Excel file</h2>
+        <p>Once you have the CSV or Excel file ready, you can start the import process.</p>
+        <p style="font-weight: bold;">To import a grouping from a CSV or Excel:</p>
+        <ol>
+            <li value="1">
+                <p>Go to the <b>Trial Balance</b> tab, then select <b>More actions (<img src="/documentation_files/2018/webapps/29/Content/en/Resources//Images/more-actions-inline_24x13.png" style="vertical-align: text-bottom;width: 24;height: 13;" />) | Import Groups.</b></p>
+            </li>
+            <li value="2">
+                <p>Drag and drop the .csv file into the pop-up dialog.</p>
+            </li>
+            <li value="3">
+                <p>Select <b>Yes</b> when prompted to confirm deletion of existing financial groups.</p>
+            </li>
+        </ol>
+        <p>Once the import is complete, review the structure to ensure that the import was successful. You can select the <b>Expand All/Collapse All</b> (<img src="/documentation_files/2018/webapps/29/Content/en/Resources//Images/expandAllCollapseAll_16x24.png" style="vertical-align: text-bottom;width: 16;height: 24;" />) to review the imported structure. If necessary, you can also <span><a href="Add,-edit-and-move-groups.htm#Edit">edit a group</a></span> to add additional properties or change existing ones.</p>
+    </body>
+</html>
