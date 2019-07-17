@@ -1,45 +1,15 @@
-@php
-// $en = Route::current();
-// $en = Route::current();
-// $en->setParameter('lang', 'en');
-// // dd($en->urir());
-// $fr = Route::current();
-// $fr->setParameter('lang', 'fr');
-// $es = Route::current();
-// $es->setParameter('lang', 'es');
-// $nl = Route::current();
-// $nl->setParameter('lang', 'nl');
-// $cn = Route::current();
-// $cn->setParameter('lang', 'cn');
-// $de = Route::current();
-// $de->setParameter('lang', 'de');
-
+@php // $en = Route::current(); // $en = Route::current(); // $en->setParameter('lang', 'en'); // // dd($en->urir()); //
+$fr = Route::current(); // $fr->setParameter('lang', 'fr'); // $es = Route::current(); // $es->setParameter('lang', 'es');
+// $nl = Route::current(); // $nl->setParameter('lang', 'nl'); // $cn = Route::current(); // $cn->setParameter('lang', 'cn');
+// $de = Route::current(); // $de->setParameter('lang', 'de'); 
 @endphp
 <div class="language__dropdown">
-    @php
-    $languages = array("en"=>"EN", "fr"=>"FR", "es"=>"ES", "nl"=>"NL","cn"=>"CN", "de"=>"DE");
-    $segments = Request::segments();
-    $currentLanguage = $languages[Request::segments()[3]];
-    foreach ($languages as $key => $language) {
-        $segments[3] = $key;
-        ${$key . 'Link'} = '/' . implode('/', $segments);
-        if (isset($segments[5]) || isset($segments[6]) || isset($segments[7])) {
-            ${$key . 'TranslatedFile'} = env('PATH_TO_PUBLIC') . 'documentation_files/' . implode('/', array_slice($segments, 0, 3)) . '/Content/en/Resources/TranslatedDocs/' . strtoupper($segments[3]) . '/' . ($segments[5] != 'TranslatedDocs' ? $segments[6] : $segments[7]);
-            if ($segments[5] != 'TranslatedDocs') {
-                if (isset($exclusiveTo) && $exclusiveTo != '' && file_exists(${$key . 'TranslatedFile'})) {
-                    ${$key . 'Link'} = '/' . implode('/', array_slice($segments, 0, 3)) . '/en/Resources/TranslatedDocs/' . strtoupper($key) . '/' . $segments[6];
-                }
-            } else {
-                $currentLanguage = $languages[strtolower(Request::segments()[6])];
-                if (file_exists(${$key . 'TranslatedFile'})) {
-                    ${$key . 'Link'} = '/' . implode('/', array_slice($segments, 0, 3)) . '/en/Resources/TranslatedDocs/' . strtoupper($key) . '/' . $segments[7];
-                } else {
-                    ${$key . 'Link'} = '/' . implode('/', array_slice($segments, 0, 3)) . '/' . $key . '/Setup/Licenses/' . $segments[7];
-                }
-            }
-        }
-    }
-    @endphp
+    @php $languages = array("en"=>"EN", "fr"=>"FR", "es"=>"ES", "nl"=>"NL","cn"=>"CN", "de"=>"DE"); $segments = Request::segments();
+    $segments[3] = 'en'; $enLink = '/' . implode('/', $segments); $segments[3] = 'fr'; $frLink = '/' . implode('/', $segments);
+    $segments[3] = 'es'; $esLink = '/' . implode('/', $segments); $segments[3] = 'nl'; $nlLink = '/' . implode('/', $segments);
+    $segments[3] = 'cn'; $cnLink = '/' . implode('/', $segments); $segments[3] = 'de'; $deLink = '/' . implode('/', $segments);
+    $currentLanguage = $languages[Request::segments()[3]]; 
+@endphp
     <a href="#"><i class="fas fa-globe-americas"></i> {{$currentLanguage}} <i class="fas fa-angle-down"></i></a>
     <div class="dropdown-content">
         <a href="{{ $enLink }}">English</a>

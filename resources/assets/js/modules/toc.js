@@ -64,7 +64,7 @@ module.exports = () => {
                                     producttags= " ";
                                 };
 
-                                if(loc.includes($(this).attr("Link").replace(".htm",""))){
+                                if($(this).attr("Link") && loc.includes($(this).attr("Link").replace(".htm",""))){
                                     topicList.append('<li class="current-page ' + producttags + '"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
                                 }
                                 else{
@@ -82,7 +82,7 @@ module.exports = () => {
 
                             subCatList.append(li.append(topicList));
                         } else {
-                            if(loc.includes($(this).attr("Link"))){
+                            if($(this).attr("Link") && loc.includes($(this).attr("Link"))){
                                 subCatList.append('<li class="current-page toc__sub-category"><a class="chevron" href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a>');
                             }
                             else{
