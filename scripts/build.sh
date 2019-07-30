@@ -38,6 +38,8 @@ find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content//g'
 
 mv Online\ Output.fltoc OnlineOutput.xml
 mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml
+mv csh_redirect.xml ../..
+
 
 prefix="\/documentation_files\/$1\/$2\/$3\/Content\/$4\/Resources\/"
 prefix="$prefix"
