@@ -14,11 +14,12 @@
 #
 # ----------------------------
 #
-# Run "npm run build" and supply the year, product, and version as parameters.
+# Run "npm run build" and supply the year, product, version, and language as parameters.
 # Example:
-# npm run build 2018 webapps 30
+# npm run build 2018 webapps 30 en
 #
 # wait until the script says "done." 
+dos2unix scripts/build.sh
 
 sudo chmod -R 777 .
 
