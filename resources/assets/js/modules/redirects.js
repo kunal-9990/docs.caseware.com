@@ -27,7 +27,7 @@ module.exports = () => {
 
     $.ajax({
       type: "GET",
-      url: "/documentation_files/" +year + "/" + product + "/" + version + "/csh_redirect.xml",
+      url: "/documentation_files/" +year.toLowerCase() + "/" + product.toLowerCase() + "/" + version + "/csh_redirect.xml",
       dataType: "xml",
       success: function (xml) {
         url = window.location.href.split("?")[0];
