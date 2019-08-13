@@ -16,7 +16,7 @@ module.exports = () => {
         
         var year = routeComponents[1];
         console.log(year);
-        var product = routeComponents[2];
+        var product = routeComponents[2].toLowerCase();
         var version = routeComponents[3];
         var lang = routeComponents[4];
         var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
@@ -24,7 +24,7 @@ module.exports = () => {
     } else {
         // used for live
         var year = routeComponents[1];
-        var product = routeComponents[2];
+        var product = routeComponents[2].toLowerCase();
         var version = routeComponents[3];
         var lang = routeComponents[4];
         var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
