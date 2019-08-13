@@ -77,7 +77,6 @@ cd ../../../../..
 mkdir -p public/se-search/$1/$2/$3/en
 cp -R tmp/$3/Data-SE public/se-search/$1/$2/$3/en
 cd public/se-search/$1/$2/$3/en
-rm -R Data
 mv Data-SE Data
 cd ..
 

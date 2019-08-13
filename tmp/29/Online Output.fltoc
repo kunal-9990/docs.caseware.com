@@ -12,6 +12,10 @@
         Title="What's new - Cloud 29.0"
         Link="/Content/Explore/Whats-New/Whats-new-Cloud.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       <TocEntry
+        Title="What's new - CaseWare RCT"
+        conditions="Product.RCT"
+        Link="/Content/Explore/Whats-New/Whats-new-CaseWare-RCT.htm" />
+      <TocEntry
         Title="What's new - OnPoint PCR"
         Link="/Content/Explore/Whats-New/Whats-new-OnPointPCR.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
         conditions="Product.PCR" />
@@ -115,6 +119,9 @@
       <TocEntry
         Title="CaseWare Analytics.AI"
         Link="/Content/Explore/Products/Analytics-ai.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Provided By Client (PBC) Requests"
+        Link="/Content/Explore/Products/Provided-By-Client-(PBC)-Requests.htm" />
     </TocEntry>
     <TocEntry
       Title="Scenarios">
@@ -511,7 +518,7 @@
       <TocEntry
         Title="Complete a client request"
         Link="/Content/Engagements/File-Preparation/Complete-a-client-request.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
-        conditions="Product.SE" />
+        conditions="Product.SE,Product.PBC,Product.PCR,Product.RCT" />
     </TocEntry>
     <TocEntry
       Title="Accounts and Analysis" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
@@ -523,6 +530,10 @@
         Title="Post adjustments to the trial balance"
         Link="/Content/Engagements/Accounts-and-Analysis/Post-adjustments-to-the-trial-balance.htm"
         conditions="Product.SE" />
+      <TocEntry
+        Title="Export adjustments and trial balance data"
+        Link="/Content/Engagements/Accounts-and-Analysis/Export-adjustments-and-trial-balance-data.htm"
+        conditions="Product.PCR,Product.RCT,Product.SE" />
       <TocEntry
         Title="Complete a checklist"
         Link="/Content/Engagements/Accounts-and-Analysis/Complete-a-checklist.htm"
@@ -543,6 +554,10 @@
         Title="Assign accounts to groups"
         Link="/Content/Engagements/Accounts-and-Analysis/Assign-accounts-to-groups.htm"
         conditions="Product.SE" />
+      <TocEntry
+        Title="Review group and account balances in the financial statements"
+        Link="/Content/Engagements/Accounts-and-Analysis/Review-group-and-account-balances-in-the-financial-statements.htm"
+        conditions="Product.SE,Product.RCT,Product.PCR" />
       <TocEntry
         Title="Run tests on your client data"
         Link="/Content/Engagements/Accounts-and-Analysis/Run-tests-on-your-client-data.htm"
@@ -677,19 +692,19 @@
       <TocEntry
         Title="Manage the firm template"
         Link="/Content/Practice/Templates-and-Authoring/Manage-the-firm-template.htm"
-        conditions="Product.SE,Product.RCT,Product.PCR" />
+        conditions="Product.SE,Product.RCT,Product.PCR,Product.PBC" />
       <TocEntry
         Title="Customize display options , formats and settings for your firm template"
         Link="/Content/Practice/Templates-and-Authoring/Customize-display-options-formats-and-settings-for-your-firm-template.htm"
-        conditions="Product.RCT,Product.SE,Product.PCR" />
+        conditions="Product.RCT,Product.SE,Product.PCR,Product.PBC" />
       <TocEntry
         Title="Add a firm logo and letterhead"
         Link="/Content/Practice/Templates-and-Authoring/Add-a-firm-logo-and-letterhead.htm"
-        conditions="Product.SE,Product.RCT,Product.PCR" />
+        conditions="Product.SE,Product.RCT,Product.PCR,Product.PBC" />
       <TocEntry
         Title="Modify or add visibility settings"
         Link="/Content/Practice/Templates-and-Authoring/Modify-or-add-visibility-settings.htm"
-        conditions="Product.RCT,Product.PCR,Product.SE" />
+        conditions="Product.RCT,Product.PCR,Product.SE,Product.PBC" />
       <TocEntry
         Title="Modify or add a letter or memo"
         Link="/Content/Practice/Templates-and-Authoring/Modify-or-add-a-letter-or-memo.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
@@ -697,7 +712,7 @@
       <TocEntry
         Title="Modify or add a checklist"
         Link="/Content/Practice/Templates-and-Authoring/Modify-or-add-a-checklist.htm"
-        conditions="Product.SE,Product.RCT,Product.PCR" />
+        conditions="Product.SE,Product.RCT,Product.PCR,Product.PBC" />
       <TocEntry
         Title="Customize the financial statements content"
         Link="/Content/Practice/Templates-and-Authoring/Customize-the-financial-statements-content.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
@@ -710,7 +725,7 @@
       <TocEntry
         Title="Add guidance information for staff members"
         Link="/Content/Practice/Templates-and-Authoring/Add-guidance-information-for-staff-members.htm"
-        conditions="Product.RCT,Product.PCR,Product.SE" />
+        conditions="Product.RCT,Product.PCR,Product.SE,Product.PBC" />
       <TocEntry
         Title="Set up the Notes library"
         Link="/Content/Practice/Templates-and-Authoring/Set-up-the-Notes-library.htm"
@@ -718,7 +733,7 @@
       <TocEntry
         Title="Suppress content in the firm template"
         Link="/Content/Practice/Templates-and-Authoring/Suppress-content-in-the-firm-template.htm"
-        conditions="Product.SE,Product.RCT,Product.PCR" />
+        conditions="Product.SE,Product.RCT,Product.PCR,Product.PBC" />
       <TocEntry
         Title="Change the appearance of default invoices"
         Link="/Content/Practice/Templates-and-Authoring/Change-the-appearance-of-default-invoices.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"

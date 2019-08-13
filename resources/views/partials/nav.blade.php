@@ -31,7 +31,14 @@
     $cnLink = '/' . implode('/', $segments);
     $segments[3] = 'de';
     $deLink = '/' . implode('/', $segments);
-    $currentLanguage = $languages[Request::segments()[3]];
+    if(strpos(Request::url(), '/search/') == true || strpos(Request::url(), '/se-search/') == true) {
+        $currentLanguage = $languages[Request::segments()[4]];
+    }
+    else {
+        $currentLanguage = $languages[Request::segments()[3]];
+    }
+
+
     @endphp
     <a href="#"><i class="fas fa-globe-americas"></i> {{$currentLanguage}} <i class="fas fa-angle-down"></i></a>
     <div class="dropdown-content">

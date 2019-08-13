@@ -3,7 +3,16 @@ $year = Route::current()->parameters()["year"];
 $product = Route::current()->parameters()["product"];
 $version = Route::current()->parameters()["version"];
 $lang = Route::current()->parameters()["lang"];
-$searchURL = route('search', [$year, $product, $version, $lang]);
+$searchroute = '';
+
+if(strpos(Request::url(), '/SE-Authoring/') == false && strpos(Request::url(), '/se-search/') == false) {
+    $searchroute = "search";
+}
+else {
+    $searchroute = "se-search";
+}
+
+$searchURL = route($searchroute, [$year, $product, $version, $lang]);
 $indexURL = route('category', [$year, $product, $version, $lang, 'webapps']);
 @endphp
 <header class="header">

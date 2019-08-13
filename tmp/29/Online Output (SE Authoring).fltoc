@@ -2,10 +2,37 @@
 <CatapultToc
   Version="1">
   <TocEntry
+    Title="What's New">
+    <TocEntry
+      Title="What's new in SE 2019-07?"
+      Link="/Content/SE-Authoring/Whats-new-2019-07.htm" />
+    <TocEntry
+      Title="Release history">
+      <TocEntry
+        Title="2019-04 release notes"
+        Link="/Content/SE-Authoring/2019-04-release-notes.htm"></TocEntry>
+      <TocEntry
+        Title="2019-02 release notes"
+        Link="/Content/SE-Authoring/2019-02-release-notes.htm" />
+      <TocEntry
+        Title="2019-01 release notes"
+        Link="/Content/SE-Authoring/2019-01-release-notes.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Emergency fixes">
+      <TocEntry
+        Title="2019-04 Hotfixes"
+        Link="/Content/SE-Authoring/2019-04-Hotfixes.htm" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
     Title="Get Started">
     <TocEntry
       Title="Welcome!"
       Link="/Content/SE-Authoring/Welcome.htm"></TocEntry>
+    <TocEntry
+      Title="Licensing and pricing"
+      Link="/Content/SE-Authoring/Licensing-and-pricing.htm" />
     <TocEntry
       Title="General workflow and best practices"
       Link="/Content/SE-Authoring/General-workflow-and-best-practices.htm" />
@@ -19,20 +46,33 @@
       Title="Create and manage the product template"
       Link="/Content/SE-Authoring/Create-and-manage-the-product-template.htm" />
     <TocEntry
-      Title="Verify and customize your product settings"
-      Link="/Content/SE-Authoring/Verify-and-customize-your-product-settings.htm" />
+      Title="Verify and customize the product settings"
+      Link="/Content/SE-Authoring/Verify-and-customize-the-product-settings.htm" />
   </TocEntry>
   <TocEntry
     Title="Groupings">
     <TocEntry
       Title="Define groupings"
-      Link="/Content/SE-Authoring/Define-groupings.htm" />
+      Link="/Content/SE-Authoring/Define-groupings.htm"
+      StartSection="false" />
     <TocEntry
-      Title="Import groupings"
-      Link="/Content/SE-Authoring/Import-groupings.htm" />
+      Title="The Data page">
+      <TocEntry
+        Title="Import groupings (Data page)"
+        Link="/Content/SE-Authoring/Import-groupings-(Data-page).htm" />
+      <TocEntry
+        Title="Add, edit and export groups (Data page)"
+        Link="/Content/SE-Authoring/Add,-edit-and-export-groups-(Data-page).htm" />
+    </TocEntry>
     <TocEntry
-      Title="Add, edit and move groups"
-      Link="/Content/SE-Authoring/Add,-edit-and-move-groups.htm" />
+      Title="The Trial Balance page">
+      <TocEntry
+        Title="Import groupings (Trial Balance page)"
+        Link="/Content/SE-Authoring/Import-groupings-(Trial-Balance-page).htm" />
+      <TocEntry
+        Title="Add, edit and move groups (Trial Balance page)"
+        Link="/Content/SE-Authoring/Add,-edit-and-move-groups-(Trial-Balance-page).htm" />
+    </TocEntry>
   </TocEntry>
   <TocEntry
     Title="Visibility Logic">
@@ -44,7 +84,7 @@
       Link="/Content/SE-Authoring/Visibility-conditions.htm" />
     <TocEntry
       Title="Examples"
-      Link="/Content/SE-Authoring/Examples.htm" />
+      Link="/Content/SE-Authoring/Examples-of-visibility-settings.htm" />
   </TocEntry>
   <TocEntry
     Title="Engagement Glossary">
@@ -77,7 +117,7 @@
       Link="/Content/SE-Authoring/Add-a-procedure.htm" />
     <TocEntry
       Title="Review and customize the procedure settings"
-      Link="/Content/SE-Authoring/Review-and-customize-the-procedure-settings.htm" />
+      Link="/Content/SE-Authoring/Review-and-customize-procedure-settings.htm" />
     <TocEntry
       Title="Add a response type to a procedure"
       Link="/Content/SE-Authoring/Add-a-response-type-to-a-procedure.htm" />
@@ -178,56 +218,105 @@
       Title="Workflow (how to author fiinancial statements?)"
       Link="/Content/SE-Authoring/Workflow-(how-to-author-financial-statements).htm" />
     <TocEntry
-      Title="Add guidance information in the financial statements"
-      Link="/Content/SE-Authoring/Add-guidance-information-in-the-financial-statements.htm" />
-    <TocEntry
-      Title="Add or remove content areas"
-      Link="/Content/SE-Authoring/Add-or-remove-content-areas.htm" />
-    <TocEntry
-      Title="Add text in the financial statements"
-      Link="/Content/SE-Authoring/Add-text-in-the-financial-statements.htm" />
-    <TocEntry
-      Title="Add the financial statements notes"
-      Link="/Content/SE-Authoring/Add-the-financial-statements-notes.htm" />
-    <TocEntry
-      Title="Set up the notes library"
-      Link="/Content/SE-Authoring/Set up the notes library.htm" />
-    <TocEntry
-      Title="Set up dynamic tables"
-      Link="/Content/SE-Authoring/Set-up-dynamic-tables.htm" />
-    <TocEntry
-      Title="Specify whether or not to use consolidated data"
-      Link="/Content/SE-Authoring/Specify-whether-or-not-to-use-consolidated-data.htm" />
-    <TocEntry
-      Title="Set up the statement of Cash Flows"
-      Link="/Content/SE-Authoring/Set-up-the-statement-of-Cash-Flows.htm" />
-    <TocEntry
-      Title="Add a page break in the financial statements"
-      Link="/Content/SE-Authoring/Add-a-page-break-in-the-financial-statements.htm" />
-    <TocEntry
-      Title="Add a head or footer in the financial statements"
-      Link="/Content/SE-Authoring/Add-a-header-or-footer-in-the-financial-statements.htm" />
-    <TocEntry
-      Title="Rearrange areas"
-      Link="/Content/SE-Authoring/Rearrange-areas.htm" />
-    <TocEntry
-      Title="Exclude content"
-      Link="/Content/SE-Authoring/Exclude-content.htm" />
-    <TocEntry
-      Title="Set up the print options in the financial statements"
-      Link="/Content/SE-Authoring/Set-up-the-print-options-in-the-financial-statements.htm" />
-    <TocEntry
-      Title="Add visibility logic in the financial statements"
-      Link="/Content/SE-Authoring/Add-visibility-logic-in-the-financial-statements.htm" />
-    <TocEntry
       Title="What can users modify in the financial statements?"
       Link="/Content/SE-Authoring/What-can-users-modify-in-the-financial-statements.htm" />
     <TocEntry
-      Title="View a sample notes structure"
-      Link="/Content/SE-Authoring/View-a-sample-notes-structure.htm" />
+      Title="Content Areas">
+      <TocEntry
+        Title="Add guidance information in the financial statements"
+        Link="/Content/SE-Authoring/Add-guidance-information-in-the-financial-statements.htm" />
+      <TocEntry
+        Title="Add or remove content areas"
+        Link="/Content/SE-Authoring/Add-or-remove-content-areas.htm" />
+      <TocEntry
+        Title="Set up the statement of Cash Flows"
+        Link="/Content/SE-Authoring/Set-up-the-statement-of-Cash-Flows.htm" />
+      <TocEntry
+        Title="Exclude content"
+        Link="/Content/SE-Authoring/Exclude-content.htm" />
+    </TocEntry>
     <TocEntry
-      Title="View a sample financial statements document"
-      Link="/Content/SE-Authoring/View-a-sample-financial-statements-document.htm" />
+      Title="Notes and Text">
+      <TocEntry
+        Title="Add text in the financial statements"
+        Link="/Content/SE-Authoring/Add-text-in-the-financial-statements.htm" />
+      <TocEntry
+        Title="Add the financial statements notes"
+        Link="/Content/SE-Authoring/Add-the-financial-statements-notes.htm" />
+      <TocEntry
+        Title="Set up the notes library"
+        Link="/Content/SE-Authoring/Set-up-the-notes-library.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Dynamic Tables">
+      <TocEntry
+        Title="Workflow (how to set up dynamic tables?)"
+        Link="/Content/SE-Authoring/Workflow-(how-to-set-up-dynamic-tables).htm"
+        StartSection="false"></TocEntry>
+      <TocEntry
+        Title="Add rows"
+        Link="/Content/SE-Authoring/Add-rows.htm"></TocEntry>
+      <TocEntry
+        Title="Add columns"
+        Link="/Content/SE-Authoring/Add-columns.htm" />
+      <TocEntry
+        Title="Add note references"
+        Link="/Content/SE-Authoring/Add-note-references.htm" />
+      <TocEntry
+        Title="Allow users to add rows directly in the table"
+        Link="/Content/SE-Authoring/Allow-users-to-add-rows-directly-in-the-table.htm" />
+      <TocEntry
+        Title="Set the default display option for accounts and groups"
+        Link="/Content/SE-Authoring/Set-the-default-display-option-for-accounts-and-groups.htm" />
+      <TocEntry
+        Title="Add a page break in the dynamic table"
+        Link="/Content/SE-Authoring/Add-a-page-break-in-the-dynamic-table.htm" />
+      <TocEntry
+        Title="Change the dynamic table format"
+        Link="/Content/SE-Authoring/Change-the-dynamic-table-format.htm" />
+      <TocEntry
+        Title="Copy a table"
+        Link="/Content/SE-Authoring/Copy-a-table.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Features">
+      <TocEntry
+        Title="Add visibility logic in the financial statements"
+        Link="/Content/SE-Authoring/Add-visibility-logic-in-the-financial-statements.htm" />
+      <TocEntry
+        Title="Set up diagnostics"
+        Link="/Content/SE-Authoring/Set-up-diagnostics.htm" />
+      <TocEntry
+        Title="Change the default group for rounding differences"
+        Link="/Content/SE-Authoring/Change-the-default-group-for-rounding-differences.htm" />
+      <TocEntry
+        Title="Specify whether or not to use consolidated data"
+        Link="/Content/SE-Authoring/Specify-whether-or-not-to-use-consolidated-data.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Layout">
+      <TocEntry
+        Title="Rearrange areas"
+        Link="/Content/SE-Authoring/Rearrange-areas.htm" />
+      <TocEntry
+        Title="Add a page break in the financial statements"
+        Link="/Content/SE-Authoring/Add-a-page-break-in-the-financial-statements.htm" />
+      <TocEntry
+        Title="Add a head or footer in the financial statements"
+        Link="/Content/SE-Authoring/Add-a-header-or-footer-in-the-financial-statements.htm" />
+      <TocEntry
+        Title="Set up the print options in the financial statements"
+        Link="/Content/SE-Authoring/Set-up-the-print-options-in-the-financial-statements.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Samples">
+      <TocEntry
+        Title="View a sample notes structure"
+        Link="/Content/SE-Authoring/View-a-sample-notes-structure.htm" />
+      <TocEntry
+        Title="View a sample financial statements document"
+        Link="/Content/SE-Authoring/View-a-sample-financial-statements-document.htm" />
+    </TocEntry>
   </TocEntry>
   <TocEntry
     Title="Reports and Custom Forms">
@@ -238,7 +327,7 @@
       Title="Set up the Control report"
       Link="/Content/SE-Authoring/Set-up-the-Control-report.htm" />
     <TocEntry
-      Title="Set up the Risk of Material Misstatements (RMM) Assessement report"
+      Title="Set up the Risk of Material Misstatements (RMM) Assessment report"
       Link="/Content/SE-Authoring/Set-up-the-Risk-of-Material-Misstatements-(RMM)-Assessment-report.htm" />
     <TocEntry
       Title="Set up the Materiality document"

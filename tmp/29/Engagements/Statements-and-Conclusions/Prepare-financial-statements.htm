@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-conditions="Product.RCT,Product.SE,Product.PCR" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-conditions="Product.RCT,Product.SE,Product.PCR" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Engagements|Statements and Conclusions">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
@@ -33,11 +33,11 @@
         <div class="reqse sesectiontext feature-availability">
             <img src="/.../.../Resources/CaseWare_Logos/casewarelogo.png" class="prdsectionlogo" />
             <div class="prdsectiontext">
-                <p>This feature is only available with products on the CaseWareCloud SE platform. Available SE products include <a href="../../Explore/Products/OnPoint-PCR.htm">OnPoint PCR</a> and <a href="../../Explore/Products/CaseWare-RCT.htm">CaseWare ReviewCompTax</a>. </p>
+                <p>This feature is only available with products on the CaseWare Cloud Engagements platform. Available products include <a href="../../Explore/Products/OnPoint-PCR.htm">OnPoint PCR</a>, <a href="../../Explore/Products/Provided-By-Client-(PBC)-Requests.htm">PBC Requests</a> and <a href="../../Explore/Products/CaseWare-RCT.htm">CaseWare ReviewCompTax</a>. </p>
             </div>
         </div>
         <p>To prepare a financial statement, go to the <b>Documents</b> page and select the  financial statements document to open it. Some data already populates in the document as you set up your engagement, such as the cash flow statement and the trial balance data. You can review the existing information and make any necessary modifications or customizations. </p>
-        <p class="note"><b>Note</b>: See <a href="../../Practice/Templates-and-Authoring/Customize-the-financial-statements-layout.htm">Customize financial statements layout</a> and <a href="../../Practice/Templates-and-Authoring/Customize-the-financial-statements-content.htm">Customize financial statements content</a> for all the customization tasks related to financial statements in CaseWare ReviewCompTax.</p>
+        <p class="note"><b>Note</b>: See <a href="../../Practice/Templates-and-Authoring/Customize-the-financial-statements-layout.htm">Customize financial statements layout</a> and <a href="../../Practice/Templates-and-Authoring/Customize-the-financial-statements-content.htm">Customize financial statements content</a> for all the customization tasks related to financial statements.</p>
         <h2>View guidance information</h2>
         <p>You can  find guidance information in the document in the form of:</p>
         <ul>
@@ -63,9 +63,79 @@
             </li>
         </ol>
         <p>To include the consolidated data in the financial statement, select the <b>Use non-consolidated data</b> check box again.</p>
-        <h2>Replace text and field placeholders</h2>
+        <h2>Exclude prior year information from the financial statements</h2>
+        <p>The prior year information displays in the financial statement tables by default. You can exclude the prior year information from the statement if it's irrelevant. For example, you can exclude the prior year information in your financial statement    if the current year is not directly comparable to the prior year. </p>
+        <p style="font-weight: bold;">To  exclude prior year information:</p>
+        <ol>
+            <li value="1">
+                <p>Open the financial statement and go to the Document Map</p>
+            </li>
+            <li value="2">
+                <p>Select the <b>Settings</b> (<img src="../../Resources/Icons/SE icons/settings-icon-inline_29x20.png" style="vertical-align: text-bottom;width: 29;height: 20;" />), then clear the <b>Show prior year</b> check box.</p>
+            </li>
+            <p>The prior year information is no longer available in the financial statement tables.</p>
+        </ol>
+        <p>Select the <b>Show prior year</b> check box to show the prior year information again in all areas of the statement.</p>
+        <h2 id="Expand-a-statement-row-to-display-more-detail">View details of accounts and groups</h2>
+        <p>You can select a specific account in any financial statements table to view its trial balance data.</p>
+        <p>To view account details, select the account to display the Account Details popup which shows the trial balance data for this account.</p>
+        <p>
+            <img src="../../Resources/Images/account-details-popup.PNG" alt="Account Details popup" />
+        </p>
+        <p>You can also expand or collapse groups to either view data for each account in the group or view the total amount for the accounts in a group.</p>
+        <p><b>To expand or collapse a row:</b>
+        </p>
+        <ol>
+            <li value="1">
+                <p>Select the  arrow pointing down (<img src="../../Resources/Images/expand-row-arrow-inline.PNG" style="vertical-align: text-bottom;" />) to expand a row. </p>
+                <p>The expanded row shows the figures for each account in the group. It also shows any available information (such as note references) for each account.</p>
+            </li>
+            <li value="2">
+                <p> Select the arrow pointing up (<img src="../../Resources/Icons/SE icons/collapse-row-arrow-inline_19x15.png" style="vertical-align: text-bottom;width: 19;height: 15;" />) to collapse a row.</p>
+                <p> The collapsed row shows the total amount for all accounts in the group.</p>
+            </li>
+        </ol>
+        <p class="note"><b>Note</b>: You cannot collapse or expand groups unless the setting for Accounts in the table is either <b>Included (Collapsed)</b> or <b>Included (Expanded).</b> To learn more, see <a href="#Set">Set a default display option for accounts and groups.</a></p>
+        <h2><a name="Set"></a>Set a default display option for accounts and groups</h2>
+        <p>You can predefine how groups and accounts display in each table in the financial statements. For example, you can set a table to show groups collapsed by default.</p>
+        <p style="font-weight: bold;">To set the display option for groups and accounts in a table:</p>
+        <ol>
+            <li value="1">
+                <p>Select the desired table.</p>
+            </li>
+            <li value="2">
+                <p>Select <b>More actions</b> (<img src="../../Resources/Icons/SE icons/more-actions-inline_27x15.png" style="vertical-align: text-bottom;width: 27;height: 15;" />) | <b>Edit Dynamic Table.</b></p>
+            </li>
+            <li value="3">
+                <p>Select <b>Settings</b> (<img src="../../Resources/Icons/SE icons/se-table-options-icon.png" style="vertical-align: text-bottom;" />).</p>
+            </li>
+            <li value="4">
+                <p>Choose the desired option for <b>Accounts</b>.</p>
+            </li>
+            <p>Available options:</p>
+            <ul>
+                <li value="1">
+                    <p><b>Excluded -</b> Show groups only in the table.</p>
+                </li>
+                <li value="2">
+                    <p><b>Included (Collapsed) -</b> Show accounts and groups in table, where groups are collapsed by default.</p>
+                </li>
+                <li value="3">
+                    <p><b>Included (Expanded) -</b> Show accounts and groups in the table, where groups are expanded by default.</p>
+                </li>
+            </ul>
+            <li value="5">
+                <p>Select <b>SAVE</b> or <b>SAVE &amp; CLOSE.</b></p>
+            </li>
+        </ol>
+        <h2>Review group and account balances</h2>
+        <p>To review group and account balances,<span> see <a href="../Accounts-and-Analysis/Review-group-and-account-balances-in-the-financial-statements.htm">Review group and account balances in the financial statements</a>.</span></p>
+        <h2><a name="Replace"></a>Replace text and field placeholders</h2>
         <p>The financial statement typically includes an introductory letter created from a template. The template’s content can include placeholders for some text and fields that you need to replace with specific information related to your engagement, organization or client.</p>
-        <p>The <b>Placeholders</b> indicator at the top of the document tracks your progress on placeholders. It shows the number of placeholders that haven’t been replaced by actual information. You can also select the indicator to navigate to the next empty placeholder.</p>
+        <p>The <b>Placeholders</b> indicator at the top of the <b>Document Map</b> tracks your progress on placeholders. It shows the number of placeholders that haven’t been replaced by actual information. You can also select the indicator to navigate to the next empty placeholder.</p>
+        <p>
+            <img src="../../Resources/Images/FS-placeholder-indicator.PNG" alt="Placeholders indicator in Financial Statements" />
+        </p>
         <p style="font-weight: bold;">To replace a text placeholder:</p>
         <ol>
             <li value="1">
@@ -140,7 +210,7 @@
             </li>
         </ol>
         <p>You can select <b>Settings</b> (<img src="../../Resources/Icons/SE icons/edit-cash-flow_21x19.png" style="vertical-align: text-bottom;width: 21;height: 19;" />) | <b>Use calculated balances</b> to revert back to the original balances.</p>
-        <h2>Create notes</h2>
+        <h2>Create a note</h2>
         <p>Notes to the financial statements are important disclosures that further explain numbers on the financial statements document. You can create single notes and you can also create a note hierarchy (main category notes and subcategory notes) to classify and organize the notes.</p>
         <p>
             <img src="../../Resources/Images/note-herirachy.PNG" />
@@ -179,7 +249,9 @@
             <li value="3">Page Break</li>
         </ul>
         <p>You can add more than one content type in a note.</p>
-        <h2><a name="Add"></a>Add notes from library</h2>
+        <h2><a name="Add"></a>Add a note from library</h2>
+        <p><iframe id="vidcenter" src="https://www.youtube.com/embed/sAA4TkB6KAs" frameborder="0"></iframe>
+        </p>
         <p>Notes to the financial statements are important disclosures that further explain numbers on the financial statements document. You can add notes to include supplementary information about the results of your engagement for your client for instance.</p>
         <p>The Notes library provides a pool of predefined notes which allows users to easily find and add notes in the financial statements document. It also features a search field where you can filter the library notes by title or by trial balance group (if available).</p>
         <p>Use the notes library to  browse, search and add notes to the financial statements.</p>
@@ -187,8 +259,9 @@
         <ol>
             <li value="1">
                 <p>Select the <b>Notes to the Financial Statements</b> area at the Document Map, then select <b>Add (<img src="../../Resources/Icons/SE icons/add-area-inline_16x16.png" style="vertical-align: text-bottom;width: 16;height: 16;" />) | Insert from Library</b>.</p>
-                <p>The Notes Library opens defaulted to the <b>CATEGORIES</b> tab, which shows the hierarchy of note titles (main categories and subcategories). It also shows the number of available notes in each category.  The  number of available notes in a selected category is displayed at the <b>View notes</b> option at the top. If no category is selected, the total number of notes in the library displays at the <b>View notes</b> option. </p>
+                <p>The Notes Library opens defaulted to the <b>CATEGORIES</b> tab, which shows the hierarchy of note titles (main categories and subcategories).</p>
                 <p>Depending on your product setup,  the <b>GROUPS</b> tab can be available so you can also browse the library based on the  financial statement areas (trial balance groups) that the notes are related to. </p>
+                <p>If you select a category or group, the number of available notes in the selected category or group displays at the <b>View notes</b> option at the top. If no category or group is selected, the total number of notes in the library displays at the <b>View notes</b> option. </p>
                 <p>In the following figure, the library opens showing the available note categories. For instance, the <i>Summary of accounting policies</i> category has 61 notes within various subcategories. And since we haven't selected a category yet, the <b>View notes</b> option shows the total number of notes in the library (256 notes).</p>
             </li>
         </ol>
@@ -212,11 +285,15 @@
         </p>
         <ol data-mc-continue="true">
             <li value="2">
-                <p>Select the check box next to the notes that you want to add in the document, then select <b>ADD</b> on the top right corner of the page.</p>
+                <p>Select the check box next to the notes that you want to add in the document.</p>
                 <p>You'll notice that the number of added notes displays at the <b>Show selected notes</b> indicator  (<img src="../../Resources/Icons/SE icons/selected-note-indicator_32x27.png" style="vertical-align: text-bottom;width: 32;height: 27;" />) at the top.</p>
                 <p>If you select the <b>Show selected notes</b> indicator, you can view a preview of the content of each selected note. Note that dynamic tables don’t show in the preview.</p>
-                <p>In the Document Map, newly added notes are marked by the <b>New Note</b> indicator (<img src="../../Resources/Icons/SE icons/new-note-indicator_31x21.png" style="vertical-align: text-bottom;width: 31;height: 21;" />). The indicator is no longer available once you select a newly added note.</p>
             </li>
+            <li value="3">
+                <p>Select <b>ADD</b> on the top right corner of the page.</p>
+            </li>
+            <p>The note is added in the financial statements document and is no longer available in the Notes library.</p>
+            <p>In the Document Map, the newly added notes are marked by the <b>New Note</b> indicator (<img src="../../Resources/Icons/SE icons/new-note-indicator_31x21.png" style="vertical-align: text-bottom;width: 31;height: 21;" />). Once you select a newly added note, the indicator  (<img src="../../Resources/Icons/SE icons/new-note-indicator_31x21.png" style="vertical-align: text-bottom;width: 31;height: 21;" />) is no longer available.</p>
         </ol>
         <p>You can also use the Notes library to  add notes from a specific note category using the <b>Add</b> (<img src="../../Resources/Icons/SE icons/add-area-inline_17x17.png" style="vertical-align: text-bottom;width: 17;height: 17;" />) button in the note area. </p>
         <p style="font-weight: bold;">To add a note from a specific category:</p>
@@ -236,27 +313,20 @@
             </p>
             <li value="3">
                 <p>Select one or more notes, then select <b>ADD</b>.</p>
+                <p>The note is added in the financial statements document and is no longer available in the Notes library.</p>
             </li>
         </ol>
-        <h2 id="Expand-a-statement-row-to-display-more-detail">View details of accounts and groups</h2>
-        <p>For reporting purposes in the financial statements, account balances are rounded prior to summing the group balance. They are also recalculated based on the rounded values.</p>
-        <p>With rounding applied, the balance of an account group always matches the sum of the sub account group. However, some sections can be inconsistent due to rounding, specifically Assets = Liabilities + Equity.</p>
-        <p>In this case, the rounding difference between Assets and Liabilities+Equity (for current and prior periods) is applied to a group in the balance sheet automatically. The financial group is chosen by an algorithm that finds the first non-zero, non-total group.</p>
-        <p>Note that if the trial balance is out of balance (Assets does not equal Liabilities + Equity without rounding), the process to apply the rounding difference can’t be followed and an Out of balance indicator displays at the top (<img src="../../Resources/Images/out-of-balance1_77x23.png" style="width: 77;height: 23;" />).</p>
-        <p>You can choose to   view the information and figures for each account in the group or view the total amount for the accounts in the group. </p>
-        <p><b>To expand or collapse a row:</b>
-        </p>
+        <p>You can also remove a note you've added from the Notes library. For example, if added by mistake.</p>
+        <p style="font-weight: bold;">To remove a note added from library from the document:</p>
         <ol>
             <li value="1">
-                <p>Select the  arrow pointing down (<img src="../../Resources/Images/expand-row-arrow-inline.PNG" style="vertical-align: text-bottom;" />) to expand a row. </p>
-                <p>The expanded row shows the figures for each account in the group. It also shows any available information (such as note references) for each account.</p>
+                <p>Go to the note that you want to remove.</p>
             </li>
             <li value="2">
-                <p> Select the arrow pointing up (<img src="../../Resources/Icons/SE icons/collapse-row-arrow-inline_19x15.png" style="vertical-align: text-bottom;width: 19;height: 15;" />) to collapse a row.</p>
-                <p> The collapsed row shows the total amount for all accounts in the group.</p>
+                <p>Select <b>More actions (<img src="../../Resources/Icons/SE icons/more-actions-inline.PNG" style="vertical-align: text-bottom;" />) </b>|<b> Exclude.</b></p>
             </li>
         </ol>
-        <p class="note"><b>Note</b>: If the option to expand rows by default is enabled in your product, then all the visible account group rows expand to display the details of their accounts.</p>
+        <p>The note is removed from the document and is now available in the Notes library.</p>
         <h2 id="Cross-reference-a-row-in-the-financial-statements-with-a-note">Link an account or a group to a note in the financial statements</h2>
         <p>A note reference is a link to an existing note in the financial statement. You can add note references in table rows  in the financial statement. For example, to link an account or a group to an existing note  that holds related details or information.</p>
         <p><b>To add a note reference in a row:</b>
@@ -293,7 +363,56 @@
             </li>
         </ol>
         <p>The number of the referenced note displays next to the row name.</p>
-        <p>You can also use the above method to change a note reference or you can change it directly from the table.</p>
+        <p>You can also reference notes in columns.</p>
+        <p style="font-weight: bold;">To add a note reference in a column:</p>
+        <ol>
+            <li value="1">
+                <p>Add a column in the table.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li value="1">
+                        <p>Select the table.</p>
+                        <p>Icons for table options display on the right.</p>
+                    </li>
+                    <li value="2">
+                        <p>Select <b>More actions (<img src="../../Resources/Images/more-actions-inline2_23x13.png" style="width: 23;height: 13;" />)</b>, then choose <b>Edit Dynamic Table</b>.</p>
+                    </li>
+                    <p>The table opens in edit mode.</p>
+                    <li value="3">
+                        <p>Go to where you want to add a column.</p>
+                    </li>
+                    <li value="4">
+                        <p>Select <b>Add</b> (<img src="../../Resources/Images/add-term3_19x22.png" style="width: 19;height: 22;" />) at the upper table border.</p>
+                    </li>
+                    <p>A column is added to the table and the column settings display on the page.</p>
+                </ol>
+            </li>
+            <li value="2">
+                <p>Select the header of the new column and change the column type to <b>Note reference.</b></p>
+            </li>
+            <li value="3">
+                <p>Enter a header and specify the desired width.</p>
+            </li>
+            <li value="4">
+                <p>Select <b>Done.</b></p>
+            </li>
+            <p>The new column is added in the table with empty references (<b>#</b>).</p>
+            <li value="5">
+                <p>Specify the note references for each row.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li value="1">
+                        <p>Select an empty reference (<b>#</b>) to display a list the existing notes in the financial statements document.</p>
+                    </li>
+                    <li value="2">
+                        <p>Select one or more notes from the list.</p>
+                    </li>
+                    <p>You can also select <b>Show excluded notes</b> to reference excluded notes.</p>
+                </ol>
+            </li>
+            <li value="6">
+                <p>Select <b>SAVE</b> or <b>SAVE &amp; CLOSE.</b></p>
+            </li>
+        </ol>
+        <p>You can also use the above methods to change a note reference or you can change it directly from the table.</p>
         <p><b>To change a note reference directly from the table:</b>
         </p>
         <ol>
@@ -303,7 +422,7 @@
                 </p>
             </li>
             <li value="2">
-                <p>Select one or more notes from the list to reference in the row.</p>
+                <p>Select one or more notes from the list to reference in the row or column.</p>
                 <p>You can also select <b>Show hidden notes</b> to reference hidden notes.</p>
             </li>
         </ol>
@@ -480,7 +599,7 @@
                 <p><b>Commentary row</b>: adds a commentary row. By default it inserts a reference to existing notes in the financial statements. You can change the default by deleting the note reference and enter a comment for the row.</p>
                 <p><b>Spacing row:</b> to add white space into your dynamic table. You can add white space to make your content easier to read. </p>
                 <p><b>Page break:</b> to add a page break between table rows.</p>
-                <p><b>Custom group:</b> to add  a custom group row. Custom group rows insert a text field (to add a title or a brief description for the group) and a total row.</p>
+                <p><b>Custom group:</b> to add  a custom group row. Custom group rows insert a text field (to add a title or a brief description for the group) and a total row. A <b>Total</b> row is also inserted in the table to hold the sum of the rows within the custom group.</p>
             </li>
             <li value="6">
                 <p>Select <b>SAVE</b> or <b>SAVE &amp; CLOSE</b>.</p>
@@ -506,19 +625,6 @@
             </li>
             <p>A grid displays in the table to mark the borders of each row. Valid places to move your row have dark blue grid lines while invalid places have gray grid lines. Use the grid for guidance as you drag and drop.</p>
         </ol>
-        <h2>Exclude prior year information from the financial statements</h2>
-        <p>The prior year information displays in the financial statement tables by default. You can exclude the prior year information from the statement if it's irrelevant. For example, you can exclude the prior year information in your financial statement    if the current year is not directly comparable to the prior year. </p>
-        <p style="font-weight: bold;">To  exclude prior year information:</p>
-        <ol>
-            <li value="1">
-                <p>Open the financial statement and go to the Document Map</p>
-            </li>
-            <li value="2">
-                <p>Select the <b>Settings</b> (<img src="../../Resources/Icons/SE icons/settings-icon-inline_29x20.png" style="vertical-align: text-bottom;width: 29;height: 20;" />), then clear the <b>Show prior year</b> check box.</p>
-            </li>
-            <p>The prior year information is no longer available in the financial statement tables.</p>
-        </ol>
-        <p>Select the <b>Show prior year</b> check box to show the prior year information again in all areas of the statement.</p>
         <h2>Insert the firm logo</h2>
         <p>In the financial statements document, you can insert the firm logo in any text section or in the document <a href="../../Practice/Templates-and-Authoring/Customize-the-financial-statements-layout.htm#Add2">header or footer</a>.</p>
         <p style="font-weight: bold;">To insert the firm logo:</p>
@@ -557,8 +663,12 @@
                 <p>Select <b>More actions</b> (<img src="../../Resources/Icons/SE icons/more-actions-inline.PNG" style="vertical-align: text-bottom;" />) | <b>Print Settings</b> to review the settings for a page break.</p>
             </li>
         </ul>
-        <ol data-mc-continue="true">
-            <li value="4">Select <b>Print</b> (<img src="../../Resources/Icons/SE icons/print-financial-statement_31x25.png" style="vertical-align: text-bottom;width: 31;height: 25;" />) at the Document Map.</li>
+        <ol start="3">
+            <li value="3">
+                <p>Select <b>Print</b> (<img src="../../Resources/Icons/SE icons/print-financial-statement_31x25.png" style="vertical-align: text-bottom;width: 31;height: 25;" />) at the Document Map.</p>
+                <p>If a bulk print option is available in your product, you’ll find a drop-down at the <b>Print</b> icon (<img src="../../Resources/Icons/SE icons/bulk-print-option_31x20.png" style="vertical-align: text-bottom;width: 31;height: 20;" />). Select one of the available group of documents to print them together.</p>
+                <p class="note inline"><b>Note:</b> If there are <a href="#Replace">text or field placeholders</a> that have not been replaced, you get a warning once you select <b>Print</b>.</p>
+            </li>
         </ol>
         <p>The financial statement is converted to a PDF file that displays on a new browser tab. </p>
     </body>
