@@ -23,7 +23,7 @@ Route::get('/2018/webapps/28/en/Resources/Project Files/CaseWareCloud/References
 
 // cloud index
 Route::get('/', function () {
-    return redirect('/2018/webapps/29/en/webapps');
+    return redirect('/2019/webapps/30/en/webapps');
 });
 
 
