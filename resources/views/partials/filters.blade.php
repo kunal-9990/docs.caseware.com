@@ -29,8 +29,8 @@
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>
-            <span class="switch-name">Analytics.AI</span>
-            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span>Analytics.AI</div>
+            <span class="switch-name">AnalyticsAI</span>
+            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span>AnalyticsAI</div>
         </div>
         <div class="switch-wrap time @if($mobile == true) mobile @endif">
             <label class="switch">
