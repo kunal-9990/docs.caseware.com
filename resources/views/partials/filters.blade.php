@@ -62,7 +62,7 @@
                 <span class="slider round"></span>
             </label>
             <span class="switch-name">PBC</span>
-            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span class="switch-name__no-wrap">&nbsp;</span>PBC</div>
+            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span class="switch-name__no-wrap">&nbsp;</span>Cloud Provided by Client Requests</div>
         </div>
     </div>
 </span>
