@@ -14,7 +14,7 @@
 */
 $current_version = env("CURRENT_VERSION");
 
-//------temporary redirects----- 
+//------temporary redirects-----//
 
 Route::get('/2019/webapps/30/en/Engagements/Accounts-and-Analysis/Detecting-misstatements-in-your-file.htm', function () {
     return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
