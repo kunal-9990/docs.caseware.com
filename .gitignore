@@ -1,10 +1,9 @@
 /node_modules
 /public/hot
-/public/storage
 /public/css/app.css
 /public/css/app_search.css
 /public/js/app.js
-/storage/*.key
+
 /vendor
 /.idea
 /.vagrant
