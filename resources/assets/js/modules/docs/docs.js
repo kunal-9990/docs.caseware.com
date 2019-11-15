@@ -15,9 +15,9 @@ module.exports = () => {
         IMG_MODAL();
     }
 
-    if (document.querySelector('img')) {
-        IMG_LAZYLOAD();
-    }
+    // if (document.querySelector('img')) {
+    //     IMG_LAZYLOAD();
+    // }
 
     if (document.querySelector('#vid') || document.querySelector('#vidcenter')) {
         VIDEO_IFRAME();
