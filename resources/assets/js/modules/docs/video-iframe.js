@@ -5,7 +5,9 @@ module.exports = () => {
     const THEATRE_VIEW_CONTAINER = document.querySelector('.yt-video-iframe');
     const ORIGINAL_VID_CONTAINER = document.querySelector('#vid') || document.querySelector('#vidcenter');
     const IMG_THUMBNAIL = document.querySelector('.docs__video-iframe-thumbnail');
-    const IFRAME_SRC = ORIGINAL_VID_CONTAINER.getAttribute('src');
+    if (ORIGINAL_VID_CONTAINER.getAttribute('src')) {
+        const IFRAME_SRC = ORIGINAL_VID_CONTAINER.getAttribute('src');
+    }
     const YT_VIDEO_ID = IFRAME_SRC.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
 
     ORIGINAL_VID_CONTAINER.remove();
