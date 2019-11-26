@@ -16,14 +16,6 @@
             <span class="switch-name">Working Papers</span>
             <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span>Working<span class="switch-name__no-wrap">&nbsp;</span>Papers</div>
         </div>
-        <div class="switch-wrap analytics @if($mobile == true) mobile @endif">
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-            <span class="switch-name">Analytics</span>
-            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span>Cloud<span class="switch-name__no-wrap">&nbsp;</span>Analytics</div>
-        </div>
         <div class="switch-wrap analyticsai @if($mobile == true) mobile @endif">
             <label class="switch">
                 <input type="checkbox">
@@ -62,7 +54,15 @@
                 <span class="slider round"></span>
             </label>
             <span class="switch-name">PBC</span>
-            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span class="switch-name__no-wrap">&nbsp;</span>PBC</div>
+            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span class="switch-name__no-wrap">&nbsp;</span>Cloud Provided by Client Requests</div>
+        </div>
+        <div class="switch-wrap auditint @if($mobile == true) mobile @endif">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="switch-name">Audit International</span>
+            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span class="switch-name__no-wrap">&nbsp;</span>Audit International</div>
         </div>
     </div>
 </span>
