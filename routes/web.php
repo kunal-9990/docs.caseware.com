@@ -26,10 +26,10 @@ Route::get('/2019/webapps/30/en/Engagements/Accounts-and-Analysis/Visualizing-bu
     return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
 });
 Route::get('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-financial-data-from-a-CSV-file-for-analysis.htm', function () {
-    return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
+    return redirect('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-trial-balance-in-the-Data-page.htm#Importfromthird-partydesktopaccountingsoftware');
 });
 Route::get('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-financial-data-from-another-software-for-analysis.htm', function () {
-    return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
+    return redirect('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-trial-balance-in-the-Data-page.htm#Importfromthird-partydesktopaccountingsoftware');
 });
 Route::get('/2019/webapps/30/en/Explore/Interface/Analytics/Analytics-advanced.htm', function () {
     return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
