@@ -29,7 +29,7 @@ class PageController extends Controller
 
         if(!endsWith($topic,".htm")){
             $topic .= ".htm";
-        }
+        } 
 
         $product =  strtolower($product);
 

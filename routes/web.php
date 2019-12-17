@@ -31,6 +31,9 @@ Route::get('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-fina
 Route::get('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-financial-data-from-another-software-for-analysis.htm', function () {
     return redirect('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-trial-balance-in-the-Data-page.htm#Importfromthird-partydesktopaccountingsoftware');
 });
+Route::get('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-tax-data.htm#Importing-from-Working-Papers', function () {
+    return redirect('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-trial-balance-in-the-Data-page.htm#Importfromthird-partydesktopaccountingsoftware');
+});
 Route::get('/2019/webapps/30/en/Explore/Interface/Analytics/Analytics-advanced.htm', function () {
     return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
 });
