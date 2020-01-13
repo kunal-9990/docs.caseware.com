@@ -23,23 +23,47 @@ dos2unix scripts/build.sh
 
 sudo chmod -R 777 .
 
-echo 'Moving stuff around...'
-
+echo "Backing up current content..."
 sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
 
+
+echo 'Copying new content into place...'
 mkdir -p public/documentation_files/$1/$2/$3/Content/$4
 cp -R tmp/$3/* public/documentation_files/$1/$2/$3/Content/$4
 cd public/documentation_files/$1/$2/$3/Content/$4
 
 sudo chmod -R 777 .
 
-echo 'Renaming stuff...'
+echo 'Renaming some files...'
 
 find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content//g'
 
-mv Online\ Output.fltoc OnlineOutput.xml
-mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml
-mv csh_redirect.xml ../..
+#mv Online\ Output.fltoc OnlineOutput.xml
+#mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml
+
+echo "Copying over TOC and redirect xml files..."
+
+file=./Online\ Output.fltoc
+if [ -e "$file" ]; then
+    mv Online\ Output.fltoc OnlineOutput.xml
+else 
+    echo "Online Output.fltoc was not included in upload"
+fi 
+
+file=./Online\ Output\ \(SE\ Authoring\).fltoc
+if [ -e "$file" ]; then
+    mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml
+else 
+    echo "Online Output (SE Authoring).fltoc was not included in upload"
+fi 
+
+file=./csh_redirect.xml
+if [ -e "$file" ]; then
+    mv csh_redirect.xml ../..
+    echo "Moving csh_redirect.xml..."
+else 
+    echo "csh_redirect.xml was not included in upload"
+fi 
 
 
 prefix="\/documentation_files\/$1\/$2\/$3\/Content\/$4\/Resources\/"
@@ -57,7 +81,7 @@ find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/..\/Resources/src="'"$p
 find . -type f -print0 | xargs -0 sed -i 's/src="\/Resources/src="'"$prefix"'/g'
 
 cd ../../../../../../..
-pwd
+#pwd
 echo 'Copying Data folders into place...'
 
 #end-user search results
