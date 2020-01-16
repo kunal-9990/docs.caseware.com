@@ -85,8 +85,8 @@ cd ../../../../../../..
 echo 'Copying Data folders into place...'
 
 #end-user search results
-mkdir -p public/search/$1/$2/$3/en
-cp -R tmp/$3/Data public/search/$1/$2/$3/en
+mkdir -p public/search/$1/$2/$3/$4
+cp -R tmp/$3/Data public/search/$1/$2/$3/$4
 cd public/search/$1/$2/$3
 
 cp -R en fr
@@ -98,17 +98,26 @@ cp -R en de
 cd ../../../../..
 
 #se-search results
-mkdir -p public/se-search/$1/$2/$3/en
-cp -R tmp/$3/Data-SE public/se-search/$1/$2/$3/en
-cd public/se-search/$1/$2/$3/en
+mkdir -p public/se-search/$1/$2/$3/$4
+cp -R tmp/$3/Data-SE public/se-search/$1/$2/$3/$4
+cd public/se-search/$1/$2/$3/$4
 rm -R Data
 mv Data-SE Data
 cd ..
 
-cp -R en fr
-cp -R en es
-cp -R en cn
-cp -R en de
+if [ $4 = "en" ]; then
+    cp -R en fr
+    cp -R en es
+    cp -R en cn
+    cp -R en de
+else
+  cp -R en nl
+fi
+
+# cp -R en fr
+# cp -R en es
+# cp -R en cn
+# cp -R en de
 # cp -R en nl
 
 cd ../../../..
