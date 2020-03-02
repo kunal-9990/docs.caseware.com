@@ -102,9 +102,6 @@ Route::get('/se-search/{year}/{product}/{version}/{lang}/{category}/{subcategory
 });
 
 
-
-
-
 // topics
 Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');
 
@@ -119,7 +116,12 @@ Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@show
 
 Route::post('logemail', 'Controller@logEmail');
 
+Route::get('login/github', 'Auth\LoginController@redirectToProvider');
+Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
 
 
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
