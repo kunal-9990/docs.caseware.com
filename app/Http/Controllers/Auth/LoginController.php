@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -44,9 +46,27 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function redirectToProvider()
+    public function redirectToProvider($provider)
     {
-        return Socialite::driver('github')->redirect();
+      if ($provider == 'github'){
+            return Socialite::driver('github')->redirect();
+        }
+        elseif ($provider = 'facebook'){
+            return Socialite::driver('facebook')->redirect();
+        }
+        elseif ($provider = 'google'){
+            return Socialite::driver('google')->redirect();
+        }
+        elseif ($provider = 'twitter') {
+            return Socialite::driver('twitter')->redirect();
+        }
+        elseif ($provider = 'linkedin'){
+            return Socialite::driver('linkedin')->redirect();
+        }
+        else {
+            return response()->view('errors.505');
+        }       
+
     }
 
     /**
@@ -54,11 +74,10 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleProviderCallback($provider)
+    public function handleProviderCallback($provider, Request $request)
     {
+        
         if ($provider == 'github'){
-
-
             $githubUser = Socialite::driver('github')->user();
             $user = User::where('provider_id', $githubUser->getId())->first();
             if (!$user){
@@ -68,11 +87,28 @@ class LoginController extends Controller
                     'provider_id' => $githubUser->getId(),
                     'provider' => $provider
                     ]);
-            } else {
-                echo "found github user:";
-                dd($user);
-            }   
+                    redirect('/download');
+            } 
         }
+        elseif ($provider = 'facebook'){
+
+        }
+        elseif ($provider = 'google'){
+
+        }
+        elseif ($provider = 'twitter') {
+
+        }
+        elseif ($provider = 'linkedin'){
+
+        }
+        else {
+            return response()->view('errors.505');
+        }
+        
+        Auth::login($user, true);
+        $request->session()->flash('status', 'prompt-modal');
+        return redirect(session('link'));
         // $user->token;
     }
 
