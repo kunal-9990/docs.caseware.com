@@ -23,8 +23,6 @@ class PageController extends Controller
     // topic
     function showTopic($year, $product, $version, $lang, $category, $subcategory, $topic){
 
-        
-
         App::setLocale($lang);
 
         $noHeader = true;
@@ -57,8 +55,6 @@ class PageController extends Controller
 
     // topics with subsubcategory
     function showTopic2($year, $product, $version, $lang, $category, $subcategory, $subsubcategory, $topic){
-        
-        
 
         App::setLocale($lang);
                 
@@ -94,8 +90,6 @@ class PageController extends Controller
     // subcategory
     function showSubCategory($year, $product, $version, $lang, $category, $subcategory){
 
-        
-
         App::setLocale($lang);
                 
 
@@ -123,8 +117,6 @@ class PageController extends Controller
     
     // category
     function showCategory($year, $product, $version, $lang, $category){
-
-        
 
         App::setLocale($lang);
         

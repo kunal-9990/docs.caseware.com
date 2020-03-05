@@ -15,7 +15,6 @@ yarn-error.log
 .vscode/*
 public/mix-manifest.json
 /public/documentation_files
-/public/downloads
 /tmp/*
 /public/search
 /public/se-search
