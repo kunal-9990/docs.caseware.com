@@ -46,6 +46,10 @@
         @endif
     <script src="{{ mix('/js/app.js') }}"></script>
 </body>
-
+@if(Session::has('link'))
+<div class="alert alert-danger">
+    {{ Session::get('link')}}
+</div>
+@endif
 
 </html>

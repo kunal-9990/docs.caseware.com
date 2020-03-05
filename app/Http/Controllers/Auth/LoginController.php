@@ -48,25 +48,8 @@ class LoginController extends Controller
      */
     public function redirectToProvider($provider)
     {
-      if ($provider == 'github'){
-            return Socialite::driver('github')->redirect();
-        }
-        elseif ($provider = 'facebook'){
-            return Socialite::driver('facebook')->redirect();
-        }
-        elseif ($provider = 'google'){
-            return Socialite::driver('google')->redirect();
-        }
-        elseif ($provider = 'twitter') {
-            return Socialite::driver('twitter')->redirect();
-        }
-        elseif ($provider = 'linkedin'){
-            return Socialite::driver('linkedin')->redirect();
-        }
-        else {
-            return response()->view('errors.505');
-        }       
-
+            session(['link' => url()->previous()]);
+            return Socialite::driver($provider)->redirect();
     }
 
     /**
@@ -77,35 +60,16 @@ class LoginController extends Controller
     public function handleProviderCallback($provider, Request $request)
     {
         
-        if ($provider == 'github'){
-            $githubUser = Socialite::driver('github')->user();
-            $user = User::where('provider_id', $githubUser->getId())->first();
-            if (!$user){
-                $user = User::create([
-                    'email' => $githubUser->getEmail(),
-                    'name' => is_null($githubUser->getName()) ? 'N/A'  : $githubUser->getName(),
-                    'provider_id' => $githubUser->getId(),
-                    'provider' => $provider
-                    ]);
-                    redirect('/download');
-            } 
-        }
-        elseif ($provider = 'facebook'){
-
-        }
-        elseif ($provider = 'google'){
-
-        }
-        elseif ($provider = 'twitter') {
-
-        }
-        elseif ($provider = 'linkedin'){
-
-        }
-        else {
-            return response()->view('errors.505');
-        }
-        
+        $providerUser = Socialite::driver($provider)->user();
+        $user = User::where('provider_id', $providerUser->getId())->first();
+        if (!$user){
+            $user = User::create([
+                'email' => $providerUser->getEmail(),
+                'name' => is_null($providerUser->getName()) ? 'N/A'  : $providerUser->getName(),
+                'provider_id' => $providerUser->getId(),
+                'provider' => $provider
+                ]);
+        } 
         Auth::login($user, true);
         $request->session()->flash('status', 'prompt-modal');
         return redirect(session('link'));

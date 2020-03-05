@@ -40,7 +40,13 @@ return [
     'client_secret' => env('GITHUB_CLIENT_SECRET'), // Your GitHub Client Secret
     'redirect' => env('GITHUB_CLIENT_CALLBACK'),
     ],
-
+    
+    'linkedin' => [
+    'client_id' => env('LINKEDIN_CLIENT_ID'),         // Your LINKEDIN Client ID
+    'client_secret' => env('LINKEDIN_CLIENT_SECRET'), // Your LINKEDIN Client Secret
+    'redirect' => env('LINKEDIN_CLIENT_CALLBACK'),
+    ],
+    
     'facebook' => [
     'client_id' => env('FACEBOOK_CLIENT_ID'),         // Your FACEBOOK Client ID
     'client_secret' => env('FACEBOOK_CLIENT_SECRET'), // Your FACEBOOK Client Secret
@@ -59,10 +65,5 @@ return [
     'redirect' => env('GOOGLE_CLIENT_CALLBACK'),
     ],
 
-    'linkedin' => [
-    'client_id' => env('LINKEDIN_CLIENT_ID'),         // Your LINKEDIN Client ID
-    'client_secret' => env('LINKEDIN_CLIENT_SECRET'), // Your LINKEDIN Client Secret
-    'redirect' => env('LINKEDIN_CLIENT_CALLBACK'),
-    ],
 
 ];

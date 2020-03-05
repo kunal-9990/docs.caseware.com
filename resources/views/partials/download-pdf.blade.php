@@ -31,10 +31,10 @@
                     </a> --}}
                     <div class="text-center social-btn">
                         <a href="/login/github"  class="btn btn-success btn-block"><i class="fab fa-github"></i>   Subscribe with <b>GitHub</b></a>
-                        <a href="#" class="btn btn-facebook btn-block"><i class="fab fa-facebook-f"></i> Subscribe with <b>Facebook</b></a>
-                        <a href="#" class="btn btn-twitter btn-block"><i class="fab fa-twitter"></i> Subscribe with <b>Twitter</b></a>
-                        <a href="#" class="btn btn-google btn-block"><i class="fab fa-google"></i> Subscribe with <b>Google</b></a>
-                        <a href="#" class="btn btn-linkedin btn-block"><i class="fab fa-linkedin-in"></i> Subscribe with <b>LinkedIn</b></a>
+                        {{-- <a href="/login/facebook" class="btn btn-facebook btn-block"><i class="fab fa-facebook-f"></i> Subscribe with <b>Facebook</b></a> --}}
+                        <a href="/login/twitter" class="btn btn-twitter btn-block"><i class="fab fa-twitter"></i> Subscribe with <b>Twitter</b></a>
+                        <a href="/login/google" class="btn btn-google btn-block"><i class="fab fa-google"></i> Subscribe with <b>Google</b></a>
+                        <a href="/login/linkedin" class="btn btn-linkedin btn-block"><i class="fab fa-linkedin-in"></i> Subscribe with <b>LinkedIn</b></a>
                     </div>
                 </div>
             @endif
