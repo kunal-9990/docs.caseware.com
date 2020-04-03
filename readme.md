@@ -37,7 +37,7 @@
     
     Place a folder named as the new version into the tmp directory as shown below.
     ----------------------------
-    /docsmk2/
+    /docsmk4/
     │
     └───/tmp/
     │   │  
@@ -47,7 +47,7 @@
     │       │    Online Output.fltoc
     │       │    csh_redirect.xml
     ----------------------------
-    - From the project root ( docsmk2/ ) run "scripts/build.sh" OR "npm run build" and supply the year, product, version, and "en" as parameters.
+    - From the project root ( docsmk4/ ) run "scripts/build.sh" OR "npm run build" and supply the year, product, version, and "en" as parameters.
     - Example:
     - scripts/build.sh 2018 webapps 30 en
       OR

@@ -2,7 +2,7 @@
 #
 # Place a folder named as the new version into the tmp directory as shown below.
 # ----------------------------
-# /docsmk2/
+# /docsm42/
 # │
 # └───/tmp/
 # │   │  
