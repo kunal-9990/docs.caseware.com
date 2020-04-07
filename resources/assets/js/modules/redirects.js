@@ -46,10 +46,11 @@ module.exports = () => {
       } 
     });
  
-    $("#"+accordianID).addClass("in");
-    $("body, html").animate({
-      scrollTop: $("#" + accordianID).offset().top - 100 
-    }, 600);  
+    // TODO - blow is causing js errors - no accordianID 
+    // $("#"+accordianID).addClass("in");
+    // $("body, html").animate({
+    //   scrollTop: $("#" + accordianID).offset().top - 100 
+    // }, 600);  
     
     // $(document).ready(function () {
     //   if (!accordianID) {
