@@ -33,7 +33,7 @@
             @yield('content')
         </main>
 
-        <!-- @include('partials.cookie-consent') -->
+        @include('partials.cookie-consent')
         @include('partials.footer')
     </div>
         @if(Route::current()->parameters()["lang"] == "en")
