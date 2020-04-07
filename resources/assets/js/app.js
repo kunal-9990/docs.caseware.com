@@ -28,6 +28,7 @@ const USER_FEEDBACK = require('./modules/user-feedback');
 const LAYOUT_GRID = require('./modules/grid');
 const TOC = require('./modules/toc');
 const REDIRECTS = require('./modules/redirects');
+const COOKIE_CONSENT = require('./modules/cookie-consent');
 
 $(document).ready(() => {
     // nav init
@@ -65,5 +66,10 @@ $(document).ready(() => {
 
     if (document.querySelector('.helpaccordiancol')) {
         REDIRECTS();
+    }
+
+    // cookie consent notification
+    if(document.querySelector('.cookie')) {
+        COOKIE_CONSENT();
     }
 });
