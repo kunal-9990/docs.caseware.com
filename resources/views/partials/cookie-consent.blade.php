@@ -8,7 +8,7 @@
       </div>
       <div>
         <div class="cookie__btn">
-          <span>I agree</span>
+          <span>I understand</span>
         </div>
       </div>
     </div>
