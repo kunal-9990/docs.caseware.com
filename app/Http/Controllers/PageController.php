@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redirect;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Facades\View;
+use App\Services\DocsCmsApi;
 use App;
 
 class PageController extends Controller
@@ -140,5 +142,10 @@ class PageController extends Controller
         $maincontentarea = $dom->find('body', 0);
         $recent = getRecentlyViewed();
         return view('pages.one-column', compact('maincontentarea', 'recent'));
+    }
+
+    function postDump () {
+        $page = $this->cms->posts();
+        dd($page);
     }
 }

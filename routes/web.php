@@ -14,47 +14,8 @@
 */
 $current_version = env("CURRENT_VERSION");
 
-//------temporary redirects-----//
 
-Route::get('/2019/webapps/30/en/Engagements/Accounts-and-Analysis/Detecting-misstatements-in-your-file.htm', function () {
-    return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
-});
-Route::get('/2019/webapps/30/en/Engagements/Accounts-and-Analysis/Run-tests-on-your-client-data.htm', function () {
-    return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
-});
-Route::get('/2019/webapps/30/en/Engagements/Accounts-and-Analysis/Visualizing-business-data.htm', function () {
-    return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
-});
-Route::get('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-financial-data-from-a-CSV-file-for-analysis.htm', function () {
-    return redirect('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-trial-balance-in-the-Data-page.htm#Importfromthird-partydesktopaccountingsoftware');
-});
-Route::get('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-financial-data-from-another-software-for-analysis.htm', function () {
-    return redirect('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-trial-balance-in-the-Data-page.htm#Importfromthird-partydesktopaccountingsoftware');
-});
-Route::get('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-tax-data.htm', function () {
-    return redirect('/2019/webapps/30/en/Engagements/File-Preparation/Import-clients-trial-balance-in-the-Data-page.htm#Importfromthird-partydesktopaccountingsoftware');
-});
-Route::get('/2019/webapps/30/en/Explore/Interface/Analytics/Analytics-advanced.htm', function () {
-    return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
-});
-Route::get('/2019/webapps/30/en/Explore/Interface/Firm-Settings/Analytics.htm', function () {
-    return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
-});
-Route::get('/2019/webapps/30/en/Explore/Known-Issues/Analytics/Analytics-known-issues.htm', function () {
-    return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
-});
-Route::get('/2019/webapps/30/en/Explore/Known-Issues/Analytics/Analytics-troubleshooting.htm', function () {
-    return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
-});
-Route::get('/2019/webapps/30/en/Explore/Scenarios/Testing-client-data.htm', function () {
-    return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
-});
-Route::get('/2019/webapps/30/en/Explore/Whats-New/Release-history-Analytics.htm', function () {
-    return redirect('/2019/webapps/30/en/Explore/Products/CaseWareCloud-Analytics.htm');
-});
-
-
-//------------------------------
+Route::get('/postDump', 'PageController@postDump');
 
 // cloud index
 Route::get('/', function () {
@@ -116,6 +77,7 @@ Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}', 'PageC
 
 // category
 Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory')->name('category');
+
 
 Route::post('logemail', 'Controller@logEmail');
 
