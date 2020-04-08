@@ -4,6 +4,7 @@ module.exports = () => {
   const cookieNotification = document.querySelector('.cookie');
 
   cookieBtn.addEventListener('click', () => {
+    console.log("Consent button click");
     setCookie('cookie-consent', true)
     cookieNotification.style.display = "none";
   });
