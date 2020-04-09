@@ -1,0 +1,73 @@
+.cookie {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  background-color: rgba(#323232, 0.85);
+  color: #ffffff;
+  z-index: 3000000000 !important; // only to be ontop of 3rd party olark popup
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+    
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-left: 36px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 12px 24px;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    span {
+      color: #ffffff;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      background-color: #ffffff;
+
+      span {
+        color: #323232;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+
+  .cookie {
+
+    &__wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__btn {
+      margin-left: 0;
+      margin-top: 12px;
+    }
+  }
+}
