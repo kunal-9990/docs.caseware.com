@@ -20,11 +20,12 @@ module.exports = () => {
     version = routeParams[5]; 
     lang = routeParams[6]; 
     
+
     var accordianID = window.location.hash.replaceAll('#CSHID=', '');
     if(accordianID.includes("?")){
       accordianID = accordianID.split("?")[0];
     } 
-
+    console.log(accordianID);
     $.ajax({
       type: "GET",
       url: "/documentation_files/" +year.toLowerCase() + "/" + product.toLowerCase() + "/" + version + "/csh_redirect.xml",
@@ -45,7 +46,7 @@ module.exports = () => {
         });
       } 
     });
- 
+    console.log(accordianID);
     $("#"+accordianID).addClass("in");
     $("body, html").animate({
       scrollTop: $("#" + accordianID).offset().top - 100 
