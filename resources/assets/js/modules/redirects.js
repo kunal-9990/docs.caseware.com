@@ -46,11 +46,13 @@ module.exports = () => {
         });
       } 
     });
-    console.log(accordianID);
-    $("#"+accordianID).addClass("in");
-    $("body, html").animate({
-      scrollTop: $("#" + accordianID).offset().top - 100 
-    }, 600);  
+    
+    if (accordianID) {
+      $("#"+accordianID).addClass("in");
+      $("body, html").animate({
+        scrollTop: $("#" + accordianID).offset().top - 100 
+      }, 600);  
+    }
     
     // $(document).ready(function () {
     //   if (!accordianID) {
