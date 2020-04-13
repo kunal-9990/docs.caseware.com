@@ -7,11 +7,32 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Log;
+use App\Services\DocsCmsApi;
+use Illuminate\Support\Facades\View;
+use Illuminate\Http\Request;
+use Illuminate\Http\Redirect;
+use App\Facades\LocaleFacade;
+use Illuminate\Support\Facades\App;
+use Route;
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    public $cms;
+
+    public function __construct(DocsCmsApi $cms, Request $request) {
+        $this->cms = $cms;
+
+
+        //Grab the menus
+        // View::share('menu_header', $wp->menu('header-menu')->get('results'));
+ 
+
+        //Build a breadcrumb array
+        //View::share('breadcrumbs', $this->generateBreadcrumbs($request->segments()));
+    }
+    
         // default
         function logEmail() {
             
