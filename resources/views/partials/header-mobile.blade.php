@@ -1,7 +1,7 @@
 <header class="header-mobile">
     <span class="glyphicon glyphicon-menu-hamburger header-mobile__nav-toggle" aria-hidden="true"></span>
     <div>
-        <img class="header-mobile__logo" src="/img/caseware-cloud-logo.png" alt="CaseWare Cloud logo">
+        <img class="header-mobile__logo" src="/img/CaseWare_logo_4C_horz.svg" alt="CaseWare Cloud logo">
     </div>
     <div class="header-mobile__input-search-wrapper">
         @php

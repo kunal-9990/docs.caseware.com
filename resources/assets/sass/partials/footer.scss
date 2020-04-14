@@ -1,44 +1,46 @@
-footer.footer {
+.footer {
     background-color: $blue-horizon;
     color: $white;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    margin-top: -8rem;
+    padding-top: 10rem;
+    z-index: 1;
 
-    .footer__flex-container {
+    .row {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-        flex-direction: column;
+        padding: 2.4rem 1.2rem;
+    }
 
-        @include mq(md) {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+    .col {
+        display: flex;
+        flex: 0 0 50%;
+
+        &--sm-full {
+            flex: 0 0 100%;
+            justify-content: center;
+            padding: 1.2rem 0;
         }
+    }
 
-        .footer__cw-logo {
-            width: 250px;
 
-            @include mq(md) {
-                width: 270px;
-            }
-        }
 
-        .footer__social-media {
-            @include mq(md) {
-                flex-basis: 270px;
-                display: flex;
-                justify-content: flex-end;
-            }
+    &__logo {
+        width: 250px;
+    }
+    
+    &__social-media {
+        justify-content: flex-end;
 
-            a {
-                color: $white;
-                font-size: 2em;
-                display: inline-flex;
-                text-decoration: none;
+        a {
+            color: $white;
+            font-size: 2em;
+            display: inline-flex;
+            text-decoration: none;
 
-                &:not(:last-of-type) {
-                    margin-right: 3px;
-                }
+            &:not(:last-of-type) {
+                margin-right: 3px;
             }
         }
     }
@@ -50,6 +52,47 @@ footer.footer {
 
         @include mq(md) {
             margin: 0 0 0 0;
+        }
+    }
+
+    .footer__copyright {
+        width: 100%;
+        padding: 12px;
+        background-color: $dark-grey;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+.newsletter {
+    min-height: 16rem;
+    z-index: 2;
+
+    &__container {
+        height: 100%;
+        background-color: $light-grey;
+        box-shadow: 0 10px 5px rgba(#323232, 0.4);
+    }
+}
+
+@include mq($from: md) {
+    .footer {
+        .row {
+            flex-wrap: nowrap;
+            padding: 2.4rem 0;
+        }
+    
+        .col {
+            flex: 1;
+
+            &--sm-full {
+                flex: auto;
+                justify-content: flex-start;
+            }
+        }
+
+        &__social-media {
+            justify-content: flex-end !important;
         }
     }
 }

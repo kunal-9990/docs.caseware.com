@@ -31,10 +31,11 @@ header.header {
         justify-content: space-between;
 
         .header__logo {
+            width: 100%;
             max-width: 200px;
 
             @include mq(md) {
-                max-width: initial;
+                // max-width: 200px;
             }
         }
     }
