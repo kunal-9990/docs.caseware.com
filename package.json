@@ -36,6 +36,7 @@
         "stylelint-webpack-plugin": "^0.10.5"
     },
     "dependencies": {
+        "react-habitat": "^1.0.1",
         "sass-mq": "^5.0.0"
     }
 }

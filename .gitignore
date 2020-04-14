@@ -3,7 +3,8 @@
 
 /public/css/app.css
 /public/css/app_search.css
-/public/js/app.js
+/public/js/mk2/app.js
+/public/js/mk4/app.js
 
 /vendor
 /.idea

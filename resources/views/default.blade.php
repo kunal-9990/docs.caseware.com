@@ -45,6 +45,7 @@
             </script>
             <!-- end olark code -->
         @endif
-    <script src="{{ mix('/js/app.js') }}"></script>
+    <script src="{{ mix('/js/mk2/app.js') }}"></script>
+    <script src="{{ mix('/js/mk4/app.js') }}"></script>
 </body>
 </html>
