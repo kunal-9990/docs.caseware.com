@@ -48,7 +48,8 @@ mix.webpackConfig({
 });
 
 mix
-    .react('resources/assets/js/app.js', 'public/js')
+    .js('resources/assets/js/mk2/app.js', 'public/js/mk2')
+    .react('resources/assets/js/mk4/app.js', 'public/js/mk4')
     .sass('resources/assets/sass/app.scss', 'public/css')
     .sass('resources/assets/sass/app_search.scss', 'public/css')
     .browserSync(BROWSERSYNC_URL);
