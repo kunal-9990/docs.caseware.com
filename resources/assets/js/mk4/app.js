@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactHabitat from 'react-habitat'
-import ExamplePage from './components/ExamplePage';
+import Banner from './components/Banner';
+import Announcement from './components/Announcement'
 
 const containers = [
   {
-    id: "testelement",
-    component: ExamplePage
+    id: "banner",
+    component: Banner
+  },
+  {
+    id: "announcement",
+    component: Announcement
   }
 ];
 
