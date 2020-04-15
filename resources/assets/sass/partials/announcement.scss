@@ -1,0 +1,81 @@
+.announcement {
+  position: absolute;
+  right: 15px;
+  top: 60px;
+  width: auto;
+  z-index: 5;
+  -webkit-box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
+  -moz-box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
+  box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  &__bar {
+      position: relative;
+      background-color: $light-grey;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      font-size: 1.4rem;
+      transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+      cursor: pointer;
+
+      & > div {
+          padding: 1rem 6.2rem;
+      }
+
+      svg {
+          position: absolute;
+          left: 2.4rem;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 18px;
+          opacity: 0.8;
+      }
+
+      &::after {
+          content: '';
+          transition: transform 0.25s ease 0.1s;
+          position: absolute;
+          top: 45%;
+          right: 2.4rem;
+          width: 6px;
+          height: 6px;
+          transform: translateY(-50%) rotate(45deg);
+          border-right: 1px solid $dark-grey;
+          border-bottom: 1px solid $dark-grey;
+      }
+
+      .open & {
+          margin-top: 250px;
+
+          &::after {
+              top: 55%;
+              transform: translateY(-50%) rotate(-135deg);
+          }
+      }
+  }
+
+  &__content {
+      position: absolute;
+      max-height: 250px;
+      top: -250px;
+      background-color: $white;
+      transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+      overflow-y: auto;
+  
+
+      .open & {
+          top: 0;
+      }
+
+      & > div {
+          padding: 24px;
+      }
+  }
+}
+
+@include mq(sm) {
+  .announcement {
+      top: 80px;
+  }
+}
