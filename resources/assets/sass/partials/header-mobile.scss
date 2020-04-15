@@ -1,4 +1,5 @@
 .header-mobile {
+    position: relative;
     border-bottom: 1px solid #d4dadf;
     box-shadow: 0 1px 1px 0 rgba(116, 129, 141, 0.1);
     padding: 0 15px;
@@ -6,6 +7,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: $white;
+    z-index: 10;
 
     @include mq(sm) {
         display: none;
