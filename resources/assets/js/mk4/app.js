@@ -1,31 +1,14 @@
-import ReactHabitat from 'react-habitat'
-// import Banner from './components/Banner'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-// TODO - remove
-import ExamplePage from './components/ExamplePage'
-
-// import 'react-app-polyfill/ie9'
-// import 'react-app-polyfill/ie11'
-// import 'react-app-polyfill/stable'
-// import '@babel/polyfill'
-
-const containers = [
-  {
-    id: "ExamplePage",
-    component: ExamplePage
-  }
-];
-
-class Mk4 extends ReactHabitat.Bootstrapper {
-    constructor() {
-        super();
-
-        const builder = new ReactHabitat.ContainerBuilder();
-        for (let container of containers) {
-            builder.register(container.component).as(container.id);
-        }
-        this.setContainer(builder.build());
-    }
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(element, document.getElementById('testelement'));
 }
 
-export default new Mk4();
+setInterval(tick, 1000);
