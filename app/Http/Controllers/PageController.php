@@ -51,8 +51,10 @@ class PageController extends Controller
         (isset($htmlElement->attr['data-mc-conditions'])) ? $exclusiveTo = $htmlElement->attr['data-mc-conditions'] : $exclusiveTo = '' ;
         $recent = getRecentlyViewed();
         $title = strip_tags($dom->find('h1', 0));
-
-        return view('pages.documentation', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
+        
+        // TODO - undo comment below
+        return view('pages.whats-new', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
+        // return view('pages.documentation', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
     }
 
     // topics with subsubcategory
