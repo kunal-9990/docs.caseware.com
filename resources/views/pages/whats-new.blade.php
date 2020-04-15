@@ -20,7 +20,7 @@
     <div class="container documentation">
         <div class="row">
             <div class="col-sm-3 table-of-contents">
-                <h1>WHATS NEW - natural react</h1>
+                <h1>WHATS NEW - natural react 2</h1>
                 <div id="testelement"></div>
                 @include('partials.toc')
             </div>
