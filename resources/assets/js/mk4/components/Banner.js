@@ -1,13 +1,14 @@
 import React from 'react'
 
 const Banner = props => {
-  // const BannerStyle = {
-  //   backgroundImage: 'url(' + props.background + ')',
-  //   backgroundSize: 'cover'
-  // }
+  const BannerStyle = {
+    // backgroundImage: 'url(' + props.background + ')',
+    backgroundSize: 'cover',
+    backgroundColor: 'red'
+  }
   
   return (
-    <section className="whats-new__banner" >
+    <section className="whats-new__banner" style={BannerStyle}>
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
