@@ -1,132 +1,102 @@
 .whats-new {
 
-  h1 {
-    font-size: 3.2rem;
-    font-weight: 300;
-  }
-
-  &__banner {
-    color: $white;
-
-    .banner__wrapper {
-      padding: 12rem 0 4.8rem;
-    }
-
     h1 {
-      margin: 0 0 30px;
-
-      span {
-        font-weight: 900;
-        display: block;
-      }
+        font-size: 3.2rem;
+        font-weight: 300;
     }
 
-    p {
-      margin: 0;
-      font-size: 1.8rem;
-      font-weight: 300;
-      line-height: 1.4;
+    &__banner {
+        color: $white;
+
+        .banner__wrapper {
+            padding: 12rem 0 4.8rem;
+        }
+
+        h1 {
+            margin: 0 0 30px;
+
+            span {
+                font-weight: 900;
+                display: block;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 1.4;
+        }
     }
-  }
-}
 
-@include mq(sm) {
-  .whats-new {
-    &__banner {  
-      .banner__wrapper {
-        padding: 6rem 25px;
-      }
+    &__feature {
+        padding: 1.2rem 0;
 
-      h1 span {
-        display: inline;
-      }
-    }
-  }
-}
+        .feature {
+            &__header {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
 
+            &__content {
+                padding-left: 0;
+            }
 
-
-
-// TBD - not specific to whats new?
-
-.announcement {
-    position: absolute;
-    right: 15px;
-    top: 60px;
-    width: auto;
-    z-index: 5;
-    -webkit-box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
-    -moz-box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
-    box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-
-    &__bar {
-        position: relative;
-        background-color: $light-grey;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        font-size: 1.4rem;
-        transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
-        cursor: pointer;
-
-        & > div {
-            padding: 1rem 6.2rem;
-        }
-
-        svg {
-            position: absolute;
-            left: 2.4rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 18px;
-            opacity: 0.8;
-        }
-
-        &::after {
-            content: '';
-            transition: transform 0.25s ease 0.1s;
-            position: absolute;
-            top: 45%;
-            right: 2.4rem;
-            width: 6px;
-            height: 6px;
-            transform: translateY(-50%) rotate(45deg);
-            border-right: 1px solid $dark-grey;
-            border-bottom: 1px solid $dark-grey;
-        }
-
-        .open & {
-            margin-top: 250px;
-
-            &::after {
-                top: 55%;
-                transform: translateY(-50%) rotate(-135deg);
+            h2 {
+                margin-top: 0;
             }
         }
     }
 
-    &__content {
-        position: absolute;
-        max-height: 250px;
-        top: -250px;
-        background-color: $white;
-        transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
-        overflow-y: auto;
-    
+    .voter {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 12px;
+        color: grey;
 
-        .open & {
-            top: 0;
+        .up svg {
+            color: green;
         }
-
-        & > div {
-            padding: 24px;
+        .down svg {
+            color: red;
         }
     }
 }
 
 @include mq(sm) {
-    .announcement {
-        top: 80px;
+    .whats-new {
+        &__banner {  
+            .banner__wrapper {
+                padding: 6rem 0;
+            }
+
+            h1 span {
+                display: inline;
+            }
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+
+        &__feature {  
+            .feature {
+                &__header {
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                &__content {
+                    padding-left: 40px; // TODO - change
+                }
+            }
+        }
+
+        .voter {
+            flex-direction: column;
+            padding-right: 12px;
+            padding-bottom: 0;
+        }
     }
 }

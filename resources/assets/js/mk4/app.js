@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import ReactHabitat from 'react-habitat'
 import Banner from './components/Banner';
 import Announcement from './components/Announcement'
+import Feature from './components/Feature'
 
 const containers = [
   {
@@ -12,6 +13,10 @@ const containers = [
   {
     id: "announcement",
     component: Announcement
+  },
+  {
+    id: "feature",
+    component: Feature
   }
 ];
 

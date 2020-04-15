@@ -3,7 +3,7 @@ import React from 'react'
 const Banner = props => {
   const BannerStyle = {
     backgroundImage: 'url(' + props.background + ')',
-    backgroundSize: 'cover',
+    backgroundSize: 'cover'
   }
   
   return (
