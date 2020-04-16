@@ -1,9 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import ReactHabitat from 'react-habitat'
+
 import Banner from './components/Banner';
 import Announcement from './components/Announcement'
 import Feature from './components/Feature'
+
+import 'react-app-polyfill/ie9'
+import 'react-app-polyfill/ie11'
+import 'react-app-polyfill/stable'
+
 
 const containers = [
   {

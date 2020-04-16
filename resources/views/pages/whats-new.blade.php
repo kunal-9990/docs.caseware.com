@@ -89,6 +89,8 @@
             </script>
             <!-- end olark code -->
         @endif
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+        
         <script src="{{ mix('/js/mk2/app.js') }}"></script>
         <script src="{{ mix('/js/mk4/app.js') }}"></script>
 </body>
