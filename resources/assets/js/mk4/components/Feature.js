@@ -63,6 +63,7 @@ class Feature extends Component {
             <p>Fixed an issue where the list of available import fields sometimes displayed 'null' for some list items.</p>
             <h3>Reports</h3>
             <p>Fixed an issue where exported Time Summary reports omitted the first line.</p>
+            <a href="" target="_blank">Go to feature here</a>
           </div>
         </div>
       );
