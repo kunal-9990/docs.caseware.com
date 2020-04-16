@@ -3,6 +3,7 @@ import ReactHabitat from 'react-habitat'
 import Banner from './components/Banner';
 import Announcement from './components/Announcement'
 import Feature from './components/Feature'
+import Survey from './components/Survey'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -21,6 +22,10 @@ const containers = [
   {
     id: "feature",
     component: Feature
+  },
+  {
+    id: "survey",
+    component: Survey
   }
 ];
 
