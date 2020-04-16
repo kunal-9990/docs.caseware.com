@@ -1,10 +1,5 @@
 .whats-new {
 
-    h1 {
-        font-size: 3.2rem;
-        font-weight: 300;
-    }
-
     &__banner {
         color: $white;
 
@@ -37,6 +32,12 @@
                 display: flex;
                 flex-direction: column-reverse;
                 align-items: flex-start;
+
+                &--no-voter {
+                    h2 {
+                        margin-bottom: 3rem;
+                    }
+                }
             }
 
             &__content {
@@ -52,14 +53,41 @@
     .voter {
         display: flex;
         flex-direction: row;
-        padding-bottom: 12px;
-        color: grey;
+        align-items: center;
+        margin-bottom: 2.4rem;
+        width: 12rem;
+        color: $light-grey;
+        line-height: 1;
 
-        .up svg {
-            color: green;
+        .arrow {
+            font-size: 3.8rem;
+            line-height: 0;
+            cursor: pointer;
+
+            svg {
+                transition: all 0.1s;
+            }
+
+            &--up svg {
+                color: #6EAB7E;
+            }
+
+            &--down svg {
+                color: #D45454;
+            }
+
+            &:hover svg {
+                color: #ccc;
+            }
         }
-        .down svg {
-            color: red;
+
+        .total {
+            flex: 1;
+            padding: 0 1.2rem;
+            color: #ddd;
+            font-size: 1.3rem;
+            text-align: center;
+            text-transform: uppercase;
         }
     }
 }
@@ -85,18 +113,33 @@
                 &__header {
                     flex-direction: row;
                     align-items: center;
+
+                    &--voter {
+                        h2 {
+                            margin: 0;
+                        }
+                    }
+
+                    &--no-voter {
+                        padding-left: 6.2rem;
+                    }
                 }
 
                 &__content {
-                    padding-left: 40px; // TODO - change
+                    padding-left: 6.2rem;
                 }
             }
         }
 
         .voter {
             flex-direction: column;
-            padding-right: 12px;
-            padding-bottom: 0;
+            margin-right: 2rem;
+            margin-bottom: 0;
+            width: 4.2rem;
+
+            .total {
+                padding: 0;
+            }
         }
     }
 }
