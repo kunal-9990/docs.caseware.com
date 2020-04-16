@@ -37,6 +37,8 @@
             data-component="banner"
             data-props='{"background":"/img/whats-new-banner.jpg","product":"Cloud 31.0", "strapline":"Are you ready to streamline your organization&apos;s security?<br/>Cloud 31.0 features Single Sing-On, Xero integration and more."}'
         ></div>
+
+
         
 
         <main id="main">
@@ -49,12 +51,19 @@
                         <div class="docs__video-iframe-wrap">
                             @include('partials.video-iframe')
                         </div>
-                        <div class="docs__container">
 
+                        <div>
                             <!-- insert foreach loop here -->
                             <div 
                                 data-component="feature"
                                 data-n-prop-votes=0
+                                data-prop-show-voter=true
+                            ></div>
+
+                            <div 
+                                data-component="feature"
+                                data-n-prop-votes=0
+                                data-prop-show-voter=false
                             ></div>
                             <!-- end foreach -->
 
