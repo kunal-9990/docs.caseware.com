@@ -52,9 +52,12 @@
                         <iframe  src="{{$pageContent->acf->featured_video}} class=" yt-video-iframe"  frameborder="0"
                             allowfullscreen></iframe>
                         <!-- todo - update -->
-                        <div class="docs__video-iframe-wrap">
-                            @include('partials.video-iframe')
-                        </div>
+                        {{-- <div class="docs__video-iframe-wrap">
+                            @include('partials.video-iframe', [
+                                'featured_video' => isset($pageContent->acf->featured_video) ? $pageContent->acf->featured_video : false, 
+                            ])
+                        </div> --}}
+                        <div class="docs__container">
 
                         <div>
                             <!-- insert foreach loop here -->
