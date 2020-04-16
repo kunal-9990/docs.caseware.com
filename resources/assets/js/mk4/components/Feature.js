@@ -7,37 +7,37 @@ class Feature extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        votes: 0, // TODO - should be this.props.votes and make condition of non empty in template file
+        votes: this.props.votes,
         hasVoted: 'neutral'
       };
     }
   
     handleUpVote() {
-      if (this.state.hasVoted === 'neutral') {
-        this.setState(prevState => ({
-          votes: prevState.votes + 1,
-          hasVoted: 'up'
-        }))
-      } else {
+      if (this.state.hasVoted === 'up') {
         this.handleNeutral();
+      } else {
+        this.setState({
+          votes: this.props.votes + 1,
+          hasVoted: 'up'
+        })
       }
     }
 
     handleNeutral() {
-      this.setState(prevState => ({
-        votes: this.props.votes || 0, // TODO - should be this.props.votes
+      this.setState({
+        votes: this.props.votes,
         hasVoted: 'neutral'
-      }))
+      })
     }
 
     handleDownVote() {
-      if (this.state.hasVoted === 'neutral') {
-        this.setState(prevState => ({
-          votes: prevState.votes - 1,
-          hasVoted: 'down'
-        }))
-      } else {
+      if (this.state.hasVoted === 'down') {
         this.handleNeutral();
+      } else {
+        this.setState({
+          votes: this.props.votes - 1,
+          hasVoted: 'down'
+        })
       }
     }
   
