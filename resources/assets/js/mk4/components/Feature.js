@@ -44,18 +44,22 @@ class Feature extends Component {
     render() {
       return (
         <div className="whats-new__feature">
-          <div className="feature__header">
-            <Voter 
-              id='123'
-              votes={this.state.votes}
-              hasVoted={this.state.hasVoted}
-              upVote={() => this.handleUpVote()}
-              downVote={() => this.handleDownVote()}
-            />
+          <div className={ "feature__header" + (this.props.showVoter ? " feature__header--voter" : " feature__header--no-voter")}>
+            {this.props.showVoter && (
+              <Voter 
+                id='' // TODO - change to this.props.id - should be a field in wp CMS which gets passed to feedback DB
+                votes={this.state.votes}
+                hasVoted={this.state.hasVoted}
+                upVote={() => this.handleUpVote()}
+                downVote={() => this.handleDownVote()}
+              />
+            )}
             <h2>{ this.props.title }</h2>
           </div>
           <div className="feature__content">
-            { this.props.description }
+            {
+              this.props.description
+            }
           </div>
         </div>
       );
@@ -63,7 +67,8 @@ class Feature extends Component {
   }
 
 Feature.propTypes = {
-    votes: PropTypes.number.isRequired
+    votes: PropTypes.number.isRequired,
+    showVoter: PropTypes.bool,
   }
   
   export default Feature

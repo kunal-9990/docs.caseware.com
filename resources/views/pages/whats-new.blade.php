@@ -39,6 +39,8 @@
             data-component="banner"
             data-props='{"background":"{{$pageContent->acf->title_background_image->url}}","product":"{{$pageContent->acf->product." ".$pageContent->acf->version}}", "strapline":"{{$pageContent->acf->strapline}}"}'
         ></div>
+
+
         
 
         <main id="main">
@@ -50,19 +52,24 @@
                         <iframe  src="{{$pageContent->acf->featured_video}} class=" yt-video-iframe"  frameborder="0"
                             allowfullscreen></iframe>
                         <!-- todo - update -->
-                        {{-- <div class="docs__video-iframe-wrap">
-                            @include('partials.video-iframe', [
-                                'featured_video' => isset($pageContent->acf->featured_video) ? $pageContent->acf->featured_video : false, 
-                            ])
-                        </div> --}}
-                        <div class="docs__container">
+                        <div class="docs__video-iframe-wrap">
+                            @include('partials.video-iframe')
+                        </div>
 
+                        <div>
                             <!-- insert foreach loop here -->
                             @foreach($pageContent->acf->features as $feature)
                             <div 
                                 data-component="feature" 
                                 data-props='{"title": "{{$feature->title}}", "description": "{{$feature->title}}"}'
                                 data-n-prop-votes=0
+                                data-prop-show-voter=true
+                            ></div>
+
+                            <div 
+                                data-component="feature"
+                                data-n-prop-votes=0
+                                data-prop-show-voter=false
                             ></div>
                             @endforeach
                             <!-- end foreach -->
