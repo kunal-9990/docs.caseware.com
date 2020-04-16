@@ -9,7 +9,8 @@ const Voter = ({ id, votes, hasVoted, upVote, downVote }) => {
         <div onClick={upVote} className={(hasVoted === 'up') ? 'up' : ''}>
           <FontAwesomeIcon icon={faCaretUp} />
         </div>
-        <div>Vote: { votes }</div>
+        {/* TODO - translate 'vote' */}
+        <div>{ (votes > 0) ? votes : 'vote' }</div> 
         <div onClick={downVote} className={(hasVoted === 'down') ? 'down' : ''}>
           <FontAwesomeIcon icon={faCaretDown} />
         </div>

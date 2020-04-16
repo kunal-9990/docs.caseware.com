@@ -54,7 +54,7 @@
                             <!-- insert foreach loop here -->
                             <div 
                                 data-component="feature"
-                                data-props='{}'
+                                data-n-prop-votes=0
                             ></div>
                             <!-- end foreach -->
 

@@ -18,19 +18,17 @@ class Announcement extends React.Component {
   
     render() {
       return (
-      <div className={"announcement" + (this.state.isOpen ? ' open' : '')}>
-        <div className="announcement__bar"  onClick={() => this.handleClick()} >
-          <FontAwesomeIcon icon={faBell} />
-          <div>
-            { this.props.title }
+        <div style={{ position: 'relative' }}>
+          <div className={"announcement" + (this.state.isOpen ? ' open' : '')}>
+            <div className="announcement__content">
+              <div>{ this.props.description}</div>
+            </div>
+            <div className="announcement__bar"  onClick={() => this.handleClick()} >
+              <FontAwesomeIcon icon={faBell} />
+              <div>{ this.props.title }</div>
+            </div>
           </div>
         </div>
-        <div className="announcement__content">
-          <div>
-            { this.props.description}
-          </div>
-        </div>
-      </div>
       );
     }
   }
