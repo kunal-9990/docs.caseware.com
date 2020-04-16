@@ -4,6 +4,8 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
+require('@babel/polyfill');
+
 const BROWSERSYNC_URL = 'http://dev.docsmk4';
 
 /*
