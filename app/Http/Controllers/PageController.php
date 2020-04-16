@@ -26,13 +26,23 @@ class PageController extends Controller
     function showTopic($year, $product, $version, $lang, $category, $subcategory, $topic){
 
         App::setLocale($lang);
-
-        $noHeader = true;
-
+        
         if(!endsWith($topic,".htm")){
             $topic .= ".htm";
         } 
+        
+        //first check if the topic is a what's new page. 
+        //if so - get the content from the cms and return What's New template
+        if(startsWith(strtolower($topic), "whats-new")){
+            $page = $this->cms->page(removeFileExt(strtolower($topic)));
+            $pageContent = $page['results'][0];
+            // dd($pageContent);
+            return view('pages.whats-new', compact('pageContent', 'recent', 'exclusiveTo','title'));
+        }
 
+
+        // otherwise, get topic content from flare build.
+        $noHeader = true;
         $product =  strtolower($product);
 
         try {
@@ -53,8 +63,8 @@ class PageController extends Controller
         $title = strip_tags($dom->find('h1', 0));
         
         // TODO - undo comment below
-        return view('pages.whats-new', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
-        // return view('pages.documentation', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
+        // return view('pages.whats-new', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
+        return view('pages.documentation', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
     }
 
     // topics with subsubcategory

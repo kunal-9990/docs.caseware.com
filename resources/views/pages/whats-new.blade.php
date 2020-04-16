@@ -19,9 +19,11 @@
     <div class="whats-new">
         
         @php
+        // dd($pageContent);
         if(!isset($noHeader)){
             $noHeader = false;
         }
+        
         @endphp
         @if(!$noHeader)
         @include('partials.header')
@@ -30,12 +32,12 @@
 
         <div 
             data-component="announcement"
-            data-props='{"title":"OnPoint PCR Fall Release available now!", "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}'
+            data-props='{"title":"{{$pageContent->acf->announcement->post_title}}", "description":"{{$pageContent->acf->announcement->post_content}}"}'
         ></div>
 
         <div 
             data-component="banner"
-            data-props='{"background":"/img/whats-new-banner.jpg","product":"Cloud 31.0", "strapline":"Are you ready to streamline your organization&apos;s security?<br/>Cloud 31.0 features Single Sing-On, Xero integration and more."}'
+            data-props='{"background":"{{$pageContent->acf->title_background_image->url}}","product":"{{$pageContent->acf->product." ".$pageContent->acf->version}}", "strapline":"{{$pageContent->acf->strapline}}"}'
         ></div>
         
 
@@ -45,17 +47,24 @@
                     <div class="col-sm-12">
                     INSERT in this article + video here
 
+                        <iframe  src="{{$pageContent->acf->featured_video}} class=" yt-video-iframe"  frameborder="0"
+                            allowfullscreen></iframe>
                         <!-- todo - update -->
-                        <div class="docs__video-iframe-wrap">
-                            @include('partials.video-iframe')
-                        </div>
+                        {{-- <div class="docs__video-iframe-wrap">
+                            @include('partials.video-iframe', [
+                                'featured_video' => isset($pageContent->acf->featured_video) ? $pageContent->acf->featured_video : false, 
+                            ])
+                        </div> --}}
                         <div class="docs__container">
 
                             <!-- insert foreach loop here -->
+                            @foreach($pageContent->acf->features as $feature)
                             <div 
-                                data-component="feature"
+                                data-component="feature" 
+                                data-props='{"title": "{{$feature->title}}", "description": "{{$feature->title}}"}'
                                 data-n-prop-votes=0
                             ></div>
+                            @endforeach
                             <!-- end foreach -->
 
 

@@ -72,11 +72,18 @@ class DocsCmsApi
             '_embed' => 1
         ], $lifetime);
      }
-     public function page($locale, $slug, $lifetime = null)
-     {
-        $prepend = getWpLang($locale, request()->session()->get('lang'));
+    //  public function page($locale, $slug, $lifetime = null)
+    //  {
+    //     $prepend = getWpLang($locale, request()->session()->get('lang'));
 
-        return $this->_get($prepend . '/wp-json/wp/v2/pages?slug='. $slug, [
+    //     return $this->_get($prepend . '/wp-json/wp/v2/pages?slug='. $slug, [
+    //         '_embed' => 1
+    //     ], $lifetime);
+    //  }
+     public function page($slug, $lifetime = null)
+     {
+
+        return $this->_get('/wp-json/wp/v2/pages?slug='. $slug, [
             '_embed' => 1
         ], $lifetime);
      }
