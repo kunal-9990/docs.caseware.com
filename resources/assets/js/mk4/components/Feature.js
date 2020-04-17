@@ -44,7 +44,10 @@ class Feature extends Component {
     render() {
       console.log(this.props)
       return (
-        <div className="whats-new__feature" id={this.props.title.trim().replace(/\s/g, '-')}>
+        <div 
+          className="whats-new__feature" 
+          id={this.props.title.trim().replace(/\s/g, '-')}
+        >
           <div className={ "feature__header" + (this.props.showVoter ? " feature__header--voter" : " feature__header--no-voter")}>
             {this.props.showVoter && (
               <Voter 
@@ -61,11 +64,10 @@ class Feature extends Component {
         </div>
       );
     }
-  }
+}
 
 Feature.propTypes = {
-    votes: PropTypes.number.isRequired,
-    showVoter: PropTypes.bool,
-  }
+  votes: PropTypes.number.isRequired,
+}
   
-  export default Feature
+export default Feature
