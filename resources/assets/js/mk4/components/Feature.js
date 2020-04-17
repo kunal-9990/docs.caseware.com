@@ -54,16 +54,12 @@ class Feature extends Component {
                 downVote={() => this.handleDownVote()}
               />
             )}
-            <h2>General Improvements</h2>
+            <h2>{ this.props.title }</h2>
           </div>
           <div className="feature__content">
-            <p>Several improvements have been made for the latest release.</p>
-            {/* Insert for loop */}
-            <h3>Imports</h3>
-            <p>Fixed an issue where the list of available import fields sometimes displayed 'null' for some list items.</p>
-            <h3>Reports</h3>
-            <p>Fixed an issue where exported Time Summary reports omitted the first line.</p>
-            <a href="" target="_blank">Go to feature here</a>
+            {
+              this.props.description
+            }
           </div>
         </div>
       );

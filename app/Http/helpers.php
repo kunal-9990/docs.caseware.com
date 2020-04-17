@@ -11,6 +11,19 @@ function endsWith($haystack, $needle)
     return (substr($haystack, -$length) === $needle);
 }
 
+function startsWith($haystack, $needle)
+{
+     $length = strlen($needle);
+     return (substr($haystack, 0, $length) === $needle);
+}
+
+function removeFileExt($topic)
+{
+    $topic = str_replace(".html", "", $topic);
+    $topic = str_replace(".htm", "", $topic);
+    return $topic;
+}
+
 function getRecentlyViewed(){
 
     if (!Cache::has('recent')) {
