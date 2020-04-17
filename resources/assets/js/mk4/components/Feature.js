@@ -44,7 +44,7 @@ class Feature extends Component {
     render() {
       console.log(this.props)
       return (
-        <div className="whats-new__feature">
+        <div className="whats-new__feature" id={this.props.title.trim().replace(/\s/g, '-')}>
           <div className={ "feature__header" + (this.props.showVoter ? " feature__header--voter" : " feature__header--no-voter")}>
             {this.props.showVoter && (
               <Voter 

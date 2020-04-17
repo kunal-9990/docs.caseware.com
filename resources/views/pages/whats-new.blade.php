@@ -47,18 +47,25 @@
             <div class="container whats-new">
                 <div class="row">
                     <div class="col-sm-12">
-                    INSERT in this article + video here
+                        <div class="col-sm-6 in-this-article">
+                            <span>In this article</span>
+                            @foreach($pageContent->acf->features as $feature)
+                            <ul><li>
+                                <a href="#{{ trim(preg_replace('/\s+/', '-', $feature->title)) }}">
+                                {{$feature->title}}
+                            </a>
+                            </li></ul>
+                            @endforeach
+                        </div>
 
-                        <iframe  src="{{$pageContent->acf->featured_video}} class=" yt-video-iframe"  frameborder="0"
+                        <div class="col-sm-6">
+                            <iframe  src="{{$pageContent->acf->featured_video}} class=" yt-video-iframe"  frameborder="0"
                             allowfullscreen></iframe>
-                        <!-- todo - update -->
-                        {{-- <div class="docs__video-iframe-wrap">
-                            @include('partials.video-iframe', [
-                                'featured_video' => isset($pageContent->acf->featured_video) ? $pageContent->acf->featured_video : false, 
-                            ])
-                        </div> --}}
-                        <div class="docs__container">
+                        </div>
+                    </div>
+                    <div class="col-sm-12"
 
+                        <div class="docs__container">
                         <div>
                             @foreach($pageContent->acf->features as $feature)
                                 <div 
