@@ -46,7 +46,7 @@
         <main id="main">
             <div class="container whats-new">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 whats-new__intro">
                         <div class="col-sm-6 in-this-article">
                             <span>In this article</span>
                             @foreach($pageContent->acf->features as $feature)

@@ -42,7 +42,6 @@ class Feature extends Component {
     }
   
     render() {
-      console.log(this.props)
       return (
         <div 
           className="whats-new__feature" 
