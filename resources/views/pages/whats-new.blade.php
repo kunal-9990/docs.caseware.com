@@ -59,11 +59,11 @@
                         </div>
 
                         <div class="col-sm-6">
-                            <iframe  src="{{$pageContent->acf->featured_video}} class=" yt-video-iframe"  frameborder="0"
+                            <iframe  src="{{$pageContent->acf->featured_video}}" class="yt-video-iframe" frameborder="0"
                             allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="col-sm-12"
+                    <div class="col-sm-12">
 
                         <div class="docs__container">
                         <div>
@@ -72,7 +72,7 @@
                                     data-component="feature" 
                                     data-props='{
                                         "title": "{{$feature->title}}", 
-                                        "description": {{json_encode($feature->description)}},
+                                        "description": {{htmlspecialchars(json_encode($feature->description))}},
                                         "showVoter": "{{$feature->allow_voting}}"
                                     }'
                                     data-n-prop-votes=0 
