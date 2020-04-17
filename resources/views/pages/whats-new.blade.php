@@ -60,24 +60,17 @@
                         <div class="docs__container">
 
                         <div>
-                            <!-- insert foreach loop here -->
                             @foreach($pageContent->acf->features as $feature)
-                            <div 
-                                data-component="feature" 
-                                data-props='{"title": "{{$feature->title}}", "description": "{{$feature->title}}"}'
-                                data-n-prop-votes=0
-                                data-prop-show-voter=true
-                            ></div>
-
-                            <div 
-                                data-component="feature"
-                                data-n-prop-votes=0
-                                data-prop-show-voter=false
-                            ></div>
+                                <div 
+                                    data-component="feature" 
+                                    data-props='{
+                                        "title": "{{$feature->title}}", 
+                                        "description": {{json_encode($feature->description)}},
+                                        "showVoter": "{{$feature->allow_voting}}"
+                                    }'
+                                    data-n-prop-votes=0 
+                                ></div>
                             @endforeach
-                            <!-- end foreach -->
-
-
                         </div>
                         @include('partials.filter-msg', [
                             'exclusiveTo' =>  isset($exclusiveTo) ? $exclusiveTo : false,
@@ -95,6 +88,10 @@
             {{-- modal overlay for email subscription and pdf download --}}
             @include('partials.download-pdf')
         </main>
+
+        <div 
+            data-component="survey"
+        ></div>
 
         @include('partials.cookie-consent')
         @include('partials.footer')

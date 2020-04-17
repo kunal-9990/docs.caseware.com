@@ -42,6 +42,7 @@ class Feature extends Component {
     }
   
     render() {
+      console.log(this.props)
       return (
         <div className="whats-new__feature">
           <div className={ "feature__header" + (this.props.showVoter ? " feature__header--voter" : " feature__header--no-voter")}>
@@ -56,11 +57,7 @@ class Feature extends Component {
             )}
             <h2>{ this.props.title }</h2>
           </div>
-          <div className="feature__content">
-            {
-              this.props.description
-            }
-          </div>
+          <div className="feature__content" dangerouslySetInnerHTML={{__html: this.props.description }} />
         </div>
       );
     }
