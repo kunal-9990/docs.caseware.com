@@ -123,9 +123,9 @@
             @include('partials.download-pdf')
         </main>
 
-        <div 
-            data-component="survey"
-        ></div>
+        <div data-component="survey"></div>
+
+        <?php echo '<pre>';var_dump($test);echo '</pre>'; ?>
 
         @include('partials.cookie-consent')
         @include('partials.footer')
