@@ -41,7 +41,6 @@
         ></div>
 
 
-        
 
         <main id="main">
             <div class="container whats-new">
@@ -56,6 +55,8 @@
                             </a>
                             </li></ul>
                             @endforeach
+
+                            <div data-component="social-share"></div>
                         </div>
 
                         <div class="col-sm-6">
