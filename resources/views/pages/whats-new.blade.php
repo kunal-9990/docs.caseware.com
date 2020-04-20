@@ -43,46 +43,72 @@
 
 
         <main id="main">
-            <div class="container whats-new">
-                <div class="row">
-                    <div class="col-sm-12 whats-new__intro">
-                        <div class="col-sm-6 in-this-article">
-                            <span>In this article</span>
-                            @foreach($pageContent->acf->features as $feature)
-                            <ul><li>
-                                <a href="#{{ trim(preg_replace('/\s+/', '-', $feature->title)) }}">
-                                {{$feature->title}}
-                            </a>
-                            </li></ul>
-                            @endforeach
+            <div class="whats-new">
+                <div class="whats-new__intro">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="col-sm-4 in-this-article">
+                                    <span>In this article</span>
+                                    @foreach($pageContent->acf->features as $feature)
+                                    <ul><li>
+                                        <a href="#{{ trim(preg_replace('/\s+/', '-', $feature->title)) }}">
+                                        {{$feature->title}}
+                                    </a>
+                                    </li></ul>
+                                    @endforeach
 
-                            <div data-component="social-share"></div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <iframe  src="{{$pageContent->acf->featured_video}}" class="yt-video-iframe" frameborder="0"
-                            allowfullscreen></iframe>
+                                    <div data-component="social-share"></div>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="iframe-video-wrapper">
+                                        <iframe  
+                                            src="{{$pageContent->acf->featured_video}}" 
+                                            class="yt-video-iframe" 
+                                            frameborder="0"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-12">
-
-                        <div class="docs__container">
-                        <div>
-                            @foreach($pageContent->acf->features as $feature)
-                                <div 
-                                    data-component="feature" 
-                                    data-props='{
-                                        "title": "{{$feature->title}}", 
-                                        "description": {{htmlspecialchars(json_encode($feature->description))}},
-                                        "showVoter": "{{$feature->allow_voting}}"
-                                    }'
-                                    data-n-prop-votes=0 
-                                ></div>
-                            @endforeach
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="iframe-video-wrapper">
+                                    <iframe  
+                                        src="{{$pageContent->acf->featured_video}}" 
+                                        class="yt-video-iframe" 
+                                        frameborder="0"
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
                         </div>
-                        @include('partials.filter-msg', [
-                            'exclusiveTo' =>  isset($exclusiveTo) ? $exclusiveTo : false,
-                        ])
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="docs__container">
+                            <div>
+                                @foreach($pageContent->acf->features as $feature)
+                                    <div 
+                                        data-component="feature" 
+                                        data-props='{
+                                            "title": "{{$feature->title}}", 
+                                            "description": {{htmlspecialchars(json_encode($feature->description))}},
+                                            "showVoter": "{{$feature->allow_voting}}"
+                                        }'
+                                        data-n-prop-votes=0 
+                                    ></div>
+                                @endforeach
+                            </div>
+                            @include('partials.filter-msg', [
+                                'exclusiveTo' =>  isset($exclusiveTo) ? $exclusiveTo : false,
+                            ])
+                        </div>
                     </div>
                 </div>
             </div>

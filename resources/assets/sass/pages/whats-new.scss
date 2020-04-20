@@ -1,7 +1,17 @@
 .whats-new {
 
     &__intro {
+        position: relative;
         padding: 2.4rem 0;
+
+        .container {
+            &:first-child .col-sm-8 {
+                display: none;
+            }
+            &:last-child {
+                display: block;
+            }
+        }
     }
 
     &__banner {
@@ -52,6 +62,7 @@
         }
 
         img {
+            display: block;
             max-width: 100%;
             height: auto;
         }
@@ -102,7 +113,21 @@
 @include mq(sm) {
     .whats-new {
         &__intro {
-            padding: 3.6rem 0;
+            padding: 0;
+            min-height: 36rem;
+
+            .container:last-child {
+                position: absolute;
+                right: 0;
+                top: 0;
+                pointer-events: none;        
+
+                .col-sm-8 {
+                    float: right;
+                    padding: 0;
+                    pointer-events: all;
+                }
+            }
         }
         
         &__banner {  
@@ -152,6 +177,24 @@
 
             .total {
                 padding: 0;
+            }
+        }
+    }
+}
+
+@include mq(lg) {
+    .whats-new {
+        &__intro {
+            padding: 3.6rem 0;
+            min-height: auto;
+
+            .container {
+                &:first-child .col-sm-8 {
+                    display: block;
+                }
+                &:last-child {
+                    display: none;
+                }
             }
         }
     }
