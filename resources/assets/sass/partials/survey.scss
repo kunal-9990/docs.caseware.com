@@ -15,6 +15,15 @@
     -webkit-box-shadow: 0 10px 10px 0 rgba(80,80,80,0.7);
     -moz-box-shadow: 0 10px 10px 0 rgba(80,80,80,0.7);
     box-shadow: 0 10px 10px 0 rgba(80,80,80,0.7);
+    transition: 2s all;
+
+    &--off-screen {
+        right: -100%;
+    }
+
+    &--on-screen {
+        right: 0;
+    }
 
     &__header {
         padding: 1.2rem 4.8rem;

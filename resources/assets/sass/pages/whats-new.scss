@@ -62,6 +62,7 @@
         }
 
         img {
+            display: block;
             max-width: 100%;
             height: auto;
         }
@@ -112,7 +113,8 @@
 @include mq(sm) {
     .whats-new {
         &__intro {
-            padding: 3.6rem 0;
+            padding: 0;
+            min-height: 36rem;
 
             .container:last-child {
                 position: absolute;
@@ -183,6 +185,9 @@
 @include mq(lg) {
     .whats-new {
         &__intro {
+            padding: 3.6rem 0;
+            min-height: auto;
+
             .container {
                 &:first-child .col-sm-8 {
                     display: block;

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import VisibilitySensor from 'react-visibility-sensor' 
-import Slide from 'react-reveal/Slide';
+// import Slide from 'react-reveal/Slide';
 
 class Survey extends Component {
-  
+
   constructor(props) {
     super(props);
     this.state = {
@@ -24,14 +24,14 @@ class Survey extends Component {
         onChange={this.onChange}
       >
         <div className="survey-wrapper">
-          <Slide right when={this.state.isVisible}>
-            <div className="survey">
+          {/* <Slide right when={this.state.isVisible} className="hello"> */}
+            <div className={'survey' + (this.state.isVisible ? ' survey--on-screen' : ' survey--off-screen')}>
               <div className="survey__header">Fill me out</div>
               <div className="survey__content">
                   hsadlfjhkljdash
               </div>
             </div>
-          </Slide>
+          {/* </Slide> */}
         </div>
       </VisibilitySensor>
     );
