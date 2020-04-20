@@ -4,6 +4,7 @@ import Banner from './components/Banner';
 import Announcement from './components/Announcement'
 import Feature from './components/Feature'
 import Survey from './components/Survey'
+import SocialShare from './components/SocialShare'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -26,6 +27,10 @@ const containers = [
   {
     id: "survey",
     component: Survey
+  },
+  {
+    id: "social-share",
+    component: SocialShare
   }
 ];
 
