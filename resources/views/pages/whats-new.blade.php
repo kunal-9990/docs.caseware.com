@@ -135,7 +135,7 @@
             @include('partials.download-pdf')
         </main>
 
-        <!-- <div data-component="survey"></div> -->
+        <div data-component="survey"></div>
 
         @include('partials.cookie-consent')
         @include('partials.footer')
