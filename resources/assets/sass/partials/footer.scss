@@ -1,8 +1,9 @@
 .footer {
     background-color: $blue-horizon;
     color: $white;
-    margin-top: -8rem;
-    padding-top: 10rem;
+    margin-top: 8rem;
+    // margin-top: -8rem;
+    // padding-top: 10rem;
     z-index: 1;
 
     .row {
@@ -15,16 +16,16 @@
 
     .col {
         display: flex;
+        flex-direction: column;
         flex: 0 0 50%;
 
         &--sm-full {
             flex: 0 0 100%;
+            flex-direction: row;
             justify-content: center;
             padding: 1.2rem 0;
         }
     }
-
-
 
     &__logo {
         width: 250px;
@@ -45,6 +46,15 @@
         }
     }
 
+    &__links {
+        align-items: flex-start !important;
+
+        span {
+            font-size: 2rem;
+            padding-bottom: 2.2rem;
+        }
+    }
+
     p {
         margin: 15px 0 15px 0;
         font-size: 0.875em;
@@ -53,6 +63,11 @@
         @include mq(md) {
             margin: 0 0 0 0;
         }
+    }
+
+    a {
+        display: block;
+        color: $white;
     }
 
     .footer__copyright {

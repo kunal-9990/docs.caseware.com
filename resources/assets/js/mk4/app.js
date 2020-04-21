@@ -5,6 +5,7 @@ import Announcement from './components/Announcement'
 import Feature from './components/Feature'
 import Survey from './components/Survey'
 import SocialShare from './components/SocialShare'
+import QuickLinks from './components/QuickLinks'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -31,6 +32,10 @@ const containers = [
   {
     id: "social-share",
     component: SocialShare
+  },
+  {
+    id: "quick-links",
+    component: QuickLinks
   }
 ];
 
