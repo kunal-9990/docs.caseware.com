@@ -26,7 +26,8 @@ class Controller extends BaseController
 
 
         //Grab the menus
-        // View::share('menu_header', $wp->menu('header-menu')->get('results'));
+        View::share('header', $cms->menu('header')->get('results')->items);
+        View::share('footer', $cms->menu('footer')->get('results')->items);
  
 
         //Build a breadcrumb array

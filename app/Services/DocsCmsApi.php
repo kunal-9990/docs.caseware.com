@@ -143,7 +143,7 @@ class DocsCmsApi
     }
 
     public function menu($slug, $lifetime = null) {
-        return $this->_get('/wp-json/wp-api-menus/v2/menu-locations/' . $slug, [], $lifetime);
+        return $this->_get('/wp-json/menus/v1/menus/' . $slug, [], $lifetime);
     }
 
     public function products($locale, $lifetime = null) {
