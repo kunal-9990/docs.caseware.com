@@ -18,7 +18,7 @@ class PageController extends Controller
     // home
     function home(){
 
-        App::setLocale($lang);
+        // App::setLocale($lang);
 
         
         $page = $this->cms->page('home');
