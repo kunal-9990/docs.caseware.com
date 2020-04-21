@@ -27,6 +27,9 @@ class Controller extends BaseController
 
         //Grab the menus
         View::share('header', $cms->menu('header')->get('results')->items);
+        View::share('footer-products', $cms->menu('footer')->get('results')->items);
+        View::share('footer-about', $cms->menu('footer')->get('results')->items);
+        View::share('footer-resources', $cms->menu('footer')->get('results')->items);
         View::share('footer', $cms->menu('footer')->get('results')->items);
  
 
