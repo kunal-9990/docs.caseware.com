@@ -156,7 +156,5 @@ class PageController extends Controller
         return view('pages.one-column', compact('maincontentarea', 'recent'));
     }
 
-    function postDump () {
-        
-    }
+
 }

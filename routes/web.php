@@ -15,7 +15,7 @@
 $current_version = env("CURRENT_VERSION");
 
 
-Route::get('/prodDump', 'PageController@prodDump');
+Route::get('/prodDump', 'VoteController@prodDump');
 
 // cloud index
 Route::get('/', function () {
