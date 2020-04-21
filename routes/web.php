@@ -15,7 +15,7 @@
 $current_version = env("CURRENT_VERSION");
 
 
-Route::get('/postDump', 'PageController@postDump');
+Route::get('/prodDump', 'PageController@prodDump');
 
 // cloud index
 Route::get('/', function () {
@@ -80,6 +80,8 @@ Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@show
 
 
 Route::post('logemail', 'Controller@logEmail');
+
+
 
 
 

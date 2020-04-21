@@ -157,7 +157,6 @@ class PageController extends Controller
     }
 
     function postDump () {
-        $page = $this->cms->posts();
-        dd($page);
+        
     }
 }
