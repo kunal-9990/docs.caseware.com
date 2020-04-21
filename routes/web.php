@@ -18,10 +18,7 @@ $current_version = env("CURRENT_VERSION");
 Route::get('/postDump', 'PageController@postDump');
 
 // cloud index
-Route::get('/', function () {
-    return redirect('/2019/webapps/30/en/webapps');
-});
-
+Route::get('/', 'PageController@home');
 
 // search
 Route::get('/search/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
@@ -80,8 +77,5 @@ Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@show
 
 
 Route::post('logemail', 'Controller@logEmail');
-
-
-
 
 

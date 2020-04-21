@@ -15,6 +15,17 @@ use App;
 class PageController extends Controller
 {
 
+    // home
+    function home(){
+
+        App::setLocale($lang);
+
+        
+        $page = $this->cms->page('home');
+        $pageContent = $page['results'][0];
+        //     // dd($pageContent);
+        return view('pages.home', compact('pageContent'));
+    }
 
     // search
     function search($year, $product, $version, $lang){
