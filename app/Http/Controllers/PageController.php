@@ -36,9 +36,8 @@ class PageController extends Controller
         if(startsWith(strtolower($topic), "whats-new")){
             $page = $this->cms->page(removeFileExt(strtolower($topic)));
             $pageContent = $page['results'][0];
-            $test = $this->cms;
             // dd($pageContent);
-            return view('pages.whats-new', compact('test', 'pageContent', 'recent', 'exclusiveTo','title'));
+            return view('pages.whats-new', compact('pageContent', 'recent', 'exclusiveTo','title'));
         }
 
 

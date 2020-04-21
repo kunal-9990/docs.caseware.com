@@ -125,8 +125,6 @@
 
         <div data-component="survey"></div>
 
-        <?php echo '<pre>';var_dump($test);echo '</pre>'; ?>
-
         @include('partials.cookie-consent')
         @include('partials.footer')
     </div>
