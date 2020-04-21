@@ -30,17 +30,17 @@
         @include('partials.header-mobile')
         @endif
 
+        @if ($pageContent->acf->announcement)
         <div 
             data-component="announcement"
             data-props='{"title":"{{$pageContent->acf->announcement->post_title}}", "description":"{{$pageContent->acf->announcement->post_content}}"}'
         ></div>
+        @endif
 
         <div 
             data-component="banner"
             data-props='{"background":"{{$pageContent->acf->title_background_image->url}}","product":"{{$pageContent->acf->product." ".$pageContent->acf->version}}", "strapline":"{{$pageContent->acf->strapline}}"}'
         ></div>
-
-
 
         <main id="main">
             <div class="whats-new">
@@ -92,18 +92,30 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="docs__container">
+                                <div>
+                                    @foreach($pageContent->acf->features as $feature)
+                                        <div 
+                                            data-component="feature" 
+                                            data-props='{
+                                                "title": "{{$feature->title}}", 
+                                                "description": {{htmlspecialchars(json_encode($feature->description))}},
+                                                "showVoter": "{{$feature->allow_voting}}"
+                                            }'
+                                            data-n-prop-votes=0 
+                                        ></div>
+                                    @endforeach
+                                </div>
+                            </div>
                             <div>
-                                @foreach($pageContent->acf->features as $feature)
+                                @if($pageContent->acf->quick_links_header !== "")
                                     <div 
-                                        data-component="feature" 
-                                        data-props='{
-                                            "title": "{{$feature->title}}", 
-                                            "description": {{htmlspecialchars(json_encode($feature->description))}},
-                                            "showVoter": "{{$feature->allow_voting}}"
-                                        }'
-                                        data-n-prop-votes=0 
+                                        data-component="quick-links"
+                                        data-prop-header="{{$pageContent->acf->quick_links_header}}"
+                                        data-prop-quick-links="{{json_encode($pageContent->acf->quick_links)}}"
                                     ></div>
-                                @endforeach
+                                @else
+                                <h1>empty</h1>
+                                @endif
                             </div>
                             @include('partials.filter-msg', [
                                 'exclusiveTo' =>  isset($exclusiveTo) ? $exclusiveTo : false,
@@ -123,7 +135,7 @@
             @include('partials.download-pdf')
         </main>
 
-        <div data-component="survey"></div>
+        <!-- <div data-component="survey"></div> -->
 
         @include('partials.cookie-consent')
         @include('partials.footer')
