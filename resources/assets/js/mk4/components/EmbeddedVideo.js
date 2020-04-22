@@ -8,6 +8,38 @@ const mq = {
   'lg-x': '1460'
 }
 
+const IframeBlock = ({ 
+  src, 
+  thumbnail,
+  thumbnailClicked, 
+  onClick
+}) => {
+
+  if (thumbnail != '') {
+    return (
+      <React.Fragment>
+        <div 
+          onClick={onClick} 
+          style={{ display: thumbnailClicked ? 'none' : 'block'}}
+        >
+          <img src={thumbnail} />
+        </div>
+        {thumbnailClicked && (<Iframe src={src} autoplay="true"/>)}
+      </React.Fragment>
+    )
+  } else return (<Iframe src={src} autoplay="false" />)
+}
+
+const Iframe = ({ src, autoplay }) => (
+  <iframe  
+    src={(autoplay === true ? (src + '?autoplay=1') : src)} 
+    className="yt-video-iframe" 
+    frameBorder="0"
+    allowFullScreen
+  ></iframe>
+)
+
+
 class EmbeddedVideo extends Component {
 
   constructor(props) {
@@ -53,24 +85,12 @@ class EmbeddedVideo extends Component {
     return (
       <div className="embedded-video iframe-video-wrapper"> 
         {!this.props.disableOnResponsiveSize.includes(this.state.mqSize) && (
-          <React.Fragment>
-            <div 
-              onClick={() => this.onClick()} 
-              style={{ display: this.state.thumbnailClicked ? 'none' : 'block'}}
-            >
-              <img src={this.props.thumbnail} />
-            </div>
-            {this.state.thumbnailClicked && (
-              <div>
-                <iframe  
-                    src={this.props.src + '?autoplay=1'} 
-                    className="yt-video-iframe" 
-                    frameBorder="0"
-                    allowFullScreen
-                ></iframe>
-              </div>
-            )}
-          </React.Fragment>
+          <IframeBlock
+            src={this.props.src}
+            thumbnail={this.props.thumbnail}
+            thumbnailClicked={this.state.thumbnailClicked}
+            onClick={() => this.onClick()} 
+          />
         )}
       </div>
     )
