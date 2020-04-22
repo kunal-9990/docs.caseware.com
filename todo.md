@@ -15,3 +15,9 @@
 
 # Footer 
 - connect with cms menus
+
+# Quick Links component 
+- need to redesign this section
+
+# Translations 
+- social sharing

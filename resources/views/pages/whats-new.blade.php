@@ -106,17 +106,18 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <div>
+
+                            <!-- TODO: restyle this section -->
+                            
+                            <!-- <div>
                                 @if($pageContent->acf->quick_links_header !== "")
                                     <div 
                                         data-component="quick-links"
                                         data-prop-header="{{$pageContent->acf->quick_links_header}}"
                                         data-prop-quick-links="{{json_encode($pageContent->acf->quick_links)}}"
                                     ></div>
-                                @else
-                                <h1>empty</h1>
                                 @endif
-                            </div>
+                            </div> -->
                             @include('partials.filter-msg', [
                                 'exclusiveTo' =>  isset($exclusiveTo) ? $exclusiveTo : false,
                             ])
