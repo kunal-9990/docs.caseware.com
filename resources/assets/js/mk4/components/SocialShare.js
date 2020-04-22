@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShareAlt } from '@fortawesome/free-solid-svg-icons'
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -20,6 +22,10 @@ const SocialShare = () => {
     <div className="social">
       <div className="social__wrapper">
         <span>Share</span> {/* TODO - translate */}
+      </div>
+      <div className="social__wrapper">
+      <FontAwesomeIcon icon={faShareAlt} alt="share"/>
+
       </div>
       <div className="social__wrapper">
         <FacebookShareButton

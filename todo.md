@@ -6,6 +6,7 @@
 # Survey 
 - form setup with cms
 - re-open sticky functionality
+- remove hardcoded google form embed
 
 # Voting 
 - DB callbacks for all user actions (10 - 50)
@@ -15,9 +16,11 @@
 
 # Footer 
 - connect with cms menus
+- remove hardcoded
 
 # Quick Links component 
 - need to redesign this section
 
 # Translations 
 - social sharing
+- voter tooltips

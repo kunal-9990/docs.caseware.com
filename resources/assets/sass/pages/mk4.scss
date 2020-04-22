@@ -25,6 +25,7 @@
 
 .social {
     display: flex;
+    align-items: center;
     padding: 2.4rem 0;
 
     &__wrapper {
@@ -32,9 +33,8 @@
     }
 
     span {
-        font-size: 1.4rem;
         font-weight: 700;
-        text-transform: uppercase;
+        line-height: 0;
     }
 }
 
