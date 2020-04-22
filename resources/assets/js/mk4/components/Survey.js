@@ -35,13 +35,20 @@ class Survey extends Component {
           {/* <Slide right when={this.state.isVisible} className="hello"> */}
             <div className={'survey' + (this.state.isVisible ? ' survey--on-screen' : ' survey--off-screen')}>
               <div className="survey__header">
-                <div>Fill me out</div>
+                <div>Take our Survey</div>
                 <div className="exit" onClick={() => this.toggleVisibility()}>
                   <FontAwesomeIcon icon={faTimes} />
                 </div>
               </div>
               <div className="survey__content">
-                  hsadlfjhkljdash
+                <iframe 
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSdFEHArFC4nj61PVN-fYtY4jxcUxXnbFwP3MpMuiZtHUcyMTw/viewform?embedded=true" 
+                  width="100%"
+                  height="420" 
+                  frameBorder="0" 
+                  marginHeight="0" 
+                  marginWidth="0"
+                >Loading…</iframe>
               </div>
             </div>
           {/* </Slide> */}

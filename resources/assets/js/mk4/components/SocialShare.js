@@ -19,6 +19,9 @@ const SocialShare = () => {
   return (
     <div className="social">
       <div className="social__wrapper">
+        <span>Share</span> {/* TODO - translate */}
+      </div>
+      <div className="social__wrapper">
         <FacebookShareButton
           url={shareUrl}
           quote={title}
