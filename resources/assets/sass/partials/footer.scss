@@ -6,11 +6,12 @@
     // padding-top: 10rem;
     z-index: 1;
 
-    .row {
+    .row > div {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
+        // align-items: center;
+        align-items: flex-start;
         padding: 2.4rem 1.2rem;
     }
 
@@ -18,6 +19,8 @@
         display: flex;
         flex-direction: column;
         flex: 0 0 50%;
+        margin-top: 2.4rem;
+        // flex: 1;
 
         &--sm-full {
             flex: 0 0 100%;
@@ -99,10 +102,15 @@
     
         .col {
             flex: 1;
+            margin-top: 0;
 
             &--sm-full {
                 flex: auto;
                 justify-content: flex-start;
+            }
+
+            &:first-child {
+                flex-basis: 7rem;
             }
         }
 
