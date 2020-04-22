@@ -22,6 +22,7 @@ const IframeBlock = ({
           onClick={onClick} 
           style={{ display: thumbnailClicked ? 'none' : 'block'}}
         >
+          <img src="/img/play.png" className="embedded-video__play-btn"/>
           <img src={thumbnail} />
         </div>
         {thumbnailClicked && (<Iframe src={src} autoplay="true"/>)}
@@ -30,14 +31,22 @@ const IframeBlock = ({
   } else return (<Iframe src={src} autoplay="false" />)
 }
 
-const Iframe = ({ src, autoplay }) => (
-  <iframe  
-    src={(autoplay === true ? (src + '?autoplay=1') : src)} 
-    className="yt-video-iframe" 
-    frameBorder="0"
-    allowFullScreen
-  ></iframe>
-)
+const Iframe = ({ src, autoplay }) => {
+
+  let iframeSrc = src;
+  if (autoplay) {
+    iframeSrc = src + '?autoplay=1';
+  }
+
+  return(
+    <iframe  
+      src={iframeSrc} 
+      className="yt-video-iframe" 
+      frameBorder="0"
+      allowFullScreen
+    ></iframe>
+  )
+}
 
 
 class EmbeddedVideo extends Component {

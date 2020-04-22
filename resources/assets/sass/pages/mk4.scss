@@ -99,6 +99,14 @@
         width: 100%;
         height: auto;
         cursor: pointer;
+
+        &.embedded-video__play-btn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20%;
+        }
     }
 }
 
