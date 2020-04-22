@@ -6,6 +6,7 @@ import Feature from './components/Feature'
 import Survey from './components/Survey'
 import SocialShare from './components/SocialShare'
 import QuickLinks from './components/QuickLinks'
+import EmbeddedVideo from './components/EmbeddedVideo'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -14,28 +15,32 @@ import 'react-app-polyfill/stable'
 
 const containers = [
   {
-    id: "banner",
+    id: 'banner',
     component: Banner
   },
   {
-    id: "announcement",
+    id: 'announcement',
     component: Announcement
   },
   {
-    id: "feature",
+    id: 'feature',
     component: Feature
   },
   {
-    id: "survey",
+    id: 'survey',
     component: Survey
   },
   {
-    id: "social-share",
+    id: 'social-share',
     component: SocialShare
   },
   {
-    id: "quick-links",
+    id: 'quick-links',
     component: QuickLinks
+  },
+  {
+    id: 'embedded-video',
+    component: EmbeddedVideo
   }
 ];
 

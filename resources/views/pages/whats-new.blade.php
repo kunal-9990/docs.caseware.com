@@ -60,15 +60,15 @@
 
                                     <div data-component="social-share"></div>
                                 </div>
-                                <div class="col-sm-8">
-                                    <div class="iframe-video-wrapper">
-                                        <iframe  
-                                            src="{{$pageContent->acf->featured_video}}" 
-                                            class="yt-video-iframe" 
-                                            frameborder="0"
-                                            allowfullscreen>
-                                        </iframe>
-                                    </div>
+                                <div class="col-sm-8" style="padding: 0">
+                                    @if($pageContent->acf->featured_video !== "")
+                                    <div 
+                                        data-component="embedded-video"
+                                        data-prop-thumbnail="{{ ($pageContent->acf->featured_video_thumbnail) ? ($pageContent->acf->featured_video_thumbnail->url) : ''}}"
+                                        data-prop-src="{{$pageContent->acf->featured_video}}"
+                                        data-props='{"disableOnResponsiveSize": ["md", "lg"]}'
+                                    ></div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -76,14 +76,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-8">
-                                <div class="iframe-video-wrapper">
-                                    <iframe  
-                                        src="{{$pageContent->acf->featured_video}}" 
-                                        class="yt-video-iframe" 
-                                        frameborder="0"
-                                        allowfullscreen>
-                                    </iframe>
-                                </div>
+                                @if($pageContent->acf->featured_video !== "")
+                                <div 
+                                    data-component="embedded-video"
+                                    data-prop-thumbnail="{{ ($pageContent->acf->featured_video_thumbnail) ? ($pageContent->acf->featured_video_thumbnail->url) : ''}}"
+                                    data-prop-src="{{$pageContent->acf->featured_video}}"
+                                    data-props='{"disableOnResponsiveSize": ["xs", "sm", "lg-x"]}'
+                                ></div>
+                                @endif
                             </div>
                         </div>
                     </div>
