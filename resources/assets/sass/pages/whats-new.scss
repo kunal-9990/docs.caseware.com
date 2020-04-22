@@ -6,10 +6,10 @@
 
         .container {
             &:first-child .col-sm-8 {
-                display: none;
+                display: block;
             }
             &:last-child {
-                display: block;
+                display: none;
             }
         }
     }
@@ -116,16 +116,22 @@
             padding: 0;
             min-height: 36rem;
 
-            .container:last-child {
-                position: absolute;
-                right: 0;
-                top: 0;
-                pointer-events: none;        
-
-                .col-sm-8 {
-                    float: right;
-                    padding: 0;
-                    pointer-events: all;
+            .container {
+                &:first-child .col-sm-8 {
+                    display: none;
+                }
+                &:last-child {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    pointer-events: none;        
+    
+                    .col-sm-8 {
+                        float: right;
+                        padding: 0;
+                        pointer-events: all;
+                    }
                 }
             }
         }
