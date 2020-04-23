@@ -36,8 +36,9 @@ class PageController extends Controller
         if(startsWith(strtolower($topic), "whats-new")){
             $page = $this->cms->page(removeFileExt(strtolower($topic)));
             $pageContent = $page['results'][0];
+            $voteData = getVoteData($product, $version);
             // dd($pageContent);
-            return view('pages.whats-new', compact('pageContent', 'recent', 'exclusiveTo','title'));
+            return view('pages.whats-new', compact('pageContent', 'recent', 'exclusiveTo','title', 'voteData'));
         }
 
 
@@ -156,8 +157,5 @@ class PageController extends Controller
         return view('pages.one-column', compact('maincontentarea', 'recent'));
     }
 
-    function postDump () {
-        $page = $this->cms->posts();
-        dd($page);
-    }
+
 }
