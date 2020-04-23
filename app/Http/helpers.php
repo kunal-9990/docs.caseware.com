@@ -58,7 +58,14 @@ function getRecentlyViewed(){
 }
 
    function getVoteData($product, $version) {
-        $prodId = Product::getId($product)[0]->prod_id;
+        $prodId = Product::getId($product);
+        if($prodId->isEmpty()){
+            return;
+        }
+        else{
+        $prodId = $prodId->first()->prod_id;
+        }
+        
         $versionVotes = DB::table('votes')
             ->join('features', 'votes.feat_id', '=', 'features.feat_id')
             ->where('feat_prod_ver', $version)
