@@ -12,6 +12,10 @@ import {
   EmailIcon
 } from 'react-share';
 
+/* 
+this is a sample facebook share url structure
+http://docs2.iserv-staging.caseware.com/2019/webapps/30/en/Explore/Whats-New/whats-new-cloud-30?fbclid=IwAR2mDdZeK_K9Gg9esUN7QvBgdFBszy5PIce_N1P8yJTsr2b4Ud4EqpgULao
+*/
 
 const SocialShare = () => {
   
