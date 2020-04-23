@@ -39,7 +39,7 @@
     }
 
     &__feature {
-        padding: 2.4rem 0;
+        padding: 1.2rem 0;
 
         .feature__header {
             display: flex;
@@ -73,39 +73,55 @@
         flex-direction: row;
         align-items: center;
         margin-bottom: 2.4rem;
-        width: 12rem;
+        width: 10rem;
         color: $light-grey-2;
         line-height: 1;
 
         .arrow {
-            font-size: 3.8rem;
             line-height: 0;
             cursor: pointer;
 
             svg {
+                width: 2rem;
+                height: auto;
+                fill: $light-grey-2;
                 transition: all 0.1s;
             }
 
-            &--up svg {
-                color: #6EAB7E;
+            &--up.arrow--voted svg {
+                fill: #6EAB7E;
             }
 
             &--down svg {
-                color: #D45454;
+                transform: rotate(180deg);
+            }
+
+            &--down.arrow--voted svg {
+                fill: #D45454;
             }
 
             &:hover svg {
-                color: #ccc;
+                fill: #ccc;
             }
         }
 
         .total {
+            display: flex;
             flex: 1;
-            padding: 0 1.2rem;
+            flex-basis: auto;
+            align-items: center;
+            justify-content: center;
+            height: 3rem;
             color: #ddd;
-            font-size: 1.3rem;
             text-align: center;
-            text-transform: uppercase;
+
+            &__count {
+                font-size: 2rem;
+            }
+
+            &__text {
+                font-size: 1.3rem;
+            }
         }
     }
 }
@@ -151,8 +167,6 @@
         }
 
         &__feature {  
-            padding: 3.6rem 0;
-
             .feature {
                 &__header {
                     flex-direction: row;
@@ -165,6 +179,7 @@
                     }
 
                     &--no-voter {
+                        padding-top: 2.4rem;
                         padding-left: 6.2rem;
                     }
                 }
@@ -180,6 +195,10 @@
             margin-right: 2rem;
             margin-bottom: 0;
             width: 4.2rem;
+
+            .arrow svg {
+                width: 2.8rem;
+            }
 
             .total {
                 padding: 0;
