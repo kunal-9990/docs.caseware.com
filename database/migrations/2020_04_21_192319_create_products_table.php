@@ -16,10 +16,10 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->increments('prod_id');
             $table->string('prod_name');
-            $table->string('prod_home_url');
-            $table->string('prod_wn_url');
             $table->string('prod_current_ver');
-            $table->date('prod_current_ver_release_date');
+            $table->string('prod_home_url')->nullable();
+            $table->string('prod_wn_url')->nullable();
+            $table->date('prod_current_ver_release_date')->nullable();
             $table->timestamps();
         });
     }

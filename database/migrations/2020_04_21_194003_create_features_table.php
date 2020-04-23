@@ -17,8 +17,9 @@ class CreateFeaturesTable extends Migration
             $table->increments('feat_id');
             $table->integer('prod_id')->unsigned();
             $table->foreign('prod_id')->references('prod_id')->on('products');
+            $table->string('feat_prod_ver');
             $table->string('feat_name');
-            $table->string('feat_desc');
+            $table->string('feat_desc')->nullable;
             $table->timestamps();
         });
     }
