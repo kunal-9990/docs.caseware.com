@@ -95,14 +95,10 @@
                                     @foreach($pageContent->acf->features as $feature)
                                         @php
                                             $featureVotes = (isset($voteData[$feature->title])) ? $voteData[$feature->title] : 0;
-                                        @endphp
+                                            @endphp
                                         <div 
                                             data-component="feature" 
-                                            data-props='{
-                                                "title": "{{$feature->title}}", 
-                                                "description": {{htmlspecialchars(json_encode($feature->description))}},
-                                                "showVoter": "{{$feature->allow_voting}}"
-                                            }'
+                                            data-prop-feature="{{htmlspecialchars(json_encode($feature))}}"
                                             data-n-prop-votes={{$featureVotes}}
                                         ></div>
                                     @endforeach

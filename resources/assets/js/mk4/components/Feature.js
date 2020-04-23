@@ -7,7 +7,7 @@ class Feature extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        votes: this.props.votes,
+        votes: this.props.votes, // TODO - change this.state.votes to be array to account for sub features!
         hasVoted: 'neutral'
       };
     }
@@ -63,24 +63,53 @@ class Feature extends Component {
     }
   
     render() {
+      let feature = this.props.feature;
+      console.log(this.props)
+
+      let subFeatures = ''
+      if (feature.sub_features) {
+        subFeatures = feature.sub_features.map((subFeature, i) => {
+          return (
+            <div className="whats-new__sub-feature" key={i}>
+              <div className={ "feature__header" + (subFeature.allow_voting ? " feature__header--voter" : " feature__header--no-voter")}>
+                {subFeature.allow_voting && (
+                  <Voter 
+                    id=''
+                    votes={this.state.votes}
+                    hasVoted={this.state.hasVoted}
+                    upVote={() => { this.handleUpVote(); this.voteToDb(1) }}
+                    downVote={() => { this.handleDownVote(); this.voteToDb(2) }}
+                    hierarchy={2}
+                  />
+                )}
+                <h3>{ subFeature.title }</h3>
+              </div>
+              <div className="feature__content" dangerouslySetInnerHTML={{__html: subFeature.description }} />
+            </div> 
+          )
+        })
+      }
+
       return (
         <div 
           className="whats-new__feature" 
-          id={this.props.title.trim().replace(/\s/g, '-')}
+          id={feature.title.trim().replace(/\s/g, '-')}
         >
-          <div className={ "feature__header" + (this.props.showVoter ? " feature__header--voter" : " feature__header--no-voter")}>
-            {this.props.showVoter && (
+          <div className={ "feature__header" + (feature.allow_voting ? " feature__header--voter" : " feature__header--no-voter")}>
+            {feature.allow_voting && (
               <Voter 
-                id='' // TODO - change to this.props.id - should be a field in wp CMS which gets passed to feedback DB
+                id=''
                 votes={this.state.votes}
                 hasVoted={this.state.hasVoted}
                 upVote={() => { this.handleUpVote(); this.voteToDb(1) }}
                 downVote={() => { this.handleDownVote(); this.voteToDb(2) }}
+                hierarchy={1}
               />
             )}
-            <h2>{ this.props.title }</h2>
+            <h2>{ feature.title }</h2>
           </div>
-          <div className="feature__content" dangerouslySetInnerHTML={{__html: this.props.description }} />
+          <div className="feature__content" dangerouslySetInnerHTML={{__html: feature.description }} />
+          { subFeatures }
         </div>
       );
     }
