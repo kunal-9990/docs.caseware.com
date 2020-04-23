@@ -52,10 +52,11 @@
     // .header-mobile__open-search
 
     .header-mobile__logo {
-        max-width: 175px;
+        width: 100%;
+        max-width: 150px;
 
         @media screen and (min-width: 450px) {
-            max-width: 277px;
+            max-width: 200px;
         }
 
         body.mobile-search--is-open & {
