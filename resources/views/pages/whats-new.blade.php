@@ -17,7 +17,6 @@
 </head>
 <body>
     <div class="whats-new">
-        
         @php
         // dd($pageContent);
         if(!isset($noHeader)){
@@ -94,6 +93,9 @@
                             <div class="docs__container">
                                 <div>
                                     @foreach($pageContent->acf->features as $feature)
+                                        @php
+                                            $featureVotes = (isset($voteData[$feature->title])) ? $voteData[$feature->title] : 0;
+                                        @endphp
                                         <div 
                                             data-component="feature" 
                                             data-props='{
@@ -101,7 +103,7 @@
                                                 "description": {{htmlspecialchars(json_encode($feature->description))}},
                                                 "showVoter": "{{$feature->allow_voting}}"
                                             }'
-                                            data-n-prop-votes=0 
+                                            data-n-prop-votes={{$featureVotes}}
                                         ></div>
                                     @endforeach
                                 </div>

@@ -14,8 +14,14 @@
 */
 $current_version = env("CURRENT_VERSION");
 
+//allow unauthenticated users to cast a max of 10 votes per minute
+Route::middleware('throttle:10|60,1')->group(function () {
 
-Route::get('/postDump', 'PageController@postDump');
+        Route::post('/api/vote/create', 'VoteController@createVote');
+        
+});
+
+Route::get('/api/vote/getData', 'voteController@getVoteData');
 
 // cloud index
 Route::get('/', 'PageController@home');
@@ -77,5 +83,3 @@ Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@show
 
 
 Route::post('logemail', 'Controller@logEmail');
-
-
