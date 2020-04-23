@@ -1,3 +1,6 @@
+# Home page
+- everything
+
 # Social Sharing
 - is "title" hardcoded, same as page title, or coming from CMS?
 - add GA to track button clicks
@@ -6,6 +9,10 @@
 # Survey 
 - form setup with cms
 - re-open sticky functionality
+- remove hardcoded google form embed
+
+# Announcements
+- LG screen size make stickied below the search bar
 
 # Voting 
 - DB callbacks for all user actions (10 - 50)
@@ -15,3 +22,11 @@
 
 # Footer 
 - connect with cms menus
+- remove hardcoded
+
+# Quick Links component 
+- need to redesign this section
+
+# Translations 
+- social sharing
+- voter tooltips
