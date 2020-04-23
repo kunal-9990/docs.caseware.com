@@ -11,6 +11,26 @@ class Feature extends Component {
         hasVoted: 'neutral'
       };
     }
+
+    voteToDb(voteType) {
+      $.ajax({
+        type: "post",
+        url: '/api/vote/create',
+        data: {
+          "product": "webapps",
+          "version": "31",
+          "feature": this.props.title,
+          "featureDesc": "cool thing it does",
+          "voteType": voteType
+        }
+        ,
+        success: function (store) {
+
+        },
+        error: function () {
+        }
+      });
+    }
   
     handleUpVote() {
       if (this.state.hasVoted === 'up') {
@@ -21,6 +41,7 @@ class Feature extends Component {
           hasVoted: 'up'
         })
       }
+      
     }
 
     handleNeutral() {
@@ -53,8 +74,8 @@ class Feature extends Component {
                 id='' // TODO - change to this.props.id - should be a field in wp CMS which gets passed to feedback DB
                 votes={this.state.votes}
                 hasVoted={this.state.hasVoted}
-                upVote={() => this.handleUpVote()}
-                downVote={() => this.handleDownVote()}
+                upVote={() => { this.handleUpVote(); this.voteToDb(1) }}
+                downVote={() => { this.handleDownVote(); this.voteToDb(2) }}
               />
             )}
             <h2>{ this.props.title }</h2>

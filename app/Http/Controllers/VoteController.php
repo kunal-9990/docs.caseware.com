@@ -79,30 +79,5 @@ class VoteController extends Controller
         }
     }
 
-    function getVoteData(Request $request) {
-        $version = $request->input('version'); 
-
-        $versionVotes = DB::table('votes')
-            ->join('features', 'votes.feat_id', '=', 'features.feat_id')
-            ->where('feat_prod_ver', $version)
-            ->get(['features.feat_id', 'feat_name', 'vote_state']);
-
-
-        $featureScores = array();
-
-        foreach($versionVotes as $versionVote) {
-            if(!array_key_exists($versionVote->feat_name, $featureScores)){
-               $featureScores[$versionVote->feat_name] = 0;
-            }
-            if($versionVote->vote_state = 1 || $versionVote->vote_state = 4){
-                $featureScores[$versionVote->feat_name]++;
-            }
-            elseif($versionVote->vote_state = 2 || $versionVote->vote_state = 3){
-                 $featureScores[$versionVote->feat_name]--;
-            } 
-        }
-        $jsonScores = json_encode($featureScores);
-
-        return $jsonScores;
-    }
+ 
 }
