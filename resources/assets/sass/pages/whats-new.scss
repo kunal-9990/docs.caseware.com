@@ -38,10 +38,10 @@
         }
     }
 
-    &__feature {
+    .feature {
         padding: 1.2rem 0;
 
-        .feature__header {
+        &__header {
             display: flex;
             flex-direction: column-reverse;
             align-items: flex-start;
@@ -53,7 +53,7 @@
             }
         }
 
-        .feature__content {
+        &__content {
             padding-left: 0;
         }
 
@@ -72,7 +72,7 @@
         }
     }
 
-    &__sub-feature {
+    &--sub-feature {
         padding: 1.2rem 0;
     }
 
@@ -174,65 +174,63 @@
             }
         }
 
-        &__feature {  
-            .feature {
-                &__header {
-                    flex-direction: row;
-                    align-items: center;
+        .feature {  
+            &__header {
+                flex-direction: row;
+                align-items: center;
 
-                    &--voter {
-                        h2 {
-                            margin: 0;
-                        }
-                    }
-
-                    &--no-voter {
-                        padding-top: 2.4rem;
-                        padding-left: 6.2rem;
+                &--voter {
+                    h2 {
+                        margin: 0;
                     }
                 }
 
-                &__content {
+                &--no-voter {
+                    padding-top: 2.4rem;
                     padding-left: 6.2rem;
                 }
             }
-        }
 
-        &__sub-feature {
-            margin-left: 4.2rem;
-    
-            .feature__header--no-voter {
-                padding-top: 0;
+            &__content {
+                padding-left: 6.2rem;
+            }
+            
+            &--sub-feature {
+                margin-left: 4.2rem;
+        
+                .feature__header--no-voter {
+                    padding-top: 0;
+                }
+
+                .total {
+                    height: 2.5rem;
+                }
             }
 
-            .total {
-                height: 2.5rem;
-            }
-        }
+            .voter {
+                flex-direction: column;
 
-        .voter {
-            flex-direction: column;
-
-            &--1 {
-                margin: 0 2rem 0 0;
-                width: 4.2rem;
-    
-                .arrow svg {
+                &--1 {
+                    margin: 0 2rem 0 0;
+                    width: 4.2rem;
+        
+                    .arrow svg {
+                        width: 2.8rem;
+                    }
+                }
+        
+                &--2 {
+                    margin: 0 1.8rem;
                     width: 2.8rem;
+        
+                    .arrow svg {
+                        width: 1.8rem;
+                    }
                 }
-            }
-    
-            &--2 {
-                margin: 0 1.8rem;
-                width: 2.8rem;
-    
-                .arrow svg {
-                    width: 1.8rem;
-                }
-            }
 
-            .total {
-                padding: 0;
+                .total {
+                    padding: 0;
+                }
             }
         }
     }

@@ -7,7 +7,7 @@ class Feature extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        votes: this.props.votes, // TODO - change this.state.votes to be array to account for sub features!
+        votes: this.props.votes, 
         hasVoted: 'neutral'
       };
     }
@@ -64,36 +64,10 @@ class Feature extends Component {
   
     render() {
       let feature = this.props.feature;
-      console.log(this.props)
-
-      let subFeatures = ''
-      if (feature.sub_features) {
-        subFeatures = feature.sub_features.map((subFeature, i) => {
-          return (
-            <div className="whats-new__sub-feature" key={i}>
-              <div className={ "feature__header" + (subFeature.allow_voting ? " feature__header--voter" : " feature__header--no-voter")}>
-                {subFeature.allow_voting && (
-                  <Voter 
-                    id=''
-                    votes={this.state.votes}
-                    hasVoted={this.state.hasVoted}
-                    upVote={() => { this.handleUpVote(); this.voteToDb(1) }}
-                    downVote={() => { this.handleDownVote(); this.voteToDb(2) }}
-                    hierarchy={2}
-                  />
-                )}
-                <h3>{ subFeature.title }</h3>
-              </div>
-              <div className="feature__content" dangerouslySetInnerHTML={{__html: subFeature.description }} />
-            </div> 
-          )
-        })
-      }
-
       return (
         <div 
-          className="whats-new__feature" 
           id={feature.title.trim().replace(/\s/g, '-')}
+          className={'feature' + (this.props.hierarchy === 2 ? ' feature--sub-feature' : '')}
         >
           <div className={ "feature__header" + (feature.allow_voting ? " feature__header--voter" : " feature__header--no-voter")}>
             {feature.allow_voting && (
@@ -103,20 +77,24 @@ class Feature extends Component {
                 hasVoted={this.state.hasVoted}
                 upVote={() => { this.handleUpVote(); this.voteToDb(1) }}
                 downVote={() => { this.handleDownVote(); this.voteToDb(2) }}
-                hierarchy={1}
+                hierarchy={this.props.hierarchy}
               />
             )}
-            <h2>{ feature.title }</h2>
+            { this.props.hierarchy === 1 ? (<h2>{ feature.title }</h2>) : (<h3>{ feature.title }</h3>)}
           </div>
           <div className="feature__content" dangerouslySetInnerHTML={{__html: feature.description }} />
-          { subFeatures }
         </div>
       );
     }
 }
 
+Feature.defaultProps = {
+  hierarchy: 1
+}
+
 Feature.propTypes = {
   votes: PropTypes.number.isRequired,
+  hierarchy: PropTypes.oneOf([1, 2]).isRequired
 }
   
 export default Feature
