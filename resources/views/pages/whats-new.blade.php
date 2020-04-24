@@ -92,9 +92,6 @@
                         <div class="col-sm-12">
                             <div class="docs__container">
                                 <div>
-                                    {{-- @php
-                                        dd($voteData);
-                                    @endphp --}}
                                     @foreach($pageContent->acf->features as $feature)
                                         @php
                                             $featureVotes = (isset($voteData[$feature->title])) ? $voteData[$feature->title] : 0;
@@ -107,11 +104,15 @@
                                         ></div>
 
                                         @if($feature->sub_features)
+
                                             @foreach($feature->sub_features as $subFeature)
+                                            @php
+                                                $subFeatureVotes = (isset($voteData[$subFeature->title])) ? $voteData[$subFeature->title] : 0;
+                                            @endphp
                                             <div 
                                                 data-component="feature" 
                                                 data-prop-feature="{{htmlspecialchars(json_encode($subFeature))}}"
-                                                data-n-prop-votes={{$featureVotes}} 
+                                                data-n-prop-votes={{$subFeatureVotes}} 
                                                 data-n-prop-hierarchy="2"
                                             ></div>
                                             @endforeach
