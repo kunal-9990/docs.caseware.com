@@ -24,16 +24,20 @@
             $noHeader = false;
         }
         
-        <!-- @endphp
+        @endphp
         @if(!$noHeader)
         {{-- @include('partials.header')
         @include('partials.header-mobile') --}}
-        @endif -->
+        @endif
 
+        <div
+            data-component="home-banner" 
+            data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
+        ></div>
 
         <main id="main">
             <div class="home">
-                <?php echo '<pre>';var_dump($pageContent);echo'</pre>';?>
+                <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?>
             </div>
            <h1> HOME PAGE </h1>
         </main>

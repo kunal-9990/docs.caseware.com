@@ -1,6 +1,15 @@
+
+# Translations 
+- social sharing
+- voter tooltips
+
+# Header
+- lang issue (on home blade template)
+- create transparent header version for home page banners
+
 # Home page
-- everything
-- header - lang issue
+- banner: ctas, search bar
+- everything else
 
 # Social Sharing
 - should share "title" be hardcoded? same as page title? or coming from CMS?
@@ -23,6 +32,3 @@
 # Quick Links component 
 - need to redesign this section
 
-# Translations 
-- social sharing
-- voter tooltips
