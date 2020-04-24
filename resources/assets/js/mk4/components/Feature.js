@@ -19,7 +19,7 @@ class Feature extends Component {
         data: {
           "product": "webapps",
           "version": "31",
-          "feature": this.props.title,
+          "feature": this.props.feature.title,
           "featureDesc": "cool thing it does",
           "voteType": voteType
         }

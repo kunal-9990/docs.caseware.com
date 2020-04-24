@@ -92,10 +92,13 @@
                         <div class="col-sm-12">
                             <div class="docs__container">
                                 <div>
+                                    {{-- @php
+                                        dd($voteData);
+                                    @endphp --}}
                                     @foreach($pageContent->acf->features as $feature)
                                         @php
                                             $featureVotes = (isset($voteData[$feature->title])) ? $voteData[$feature->title] : 0;
-                                            @endphp
+                                        @endphp
                                         <div 
                                             data-component="feature" 
                                             data-prop-feature="{{htmlspecialchars(json_encode($feature))}}"
