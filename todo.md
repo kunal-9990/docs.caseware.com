@@ -24,11 +24,6 @@
 - should share "title" be hardcoded? same as page title? or coming from CMS?
 - add GA to track button clicks and onShareWindowClose
 
-# Survey 
-- form setup with cms
-- re-open sticky functionality
-- remove hardcoded google form embed
-
 # Announcements
 - LG screen size make stickied below the search bar
 
