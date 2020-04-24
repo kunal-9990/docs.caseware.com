@@ -20,11 +20,10 @@ class PageController extends Controller
 
         // App::setLocale($lang);
 
-        
         $page = $this->cms->page('home');
         $pageContent = $page['results'][0];
-        //     // dd($pageContent);
-        return view('pages.home', compact('pageContent'));
+
+        return view('pages.home', compact('pageContent', 'recent', 'exclusiveTo','title' ));
     }
 
     // search

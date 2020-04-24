@@ -17,60 +17,31 @@
 </head>
 <body>
     <div class="home">
+        
         @php
         // dd($pageContent);
         if(!isset($noHeader)){
             $noHeader = false;
         }
         
-        @endphp
+        <!-- @endphp
         @if(!$noHeader)
-        @include('partials.header')
-        @include('partials.header-mobile')
-        @endif
+        {{-- @include('partials.header')
+        @include('partials.header-mobile') --}}
+        @endif -->
 
-
-
-       <?php echo '<pre>';var_dump($pageContent->acf);echo '</pre>';?>
 
         <main id="main">
-            <div class="whats-new">
-            
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="docs__container">
-                                <div>
- 
-
-
-                                CONENT goes here
-                                </div>
-                            </div>
-                            @include('partials.filter-msg', [
-                                'exclusiveTo' =>  isset($exclusiveTo) ? $exclusiveTo : false,
-                            ])
-                        </div>
-                    </div>
-                </div>
+            <div class="home">
+                <?php echo '<pre>';var_dump($pageContent);echo'</pre>';?>
             </div>
-
-            {{-- back to top button --}}
-            @include('partials.back-to-top')
-
-            {{-- modal overlay for images in content --}}
-            @include('partials.image-modal')
-
-            {{-- modal overlay for email subscription and pdf download --}}
-            @include('partials.download-pdf')
+           <h1> HOME PAGE </h1>
         </main>
-
-        <div data-component="survey"></div>
 
         @include('partials.cookie-consent')
         @include('partials.footer')
     </div>
-        @if(Route::current()->parameters()["lang"] == "en")
+        @if(1)
             <!-- begin olark code -->
             <script type="text/javascript" async>
                 ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");

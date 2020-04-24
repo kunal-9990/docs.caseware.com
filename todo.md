@@ -1,10 +1,10 @@
 # Home page
 - everything
+- header - lang issue
 
 # Social Sharing
-- is "title" hardcoded, same as page title, or coming from CMS?
-- add GA to track button clicks
-- should we share on more platforms than the current 4?
+- should share "title" be hardcoded? same as page title? or coming from CMS?
+- add GA to track button clicks and onShareWindowClose
 
 # Survey 
 - form setup with cms
@@ -14,14 +14,10 @@
 # Announcements
 - LG screen size make stickied below the search bar
 
-# Voting 
-- DB callbacks for all user actions (10 - 50)
-
 # Newsletter signup
 - full development needed
 
 # Footer 
-- connect with cms menus
 - remove hardcoded
 
 # Quick Links component 
