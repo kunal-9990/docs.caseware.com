@@ -39,3 +39,6 @@
 - cache vote data
 - cache user vote callbacks
 
+# Header
+- Removing product filter
+
