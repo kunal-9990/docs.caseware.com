@@ -30,3 +30,12 @@
 # Translations 
 - social sharing
 - voter tooltips
+
+# CSRF token
+- enable token check in kernel.php
+- ensure feature.js sendVoteToDb() is passing token
+
+# Caching
+- cache vote data
+- cache user vote callbacks
+
