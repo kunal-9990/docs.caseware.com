@@ -1,10 +1,28 @@
+
+# Translations 
+- social sharing
+- voter tooltips
+
+# Header
+- Removing product filter
+- lang issue (on home blade template)
+- create transparent header version for home page banners
+
+# CSRF token
+- enable token check in kernel.php
+- ensure feature.js sendVoteToDb() is passing token
+
+# Caching
+- cache vote data
+- cache user vote callbacks
+
 # Home page
-- everything
+- banner: ctas, search bar
+- everything else
 
 # Social Sharing
-- is "title" hardcoded, same as page title, or coming from CMS?
-- add GA to track button clicks
-- should we share on more platforms than the current 4?
+- should share "title" be hardcoded? same as page title? or coming from CMS?
+- add GA to track button clicks and onShareWindowClose
 
 # Survey 
 - form setup with cms
@@ -14,19 +32,12 @@
 # Announcements
 - LG screen size make stickied below the search bar
 
-# Voting 
-- DB callbacks for all user actions (10 - 50)
-
 # Newsletter signup
 - full development needed
 
 # Footer 
-- connect with cms menus
 - remove hardcoded
 
 # Quick Links component 
 - need to redesign this section
 
-# Translations 
-- social sharing
-- voter tooltips

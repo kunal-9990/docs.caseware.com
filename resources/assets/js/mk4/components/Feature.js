@@ -7,9 +7,29 @@ class Feature extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        votes: this.props.votes,
+        votes: this.props.votes, 
         hasVoted: 'neutral'
       };
+    }
+
+    voteToDb(voteType) {
+      $.ajax({
+        type: "post",
+        url: '/api/vote/create',
+        data: {
+          "product": "webapps",
+          "version": "31",
+          "feature": this.props.feature.title,
+          "featureDesc": "cool thing it does",
+          "voteType": voteType
+        }
+        ,
+        success: function (store) {
+
+        },
+        error: function () {
+        }
+      });
     }
   
     handleUpVote() {
@@ -21,6 +41,7 @@ class Feature extends Component {
           hasVoted: 'up'
         })
       }
+      
     }
 
     handleNeutral() {
@@ -42,31 +63,38 @@ class Feature extends Component {
     }
   
     render() {
+      let feature = this.props.feature;
       return (
         <div 
-          className="whats-new__feature" 
-          id={this.props.title.trim().replace(/\s/g, '-')}
+          id={feature.title.trim().replace(/\s/g, '-')}
+          className={'feature' + (this.props.hierarchy === 2 ? ' feature--sub-feature' : '')}
         >
-          <div className={ "feature__header" + (this.props.showVoter ? " feature__header--voter" : " feature__header--no-voter")}>
-            {this.props.showVoter && (
+          <div className={ "feature__header" + (feature.allow_voting ? " feature__header--voter" : " feature__header--no-voter")}>
+            {feature.allow_voting && (
               <Voter 
-                id='' // TODO - change to this.props.id - should be a field in wp CMS which gets passed to feedback DB
+                id=''
                 votes={this.state.votes}
                 hasVoted={this.state.hasVoted}
-                upVote={() => this.handleUpVote()}
-                downVote={() => this.handleDownVote()}
+                upVote={() => { this.handleUpVote(); this.voteToDb(1) }}
+                downVote={() => { this.handleDownVote(); this.voteToDb(2) }}
+                hierarchy={this.props.hierarchy}
               />
             )}
-            <h2>{ this.props.title }</h2>
+            { this.props.hierarchy === 1 ? (<h2>{ feature.title }</h2>) : (<h3>{ feature.title }</h3>)}
           </div>
-          <div className="feature__content" dangerouslySetInnerHTML={{__html: this.props.description }} />
+          <div className="feature__content" dangerouslySetInnerHTML={{__html: feature.description }} />
         </div>
       );
     }
 }
 
+Feature.defaultProps = {
+  hierarchy: 1
+}
+
 Feature.propTypes = {
   votes: PropTypes.number.isRequired,
+  hierarchy: PropTypes.oneOf([1, 2]).isRequired
 }
   
 export default Feature
