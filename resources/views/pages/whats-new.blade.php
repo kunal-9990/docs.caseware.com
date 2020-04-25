@@ -1,4 +1,7 @@
-
+{{-- 
+@php
+    dd($userVotes);
+@endphp --}}
 <!DOCTYPE html>
 @yield('html')
 <head>
@@ -93,13 +96,18 @@
                             <div class="docs__container">
                                 <div>
                                     @foreach($pageContent->acf->features as $feature)
-                                        @php
-                                            $featureVotes = (isset($voteData[$feature->title])) ? $voteData[$feature->title] : 0;
+                                    @php
+                                            $featureVotes = (isset($voteData[$feature->title]["score"])) ? $voteData[$feature->title]["score"] : 0;
+                                            $featureId = (isset($voteData[$feature->title]["id"])) ? $voteData[$feature->title]["id"] : "";
+                                            $state = (isset($userVotes[$featureId])) ? $userVotes[$featureId] : "neutral";
+
                                         @endphp
                                         <div 
                                             data-component="feature" 
                                             data-prop-feature="{{htmlspecialchars(json_encode($feature))}}"
                                             data-n-prop-votes={{$featureVotes}}
+                                            data-prop-hasvoted={{$state}}
+                                            data-n-prop-id={{$featureId}}
                                             data-n-prop-hierarchy="1"
                                         ></div>
 
@@ -107,12 +115,16 @@
 
                                             @foreach($feature->sub_features as $subFeature)
                                             @php
-                                                $subFeatureVotes = (isset($voteData[$subFeature->title])) ? $voteData[$subFeature->title] : 0;
+                                                $subFeatureVotes = (isset($voteData[$subFeature->title]["score"])) ? $voteData[$subFeature->title]["score"] : 0;
+                                                $subFeatureId = (isset($voteData[$subFeature->title]["id"])) ? $voteData[$subFeature->title]["id"] : 0;
+                                                $state = (isset($userVotes[$subFeatureId])) ? $userVotes[$subFeatureId] : "neutral";
                                             @endphp
                                             <div 
                                                 data-component="feature" 
                                                 data-prop-feature="{{htmlspecialchars(json_encode($subFeature))}}"
                                                 data-n-prop-votes={{$subFeatureVotes}} 
+                                                data-prop-hasvoted={{$state}}
+                                                data-n-prop-id={{$subFeatureId}}
                                                 data-n-prop-hierarchy="2"
                                             ></div>
                                             @endforeach

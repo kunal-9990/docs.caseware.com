@@ -18,6 +18,7 @@ $current_version = env("CURRENT_VERSION");
 Route::middleware('throttle:10|60,1')->group(function () {
 
         Route::post('/api/vote/create', 'VoteController@createVote');
+        Route::post('/api/vote/updateVoteState', 'VoteController@updateVoteState');
         
 });
 

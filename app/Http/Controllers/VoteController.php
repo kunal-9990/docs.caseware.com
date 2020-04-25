@@ -77,6 +77,47 @@ class VoteController extends Controller
         } catch (Exception $e) {
             Log::error($e);
         }
+        Log::info("vote created");
+    }
+
+    function updateVoteState(Request $request) {
+
+        $featureId = $request->input('featureId');
+        $voteElementState = $request->input('voteElementState');
+
+        
+        // $request->session()->push('user.Votes', [$featureId => $voteElementState]);
+        $userVotes = $request->session()->get('user.Votes');
+        if($voteElementState == 1) {
+            $userVotes[$featureId] = 'up';
+        }
+        elseif($voteElementState == 2) {
+            $userVotes[$featureId] = 'down';
+        }
+        else{
+            $userVotes[$featureId] = 'neutral';
+        }
+        $request->session()->put('user.Votes', $userVotes);
+
+        // if(array_key_exists($featureId, $userVotes)){
+        //     $userVotes[$featureId] = $voteElementState;
+        // }
+        // else{
+        // }
+
+        // //get session data containing all got votes states of each feature
+        // $userVotes = $request->session()->get('userVotes');
+        // //if it doesn't exist, create it with new entry
+        // if(!isset($userVotes)){
+        //     $newUserVotesArr = array($featureId => $voteElementState);
+        //     $request->session()->put('userVotes', $newUserVotesarr);
+        // }
+        // //otherwise, update/add entry
+        // else {
+        //     $uservotes[$featureId] = $voteElementState;
+        //     $request->session()->put('userVotes', $newUserVotesarr);
+
+        // }
     }
 
  

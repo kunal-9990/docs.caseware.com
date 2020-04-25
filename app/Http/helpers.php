@@ -73,24 +73,28 @@ function getRecentlyViewed(){
             ->get(['features.feat_id', 'feat_name', 'vote_state']);
 
 
-        $featureScores = array();
+        $featureInfo = array();
 
         foreach($versionVotes as $versionVote) {
-            if(!array_key_exists($versionVote->feat_name, $featureScores)){
-               $featureScores[$versionVote->feat_name] = 0;
+            if(!array_key_exists($versionVote->feat_name, $featureInfo)){
+                $newFeature = array(
+                    "id" => $versionVote->feat_id,
+                    "score" => 0,
+                );
+                $featureInfo[$versionVote->feat_name] = $newFeature;
             }
             //if upvote of cleared downvote
             if($versionVote->vote_state == "1" || $versionVote->vote_state == "4"){
-                $featureScores[$versionVote->feat_name]++;
+                $featureInfo[$versionVote->feat_name]["score"]++;
             }
             //if downvote or cleared upvote
             elseif($versionVote->vote_state == "2" || $versionVote->vote_state == "3"){
-                 $featureScores[$versionVote->feat_name]--;
+                 $featureInfo[$versionVote->feat_name]["score"]--;
             } 
         }
-        $jsonScores = json_encode($featureScores);
+        $jsonScores = json_encode($featureInfo);
 
-        return $featureScores;
+        return $featureInfo;
     }
 
 ?>
