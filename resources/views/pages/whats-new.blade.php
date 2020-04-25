@@ -162,7 +162,15 @@
             @include('partials.download-pdf')
         </main>
 
-        <div data-component="survey"></div>
+        @if($pageContent->acf->survey->button_label !== "" && $pageContent->acf->survey->form_url !== "")
+            <div 
+                data-component="survey"
+                data-prop-label="{{$pageContent->acf->survey->button_label}}"
+                data-prop-url="{{$pageContent->acf->survey->form_url}}"
+                data-prop-auto-open="{{$pageContent->acf->survey->auto_open}}"
+                data-prop-with-olark="{{Route::current()->parameters()['lang'] == 'en'}}"
+            ></div>
+        @endif
 
         @include('partials.cookie-consent')
         @include('partials.footer')

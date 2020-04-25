@@ -25,10 +25,7 @@ Route::middleware('throttle:10|60,1')->group(function () {
 Route::get('/api/vote/getData', 'voteController@getVoteData');
 
 // cloud index
-Route::get('/', function () {
-    return redirect('/2019/webapps/30/en/webapps');
-});
-
+Route::get('/', 'PageController@home');
 
 // search
 Route::get('/search/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
@@ -87,10 +84,3 @@ Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@show
 
 
 Route::post('logemail', 'Controller@logEmail');
-
-
-
-
-
-
-
