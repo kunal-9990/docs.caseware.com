@@ -9,16 +9,13 @@ class Feature extends Component {
       this.state = {
         votes: this.props.votes, 
         hasVoted: this.props.hasvoted,
-        product: this.props.product,
-        version: this.props.version,
       };
     }
 
     voteToDb(voteType) {
-      // console.log(this.props.feature);
       var featureName = this.props.feature.title;
-      var featureVersion = this.props.version;
-      var featureProduct = this.props.product;
+      var featureVersion = this.props.feature.version;
+      var featureProduct = this.props.feature.product;
       var featureId;
       if(isNaN(this.props.id)){
         featureId = "NaN";
@@ -30,8 +27,8 @@ class Feature extends Component {
         type: "post",
         url: '/api/vote/create',
         data: {
-          "product": featureProduct,
-          "version": featureVersion,
+          "product": "webapps",
+          "version": "31",
           "feature": featureName,
           "featureDesc": "cool thing it does",
           "voteType": voteType
@@ -62,6 +59,9 @@ class Feature extends Component {
   
     handleUpVote() {
 
+      
+
+      console.log("current number:" + this.state.votes);
       var currentScore = this.state.votes;
 
       if (this.state.hasVoted === 'up') {

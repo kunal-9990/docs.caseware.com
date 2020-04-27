@@ -108,9 +108,7 @@
                                             data-prop-feature="{{htmlspecialchars(json_encode($feature))}}"
                                             data-n-prop-votes={{$featureVotes}}
                                             data-prop-hasvoted={{$state}}
-                                            data-prop-id={{$featureId}}
-                                            data-prop-product={{$product}}
-                                            data-prop-version={{$version}}
+                                            data-prop-id="{{$featureId}}"
                                             data-n-prop-hierarchy="1"
                                         ></div>
                                         @if($feature->sub_features)
@@ -126,9 +124,7 @@
                                                 data-prop-feature="{{htmlspecialchars(json_encode($subFeature))}}"
                                                 data-n-prop-votes={{$subFeatureVotes}} 
                                                 data-prop-hasvoted={{$state}}
-                                                data-prop-id={{$subFeatureId}}
-                                                data-prop-product={{$product}}
-                                                data-prop-version={{$version}}
+                                                data-prop-id="{{$subFeatureId}}"
                                                 data-n-prop-hierarchy="2"
                                             ></div>
                                             @endforeach
