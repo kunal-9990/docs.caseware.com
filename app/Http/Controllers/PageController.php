@@ -49,7 +49,7 @@ class PageController extends Controller
             $voteData = getVoteData($product, $version);
             $userVotes = session('user.Votes');
             // dd($pageContent);
-            return view('pages.whats-new', compact('pageContent', 'recent', 'exclusiveTo','title', 'voteData', 'userVotes'));
+            return view('pages.whats-new', compact('pageContent', 'recent', 'exclusiveTo','title', 'voteData', 'userVotes', 'product', 'version'));
         }
 
 

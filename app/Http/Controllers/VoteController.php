@@ -7,7 +7,7 @@ use App\Feature;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Log; 
 
 class VoteController extends Controller
 {
@@ -88,8 +88,11 @@ class VoteController extends Controller
         $featureId = $request->input('featureId');
         $featureName = $request->input('featureName');
         $voteElementState = $request->input('voteElementState');
-        if($featureId == "NaN"){
+        Log::info("updateVoteState:".empty($featureId));
+        Log::info("updateVoteState:".$featureId.$featureName.$voteElementState);
+        if(empty($featureId)){
             $featureId = Feature::getId($featureName)[0]->feat_id;
+            Log::info("got FeatureId:".$featureId);
 
         }
         
