@@ -56,6 +56,9 @@ class Feature extends Component {
     }
   
     handleUpVote() {
+
+      console.log("HandleUpVote()")
+
       if (this.state.hasVoted === 'up') {
         this.setState({
           votes: this.props.votes - 1,
@@ -89,6 +92,10 @@ class Feature extends Component {
     // }
 
     handleDownVote() {
+
+      console.log("HandleDownVote()")
+
+
       if (this.state.hasVoted === 'down') {
         this.setState({
           votes: this.props.votes + 1,
