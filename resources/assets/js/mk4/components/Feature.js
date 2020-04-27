@@ -8,8 +8,7 @@ class Feature extends Component {
       super(props);
       this.state = {
         votes: this.props.votes, 
-        hasVoted: this.props.hasvoted, 
-
+        hasVoted: this.props.hasvoted,
       };
     }
 
@@ -80,7 +79,6 @@ class Feature extends Component {
         })
         this.voteToDb(1);
       }
-      
     }
 
     // handleNeutral() {
