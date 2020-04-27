@@ -140,13 +140,8 @@ class Feature extends Component {
     }
 }
 
-Feature.defaultProps = {
-  hierarchy: 1
-}
-
 Feature.propTypes = {
   votes: PropTypes.number.isRequired,
-  hierarchy: PropTypes.oneOf([1, 2]).isRequired
 }
   
 export default Feature
