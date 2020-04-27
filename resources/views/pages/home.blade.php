@@ -36,10 +36,25 @@
         ></div>
 
         <main id="main">
-            <div class="home">
-                <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?>
+            <div>
+                @foreach($pageContent->acf->modular_template as $section)
+                    
+                    @if($section->acf_fc_layout == "text_block")
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    @if(isset($section->logo))<img src={{$section->logo->url}} alt={{$section->logo->alt}} />@endif
+                                    @if(isset($section->header))<h2>{{ $section->header }}</h2>@endif
+                                    @if(isset($section->description))<div>{!! $section->description !!}</div>@endif
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+
+                @endforeach
+
+                <!-- <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?> -->
             </div>
-           <h1> HOME PAGE </h1>
         </main>
 
         @include('partials.cookie-consent')
