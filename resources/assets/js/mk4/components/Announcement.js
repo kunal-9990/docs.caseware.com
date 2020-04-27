@@ -18,7 +18,7 @@ class Announcement extends React.Component {
   
     render() {
       return (
-        <div style={{ position: 'relative' }}>
+        <div className="container announcement-container" style={{ position: 'relative' }}>
           <div className={"announcement" + (this.state.isOpen ? ' open' : '')}>
             <div className="announcement__content">
               <div>{ this.props.description}</div>
