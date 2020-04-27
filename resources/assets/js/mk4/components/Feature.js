@@ -63,7 +63,17 @@ class Feature extends Component {
           hasVoted: 'neutral'
         })
         this.voteToDb(3);
-      } else {
+      } 
+      else if (this.state.hasVoted === 'down') {
+
+        this.setState({
+          votes: this.props.votes + 2,
+          hasVoted: 'up'
+        })
+        this.voteToDb(1);
+        this.voteToDb(1);
+      } 
+      else {
         this.setState({
           votes: this.props.votes + 1,
           hasVoted: 'up'
@@ -87,7 +97,17 @@ class Feature extends Component {
           hasVoted: 'neutral'
         })
         this.voteToDb(4)
-      } else {
+      } 
+      else if (this.state.hasVoted === 'up') {
+
+        this.setState({
+          votes: this.props.votes - 2,
+          hasVoted: 'down'
+        })
+        this.voteToDb(2);
+        this.voteToDb(2);
+      }
+      else {
         this.setState({
           votes: this.props.votes - 1,
           hasVoted: 'down'
