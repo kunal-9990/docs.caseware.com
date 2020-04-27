@@ -4,8 +4,11 @@
 
 @include mq(sm) {
 
-    .announcement {
+    .announcement-container {
+        width: 100%;
+    }
 
+    .announcement {
         display: block;
         position: absolute;
         right: 1.5rem;
@@ -83,4 +86,10 @@
         }
     }
 
+}
+
+@include mq(lg) {
+    .announcement-container {
+        width: 117rem;
+    }
 }

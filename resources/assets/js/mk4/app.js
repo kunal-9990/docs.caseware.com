@@ -1,6 +1,7 @@
 import ReactHabitat from 'react-habitat'
 
-import Banner from './components/Banner';
+import Banner from './components/Banner'
+import HomeBanner from './components/HomeBanner'
 import Announcement from './components/Announcement'
 import Feature from './components/Feature'
 import Survey from './components/Survey'
@@ -17,6 +18,10 @@ const containers = [
   {
     id: 'banner',
     component: Banner
+  },
+  {
+    id: 'home-banner',
+    component: HomeBanner
   },
   {
     id: 'announcement',
