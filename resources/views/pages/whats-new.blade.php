@@ -1,3 +1,6 @@
+@php
+    // dd($userVotes);
+@endphp
 <!DOCTYPE html>
 @yield('html')
 <head>
@@ -112,7 +115,7 @@
                                             @foreach($feature->sub_features as $subFeature)
                                             @php
                                                 $subFeatureVotes = (isset($voteData[$subFeature->title]["score"])) ? $voteData[$subFeature->title]["score"] : 0;
-                                                $subFeatureId = (isset($voteData[$subFeature->title]["id"])) ? $voteData[$subFeature->title]["id"] : 0;
+                                                $subFeatureId = (isset($voteData[$subFeature->title]["id"])) ? $voteData[$subFeature->title]["id"] : "";
                                                 $state = (isset($userVotes[$subFeatureId])) ? $userVotes[$subFeatureId] : "neutral";
                                             @endphp
                                             <div 

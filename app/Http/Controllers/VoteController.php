@@ -56,7 +56,7 @@ class VoteController extends Controller
             $newfeat = Feature::create($featData);
 
             try {
-                $featId = Feature::getId($featName)[0]->feat_id;;
+                $featId = Feature::getId($featName)[0]->feat_id;
             } catch(Exception $e){
                 Log::error("upVote for undefined feature: ".$featName);
                 return;
@@ -77,14 +77,16 @@ class VoteController extends Controller
         } catch (Exception $e) {
             Log::error($e);
         }
-        Log::info("vote created");
     }
 
     function updateVoteState(Request $request) {
-
         $featureId = $request->input('featureId');
+        $featureName = $request->input('featureName');
         $voteElementState = $request->input('voteElementState');
+        if($featureId == "NaN"){
+            $featureId = Feature::getId($featureName)[0]->feat_id;
 
+        }
         
         // $request->session()->push('user.Votes', [$featureId => $voteElementState]);
         $userVotes = $request->session()->get('user.Votes');

@@ -14,15 +14,21 @@ class Feature extends Component {
     }
 
     voteToDb(voteType) {
-      var featureTitle = this.props.feature.title;
-      var featureId = this.props.id;
+      var featureName = this.props.feature.title;
+      var featureId;
+      if(isNaN(this.props.id)){
+        featureId = "NaN";
+      }
+      else{
+        featureId = this.props.id;
+      }
       $.ajax({
         type: "post",
         url: '/api/vote/create',
         data: {
           "product": "webapps",
           "version": "31",
-          "feature": featureTitle,
+          "feature": featureName,
           "featureDesc": "cool thing it does",
           "voteType": voteType
         }
@@ -33,7 +39,8 @@ class Feature extends Component {
             url: '/api/vote/updateVoteState',
             data: {
               "featureId": featureId,
-              "voteElementState": voteType
+              "voteElementState": voteType,
+              "featureName": featureName
             },
             success: function (store) {
             },
@@ -99,7 +106,7 @@ class Feature extends Component {
           <div className={ "feature__header" + (feature.allow_voting ? " feature__header--voter" : " feature__header--no-voter")}>
             {feature.allow_voting && (
               <Voter 
-                id={this.props.id}
+                id="1"
                 votes={this.state.votes}
                 hasVoted={this.state.hasVoted}
                 upVote={() => this.handleUpVote()}
