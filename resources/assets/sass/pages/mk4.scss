@@ -36,6 +36,11 @@
         font-weight: 700;
         line-height: 0;
     }
+
+    .react-share__ShareButton,
+    .react-share__ShareButton svg {
+        display: block;
+    }
 }
 
 .quick-links {
