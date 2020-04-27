@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Log;
 class VoteController extends Controller
 {
 
+    function dumpVotes() {
+        $votes = Vote::all();
+        dd($votes);
+    }
+
     function createVote (Request $request) {
 
         //get product id using name
