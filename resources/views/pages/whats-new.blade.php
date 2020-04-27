@@ -1,7 +1,3 @@
-{{-- 
-@php
-    dd($userVotes);
-@endphp --}}
 <!DOCTYPE html>
 @yield('html')
 <head>

@@ -37,11 +37,14 @@ class Feature extends Component {
             },
             success: function (store) {
             },
-            error: function () {}
+            error: function (req, err) {
+              console.log('my message' + err);
+            }
           });
 
         },
-        error: function () {
+        error: function (req, err) {
+          console.log('my message' + err);
         }
       });
     }
