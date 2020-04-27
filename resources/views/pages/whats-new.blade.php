@@ -59,8 +59,10 @@
                                     </a>
                                     </li></ul>
                                     @endforeach
-
-                                    <div data-component="social-share"></div>
+                                    <div 
+                                        data-component="social-share"
+                                        data-prop-message="{{ isset($pageContent->acf->social_message) ? $pageContent->acf->social_message : 'Check out this page from CaseWare!' }}"
+                                    ></div>
                                 </div>
                                 <div class="col-sm-8" style="padding: 0">
                                     @if($pageContent->acf->featured_video !== "")
