@@ -23,6 +23,7 @@ Route::middleware('throttle:10|60,1')->group(function () {
 Route::post('/api/vote/create', 'VoteController@createVote');
 Route::post('/api/vote/updateVoteState', 'VoteController@updateVoteState');
 Route::get('/api/vote/getData', 'voteController@getVoteData');
+Route::get('/api/vote/dumpVotes', 'voteController@dumpVotes');
 
 // cloud index
 Route::get('/', 'PageController@home');
