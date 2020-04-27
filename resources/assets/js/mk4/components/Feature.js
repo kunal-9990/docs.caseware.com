@@ -72,7 +72,7 @@ class Feature extends Component {
           votes: this.props.votes + 2,
           hasVoted: 'up'
         })
-        this.voteToDb(1);
+        // this.voteToDb(1);
         this.voteToDb(1);
       } 
       else {
@@ -96,20 +96,20 @@ class Feature extends Component {
       console.log("HandleDownVote()")
 
 
-      if (this.state.hasVoted === 'down') {
+      if (this.state.hasVoted == 'down') {
         this.setState({
           votes: this.props.votes + 1,
           hasVoted: 'neutral'
         })
         this.voteToDb(4)
       } 
-      else if (this.state.hasVoted === 'up') {
+      else if (this.state.hasVoted == 'up') {
 
         this.setState({
           votes: this.props.votes - 2,
           hasVoted: 'down'
         })
-        this.voteToDb(2);
+        // this.voteToDb(2);
         this.voteToDb(2);
       }
       else {
