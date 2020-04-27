@@ -1,7 +1,6 @@
-{{-- 
 @php
-    dd($userVotes);
-@endphp --}}
+    // dd($userVotes);
+@endphp
 <!DOCTYPE html>
 @yield('html')
 <head>
@@ -109,16 +108,15 @@
                                             data-prop-feature="{{htmlspecialchars(json_encode($feature))}}"
                                             data-n-prop-votes={{$featureVotes}}
                                             data-prop-hasvoted={{$state}}
-                                            data-n-prop-id={{$featureId}}
+                                            data-prop-id="{{$featureId}}"
                                             data-n-prop-hierarchy="1"
                                         ></div>
-
                                         @if($feature->sub_features)
 
                                             @foreach($feature->sub_features as $subFeature)
                                             @php
                                                 $subFeatureVotes = (isset($voteData[$subFeature->title]["score"])) ? $voteData[$subFeature->title]["score"] : 0;
-                                                $subFeatureId = (isset($voteData[$subFeature->title]["id"])) ? $voteData[$subFeature->title]["id"] : 0;
+                                                $subFeatureId = (isset($voteData[$subFeature->title]["id"])) ? $voteData[$subFeature->title]["id"] : "";
                                                 $state = (isset($userVotes[$subFeatureId])) ? $userVotes[$subFeatureId] : "neutral";
                                             @endphp
                                             <div 
@@ -126,7 +124,7 @@
                                                 data-prop-feature="{{htmlspecialchars(json_encode($subFeature))}}"
                                                 data-n-prop-votes={{$subFeatureVotes}} 
                                                 data-prop-hasvoted={{$state}}
-                                                data-n-prop-id={{$subFeatureId}}
+                                                data-prop-id="{{$subFeatureId}}"
                                                 data-n-prop-hierarchy="2"
                                             ></div>
                                             @endforeach
@@ -163,13 +161,12 @@
             {{-- modal overlay for email subscription and pdf download --}}
             @include('partials.download-pdf')
         </main>
-
-        @if($pageContent->acf->survey->button_label !== "" && $pageContent->acf->survey->form_url !== "")
+        @if($pageContent->acf->survey->display_survey && $pageContent->acf->survey->button_label !== "" && $pageContent->acf->survey->form_url !== "")
             <div 
                 data-component="survey"
                 data-prop-label="{{$pageContent->acf->survey->button_label}}"
                 data-prop-url="{{$pageContent->acf->survey->form_url}}"
-                data-prop-auto-open="{{$pageContent->acf->survey->auto_open}}"
+                data-prop-auto-open="{{$pageContent->acf->survey->auto_open ? 'true' : 'false'}}"
                 data-prop-with-olark="{{Route::current()->parameters()['lang'] == 'en'}}"
             ></div>
         @endif

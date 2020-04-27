@@ -8,21 +8,26 @@ class Feature extends Component {
       super(props);
       this.state = {
         votes: this.props.votes, 
-        hasVoted: this.props.hasvoted, 
-
+        hasVoted: this.props.hasvoted,
       };
     }
 
     voteToDb(voteType) {
-      var featureTitle = this.props.feature.title;
-      var featureId = this.props.id;
+      var featureName = this.props.feature.title;
+      var featureId;
+      if(isNaN(this.props.id)){
+        featureId = "NaN";
+      }
+      else{
+        featureId = this.props.id;
+      }
       $.ajax({
         type: "post",
         url: '/api/vote/create',
         data: {
           "product": "webapps",
           "version": "31",
-          "feature": featureTitle,
+          "feature": featureName,
           "featureDesc": "cool thing it does",
           "voteType": voteType
         }
@@ -33,15 +38,19 @@ class Feature extends Component {
             url: '/api/vote/updateVoteState',
             data: {
               "featureId": featureId,
-              "voteElementState": voteType
+              "voteElementState": voteType,
+              "featureName": featureName
             },
             success: function (store) {
             },
-            error: function () {}
+            error: function (req, err) {
+              console.log('my message' + err);
+            }
           });
 
         },
-        error: function () {
+        error: function (req, err) {
+          console.log('my message' + err);
         }
       });
     }
@@ -53,14 +62,23 @@ class Feature extends Component {
           hasVoted: 'neutral'
         })
         this.voteToDb(3);
-      } else {
+      } 
+      else if (this.state.hasVoted === 'down') {
+
+        this.setState({
+          votes: this.props.votes + 2,
+          hasVoted: 'up'
+        })
+        this.voteToDb(1);
+        this.voteToDb(1);
+      } 
+      else {
         this.setState({
           votes: this.props.votes + 1,
           hasVoted: 'up'
         })
         this.voteToDb(1);
       }
-      
     }
 
     // handleNeutral() {
@@ -77,7 +95,17 @@ class Feature extends Component {
           hasVoted: 'neutral'
         })
         this.voteToDb(4)
-      } else {
+      } 
+      else if (this.state.hasVoted === 'up') {
+
+        this.setState({
+          votes: this.props.votes - 2,
+          hasVoted: 'down'
+        })
+        this.voteToDb(2);
+        this.voteToDb(2);
+      }
+      else {
         this.setState({
           votes: this.props.votes - 1,
           hasVoted: 'down'
@@ -96,7 +124,7 @@ class Feature extends Component {
           <div className={ "feature__header" + (feature.allow_voting ? " feature__header--voter" : " feature__header--no-voter")}>
             {feature.allow_voting && (
               <Voter 
-                id={this.props.id}
+                id="1"
                 votes={this.state.votes}
                 hasVoted={this.state.hasVoted}
                 upVote={() => this.handleUpVote()}
@@ -112,13 +140,8 @@ class Feature extends Component {
     }
 }
 
-Feature.defaultProps = {
-  hierarchy: 1
-}
-
 Feature.propTypes = {
   votes: PropTypes.number.isRequired,
-  hierarchy: PropTypes.oneOf([1, 2]).isRequired
 }
   
 export default Feature
