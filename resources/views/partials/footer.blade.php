@@ -63,7 +63,7 @@
                         CaseWare International Inc.<br />
                         1 Toronto St, Suite 1400<br />
                         Toronto, ON M5C 2V6 (Canada)<br />
-                        <a href="tel:14168679504">Tel: 416-867-9504</a><br />
+                        <a href="tel:14168679504">Tel: 416-867-9504</a>
                         <a href="tel:14168671906">Fax: 416-867-1906</a>
                     </div>
                 </div>
