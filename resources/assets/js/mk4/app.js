@@ -8,6 +8,7 @@ import Survey from './components/Survey'
 import SocialShare from './components/SocialShare'
 import QuickLinks from './components/QuickLinks'
 import EmbeddedVideo from './components/EmbeddedVideo'
+import Carousel from './components/Carousel'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -46,6 +47,10 @@ const containers = [
   {
     id: 'embedded-video',
     component: EmbeddedVideo
+  },
+  {
+    id: 'carousel',
+    component: Carousel
   }
 ];
 

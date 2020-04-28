@@ -43,7 +43,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    @if(isset($section->logo))<img src={{$section->logo->url}} alt={{$section->logo->alt}} />@endif
+                                    @if($section->logo)<img src="{{$section->logo->url}}" alt="{{$section->logo->alt}}" />@endif
                                     @if(isset($section->header))<h2>{{ $section->header }}</h2>@endif
                                     @if(isset($section->description))<div>{!! $section->description !!}</div>@endif
                                 </div>
@@ -51,9 +51,16 @@
                         </div>
                     @endif
 
+                    @if($section->acf_fc_layout == "carousel")
+                        <div
+                            data-component="carousel"
+                            data-prop-carousel="{{htmlspecialchars(json_encode($section->carousel))}}"
+                        ></div>
+                    @endif
+
                 @endforeach
 
-                <!-- <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?> -->
+                <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?>
             </div>
         </main>
 
