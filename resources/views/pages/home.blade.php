@@ -60,7 +60,7 @@
 
                 @endforeach
 
-                <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?>
+                <!-- <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?> -->
             </div>
         </main>
 
