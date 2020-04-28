@@ -14,6 +14,9 @@ class Feature extends Component {
 
     voteToDb(voteType) {
       var featureName = this.props.feature.title;
+      var featureVersion = this.props.version;
+      var featureProduct = this.props.product;
+      console.log(featureVersion); 
       var featureId;
       if(isNaN(this.props.id)){
         featureId = "NaN";
@@ -25,8 +28,8 @@ class Feature extends Component {
         type: "post",
         url: '/api/vote/create',
         data: {
-          "product": "webapps",
-          "version": "31",
+          "product": featureProduct,
+          "version": featureVersion,
           "feature": featureName,
           "featureDesc": "cool thing it does",
           "voteType": voteType
@@ -57,11 +60,14 @@ class Feature extends Component {
   
     handleUpVote() {
 
-      console.log("HandleUpVote()")
+      
+
+      console.log("current number:" + this.state.votes);
+      var currentScore = this.state.votes;
 
       if (this.state.hasVoted === 'up') {
         this.setState({
-          votes: this.props.votes - 1,
+          votes: currentScore - 1,
           hasVoted: 'neutral'
         })
         this.voteToDb(3);
@@ -69,19 +75,20 @@ class Feature extends Component {
       else if (this.state.hasVoted === 'down') {
 
         this.setState({
-          votes: this.props.votes + 2,
+          votes: currentScore + 2,
           hasVoted: 'up'
         })
-        // this.voteToDb(1);
+        this.voteToDb(1);
         this.voteToDb(1);
       } 
       else {
         this.setState({
-          votes: this.props.votes + 1,
+          votes: currentScore + 1,
           hasVoted: 'up'
         })
         this.voteToDb(1);
       }
+
     }
 
     // handleNeutral() {
@@ -93,9 +100,9 @@ class Feature extends Component {
 
     handleDownVote() {
 
-      console.log("HandleDownVote()")
+      var currentScore = this.state.votes;
 
-
+      console.log("current number:"+this.state.votes);
       if (this.state.hasVoted == 'down') {
         this.setState({
           votes: this.props.votes + 1,
@@ -104,21 +111,21 @@ class Feature extends Component {
         this.voteToDb(4)
       } 
       else if (this.state.hasVoted == 'up') {
-
         this.setState({
-          votes: this.props.votes - 2,
+          votes: currentScore - 2,
           hasVoted: 'down'
         })
-        // this.voteToDb(2);
+        this.voteToDb(2);
         this.voteToDb(2);
       }
       else {
         this.setState({
-          votes: this.props.votes - 1,
+          votes: currentScore - 1,
           hasVoted: 'down'
         })
         this.voteToDb(2);
       }
+
     }
   
     render() {

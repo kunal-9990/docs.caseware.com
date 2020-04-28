@@ -101,7 +101,7 @@
                                             $featureVotes = (isset($voteData[$feature->title]["score"])) ? $voteData[$feature->title]["score"] : 0;
                                             $featureId = (isset($voteData[$feature->title]["id"])) ? $voteData[$feature->title]["id"] : "";
                                             $state = (isset($userVotes[$featureId])) ? $userVotes[$featureId] : "neutral";
-
+                                            
                                         @endphp
                                         <div 
                                             data-component="feature" 
@@ -110,6 +110,8 @@
                                             data-prop-hasvoted={{$state}}
                                             data-prop-id="{{$featureId}}"
                                             data-n-prop-hierarchy="1"
+                                            data-prop-version={{$version}}
+                                            data-prop-product={{$product}}
                                         ></div>
                                         @if($feature->sub_features)
 
@@ -126,6 +128,8 @@
                                                 data-prop-hasvoted={{$state}}
                                                 data-prop-id="{{$subFeatureId}}"
                                                 data-n-prop-hierarchy="2"
+                                                data-prop-version={{$version}}
+                                                data-prop-product={{$product}}
                                             ></div>
                                             @endforeach
                                         @endif
