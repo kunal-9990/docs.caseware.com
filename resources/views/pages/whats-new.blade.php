@@ -128,6 +128,8 @@
                                                 data-prop-hasvoted={{$state}}
                                                 data-prop-id="{{$subFeatureId}}"
                                                 data-n-prop-hierarchy="2"
+                                                data-prop-version={{$version}}
+                                                data-prop-product={{$product}}
                                             ></div>
                                             @endforeach
                                         @endif
