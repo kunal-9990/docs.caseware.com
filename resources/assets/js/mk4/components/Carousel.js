@@ -17,7 +17,7 @@ const settings = {
 }
 
 const Slide = ({ image, title, url, i }) => 
-  <div  className="slide">
+  <div className="slide">
     <div style={{backgroundImage: 'url(' + image.url + ')', backgroundSize: 'cover'}} key={i}>
       <div className="slide__ribbon">
         <h2>{title}</h2>

@@ -58,6 +58,13 @@
                         ></div>
                     @endif
 
+                    @if($section->acf_fc_layout == "video_gallery")
+                        <div
+                            data-component="video-gallery"
+                            data-prop-videos="{{htmlspecialchars(json_encode($section->video_gallery))}}"
+                        ></div>
+                    @endif
+
                 @endforeach
 
                 <!-- <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?> -->

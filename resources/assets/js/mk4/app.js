@@ -9,6 +9,7 @@ import SocialShare from './components/SocialShare'
 import QuickLinks from './components/QuickLinks'
 import EmbeddedVideo from './components/EmbeddedVideo'
 import Carousel from './components/Carousel'
+import VideoGallery from './components/VideoGallery'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -51,6 +52,10 @@ const containers = [
   {
     id: 'carousel',
     component: Carousel
+  },
+  {
+    id: 'video-gallery',
+    component: VideoGallery
   }
 ];
 
