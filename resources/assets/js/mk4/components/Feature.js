@@ -14,8 +14,9 @@ class Feature extends Component {
 
     voteToDb(voteType) {
       var featureName = this.props.feature.title;
-      var featureVersion = this.props.feature.version;
-      var featureProduct = this.props.feature.product;
+      var featureVersion = this.props.version;
+      var featureProduct = this.props.product;
+      console.log(featureVersion); 
       var featureId;
       if(isNaN(this.props.id)){
         featureId = "NaN";
@@ -27,8 +28,8 @@ class Feature extends Component {
         type: "post",
         url: '/api/vote/create',
         data: {
-          "product": "webapps",
-          "version": "31",
+          "product": featureProduct,
+          "version": featureVersion,
           "feature": featureName,
           "featureDesc": "cool thing it does",
           "voteType": voteType
