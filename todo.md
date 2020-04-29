@@ -1,12 +1,15 @@
 
 # Translations 
 - social sharing
-- voter tooltips
+- voter hover text
 
 # Header
 - Removing product filter
 - lang issue (on home blade template)
 - create transparent header version for home page banners
+
+# Google Analytics
+- see social sharing
 
 # CSRF token
 - enable token check in kernel.php

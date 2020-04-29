@@ -23,11 +23,8 @@ const Voter = ({ id, votes, hasVoted, upVote, downVote, hierarchy }) => {
         <div 
           onClick={upVote} 
           className={'arrow arrow--up' + (hasVoted === 'up' ? ' arrow--voted' : '')}
-          title="I will use this feature"
         >
           <FontAwesomeIcon icon={faCaretUp} />
-
-          {/* <Arrow /> */}
         </div>
         <div className="total">
           { <span className="total__count">{ votes }</span> }
@@ -35,12 +32,11 @@ const Voter = ({ id, votes, hasVoted, upVote, downVote, hierarchy }) => {
         <div 
           onClick={downVote} 
           className={'arrow arrow--down' + (hasVoted === 'down' ? ' arrow--voted' : '')}
-          title="I will not use this feature"
         >
             <FontAwesomeIcon icon={faCaretDown} />
-
-          {/* <Arrow /> */}
         </div>
+        <div className="voter__hover">Find it useful?</div>
+
       </div>
   )
 }
