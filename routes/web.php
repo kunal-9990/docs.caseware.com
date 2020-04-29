@@ -28,6 +28,13 @@ Route::get('/api/vote/dumpVotes', 'VoteController@dumpVotes');
 // cloud index
 Route::get('/', 'PageController@home');
 
+// Product url - TODO - this is just temporary
+Route::get('/product/{product}', 'PageController@product')->name('product');
+
+
+
+
+
 // search
 Route::get('/search/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
 

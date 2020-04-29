@@ -11,6 +11,11 @@
 # Google Analytics
 - see social sharing
 
+# Routing
+- Whats New page directories
+- Product URL (product pages should use same template as home page)
+- Home page header lang ('/')
+
 # CSRF token
 - enable token check in kernel.php
 - ensure feature.js sendVoteToDb() is passing token

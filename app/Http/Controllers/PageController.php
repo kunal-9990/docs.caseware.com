@@ -26,10 +26,27 @@ class PageController extends Controller
         return view('pages.home', compact('pageContent', 'recent', 'exclusiveTo','title' ));
     }
 
+    function product($product){
+
+        // App::setLocale($lang);
+
+        $page = $this->cms->page('product-cloud-31');
+        $pageContent = $page['results'][0];
+
+        // // TODO - update
+        // if(startsWith(strtolower($product), "product")){
+        //     $page = $this->cms->page(removeFileExt(strtolower($product)));
+        //     $pageContent = $page['results'][0];
+        //     // dd($pageContent);
+        //     return view('pages.home', compact('pageContent', 'recent', 'exclusiveTo','title'));
+        // }
+
+        return view('pages.home', compact('pageContent', 'recent', 'exclusiveTo','title'));
+    }
+
     // search
     function search($year, $product, $version, $lang){
         return view('pages.search', compact('recent'));
-
     }
     
     // topic
