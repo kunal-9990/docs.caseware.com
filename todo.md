@@ -21,8 +21,7 @@
 - everything else
 
 # Social Sharing
-- should share "title" be hardcoded? same as page title? or coming from CMS?
-- add GA to track button clicks and onShareWindowClose
+- add GA events to buttonClick and windowClose functions
 
 # Newsletter signup
 - full development needed

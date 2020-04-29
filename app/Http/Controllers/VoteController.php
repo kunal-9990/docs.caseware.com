@@ -7,10 +7,15 @@ use App\Feature;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Log; 
 
 class VoteController extends Controller
 {
+
+    function dumpVotes() {
+        $votes = Vote::all();
+        dd($votes);
+    }
 
     function createVote (Request $request) {
 
@@ -56,7 +61,7 @@ class VoteController extends Controller
             $newfeat = Feature::create($featData);
 
             try {
-                $featId = Feature::getId($featName)[0]->feat_id;;
+                $featId = Feature::getId($featName)[0]->feat_id;
             } catch(Exception $e){
                 Log::error("upVote for undefined feature: ".$featName);
                 return;
@@ -77,6 +82,52 @@ class VoteController extends Controller
         } catch (Exception $e) {
             Log::error($e);
         }
+    }
+
+    function updateVoteState(Request $request) {
+        $featureId = $request->input('featureId');
+        $featureName = $request->input('featureName');
+        $voteElementState = $request->input('voteElementState');
+        Log::info("updateVoteState:".empty($featureId));
+        Log::info("updateVoteState:".$featureId.$featureName.$voteElementState);
+        if(empty($featureId)){
+            $featureId = Feature::getId($featureName)[0]->feat_id;
+            Log::info("got FeatureId:".$featureId);
+
+        }
+        
+        // $request->session()->push('user.Votes', [$featureId => $voteElementState]);
+        $userVotes = $request->session()->get('user.Votes');
+        if($voteElementState == 1) {
+            $userVotes[$featureId] = 'up';
+        }
+        elseif($voteElementState == 2) {
+            $userVotes[$featureId] = 'down';
+        }
+        else{
+            $userVotes[$featureId] = 'neutral';
+        }
+        $request->session()->put('user.Votes', $userVotes);
+
+        // if(array_key_exists($featureId, $userVotes)){
+        //     $userVotes[$featureId] = $voteElementState;
+        // }
+        // else{
+        // }
+
+        // //get session data containing all got votes states of each feature
+        // $userVotes = $request->session()->get('userVotes');
+        // //if it doesn't exist, create it with new entry
+        // if(!isset($userVotes)){
+        //     $newUserVotesArr = array($featureId => $voteElementState);
+        //     $request->session()->put('userVotes', $newUserVotesarr);
+        // }
+        // //otherwise, update/add entry
+        // else {
+        //     $uservotes[$featureId] = $voteElementState;
+        //     $request->session()->put('userVotes', $newUserVotesarr);
+
+        // }
     }
 
  

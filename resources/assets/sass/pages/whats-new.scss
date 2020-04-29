@@ -62,7 +62,7 @@
         }
 
         h3 {
-            margin-top: 8px;
+            margin-top: 1rem;
         }
 
         img {
@@ -125,7 +125,7 @@
             text-align: center;
 
             &__count {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
 
             &__text {
@@ -220,6 +220,7 @@
         
                     .arrow svg {
                         width: 2.8rem;
+                        max-height: 2.6rem;
                     }
                 }
         
@@ -228,6 +229,7 @@
         
                     .arrow svg {
                         width: 1.8rem;
+                        max-height: 1.7rem;
                     }
                 }
 

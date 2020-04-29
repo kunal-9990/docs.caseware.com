@@ -47,7 +47,9 @@
         "react-habitat": "^1.0.1",
         "react-reveal": "^1.2.2",
         "react-share": "^4.1.0",
+        "react-slick": "^0.25.2",
         "react-visibility-sensor": "^5.1.1",
-        "sass-mq": "^5.0.0"
+        "sass-mq": "^5.0.0",
+        "slick-carousel": "^1.8.1"
     }
 }

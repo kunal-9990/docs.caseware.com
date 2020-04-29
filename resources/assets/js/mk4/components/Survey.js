@@ -8,7 +8,10 @@ class Survey extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { isVisible: false };
+    this.state = { 
+      isVisible: false,
+      autoOpen: document.cookie.indexOf('survey-closed') === -1 ? this.props.autoOpen : false
+    };
     this.onChange = this.onChange.bind(this);
   }
 
@@ -17,8 +20,10 @@ class Survey extends Component {
   }
 
   toggleVisibility() {
+    document.cookie = 'survey-closed=true;path=/';
     this.setState(prevState => ({
-      isVisible: !prevState.isVisible
+      isVisible: !prevState.isVisible,
+      autoOpen: false
     }))
   }
 
@@ -36,7 +41,7 @@ class Survey extends Component {
 
         <VisibilitySensor 
           partialVisibility 
-          onChange={this.props.autoOpen ? this.onChange : ''}
+          onChange={this.state.autoOpen ? this.onChange : ''}
         >
           <div className="survey-wrapper">
             {/* <Slide right when={this.state.isVisible} className="hello"> */}

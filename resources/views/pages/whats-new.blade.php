@@ -1,4 +1,6 @@
-
+@php
+    // dd($userVotes);
+@endphp
 <!DOCTYPE html>
 @yield('html')
 <head>
@@ -56,8 +58,10 @@
                                     </a>
                                     </li></ul>
                                     @endforeach
-
-                                    <div data-component="social-share"></div>
+                                    <div 
+                                        data-component="social-share"
+                                        data-prop-message="{{ isset($pageContent->acf->social_message) ? $pageContent->acf->social_message : 'Check out this page from CaseWare!' }}"
+                                    ></div>
                                 </div>
                                 <div class="col-sm-8" style="padding: 0">
                                     @if($pageContent->acf->featured_video !== "")
@@ -93,27 +97,39 @@
                             <div class="docs__container">
                                 <div>
                                     @foreach($pageContent->acf->features as $feature)
-                                        @php
-                                            $featureVotes = (isset($voteData[$feature->title])) ? $voteData[$feature->title] : 0;
+                                    @php
+                                            $featureVotes = (isset($voteData[$feature->title]["score"])) ? $voteData[$feature->title]["score"] : 0;
+                                            $featureId = (isset($voteData[$feature->title]["id"])) ? $voteData[$feature->title]["id"] : "";
+                                            $state = (isset($userVotes[$featureId])) ? $userVotes[$featureId] : "neutral";
+                                            
                                         @endphp
                                         <div 
                                             data-component="feature" 
                                             data-prop-feature="{{htmlspecialchars(json_encode($feature))}}"
                                             data-n-prop-votes={{$featureVotes}}
+                                            data-prop-hasvoted={{$state}}
+                                            data-prop-id="{{$featureId}}"
                                             data-n-prop-hierarchy="1"
+                                            data-prop-version={{$version}}
+                                            data-prop-product={{$product}}
                                         ></div>
-
                                         @if($feature->sub_features)
 
                                             @foreach($feature->sub_features as $subFeature)
                                             @php
-                                                $subFeatureVotes = (isset($voteData[$subFeature->title])) ? $voteData[$subFeature->title] : 0;
+                                                $subFeatureVotes = (isset($voteData[$subFeature->title]["score"])) ? $voteData[$subFeature->title]["score"] : 0;
+                                                $subFeatureId = (isset($voteData[$subFeature->title]["id"])) ? $voteData[$subFeature->title]["id"] : "";
+                                                $state = (isset($userVotes[$subFeatureId])) ? $userVotes[$subFeatureId] : "neutral";
                                             @endphp
                                             <div 
                                                 data-component="feature" 
                                                 data-prop-feature="{{htmlspecialchars(json_encode($subFeature))}}"
                                                 data-n-prop-votes={{$subFeatureVotes}} 
+                                                data-prop-hasvoted={{$state}}
+                                                data-prop-id="{{$subFeatureId}}"
                                                 data-n-prop-hierarchy="2"
+                                                data-prop-version={{$version}}
+                                                data-prop-product={{$product}}
                                             ></div>
                                             @endforeach
                                         @endif
@@ -149,13 +165,12 @@
             {{-- modal overlay for email subscription and pdf download --}}
             @include('partials.download-pdf')
         </main>
-
-        @if($pageContent->acf->survey->button_label !== "" && $pageContent->acf->survey->form_url !== "")
+        @if($pageContent->acf->survey->display_survey && $pageContent->acf->survey->button_label !== "" && $pageContent->acf->survey->form_url !== "")
             <div 
                 data-component="survey"
                 data-prop-label="{{$pageContent->acf->survey->button_label}}"
                 data-prop-url="{{$pageContent->acf->survey->form_url}}"
-                data-prop-auto-open="{{$pageContent->acf->survey->auto_open}}"
+                data-prop-auto-open="{{$pageContent->acf->survey->auto_open ? 'true' : 'false'}}"
                 data-prop-with-olark="{{Route::current()->parameters()['lang'] == 'en'}}"
             ></div>
         @endif

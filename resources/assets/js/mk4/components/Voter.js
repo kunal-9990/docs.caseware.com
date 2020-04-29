@@ -30,7 +30,7 @@ const Voter = ({ id, votes, hasVoted, upVote, downVote, hierarchy }) => {
           {/* <Arrow /> */}
         </div>
         <div className="total">
-          { (votes > 0) ? <span className="total__count">{ votes }</span> : <span className="total__text">Vote</span> }
+          { <span className="total__count">{ votes }</span> }
         </div> 
         <div 
           onClick={downVote} 

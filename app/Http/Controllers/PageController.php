@@ -47,8 +47,9 @@ class PageController extends Controller
             $page = $this->cms->page(removeFileExt(strtolower($topic)));
             $pageContent = $page['results'][0];
             $voteData = getVoteData($product, $version);
+            $userVotes = session('user.Votes');
             // dd($pageContent);
-            return view('pages.whats-new', compact('pageContent', 'recent', 'exclusiveTo','title', 'voteData'));
+            return view('pages.whats-new', compact('pageContent', 'recent', 'exclusiveTo','title', 'voteData', 'userVotes', 'product', 'version'));
         }
 
 

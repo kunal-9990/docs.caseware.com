@@ -17,11 +17,13 @@ $current_version = env("CURRENT_VERSION");
 //allow unauthenticated users to cast a max of 10 votes per minute
 Route::middleware('throttle:10|60,1')->group(function () {
 
-        Route::post('/api/vote/create', 'VoteController@createVote');
         
 });
 
-Route::get('/api/vote/getData', 'voteController@getVoteData');
+Route::post('/api/vote/create', 'VoteController@createVote');
+Route::post('/api/vote/updateVoteState', 'VoteController@updateVoteState');
+Route::get('/api/vote/getData', 'VoteController@getVoteData');
+Route::get('/api/vote/dumpVotes', 'VoteController@dumpVotes');
 
 // cloud index
 Route::get('/', 'PageController@home');
