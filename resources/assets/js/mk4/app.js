@@ -10,6 +10,7 @@ import QuickLinks from './components/QuickLinks'
 import EmbeddedVideo from './components/EmbeddedVideo'
 import Carousel from './components/Carousel'
 import VideoGallery from './components/VideoGallery'
+import Downloads from './components/Downloads'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -56,6 +57,10 @@ const containers = [
   {
     id: 'video-gallery',
     component: VideoGallery
+  },
+  {
+    id: 'downloads',
+    component: Downloads
   }
 ];
 
