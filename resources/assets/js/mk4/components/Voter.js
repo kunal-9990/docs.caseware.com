@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
 const Arrow = () => (
   <svg enableBackground="new 0 0 121 105" version="1.1" viewBox="0 0 121 105" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +25,9 @@ const Voter = ({ id, votes, hasVoted, upVote, downVote, hierarchy }) => {
           className={'arrow arrow--up' + (hasVoted === 'up' ? ' arrow--voted' : '')}
           title="I will use this feature"
         >
-          <Arrow />
+          <FontAwesomeIcon icon={faCaretUp} />
+
+          {/* <Arrow /> */}
         </div>
         <div className="total">
           { (votes > 0) ? <span className="total__count">{ votes }</span> : <span className="total__text">Vote</span> }
@@ -33,7 +37,9 @@ const Voter = ({ id, votes, hasVoted, upVote, downVote, hierarchy }) => {
           className={'arrow arrow--down' + (hasVoted === 'down' ? ' arrow--voted' : '')}
           title="I will not use this feature"
         >
-          <Arrow />
+            <FontAwesomeIcon icon={faCaretDown} />
+
+          {/* <Arrow /> */}
         </div>
       </div>
   )

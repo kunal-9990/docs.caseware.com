@@ -86,27 +86,28 @@
         line-height: 1;
 
         .arrow {
+            font-size: 3.8rem;
             line-height: 0;
             cursor: pointer;
 
             svg {
                 width: 2rem;
-                height: auto;
+                // height: auto;
                 fill: $light-grey-2;
                 transition: all 0.1s;
             }
 
-            &--up.arrow--voted svg {
-                fill: #6EAB7E;
+            &.arrow--voted svg path {
+                fill: $caseware-blue;
             }
 
-            &--down svg {
-                transform: rotate(180deg);
-            }
+            // &--up.arrow--voted svg {
+            //     fill: #6EAB7E;
+            // }
 
-            &--down.arrow--voted svg {
-                fill: #D45454;
-            }
+            // &--down.arrow--voted svg {
+            //     fill: #D45454;
+            // }
 
             &:hover svg {
                 fill: #ccc;
@@ -212,10 +213,10 @@
 
             .voter {
                 flex-direction: column;
+                width: 2.8rem;
 
                 &--1 {
-                    margin: 0 2rem 0 0;
-                    width: 4.2rem;
+                    margin: 0 3.2rem 0 0;
         
                     .arrow svg {
                         width: 2.8rem;
@@ -223,16 +224,20 @@
                 }
         
                 &--2 {
-                    margin: 0 1.8rem;
-                    width: 2.8rem;
+                    margin: 0 1.6rem;
         
                     .arrow svg {
                         width: 1.8rem;
                     }
                 }
 
+                .arrow {
+                    font-size: 2.5rem;
+                }
+
                 .total {
                     padding: 0;
+                    height: 1rem;
                 }
             }
         }
