@@ -65,6 +65,35 @@
                         ></div>
                     @endif
 
+                    @if($section->acf_fc_layout == "links")
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 home__links">
+                                    @foreach($section->link_block as $block)
+                                        @if(isset($block->header))
+                                        <h2>{{$block->header}}</h2>
+                                        @endif
+                                        @foreach($block->links as $link)
+                                            <a href="{{$link->link_url}}" target="_blank">
+                                                <div>
+                                                    {{ $link->link_text }}
+                                                </div>
+                                            </a>
+                                        @endforeach
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+
+                    @if($section->acf_fc_layout == "downloads")
+                        <div
+                            data-component="downloads"
+                            data-props="{{htmlspecialchars(json_encode($section))}}"
+                        ></div>
+                    @endif
+
+
                 @endforeach
 
                 <!-- <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?> -->
