@@ -40,6 +40,8 @@ class Feature extends Component {
             type: "post",
             url: '/api/vote/updateVoteState',
             data: {
+              "product": featureProduct,
+              "version": featureVersion,
               "featureId": featureId,
               "voteElementState": voteType,
               "featureName": featureName
