@@ -40,7 +40,11 @@
 
         <div 
             data-component="banner"
-            data-props='{"background":"{{$pageContent->acf->title_background_image->url}}","product":"{{$pageContent->acf->product." ".$pageContent->acf->version}}", "strapline":"{{$pageContent->acf->strapline}}"}'
+            data-props='{
+                "background":"{{ !empty($pageContent->acf->title_background_image) ? $pageContent->acf->title_background_image->url : null }}",
+                "product":"{{$pageContent->acf->product." ".$pageContent->acf->version}}", 
+                "strapline":"{{$pageContent->acf->strapline}}"
+            }'
         ></div>
 
         <main id="main">

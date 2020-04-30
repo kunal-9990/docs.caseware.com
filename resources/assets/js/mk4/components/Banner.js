@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Banner = props => {
+
   const BannerStyle = {
-    backgroundImage: 'url(' + props.background + ')',
+    background: props.background ? 'url(' + props.background + ')' : '#0082AD',
     backgroundSize: 'cover'
   }
   
