@@ -110,8 +110,8 @@
                                             data-prop-hasvoted={{$state}}
                                             data-prop-id="{{$featureId}}"
                                             data-n-prop-hierarchy="1"
-                                            data-prop-version={{$pageContent->acf->version}}
-                                            data-prop-product={{$pageContent->acf->product}}
+                                            data-prop-version="{{htmlspecialchars(json_encode($pageContent->acf->version))}}"
+                                            data-prop-product="{{htmlspecialchars(json_encode($pageContent->acf->product))}}"
                                         ></div>
                                         @if($feature->sub_features)
 
@@ -128,9 +128,8 @@
                                                 data-prop-hasvoted={{$state}}
                                                 data-prop-id="{{$subFeatureId}}"
                                                 data-n-prop-hierarchy="2"
-                                                data-prop-version={{$pageContent->acf->version}}
-                                                data-prop-product={{$pageContent->acf->product}}
-                                            ></div>
+                                                data-prop-version="{{htmlspecialchars(json_encode($pageContent->acf->version))}}"
+                                                data-prop-product="{{htmlspecialchars(json_encode($pageContent->acf->product))}}"                                            ></div>
                                             @endforeach
                                         @endif
                                     @endforeach
