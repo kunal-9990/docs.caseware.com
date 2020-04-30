@@ -36,10 +36,68 @@
         ></div>
 
         <main id="main">
-            <div class="home">
-                <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?>
+            <div>
+                @foreach($pageContent->acf->modular_template as $section)
+                    
+                    @if($section->acf_fc_layout == "text_block")
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    @if($section->logo)<img src="{{$section->logo->url}}" alt="{{$section->logo->alt}}" />@endif
+                                    @if(isset($section->header))<h2>{{ $section->header }}</h2>@endif
+                                    @if(isset($section->description))<div>{!! $section->description !!}</div>@endif
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+
+                    @if($section->acf_fc_layout == "carousel")
+                        <div
+                            data-component="carousel"
+                            data-prop-carousel="{{htmlspecialchars(json_encode($section->carousel))}}"
+                        ></div>
+                    @endif
+
+                    @if($section->acf_fc_layout == "video_gallery")
+                        <div
+                            data-component="video-gallery"
+                            data-prop-videos="{{htmlspecialchars(json_encode($section->video_gallery))}}"
+                        ></div>
+                    @endif
+
+                    @if($section->acf_fc_layout == "links")
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 home__links">
+                                    @foreach($section->link_block as $block)
+                                        @if(isset($block->header))
+                                        <h2>{{$block->header}}</h2>
+                                        @endif
+                                        @foreach($block->links as $link)
+                                            <a href="{{$link->link_url}}" target="_blank">
+                                                <div>
+                                                    {{ $link->link_text }}
+                                                </div>
+                                            </a>
+                                        @endforeach
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+
+                    @if($section->acf_fc_layout == "downloads")
+                        <div
+                            data-component="downloads"
+                            data-props="{{htmlspecialchars(json_encode($section))}}"
+                        ></div>
+                    @endif
+
+
+                @endforeach
+
+                <!-- <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?> -->
             </div>
-           <h1> HOME PAGE </h1>
         </main>
 
         @include('partials.cookie-consent')
