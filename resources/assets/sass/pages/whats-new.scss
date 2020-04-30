@@ -42,6 +42,10 @@
         }
     }
 
+    .docs__container {
+        margin-top: 4.8rem;
+    }
+
     .feature {
         padding: 1.2rem 0;
 
@@ -71,7 +75,7 @@
 
         img {
             display: block;
-            max-width: 50%;
+            // max-width: 50%;
             height: auto;
         }
     }

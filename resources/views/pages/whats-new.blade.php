@@ -53,7 +53,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12">
+                            @if($pageContent->acf->featured_video !== "")
                                 <div class="col-sm-4 in-this-article">
+                            @else 
+                                <div class="col-sm-12 in-this-article">
+                            @endif
                                     <span>In this article</span>
                                     @foreach($pageContent->acf->features as $feature)
                                     <ul><li>
