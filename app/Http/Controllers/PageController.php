@@ -59,18 +59,18 @@ class PageController extends Controller
         //assume the cms permalink for all WN pages is: "whats-new-product-version"
         if(startsWith(strtolower($topic), "whats-new")){
             $page = $this->cms->page(removeFileExt(strtolower($topic)));
-            if(!$page["totalPages"]){
-                return response()->view('errors.404');
-            }
+            // if(!$page["totalPages"]){
+            //     return response()->view('errors.404');
+            // }
             $pageContent = $page['results'][0];
             $voteData = getVoteData($product, $version);
             $userVotes = session('user.Votes');
             // dd($userVotes);
 
             $topicVersion = substr($topic, strrpos($topic, '-') + 1);
-            if($topicVersion !== $version){
-                return response()->view('errors.404');
-            }
+            // if($topicVersion !== $version){
+            //     return response()->view('errors.404');
+            // }
 
             return view('pages.whats-new', compact('pageContent', 'recent', 'exclusiveTo','title', 'voteData', 'userVotes', 'product', 'version'));
         }

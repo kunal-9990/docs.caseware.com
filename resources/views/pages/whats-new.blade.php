@@ -1,5 +1,5 @@
 @php
-    // dd($userVotes);
+    // dd($pageContent->acf->product);
 @endphp
 <!DOCTYPE html>
 @yield('html')
@@ -110,8 +110,8 @@
                                             data-prop-hasvoted={{$state}}
                                             data-prop-id="{{$featureId}}"
                                             data-n-prop-hierarchy="1"
-                                            data-prop-version={{$version}}
-                                            data-prop-product={{$product}}
+                                            data-prop-version={{$pageContent->acf->version}}
+                                            data-prop-product={{$pageContent->acf->product}}
                                         ></div>
                                         @if($feature->sub_features)
 
@@ -128,8 +128,8 @@
                                                 data-prop-hasvoted={{$state}}
                                                 data-prop-id="{{$subFeatureId}}"
                                                 data-n-prop-hierarchy="2"
-                                                data-prop-version={{$version}}
-                                                data-prop-product={{$product}}
+                                                data-prop-version={{$pageContent->acf->version}}
+                                                data-prop-product={{$pageContent->acf->product}}
                                             ></div>
                                             @endforeach
                                         @endif
