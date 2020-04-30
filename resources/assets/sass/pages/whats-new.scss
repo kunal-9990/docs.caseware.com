@@ -1,5 +1,9 @@
 .whats-new {
 
+    * {
+        max-width: 100%;
+    }
+
     &__intro {
         position: relative;
         padding: 2.4rem 0;
