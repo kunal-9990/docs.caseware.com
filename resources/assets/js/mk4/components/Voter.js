@@ -35,7 +35,7 @@ const Voter = ({ id, votes, hasVoted, upVote, downVote, hierarchy }) => {
         >
             <FontAwesomeIcon icon={faCaretDown} />
         </div>
-        <div className="voter__hover">Find it useful?</div>
+        <div className="voter__hover"><div>Find it useful?</div></div>
 
       </div>
   )
