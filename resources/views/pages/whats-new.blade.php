@@ -1,5 +1,6 @@
 @php
-    // dd($pageContent->acf->product);
+    // dd($userVotes);
+    // dd($voteData);
 @endphp
 <!DOCTYPE html>
 @yield('html')
@@ -105,7 +106,8 @@
                                             $featureVotes = (isset($voteData[$feature->title]["score"])) ? $voteData[$feature->title]["score"] : 0;
                                             $featureId = (isset($voteData[$feature->title]["id"])) ? $voteData[$feature->title]["id"] : "";
                                             $state = (isset($userVotes[$featureId])) ? $userVotes[$featureId] : "neutral";
-                                            
+                                            echo "state:".$state;
+                                            echo "featureid:".$featureId;
                                         @endphp
                                         <div 
                                             data-component="feature" 
@@ -114,8 +116,8 @@
                                             data-prop-hasvoted={{$state}}
                                             data-prop-id="{{$featureId}}"
                                             data-n-prop-hierarchy="1"
-                                            data-prop-version="{{htmlspecialchars(json_encode($pageContent->acf->version))}}"
-                                            data-prop-product="{{htmlspecialchars(json_encode($pageContent->acf->product))}}"
+                                            data-prop-version="{{$pageContent->acf->version}}"
+                                            data-prop-product="{{$pageContent->acf->product}}"
                                         ></div>
                                         @if($feature->sub_features)
 
@@ -132,8 +134,8 @@
                                                 data-prop-hasvoted={{$state}}
                                                 data-prop-id="{{$subFeatureId}}"
                                                 data-n-prop-hierarchy="2"
-                                                data-prop-version="{{htmlspecialchars(json_encode($pageContent->acf->version))}}"
-                                                data-prop-product="{{htmlspecialchars(json_encode($pageContent->acf->product))}}"                                            ></div>
+                                                data-prop-version="{{$pageContent->acf->version}}"
+                                                data-prop-product="{{$pageContent->acf->product}}"                                            ></div>
                                             @endforeach
                                         @endif
                                     @endforeach

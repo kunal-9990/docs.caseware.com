@@ -63,7 +63,7 @@ class PageController extends Controller
             //     return response()->view('errors.404');
             // }
             $pageContent = $page['results'][0];
-            $voteData = getVoteData($product, $version);
+            $voteData = getVoteData($pageContent->acf->product, $pageContent->acf->version);
             $userVotes = session('user.Votes');
             // dd($userVotes);
 
