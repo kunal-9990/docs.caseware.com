@@ -40,6 +40,9 @@
 
     .docs__container {
         margin-top: 4.8rem;
+        & > div {
+            max-width: 100%;
+        }
     }
 
     .feature {
