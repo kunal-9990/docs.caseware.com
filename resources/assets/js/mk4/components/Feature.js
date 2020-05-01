@@ -115,7 +115,7 @@ class Feature extends Component {
       console.log("current number:"+this.state.votes);
       if (this.state.hasVoted == 'down') {
         this.setState({
-          votes: this.props.votes + 1,
+          votes: currentScore + 1,
           hasVoted: 'neutral'
         })
         this.voteToDb(4)
