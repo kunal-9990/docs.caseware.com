@@ -1,9 +1,5 @@
 .whats-new {
 
-    * {
-        max-width: 100%;
-    }
-
     &__intro {
         position: relative;
         padding: 2.4rem 0;
@@ -44,6 +40,9 @@
 
     .docs__container {
         margin-top: 4.8rem;
+        & > div {
+            max-width: 100%;
+        }
     }
 
     .feature {
@@ -185,6 +184,14 @@
                         padding: 0;
                         pointer-events: all;
                     }
+                }
+            }
+
+            .video-middle {
+                padding: 0;
+
+                .row {
+                    margin: 0;
                 }
             }
         }
