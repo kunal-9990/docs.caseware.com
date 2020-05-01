@@ -1,7 +1,15 @@
 
 import React, { Component } from 'react';
+import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 import PropTypes from 'prop-types';
 import Voter from './Voter'
+
+const lightboxOptions = {
+  overlayColor: 'rgba(255, 255, 255, 0.85)',
+  buttonsBackgroundColor: 'rgba(255, 255, 255, 0.85)',
+  buttonsIconColor: "#323232",
+  showThumbnails: false
+};
 
 class Feature extends Component {
     constructor(props) {
@@ -150,7 +158,12 @@ class Feature extends Component {
             )}
             { this.props.hierarchy === 1 ? (<h2>{ feature.title }</h2>) : (<h3>{ feature.title }</h3>)}
           </div>
-          <div className="feature__content" dangerouslySetInnerHTML={{__html: feature.description }} />
+
+          <SimpleReactLightbox>
+            <SRLWrapper options={lightboxOptions}>
+              <div className="feature__content" dangerouslySetInnerHTML={{__html: feature.description }} />
+            </SRLWrapper>
+          </SimpleReactLightbox>    
         </div>
       );
     }
