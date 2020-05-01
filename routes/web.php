@@ -15,7 +15,7 @@
 $current_version = env("CURRENT_VERSION");
 
 //allow unauthenticated users to cast a max of 10 votes per minute
-Route::middleware('throttle:10|60,1')->group(function () {        
+Route::middleware('throttle:30|180,1')->group(function () {        
         Route::post('/api/vote/create', 'VoteController@createVote');
         Route::post('/api/vote/updateVoteState', 'VoteController@updateVoteState');
 });
