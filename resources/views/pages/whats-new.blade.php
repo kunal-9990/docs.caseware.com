@@ -50,7 +50,7 @@
         <main id="main">
             <div class="whats-new">
                 <div class="whats-new__intro">
-                    <div class="container">
+                    <div class="container container--mk4">
                         <div class="row">
                             <div class="col-sm-12">
                             @if($pageContent->acf->featured_video !== "")
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container">
+                    <div class="container video-middle">
                         <div class="row">
                             <div class="col-sm-8">
                                 @if($pageContent->acf->featured_video !== "")
@@ -99,7 +99,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container container--mk4">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="docs__container">

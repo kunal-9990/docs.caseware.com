@@ -9,7 +9,7 @@ const Banner = props => {
   
   return (
     <section className="whats-new__banner" style={BannerStyle}>
-      <div className="container">
+      <div className="container container--mk4">
         <div className="row">
           <div className="col-sm-12">
             <div className="banner__wrapper">
