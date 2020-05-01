@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import Voter from './Voter'
 
 const lightboxOptions = {
+  overlayColor: 'rgba(255, 255, 255, 0.85)',
+  buttonsBackgroundColor: 'rgba(255, 255, 255, 0.85)',
+  buttonsIconColor: "#323232",
   showThumbnails: false
 };
 
