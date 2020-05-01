@@ -1,4 +1,10 @@
 
+
+# Important - WN page 
+- wp set right column for youtube link OR thumbnail image
+
+
+
 # Translations 
 - social sharing
 - voter hover text
