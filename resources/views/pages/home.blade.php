@@ -59,16 +59,16 @@
                             <div class="row">
                                 <div class="col-sm-12 home__links">
                                     @foreach($section->link_block as $block)
-                                        @if(isset($block->header))
-                                            <h2>{{$block->header}}</h2>
-                                        @endif
-                                        @foreach($block->links as $link)
-                                            <a href="{{$link->link_url}}" target="_blank">
-                                                <div>
+                                        <div class="links__block">
+                                            @if(isset($block->header))
+                                                <h2>{{$block->header}}</h2>
+                                            @endif
+                                            @foreach($block->links as $link)
+                                                <a href="{{$link->link_url}}" target="_blank">
                                                     {{ $link->link_text }}
-                                                </div>
-                                            </a>
-                                        @endforeach
+                                                </a>
+                                            @endforeach
+                                        </div>
                                     @endforeach
                                 </div>
                             </div>

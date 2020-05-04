@@ -170,14 +170,19 @@
             }
         }
 
+        .slide--mobile {
+            display: block;
+        }
+
     }
 
-    &__links {
-        .quick-links {
+    &__downloads {
+
+        .wrapper {
             margin-top: 2.4rem;
         }
         
-        .quick-link {
+        .downloads {
             position: relative;
             display: flex;
             flex-direction: column;
@@ -255,7 +260,38 @@
                     align-items: center;
                 }
             }
-        
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+
+        .links__block {
+            flex: 1;
+
+            h2 {
+                margin-bottom: 2.4rem;
+            }
+
+            a {
+                display: block;
+                padding: 3px 0;
+
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    position: relative;
+                    vertical-align: middle;
+                    top: 0;
+                    left: 0.6rem;
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    border-style: solid;
+                    border-width: 2px 2px 0 0;
+                    transform: rotate(45deg);
+                }
+            }
         }
     }
 }
@@ -274,8 +310,8 @@
             }
         }
 
-        &__links {
-            .quick-link {
+        &__downloads {
+            .downloads {
                 flex-direction: row;
     
                 & > div:first-child {
@@ -300,6 +336,27 @@
 
                 h3.mobile {
                     display: none;
+                }
+            }
+        }
+
+        &__video {
+            .slide--mobile {
+                display: none;
+            }
+        }
+
+        &__links {
+            flex-direction: row;
+
+            .links__block {
+                margin: 0 1.2rem;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
                 }
             }
         }
