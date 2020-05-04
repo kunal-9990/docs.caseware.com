@@ -6,12 +6,12 @@ const Downloads = props => {
 console.log(props)
   let quickLinks = props.quick_link.map((link, i) => {
     return (
-      <div key={i} className="quick-link">
+      <div key={i} className="downloads">
           <div className="icon icon--desktop">
               <FontAwesomeIcon icon={faFileDownload} />
               {link.version && (<h3 className="grey">{link.version}</h3>)}
           </div>
-          <div className="quick-link__content">
+          <div className="downloads__content">
             <div>
               <div className="icon icon--mobile">
                 <FontAwesomeIcon icon={faFileDownload} />
@@ -34,13 +34,13 @@ console.log(props)
   })
 
   return(
-    <section className="home__links">
+    <section className="home__downloads">
       <div className="container container--mk4">
         <div className="row">
           <div className="col-sm-12">
             { props.header && (<h2>{ props.header }</h2>) }
             { props.description && (<p>{ props.description }</p>) }
-            <div className="quick-links">{ quickLinks }</div>
+            <div className="wrapper">{ quickLinks }</div>
           </div>
         </div>
       </div>
