@@ -20,6 +20,7 @@
         flex-direction: column;
         flex: 0 0 50%;
         margin-top: 2.4rem;
+        padding: 0 0.6rem;
         // flex: 1;
 
         &--sm-full {
@@ -27,6 +28,13 @@
             flex-direction: row;
             justify-content: center;
             padding: 1.2rem 0;
+        }
+
+        &.contact {
+            min-width: 22rem;
+            & > div {
+                font-weight: 300;
+            }
         }
     }
 
@@ -36,6 +44,7 @@
     
     &__social-media {
         justify-content: flex-end;
+        margin: 0 !important;
 
         a {
             color: $white;
@@ -51,6 +60,7 @@
 
     &__links {
         align-items: flex-start !important;
+        padding-bottom: 2.4rem;
 
         span {
             font-size: 2rem;
@@ -59,7 +69,7 @@
     }
 
     p {
-        margin: 15px 0 15px 0;
+        margin: 0;
         font-size: 0.875em;
         line-height: 1;
 
@@ -71,6 +81,11 @@
     a {
         display: block;
         color: $white;
+        font-weight: 300;
+
+        span {
+            font-weight: normal;
+        }
     }
 
     .footer__copyright {
@@ -93,11 +108,12 @@
     }
 }
 
-@include mq($from: md) {
+@include mq($from: sm) {
     .footer {
+        padding-top: 2.4rem;
+        
         .row {
             flex-wrap: nowrap;
-            padding: 2.4rem 0;
         }
     
         .col {
