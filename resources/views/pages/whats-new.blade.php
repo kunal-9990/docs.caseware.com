@@ -54,7 +54,7 @@
                     <div class="container container--mk4">
                         <div class="row">
                             <div class="col-sm-12">
-                            @if($pageContent->acf->featured_video !== "")
+                            @if($pageContent->acf->featured_video !== "" || !empty($pageContent->acf->featured_video_thumbnail))
                                 <div class="col-sm-4 in-this-article">
                             @else 
                                 <div class="col-sm-12 in-this-article">
@@ -73,13 +73,13 @@
                                     ></div>
                                 </div>
                                 <div class="col-sm-8" style="padding: 0">
-                                    @if($pageContent->acf->featured_video !== "")
-                                    <div 
-                                        data-component="embedded-video"
-                                        data-prop-thumbnail="{{ ($pageContent->acf->featured_video_thumbnail) ? ($pageContent->acf->featured_video_thumbnail->url) : ''}}"
-                                        data-prop-src="{{$pageContent->acf->featured_video}}"
-                                        data-props='{"disableOnResponsiveSize": ["md", "lg"]}'
-                                    ></div>
+                                    @if($pageContent->acf->featured_video !== "" || !empty($pageContent->acf->featured_video_thumbnail))
+                                        <div 
+                                            data-component="embedded-video"
+                                            data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? $pageContent->acf->featured_video_thumbnail->url : '' }}"
+                                            data-prop-video-src="{{ $pageContent->acf->featured_video !== '' ? $pageContent->acf->featured_video : null}}"
+                                            data-props='{"disableOnResponsiveSize": ["md", "lg"]}'
+                                        ></div>
                                     @endif
                                 </div>
                             </div>
@@ -88,13 +88,13 @@
                     <div class="container video-middle">
                         <div class="row">
                             <div class="col-sm-8">
-                                @if($pageContent->acf->featured_video !== "")
-                                <div 
-                                    data-component="embedded-video"
-                                    data-prop-thumbnail="{{ ($pageContent->acf->featured_video_thumbnail) ? ($pageContent->acf->featured_video_thumbnail->url) : ''}}"
-                                    data-prop-src="{{$pageContent->acf->featured_video}}"
-                                    data-props='{"disableOnResponsiveSize": ["xs", "sm", "lg-x"]}'
-                                ></div>
+                                @if($pageContent->acf->featured_video !== "" || !empty($pageContent->acf->featured_video_thumbnail))
+                                    <div 
+                                        data-component="embedded-video"
+                                        data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? $pageContent->acf->featured_video_thumbnail->url : '' }}"
+                                        data-prop-video-src="{{ $pageContent->acf->featured_video !== '' ? $pageContent->acf->featured_video : null}}"
+                                        data-props='{"disableOnResponsiveSize": ["xs", "sm", "lg-x"]}'
+                                    ></div>
                                 @endif
                             </div>
                         </div>

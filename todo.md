@@ -1,9 +1,6 @@
 
-
-# Important - WN page 
-- wp set right column for youtube link OR thumbnail image
-
-
+# General
+- get rid of NodeName errors (from lightbox library)
 
 # Translations 
 - social sharing

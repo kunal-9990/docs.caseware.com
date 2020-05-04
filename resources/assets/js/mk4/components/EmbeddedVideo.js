@@ -9,33 +9,36 @@ const mq = {
 }
 
 const IframeBlock = ({ 
-  src, 
+  videoSrc, 
   thumbnail,
   thumbnailClicked, 
   onClick
 }) => {
 
-  if (thumbnail != '') {
+  if (thumbnail) {
     return (
       <React.Fragment>
         <div 
-          onClick={onClick} 
+          onClick={videoSrc ? onClick : null} 
           style={{ display: thumbnailClicked ? 'none' : 'block'}}
         >
-          <img src="/img/play.png" className="embedded-video__play-btn"/>
-          <img src={thumbnail} />
+          {videoSrc && (<img src="/img/play.png" className="embedded-video__play-btn" />)}
+          <img src={thumbnail} className={videoSrc ? '' : ' embedded-video__no-cursor'} />
         </div>
-        {thumbnailClicked && (<Iframe src={src} autoplay="true"/>)}
+        {(thumbnailClicked && videoSrc) && (<Iframe videoSrc={videoSrc} autoplay="true"/>)}
       </React.Fragment>
     )
-  } else return (<Iframe src={src} autoplay="false" />)
+  } 
+  else return (<Iframe videoSrc={videoSrc} autoplay="false" />)
 }
 
-const Iframe = ({ src, autoplay }) => {
+const Iframe = ({ videoSrc, autoplay }) => {
 
-  let iframeSrc = src;
+  let iframeSrc = videoSrc;
   if (autoplay) {
-    iframeSrc = src + '?autoplay=1';
+    iframeSrc = videoSrc + '?autoplay=1';
+  } else {
+    iframeSrc = videoSrc;
   }
 
   return(
@@ -92,10 +95,10 @@ class EmbeddedVideo extends Component {
 
   render () {
     return (
-      <div className="embedded-video iframe-video-wrapper"> 
+      <div className="embedded-video iframe-video-wrapper">         
         {!this.props.disableOnResponsiveSize.includes(this.state.mqSize) && (
           <IframeBlock
-            src={this.props.src}
+            videoSrc={this.props.videoSrc}
             thumbnail={this.props.thumbnail}
             thumbnailClicked={this.state.thumbnailClicked}
             onClick={() => this.onClick()} 
