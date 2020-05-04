@@ -7,12 +7,17 @@ console.log(props)
   let quickLinks = props.quick_link.map((link, i) => {
     return (
       <div key={i} className="quick-link">
-          <div className="icon icon--desktop"><FontAwesomeIcon icon={faFileDownload} /></div>
+          <div className="icon icon--desktop">
+              <FontAwesomeIcon icon={faFileDownload} />
+              {link.version && (<h3 className="grey">{link.version}</h3>)}
+          </div>
           <div className="quick-link__content">
             <div>
-              <div className="icon icon--mobile"><FontAwesomeIcon icon={faFileDownload} /></div>
-              <h3>{link.title}</h3>
-              {/* {link.version && (<span>{link.version}</span>)} */}
+              <div className="icon icon--mobile">
+                <FontAwesomeIcon icon={faFileDownload} />
+              </div>
+              <h3 className="title">{link.title}</h3>
+              {link.version && (<h3 className="grey mobile">{link.version}</h3>)}
             </div>
             {link.description && (<p>{link.description} </p>)}
           </div>
