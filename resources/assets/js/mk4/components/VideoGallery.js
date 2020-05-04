@@ -3,8 +3,6 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-
-
 const Slide = ({ url, i }) => 
   <div className="slide iframe-video-wrapper" key={i}>
         <iframe  
@@ -47,16 +45,14 @@ const VideoGallery = ({ videos }) => {
   ))
 
   return (
-    <div className="container home__video">
+    <div className="container container--mk4 home__video">
       <div className="row">
         <div className="col-sm-12">
-          {/* <div className="slide slide--mobile">  
+          <div className="slide slide--mobile">  
             <Slide
-              image={carousel[0].image}
-              title={carousel[0].title}
-              url={carousel[0].url}
+              url={videos[0].url}
             />
-          </div> */}
+          </div>
           <Slider {...settings}>
             {desktopSlider}
           </Slider>
