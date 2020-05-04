@@ -20,7 +20,7 @@ const HomeBanner = ({ banner }) => {
 
   return (
     <section className="home-banner" style={BannerStyle}>
-      <div className="container">
+      <div className="container container--mk4">
         <div className="row">
           <div className="col-sm-12">
             <div className="home-banner__wrapper">

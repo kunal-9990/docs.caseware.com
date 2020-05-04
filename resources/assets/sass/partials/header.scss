@@ -10,6 +10,13 @@ header.header {
         display: block;
     }
 
+    &--ghost {
+        position: absolute;
+        width: 100%;
+        background: none;
+        border-bottom: none;
+    }
+
     .header__container {
         display: flex;
         align-items: center;

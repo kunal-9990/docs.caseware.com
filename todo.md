@@ -7,6 +7,7 @@
 - voter hover text
 
 # Header
+- see header-ghost.blade.php
 - Removing product filter
 - lang issue (on home blade template)
 - create transparent header version for home page banners
