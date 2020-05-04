@@ -35,7 +35,7 @@ console.log(props)
 
   return(
     <section className="home__links">
-      <div className="container">
+      <div className="container container--mk4">
         <div className="row">
           <div className="col-sm-12">
             { props.header && (<h2>{ props.header }</h2>) }
