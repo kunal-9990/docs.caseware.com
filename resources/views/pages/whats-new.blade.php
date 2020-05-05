@@ -40,7 +40,7 @@
         @endif
 
         <div 
-            data-component="banner"
+            data-component="whats-new-banner"
             data-props='{
                 "background":"{{ !empty($pageContent->acf->title_background_image) ? $pageContent->acf->title_background_image->url : null }}",
                 "product":"{{$pageContent->acf->product." ".$pageContent->acf->version}}", 
