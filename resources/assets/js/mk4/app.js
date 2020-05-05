@@ -1,13 +1,13 @@
 import ReactHabitat from 'react-habitat'
 
-import Banner from './components/Banner'
-import HomeBanner from './components/HomeBanner'
+import WNBanner from './components/whats-new/WNBanner'
+import Feature from './components/whats-new/Feature'
+import EmbeddedVideo from './components/whats-new/EmbeddedVideo'
+import LandingBanner from './components/landing/LandingBanner'
 import Announcement from './components/Announcement'
-import Feature from './components/Feature'
 import Survey from './components/Survey'
 import SocialShare from './components/SocialShare'
 import QuickLinks from './components/QuickLinks'
-import EmbeddedVideo from './components/EmbeddedVideo'
 import Carousel from './components/Carousel'
 import VideoGallery from './components/VideoGallery'
 import Downloads from './components/Downloads'
@@ -19,12 +19,12 @@ import 'react-app-polyfill/stable'
 
 const containers = [
   {
-    id: 'banner',
-    component: Banner
+    id: 'whats-new-banner',
+    component: WNBanner
   },
   {
-    id: 'home-banner',
-    component: HomeBanner
+    id: 'landing-banner',
+    component: LandingBanner
   },
   {
     id: 'announcement',

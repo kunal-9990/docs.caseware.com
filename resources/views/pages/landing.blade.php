@@ -21,7 +21,7 @@
         @include('partials.header-ghost')
         
         <div
-            data-component="home-banner" 
+            data-component="landing-banner" 
             data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
         ></div>
 
