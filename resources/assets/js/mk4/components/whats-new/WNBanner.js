@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Banner = props => {
+const WNBanner = props => {
 
   const BannerStyle = {
     background: props.background ? 'url(' + props.background + ')' : '#0082AD',
@@ -23,4 +23,4 @@ const Banner = props => {
   )
 }
 
-export default Banner
+export default WNBanner
