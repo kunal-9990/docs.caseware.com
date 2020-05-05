@@ -20,7 +20,7 @@ class Feature extends Component {
       };
     }
 
-    voteToDb(voteType) {
+    voteToDb(voteType, secondVote) {
       var featureName = this.props.feature.title;
       var featureVersion = this.props.version;
       var featureProduct = this.props.product;
@@ -35,6 +35,9 @@ class Feature extends Component {
       $.ajax({
         type: "post",
         url: '/api/vote/create',
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
         data: {
           "product": featureProduct,
           "version": featureVersion,
@@ -47,6 +50,9 @@ class Feature extends Component {
           $.ajax({
             type: "post",
             url: '/api/vote/updateVoteState',
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
             data: {
               "product": featureProduct,
               "version": featureVersion,
@@ -60,7 +66,9 @@ class Feature extends Component {
               console.log('my message' + err);
             }
           });
-
+          if(secondVote){
+            voteToDb(secondVote)
+          }
         },
         error: function (req, err) {
           console.log('my message' + err);
@@ -125,7 +133,7 @@ class Feature extends Component {
           votes: currentScore - 2,
           hasVoted: 'down'
         })
-        this.voteToDb(2);
+        this.voteToDb(3,2);
         this.voteToDb(2);
       }
       else {
