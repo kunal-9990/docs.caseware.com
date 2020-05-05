@@ -14,7 +14,7 @@ const Slide = ({ url, i }) =>
   </div>
 
 
-const VideoGallery = ({ videos }) => {
+const VideoGallery = ({ videos, cta, label, link }) => {
 
   const settings = {
     customPaging: function(i) {
@@ -45,19 +45,16 @@ const VideoGallery = ({ videos }) => {
   ))
 
   return (
-    <div className="container container--mk4 home__video">
-      <div className="row">
-        <div className="col-sm-12">
-          <div className="slide slide--mobile">  
-            <Slide
-              url={videos[0].url}
-            />
-          </div>
-          <Slider {...settings}>
-            {desktopSlider}
-          </Slider>
-        </div>
+    <div className="video-gallery">
+      <div className="slide slide--mobile">  
+        <Slide
+          url={videos[0].url}
+        />
+        { cta && (<a href={ link } className="mk4btn" target="_blank">{ label }</a> )}
       </div>
+      <Slider {...settings}>
+        {desktopSlider}
+      </Slider>
     </div>
   )
 }

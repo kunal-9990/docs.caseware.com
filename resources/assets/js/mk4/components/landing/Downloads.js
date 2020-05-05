@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 
 const Downloads = props => {
-console.log(props)
   let quickLinks = props.quick_link.map((link, i) => {
     return (
       <div key={i} className="downloads">
@@ -27,24 +26,18 @@ console.log(props)
             target="_blank" 
             download={link.file_upload.title}
           >
-            <div>{link.button_label}</div>
+            {link.button_label}
           </a>
       </div>
     )
   })
 
   return(
-    <section className="home__downloads">
-      <div className="container container--mk4">
-        <div className="row">
-          <div className="col-sm-12">
-            { props.header && (<h2>{ props.header }</h2>) }
-            { props.description && (<p>{ props.description }</p>) }
-            <div className="wrapper">{ quickLinks }</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div className="landing-downloads">
+      { props.header && (<h2>{ props.header }</h2>) }
+      { props.description && (<p>{ props.description }</p>) }
+      <div className="landing-downloads__wrapper">{ quickLinks }</div>
+    </div>
   )
 }
 

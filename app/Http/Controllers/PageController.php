@@ -23,7 +23,7 @@ class PageController extends Controller
         $page = $this->cms->page('home');
         $pageContent = $page['results'][0];
 
-        return view('pages.home', compact('pageContent', 'recent', 'exclusiveTo','title' ));
+        return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title' ));
     }
 
     function product($product){
@@ -38,10 +38,10 @@ class PageController extends Controller
         //     $page = $this->cms->page(removeFileExt(strtolower($product)));
         //     $pageContent = $page['results'][0];
         //     // dd($pageContent);
-        //     return view('pages.home', compact('pageContent', 'recent', 'exclusiveTo','title'));
+        //     return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title'));
         // }
 
-        return view('pages.home', compact('pageContent', 'recent', 'exclusiveTo','title'));
+        return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title'));
     }
 
     // search
