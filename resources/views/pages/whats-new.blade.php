@@ -55,9 +55,9 @@
                         <div class="row">
                             <div class="col-sm-12">
                             @if($pageContent->acf->featured_video !== "" || !empty($pageContent->acf->featured_video_thumbnail))
-                                <div class="col-sm-4 in-this-article">
+                                <div class="col-sm-4 ita">
                             @else 
-                                <div class="col-sm-12 in-this-article">
+                                <div class="col-sm-12 ita">
                             @endif
                                     <span>In this article</span>
                                     @foreach($pageContent->acf->features as $feature)

@@ -39,21 +39,17 @@ const Carousel = ({ carousel }) => {
   ))
 
   return (
-    <div className="container home__carousel">
-      <div className="row">
-        <div className="col-sm-12">
-          <div className="slide slide--mobile">  
-            <Slide
-              image={carousel[0].image}
-              title={carousel[0].title}
-              url={carousel[0].url}
-            />
-          </div>
-          <Slider {...settings}>
-            {desktopSlider}
-          </Slider>
-        </div>
+    <div className="carousel">
+      <div className="slide slide--mobile">  
+        <Slide
+          image={carousel[0].image}
+          title={carousel[0].title}
+          url={carousel[0].url}
+        />
       </div>
+      <Slider {...settings}>
+        {desktopSlider}
+      </Slider>
     </div>
   )
 }

@@ -16,20 +16,21 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
 </head>
 <body>
-    <div class="home">
+    <div class="landing">
 
         @include('partials.header-ghost')
         
+        <div class="landing__banner">
         <div
             data-component="landing-banner" 
             data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
         ></div>
-
+</div>
         <main id="main">
             @foreach($pageContent->acf->modular_template as $section)
                  
                     @if($section->acf_fc_layout == "text_block")
-                        <div class="container ">
+                        <div class="container container--mk4 landing__block">
                             <div class="row">
                                 <div class="col-sm-12">
                                     @if($section->logo)<img src="{{$section->logo->url}}" alt="{{$section->logo->alt}}" />@endif
@@ -41,23 +42,41 @@
                     @endif
 
                     @if($section->acf_fc_layout == "carousel")
-                        <div
-                            data-component="carousel"
-                            data-prop-carousel="{{htmlspecialchars(json_encode($section->carousel))}}"
-                        ></div>
+                        <div class="container container--mk4 landing__carousel">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div
+                                        data-component="carousel"
+                                        data-prop-carousel="{{htmlspecialchars(json_encode($section->carousel))}}"
+                                    ></div>
+                                </div>  
+                            </div>
+                        </div>
                     @endif
 
                     @if($section->acf_fc_layout == "video_gallery")
-                        <div
-                            data-component="video-gallery"
-                            data-prop-videos="{{htmlspecialchars(json_encode($section->video_gallery))}}"
-                        ></div>
+                        <div class="container container--mk4 landing__video-gallery">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div
+                                        data-component="video-gallery"
+                                        data-prop-videos="{{htmlspecialchars(json_encode($section->video_gallery))}}"
+                                        data-props='{
+                                            "cta":"{{$section->yt_cta}}",
+                                            "label":"{{$section->cta_label}}",
+                                            "link":"{{$section->cta_link}}"
+                                        }'
+                                        ></div>
+                                </div>
+                            </div>
+                        </div>
                     @endif
 
                     @if($section->acf_fc_layout == "links")
+                    <div class="landing__links">
                         <div class="container container--mk4">
                             <div class="row">
-                                <div class="col-sm-12 home__links">
+                                <div class="col-sm-12 links">
                                     @foreach($section->link_block as $block)
                                         <div class="links__block">
                                             @if(isset($block->header))
@@ -73,13 +92,21 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                     @endif
 
                     @if($section->acf_fc_layout == "downloads")
-                        <div
-                            data-component="downloads"
-                            data-props="{{htmlspecialchars(json_encode($section))}}"
-                        ></div>
+                    <div class="landing__downloads">
+                        <div class="container container--mk4">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div
+                                        data-component="downloads"
+                                        data-props="{{htmlspecialchars(json_encode($section))}}"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
                     @endif
 
                 @endforeach
