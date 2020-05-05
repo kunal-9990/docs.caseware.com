@@ -20,11 +20,10 @@ class Feature extends Component {
       };
     }
 
-    voteToDb(voteType, secondVote) {
+    voteToDb(voteType) {
       var featureName = this.props.feature.title;
       var featureVersion = this.props.version;
       var featureProduct = this.props.product;
-      console.log(featureVersion); 
       var featureId;
       if(isNaN(this.props.id)){
         featureId = "NaN";
@@ -63,34 +62,31 @@ class Feature extends Component {
             success: function (store) {
             },
             error: function (req, err) {
-              console.log('my message' + err);
+              // console.log('my message' + err);
             }
           });
-          if(secondVote){
-            voteToDb(secondVote)
-          }
         },
         error: function (req, err) {
-          console.log('my message' + err);
+          // console.log('my message' + err);
         }
       });
     }
   
     handleUpVote() {
 
-      
-
-      console.log("current number:" + this.state.votes);
+    
       var currentScore = this.state.votes;
-
-      if (this.state.hasVoted === 'up') {
+      var featureName = this.props.feature.title;
+      if (this.state.hasVoted == 'up') {
         this.setState({
           votes: currentScore - 1,
           hasVoted: 'neutral'
         })
         this.voteToDb(3);
+        ga('Global.send', 'event', 'clear-up', featureName, window.location.href);
+        ga('Cloud.send', 'event', 'clear-up', featureName, window.location.href);
       } 
-      else if (this.state.hasVoted === 'down') {
+      else if (this.state.hasVoted == 'down') {
 
         this.setState({
           votes: currentScore + 2,
@@ -98,6 +94,10 @@ class Feature extends Component {
         })
         this.voteToDb(1);
         this.voteToDb(1);
+        ga('Global.send', 'event', 'clear-down', featureName, window.location.href);
+        ga('Cloud.send', 'event', 'clear-down', featureName, window.location.href);
+        ga('Global.send', 'event', 'up', featureName, window.location.href);
+        ga('Cloud.send', 'event', 'up', featureName, window.location.href);
       } 
       else {
         this.setState({
@@ -105,8 +105,10 @@ class Feature extends Component {
           hasVoted: 'up'
         })
         this.voteToDb(1);
-      }
 
+      }
+      ga('Global.send', 'event', 'up', featureName, window.location.href);
+      ga('Cloud.send', 'event', 'up', featureName, window.location.href);
     }
 
     // handleNeutral() {
@@ -119,30 +121,38 @@ class Feature extends Component {
     handleDownVote() {
 
       var currentScore = this.state.votes;
+      var featureName = this.props.feature.title;
 
-      console.log("current number:"+this.state.votes);
       if (this.state.hasVoted == 'down') {
         this.setState({
           votes: currentScore + 1,
           hasVoted: 'neutral'
         })
         this.voteToDb(4)
+        ga('Global.send', 'event', 'clear-down', featureName, window.location.href);
+        ga('Cloud.send', 'event', 'clear-down', featureName, window.location.href);
       } 
       else if (this.state.hasVoted == 'up') {
         this.setState({
           votes: currentScore - 2,
           hasVoted: 'down'
         })
-        this.voteToDb(3,2);
         this.voteToDb(2);
-      }
+        this.voteToDb(2);
+        ga('Global.send', 'event', 'clear-up', featureName, window.location.href);
+        ga('Cloud.send', 'event', 'clear-up', featureName, window.location.href);
+        ga('Global.send', 'event', 'down', featureName, window.location.href);
+        ga('Cloud.send', 'event', 'down', featureName, window.location.href);
+        }
       else {
         this.setState({
           votes: currentScore - 1,
           hasVoted: 'down'
         })
         this.voteToDb(2);
-      }
+        ga('Global.send', 'event', 'down', featureName, window.location.href);
+        ga('Cloud.send', 'event', 'down', featureName, window.location.href);
+        }
 
     }
   
