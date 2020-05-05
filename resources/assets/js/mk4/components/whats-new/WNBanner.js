@@ -13,7 +13,7 @@ const WNBanner = props => {
         <div className="row">
           <div className="col-sm-12">
             <div className="banner__wrapper">
-              <h1 className="banner-size"><span>{ props.product }</span> What's New</h1>
+              <h1><span>{ props.product }</span> What's New</h1>
               <p dangerouslySetInnerHTML={{__html: props.strapline }} />
             </div>
           </div>
