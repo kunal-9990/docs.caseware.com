@@ -12,19 +12,14 @@ import {
   EmailIcon
 } from 'react-share';
 
-/* 
-this is a sample facebook share url structure
-http://docs2.iserv-staging.caseware.com/2019/webapps/30/en/Explore/Whats-New/whats-new-cloud-30?fbclid=IwAR2mDdZeK_K9Gg9esUN7QvBgdFBszy5PIce_N1P8yJTsr2b4Ud4EqpgULao
-*/
-
 const onShareWindowClose = site => {
-  console.log("closed: " + site)
-  /* Add GA event here */
+  ga('Global.send', 'event', 'Social Share: ' + site, 'Share window closed', window.location.href);
+  ga('Cloud.send', 'event', 'Social Share: ' + site, 'Share window closed', window.location.href);
 }
 
 const onShareButtonClick = site => {
-  console.log("clicked: " + site);
-  /* Add GA event here */
+  ga('Global.send', 'event', 'Social Share: ' + site, 'Share Button clicked', window.location.href);
+  ga('Cloud.send', 'event', 'Social Share: ' + site, 'Share Button clicked', window.location.href);
 }
  
 const SocialShare = ({ message }) => {
@@ -33,7 +28,7 @@ const SocialShare = ({ message }) => {
     <div className="social">
       
       <div className="social__wrapper">
-        <span>Share</span> {/* TODO - translate */}
+        <span>Share</span>
       </div>
 
       <div className="social__wrapper">
