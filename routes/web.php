@@ -21,15 +21,15 @@ Route::middleware('throttle:30|180,1')->group(function () {
 });
 
 Route::get('/api/vote/getData', 'VoteController@getVoteData');
-Route::get('/api/vote/dumpVotes', 'VoteController@dumpVotes');
+// Route::get('/api/vote/dumpVotes', 'VoteController@dumpVotes');
 
 // home page - to come
-Route::get('/', 'PageController@home');
+// Route::get('/', 'PageController@home');
 
 // cloud index
-// Route::get('/', function () {
-//     return redirect('/2019/webapps/30/en/webapps');
-// });
+Route::get('/', function () {
+    return redirect('/2019/webapps/30/en/webapps');
+});
 
 // Product url - TODO - this is just temporary
 Route::get('/product/{product}', 'PageController@product')->name('product');
