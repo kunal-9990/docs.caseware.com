@@ -31,8 +31,6 @@ Route::get('/', function () {
     return redirect('/2019/webapps/30/en/webapps');
 });
 
-// Product url - TODO - this is just temporary
-Route::get('/product/{product}', 'PageController@product')->name('product');
 
 
 
