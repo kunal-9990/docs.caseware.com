@@ -7,6 +7,7 @@
 - voter hover text
 
 # Header
+- see header-ghost.blade.php
 - Removing product filter
 - lang issue (on home blade template)
 - create transparent header version for home page banners
@@ -28,11 +29,7 @@
 - cache user vote callbacks
 
 # Home page
-- banner: ctas, search bar
-- everything else
-
-# Social Sharing
-- add GA events to buttonClick and windowClose functions
+- banner: search bar
 
 # Newsletter signup
 - full development needed
@@ -40,6 +37,6 @@
 # Footer 
 - remove hardcoded
 
-# Quick Links component 
+# Quick Links component (WN)
 - need to redesign this section
 

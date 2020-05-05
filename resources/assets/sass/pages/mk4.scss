@@ -7,6 +7,7 @@
     color: $white;
     background-image: linear-gradient(#138EB3, $caseware-blue);
     transition: 0.5s all;
+    text-align: center;;
 
     &:hover {
         text-decoration: none;
@@ -166,19 +167,4 @@
     .in-this-article {
         padding: 1.2rem 1.2rem 0 0;
     }
-
-    // .quick-links {
-    //     &__wrapper {
-    //         flex-direction: row;
-    //         align-items: flex-end;
-    //     }
-
-    //     .quick-link {
-    //        text-align: left;
-    //     }
-    // }
 }
-
-// @include mq(lg) {
-
-// }

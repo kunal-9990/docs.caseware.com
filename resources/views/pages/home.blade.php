@@ -17,34 +17,23 @@
 </head>
 <body>
     <div class="home">
-        
-        @php
-        // dd($pageContent);
-        if(!isset($noHeader)){
-            $noHeader = false;
-        }
-        
-        @endphp
-        @if(!$noHeader)
-        {{-- @include('partials.header')
-        @include('partials.header-mobile') --}}
-        @endif
 
+        @include('partials.header-ghost')
+        
         <div
             data-component="home-banner" 
             data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
         ></div>
 
         <main id="main">
-            <div>
-                @foreach($pageContent->acf->modular_template as $section)
-                    
+            @foreach($pageContent->acf->modular_template as $section)
+                 
                     @if($section->acf_fc_layout == "text_block")
-                        <div class="container">
+                        <div class="container ">
                             <div class="row">
                                 <div class="col-sm-12">
                                     @if($section->logo)<img src="{{$section->logo->url}}" alt="{{$section->logo->alt}}" />@endif
-                                    @if(isset($section->header))<h2>{{ $section->header }}</h2>@endif
+                                    @if(!empty($section->header))<h2>{{ $section->header }}</h2>@endif
                                     @if(isset($section->description))<div>{!! $section->description !!}</div>@endif
                                 </div>
                             </div>
@@ -66,20 +55,20 @@
                     @endif
 
                     @if($section->acf_fc_layout == "links")
-                        <div class="container">
+                        <div class="container container--mk4">
                             <div class="row">
                                 <div class="col-sm-12 home__links">
                                     @foreach($section->link_block as $block)
-                                        @if(isset($block->header))
-                                        <h2>{{$block->header}}</h2>
-                                        @endif
-                                        @foreach($block->links as $link)
-                                            <a href="{{$link->link_url}}" target="_blank">
-                                                <div>
+                                        <div class="links__block">
+                                            @if(isset($block->header))
+                                                <h2>{{$block->header}}</h2>
+                                            @endif
+                                            @foreach($block->links as $link)
+                                                <a href="{{$link->link_url}}" target="_blank">
                                                     {{ $link->link_text }}
-                                                </div>
-                                            </a>
-                                        @endforeach
+                                                </a>
+                                            @endforeach
+                                        </div>
                                     @endforeach
                                 </div>
                             </div>
@@ -93,11 +82,9 @@
                         ></div>
                     @endif
 
-
                 @endforeach
 
                 <!-- <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?> -->
-            </div>
         </main>
 
         @include('partials.cookie-consent')

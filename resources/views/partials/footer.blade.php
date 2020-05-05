@@ -33,31 +33,31 @@
 
                 <div class="col">
                     <span>Products</span>
-                    <a>CaseWare Working Papers</a>
-                    <a>CaseWare Cloud</a>
-                    <a>IDEA</a>
-                    <a>CaseWare Audit</a>
-                    <a>CaseWare Financials</a>
+                    <a href="https://www.caseware.com/ca/products/working-papers" target="_blank">CaseWare Working Papers</a>
+                    <a href="https://www.caseware.com/ca/products/cloud" target="_blank">CaseWare Cloud</a>
+                    <a href="https://idea.caseware.com/products/idea" target="_blank">IDEA</a>
+                    <a href="https://www.caseware.com/ca/products/audit" target="_blank">CaseWare Audit</a>
+                    <a href="https://www.caseware.com/ca/products/financials" target="_blank">CaseWare Financials</a>
                 </div>
                 <div class="col">
                     <span>About</span>
-                    <a>Who we are</a>
-                    <a>Where you fit</a>
-                    <a>Certifications</a>
+                    <a href="https://www.caseware.com/ca/about" target="_blank">Who we are</a>
+                    <a href="https://www.caseware.com/ca/careers" target="_blank">Where you fit</a>
+                    <a href="https://www.caseware.com/ca/cloud-security-compliance" target="_blank">Certifications</a>
                 </div>
                 <div class="col">
                     <span>Resources</span>
-                    <a>Articles</a>
-                    <a>Webinars</a>
+                    <a href="https://www.caseware.com/ca/resources/articles" target="_blank">Articles</a>
+                    <a href="https://www.caseware.com/ca/resources/events" target="_blank">Webinars</a>
                 </div>
                 <div class="col">
-                    <span>Support</span>
-                    <span>Training</span>
-                    <span>Distributors</span>
-                    <span>Events</span>
-                    <span>MyCaseWare</span>
+                    <a href="https://www.caseware.com/ca/support" target="_blank"><span>Support</span></a>
+                    <a href="https://www.caseware.com/ca/training" target="_blank"><span>Training</span></a>
+                    <a href="https://www.caseware.com/ca/distributors" target="_blank"><span>Distributors</span></a>
+                    <a href="https://www.caseware.com/ca/resources/events" target="_blank"><span>Events</span></a>
+                    <a href="https://my.caseware.com/account/login?ReturnUrl=%2F" target="_blank"><span>MyCaseWare</span></a>
                 </div>
-                <div class="col">
+                <div class="col contact">
                     <span>Contact</span>
                     <div>
                         CaseWare International Inc.<br />
