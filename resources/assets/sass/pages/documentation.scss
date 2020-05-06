@@ -57,13 +57,14 @@
     margin: 30px 0;
 }
 
-.pcrsectiontext { background-color: rgba(142, 142, 142, 0.1); }
-.rctsectiontext { background-color: rgba(142, 142, 142, 0.1); }
-.sesectiontext { background-color: rgba(107, 48, 119, 0.10); }
-.analyticssectiontext { background-color: rgba(229, 114, 0, 0.10); }
-.timesectiontext { background-color: rgba(183, 49, 44, 0.10); }
-.taxsectiontext { background-color: rgba(76, 140, 43, 0.10); }
-.workingpaperssectiontext { background-color: rgba(0, 45, 114, 0.10); }
+.pcrsectiontext,
+.rctsectiontext,
+.sesectiontext,
+.analyticssectiontext,
+.timesectiontext,
+.taxsectiontext,
+.workingpaperssectiontext,
+.cwauditsectiontext,
 .auditsectiontext { background-color: rgba(201, 151, 0, 0.10); }
 
 .feature-availability {
