@@ -16,16 +16,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
 </head>
 <body>
-    <div class="landing">
+    <div class="page-wrap">
+            <div class="landing">
 
         @include('partials.header-ghost')
         
         <div class="landing__banner">
-        <div
-            data-component="landing-banner" 
-            data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
-        ></div>
-</div>
+            <div
+                data-component="landing-banner" 
+                data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
+            ></div>
+        </div>
         <main id="main">
             @foreach($pageContent->acf->modular_template as $section)
                  
@@ -113,10 +114,12 @@
 
                 <!-- <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?> -->
         </main>
+    </div>
+    </div>
 
         @include('partials.cookie-consent')
         @include('partials.footer')
-    </div>
+        
         @if(1)
             <!-- begin olark code -->
             <script type="text/javascript" async>
