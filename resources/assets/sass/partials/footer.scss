@@ -1,9 +1,9 @@
 .footer {
+    position: relative;
+    margin-top: 4.8rem;
+    min-height: 85rem;
     background-color: $blue-horizon;
     color: $white;
-    margin-top: 8rem;
-    // margin-top: -8rem;
-    // padding-top: 10rem;
     z-index: 1;
 
     .row > div {
@@ -32,6 +32,7 @@
 
         &.contact {
             min-width: 22rem;
+            margin-left: 1.2rem;
             & > div {
                 font-weight: 300;
             }
@@ -110,6 +111,7 @@
 
 @include mq($from: sm) {
     .footer {
+        min-height: 40rem;
         padding-top: 2.4rem;
         
         .row {
