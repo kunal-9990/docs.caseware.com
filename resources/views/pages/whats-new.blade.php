@@ -21,23 +21,6 @@
     ])
 
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
-<<<<<<< HEAD
-    {{-- google analytics --}}
-        <script>
-            /* <![CDATA[ */
-            	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            	ga('create', 'UA-97702818-1', 'auto', 'Global');
-            	ga('create', 'UA-97702818-2', 'auto', 'Cloud');
-            	ga('Global.send', 'pageview', { 'page': location.pathname + location.search + location.hash});
-            	ga('Cloud.send', 'pageview', { 'page': location.pathname + location.search + location.hash});
-            /* ]]> */
-        </script>
-    {{-- google analytics end--}}
-=======
->>>>>>> filter-updates
     {{-- FontAwesome icons --}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
