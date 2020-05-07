@@ -2,19 +2,42 @@
     box-sizing: border-box;
     min-height: 0;
     min-width: 0;
+    margin: 0;
 }
 
 html {
     font-size: 62.5%;
+}
+
+html, body {
     height: 100%;
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
     top: 0 !important;
     font-size: 1.5rem !important;
+}
+
+.page-wrap {
+    min-height: 100%;
+    margin-bottom: -85rem;
+
+    &:after {
+        content: '';
+        display: block;
+        height: 85rem;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    .page-wrap {
+        margin-bottom: -40rem;
+        &:after {
+            height: 40rem;
+        }
+    }
 }
 
 #main {
