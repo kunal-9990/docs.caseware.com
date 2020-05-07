@@ -10,27 +10,29 @@ const lightboxOptions = {
   buttonsBackgroundColor: 'rgba(255, 255, 255, 0.85)',
   buttonsIconColor: "#323232",
   showThumbnails: false,
-  reactModalStyle: {zIndex: '100000000000000000'}
+  clickOutsideToClose: true,
+  animationDisabled: true
 }
 
 const htmlParseOptions = {
   replace: domNode => {
     if (!domNode.attribs) return;
     if (domNode.name === 'img') {
-      console.log(domNode)
       if (domNode.attribs.class && domNode.attribs.class.indexOf('no-modal') !== -1) {
         return domNode
-      } else { 
-        console.log(domNode) 
-        return(
+      } else return (
           <SimpleReactLightbox>
             <SRLWrapper options={lightboxOptions}>
-           <img src="https://thumbs-prod.si-cdn.com/pd4kPtn0yd2aA2Tr3if1nQxsMKA=/1072x720/filters:no_upscale()/https://public-media.si-cdn.com/filer/bc/13/bc13e43b-ff35-4de9-827d-c86bba8293b7/cow.jpg"/>
-
+              <img 
+                src={domNode.attribs.src} 
+                className={domNode.attribs.class} 
+                alt={domNode.attribs.alt} 
+                width={domNode.attribs.width} 
+                height={domNode.attribs.height}
+              />
             </SRLWrapper>
           </SimpleReactLightbox>
         )
-      }
     }
   }
 }

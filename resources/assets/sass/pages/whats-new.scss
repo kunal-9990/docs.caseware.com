@@ -83,10 +83,13 @@
         img {
             // display: block;
             margin: 1.2rem 0;
-            width: auto;
             max-width: 100%;
             height: auto;
             max-height: 40vh;
+        }
+
+        img:not(.no-modal) {
+            width: auto;
         }
 
         figure {
@@ -102,6 +105,7 @@
         iframe {
             max-width: 100%;
         }
+
     }
 
     &--sub-feature {
@@ -357,4 +361,12 @@
             }
         }
     }
+}
+
+
+.SRLAutoplayButton,
+.SRLExpandButton,
+.SRLNextButton,
+.SRLPrevButton {
+    display: none;
 }
