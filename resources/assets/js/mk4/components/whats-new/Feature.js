@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import parse from 'html-react-parser';
 import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 import PropTypes from 'prop-types';
 import Voter from './Voter'
@@ -8,8 +9,33 @@ const lightboxOptions = {
   overlayColor: 'rgba(255, 255, 255, 0.85)',
   buttonsBackgroundColor: 'rgba(255, 255, 255, 0.85)',
   buttonsIconColor: "#323232",
-  showThumbnails: false
-};
+  showThumbnails: false,
+  clickOutsideToClose: true,
+  animationDisabled: true
+}
+
+const htmlParseOptions = {
+  replace: domNode => {
+    if (!domNode.attribs) return;
+    if (domNode.name === 'img') {
+      if (domNode.attribs.class && domNode.attribs.class.indexOf('no-modal') !== -1) {
+        return domNode
+      } else return (
+          <SimpleReactLightbox>
+            <SRLWrapper options={lightboxOptions}>
+              <img 
+                src={domNode.attribs.src} 
+                className={domNode.attribs.class} 
+                alt={domNode.attribs.alt} 
+                width={domNode.attribs.width} 
+                height={domNode.attribs.height}
+              />
+            </SRLWrapper>
+          </SimpleReactLightbox>
+        )
+    }
+  }
+}
 
 class Feature extends Component {
     constructor(props) {
@@ -74,7 +100,6 @@ class Feature extends Component {
   
     handleUpVote() {
 
-    
       var currentScore = this.state.votes;
       var featureName = this.props.feature.title;
       if (this.state.hasVoted == 'up') {
@@ -176,12 +201,11 @@ class Feature extends Component {
             )}
             { this.props.hierarchy === 1 ? (<h2>{ feature.title }</h2>) : (<h3>{ feature.title }</h3>)}
           </div>
+        
+          <div className="feature__content">
+            { parse(feature.description, htmlParseOptions) }
+          </div>
 
-          <SimpleReactLightbox>
-            <SRLWrapper options={lightboxOptions}>
-              <div className="feature__content" dangerouslySetInnerHTML={{__html: feature.description }} />
-            </SRLWrapper>
-          </SimpleReactLightbox>    
         </div>
       );
     }
