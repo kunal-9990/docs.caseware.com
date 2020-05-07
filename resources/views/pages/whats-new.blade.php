@@ -1,6 +1,7 @@
 @php
     // dd($userVotes);
     // dd($voteData);
+    $title = $pageContent->acf->product . " " . $pageContent->acf->version . " - What's New";
 @endphp
 <!DOCTYPE html>
 @yield('html')
@@ -8,11 +9,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">   
 
-    @yield('meta')
+    @include('partials.meta', [
+        'canonical' => url('/'),
+        'url' => url('/'),
+        'title' => $title, 
+        'og_description' => $title, 
+        'canonical' => $title, 
+        'doNotTranslate' => isset($doNotTranslate) ? $doNotTranslate : false
+    ])
 
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
+<<<<<<< HEAD
     {{-- google analytics --}}
         <script>
             /* <![CDATA[ */
@@ -27,6 +36,8 @@
             /* ]]> */
         </script>
     {{-- google analytics end--}}
+=======
+>>>>>>> filter-updates
     {{-- FontAwesome icons --}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">

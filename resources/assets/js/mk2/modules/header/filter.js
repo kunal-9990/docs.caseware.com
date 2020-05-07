@@ -16,7 +16,7 @@ module.exports = () => {
     return vars;
   }
 
-  var getQueryString = function(field, url) {
+  var getQueryString = function (field, url) {
     var href = url ? url : window.location.href;
     var reg = new RegExp("[?&]" + field + "=([^&#]*)", "i");
     var string = reg.exec(href);
@@ -113,6 +113,7 @@ module.exports = () => {
       pcr: $(".switch-wrap.pcr:not(.mobile)").hasClass("is-active"),
       rct: $(".switch-wrap.rct:not(.mobile)").hasClass("is-active"),
       pbc: $(".switch-wrap.pbc:not(.mobile)").hasClass("is-active"),
+      collaborate: $(".switch-wrap.collaborate:not(.mobile)").hasClass("is-active"),
       auditint: $(".switch-wrap.auditint:not(.mobile)").hasClass("is-active")
     };
 
@@ -130,6 +131,7 @@ module.exports = () => {
       pcr: $(".switch-wrap.pcr.mobile").hasClass("is-active"),
       rct: $(".switch-wrap.rct.mobile").hasClass("is-active"),
       pbc: $(".switch-wrap.pbc.mobile").hasClass("is-active"),
+      collaborate: $(".switch-wrap.collaborate.mobile").hasClass("is-active"),
       auditint: $(".switch-wrap.auditint.mobile").hasClass("is-active")
     };
 
@@ -138,16 +140,16 @@ module.exports = () => {
     setCookie("filterSettings", JSON.stringify(filterSettings), 5);
   }
 
-  $(document).on("click", ".switch-wrap:not(.mobile)", function(event) {
+  $(document).on("click", ".switch-wrap:not(.mobile)", function (event) {
     updateFilter();
   });
 
-  $(document).on("click", ".switch-wrap.mobile", function(event) {
+  $(document).on("click", ".switch-wrap.mobile", function (event) {
     updateFilterMobile();
   });
 
   var prodList = getQueryString("prod");
-  
+
 
   if (getCookie("filterSettings")) {
     var filterSettings = JSON.parse(getCookie("filterSettings"));
@@ -190,7 +192,7 @@ module.exports = () => {
       };
     }
   } else {
-    $(".switch-wrap").each(function() {
+    $(".switch-wrap").each(function () {
       $(this).addClass("is-active");
       $(this)
         .children()
@@ -202,7 +204,7 @@ module.exports = () => {
     updateFilter();
   }
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     applyFilter(filterSettings);
   });
 

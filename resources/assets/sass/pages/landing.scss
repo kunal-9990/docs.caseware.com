@@ -290,3 +290,13 @@
         }
     }
 }
+
+
+@include mq(lg) {
+
+    .landing-banner {
+        h1 {
+            font-size: 6rem;
+        }
+    }
+}
