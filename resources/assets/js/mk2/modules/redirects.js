@@ -34,13 +34,16 @@ module.exports = () => {
         url = window.location.href.split("?")[0];
         $(xml).find("row").each(function () {
           if ($(this).find("InlineHelpLink").text().search(accordianID) !== -1 && $(this).find("InlineHelpLink").text().search(accordianID) !== 0 && window.location.hash) {
-                      console.log("found");
-                      // uncomment when live
-                      // var linkPrefix = "/" + product + "/" + version + "/" + lang;
-                      var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
-                      window.location.replace(linkPrefix + $(this).find("Redirectto").text());
-                      $("body, html").animate({ scrollTop: $("#" + accordianID).offset().top - 100 }, 600);   
-    
+            console.log("found");
+            // uncomment when live
+            // var linkPrefix = "/" + product + "/" + version + "/" + lang;
+            var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
+            window.location.replace(linkPrefix + $(this).find("Redirectto").text());
+            accordianID = window.location.hash.replaceAll('#CSHID=', '');
+            $("#" + accordianID).addClass("in");
+            $("body, html").animate({
+              scrollTop: $("#" + accordianID).offset().top - 100
+            }, 600);
             return false;
           }
         });
