@@ -115,7 +115,7 @@ module.exports = () => {
       pbc: $(".switch-wrap.pbc:not(.mobile)").hasClass("is-active"),
       collaborate: $(".switch-wrap.collaborate:not(.mobile)").hasClass("is-active"),
       auditint: $(".switch-wrap.auditint:not(.mobile)").hasClass("is-active"),
-      audit: $(".switch-wrap.audit:not(.mobile)").hasClass("is-active")
+      audit: $(".switch-wrap.Audit-canada:not(.mobile)").hasClass("is-active")
     };
 
     applyFilter(filterSettings);
@@ -134,7 +134,7 @@ module.exports = () => {
       pbc: $(".switch-wrap.pbc.mobile").hasClass("is-active"),
       collaborate: $(".switch-wrap.collaborate.mobile").hasClass("is-active"),
       auditint: $(".switch-wrap.auditint.mobile").hasClass("is-active"),
-      audit: $(".switch-wrap.audit.mobile").hasClass("is-active"),
+      audit: $(".switch-wrap.Audit-canada.mobile").hasClass("is-active"),
     };
 
     applyFilter(filterSettings);
