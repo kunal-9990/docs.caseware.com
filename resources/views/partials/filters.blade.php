@@ -17,7 +17,11 @@
             <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span>Working<span
                     class="switch-name__no-wrap">&nbsp;</span>Papers</div>
         </div>
+<<<<<<< HEAD
         <div class="switch-wrap caanalyticsai @if($mobile == true) mobile @endif">
+=======
+        <div class="switch-wrap canalyticsai @if($mobile == true) mobile @endif">
+>>>>>>> master
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
