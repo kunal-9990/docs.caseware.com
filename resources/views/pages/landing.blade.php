@@ -17,7 +17,8 @@
 </head>
 <body>
     <div class="page-wrap">
-            <div class="landing">
+       
+        <div class="landing">
 
         @include('partials.header-ghost')
         

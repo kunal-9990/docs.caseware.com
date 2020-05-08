@@ -24,12 +24,12 @@ Route::get('/api/vote/getData', 'VoteController@getVoteData');
 // Route::get('/api/vote/dumpVotes', 'VoteController@dumpVotes');
 
 // home page - to come
-// Route::get('/', 'PageController@home');
+Route::get('/', 'PageController@home');
 
 // cloud index
-Route::get('/', function () {
-    return redirect('/2019/webapps/30/en/webapps');
-});
+// Route::get('/', function () {
+//     return redirect('/2019/webapps/30/en/webapps');
+// });
 
 
 
