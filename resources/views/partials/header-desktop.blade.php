@@ -20,7 +20,7 @@ $indexURL = route('category', [$year, $product, $version, $lang, 'webapps']);
         {{-- <div class="row"> --}}
         <div class="header__search-wrap">
             <div class="header__nav-wrap">
-                <a href="{{$indexURL}}"><img class="header__logo" 
+                <a @if(isset($link)) href={{$link}} @else href="{{$indexURL}}" @endif><img class="header__logo" 
                     
                     @if(!isset($logo))
                         src="/img/CaseWare_logo_4C_horz.svg"
