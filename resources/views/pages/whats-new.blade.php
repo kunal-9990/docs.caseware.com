@@ -1,6 +1,6 @@
 @php
-    // dd($userVotes);
-    // dd($voteData);
+    // dd($pageContent->acf->hide_olark_chat);
+
     $title = $pageContent->acf->product . " " . $pageContent->acf->version . " - What's New";
 @endphp
 <!DOCTYPE html>
@@ -17,7 +17,8 @@
         'title' => $title, 
         'og_description' => $title, 
         'canonical' => $title, 
-        'doNotTranslate' => isset($doNotTranslate) ? $doNotTranslate : false
+        'doNotTranslate' => isset($doNotTranslate) ? $doNotTranslate : false,
+        'hideOlark' => isset($pageContent->acf->hide_olark_chat) ?$pageContent->acf->hide_olark_chat : false
     ])
 
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
@@ -200,15 +201,7 @@
 
         @include('partials.cookie-consent')
         @include('partials.footer')
-        @if(Route::current()->parameters()["lang"] == "en")
-            <!-- begin olark code -->
-            <script type="text/javascript" async>
-                ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
-            /* custom configuration goes here (www.olark.com/documentation) */
-            olark.identify('4439-775-10-8635');
-            </script>
-            <!-- end olark code -->
-        @endif
+
         <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
         
         <script src="{{ mix('/js/mk2/app.js') }}"></script>
