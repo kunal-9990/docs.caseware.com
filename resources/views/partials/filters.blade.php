@@ -82,7 +82,7 @@
             <div class="switch-name__hover-msg">OnPoint<span class="switch-name__no-wrap">&nbsp;</span><span
                     class="switch-name__no-wrap">&nbsp;</span>Collaborate</div>
         </div>
-        <div class="switch-wrap audit @if($mobile == true) mobile @endif">
+        <div class="switch-wrap Audit-canada @if($mobile == true) mobile @endif">
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
