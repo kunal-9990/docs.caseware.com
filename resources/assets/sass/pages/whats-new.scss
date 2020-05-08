@@ -28,6 +28,13 @@
                 font-weight: 700;
                 display: block;
             }
+
+            &:first-child {
+                margin-bottom: 0;
+            }
+            &:last-child {
+                margin-top: 0;
+            }
         }
 
         p {
@@ -39,6 +46,7 @@
     }
 
     .docs__container {
+        flex-direction: column;
         margin-top: 4.8rem;
         & > div {
             max-width: 100%;
@@ -75,10 +83,13 @@
         img {
             // display: block;
             margin: 1.2rem 0;
-            width: auto;
             max-width: 100%;
             height: auto;
             max-height: 40vh;
+        }
+
+        img:not(.no-modal) {
+            width: auto;
         }
 
         figure {
@@ -86,9 +97,15 @@
             margin: 3.6rem 0;
         }
 
+        figcaption {
+            font-size: 1.3rem;
+            font-style: italic;
+        }
+
         iframe {
             max-width: 100%;
         }
+
     }
 
     &--sub-feature {
@@ -344,4 +361,12 @@
             }
         }
     }
+}
+
+
+.SRLAutoplayButton,
+.SRLExpandButton,
+.SRLNextButton,
+.SRLPrevButton {
+    display: none;
 }

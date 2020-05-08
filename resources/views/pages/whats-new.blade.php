@@ -27,17 +27,22 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
 </head>
 <body>
+    <div class="page-wrap">
     <div class="whats-new">
         @php
         // dd($pageContent);
         if(!isset($noHeader)){
             $noHeader = false;
         }
-        
         @endphp
         @if(!$noHeader)
-        @include('partials.header')
-        @include('partials.header-mobile')
+            @if($pageContent->acf->use_alternate_header == "desktop-header")
+                @include('partials.header-desktop', ['logo' => $pageContent->acf->alternate_header_product_logo])
+                @include('partials.header-mobile-desktop', ['logo' => $pageContent->acf->alternate_header_product_logo])
+            @else
+                @include('partials.header')
+                @include('partials.header-mobile')
+            @endif     
         @endif
 
         @if ($pageContent->acf->announcement)
@@ -51,7 +56,8 @@
             data-component="whats-new-banner"
             data-props='{
                 "background":"{{ !empty($pageContent->acf->title_background_image) ? $pageContent->acf->title_background_image->url : null }}",
-                "product":"{{$pageContent->acf->product." ".$pageContent->acf->version}}", 
+                "product":"{{$pageContent->acf->product}}", 
+                "version":"{{$pageContent->acf->version}}",
                 "strapline":"{{$pageContent->acf->strapline}}"
             }'
         ></div>
@@ -189,10 +195,11 @@
                 data-prop-with-olark="{{Route::current()->parameters()['lang'] == 'en'}}"
             ></div>
         @endif
+    </div>
+    </div>
 
         @include('partials.cookie-consent')
         @include('partials.footer')
-    </div>
         @if(Route::current()->parameters()["lang"] == "en")
             <!-- begin olark code -->
             <script type="text/javascript" async>
