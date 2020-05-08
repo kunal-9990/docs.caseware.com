@@ -67,7 +67,7 @@ $deLink = env('DOMAIN') . implode('/', $segments);
 /* ]]> */</script>
 {{-- google analytics end--}}
 
-@if(!$doNotTranslate)
+@if(isset($doNotTranslate))
 {{-- google translate --}}
 <meta name="google-translate-customization" content="ad1fc64b68ce99cb-1145fc38ed0101e8-g15336b4538df18af-1a">
 <script type="text/javascript">/* <![CDATA[ */
