@@ -109,13 +109,13 @@ module.exports = () => {
       time: $(".switch-wrap.time:not(.mobile)").hasClass("is-active"),
       se: $(".switch-wrap.se:not(.mobile)").hasClass("is-active"),
       wp: $(".switch-wrap.wp:not(.mobile)").hasClass("is-active"),
-      analyticsai: $(".switch-wrap.caAnalyticsAI:not(.mobile)").hasClass("is-active"),
+      analyticsai: $(".switch-wrap.caanalyticsai:not(.mobile)").hasClass("is-active"),
       pcr: $(".switch-wrap.pcr:not(.mobile)").hasClass("is-active"),
       rct: $(".switch-wrap.rct:not(.mobile)").hasClass("is-active"),
       pbc: $(".switch-wrap.pbc:not(.mobile)").hasClass("is-active"),
       collaborate: $(".switch-wrap.collaborate:not(.mobile)").hasClass("is-active"),
       auditint: $(".switch-wrap.auditint:not(.mobile)").hasClass("is-active"),
-      audit: $(".switch-wrap.Audit-canada:not(.mobile)").hasClass("is-active")
+      audit: $(".switch-wrap.audit-canada:not(.mobile)").hasClass("is-active")
     };
 
     applyFilter(filterSettings);
@@ -128,13 +128,13 @@ module.exports = () => {
       time: $(".switch-wrap.time.mobile").hasClass("is-active"),
       se: $(".switch-wrap.se.mobile").hasClass("is-active"),
       wp: $(".switch-wrap.wp.mobile").hasClass("is-active"),
-      analyticsai: $(".switch-wrap.caAnalyticsAI.mobile").hasClass("is-active"),
+      analyticsai: $(".switch-wrap.caanalyticsai.mobile").hasClass("is-active"),
       pcr: $(".switch-wrap.pcr.mobile").hasClass("is-active"),
       rct: $(".switch-wrap.rct.mobile").hasClass("is-active"),
       pbc: $(".switch-wrap.pbc.mobile").hasClass("is-active"),
       collaborate: $(".switch-wrap.collaborate.mobile").hasClass("is-active"),
       auditint: $(".switch-wrap.auditint.mobile").hasClass("is-active"),
-      audit: $(".switch-wrap.Audit-canada.mobile").hasClass("is-active"),
+      audit: $(".switch-wrap.audit-canada.mobile").hasClass("is-active"),
     };
 
     applyFilter(filterSettings);
