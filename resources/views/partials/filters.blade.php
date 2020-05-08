@@ -17,7 +17,7 @@
             <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span>Working<span
                     class="switch-name__no-wrap">&nbsp;</span>Papers</div>
         </div>
-        <div class="switch-wrap analyticsai @if($mobile == true) mobile @endif">
+        <div class="switch-wrap caAnalyticsAI @if($mobile == true) mobile @endif">
             <label class="switch">
                 <input type="checkbox">
                 <span class="slider round"></span>
@@ -81,6 +81,15 @@
             <span class="switch-name">OnPoint Collaborate</span>
             <div class="switch-name__hover-msg">OnPoint<span class="switch-name__no-wrap">&nbsp;</span><span
                     class="switch-name__no-wrap">&nbsp;</span>Collaborate</div>
+        </div>
+        <div class="switch-wrap audit @if($mobile == true) mobile @endif">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="switch-name">CaseWare Audit</span>
+            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span
+                    class="switch-name__no-wrap">&nbsp;</span>Audit</div>
         </div>
     </div>
 </span>
