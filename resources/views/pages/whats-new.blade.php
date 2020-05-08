@@ -37,8 +37,8 @@
         @endphp
         @if(!$noHeader)
             @if($pageContent->acf->use_alternate_header == "desktop-header")
-                @include('partials.header-desktop', ['logo' => $pageContent->acf->alternate_header_product_logo])
-                @include('partials.header-mobile-desktop', ['logo' => $pageContent->acf->alternate_header_product_logo])
+                @include('partials.header-desktop', ['logo' => $pageContent->acf->alternate_header_product_logo, "link" => isset($pageContent->acf->alternate_header_product_logo_link) ? $pageContent->acf->alternate_header_product_logo_link : "" ])
+                @include('partials.header-mobile-desktop', ['logo' => $pageContent->acf->alternate_header_product_logo, "link" => isset($pageContent->acf->alternate_header_product_logo_link) ? $pageContent->acf->alternate_header_product_logo_link : "" ])       
             @else
                 @include('partials.header')
                 @include('partials.header-mobile')
