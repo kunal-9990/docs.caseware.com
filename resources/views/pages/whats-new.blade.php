@@ -34,11 +34,15 @@
         if(!isset($noHeader)){
             $noHeader = false;
         }
-        
         @endphp
         @if(!$noHeader)
-        @include('partials.header')
-        @include('partials.header-mobile')
+            @if($pageContent->acf->use_alternate_header == "desktop-header")
+                @include('partials.header-desktop', ['logo' => $pageContent->acf->alternate_header_product_logo])
+                @include('partials.header-mobile-desktop', ['logo' => $pageContent->acf->alternate_header_product_logo])
+            @else
+                @include('partials.header')
+                @include('partials.header-mobile')
+            @endif     
         @endif
 
         @if ($pageContent->acf->announcement)

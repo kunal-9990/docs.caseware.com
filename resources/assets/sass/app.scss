@@ -34,7 +34,9 @@ $mq-breakpoints: (
 	Partials
    ================= */
 
+@import "partials/header-desktop";
 @import "partials/header";
+@import "partials/header-mobile-desktop";
 @import "partials/header-mobile";
 @import "partials/mobile-nav";
 @import "partials/toc";

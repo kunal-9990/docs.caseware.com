@@ -1,0 +1,103 @@
+header.header-desktop {
+    display: none;
+    position: relative;
+    border-bottom: 1px solid $desktop-header-blue;
+    box-shadow: 0 1px 1px 0 $desktop-header-blue;
+    background-color: $desktop-header-blue;
+    z-index: 10;
+
+    .language__dropdown,
+    .filters__dropdown,
+    .expanded-filters,
+    .header__input-search-wrapper {
+        display: none !important;
+    }
+
+
+
+    @include mq(sm) {
+        display: block;
+    }
+
+    &--ghost {
+        position: absolute;
+        width: 100%;
+        background: none;
+        border-bottom: none;
+    }
+
+    .header__container {
+        display: flex;
+        align-items: center;
+        min-height: 80px;
+
+        &:after {
+            content: '';
+            min-height: inherit;
+            font-size: 0;
+        }
+    }
+
+    .header__nav-wrap {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__search-wrap {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header__logo {
+            width: 100%;
+            max-width: 400px;
+
+            @include mq(md) {
+                // max-width: 200px;
+            }
+        }
+    }
+
+    .header__input-search-wrapper {
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        background: #f1f1f1;
+        font-size: 16px;
+        line-height: 1.625;
+        font-weight: 400;
+        transition: flex 0.2s;
+        margin-left: 10px;
+        border: 1px solid rgb(230, 236, 241);
+        min-width: 210px;
+
+        @media (min-width: 850px) {
+            min-width: 280px;
+        }
+
+        .desktop-search--is-open & {
+            flex: 1;
+            z-index: 30;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        input {
+            font-size: inherit;
+            line-height: inherit;
+            font-weight: inherit;
+            border: none;
+            outline: none;
+            margin: 0px;
+            background: transparent;
+            resize: none;
+            border-radius: 3px;
+            height: 38px;
+            padding: 0px 8px;
+            width: 100%;
+        }
+    }
+}
