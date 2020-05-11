@@ -85,9 +85,11 @@
                                                 <h2>{{$block->header}}</h2>
                                             @endif
                                             @foreach($block->links as $link)
-                                                <a href="{{$link->link_url}}" target="_blank">
-                                                    {{ $link->link_text }}
-                                                </a>
+                                                <div>
+                                                    <a href="{{$link->link_url}}" target="_blank">
+                                                        {{ $link->link_text }}
+                                                    </a>
+                                                </div>
                                             @endforeach
                                         </div>
                                     @endforeach
