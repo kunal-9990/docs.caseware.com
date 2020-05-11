@@ -6,6 +6,9 @@ if($exclusiveTo == 'Wp'){
 if($exclusiveTo == 'Analyticsai'){
     $exclusiveTo = 'Analytics.AI';
 }
+if($exclusiveTo == 'Caanalyticsai'){
+    $exclusiveTo = 'AnalyticsAI';
+}
 @endphp
 
 <div class="filtermsg col-sm-9">
