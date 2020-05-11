@@ -117,6 +117,9 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'd
 
 @php
 $routeLang = Route::current()->parameters()["lang"];
+if(!isset($hideOlark)){
+	$hideOlark = true;
+}
 @endphp
 @if($routeLang == "en" || !$hideOlark)
 <!-- begin olark code -->
