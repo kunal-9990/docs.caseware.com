@@ -6,9 +6,8 @@ if($exclusiveTo == 'Wp'){
 if($exclusiveTo == 'Analyticsai'){
     $exclusiveTo = 'Analytics.AI';
 }
-}
 if($exclusiveTo == 'Caanalyticsai'){
-$exclusiveTo = 'AnalyticsAI';
+    $exclusiveTo = 'AnalyticsAI';
 }
 @endphp
 
