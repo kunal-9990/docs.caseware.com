@@ -1,4 +1,5 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 
@@ -33,11 +34,13 @@ const Downloads = props => {
   })
 
   return(
-    <div className="landing-downloads">
-      { props.header && (<h2>{ props.header }</h2>) }
-      { props.description && (<p>{ props.description }</p>) }
-      <div className="landing-downloads__wrapper">{ quickLinks }</div>
-    </div>
+    <Fade bottom>
+      <div className="landing-downloads">
+        { props.header && (<h2>{ props.header }</h2>) }
+        { props.description && (<p>{ props.description }</p>) }
+        <div className="landing-downloads__wrapper">{ quickLinks }</div>
+      </div>
+    </Fade>
   )
 }
 

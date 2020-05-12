@@ -1,4 +1,5 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -40,18 +41,20 @@ const Carousel = ({ carousel }) => {
   ))
 
   return (
-    <div className="carousel">
-      <div className="slide slide--mobile">  
-        <Slide
-          image={carousel[0].image}
-          title={carousel[0].title}
-          url={carousel[0].url}
-        />
+    <Fade bottom>
+      <div className="carousel">
+        <div className="slide slide--mobile">  
+          <Slide
+            image={carousel[0].image}
+            title={carousel[0].title}
+            url={carousel[0].url}
+          />
+        </div>
+        <Slider {...settings}>
+          {desktopSlider}
+        </Slider>
       </div>
-      <Slider {...settings}>
-        {desktopSlider}
-      </Slider>
-    </div>
+    </Fade>
   )
 }
 
