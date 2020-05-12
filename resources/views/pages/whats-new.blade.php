@@ -91,7 +91,7 @@
                                     @if($pageContent->acf->featured_video !== "" || !empty($pageContent->acf->featured_video_thumbnail))
                                         <div 
                                             data-component="embedded-video"
-                                            data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? $pageContent->acf->featured_video_thumbnail->url : '' }}"
+                                            data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? htmlspecialchars(json_encode($pageContent->acf->featured_video_thumbnail)) : '' }}"
                                             data-prop-video-src="{{ $pageContent->acf->featured_video !== '' ? $pageContent->acf->featured_video : null}}"
                                             data-props='{"disableOnResponsiveSize": ["md", "lg"]}'
                                         ></div>
@@ -106,7 +106,7 @@
                                 @if($pageContent->acf->featured_video !== "" || !empty($pageContent->acf->featured_video_thumbnail))
                                     <div 
                                         data-component="embedded-video"
-                                        data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? $pageContent->acf->featured_video_thumbnail->url : '' }}"
+                                        data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? htmlspecialchars(json_encode($pageContent->acf->featured_video_thumbnail)) : '' }}"
                                         data-prop-video-src="{{ $pageContent->acf->featured_video !== '' ? $pageContent->acf->featured_video : null}}"
                                         data-props='{"disableOnResponsiveSize": ["xs", "sm", "lg-x"]}'
                                     ></div>
