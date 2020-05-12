@@ -15,6 +15,7 @@
         position: relative;
         color: $white;
     }
+    
 
     &__links {
 
@@ -27,25 +28,6 @@
 
                 h2 {
                     margin-bottom: 2.4rem;
-                }
-
-                a {
-                    display: inline-block;
-                    padding: 3px 0;
-
-                    &:after {
-                        content: '';
-                        display: inline-block;
-                        position: relative;
-                        vertical-align: middle;
-                        top: 0;
-                        left: 0.6rem;
-                        width: 0.6rem;
-                        height: 0.6rem;
-                        border-style: solid;
-                        border-width: 2px 2px 0 0;
-                        transform: rotate(45deg);
-                    }
                 }
             }
         }
@@ -119,6 +101,62 @@
                     background: rgba(255, 255, 255, 0.3); 
                 }
             }             
+        }
+    }
+}
+
+
+/********************
+ Product Navigation
+*********************/
+
+.product-nav {
+    &__grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        & > div {
+            flex: 0 0 100%;
+            margin-bottom: 2.4rem;
+        }
+
+        &--2col > div,
+        &--3col > div {
+            @include mq(sm) {
+               flex: 0 0 calc(50% - 2.4rem);
+
+               &:nth-child(odd) {
+                   margin-right: 2.4rem;
+               }
+            }
+        }
+
+        &--3col > div {
+            @include mq(md) {
+                flex: 0 0 calc(33% - 4.8rem);
+                margin: 0 1.2rem 2.4rem;
+                &:nth-child(odd) {
+                    margin: 0 1.2rem 2.4rem;
+                }
+            }
+        }
+    }
+
+    &__item {
+        flex: 1;
+        padding: 3.6rem 4.8rem;
+        background: $white;
+        -webkit-box-shadow: 0 5px 8px 0 rgba(80,80,80,0.3);
+        -moz-box-shadow: 0 5px 8px 0 rgba(80,80,80,0.3);
+        box-shadow: 0 5px 8px 0 rgba(80,80,80,0.3);
+
+        & > * {
+            display: block;
+        }
+
+        img {
+            margin-bottom: 2.4rem;
         }
     }
 }
