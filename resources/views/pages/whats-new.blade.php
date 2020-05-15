@@ -49,7 +49,7 @@
         @if ($pageContent->acf->announcement)
         <div 
             data-component="announcement"
-            data-props='{"title":"{{$pageContent->acf->announcement->post_title}}", "description":"{{$pageContent->acf->announcement->post_content}}"}'
+            data-props="{{htmlspecialchars(json_encode($pageContent->acf->announcement))}}"
         ></div>
         @endif
 
