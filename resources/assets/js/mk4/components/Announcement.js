@@ -17,15 +17,16 @@ class Announcement extends React.Component {
     }
   
     render() {
+      console.log(this.props)
       return (
         <div className="container announcement-container" style={{ position: 'relative' }}>
           <div className={"announcement" + (this.state.isOpen ? ' open' : '')}>
             <div className="announcement__content">
-              <div>{ this.props.description}</div>
+              <div dangerouslySetInnerHTML={{__html: this.props.post_content}}></div>
             </div>
             <div className="announcement__bar"  onClick={() => this.handleClick()} >
               <FontAwesomeIcon icon={faBell} />
-              <div>{ this.props.title }</div>
+              <div>{ this.props.post_title }</div>
             </div>
           </div>
         </div>
