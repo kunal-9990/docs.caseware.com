@@ -27,7 +27,7 @@ $indexURL = route('category', [$year, $product, $version, $lang, 'webapps']);
                     @elseif($logo == "audit")
                         src="/img/CW-Audit-22.svg"
                     @elseif($logo == "working-papers")
-                        src="/img/CW-wp-2019.png"
+                        src="/img/CW-wp-2020.png"
                     @endif
                         alt="CaseWare logo"></a>
                 @if(strpos(Request::url(), '/SE-Authoring/') == false)
