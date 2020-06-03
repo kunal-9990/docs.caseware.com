@@ -27,7 +27,7 @@ const Voter = ({ id, votes, hasVoted, upVote, downVote, hierarchy }) => {
           <FontAwesomeIcon icon={faCaretUp} />
         </div>
         <div className="total">
-          { <span className="total__count">{ votes }</span> }
+          { <span className="total__count">{ ((hasVoted === 'up' || hasVoted === 'down') ? votes : 'vote') }</span> }
         </div> 
         <div 
           onClick={downVote} 

@@ -14,7 +14,6 @@ const IframeBlock = ({
   thumbnailClicked, 
   onClick
 }) => {
-
   if (thumbnail) {
     return (
       <React.Fragment>
@@ -22,8 +21,8 @@ const IframeBlock = ({
           onClick={videoSrc ? onClick : null} 
           style={{ display: thumbnailClicked ? 'none' : 'block'}}
         >
-          {videoSrc && (<img src="/img/play.png" className="embedded-video__play-btn" />)}
-          <img src={thumbnail} className={videoSrc ? '' : ' embedded-video__no-cursor'} />
+          {videoSrc && (<img src="/img/play.png" className="embedded-video__play-btn" alt="play" />)}
+          <img src={thumbnail.url} className={videoSrc ? '' : ' embedded-video__no-cursor'} alt={thumbnail.alt} />
         </div>
         {(thumbnailClicked && videoSrc) && (<Iframe videoSrc={videoSrc} autoplay="true"/>)}
       </React.Fragment>
