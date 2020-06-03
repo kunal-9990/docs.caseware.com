@@ -9,7 +9,7 @@ class Voter extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      revealCount: false 
+      revealCount: this.props.hasVoted === "neutral" ? false : true
     }
   }
 
@@ -20,12 +20,16 @@ class Voter extends Component {
   - translations for "vote"
 
   ************/
- 
+
+  updateRevealCount() {
+    this.setState({ revealCount: true })
+  }
+
   render() {
     return (
         <div className={"voter voter--" + this.props.hierarchy} id={this.props.id}>
           <div 
-            onClick={() => { this.props.upVote(); this.setState({ revealCount: true }) }} 
+            onClick={() => { this.props.upVote(); this.updateRevealCount() }} 
             className={'arrow arrow--up' + (this.props.hasVoted === 'up' ? ' arrow--voted' : '')}
           >
             <FontAwesomeIcon icon={faCaretUp} />
@@ -34,7 +38,7 @@ class Voter extends Component {
             { <span className="total__count">{ this.state.revealCount ? this.props.votes : "vote" }</span> }
           </div> 
           <div 
-            onClick={() => { this.props.downVote(); this.setState({ revealCount: true }) }} 
+            onClick={() => { this.props.downVote(); this.updateRevealCount() }} 
             className={'arrow arrow--down' + (this.props.hasVoted === 'down' ? ' arrow--voted' : '')}
           >
               <FontAwesomeIcon icon={faCaretDown} />
