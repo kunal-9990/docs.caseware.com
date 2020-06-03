@@ -119,6 +119,9 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="docs__container">
+                                @if(isset($pageContent->acf->ribbon))
+                                    <p class="ribbon">{{$pageContent->acf->ribbon}}</p>
+                                @endif
                                 <div>
                                     @foreach($pageContent->acf->features as $feature)
                                     @php
