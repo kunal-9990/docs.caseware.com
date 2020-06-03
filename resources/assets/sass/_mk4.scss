@@ -27,6 +27,25 @@
     }
 }
 
+a.btn--arrow {
+    display: inline-block;
+    padding: 3px 0;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        top: 0;
+        left: 0.6rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-style: solid;
+        border-width: 2px 2px 0 0;
+        transform: rotate(45deg);
+    }
+}
+
 .iframe-video-wrapper {
     position: relative;
     width: 100%;

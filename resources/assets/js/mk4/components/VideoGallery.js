@@ -1,4 +1,5 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -45,17 +46,19 @@ const VideoGallery = ({ videos, cta, label, link }) => {
   ))
 
   return (
-    <div className="video-gallery">
-      <div className="slide slide--mobile">  
-        <Slide
-          url={videos[0].url}
-        />
-        { cta && (<a href={ link } className="mk4btn" target="_blank">{ label }</a> )}
+    <Fade bottom>
+      <div className="video-gallery">
+        <div className="slide slide--mobile">  
+          <Slide
+            url={videos[0].url}
+          />
+          { cta && (<a href={ link } className="mk4btn" target="_blank">{ label }</a> )}
+        </div>
+        <Slider {...settings}>
+          {desktopSlider}
+        </Slider>
       </div>
-      <Slider {...settings}>
-        {desktopSlider}
-      </Slider>
-    </div>
+    </Fade>
   )
 }
 

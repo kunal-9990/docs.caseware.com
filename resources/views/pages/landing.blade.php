@@ -43,6 +43,16 @@
                         </div>
                     @endif
 
+                    @if($section->acf_fc_layout == "navigation")
+                        <div class="container container--mk4 landing__product-nav">
+                            <div class="row">
+                                <div class="col-sm-12">  
+                                    <div data-component="product-navigation" data-props="{{ htmlspecialchars(json_encode($section)) }}"></div>
+                                </div>
+                            </div>
+                        </div>                                
+                    @endif
+
                     @if($section->acf_fc_layout == "carousel")
                         <div class="container container--mk4 landing__carousel">
                             <div class="row">
@@ -86,7 +96,7 @@
                                             @endif
                                             @foreach($block->links as $link)
                                                 <div>
-                                                    <a href="{{$link->link_url}}" target="_blank">
+                                                    <a href="{{$link->link_url}}" target="_blank" class="btn--arrow">
                                                         {{ $link->link_text }}
                                                     </a>
                                                 </div>
