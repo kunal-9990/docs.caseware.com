@@ -44,6 +44,7 @@ class PageController extends Controller
         return view('pages.home', compact('pageContent', 'recent', 'exclusiveTo','title'));
     }
 
+    
     // blog
     function blog(){
 
@@ -51,8 +52,9 @@ class PageController extends Controller
 
         $page = $this->cms->page('blog');
         $pageContent = $page['results'][0];
+        $posts = $this->cms->posts();
 
-        return view('pages.blog-overview', compact('pageContent', 'recent', 'exclusiveTo','title' ));
+        return view('pages.blog-overview', compact('pageContent', 'posts', 'recent', 'exclusiveTo','title' ));
     }
 
     // search

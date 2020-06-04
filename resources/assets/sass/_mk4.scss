@@ -80,7 +80,7 @@ a.btn--arrow {
         height: 70%;
         bottom: 0;
         left: 0;
-        background-image: linear-gradient(rgba($dark-grey, 0), rgba($dark-grey, 0.7));
+        background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));
     }
 
     .container {
@@ -369,7 +369,7 @@ In This Article
             max-width: 75%;
         }
     }
-    
+
     .social {
         padding-bottom: 0;
     }
