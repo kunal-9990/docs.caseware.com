@@ -18,15 +18,27 @@
 <body>
     <div class="page-wrap">
        
-        <div class="landing">
+        <div class="blog-overview">
 
-        @include('partials.header-ghost')
-        
-        <main id="main">
-        <h1>blog</h1>
+            @include('partials.header-ghost')
 
-        </main>
-    </div>
+            <div class="blog-overview__banner">
+                <div
+                    data-component="banner" 
+                    data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
+                ></div>
+            </div>
+            
+            <main id="main">
+                <div class="container container--mk4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                           <h1>blog</h1>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
 
         @include('partials.cookie-consent')

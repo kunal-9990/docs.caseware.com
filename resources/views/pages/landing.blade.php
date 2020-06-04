@@ -24,7 +24,7 @@
         
         <div class="landing__banner">
             <div
-                data-component="landing-banner" 
+                data-component="banner" 
                 data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
             ></div>
         </div>
