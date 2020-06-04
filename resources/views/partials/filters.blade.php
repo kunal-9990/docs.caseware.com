@@ -98,7 +98,7 @@
             </label>
             <span class="switch-name">EBP</span>
             <div class="switch-name__hover-msg">OnPoint<span class="switch-name__no-wrap">&nbsp;</span><span
-                    class="switch-name__no-wrap">&nbsp;</span>Audit</div>
+                    class="switch-name__no-wrap">&nbsp;</span>EBP</div>
         </div>        
     </div>
 </span>
