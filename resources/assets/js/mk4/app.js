@@ -3,7 +3,7 @@ import ReactHabitat from 'react-habitat'
 import WNBanner from './components/whats-new/WNBanner'
 import Feature from './components/whats-new/Feature'
 import EmbeddedVideo from './components/whats-new/EmbeddedVideo'
-import LandingBanner from './components/landing/LandingBanner'
+import Banner from './components/Banner'
 import ProductNavigation from './components/landing/ProductNavigation'
 import Downloads from './components/landing/Downloads'
 import Announcement from './components/Announcement'
@@ -24,8 +24,8 @@ const containers = [
     component: WNBanner
   },
   {
-    id: 'landing-banner',
-    component: LandingBanner
+    id: 'banner',
+    component: Banner
   },
   {
     id: 'announcement',

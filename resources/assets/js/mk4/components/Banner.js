@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LandingBanner = ({ banner }) => {
+const Banner = ({ banner }) => {
 
   const BannerStyle = {
     backgroundImage: 'url(' + banner.background_image.url + ')',
@@ -17,11 +17,11 @@ const LandingBanner = ({ banner }) => {
   }
 
   return (
-    <section className="landing-banner" style={BannerStyle}>
+    <section className="banner" style={BannerStyle}>
       <div className="container container--mk4">
         <div className="row">
           <div className="col-sm-12">
-            <div className="landing-banner__wrapper">
+            <div className="banner__wrapper">
               <div>
               <h1 className="banner-size">{ banner.header }</h1>
               { banner.strapline && (
@@ -39,4 +39,4 @@ const LandingBanner = ({ banner }) => {
   )
 }
 
-export default LandingBanner
+export default Banner
