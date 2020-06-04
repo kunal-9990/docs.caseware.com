@@ -91,5 +91,14 @@
             <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span
                     class="switch-name__no-wrap">&nbsp;</span>Audit</div>
         </div>
+        <div class="switch-wrap epb @if($mobile == true) mobile @endif">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="switch-name">EPB</span>
+            <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span
+                    class="switch-name__no-wrap">&nbsp;</span>EPB</div>
+        </div>
     </div>
 </span>
