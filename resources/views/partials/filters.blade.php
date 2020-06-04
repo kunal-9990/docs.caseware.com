@@ -87,6 +87,15 @@
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>
+            <span class="switch-name">EBP</span>
+            <div class="switch-name__hover-msg">OnPoint<span class="switch-name__no-wrap">&nbsp;</span><span
+                    class="switch-name__no-wrap">&nbsp;</span>EBP</div>
+        </div>
+        <div class="switch-wrap auditcan @if($mobile == true) mobile @endif">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
             <span class="switch-name">CaseWare Audit</span>
             <div class="switch-name__hover-msg">CaseWare<span class="switch-name__no-wrap">&nbsp;</span><span
                     class="switch-name__no-wrap">&nbsp;</span>Audit</div>

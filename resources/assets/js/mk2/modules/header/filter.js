@@ -116,6 +116,7 @@ module.exports = () => {
       auditcan: $(".switch-wrap.auditcan:not(.mobile)").hasClass("is-active"),
       collaborate: $(".switch-wrap.collaborate:not(.mobile)").hasClass("is-active"),
       auditint: $(".switch-wrap.auditint:not(.mobile)").hasClass("is-active"),
+      ebp: $(".switch-wrap.ebp:not(.mobile)").hasClass("is-active"),
     };
 
     applyFilter(filterSettings);
@@ -135,6 +136,7 @@ module.exports = () => {
       auditcan: $(".switch-wrap.auditcan.mobile").hasClass("is-active"),
       collaborate: $(".switch-wrap.collaborate.mobile").hasClass("is-active"),
       auditint: $(".switch-wrap.auditint.mobile").hasClass("is-active"),
+      ebp: $(".switch-wrap.ebp.mobile").hasClass("is-active"),
     };
 
     applyFilter(filterSettings);
