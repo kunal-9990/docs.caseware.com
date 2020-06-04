@@ -33,7 +33,7 @@
                 <div class="container container--mk4">
                     <div class="row">
                         <div class="col-sm-12">
-                           <h1>blog</h1>
+                           <div data-component="blog-overview" data-props="{{htmlspecialchars(json_encode($posts))}}" ></div>
                         </div>
                     </div>
                 </div>
