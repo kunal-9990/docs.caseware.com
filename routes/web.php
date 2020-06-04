@@ -31,6 +31,9 @@ Route::get('/', 'PageController@home');
 //     return redirect('/2019/webapps/30/en/webapps');
 // });
 
+Route::get('/blog', 'PageController@blog');
+
+
 
 
 
