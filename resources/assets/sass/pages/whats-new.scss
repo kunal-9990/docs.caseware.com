@@ -8,6 +8,7 @@
             &:first-child .col-sm-8 {
                 display: block;
             }
+
             &:last-child {
                 display: none;
             }
@@ -32,6 +33,7 @@
             &:first-child {
                 margin-bottom: 0;
             }
+
             &:last-child {
                 margin-top: 0;
             }
@@ -48,13 +50,15 @@
     .docs__container {
         flex-direction: column;
         margin-top: 4.8rem;
-        & > div {
+
+        &>div {
             max-width: 100%;
         }
+
         .ribbon {
-            background-color: #0082ad;
+            border-bottom: #0082ad solid 3px;
             padding: 1rem;
-            color: white;
+            color: black;
             font-size: 16px;
         }
     }
@@ -68,7 +72,9 @@
             align-items: flex-start;
 
             &--no-voter {
-                h2, h3 {
+
+                h2,
+                h3 {
                     margin-bottom: 3rem;
                 }
             }
@@ -125,7 +131,7 @@
         align-items: center;
         margin-bottom: 2.4rem;
         width: 18rem;
-        color: $light-grey-2;
+        // color: $light-grey-2;
         line-height: 1;
 
         .arrow {
@@ -136,7 +142,7 @@
             svg {
                 width: 2rem;
                 // height: auto;
-                fill: $light-grey-2;
+                fill: $dark-grey;
                 transition: all 0.1s;
             }
 
@@ -144,16 +150,9 @@
                 fill: $caseware-blue;
             }
 
-            // &--up.arrow--voted svg {
-            //     fill: #6EAB7E;
-            // }
-
-            // &--down.arrow--voted svg {
-            //     fill: #D45454;
-            // }
-
             &:hover svg {
-                fill: #ccc;
+                fill: #4da8c6;
+                color: #4da8c6;
             }
         }
 
@@ -164,7 +163,7 @@
             align-items: center;
             justify-content: center;
             height: 3rem;
-            color: #ddd;
+            color: $dark-grey;
             text-align: center;
 
             &__count {
@@ -191,12 +190,12 @@
 
     .embedded-video {
         position: relative;
-        
+
         img {
             width: 100%;
             height: auto;
             cursor: pointer;
-    
+
             &.embedded-video__play-btn {
                 position: absolute;
                 top: 50%;
@@ -204,13 +203,13 @@
                 transform: translate(-50%, -50%);
                 width: 10%;
             }
-    
-            &.embedded-video__no-cursor{
+
+            &.embedded-video__no-cursor {
                 cursor: auto;
             }
         }
-    
-        & > div:first-child {
+
+        &>div:first-child {
             position: absolute;
             top: 0;
         }
@@ -227,13 +226,14 @@
                 &:first-child .col-sm-8 {
                     display: none;
                 }
+
                 &:last-child {
                     display: block;
                     position: absolute;
                     right: 0;
                     top: 0;
-                    pointer-events: none;        
-    
+                    pointer-events: none;
+
                     .col-sm-8 {
                         float: right;
                         padding: 0;
@@ -250,14 +250,15 @@
                 }
             }
         }
-        
-        &__banner {  
+
+        &__banner {
             .banner__wrapper {
                 padding: 6rem 0;
             }
 
             h1 {
                 font-size: 3.2rem;
+
                 span {
                     display: inline;
                 }
@@ -268,7 +269,7 @@
             }
         }
 
-        .feature {  
+        .feature {
             &__header {
                 flex-direction: row;
                 align-items: center;
@@ -288,10 +289,10 @@
             &__content {
                 padding-left: 4.8rem;
             }
-            
+
             &--sub-feature {
                 margin-left: 4.2rem;
-        
+
                 .feature__header--no-voter {
                     padding-top: 0;
                 }
@@ -304,27 +305,15 @@
             .voter {
                 flex-direction: column;
                 width: 2.8rem;
-
-                &--1 {
-                    margin: 0 2rem 0 0;
-        
-                    .arrow svg {
-                        width: 2.8rem;
-                        max-height: 2.6rem;
-                    }
-                }
-        
-                &--2 {
-                    margin: 0 2rem 0 0;
-        
-                    .arrow svg {
-                        width: 2.8rem;
-                        max-height: 2.5rem;
-                    }
-                }
+                margin: 0 2rem 0 0;
 
                 .arrow {
                     font-size: 2.5rem;
+
+                    svg {
+                        width: 2.8rem;
+                        max-height: 2.5rem;
+                    }
                 }
 
                 .total {
@@ -355,13 +344,15 @@
                 &:first-child .col-sm-8 {
                     display: block;
                 }
+
                 &:last-child {
                     display: none;
                 }
             }
         }
+
         &__banner {
-            
+
             h1 {
                 font-size: 3.2rem;
             }
