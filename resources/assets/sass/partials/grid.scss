@@ -1,3 +1,44 @@
 .grid {
-  
+    color: $white;
+    &__bg {
+        background-size: cover;
+    }
+}
+
+@include mq(sm) {
+
+    .grid {
+        margin: 0 -1.2rem;
+
+        .float-left {
+            float: left;
+        }
+
+        .float-right {
+            float: right;
+        }
+
+        & > div {
+            float: left;
+            margin: 1.2rem;
+        }
+
+        .colspan-1 {
+            width: calc((100% / 3) - 2.4rem);
+        }
+
+        .colspan-2 {
+            width: calc(((100% / 3) * 2) - 2.4rem);
+        }
+
+        .rowspan-1 {
+            height: 0;
+            padding-bottom: 25%;
+        }
+
+        .rowspan-2 {
+            height: 0;
+            padding-bottom: calc(50% + 2.4rem)
+        }
+    }
 }
