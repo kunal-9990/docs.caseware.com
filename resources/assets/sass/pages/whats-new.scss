@@ -125,7 +125,7 @@
         align-items: center;
         margin-bottom: 2.4rem;
         width: 18rem;
-        color: $light-grey-2;
+        // color: $light-grey-2;
         line-height: 1;
 
         .arrow {
@@ -136,7 +136,7 @@
             svg {
                 width: 2rem;
                 // height: auto;
-                fill: $light-grey-2;
+                fill: $dark-grey;
                 transition: all 0.1s;
             }
 
@@ -144,16 +144,9 @@
                 fill: $caseware-blue;
             }
 
-            // &--up.arrow--voted svg {
-            //     fill: #6EAB7E;
-            // }
-
-            // &--down.arrow--voted svg {
-            //     fill: #D45454;
-            // }
-
             &:hover svg {
-                fill: #ccc;
+                fill: #4da8c6;
+                color: #4da8c6;
             }
         }
 
@@ -164,7 +157,7 @@
             align-items: center;
             justify-content: center;
             height: 3rem;
-            color: #ddd;
+            color: #b1b1b1;
             text-align: center;
 
             &__count {
@@ -304,27 +297,15 @@
             .voter {
                 flex-direction: column;
                 width: 2.8rem;
-
-                &--1 {
-                    margin: 0 2rem 0 0;
-        
-                    .arrow svg {
-                        width: 2.8rem;
-                        max-height: 2.6rem;
-                    }
-                }
-        
-                &--2 {
-                    margin: 0 2rem 0 0;
-        
-                    .arrow svg {
-                        width: 2.8rem;
-                        max-height: 2.5rem;
-                    }
-                }
+                margin: 0 2rem 0 0;
 
                 .arrow {
                     font-size: 2.5rem;
+
+                    svg {
+                        width: 2.8rem;
+                        max-height: 2.5rem;
+                    }
                 }
 
                 .total {

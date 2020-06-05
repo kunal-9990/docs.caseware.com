@@ -44,6 +44,19 @@ class PageController extends Controller
         return view('pages.home', compact('pageContent', 'recent', 'exclusiveTo','title'));
     }
 
+    
+    // blog
+    function blog(){
+
+        // App::setLocale($lang);
+
+        $page = $this->cms->page('blog');
+        $pageContent = $page['results'][0];
+        $posts = $this->cms->posts();
+
+        return view('pages.blog-overview', compact('pageContent', 'posts', 'recent', 'exclusiveTo','title' ));
+    }
+
     // search
     function search($year, $product, $version, $lang){
         return view('pages.search', compact('recent'));

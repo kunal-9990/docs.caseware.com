@@ -1,17 +1,18 @@
 import ReactHabitat from 'react-habitat'
 
-import WNBanner from './components/whats-new/WNBanner'
-import Feature from './components/whats-new/Feature'
-import EmbeddedVideo from './components/whats-new/EmbeddedVideo'
-import LandingBanner from './components/landing/LandingBanner'
-import ProductNavigation from './components/landing/ProductNavigation'
-import Downloads from './components/landing/Downloads'
+import WNBanner from './components/pages/whats-new/WNBanner'
+import Feature from './components/pages/whats-new/Feature'
+import EmbeddedVideo from './components/pages/whats-new/EmbeddedVideo'
+import Banner from './components/Banner'
+import ProductNavigation from './components/pages/landing/ProductNavigation'
+import Downloads from './components/pages/landing/Downloads'
 import Announcement from './components/Announcement'
 import Survey from './components/Survey'
 import SocialShare from './components/SocialShare'
 import QuickLinks from './components/QuickLinks'
 import Carousel from './components/Carousel'
 import VideoGallery from './components/VideoGallery'
+import BlogOverview from './components/pages/BlogOverview'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -24,8 +25,8 @@ const containers = [
     component: WNBanner
   },
   {
-    id: 'landing-banner',
-    component: LandingBanner
+    id: 'banner',
+    component: Banner
   },
   {
     id: 'announcement',
@@ -66,6 +67,10 @@ const containers = [
   {
     id: 'product-navigation',
     component: ProductNavigation
+  },
+  {
+    id: 'blog-overview',
+    component: BlogOverview
   }
 ];
 
