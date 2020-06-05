@@ -52,9 +52,9 @@
             max-width: 100%;
         }
         .ribbon {
-            background-color: #0082ad;
+            border-bottom: #0082ad solid 3px;
             padding: 1rem;
-            color: white;
+            color: black;
             font-size: 16px;
         }
     }
@@ -157,7 +157,7 @@
             align-items: center;
             justify-content: center;
             height: 3rem;
-            color: #b1b1b1;
+            color: $dark-grey;
             text-align: center;
 
             &__count {
