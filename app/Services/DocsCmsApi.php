@@ -45,6 +45,11 @@ class DocsCmsApi
         ], $lifetime);
      }
 
+     public function tags($lifetime = null)
+     {
+         return $this->_get('/wp-json/wp/v2/tags', [], $lifetime);
+     }
+
     /**
      * Get posts based on category
      * @param integer $category Wordpress category ID

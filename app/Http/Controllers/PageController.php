@@ -53,8 +53,10 @@ class PageController extends Controller
         $page = $this->cms->page('blog');
         $pageContent = $page['results'][0];
         $posts = $this->cms->posts();
+        $categories = $this->cms->categories();
+        $tags = $this->cms->tags();
 
-        return view('pages.blog-overview', compact('pageContent', 'posts', 'recent', 'exclusiveTo','title' ));
+        return view('pages.blog-overview', compact('pageContent', 'posts', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
     }
 
     // search
