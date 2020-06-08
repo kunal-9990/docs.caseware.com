@@ -12,13 +12,19 @@ const GridPattern = [
 ]
 
 const GridItem = ({ item })=> {
-  console.log(item.image)
+  console.log(item.excerpt)
   return (
-    <div key={item.key} className="grid-item">
-      <div key={item.key} className="grid-item__bg">
-        {item.title}
+    <a href={'/blog/' + item.slug}>
+      <div key={item.key} className="grid-item">
+          <div className="grid-item__wrapper">
+            <h2>{item.title}</h2>
+            <div className="grid-item__excerpt">
+              <div dangerouslySetInnerHTML={{__html: item.excerpt.rendered}} />
+            </div>
+            <a href={'/blog/' + item.slug}>Read more</a>
+          </div>
       </div>
-    </div>
+    </a>
   )
 }
 
