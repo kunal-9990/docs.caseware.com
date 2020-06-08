@@ -13,7 +13,10 @@ class BlogOverview extends Component {
 
     componentDidMount() {
 
-      this.props.results.map((item, i) => {
+      this.props.posts.results.map((item, i) => {
+        let tagList = item.tags.map(id => this.props.tags.results.find(o => o.id === id).name);
+        let catList = item.categories.map(id => this.props.categories.results.find(o => o.id === id).name);
+        
         this.setState(prevState => ({ 
           postArray: [
             ...prevState.postArray, 
@@ -23,7 +26,9 @@ class BlogOverview extends Component {
               title: item.title.rendered,
               date: item.date,
               tags: item.tags,
+              tagList: tagList,
               categories: item.categories,
+              categoryList: catList,
               acf: item.acf,
               excerpt: item.excerpt,
               image: item.acf.post_image
@@ -34,6 +39,7 @@ class BlogOverview extends Component {
     }
 
     render() {
+      console.log(this.props)
       return (
         <div>
           <Filter/>

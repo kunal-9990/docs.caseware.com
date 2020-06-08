@@ -1,6 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTag, faTags } from '@fortawesome/free-solid-svg-icons'
 
 const GridPattern = [
   { colspan: 1, rowspan: 2, float: 'left' },
@@ -12,14 +13,15 @@ const GridPattern = [
 ]
 
 const GridItem = ({ item })=> {
-  console.log(item.excerpt)
+  let filterList = item.categoryList.concat(item.tagList)
   return (
     <a href={'/blog/' + item.slug}>
       <div key={item.key} className="grid-item">
           <div className="grid-item__wrapper">
             <h2>{item.title}</h2>
-            <div className="grid-item__excerpt">
+            <div className="grid-item__hover">
               <div dangerouslySetInnerHTML={{__html: item.excerpt.rendered}} />
+              <FontAwesomeIcon icon={ filterList.length > 1 ? faTags : faTag } />&nbsp;{filterList.join(', ')}
             </div>
             <a href={'/blog/' + item.slug}>Read more</a>
           </div>
