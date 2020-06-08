@@ -13,17 +13,19 @@ const GridPattern = [
 ]
 
 const GridItem = ({ item })=> {
-  let filterList = item.categoryList.concat(item.tagList)
   return (
     <a href={'/blog/' + item.slug}>
       <div key={item.key} className="grid-item">
           <div className="grid-item__wrapper">
             <h2>{item.title}</h2>
             <div className="grid-item__hover">
-              <div dangerouslySetInnerHTML={{__html: item.excerpt.rendered}} />
-              <FontAwesomeIcon icon={ filterList.length > 1 ? faTags : faTag } />&nbsp;{filterList.join(', ')}
+              <div dangerouslySetInnerHTML={{__html: item.excerpt.rendered}} className="grid-item__excerpt" />
+              <div className="grid-item__filter">
+                <FontAwesomeIcon icon={ item.filterList.length > 1 ? faTags : faTag } />
+                {item.filterList.join(', ')}
+              </div>
             </div>
-            <a href={'/blog/' + item.slug}>Read more</a>
+            <div className="grid-item__cta">Read more</div>
           </div>
       </div>
     </a>
