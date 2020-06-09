@@ -37,7 +37,7 @@ const Grid = ({ items }) => (
     <div className="grid">
       {items.map((item, i) => (
         <div 
-          key={item.id}
+          key={i}
           style={{ background: item.image ? `url(` + item.image.url + `) center center / cover` : "#CCC"}}
           className={'grid__bg colspan-' + GridPattern[i % 6]['colspan'] + ' rowspan-' + GridPattern[i % 6]['rowspan'] + ' float-' + GridPattern[i % 6]['float'] }
         >
