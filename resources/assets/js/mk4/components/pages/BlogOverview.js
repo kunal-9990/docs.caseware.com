@@ -8,8 +8,11 @@ class BlogOverview extends Component {
       super(props);
       this.state = {
         postArray: [],
-        filters: []
+        dropdownItems: [],
+        selectedFilters: []
       };
+
+      this.updateSelectedFilters = this.updateSelectedFilters.bind(this)
     }
 
     componentDidMount() {
@@ -25,16 +28,17 @@ class BlogOverview extends Component {
       this.props.categories.results.map(category => {
         categories.push(category.name)
       })
-
+      
       this.setState({ 
-        filters: [{
-                    "title": "tags",
-                    "items": tags
-                  }, 
-                  {
-                    "title": "cat", 
-                    "items": categories
-                  }]
+        selectedFilters: categories.concat(tags),        
+        dropdownItems: [{
+          "title": "tags title",
+          "items": tags
+        }, 
+        {
+          "title": "category title", 
+          "items": categories
+        }]
       })
 
       this.props.posts.results.map((item, i) => {
@@ -54,32 +58,45 @@ class BlogOverview extends Component {
               acf: item.acf,
               excerpt: item.excerpt,
               image: item.acf.post_image,
-              filterList: catList.concat(tagList)
+              postFilters: catList.concat(tagList)
             }
           ]
         }))
       })
     }
 
-    selectAllCategories = () => {
+    updateSelectedFilters(item) {    
       this.setState(prevState => ({
-          checkedCategories: prevState.allCategoriesChecked ? [] : this.props.categoryList,
-          allCategoriesChecked: !prevState.allCategoriesChecked
-      }), () => this.filterModules())
-  }
+        selectedFilters: prevState.selectedFilters.includes(item) ? prevState.selectedFilters.filter(i => i !== item) : [...prevState.selectedFilters, item]
+      }), () => this.filterPosts())
+    }
 
-  updateSelectedCategories = categoryId => {
-      this.setState(prevState => ({ 
-          checkedCategories: prevState.checkedCategories.includes(categoryId) ? prevState.checkedCategories.filter(category => category !== categoryId) : [...prevState.checkedCategories, categoryId],
-          allCategoriesChecked: this.state.checkedCategories.length !== this.props.categoryList ? false : prevState.allCategoriesChecked
-      }), () => this.filterModules())
-  }
+    filterPosts() {
+      console.log(this.state) 
+      
+
+
+
+      // let filteredModules = this.props.modules.filter(module => {
+      //     let matchingCategories = this.state.allCategoriesChecked ? true : module.categories.some(r => this.state.checkedCategories.includes(r))
+      //     let searchResult = searchableContent.toLowerCase().includes(this.state.searchValue.toLowerCase())
+      //     if (matchingCategories && searchResult) {
+      //         return module
+      //     }
+      // })
+
+      // // this.setState({ modules: filteredModules }, () => { this.handlePageClick({ selected: 0 }) });
+      // this.setState({ modules: filteredModules })
+    }
 
     render() {
+
       return (
         <div>
           <Filter 
-            filters={this.state.filters} 
+            dropdownItems={this.state.dropdownItems} 
+            selectedFilters={this.state.selectedFilters}
+            updateSelectedFilters={this.updateSelectedFilters}
           />
           <Grid items={this.state.postArray} />
         </div>

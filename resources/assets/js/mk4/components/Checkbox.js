@@ -10,10 +10,13 @@ const Checkbox = ({
     onChange
 }) => (
     <div className="checkbox">
-        <input type="checkbox" name={name} checked={checked} onChange={onChange} />
-        <label className={className}>
-            {label}
-        </label>
+        <input 
+          type="checkbox" 
+          name={name} 
+          checked={checked} 
+          onChange={onChange} 
+        />
+        <label className={className}>{label}</label>
     </div>
 );
 

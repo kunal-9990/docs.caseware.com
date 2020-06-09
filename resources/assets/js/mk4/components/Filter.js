@@ -9,31 +9,28 @@ class Filter extends Component {
     }
 
     render() {
-
       return (
         <div className="filter">
           <div className="filter__wrapper">
-
-              <ul>
-                <Checkbox 
-                    checked={this.state.allCategoriesChecked} 
-                    label={this.props.t('moduleList.all') + ' (' + this.props.modules.length + ')'}
-                    onChange={() => this.selectAllCategories()}
-                    name={'all'} 
-                />
-                {this.props.categories.map(category => {
-                    if (category.id !== 1) {
-                        return (
-                            <Checkbox 
-                                checked={this.state.checkedCategories.includes(category.id)} 
-                                key={category.id}
-                                label={category.name + ' (' + category.count + ')'}
-                                onChange={() => this.updateSelectedCategories(category.id)}
-                                name={category.name} 
-                            />
-                        )
+            <ul>
+              {this.props.dropdownItems.map(group => (
+                <div>
+                  <h3>{ group.title }</h3>
+                  {group.items.map((item, i) => {
+                    if (item !== "Uncategorized") {
+                      return (
+                        <Checkbox 
+                          checked={this.props.selectedFilters.includes(item)} 
+                          key={item + '-' + i}
+                          label={item}
+                          onChange={() => this.props.updateSelectedFilters(item)}
+                          name={item} 
+                        />
+                      )
                     }
-                })}
+                  })}
+                </div>
+              ))}
             </ul>
           </div>
         </div>
