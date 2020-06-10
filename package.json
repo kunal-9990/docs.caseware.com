@@ -46,6 +46,7 @@
         "prop-types": "^15.7.2",
         "react-app-polyfill": "^1.0.6",
         "react-habitat": "^1.0.1",
+        "react-paginate": "^6.3.2",
         "react-reveal": "^1.2.2",
         "react-share": "^4.1.0",
         "react-slick": "^0.25.2",

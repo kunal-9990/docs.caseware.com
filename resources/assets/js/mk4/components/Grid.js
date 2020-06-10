@@ -21,7 +21,7 @@ const GridItem = ({ item })=> {
             <div className="grid-item__hover">
               <div dangerouslySetInnerHTML={{__html: item.excerpt.rendered}} className="grid-item__excerpt" />
               <div className="grid-item__filter">
-                <FontAwesomeIcon icon={ item.postFilters.length > 1 ? faTags : faTag } />
+                {item.postFilters.length > 0 && (<FontAwesomeIcon icon={ item.postFilters.length > 1 ? faTags : faTag } />)}
                 {item.postFilters.join(', ')}
               </div>
             </div>
@@ -44,6 +44,9 @@ const Grid = ({ items }) => (
           <GridItem item={item} />
         </div>
       ))}
+
+
+
     </div>
   </Fade>
 )
