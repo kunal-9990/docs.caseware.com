@@ -84,24 +84,30 @@ class BlogOverview extends Component {
     }, () => this.paginatePosts())
   }
 
-  updateSelectedFilters(item) {  
-    console.log("!! u   item: ", item)  
-    this.setState(prevState => ({
-      selectedFilters: prevState.selectedFilters.includes(item) ? prevState.selectedFilters.filter(i => i !== item) : [...prevState.selectedFilters, item]
-    }), () => this.filterPosts())
+  updateSelectedFilters(selectedFilters) {  
+    // console.log("updateSelectedFitlers", selectedFilters)
+    // console.log("length", selectedFilters.length)
+    // console.log(this.allPostFilters)
+    // this.setState({ 
+    //   selectedFilters: selectedFilters.length > 0 ? selectedFilters : this.allPostFilters
+    // }, () => this.filterPosts())
+
+    this.setState({ selectedFilters }, () => this.filterPosts())
   }
 
   filterPosts() {
     let filteredPosts = []
     this.allPosts.map((post, i) => {
-      if (this.state.selectedFilters.some(r => post.postFilters.includes(r))) {
+      if (this.state.selectedFilters.some(r => post.postFilters.includes(r.label))) {
         filteredPosts.push(post)
       }
     })
-    this.setState({ selectedPosts: filteredPosts }, () => this.paginatePosts())
+    this.setState({ 
+      selectedPosts: this.state.selectedFilters.length > 0 ? filteredPosts : this.allPosts
+    }, () => this.paginatePosts())
   }
 
-  
+
   handlePageClick(data) {
     this.setState({ pageNumber: data.selected }, () => {this.paginatePosts()})
   }
@@ -114,7 +120,7 @@ class BlogOverview extends Component {
 
   render() {
     let pageCount = Math.ceil(this.state.selectedPosts.length / this.state.postsPerPage)
-console.log(this.state.dropdownOptions)
+    console.log("RENDER - SelectedFitlers:", this.state.selectedFilters)
     return (
       <div>
         <div className="filter">

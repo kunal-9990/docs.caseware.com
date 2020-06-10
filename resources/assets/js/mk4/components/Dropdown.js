@@ -9,9 +9,8 @@ class Dropdown extends React.Component {
   constructor() {
     super();
     this.state = {
-      multiValue: []
-    };
-
+			multiValue: []
+    }
     this.handleChange = this.handleChange.bind(this);
   }
 
