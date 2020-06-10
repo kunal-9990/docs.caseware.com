@@ -2,11 +2,8 @@ import React, { Component } from 'react'
 import ReactPaginate from 'react-paginate';
 import Dropdown from '../Dropdown'
 import Grid from '../Grid'
-
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSort, faFilter } from '@fortawesome/free-solid-svg-icons'
-
 
 class BlogOverview extends Component {
 
@@ -18,7 +15,7 @@ class BlogOverview extends Component {
       selectedFilters: [],
       paginatedPosts: [],
       pageNumber: 0,
-      postsPerPage: 9
+      postsPerPage: (this.props.postsPerPage && this.props.postsPerPage > 0) ? this.props.postsPerPage : 9
     }
 
     this.allPosts = []
@@ -31,16 +28,6 @@ class BlogOverview extends Component {
     
     let tags = []
     let categories = []
-
-    // this.props.tags.results.map(tag => {
-    //   tags.push(tag.name)
-    // });
-
-    // this.props.categories.results.map(category => {
-    //   categories.push(category.name)
-    // })
-
-    // this.allPostFilters = categories.concat(tags)
 
     this.props.tags.results.map(tag => {
       tags.push({ "value": tag.slug, "label": tag.name, group: "Filters" })
@@ -85,13 +72,6 @@ class BlogOverview extends Component {
   }
 
   updateSelectedFilters(selectedFilters) {  
-    // console.log("updateSelectedFitlers", selectedFilters)
-    // console.log("length", selectedFilters.length)
-    // console.log(this.allPostFilters)
-    // this.setState({ 
-    //   selectedFilters: selectedFilters.length > 0 ? selectedFilters : this.allPostFilters
-    // }, () => this.filterPosts())
-
     this.setState({ selectedFilters }, () => this.filterPosts())
   }
 
@@ -107,7 +87,6 @@ class BlogOverview extends Component {
     }, () => this.paginatePosts())
   }
 
-
   handlePageClick(data) {
     this.setState({ pageNumber: data.selected }, () => {this.paginatePosts()})
   }
@@ -120,45 +99,15 @@ class BlogOverview extends Component {
 
   render() {
     let pageCount = Math.ceil(this.state.selectedPosts.length / this.state.postsPerPage)
-    console.log("RENDER - SelectedFitlers:", this.state.selectedFilters)
     return (
       <div>
         <div className="filter">
           <div className="filter__wrapper">
-          <FontAwesomeIcon icon={faFilter} />
-          Filter :        
+            <FontAwesomeIcon icon={faFilter} />
             <Dropdown 
               options={this.state.dropdownOptions} 
               onChange={this.updateSelectedFilters}
             />
-            {/* <div>
-              <FontAwesomeIcon icon={faSort} />
-              Sort
-            </div> */}
-            <div>
-              {/* <FontAwesomeIcon icon={faFilter} />
-              Filter */}
-              <ul>
-                {/* {this.state.dropdownOptions.map(group => (
-                  <div>
-                    <h3>{ group.title }</h3>
-                    {group.items.map((item, i) => {
-                      if (item !== "Uncategorized") {
-                        return (
-                          <Checkbox 
-                            checked={this.state.selectedFilters.includes(item.value)} 
-                            key={item.value + '-' + i}
-                            label={item.value}
-                            onChange={() => this.updateSelectedFilters(item.value)}
-                            name={item.label} 
-                          />
-                        )
-                      }
-                    })}
-                  </div>
-                ))} */}
-              </ul>
-            </div>
           </div>
         </div>
         <Grid items={this.state.paginatedPosts} />

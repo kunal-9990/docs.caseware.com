@@ -1,9 +1,5 @@
 import React from 'react'
 import Select from 'react-select'
-// import 'react-select/dist/react-select.css'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSort, faFilter } from '@fortawesome/free-solid-svg-icons'
 
 class Dropdown extends React.Component {
   constructor() {

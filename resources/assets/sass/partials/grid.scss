@@ -80,18 +80,32 @@
 }
 
 .filter {
+    display: flex;
     color: #ccc;
+    margin: 4.8rem 0 2.4rem;
+    width: 100%;
+    max-width: 100%;
 
-    &_wrapper {
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        svg {
+            margin-right: 1.2rem;
+        }
+
         & > div {
-            display: block;
+            width: 100%;
         }
     }
 
     .select {
+        min-width: 20rem;
         z-index: 500 !important;
     }
 }
+
 
 .pagination {
     clear: both;
@@ -148,15 +162,8 @@
     }
 
     .filter {
-        display: flex;
-        justify-content: flex-end;
-        margin: 4.8rem 0;
-        padding: 2.4rem;
-        width: 100%;
-        border-bottom: 1px solid #ddd;
-    
         &__wrapper {
-            border:1px solid red;
+            width: auto;
         }
     }
 }
