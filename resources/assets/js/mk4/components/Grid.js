@@ -14,41 +14,38 @@ const GridPattern = [
 
 const GridItem = ({ item })=> {
   return (
-    <a href={'/blog/' + item.slug}>
-      <div key={item.key} className="grid-item">
-          <div className="grid-item__wrapper">
-            <h2>{item.title}</h2>
-            <div className="grid-item__hover">
-              <div dangerouslySetInnerHTML={{__html: item.excerpt.rendered}} className="grid-item__excerpt" />
-              <div className="grid-item__filter">
-                {item.postFilters.length > 0 && (<FontAwesomeIcon icon={ item.postFilters.length > 1 ? faTags : faTag } />)}
-                {item.postFilters.join(', ')}
+    <Fade bottom>
+      <a href={'/blog/' + item.slug}>
+        <div key={item.key} className="grid-item">
+            <div className="grid-item__wrapper">
+              <h2>{item.title}</h2>
+              <div className="grid-item__hover">
+                <div dangerouslySetInnerHTML={{__html: item.excerpt.rendered}} className="grid-item__excerpt" />
+                <div className="grid-item__filter">
+                  {item.postFilters.length > 0 && (<FontAwesomeIcon icon={ item.postFilters.length > 1 ? faTags : faTag } />)}
+                  {item.postFilters.join(', ')}
+                </div>
               </div>
+              <div className="grid-item__cta">Read more</div>
             </div>
-            <div className="grid-item__cta">Read more</div>
-          </div>
-      </div>
-    </a>
+        </div>
+      </a>
+    </Fade>
   )
 }
 
 const Grid = ({ items }) => (
-  <Fade bottom>
-    <div className="grid">
-      {items.map((item, i) => (
-        <div 
-          key={i}
-          style={{ background: item.image ? `url(` + item.image.url + `) center center / cover` : "#CCC"}}
-          className={'grid__bg colspan-' + GridPattern[i % 6]['colspan'] + ' rowspan-' + GridPattern[i % 6]['rowspan'] + ' float-' + GridPattern[i % 6]['float'] }
-        >
-          <GridItem item={item} />
-        </div>
-      ))}
-
-
-
-    </div>
-  </Fade>
+  <div className="grid">
+    {items.map((item, i) => (
+      <div 
+        key={i}
+        style={{ background: item.image ? `url(` + item.image.url + `) center center / cover` : "#CCC"}}
+        className={'grid__bg colspan-' + GridPattern[i % 6]['colspan'] + ' rowspan-' + GridPattern[i % 6]['rowspan'] + ' float-' + GridPattern[i % 6]['float'] }
+      >
+        <GridItem item={item} />
+      </div>
+    ))}
+  </div>
 )
 
 

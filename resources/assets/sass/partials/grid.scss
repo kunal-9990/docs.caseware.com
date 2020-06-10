@@ -79,6 +79,20 @@
     }
 }
 
+.filter {
+    color: #ccc;
+
+    &_wrapper {
+        & > div {
+            display: block;
+        }
+    }
+
+    .select {
+        z-index: 500 !important;
+    }
+}
+
 .pagination {
     clear: both;
     display: flex;

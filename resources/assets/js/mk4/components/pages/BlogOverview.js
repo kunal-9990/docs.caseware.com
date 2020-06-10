@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import ReactPaginate from 'react-paginate';
-import Filter from '../Filter'
+import Dropdown from '../Dropdown'
 import Grid from '../Grid'
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSort, faFilter } from '@fortawesome/free-solid-svg-icons'
+
 
 class BlogOverview extends Component {
 
@@ -9,7 +14,7 @@ class BlogOverview extends Component {
     super(props);
     this.state = {
       selectedPosts: [],
-      dropdownItems: [],
+      dropdownOptions: [],
       selectedFilters: [],
       paginatedPosts: [],
       pageNumber: 0,
@@ -27,12 +32,22 @@ class BlogOverview extends Component {
     let tags = []
     let categories = []
 
+    // this.props.tags.results.map(tag => {
+    //   tags.push(tag.name)
+    // });
+
+    // this.props.categories.results.map(category => {
+    //   categories.push(category.name)
+    // })
+
+    // this.allPostFilters = categories.concat(tags)
+
     this.props.tags.results.map(tag => {
-      tags.push(tag.name)
+      tags.push({ "value": tag.slug, "label": tag.name, group: "Filters" })
     });
 
     this.props.categories.results.map(category => {
-      categories.push(category.name)
+      categories.push({ "value": category.slug, "label": category.name, group: "Products" })
     })
 
     this.allPostFilters = categories.concat(tags)
@@ -56,19 +71,21 @@ class BlogOverview extends Component {
 
     this.setState({ 
       selectedPosts: this.allPosts,
-      selectedFilters: this.allPostFilters,        
-      dropdownItems: [{
-        "title": "tags title",
-        "items": tags
-      }, 
-      {
-        "title": "category title", 
-        "items": categories
-      }]
+      selectedFilters: this.allPostFilters,       
+      dropdownOptions: [
+        {
+          label: "Products",
+          options: categories
+        },
+        {
+          label: "Filters",
+          options: tags
+        }]
     }, () => this.paginatePosts())
   }
 
-  updateSelectedFilters(item) {    
+  updateSelectedFilters(item) {  
+    console.log("!! u   item: ", item)  
     this.setState(prevState => ({
       selectedFilters: prevState.selectedFilters.includes(item) ? prevState.selectedFilters.filter(i => i !== item) : [...prevState.selectedFilters, item]
     }), () => this.filterPosts())
@@ -97,14 +114,47 @@ class BlogOverview extends Component {
 
   render() {
     let pageCount = Math.ceil(this.state.selectedPosts.length / this.state.postsPerPage)
-
+console.log(this.state.dropdownOptions)
     return (
       <div>
-        <Filter 
-          dropdownItems={this.state.dropdownItems} 
-          selectedFilters={this.state.selectedFilters}
-          updateSelectedFilters={this.updateSelectedFilters}
-        />
+        <div className="filter">
+          <div className="filter__wrapper">
+          <FontAwesomeIcon icon={faFilter} />
+          Filter :        
+            <Dropdown 
+              options={this.state.dropdownOptions} 
+              onChange={this.updateSelectedFilters}
+            />
+            {/* <div>
+              <FontAwesomeIcon icon={faSort} />
+              Sort
+            </div> */}
+            <div>
+              {/* <FontAwesomeIcon icon={faFilter} />
+              Filter */}
+              <ul>
+                {/* {this.state.dropdownOptions.map(group => (
+                  <div>
+                    <h3>{ group.title }</h3>
+                    {group.items.map((item, i) => {
+                      if (item !== "Uncategorized") {
+                        return (
+                          <Checkbox 
+                            checked={this.state.selectedFilters.includes(item.value)} 
+                            key={item.value + '-' + i}
+                            label={item.value}
+                            onChange={() => this.updateSelectedFilters(item.value)}
+                            name={item.label} 
+                          />
+                        )
+                      }
+                    })}
+                  </div>
+                ))} */}
+              </ul>
+            </div>
+          </div>
+        </div>
         <Grid items={this.state.paginatedPosts} />
         { pageCount > 1 && (
           <ReactPaginate
