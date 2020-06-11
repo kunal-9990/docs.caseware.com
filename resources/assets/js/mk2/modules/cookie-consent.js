@@ -5,6 +5,7 @@ module.exports = () => {
 
   cookieBtn.addEventListener('click', () => {
     setCookie('cookie-consent', true)
+    console.log("CLICK");
     cookieNotification.style.display = "none";
   });
 
