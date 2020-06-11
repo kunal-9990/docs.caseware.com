@@ -93,6 +93,12 @@ a.btn--arrow {
         position: relative;
         z-index: 1;
     }
+    
+    &--short {
+        .banner__wrapper {
+            height: 30vh;
+        }
+    }
 
     &__wrapper {
         display: flex;

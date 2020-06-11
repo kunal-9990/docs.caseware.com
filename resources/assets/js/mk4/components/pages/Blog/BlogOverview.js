@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactPaginate from 'react-paginate';
-import Dropdown from '../Dropdown'
-import Grid from '../Grid'
+import Dropdown from '../../Dropdown'
+import Grid from '../../Grid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSort, faFilter } from '@fortawesome/free-solid-svg-icons'
 

@@ -25,11 +25,11 @@
                     'header' => $postContent->title->rendered
                 )
             ?>
-            <!-- <h1>{{ $postContent->author }} {{$postContent->date }}</h1> -->
             <div class="blog-detail__banner">
                 <div
                     data-component="banner" 
                     data-prop-banner="{{htmlspecialchars(json_encode($banner))}}"
+                    data-prop-short-banner="true"
                 ></div>
             </div>
             <div class="relative">
@@ -39,6 +39,20 @@
                 ></div>
             </div>
             <main id="main" class="mk4">
+                <div class="container container--mk4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div 
+                                data-component="blog-metadata"
+                                data-prop-author="{{ $postContent->author }}"
+                                data-prop-date="{{ $postContent->date }}"
+                                data-prop-tags="{{htmlspecialchars(json_encode($tags))}}"
+                                data-prop-categories="{{htmlspecialchars(json_encode($categories))}}"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+
                 @foreach($postContent->acf->modular_template as $section)
                     @if($section->acf_fc_layout == "text_block")
                         <div class="container container--mk4">

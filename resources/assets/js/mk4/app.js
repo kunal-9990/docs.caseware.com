@@ -12,7 +12,8 @@ import SocialShare from './components/SocialShare'
 import QuickLinks from './components/QuickLinks'
 import Carousel from './components/Carousel'
 import VideoGallery from './components/VideoGallery'
-import BlogOverview from './components/pages/BlogOverview'
+import BlogOverview from './components/pages/Blog/BlogOverview'
+import BlogMetaData from './components/pages/Blog/BlogMetaData'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -71,6 +72,10 @@ const containers = [
   {
     id: 'blog-overview',
     component: BlogOverview
+  },
+  {
+    id: 'blog-metadata',
+    component: BlogMetaData
   }
 ];
 
