@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShareAlt } from '@fortawesome/free-solid-svg-icons'
 import {
@@ -26,10 +26,6 @@ const SocialShare = ({ message }) => {
   const shareUrl = window.location.href;
   return (
     <div className="social">
-      
-      <div className="social__wrapper">
-        <span>Share</span>
-      </div>
 
       <div className="social__wrapper">
         <FontAwesomeIcon icon={faShareAlt} alt="share"/>

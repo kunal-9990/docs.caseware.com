@@ -25,46 +25,53 @@
                     'header' => $postContent->title->rendered
                 )
             ?>
+            <!-- <h1>{{ $postContent->author }} {{$postContent->date }}</h1> -->
             <div class="blog-detail__banner">
                 <div
                     data-component="banner" 
                     data-prop-banner="{{htmlspecialchars(json_encode($banner))}}"
                 ></div>
             </div>
+            <div class="relative">
+                <div 
+                    data-component="social-share"
+                    data-prop-message="{{ isset($pageContent->acf->social_message) ? $pageContent->acf->social_message : 'Check out this page from CaseWare!' }}"
+                ></div>
+            </div>
             <main id="main" class="mk4">
-            @foreach($postContent->acf->modular_template as $section)
-                @if($section->acf_fc_layout == "text_block")
-                    <div class="container container--mk4">
-                        <div class="row">
-                            <div class="col-sm-12">{!! $section->text_block !!}</div>
+                @foreach($postContent->acf->modular_template as $section)
+                    @if($section->acf_fc_layout == "text_block")
+                        <div class="container container--mk4">
+                            <div class="row">
+                                <div class="col-sm-12">{!! $section->text_block !!}</div>
+                            </div>
                         </div>
-                    </div>
-                @endif
-                @if($section->acf_fc_layout == "blockquote")
-                    <div class="container container--mk4">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="blockquote">
-                                    <h2>{{ $section->quote }}</h2>
-                                    <span>{{ $section->details }}</span>
+                    @endif
+                    @if($section->acf_fc_layout == "blockquote")
+                        <div class="container container--mk4">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="blockquote">
+                                        <h1>{{ $section->quote }}</h1>
+                                        <span>{{ $section->detail }}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endif
-                <!-- @if($section->acf_fc_layout == "gallery")
-                    <div class="container container--mk4 landing__carousel">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div
-                                    data-component="carousel"
-                                    data-prop-carousel="{{htmlspecialchars(json_encode($section->gallery))}}"
-                                ></div>
-                            </div>  
-                        </div>
-                    </div>    
-                @endif -->
-            @endforeach
+                    @endif
+                    <!-- @if($section->acf_fc_layout == "gallery")
+                        <div class="container container--mk4 landing__carousel">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div
+                                        data-component="carousel"
+                                        data-prop-carousel="{{htmlspecialchars(json_encode($section->gallery))}}"
+                                    ></div>
+                                </div>  
+                            </div>
+                        </div>    
+                    @endif -->
+                @endforeach
             </main>
         </div>
     </div>
