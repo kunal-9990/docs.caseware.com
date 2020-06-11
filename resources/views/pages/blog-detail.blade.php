@@ -17,20 +17,25 @@
 </head>
 <body>
     <div class="page-wrap">
-       
         <div class="blog-detail">
-
             @include('partials.header-ghost')
-
-            
-            
+            <?php 
+                $banner = array(
+                    'background_image' => $postContent->acf->post_image,
+                    'header' => $postContent->title->rendered
+                )
+            ?>
+            <div class="blog-detail__banner">
+                <div
+                    data-component="banner" 
+                    data-prop-banner="{{htmlspecialchars(json_encode($banner))}}"
+                ></div>
+            </div>
             <main id="main">
                 <div class="container container--mk4">
                     <div class="row">
                         <div class="col-sm-12">
-
-                        BLOG DETAIL
-
+                            BLOG DETAIL
                         </div>
                     </div>
                 </div>
