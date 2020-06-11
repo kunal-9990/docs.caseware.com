@@ -10,13 +10,16 @@
     a:hover {
         text-decoration: none;
     }
-    
-    &__bg {
-        background-size: cover;
+
+    &__wrapper {
         position: relative;
+        overflow: hidden;
 
         &:hover {
-            .grid-item__hover {
+            .grid-item__bg {
+                transform: scale(1.1);
+            }
+            .grid-item__hover-content {
                 opacity: 1;
                 height: 100%;           
                 transform: scaleY(1);
@@ -28,9 +31,16 @@
 .grid-item {
     margin: 1.2rem;
 
+    &__bg {
+        background-size: cover;
+        position: relative;
+        width: 100%;
+        transition: all 1s ease;
+    }
+
     &__wrapper {
         align-self: flex-end;
-        position: relative;
+        position: absolute;
         padding: 2.4rem;
         color: $white;
         z-index: 1;
@@ -47,7 +57,7 @@
         background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8));
     }
 
-    &__hover {
+    &__hover-content {
         margin: 1.2rem 0;
         height: 0;
         overflow: hidden;

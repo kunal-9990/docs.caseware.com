@@ -40,13 +40,18 @@
                         </div>
                     </div>
                 @endif
-                @if($section->acf_fc_layout == "gallery")
-                <div class="container container--mk4">
+                <!-- @if($section->acf_fc_layout == "gallery")
+                    <div class="container container--mk4 landing__carousel">
                         <div class="row">
-                            <div class="col-sm-12">GALLERY</div>
+                            <div class="col-sm-12">
+                                <div
+                                    data-component="carousel"
+                                    data-prop-carousel="{{htmlspecialchars(json_encode($section->gallery))}}"
+                                ></div>
+                            </div>  
                         </div>
-                    </div>
-                @endif
+                    </div>    
+                @endif -->
             @endforeach
             </main>
         </div>
