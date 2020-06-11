@@ -183,6 +183,7 @@ class Feature extends Component {
   
     render() {
       let feature = this.props.feature;
+      console.log(feature)
       return (
         <div 
           id={feature.title.trim().replace(/\s/g, '-')}
@@ -201,8 +202,12 @@ class Feature extends Component {
             )}
             { this.props.hierarchy === 1 ? (<h2>{ feature.title }</h2>) : (<h3>{ feature.title }</h3>)}
           </div>
-        
           <div className="feature__content">
+            {(feature.note && feature.note !== '')  && (
+              <div className={'feature__note ' + feature.note_type}>              
+                <div dangerouslySetInnerHTML={{__html: feature.note}}></div>              
+              </div>
+            )}
             { parse(feature.description, htmlParseOptions) }
           </div>
 

@@ -80,6 +80,10 @@
             }
         }
 
+        &__note {
+            margin-bottom: 2.4rem;
+        }
+
         &__content {
             padding-left: 0;
         }
@@ -130,7 +134,7 @@
         flex-direction: row;
         align-items: center;
         margin-bottom: 2.4rem;
-        width: 18rem;
+        width: 10rem;
         // color: $light-grey-2;
         line-height: 1;
 
