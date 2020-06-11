@@ -31,14 +31,23 @@
                     data-prop-banner="{{htmlspecialchars(json_encode($banner))}}"
                 ></div>
             </div>
-            <main id="main">
-                <div class="container container--mk4">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            BLOG DETAIL
+            <main id="main" class="mk4">
+            @foreach($postContent->acf->modular_template as $section)
+                @if($section->acf_fc_layout == "text_block")
+                    <div class="container container--mk4">
+                        <div class="row">
+                            <div class="col-sm-12">{!! $section->text_block !!}</div>
                         </div>
                     </div>
-                </div>
+                @endif
+                @if($section->acf_fc_layout == "gallery")
+                <div class="container container--mk4">
+                        <div class="row">
+                            <div class="col-sm-12">GALLERY</div>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
             </main>
         </div>
     </div>
