@@ -183,7 +183,6 @@ class Feature extends Component {
   
     render() {
       let feature = this.props.feature;
-      console.log(feature)
       return (
         <div 
           id={feature.title.trim().replace(/\s/g, '-')}
