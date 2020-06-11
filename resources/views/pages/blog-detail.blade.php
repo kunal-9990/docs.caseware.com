@@ -40,6 +40,18 @@
                         </div>
                     </div>
                 @endif
+                @if($section->acf_fc_layout == "blockquote")
+                    <div class="container container--mk4">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="blockquote">
+                                    <h2>{{ $section->quote }}</h2>
+                                    <span>{{ $section->details }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
                 <!-- @if($section->acf_fc_layout == "gallery")
                     <div class="container container--mk4 landing__carousel">
                         <div class="row">
