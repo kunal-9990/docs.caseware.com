@@ -46,8 +46,10 @@
                                 data-component="blog-metadata"
                                 data-prop-author="{{ $postContent->author }}"
                                 data-prop-date="{{ $postContent->date }}"
-                                data-prop-tags="{{htmlspecialchars(json_encode($tags))}}"
-                                data-prop-categories="{{htmlspecialchars(json_encode($categories))}}"
+                                data-prop-tags="{{ htmlspecialchars(json_encode($postContent->tags)) }}"
+                                data-prop-all-tags="{{ htmlspecialchars(json_encode($tags)) }}"
+                                data-prop-categories="{{ htmlspecialchars(json_encode($postContent->categories)) }}"
+                                data-prop-all-categories="{{ htmlspecialchars(json_encode($categories)) }}"
                             ></div>
                         </div>
                     </div>
