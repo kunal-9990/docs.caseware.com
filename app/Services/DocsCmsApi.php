@@ -87,16 +87,16 @@ class DocsCmsApi
     //  }
      public function page($slug, $lifetime = null)
      {
-
         return $this->_get('/wp-json/wp/v2/pages?slug='. $slug, [
             '_embed' => 1
         ], $lifetime);
      }
 
+     // TODO - FIX
      public function post($locale, $slug, $lifetime = null)
      {
-        $prepend = getWpLang($locale, request()->session()->get('lang'));
-
+        // $prepend = getWpLang($locale, request()->session()->get('lang'));
+        $prepend = '';
         return $this->_get($prepend . '/wp-json/wp/v2/posts?slug='. $slug, [
             '_embed' => 1
         ], $lifetime);
