@@ -44,7 +44,7 @@
                         <div class="col-sm-12">
                             <div 
                                 data-component="blog-metadata"
-                                data-prop-author="{{ $postContent->author }}"
+                                data-prop-author="{{ $postContent->_embedded->author[0]->name }}"
                                 data-prop-date="{{ $postContent->date }}"
                                 data-prop-tags="{{ htmlspecialchars(json_encode($postContent->tags)) }}"
                                 data-prop-all-tags="{{ htmlspecialchars(json_encode($tags)) }}"

@@ -133,6 +133,7 @@ class DocsCmsApi
         return $this->_get($prepend . '/wp-json/wp/v2/' . $post_type . '?slug=' . $post_name . '&_embed', [], $lifetime);
      }
 
+
     public function people($locale, $page=1, $lifetime = null)
     {
         $prepend = getWpLang($locale, request()->session()->get('lang'));
