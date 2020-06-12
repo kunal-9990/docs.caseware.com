@@ -182,11 +182,14 @@ In This Article
 *********************/
 
 .social {
-    display: flex;
-    flex-direction: row;
     position: relative;
-    align-items: center;
-    padding: 2.4rem;
+    padding: 4.8rem 0 0;
+
+    .col-sm-12 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
     &__wrapper {
         margin: 0 0.6rem 0 0;
@@ -383,18 +386,6 @@ In This Article
         }
     }
 
-    .social {
-        flex-direction: column;
-        position: absolute;
-        left: 1.2rem;
-        top: 2.4rem;
-        padding: 0;
-
-        &__wrapper {
-            margin: 0 0 0.6rem 0;
-        }
-    }
-    
 
     .ita {
         padding: 1.2rem 1.2rem 0 0;
@@ -411,6 +402,28 @@ In This Article
         margin-bottom: 7.2rem;
     }
 
+}
+
+@include mq(md) {
+    
+    .social {
+        position: absolute;
+        left: 1.2rem;
+        top: 2.4rem;
+        padding: 0;
+
+        .container {
+            width: auto;
+        }
+
+        .col-sm-12 {
+            flex-direction: column;
+        }
+
+        &__wrapper {
+            margin: 0 0 0.6rem 0;
+        }
+    }
 }
 
 @include mq(lg) {

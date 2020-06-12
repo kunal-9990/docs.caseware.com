@@ -34,7 +34,9 @@ class BlogOverview extends Component {
     });
 
     this.props.categories.results.map(category => {
-      categories.push({ "value": category.slug, "label": category.name, group: "Products" })
+      if (category.slug !== 'uncategorized') {
+        categories.push({ "value": category.slug, "label": category.name, group: "Products" })
+      }
     })
 
     this.allPostFilters = categories.concat(tags)
