@@ -44,6 +44,7 @@
                         <div class="col-sm-12">
                             <div 
                                 data-component="blog-metadata"
+                                data-prop-post-title="{{ $postContent->title->rendered }}"
                                 data-prop-author="{{ $postContent->_embedded->author[0]->name }}"
                                 data-prop-date="{{ $postContent->date }}"
                                 data-prop-tags="{{ htmlspecialchars(json_encode($postContent->tags)) }}"
@@ -75,18 +76,18 @@
                             </div>
                         </div>
                     @endif
-                    <!-- @if($section->acf_fc_layout == "gallery")
+                    @if($section->acf_fc_layout == "gallery")
                         <div class="container container--mk4 landing__carousel">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div
-                                        data-component="carousel"
-                                        data-prop-carousel="{{htmlspecialchars(json_encode($section->gallery))}}"
+                                        data-component="lightbox"
+                                        data-props="{{ htmlspecialchars(json_encode($section->gallery)) }}"
                                     ></div>
                                 </div>  
                             </div>
                         </div>    
-                    @endif -->
+                    @endif
                 @endforeach
             </main>
         </div>

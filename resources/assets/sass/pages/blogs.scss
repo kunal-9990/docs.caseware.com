@@ -1,6 +1,4 @@
-.blog-overview {
 
-}
 
 .blog-detail {
     position: relative;
@@ -40,9 +38,37 @@
             margin: 0.3rem 0;
         }
 
+        &__breadcrumb {
+            padding-bottom: 1.2rem;
+            font-weight: bold;
+        }
+
         span, svg {
             font-weight: bold;
             margin-right: 0.6rem;
+        }
+    }
+
+    .lightbox {
+        display: flex;
+        flex-direction: column;
+
+        & > div {
+            margin: 0 0 2.4rem 0;
+        }
+    }
+}
+
+@include mq(sm) {
+    .blog-detail {
+        .lightbox {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            & > div {
+                flex: 1 1 25%;
+                margin: 1.2rem;
+            }
         }
     }
 }
