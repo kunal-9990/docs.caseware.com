@@ -1,0 +1,74 @@
+
+
+.blog-detail {
+    position: relative;
+    
+    .blockquote {
+        position: relative;  
+        padding: 4.8rem 4.8rem 2.4rem;
+        border-left: 5px solid $caseware-blue;
+
+        &:before {
+            content: '\0022';
+            position: absolute;
+            top: 0;
+            left: -1rem;
+            font-size: 40rem;
+            line-height: 28rem;
+            color: #ccc;
+            font-family: "Times New Roman", Times, serif;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        span {
+            font-style: italic;
+        }
+    }
+
+    .metadata {
+        font-size: 1.6rem;
+        font-weight: 300;
+
+        & > div {
+            margin: 0.3rem 0;
+        }
+
+        &__breadcrumb {
+            padding-bottom: 1.2rem;
+            font-weight: bold;
+        }
+
+        span, svg {
+            font-weight: bold;
+            margin-right: 0.6rem;
+        }
+    }
+
+    .lightbox {
+        display: flex;
+        flex-direction: column;
+
+        & > div {
+            margin: 0 0 2.4rem 0;
+        }
+    }
+}
+
+@include mq(sm) {
+    .blog-detail {
+        .lightbox {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            & > div {
+                flex: 1 1 25%;
+                margin: 1.2rem;
+            }
+        }
+    }
+}

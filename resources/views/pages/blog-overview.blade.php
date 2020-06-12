@@ -33,7 +33,13 @@
                 <div class="container container--mk4">
                     <div class="row">
                         <div class="col-sm-12">
-                           <div data-component="blog-overview" data-props="{{htmlspecialchars(json_encode($posts))}}" ></div>
+                           <div 
+                                data-component="blog-overview" 
+                                data-prop-posts-per-page="{{ $pageContent->acf->posts_per_page }}"
+                                data-prop-posts="{{htmlspecialchars(json_encode($posts))}}" 
+                                data-prop-tags="{{htmlspecialchars(json_encode($tags))}}" 
+                                data-prop-categories="{{htmlspecialchars(json_encode($categories))}}" 
+                            ></div>
                         </div>
                     </div>
                 </div>

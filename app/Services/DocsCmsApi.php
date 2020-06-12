@@ -45,6 +45,11 @@ class DocsCmsApi
         ], $lifetime);
      }
 
+     public function tags($lifetime = null)
+     {
+         return $this->_get('/wp-json/wp/v2/tags', [], $lifetime);
+     }
+
     /**
      * Get posts based on category
      * @param integer $category Wordpress category ID
@@ -82,16 +87,16 @@ class DocsCmsApi
     //  }
      public function page($slug, $lifetime = null)
      {
-
         return $this->_get('/wp-json/wp/v2/pages?slug='. $slug, [
             '_embed' => 1
         ], $lifetime);
      }
 
+     // TODO - FIX
      public function post($locale, $slug, $lifetime = null)
      {
-        $prepend = getWpLang($locale, request()->session()->get('lang'));
-
+        // $prepend = getWpLang($locale, request()->session()->get('lang'));
+        $prepend = '';
         return $this->_get($prepend . '/wp-json/wp/v2/posts?slug='. $slug, [
             '_embed' => 1
         ], $lifetime);
@@ -127,6 +132,7 @@ class DocsCmsApi
 
         return $this->_get($prepend . '/wp-json/wp/v2/' . $post_type . '?slug=' . $post_name . '&_embed', [], $lifetime);
      }
+
 
     public function people($locale, $page=1, $lifetime = null)
     {

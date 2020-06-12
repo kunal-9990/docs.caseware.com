@@ -31,6 +31,12 @@ const REDIRECTS = require('./modules/redirects');
 const COOKIE_CONSENT = require('./modules/cookie-consent');
 
 $(document).ready(() => {
+    
+    // cookie consent notification
+    if(document.querySelector('.cookie')) {
+        COOKIE_CONSENT();
+    }
+
     // nav init
     if (document.querySelector('header.header')) {
         HEADER();
@@ -66,10 +72,5 @@ $(document).ready(() => {
 
     if (document.querySelector('.helpaccordiancol')) {
         REDIRECTS();
-    }
-
-    // cookie consent notification
-    if(document.querySelector('.cookie')) {
-        COOKIE_CONSENT();
     }
 });

@@ -45,16 +45,30 @@ class PageController extends Controller
     }
 
     
-    // blog
-    function blog(){
+    // Blog Overview
+    function blogOverview(){
 
         // App::setLocale($lang);
 
         $page = $this->cms->page('blog');
         $pageContent = $page['results'][0];
         $posts = $this->cms->posts();
+        $categories = $this->cms->categories();
+        $tags = $this->cms->tags();
 
-        return view('pages.blog-overview', compact('pageContent', 'posts', 'recent', 'exclusiveTo','title' ));
+        return view('pages.blog-overview', compact('pageContent', 'posts', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
+    }
+
+    // Blog Detail
+    function blogDetail($post){
+
+        // App::setLocale($lang);
+
+        $postContent = $this->cms->post('en', $post)['results'][0]; // TODO - remove hardcode english... if post doesnt exist show 404
+        $categories = $this->cms->categories();
+        $tags = $this->cms->tags();
+
+        return view('pages.blog-detail', compact('postContent', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
     }
 
     // search
