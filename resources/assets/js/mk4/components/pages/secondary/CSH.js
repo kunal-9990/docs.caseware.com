@@ -1,34 +1,38 @@
 import React from 'react'
 
 const SubAccordion = ({ subgroup }) => (
-  <div className="tab">
+  <div className="tab tab--subgroup">
     <input type="checkbox" id={subgroup.title.replace(/ /g, '-')}/>
-    <label className="tab-label" htmlFor={subgroup.title.replace(/ /g, '-')}>
-      <h2>{ subgroup.title }</h2>
+    <label className="tab__label" htmlFor={subgroup.title.replace(/ /g, '-')}>
+      <h3>{ subgroup.title }</h3>
     </label>
-    <div className="tab-content">
+    <div className="tab__content">
       { subgroup.description && (<p>{ subgroup.description }</p>) }
       { subgroup.links.map((link, i) => (
-        <a key={i} href={link.link}>{link.label}</a>
+        <div className="link" key={i}>
+          <a href={link.link}>{ link.label }</a>
+        </div>
       )) }
     </div>
   </div>
 )
 
 const Accordion = ({ id, title, description, contents }) => (
-  <div className="tab" key={id}>
+  <div className="tab tab--group" key={id}>
     <input type="checkbox" id={id}/>
-    <label className="tab-label" htmlFor={id}>
+    <label className="tab__label" htmlFor={id}>
       <h2>{ title }</h2>
     </label>
-    <div className="tab-content">
+    <div className="tab__content">
       { description && (<p>{ description }</p>) }
       { contents.map(content => {
         if (content.acf_fc_layout == 'sub_group') {
           return <SubAccordion subgroup={content.sub_group} />
         } else {
           return content.links.map((link, i) => (
-            <a key={i} href={link.link}>{link.label}</a>
+            <div className="link" key={i}>
+              <a href={link.link}>{ link.label }</a>
+            </div>
           ))
         }
       })}
