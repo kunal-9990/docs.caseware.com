@@ -71,6 +71,25 @@ class PageController extends Controller
         return view('pages.blog-detail', compact('postContent', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
     }
 
+    // TEMP - CSH
+    function csh(){
+        // App::setLocale($lang);
+        $page = $this->cms->page('context-sensitive-help');
+        $pageContent = $page['results'][0];
+        return view('pages.csh', compact('pageContent', 'recent', 'exclusiveTo','title'));
+    }
+
+    // TEMP - FAQ
+    function faq(){
+        // App::setLocale($lang);
+        $page = $this->cms->page('faq');
+        $pageContent = $page['results'][0];
+        return view('pages.faq', compact('pageContent', 'recent', 'exclusiveTo','title'));
+    }
+
+
+
+
     // search
     function search($year, $product, $version, $lang){
         return view('pages.search', compact('recent'));

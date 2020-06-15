@@ -15,6 +15,8 @@ import VideoGallery from './components/VideoGallery'
 import BlogOverview from './components/pages/blog/BlogOverview'
 import BlogMetaData from './components/pages/blog/BlogMetaData'
 import Lightbox from './components/pages/blog/Lightbox'
+import CSH from './components/pages/secondary/CSH'
+import FAQ from './components/pages/secondary/FAQ'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -81,6 +83,14 @@ const containers = [
   {
     id: 'lightbox',
     component: Lightbox
+  },
+  {
+    id: 'csh',
+    component: CSH
+  },
+  {
+    id: 'faq',
+    component: FAQ
   }
 ];
 
