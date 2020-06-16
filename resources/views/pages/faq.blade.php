@@ -35,7 +35,7 @@
                         <div class="col-sm-12">
                            <div 
                                 data-component="faq" 
-                                data-props="{{htmlspecialchars(json_encode($posts))}}" 
+                                data-props="{{htmlspecialchars(json_encode($pageContent->acf->faq))}}" 
                             ></div>
                         </div>
                     </div>
