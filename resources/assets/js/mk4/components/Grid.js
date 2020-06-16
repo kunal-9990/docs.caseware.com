@@ -36,7 +36,6 @@ const GridItem = ({ item })=> (
   </Fade>
 )
 
-
 const Grid = ({ items }) => (
   <div className="grid">
     {items.map((item, i) => (

@@ -143,11 +143,15 @@
         .rowspan-1 {
             height: 0;
             padding-bottom: 25%;
+
+            .grid-item__hover-content {
+                display: none;
+            }
         }
 
         .rowspan-2 {
             height: 0;
-            padding-bottom: calc(50% + 2.4rem)
+            padding-bottom: calc(50% + 2.4rem);
         }
 
         &__wrapper:hover {
@@ -202,6 +206,12 @@
 
         .colspan-2 {
             width: calc(((100% / 3) * 2) - 2.4rem);
+        }
+
+        .rowspan-1 {
+            .grid-item__hover-content {
+                display: block;
+            }
         }
     }
 }
