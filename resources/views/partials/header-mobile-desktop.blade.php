@@ -7,7 +7,7 @@
                 @elseif($logo == "audit")
                     src="/img/CW-Audit-22.svg"
                 @elseif($logo == "working-papers")
-                    src="/img/CW-wp-2019.png"
+                    src="/img/CW-wp-2020.svg"
             @endif
         alt="CaseWare Cloud logo">
     </div>

@@ -28,8 +28,8 @@ return [
     | to immediately expire on the browser closing, set that option.
     |
     */
-
-    'lifetime' => env('SESSION_LIFETIME', 1 * (60 * 24 * 365)),
+    // 1 year voting cookie lifetime 
+    'lifetime' => env('SESSION_LIFETIME', 60 * (60 * 24 * 365)),
 
     'expire_on_close' => false,
 

@@ -110,7 +110,7 @@
 
 @include mq($from: sm) {
     .footer {
-        min-height: 40rem;
+        min-height: 30rem;
         padding-top: 2.4rem;
         
         .row {

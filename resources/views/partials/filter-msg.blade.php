@@ -12,6 +12,9 @@ if($exclusiveTo == 'Caanalyticsai'){
 if($exclusiveTo == 'Auditcan'){
     $exclusiveTo = 'Audit';
 }
+if($exclusiveTo == 'Ebp'){
+$exclusiveTo = 'EBP';
+}
 @endphp
 
 <div class="filtermsg col-sm-9">

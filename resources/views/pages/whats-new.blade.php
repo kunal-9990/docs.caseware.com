@@ -49,7 +49,7 @@
         @if ($pageContent->acf->announcement)
         <div 
             data-component="announcement"
-            data-props='{"title":"{{$pageContent->acf->announcement->post_title}}", "description":"{{$pageContent->acf->announcement->post_content}}"}'
+            data-props="{{htmlspecialchars(json_encode($pageContent->acf->announcement))}}"
         ></div>
         @endif
 
@@ -62,7 +62,12 @@
                 "strapline":"{{$pageContent->acf->strapline}}"
             }'
         ></div>
-
+        <div class="relative">
+            <div 
+                data-component="social-share"
+                data-prop-message="{{ isset($pageContent->acf->social_message) ? $pageContent->acf->social_message : 'Check out this page from CaseWare!' }}"
+            ></div>
+        </div>
         <main id="main">
             <div class="whats-new">
                 <div class="whats-new__intro">
@@ -82,16 +87,12 @@
                                     </a>
                                     </li></ul>
                                     @endforeach
-                                    <div 
-                                        data-component="social-share"
-                                        data-prop-message="{{ isset($pageContent->acf->social_message) ? $pageContent->acf->social_message : 'Check out this page from CaseWare!' }}"
-                                    ></div>
                                 </div>
                                 <div class="col-sm-8" style="padding: 0">
                                     @if($pageContent->acf->featured_video !== "" || !empty($pageContent->acf->featured_video_thumbnail))
                                         <div 
                                             data-component="embedded-video"
-                                            data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? $pageContent->acf->featured_video_thumbnail->url : '' }}"
+                                            data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? htmlspecialchars(json_encode($pageContent->acf->featured_video_thumbnail)) : '' }}"
                                             data-prop-video-src="{{ $pageContent->acf->featured_video !== '' ? $pageContent->acf->featured_video : null}}"
                                             data-props='{"disableOnResponsiveSize": ["md", "lg"]}'
                                         ></div>
@@ -106,7 +107,7 @@
                                 @if($pageContent->acf->featured_video !== "" || !empty($pageContent->acf->featured_video_thumbnail))
                                     <div 
                                         data-component="embedded-video"
-                                        data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? $pageContent->acf->featured_video_thumbnail->url : '' }}"
+                                        data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? htmlspecialchars(json_encode($pageContent->acf->featured_video_thumbnail)) : '' }}"
                                         data-prop-video-src="{{ $pageContent->acf->featured_video !== '' ? $pageContent->acf->featured_video : null}}"
                                         data-props='{"disableOnResponsiveSize": ["xs", "sm", "lg-x"]}'
                                     ></div>
@@ -119,6 +120,9 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="docs__container">
+                                @if(isset($pageContent->acf->ribbon))
+                                    <div class="ribbon">{!! $pageContent->acf->ribbon !!}</div>
+                                @endif                                
                                 <div>
                                     @foreach($pageContent->acf->features as $feature)
                                     @php
