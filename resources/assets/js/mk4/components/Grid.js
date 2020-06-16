@@ -30,7 +30,7 @@ const GridItem = ({ item })=> (
               </div>
             </div>
           </div>
-          <div className="grid-item__cta">Read more</div>
+          <div className="arrow-cta"><div>Read More</div></div>
         </div>
     </div>
   </Fade>

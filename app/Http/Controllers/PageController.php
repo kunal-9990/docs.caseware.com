@@ -65,10 +65,11 @@ class PageController extends Controller
         // App::setLocale($lang);
 
         $postContent = $this->cms->post('en', $post)['results'][0]; // TODO - remove hardcode english... if post doesnt exist show 404
+        $posts = $this->cms->posts();
         $categories = $this->cms->categories();
         $tags = $this->cms->tags();
 
-        return view('pages.blog-detail', compact('postContent', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
+        return view('pages.blog-detail', compact('postContent', 'posts', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
     }
 
     // search

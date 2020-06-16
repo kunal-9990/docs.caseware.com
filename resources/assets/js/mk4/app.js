@@ -14,6 +14,7 @@ import Carousel from './components/Carousel'
 import VideoGallery from './components/VideoGallery'
 import BlogOverview from './components/pages/blog/BlogOverview'
 import BlogMetaData from './components/pages/blog/BlogMetaData'
+import RelatedArticles from './components/pages/blog/RelatedArticles'
 import Lightbox from './components/pages/blog/Lightbox'
 
 import 'react-app-polyfill/ie9'
@@ -77,6 +78,10 @@ const containers = [
   {
     id: 'blog-metadata',
     component: BlogMetaData
+  },
+  {
+    id: 'related-articles',
+    component: RelatedArticles
   },
   {
     id: 'lightbox',

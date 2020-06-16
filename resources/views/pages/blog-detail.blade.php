@@ -47,6 +47,7 @@
                                 data-prop-post-title="{{ $postContent->title->rendered }}"
                                 data-prop-author="{{ $postContent->_embedded->author[0]->name }}"
                                 data-prop-date="{{ $postContent->date }}"
+                                data-prop-read-time="{{ isset($postContent->acf->read_time) ? $postContent->acf->read_time : false }}"
                                 data-prop-tags="{{ htmlspecialchars(json_encode($postContent->tags)) }}"
                                 data-prop-all-tags="{{ htmlspecialchars(json_encode($tags)) }}"
                                 data-prop-categories="{{ htmlspecialchars(json_encode($postContent->categories)) }}"
@@ -54,7 +55,7 @@
                             ></div>
                         </div>
                     </div>
-                </div>
+                </div>      
 
                 @foreach($postContent->acf->modular_template as $section)
                     @if($section->acf_fc_layout == "text_block")
@@ -89,6 +90,20 @@
                         </div>    
                     @endif
                 @endforeach
+
+                <div class="container container--mk4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div 
+                                data-component="related-articles"
+                                data-prop-filter-post-id="{{ $postContent->id }}"
+                                data-prop-posts="{{ htmlspecialchars(json_encode($posts)) }}"
+                                data-prop-tags="{{ htmlspecialchars(json_encode($postContent->tags)) }}"
+                                data-prop-categories="{{ htmlspecialchars(json_encode($postContent->categories)) }}"
+                            ></div>
+                        </div>
+                    </div>
+                </div>     
             </main>
         </div>
     </div>
