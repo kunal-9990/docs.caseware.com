@@ -27,7 +27,7 @@ class Dropdown extends React.Component {
 					onChange={this.handleChange}
 					onClick={e => { e.preventDefault(); e.stopPropagation(); }}
 					isMulti
-					group
+          group
         />
       </div>
     );

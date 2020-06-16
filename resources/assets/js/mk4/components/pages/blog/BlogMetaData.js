@@ -7,7 +7,7 @@ import { faTag, faTags } from '@fortawesome/free-solid-svg-icons'
 translate 
 */
 
-const BlogMetaData = ({ postTitle, author, date, tags, allTags, categories, allCategories }) => {
+const BlogMetaData = ({ postTitle, author, date, readTime, tags, allTags, categories, allCategories }) => {
   let tagList = tags.map(id => allTags.results.find(o => o.id === id).name);
   let categoryList = categories.map(id => allCategories.results.find(o => o.id === id).name);
   let filters = categoryList.concat(tagList).join(', ')
@@ -23,6 +23,11 @@ const BlogMetaData = ({ postTitle, author, date, tags, allTags, categories, allC
       <div>
         <span>Date</span>{ moment(date).format("LLL") }
       </div>
+      { readTime && (
+        <div>
+          <span>Read Time</span>{ readTime } min
+        </div>
+      )}
       <div>
         <FontAwesomeIcon icon={faTags} />{ filters }
       </div>

@@ -20,11 +20,6 @@
             .grid-item__bg {
                 transform: scale(1.1);
             }
-            .grid-item__hover-content {
-                opacity: 1;
-                height: 100%;           
-                transform: scaleY(1);
-            }
         }
     }
 }
@@ -71,15 +66,6 @@
         }
     }
 
-    &__cta {
-        color: $caseware-blue;
-        font-weight: bold;
-
-        &:hover {
-            color: #00ace0;
-        }
-    }
-
     h2 {
         font-weight: 300;
     }
@@ -109,9 +95,17 @@
     .select {
         min-width: 20rem;
         z-index: 500 !important;
+        font-size: 1.4rem;
+        color: $text-black;
+
+        &__group-heading {
+            padding-top: 1.8rem;
+            padding-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
     }
 }
-
 
 .pagination {
     clear: both;
@@ -155,6 +149,18 @@
             height: 0;
             padding-bottom: calc(50% + 2.4rem)
         }
+
+        &__wrapper:hover {
+            .grid-item__hover-content {
+                max-height: 50rem;   
+                transition: max-height 0.5s ease-in-out; 
+
+                & > div {
+                    opacity: 1;
+                    transition: opacity 0.3s ease-in-out; 
+                }
+            }
+        }
     }
 
     .grid-item {
@@ -168,12 +174,14 @@
         &__hover-content {
             display: block;
             margin: 1.2rem 0;
-            height: 0;
+            max-height:1px;
             overflow: hidden;
-            transform: scaleY(0);    
-            transform-origin: bottom;
-            transition: transform 0.26s ease;
-            opacity: 0;
+            transition: max-height 0.5s ease-in-out;
+
+            & > div {
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
         }
     }
 
