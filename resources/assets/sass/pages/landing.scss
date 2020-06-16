@@ -48,7 +48,7 @@
 
         & > div {
             flex: 0 0 100%;
-            margin-bottom: 2.4rem;
+            margin-bottom: 4.8rem;
         }
 
         &--2col > div,
@@ -73,9 +73,25 @@
         }
     }
 
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            max-width: 20rem;
+            height: auto;
+
+            @include mq(sm) {
+                max-width: 70%;  
+                max-height: 100%;
+            }
+        }
+    }
+
     &__item {
         flex: 1;
-        padding: 3.6rem 4.8rem;
+        margin-top: 2.4rem;
+        padding: 3.2rem 2.4rem;
         background: $white;
         -webkit-box-shadow: 0 5px 8px 0 rgba(80,80,80,0.3);
         -moz-box-shadow: 0 5px 8px 0 rgba(80,80,80,0.3);
@@ -91,6 +107,27 @@
 
         span {
             margin-bottom: 1.2rem;
+        }
+    }
+
+    &__cta {
+        font-weight: bold;
+        color: $text-black;
+        transition: all 0.3s ease-in-out;
+
+        span {
+            padding-left: 1.2rem;
+            font-size: 1.8rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: lighten($text-black, 20%);
+
+            span {
+                padding-left: 1.8rem;
+            }
         }
     }
 }

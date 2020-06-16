@@ -2,19 +2,22 @@ import React from 'react'
 import Fade from 'react-reveal/Fade'
 
 const ProductNavigation = props => {
+  console.log(props)
 
   let navGrid = props.navigation.map((navItem, key) => (
-    <Fade bottom>
-      <div className="product-nav__item" key={key}>
+    <Fade bottom key={key}>
+      <div className="product-nav__wrapper">
         { navItem.icon && (
           <img src={navItem.icon.url} alt={navItem.icon.alt} />
         )}
-        { navItem.description && (<span>{ navItem.description }</span>) }
-        { navItem.links && navItem.links.map((link, key) => (
-          <div key={key}>
-            <a href={link.link} target="_blank" className="btn--arrow">{ link.label }</a>
-          </div>
-        ))}
+        <div className="product-nav__item" key={key} style={{ borderLeft: '6px solid ' + navItem.accent_colour}}>
+          { navItem.description && (<span>{ navItem.description }</span>) }
+          { navItem.links && navItem.links.map((link, key) => (
+            <div key={key}>
+              <a href={link.link} target="_blank" className="product-nav__cta">{ link.label }<span style={{ color: navItem.accent_colour }}>&#8250;</span></a>
+            </div>
+          ))}
+        </div>
       </div>
     </Fade>
   ))
