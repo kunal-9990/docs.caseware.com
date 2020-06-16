@@ -59,6 +59,11 @@
     }
 }
 
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    background-color: $caseware-blue;
+    border-color: $caseware-blue;
+}
+
 @include mq(sm) {
     .blog-detail {
         .lightbox {
