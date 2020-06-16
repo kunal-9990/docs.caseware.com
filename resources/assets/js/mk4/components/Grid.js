@@ -12,29 +12,30 @@ const GridPattern = [
   { colspan: 2, rowspan: 1, float: 'right' },
 ]
 
-const GridItem = ({ item })=> {
-  return (
-    <Fade bottom>
-      <div className="grid-item">
-          <div 
-            style={{ background: item.image ? `url(` + item.image.url + `) center center / cover` : "#CCC"}}
-            className="grid-item__bg"
-          ></div>
-          <div className="grid-item__wrapper">
-            <h2>{item.title}</h2>
-            <div className="grid-item__hover-content">
+const GridItem = ({ item })=> (
+  <Fade bottom>
+    <div className="grid-item">
+        <div 
+          style={{ background: item.image ? `url(` + item.image.url + `) center center / cover` : "#CCC"}}
+          className="grid-item__bg"
+        ></div>
+        <div className="grid-item__wrapper">
+          <h2>{item.title}</h2>
+          <div className="grid-item__hover-content">
+            <div>
               <div dangerouslySetInnerHTML={{__html: item.excerpt.rendered}} className="grid-item__excerpt" />
               <div className="grid-item__filter">
                 {item.postFilters.length > 0 && (<FontAwesomeIcon icon={ item.postFilters.length > 1 ? faTags : faTag } />)}
                 {item.postFilters.join(', ')}
               </div>
             </div>
-            <div className="grid-item__cta">Read more</div>
           </div>
-      </div>
-    </Fade>
-  )
-}
+          <div className="grid-item__cta">Read more</div>
+        </div>
+    </div>
+  </Fade>
+)
+
 
 const Grid = ({ items }) => (
   <div className="grid">

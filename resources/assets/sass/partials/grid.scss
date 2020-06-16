@@ -104,6 +104,15 @@
     .select {
         min-width: 20rem;
         z-index: 500 !important;
+        font-size: 1.4rem;
+        color: $text-black;
+
+        &__group-heading {
+            padding-top: 1.8rem;
+            padding-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
     }
 }
 
