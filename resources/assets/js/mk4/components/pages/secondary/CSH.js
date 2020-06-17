@@ -6,6 +6,7 @@ const CSH = props => (
     {Object.keys(props).map(key => ( 
       props[key].title && (
         <Accordion 
+          key={key}
           id={props[key].title.replace(/ /g, '-')}
           title={props[key].title}
           innerDetails={props[key].description}

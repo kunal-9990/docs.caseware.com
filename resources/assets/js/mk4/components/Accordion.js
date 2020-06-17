@@ -26,10 +26,12 @@ const Accordion = ({ id, title, outerDetails, innerDetails, content, contents })
     <label className="tab__label" htmlFor={id}>
       <h2 className="light">{ title }</h2>
     </label>
-    <div className="tab__outer-details">
-      <FontAwesomeIcon icon={ outerDetails.length > 1 ? faTags : faTag } />
-      { outerDetails.join(', ') }
-    </div>
+    { outerDetails && (
+      <div className="tab__outer-details">
+        <FontAwesomeIcon icon={ outerDetails.length > 1 ? faTags : faTag } />
+        { outerDetails.join(', ') }
+      </div>
+    )}
     <div className="tab__content">
       { innerDetails && <p>{ innerDetails }</p> }
       { content && <div dangerouslySetInnerHTML={{__html: content}} />}
