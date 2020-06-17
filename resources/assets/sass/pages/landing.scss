@@ -173,7 +173,6 @@
                 z-index: 1;
             }
         }
-
     }
 }
 
@@ -184,13 +183,11 @@
 
 .landing-downloads {
 
-
     &__wrapper {
         margin-top: 2.4rem;
     }
 
     .downloads {
-
         position: relative;
         display: flex;
         flex-direction: column;
