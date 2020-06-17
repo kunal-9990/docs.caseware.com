@@ -10,6 +10,10 @@ h2, .h2 {
     margin-top: 30px;
     font-size: 2rem;
     font-weight: 400;
+
+    &.light {
+        font-weight: 300;
+    }
 }
 
 h3, .h3 {
