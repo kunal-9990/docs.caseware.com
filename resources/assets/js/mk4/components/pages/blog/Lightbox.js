@@ -13,7 +13,7 @@ const lightboxOptions = {
 const Lightbox = props => (
   <div className="lightbox">
     { Object.keys(props).map(key => (
-      <SimpleReactLightbox>
+      <SimpleReactLightbox key={key}>
         <SRLWrapper options={lightboxOptions}>
           <img key={key} src={props[key].url} alt={props[key].alt} />
         </SRLWrapper>
