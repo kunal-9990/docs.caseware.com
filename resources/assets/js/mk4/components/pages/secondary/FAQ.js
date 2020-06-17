@@ -19,13 +19,19 @@ class FAQ extends Component {
           this.props[key].section && (
             <div className="accordion__faq">
               <h2>{ this.props[key].section['section_title'] }</h2>
-              { this.props[key].section['questions'].map((q, i) => (
-                <Accordion 
-                  id={i}
-                  title={q.question}
-                  content={q.answer}
-                />
-              )) }
+              { this.props[key].section['questions'].map((q, i) => {
+                let outerDetails = []
+                q.tags.map(tag => outerDetails.push(tag.name))
+                return (
+                  <Accordion 
+                    key={i}
+                    id={q.question.replace(/ /g, '-')}
+                    title={q.question}
+                    content={q.answer}
+                    outerDetails={outerDetails}
+                  />
+                )}) 
+            }
             </div>
           )
         ))}

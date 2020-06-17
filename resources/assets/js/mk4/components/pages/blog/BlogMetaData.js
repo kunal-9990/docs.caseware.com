@@ -15,7 +15,7 @@ const BlogMetaData = ({ postTitle, author, date, readTime, tags, allTags, catego
   return (
     <div className="metadata">
       <div className="metadata__breadcrumb">
-        <a href="/">Home</a> / <a href="/blog">Blog</a> / { postTitle }
+        <a href="/">Home</a>&nsbp;&nsbp;/&nsbp;&nsbp;<a href="/blog">Blog</a>&nsbp;&nsbp;/&nsbp;&nsbp;{ postTitle }
       </div>
       <div>
         <span>Author</span>{ author }

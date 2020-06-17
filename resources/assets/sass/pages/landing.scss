@@ -210,12 +210,12 @@
                 width: 100%;
                 height: auto;
                 path {
-                    fill: $light-grey;
+                    fill: $grey-1;
                 }
             }
 
             h3 {
-                color: $light-grey;
+                color: $grey-1;
                 text-align: center;
             }
 
@@ -240,7 +240,7 @@
             }
 
             &.grey {
-                color: $light-grey;
+                color: $grey-1;
                 display: block;
                 white-space: nowrap;
             }

@@ -8,7 +8,7 @@ const CSH = props => (
         <Accordion 
           id={props[key].title.replace(/ /g, '-')}
           title={props[key].title}
-          description={props[key].description}
+          innerDetails={props[key].description}
           contents={props[key].content}
         />
       ))
