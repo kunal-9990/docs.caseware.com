@@ -12,7 +12,7 @@ class FAQ extends Component {
     super();
     this.state = {
       dropdownOptions: [],
-      filteredQuestions: [],
+      faqs: []
     }
     this.updateSelectedFilters = this.updateSelectedFilters.bind(this)
   }
@@ -21,24 +21,22 @@ class FAQ extends Component {
     let dropdownOptions = []
     let filterLabels = []
 
-    Object.keys(this.props).map(key => {
-      this.props[key].section && (
-        this.props[key].section['questions'].map((q, i) => {
-          dropdownOptions.map(option => {
-            filterLabels.push(option.label)
-          })
-          q.tags.map(tag => {
-            if (filterLabels.indexOf(tag.name) === -1) {
-              dropdownOptions.push({ "value": tag.slug, "label": tag.name })
-            }
-          })
+    this.props.faqs.map(faq => {
+      faq.section['questions'].map((q, i) => {
+        dropdownOptions.map(option => {
+          filterLabels.push(option.label)
         })
-      )
+        q.tags.map(tag => {
+          if (filterLabels.indexOf(tag.name) === -1) {
+            dropdownOptions.push({ "value": tag.slug, "label": tag.name })
+          }
+        })
+      })
     })
 
     this.setState({ 
       dropdownOptions,
-      filteredQuestions: this.props
+      faqs: this.props.faqs
     })
   }
 
@@ -47,49 +45,30 @@ class FAQ extends Component {
     Object.keys(filters).map(i => {
       selectedFilters.push(filters[i].label)
     })
-
-    let filteredQuestions = []
-    Object.keys(this.props).map(i => {
-      let level1 = []
-      if (this.props[i].section) {
-        // console.log(this.props[i].section)
-        let level2 = []
-        this.props[i].section.questions.map(j => {
-          j.tags.filter(k => selectedFilters.indexOf(k.name) !== -1).map(k => {
-            // console.log(j)
-            level2.push(j)
-            // filteredQuestions.push(this.props[i].section)
-          })
-
-          // j.tags.filter(k => {
-          //   console.log(k)
-          // })
-          // console.log(j.tags.filter)
-          level1.push(level2)
+    let filteredSections = []
+    this.props.faqs.map(faq => {
+        let filteredQuestions = []
+        faq.section.questions.map(j => {
+          let questionTags = []
+          j.tags.map(t => questionTags.push(t.name))
+          if (selectedFilters.some(r => questionTags.includes(r))) {
+            filteredQuestions.push(j)
+          }
         })
-        // this.props[i].section.filter(test => (
-        //   console.log(test)
-        // ))
-        // console.log("LVL2!", level2)
-
-      }
-
-      console.log("LVL1!", level1)
-
-
-
+        filteredSections = [
+          ...filteredSections, 
+          { 
+            "section": { 
+              "section_title": faq.section.section_title, 
+              "questions": filteredQuestions 
+            }
+          }
+        ]
     })
-
-    // console.log("FILTERED Q's", filteredQuestions)
-
-    // this.setState(prevState => ({
-    //   selectedFilters: [prevState, selectedFilters]
-    // }))
-
+    this.setState({ faqs : filters.length > 0 ? filteredSections : this.props.faqs })
   }
 
   render () {
-    // console.log(this.props)
     return (
       <div>
         <div className="filter">
@@ -102,11 +81,12 @@ class FAQ extends Component {
           </div>
         </div>
         <div className="accordion">
-          {Object.keys(this.props).map(key => ( 
-            this.props[key].section && (
-              <div className="accordion__faq" key={key}>
-                <h2>{ this.props[key].section['section_title'] }</h2>
-                { this.props[key].section['questions'].map((q, i) => {
+          {this.state.faqs.map((faq, i) => ( 
+            <div className="accordion__faq" key={i}>
+              { faq.section.questions.length > 0 && (
+                <React.Fragment>
+                <h2>{ faq.section['section_title'] }</h2>
+                { faq.section['questions'].map((q, i) => {
                   let outerDetails = []
                   q.tags.map(tag => outerDetails.push(tag.name))
                   return (
@@ -118,9 +98,10 @@ class FAQ extends Component {
                       outerDetails={outerDetails}
                     />
                   )}) 
-              }
-              </div>
-            )
+                }
+                </React.Fragment>
+              )}
+            </div>
           ))}
         </div>
       </div>
