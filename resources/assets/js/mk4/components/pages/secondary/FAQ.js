@@ -1,5 +1,4 @@
 
-
 import React, { Component } from 'react'
 import Accordion from '../../Accordion'
 import Dropdown from '../../Dropdown'
@@ -12,8 +11,10 @@ class FAQ extends Component {
   constructor() {
     super();
     this.state = {
-      dropdownOptions: []
+      dropdownOptions: [],
+      filteredQuestions: [],
     }
+    this.updateSelectedFilters = this.updateSelectedFilters.bind(this)
   }
 
   componentDidMount() {
@@ -35,16 +36,60 @@ class FAQ extends Component {
       )
     })
 
-    this.setState({
-      dropdownOptions
+    this.setState({ 
+      dropdownOptions,
+      filteredQuestions: this.props
     })
   }
 
-  updateSelectedFilters() {
-    console.log("Filter!!!!!!!")
+  updateSelectedFilters(filters) {
+    let selectedFilters = []
+    Object.keys(filters).map(i => {
+      selectedFilters.push(filters[i].label)
+    })
+
+    let filteredQuestions = []
+    Object.keys(this.props).map(i => {
+      let level1 = []
+      if (this.props[i].section) {
+        // console.log(this.props[i].section)
+        let level2 = []
+        this.props[i].section.questions.map(j => {
+          j.tags.filter(k => selectedFilters.indexOf(k.name) !== -1).map(k => {
+            // console.log(j)
+            level2.push(j)
+            // filteredQuestions.push(this.props[i].section)
+          })
+
+          // j.tags.filter(k => {
+          //   console.log(k)
+          // })
+          // console.log(j.tags.filter)
+          level1.push(level2)
+        })
+        // this.props[i].section.filter(test => (
+        //   console.log(test)
+        // ))
+        // console.log("LVL2!", level2)
+
+      }
+
+      console.log("LVL1!", level1)
+
+
+
+    })
+
+    // console.log("FILTERED Q's", filteredQuestions)
+
+    // this.setState(prevState => ({
+    //   selectedFilters: [prevState, selectedFilters]
+    // }))
+
   }
 
   render () {
+    // console.log(this.props)
     return (
       <div>
         <div className="filter">
