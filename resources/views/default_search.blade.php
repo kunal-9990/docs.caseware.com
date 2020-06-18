@@ -38,19 +38,19 @@
 
     <script src="{{ mix('/js/mk2/app.js') }}"></script>
     <script src="{{ mix('/js/mk4/app.js') }}"></script>
-    <script src="/documentation_files/2019/webapps/30/Content/en/Resources/Scripts/custom.modernizr.js">
+    <script src="/documentation_files/2020/webapps/31/Content/en/Resources/Scripts/custom.modernizr.js">
     </script>
-    <script src="/documentation_files/2019/webapps/30/Content/en/Resources/Scripts/jquery.min.js">
+    <script src="/documentation_files/2020/webapps/31/Content/en/Resources/Scripts/jquery.min.js">
     </script>
-    <script src="/documentation_files/2019/webapps/30/Content/en/Resources/Scripts/require.min.js">
+    <script src="/documentation_files/2020/webapps/31/Content/en/Resources/Scripts/require.min.js">
     </script>
-    <script src="/documentation_files/2019/webapps/30/Content/en/Resources/Scripts/require.config.js">
+    <script src="/documentation_files/2020/webapps/31/Content/en/Resources/Scripts/require.config.js">
     </script>
-    <script src="/documentation_files/2019/webapps/30/Content/en/Resources/Scripts/foundation.min.js">
+    <script src="/documentation_files/2020/webapps/31/Content/en/Resources/Scripts/foundation.min.js">
     </script>
-    <script src="/documentation_files/2019/webapps/30/Content/en/Resources/Scripts/plugins.min.js">
+    <script src="/documentation_files/2020/webapps/31/Content/en/Resources/Scripts/plugins.min.js">
     </script>
-    <script src="/documentation_files/2019/webapps/30/Content/en/Resources/Scripts/MadCapAll.js">
+    <script src="/documentation_files/2020/webapps/31/Content/en/Resources/Scripts/MadCapAll.js">
     </script>
 </body>
 </html>
