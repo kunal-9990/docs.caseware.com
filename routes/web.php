@@ -31,6 +31,11 @@ Route::get('/', function () {
     return redirect('/2019/webapps/30/en/webapps');
 });
 
+// temportary redirect - hard coding because it wasn't working in nginx for whatever reason
+Route::get('/2020/webapps/31/en/Explore/Products/Provided-By-Client-(PBC)-Requests.htm', function () {
+    return redirect('/latest/webapps/en/Explore/Cloud-Apps/CaseWare-PBC-Requests.htm');
+});
+
 
 
 
