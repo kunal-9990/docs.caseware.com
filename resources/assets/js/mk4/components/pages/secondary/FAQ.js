@@ -1,5 +1,4 @@
 
-
 import React, { Component } from 'react'
 import Accordion from '../../Accordion'
 import Dropdown from '../../Dropdown'
@@ -12,36 +11,61 @@ class FAQ extends Component {
   constructor() {
     super();
     this.state = {
-      dropdownOptions: []
+      dropdownOptions: [],
+      faqs: []
     }
+    this.updateSelectedFilters = this.updateSelectedFilters.bind(this)
   }
 
   componentDidMount() {
     let dropdownOptions = []
     let filterLabels = []
 
-    Object.keys(this.props).map(key => {
-      this.props[key].section && (
-        this.props[key].section['questions'].map((q, i) => {
-          dropdownOptions.map(option => {
-            filterLabels.push(option.label)
-          })
-          q.tags.map(tag => {
-            if (filterLabels.indexOf(tag.name) === -1) {
-              dropdownOptions.push({ "value": tag.slug, "label": tag.name })
-            }
-          })
+    this.props.faqs.map(faq => {
+      faq.section['questions'].map((q, i) => {
+        dropdownOptions.map(option => {
+          filterLabels.push(option.label)
         })
-      )
+        q.tags.map(tag => {
+          if (filterLabels.indexOf(tag.name) === -1) {
+            dropdownOptions.push({ "value": tag.slug, "label": tag.name })
+          }
+        })
+      })
     })
 
-    this.setState({
-      dropdownOptions
+    this.setState({ 
+      dropdownOptions,
+      faqs: this.props.faqs
     })
   }
 
-  updateSelectedFilters() {
-    console.log("Filter!!!!!!!")
+  updateSelectedFilters(filters) {
+    let selectedFilters = []
+    Object.keys(filters).map(i => {
+      selectedFilters.push(filters[i].label)
+    })
+    let filteredSections = []
+    this.props.faqs.map(faq => {
+        let filteredQuestions = []
+        faq.section.questions.map(j => {
+          let questionTags = []
+          j.tags.map(t => questionTags.push(t.name))
+          if (selectedFilters.some(r => questionTags.includes(r))) {
+            filteredQuestions.push(j)
+          }
+        })
+        filteredSections = [
+          ...filteredSections, 
+          { 
+            "section": { 
+              "section_title": faq.section.section_title, 
+              "questions": filteredQuestions 
+            }
+          }
+        ]
+    })
+    this.setState({ faqs : filters.length > 0 ? filteredSections : this.props.faqs })
   }
 
   render () {
@@ -57,11 +81,12 @@ class FAQ extends Component {
           </div>
         </div>
         <div className="accordion">
-          {Object.keys(this.props).map(key => ( 
-            this.props[key].section && (
-              <div className="accordion__faq" key={key}>
-                <h2>{ this.props[key].section['section_title'] }</h2>
-                { this.props[key].section['questions'].map((q, i) => {
+          {this.state.faqs.map((faq, i) => ( 
+            <div className="accordion__faq" key={i}>
+              { faq.section.questions.length > 0 && (
+                <React.Fragment>
+                <h2>{ faq.section['section_title'] }</h2>
+                { faq.section['questions'].map((q, i) => {
                   let outerDetails = []
                   q.tags.map(tag => outerDetails.push(tag.name))
                   return (
@@ -73,9 +98,10 @@ class FAQ extends Component {
                       outerDetails={outerDetails}
                     />
                   )}) 
-              }
-              </div>
-            )
+                }
+                </React.Fragment>
+              )}
+            </div>
           ))}
         </div>
       </div>

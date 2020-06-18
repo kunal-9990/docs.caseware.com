@@ -100,7 +100,6 @@ class BlogOverview extends Component {
   }
 
   render() {
-    console.log(this.state.dropdownOptions)
     let pageCount = Math.ceil(this.state.selectedPosts.length / this.state.postsPerPage)
     return (
       <div>
