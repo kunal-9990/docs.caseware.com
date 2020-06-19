@@ -29,7 +29,6 @@ class Videos extends Component {
     console.log(this.props.videos)
     return (
       <div>
-        <h1> Videosssss</h1>
         {/* <div className="filter">
           <div className="filter__wrapper">
             <FontAwesomeIcon icon={faFilter} />
@@ -39,7 +38,10 @@ class Videos extends Component {
             />
           </div>
         </div> */}
-        {/* <Grid items={this.state.paginatedPosts} /> */}
+        <Grid 
+          type="videos"
+          items={this.props.videos.results} 
+        />
         {/* { pageCount > 1 && (
           <ReactPaginate
               previousLabel="&lsaquo;"

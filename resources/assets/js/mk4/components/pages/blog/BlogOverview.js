@@ -112,7 +112,10 @@ class BlogOverview extends Component {
             />
           </div>
         </div>
-        <Grid items={this.state.paginatedPosts} />
+        <Grid 
+          type="blog"
+          items={this.state.paginatedPosts} 
+        />
         { pageCount > 1 && (
           <ReactPaginate
               previousLabel="&lsaquo;"
