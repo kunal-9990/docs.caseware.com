@@ -33,10 +33,12 @@
                 <div class="container container--mk4">
                     <div class="row">
                         <div class="col-sm-12">
-                          <div
-                              data-component="videos" 
-                              data-prop-videos="{{htmlspecialchars(json_encode($videos))}}"
-                          ></div>
+                            <div
+                                data-component="videos" 
+                                data-prop-videos="{{htmlspecialchars(json_encode($videos))}}"
+                                data-prop-tags="{{htmlspecialchars(json_encode($tags))}}" 
+                                data-prop-categories="{{htmlspecialchars(json_encode($categories))}}" 
+                            ></div>
                         </div>
                     </div>
                 </div>

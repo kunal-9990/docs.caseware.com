@@ -30,14 +30,19 @@ const VideoItem = ({ item })=> (
           style={{ background: item.acf.thumbnail_image ? `url(` + item.acf.thumbnail_image.url + `) center center / cover` : "#CCC"}}
           className="grid-item__bg"
         ></div>
-        <SimpleReactLightbox>
-          <SRLWrapper options={lightboxOptions}>
-            <div className="grid-item__wrapper">
-              <h2>{ item.title.rendered }</h2>
-              <div className="arrow-cta"><div>Read More</div></div>
+        <div className="grid-item__wrapper">
+          <h2>{item.title.rendered}</h2>
+          {/* <div className="grid-item__hover-content">
+            <div>
+              { item.excerpt && (<div dangerouslySetInnerHTML={{__html: item.excerpt.rendered}} className="grid-item__excerpt" />)} 
+              <div className="grid-item__filter">
+                { item.postFilters.length > 0 && (<FontAwesomeIcon icon={ item.postFilters.length > 1 ? faTags : faTag } />) }
+                { item.postFilters.join(', ')} 
+              </div>
             </div>
-          </SRLWrapper>
-        </SimpleReactLightbox>
+          </div> */}
+          <div className="arrow-cta"><div>Read More</div></div>
+        </div>
     </div>
   </Fade>
 )

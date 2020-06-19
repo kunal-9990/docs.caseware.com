@@ -94,7 +94,9 @@ class PageController extends Controller
         $page = $this->cms->page('videos');
         $pageContent = $page['results'][0];
         $videos = $this->cms->get_custom_post_by_type('videos');
-        return view('pages.videos', compact('pageContent', 'videos', 'recent', 'exclusiveTo','title'));
+        $categories = $this->cms->categories();
+        $tags = $this->cms->tags();
+        return view('pages.videos', compact('pageContent', 'videos', 'categories', 'tags', 'recent', 'exclusiveTo','title'));
     }
 
 

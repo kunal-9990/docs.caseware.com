@@ -10,26 +10,89 @@ class Videos extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    //   selectedPosts: [],
-    //   dropdownOptions: [],
-    //   selectedFilters: [],
-    //   paginatedPosts: [],
-    //   pageNumber: 0,
-    //   postsPerPage: (this.props.postsPerPage && this.props.postsPerPage > 0) ? this.props.postsPerPage : 9
+      dropdownOptions: [],
+      selectedFilters: [],
+      selectedVideos: [],
+
+
     }
 
-    // this.allPosts = []
-    // this.allPostFilters = []
-    // this.updateSelectedFilters = this.updateSelectedFilters.bind(this)
+    this.allVideos = []
+    this.allVideoFilters = []
+    this.updateSelectedFilters = this.updateSelectedFilters.bind(this)
     // this.handlePageClick = this.handlePageClick.bind(this)
+  }
+
+  componentDidMount() {
+    let tags = []
+    let categories = []
+
+    this.props.tags.results.map(tag => {
+      tags.push({ "value": tag.slug, "label": tag.name, group: "Filters" })
+    });
+
+    this.props.categories.results.map(category => {
+      if (category.slug !== 'uncategorized') {
+        categories.push({ "value": category.slug, "label": category.name, group: "Products" })
+      }
+    })
+
+    this.allVideoFilters = categories.concat(tags)
+
+    this.props.videos.results.map((item, i) => {
+      let tagList = item.tags.map(id => this.props.tags.results.find(o => o.id === id).name);
+      let catList = item.categories.filter(c => c !== 1).map(id => this.props.categories.results.find(o => o.id === id).name);
+      this.allVideos.push({
+        id: item.id,
+        slug: item.slug,
+        title: item.title.rendered,
+        // date: item.date,
+        tags: item.tags,
+        categories: item.categories,
+        acf: item.acf,
+        // image: item.acf.post_image,
+        videoFilters: catList.concat(tagList)
+      })
+    })
+
+    this.setState({ 
+      selectedVideos: this.allVideos,
+      selectedFilters: this.allVideoFilters,
+      dropdownOptions: [
+        {
+          label: "Products",
+          options: categories
+        },
+        {
+          label: "Filters",
+          options: tags
+        }]
+    })
+  }
+
+  updateSelectedFilters(selectedFilters) {  
+    this.setState({ selectedFilters }, () => this.filterVideos())
+  }
+
+  filterVideos() {
+    let filteredVideos = []
+    this.allVideos.map((video, i) => {
+      if (this.state.selectedFilters.some(r => video.videoFilters.includes(r.label))) {
+        filteredVideos.push(video)
+      }
+    })
+    this.setState({ 
+      selectedVideos: this.state.selectedFilters.length > 0 ? filteredVideos : this.allVideos
+    // }, () => this.paginatePosts())
+    })
   }
 
   render() {
     // let pageCount = Math.ceil(this.state.selectedPosts.length / this.state.postsPerPage)
-    console.log(this.props.videos)
+    console.log(this.state)
     return (
       <div>
-        {/* <div className="filter">
+        <div className="filter">
           <div className="filter__wrapper">
             <FontAwesomeIcon icon={faFilter} />
             <Dropdown 
@@ -37,10 +100,10 @@ class Videos extends Component {
               onChange={this.updateSelectedFilters}
             />
           </div>
-        </div> */}
+        </div>
         <Grid 
           type="videos"
-          items={this.props.videos.results} 
+          items={this.state.selectedVideos} 
         />
         {/* { pageCount > 1 && (
           <ReactPaginate
