@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Fade from 'react-reveal/Fade'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTag, faTags } from '@fortawesome/free-solid-svg-icons'
+import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox';
 
 const GridPattern = [
   { colspan: 1, rowspan: 2, float: 'left' },
@@ -12,6 +13,34 @@ const GridPattern = [
   { colspan: 2, rowspan: 1, float: 'right' },
   { colspan: 2, rowspan: 1, float: 'right' },
 ]
+
+const lightboxOptions = {
+  overlayColor: 'rgba(255, 255, 255, 0.85)',
+  buttonsBackgroundColor: 'rgba(255, 255, 255, 0.85)',
+  buttonsIconColor: "#323232",
+  showThumbnails: false,
+  clickOutsideToClose: true,
+  animationDisabled: true
+}
+
+const VideoItem = ({ item })=> (
+  <Fade bottom>
+    <div className="grid-item">
+        <div 
+          style={{ background: item.acf.thumbnail_image ? `url(` + item.acf.thumbnail_image.url + `) center center / cover` : "#CCC"}}
+          className="grid-item__bg"
+        ></div>
+        <SimpleReactLightbox>
+          <SRLWrapper options={lightboxOptions}>
+            <div className="grid-item__wrapper">
+              <h2>{ item.title.rendered }</h2>
+              <div className="arrow-cta"><div>Read More</div></div>
+            </div>
+          </SRLWrapper>
+        </SimpleReactLightbox>
+    </div>
+  </Fade>
+)
 
 const BlogItem = ({ item })=> (
   <Fade bottom>
@@ -37,33 +66,18 @@ const BlogItem = ({ item })=> (
   </Fade>
 )
 
-const VideoItem = ({ item })=> (
-  <Fade bottom>
-    <div className="grid-item">
-        <div 
-          style={{ background: item.image ? `url(` + item.image.url + `) center center / cover` : "#CCC"}}
-          className="grid-item__bg"
-        ></div>
-        <div className="grid-item__wrapper">
-          <h2>{ item.title.rendered }</h2>
-          <div className="arrow-cta"><div>Read More</div></div>
-        </div>
-    </div>
-  </Fade>
-)
-
 const Grid = ({ type, items }) => (
   <div className="grid">
     {items.map((item, i) => (
       <div className={'grid__wrapper colspan-' + GridPattern[i % 6]['colspan'] + ' rowspan-' + GridPattern[i % 6]['rowspan'] + ' float-' + GridPattern[i % 6]['float'] } key={i}>
-        <a href={'/blog/' + item.slug} >
-          { type === 'blog' ? <BlogItem item={item} /> : <VideoItem item={item} /> }
-        </a>
+        { type === 'blog' ? 
+          <a href={'/blog/' + item.slug} >
+            <BlogItem item={item} />
+          </a> : <VideoItem item={item} /> }
       </div>
     ))}
   </div>
 )
-
 
 Grid.propTypes = {
   type: PropTypes.oneOf(['blog', 'videos']).isRequired,

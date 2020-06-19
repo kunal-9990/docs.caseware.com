@@ -15,7 +15,7 @@ import VideoGallery from './components/VideoGallery'
 import BlogOverview from './components/pages/blog/BlogOverview'
 import BlogMetaData from './components/pages/blog/BlogMetaData'
 import RelatedArticles from './components/pages/blog/RelatedArticles'
-import Lightbox from './components/pages/blog/Lightbox'
+import BlogLightbox from './components/pages/blog/BlogLightbox'
 import CSH from './components/pages/secondary/CSH'
 import FAQ from './components/pages/secondary/FAQ'
 import Videos from './components/pages/secondary/Videos'
@@ -79,16 +79,16 @@ const containers = [
     component: BlogOverview
   },
   {
+    id: 'blog-lightbox',
+    component: BlogLightbox
+  },
+  {
     id: 'blog-metadata',
     component: BlogMetaData
   },
   {
     id: 'related-articles',
     component: RelatedArticles
-  },
-  {
-    id: 'lightbox',
-    component: Lightbox
   },
   {
     id: 'csh',
