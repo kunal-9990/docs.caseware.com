@@ -48,7 +48,7 @@ module.exports = () => {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/en/SE-Authoring-TOC.xml";
             }
         }
-        if (window.location.href.indexOf("SE-Authoring") > -1) {
+        if (window.location.href.indexOf("SE-Builder") > -1) {
             if (properlyTranslated.includes(lang)) {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/SE-Builder-TOC.xml";
             }
