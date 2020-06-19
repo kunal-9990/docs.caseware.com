@@ -48,6 +48,14 @@ module.exports = () => {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/en/SE-Authoring-TOC.xml";
             }
         }
+        if (window.location.href.indexOf("SE-Builder") > -1) {
+            if (properlyTranslated.includes(lang)) {
+                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/SE-Builder-TOC.xml";
+            }
+            else {
+                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/en/SE-Builder-TOC.xml";
+            }
+        }
         else {
             if (properlyTranslated.includes(lang)) {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";

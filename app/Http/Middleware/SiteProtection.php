@@ -44,7 +44,7 @@ class SiteProtection
 
         $url = $_SERVER['REQUEST_URI'];
 
-        if(strpos($url, 'SE-Authoring') !== false){
+        if(strpos($url, 'SE-Authoring') !== false || strpos($url, 'SE-Builder') !== false){
         return response(view('site-protection::site-protection-form'), 403);
 
         }
