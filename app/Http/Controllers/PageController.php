@@ -88,7 +88,14 @@ class PageController extends Controller
         return view('pages.faq', compact('pageContent', 'recent', 'exclusiveTo','title'));
     }
 
-
+    // TEMP - FAQ
+    function videos(){
+        // App::setLocale($lang);
+        $page = $this->cms->page('videos');
+        $pageContent = $page['results'][0];
+        $videos = $this->cms->get_custom_post_by_type('videos');
+        return view('pages.videos', compact('pageContent', 'videos', 'recent', 'exclusiveTo','title'));
+    }
 
 
     // search

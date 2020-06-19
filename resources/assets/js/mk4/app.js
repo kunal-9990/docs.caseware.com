@@ -18,6 +18,7 @@ import RelatedArticles from './components/pages/blog/RelatedArticles'
 import Lightbox from './components/pages/blog/Lightbox'
 import CSH from './components/pages/secondary/CSH'
 import FAQ from './components/pages/secondary/FAQ'
+import Videos from './components/pages/secondary/Videos'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -96,6 +97,10 @@ const containers = [
   {
     id: 'faq',
     component: FAQ
+  },
+  {
+    id: 'videos',
+    component: Videos
   }
 ];
 
