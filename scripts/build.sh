@@ -57,6 +57,13 @@ else
     echo "Online Output (SE Authoring).fltoc was not included in upload"
 fi 
 
+file=./Online\ Output\ \(SE\ Builder\).fltoc
+if [ -e "$file" ]; then
+    mv Online\ Output\ \(SE\ Builder\).fltoc SE-Builder-TOC.xml
+else 
+    echo "Online Output (SE Builder).fltoc was not included in upload"
+fi 
+
 file=./csh_redirect.xml
 if [ -e "$file" ]; then
     mv csh_redirect.xml ../..
