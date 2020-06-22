@@ -80,6 +80,23 @@ Route::get('/se-search/{year}/{product}/{version}/{lang}/{category}/{subcategory
         return redirect('/'.$year.'/'.$product.'/'.$version.'/'.$lang.'/'.$category.'/'.$subcategory);
 });
 
+// search redirect
+Route::get('/se-builder-search/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', function($year, $product, $version, $lang, $category, $subcategory, $topic){
+        return redirect('/'.$year.'/'.$product.'/'.$version.'/'.$lang.'/'.$category.'/'.$subcategory.'/'.$topic);
+});
+// search redirect
+Route::get('/se-builder-search/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{subsubcategory}/{topic}', function($year, $product, $version, $lang, $category, $subcategory, $subsubcategory, $topic){
+        return redirect('/'.$year.'/'.$product.'/'.$version.'/'.$lang.'/'.$category.'/'.$subcategory.'/'.$subsubcategory.'/'.$topic);
+});
+// search redirect
+Route::get('/se-builder-search/{year}/{product}/{version}/{lang}/{category}', function($year, $product, $version, $lang, $category){
+        return redirect('/'.$year.'/'.$product.'/'.$version.'/'.$lang.'/'.$category);
+});
+// search redirect
+Route::get('/se-builder-search/{year}/{product}/{version}/{lang}/{category}/{subcategory}', function($year, $product, $version, $lang, $category, $subcategory){
+        return redirect('/'.$year.'/'.$product.'/'.$version.'/'.$lang.'/'.$category.'/'.$subcategory);
+});
+
 
 
 

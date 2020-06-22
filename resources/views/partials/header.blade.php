@@ -5,11 +5,14 @@ $version = Route::current()->parameters()["version"];
 $lang = Route::current()->parameters()["lang"];
 $searchroute = '';
 
-if(strpos(Request::url(), '/SE-Authoring/') == false && strpos(Request::url(), '/se-search/') == false) {
-    $searchroute = "search";
+if(strpos(Request::url(), '/SE-Authoring/') == true && strpos(Request::url(), '/se-search/') == true) {
+    $searchroute = "se-search";
+}
+else if(strpos(Request::url(), '/SE-Builder/') == true && strpos(Request::url(), '/se-builder-search/') == true) {
+    $searchroute = "se-search";
 }
 else {
-    $searchroute = "se-search";
+    $searchroute = "search";
 }
 
 $searchURL = route($searchroute, [$year, $product, $version, $lang]);

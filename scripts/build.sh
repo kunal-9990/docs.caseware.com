@@ -122,6 +122,31 @@ fi
 
 cd ../../../..
 
+#se-builder results
+mkdir -p public/se-builder-search/$1/$2/$3/$4
+cp -R tmp/$4/$3/Data-SE-Builder public/se-builder-search/$1/$2/$3/$4
+cd public/se-builder-search/$1/$2/$3/$4
+rm -R Data
+mv Data-SE-Builder Data
+cd ..
+
+if [ $4 = "en" ]; then
+    cp -R en fr
+    cp -R en es
+    cp -R en cn
+    cp -R en de
+else
+  cp -R en nl
+fi
+
+# cp -R en fr
+# cp -R en es
+# cp -R en cn
+# cp -R en de
+# cp -R en nl
+
+cd ../../../..
+
 
 echo 'Setting File permissions...'
 
