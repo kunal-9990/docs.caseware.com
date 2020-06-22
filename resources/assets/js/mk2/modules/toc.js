@@ -41,6 +41,7 @@ module.exports = () => {
         // }
         var properlyTranslated = ["en", "nl"];
         if (window.location.href.indexOf("SE-Authoring") > -1) {
+            console.log("SE-Authoring section");
             if (properlyTranslated.includes(lang)) {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/SE-Authoring-TOC.xml";
             }
@@ -48,7 +49,7 @@ module.exports = () => {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/en/SE-Authoring-TOC.xml";
             }
         }
-        if (window.location.href.indexOf("SE-Builder") > -1) {
+        else if (window.location.href.indexOf("SE-Builder") > -1) {
             if (properlyTranslated.includes(lang)) {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/SE-Builder-TOC.xml";
             }
