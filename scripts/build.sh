@@ -127,7 +127,7 @@ fi
 # cp -R en de
 # cp -R en nl
 
-cd ../../../..
+cd ../../../../..
 
 #se-builder results
 mkdir -p public/se-builder-search/$1/$2/$3/$4
