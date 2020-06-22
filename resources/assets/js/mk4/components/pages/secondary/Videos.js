@@ -12,17 +12,12 @@ class Videos extends Component {
     this.state = {
       dropdownOptions: [],
       selectedFilters: [],
-      selectedVideos: [],
-      showModal: false
-
+      selectedVideos: []
     }
 
     this.allVideos = []
     this.allVideoFilters = []
     this.updateSelectedFilters = this.updateSelectedFilters.bind(this)
-    this.handleOpenModal = this.handleOpenModal.bind(this);
-    this.handleCloseModal = this.handleCloseModal.bind(this);
-    // this.handlePageClick = this.handlePageClick.bind(this)
   }
 
 
@@ -73,16 +68,6 @@ class Videos extends Component {
     })
   }
 
-  handleOpenModal () {
-    console.log("OPEN MODAL!!!!")
-    this.setState({ showModal: true });
-  }
-  
-  handleCloseModal () {
-    console.log("close")
-    this.setState({ showModal: false });
-  }
-
   updateSelectedFilters(selectedFilters) {  
     this.setState({ selectedFilters }, () => this.filterVideos())
   }
@@ -116,9 +101,6 @@ class Videos extends Component {
         <Grid 
           type="videos"
           items={this.state.selectedVideos} 
-          openModal={this.handleOpenModal}
-          closeModal={this.handleCloseModal}
-          showModal={this.state.showModal}
         />
         {/* { pageCount > 1 && (
           <ReactPaginate
