@@ -27,6 +27,7 @@
 .grid-item {
     display: flex;
     height: 20rem;
+    cursor: pointer;
 
     &__bg {
         background-size: cover;

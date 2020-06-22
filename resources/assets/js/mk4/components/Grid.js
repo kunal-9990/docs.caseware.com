@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import Modal from 'react-modal';
 import BlogGridItem from './pages/blog/BlogGridItem'
 import VideoGridItem from './pages/secondary/VideoGridItem'
 
