@@ -5,27 +5,23 @@ import Grid from '../../Grid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSort, faFilter } from '@fortawesome/free-solid-svg-icons'
 
-class BlogOverview extends Component {
+class Videos extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      selectedPosts: [],
       dropdownOptions: [],
       selectedFilters: [],
-      paginatedPosts: [],
-      pageNumber: 0,
-      postsPerPage: (this.props.postsPerPage && this.props.postsPerPage > 0) ? this.props.postsPerPage : 9
+      selectedVideos: []
     }
 
-    this.allPosts = []
-    this.allPostFilters = []
+    this.allVideos = []
+    this.allVideoFilters = []
     this.updateSelectedFilters = this.updateSelectedFilters.bind(this)
-    this.handlePageClick = this.handlePageClick.bind(this)
   }
 
+
   componentDidMount() {
-    
     let tags = []
     let categories = []
 
@@ -39,28 +35,27 @@ class BlogOverview extends Component {
       }
     })
 
-    this.allPostFilters = categories.concat(tags)
-    
-    this.props.posts.results.map((item, i) => {
+    this.allVideoFilters = categories.concat(tags)
+
+    this.props.videos.results.map((item, i) => {
       let tagList = item.tags.map(id => this.props.tags.results.find(o => o.id === id).name);
       let catList = item.categories.filter(c => c !== 1).map(id => this.props.categories.results.find(o => o.id === id).name);
-      this.allPosts.push({
+      this.allVideos.push({
         id: item.id,
         slug: item.slug,
         title: item.title.rendered,
-        date: item.date,
+        // date: item.date,
         tags: item.tags,
         categories: item.categories,
         acf: item.acf,
-        excerpt: item.excerpt,
-        image: item.acf.post_image,
-        postFilters: catList.concat(tagList)
+        // image: item.acf.post_image,
+        videoFilters: catList.concat(tagList)
       })
     })
 
     this.setState({ 
-      selectedPosts: this.allPosts,
-      selectedFilters: this.allPostFilters,       
+      selectedVideos: this.allVideos,
+      selectedFilters: this.allVideoFilters,
       dropdownOptions: [
         {
           label: "Products",
@@ -70,37 +65,28 @@ class BlogOverview extends Component {
           label: "Filters",
           options: tags
         }]
-    }, () => this.paginatePosts())
+    })
   }
 
   updateSelectedFilters(selectedFilters) {  
-    this.setState({ selectedFilters }, () => this.filterPosts())
+    this.setState({ selectedFilters }, () => this.filterVideos())
   }
 
-  filterPosts() {
-    let filteredPosts = []
-    this.allPosts.map((post, i) => {
-      if (this.state.selectedFilters.some(r => post.postFilters.includes(r.label))) {
-        filteredPosts.push(post)
+  filterVideos() {
+    let filteredVideos = []
+    this.allVideos.map((video, i) => {
+      if (this.state.selectedFilters.some(r => video.videoFilters.includes(r.label))) {
+        filteredVideos.push(video)
       }
     })
     this.setState({ 
-      selectedPosts: this.state.selectedFilters.length > 0 ? filteredPosts : this.allPosts
-    }, () => this.paginatePosts())
-  }
-
-  handlePageClick(data) {
-    this.setState({ pageNumber: data.selected }, () => {this.paginatePosts()})
-  }
-
-  paginatePosts() {
-    this.setState({
-        paginatedPosts: this.state.selectedPosts.slice(this.state.pageNumber * this.state.postsPerPage, (this.state.pageNumber + 1) * this.state.postsPerPage)
+      selectedVideos: this.state.selectedFilters.length > 0 ? filteredVideos : this.allVideos
+    // }, () => this.paginatePosts())
     })
   }
 
   render() {
-    let pageCount = Math.ceil(this.state.selectedPosts.length / this.state.postsPerPage)
+    // let pageCount = Math.ceil(this.state.selectedPosts.length / this.state.postsPerPage)
     return (
       <div>
         <div className="filter">
@@ -113,10 +99,10 @@ class BlogOverview extends Component {
           </div>
         </div>
         <Grid 
-          type="blog"
-          items={this.state.paginatedPosts} 
+          type="videos"
+          items={this.state.selectedVideos} 
         />
-        { pageCount > 1 && (
+        {/* { pageCount > 1 && (
           <ReactPaginate
               previousLabel="&lsaquo;"
               nextLabel="&rsaquo;"
@@ -130,10 +116,10 @@ class BlogOverview extends Component {
               subContainerClassName={'pages pagination'}
               activeClassName={'active'}
           />
-        )}
-      </div>
+        )}*/}
+      </div> 
     )
   }
 }
 
-export default BlogOverview
+export default Videos

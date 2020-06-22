@@ -39,6 +39,7 @@ Route::get('/blog/{post}', 'PageController@blogDetail');
 
 Route::get('/csh', 'PageController@csh');
 Route::get('/faq', 'PageController@faq');
+Route::get('/videos', 'PageController@videos');
 
 
 

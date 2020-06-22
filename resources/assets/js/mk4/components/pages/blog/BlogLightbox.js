@@ -10,7 +10,7 @@ const lightboxOptions = {
   animationDisabled: true
 }
 
-const Lightbox = props => (
+const BlogLightbox = props => (
   <div className="lightbox">
     { Object.keys(props).map(key => (
       <SimpleReactLightbox key={key}>
@@ -22,4 +22,4 @@ const Lightbox = props => (
   </div>
 )
 
-export default Lightbox
+export default BlogLightbox

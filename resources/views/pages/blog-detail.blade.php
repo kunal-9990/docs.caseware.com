@@ -82,7 +82,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div
-                                        data-component="lightbox"
+                                        data-component="blog-lightbox"
                                         data-props="{{ htmlspecialchars(json_encode($section->gallery)) }}"
                                     ></div>
                                 </div>  
