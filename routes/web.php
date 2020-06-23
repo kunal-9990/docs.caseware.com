@@ -34,12 +34,13 @@ Route::get('/', 'PageController@home');
 // TEMPORARY HARD CODE
 
 Route::get('/blog', 'PageController@blogOverview');
-
 Route::get('/blog/{post}', 'PageController@blogDetail');
 
 Route::get('/csh', 'PageController@csh');
 Route::get('/faq', 'PageController@faq');
-Route::get('/videos', 'PageController@videos');
+
+Route::get('/videos', 'PageController@videosOverview');
+Route::get('/videos/{slug}', 'PageController@videosLightbox');
 
 
 

@@ -12,11 +12,11 @@ const GridPattern = [
   { colspan: 2, rowspan: 1, float: 'right' },
 ]
 
-const Grid = ({ type, items }) => (
+const Grid = ({ type, items, slug }) => (
   <div className="grid">
     {items.map((item, i) => (
       <div className={'grid__wrapper colspan-' + GridPattern[i % 6]['colspan'] + ' rowspan-' + GridPattern[i % 6]['rowspan'] + ' float-' + GridPattern[i % 6]['float'] } key={i}>
-        { type === 'videos' ? <VideoGridItem item={item} /> : 
+        { type === 'videos' ? <VideoGridItem item={item} slug={slug} /> : 
             <a href={'/blog/' + item.slug} >
               <BlogGridItem item={item} />
             </a>
