@@ -14,19 +14,18 @@ class VideoGridItem extends Component {
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
 
-
   handleOpenModal () {
-    this.setState({ modalOpen: true });
+    this.setState({ modalOpen: true })
+    window.history.pushState({}, 'videos', '/videos/' + this.props.item.slug)
   }
   
   handleCloseModal () {
     this.setState({ modalOpen: false });
+    window.history.pushState({}, '/videos/' + this.props.item.slug, '/videos')
   }
 
   render() {
     const item = this.props.item
-
-    console.log(this.state)
     return (
       <React.Fragment>
         {/* --- Grid Item --- */}
@@ -53,7 +52,6 @@ class VideoGridItem extends Component {
         </Fade>
         {/* --- Modal --- */}
         <Modal
-          closeTimeoutMS={300}
           isOpen={ this.state.modalOpen }
           onRequestClose={this.handleCloseModal}
         >
