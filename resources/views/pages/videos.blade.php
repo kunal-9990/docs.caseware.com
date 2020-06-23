@@ -36,6 +36,7 @@
                             <div
                                 data-component="videos" 
                                 data-prop-videos="{{htmlspecialchars(json_encode($videos))}}"
+                                data-prop-video-slug="{{ (isset($slug) && !empty($slug)) ? $slug : null }}"
                                 data-prop-tags="{{htmlspecialchars(json_encode($tags))}}" 
                                 data-prop-categories="{{htmlspecialchars(json_encode($categories))}}" 
                             ></div>

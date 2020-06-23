@@ -101,6 +101,7 @@ class Videos extends Component {
         <Grid 
           type="videos"
           items={this.state.selectedVideos} 
+          slug={this.props.videoSlug}
         />
         {/* { pageCount > 1 && (
           <ReactPaginate
