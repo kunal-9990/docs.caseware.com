@@ -57,13 +57,6 @@ else
     echo "Online Output (SE Authoring).fltoc was not included in upload"
 fi 
 
-file=./Online\ Output\ \(SE\ Builder\).fltoc
-if [ -e "$file" ]; then
-    mv Online\ Output\ \(SE\ Builder\).fltoc SE-Builder-TOC.xml
-else 
-    echo "Online Output (SE Builder).fltoc was not included in upload"
-fi 
-
 file=./csh_redirect.xml
 if [ -e "$file" ]; then
     mv csh_redirect.xml ../..
@@ -128,29 +121,6 @@ fi
 # cp -R en nl
 
 cd ../../../../..
-
-#se-builder results
-mkdir -p public/se-builder-search/$1/$2/$3/$4
-cp -R tmp/$4/$3/Data-SE-Builder public/se-builder-search/$1/$2/$3/$4
-cd public/se-builder-search/$1/$2/$3/$4
-rm -R Data
-mv Data-SE-Builder Data
-cd ..
-
-if [ $4 = "en" ]; then
-    cp -R en fr
-    cp -R en es
-    cp -R en cn
-    cp -R en de
-else
-  cp -R en nl
-fi
-
-# cp -R en fr
-# cp -R en es
-# cp -R en cn
-# cp -R en de
-# cp -R en nl
 
 cd ../../../..
 
