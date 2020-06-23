@@ -3,6 +3,13 @@ import Fade from 'react-reveal/Fade'
 import Modal from 'react-modal';
 Modal.setAppElement('#main');
 
+const VideoLightbox = ({ item, handleCloseModal }) => (
+  <div className="video-lightbox">
+    <h1 dangerouslySetInnerHTML={{__html: item.title}}></h1>
+    <button onClick={handleCloseModal}>X</button>
+  </div>
+)
+
 class VideoGridItem extends Component {
 
   constructor(props) {
@@ -52,11 +59,12 @@ class VideoGridItem extends Component {
         </Fade>
         {/* --- Modal --- */}
         <Modal
-          isOpen={ this.state.modalOpen }
+          isOpen={this.state.modalOpen}
           onRequestClose={this.handleCloseModal}
+          contentLabel="Video Lightbox"
+          id={item.slug}
         >
-          <h1 dangerouslySetInnerHTML={{__html: item.title}}></h1>
-          <button onClick={this.handleCloseModal}>Close</button>
+          <VideoLightbox item={item} handleCloseModal={this.handleCloseModal} />
         </Modal>
       </React.Fragment>
     )
