@@ -16,21 +16,21 @@ class PageController extends Controller
 {
 
     // home
-    function home(){
+    function home($region, $lang){
 
         // App::setLocale($lang);
 
-        $page = $this->cms->page('home');
+        $page = $this->cms->page($region, $lang, 'home');
         $pageContent = $page['results'][0];
 
         return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title' ));
     }
 
-    function product($product){
+    function product($region, $lang, $product){
 
         // App::setLocale($lang);
 
-        $page = $this->cms->page('product-cloud-31');
+        $page = $this->cms->page($region, $lang, 'product-cloud-31');
         $pageContent = $page['results'][0];
 
         // // TODO - update
@@ -73,23 +73,20 @@ class PageController extends Controller
     }
 
     // TEMP - CSH
-    function csh(){
+    function csh($region, $lang){
         // App::setLocale($lang);
-        $page = $this->cms->page('context-sensitive-help');
+        $page = $this->cms->page($region, $lang, 'context-sensitive-help');
         $pageContent = $page['results'][0];
         return view('pages.csh', compact('pageContent', 'recent', 'exclusiveTo','title'));
     }
 
     // TEMP - FAQ
-    function faq(){
+    function faq($region, $lang){
         // App::setLocale($lang);
-        $page = $this->cms->page('faq');
+        $page = $this->cms->page($region, $lang, 'faq');
         $pageContent = $page['results'][0];
         return view('pages.faq', compact('pageContent', 'recent', 'exclusiveTo','title'));
     }
-
-
-
 
     // search
     function search($year, $product, $version, $lang){

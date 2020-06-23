@@ -21,28 +21,16 @@ Route::middleware('throttle:30|180,1')->group(function () {
 });
 
 Route::get('/api/vote/getData', 'VoteController@getVoteData');
-// Route::get('/api/vote/dumpVotes', 'VoteController@dumpVotes');
 
 // home page - to come
-Route::get('/', 'PageController@home');
-
-// cloud index
-// Route::get('/', function () {
-//     return redirect('/2019/webapps/30/en/webapps');
-// });
+Route::get('/{region}/{lang}/', 'PageController@home');
 
 // TEMPORARY HARD CODE
 
-Route::get('/blog', 'PageController@blogOverview');
-
-Route::get('/blog/{post}', 'PageController@blogDetail');
-
-Route::get('/csh', 'PageController@csh');
-Route::get('/faq', 'PageController@faq');
-
-
-
-
+Route::get('/{region}/{lang}/blog', 'PageController@blogOverview');
+Route::get('/{region}/{lang}/blog/{post}', 'PageController@blogDetail');
+Route::get('/{region}/{lang}/csh', 'PageController@csh');
+Route::get('/{region}/{lang}/faq', 'PageController@faq');
 
 // search
 Route::get('/search/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
@@ -88,13 +76,13 @@ Route::get('/se-search/{year}/{product}/{version}/{lang}/{category}/{subcategory
 
 
 // topics
-Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');
+Route::get('/{region}/{lang}/{product}/{version}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');
 
 // topics
-Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{subsubcategory}/{topic}', 'PageController@showTopic2');
+Route::get('/{region}/{lang}/{product}/{version}/{category}/{subcategory}/{subsubcategory}/{topic}', 'PageController@showTopic2');
 
 // sub category
-Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');
+Route::get('/{region}/{lang}/{year}/{product}/{version}/{category}/{subcategory}', 'PageController@showSubCategory');
 
 // category
 Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory')->name('category');

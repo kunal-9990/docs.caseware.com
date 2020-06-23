@@ -85,9 +85,12 @@ class DocsCmsApi
     //         '_embed' => 1
     //     ], $lifetime);
     //  }
-     public function page($slug, $lifetime = null)
+     public function page($region, $lang, $slug, $lifetime = null)
      {
-        return $this->_get('/wp-json/wp/v2/pages?slug='. $slug, [
+        if($lang == "en"){
+            $lang = "";
+        }
+        return $this->_get('/'.$lang.'/wp-json/wp/v2/pages?slug='.$region.'-'.$slug, [
             '_embed' => 1
         ], $lifetime);
      }
