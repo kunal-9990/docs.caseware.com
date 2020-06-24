@@ -1,4 +1,4 @@
-<span class="notranslate">
+{{-- <span class="notranslate">
     <div class="filters__menu">
         <div class="switch-wrap se @if($mobile == true) mobile @endif">
             <label class="switch">
@@ -101,4 +101,4 @@
                     class="switch-name__no-wrap">&nbsp;</span>EBP</div>
         </div>        
     </div>
-</span>
+</span> --}}

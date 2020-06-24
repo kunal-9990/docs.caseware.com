@@ -24,6 +24,9 @@ Route::get('/api/vote/getData', 'VoteController@getVoteData');
 
 // home page - to come
 Route::get('/{region}/{lang}/', 'PageController@home');
+Route::get('/', function() {
+        return redirect('/ca/en');
+});
 
 // TEMPORARY HARD CODE
 
@@ -82,10 +85,10 @@ Route::get('/{region}/{lang}/{product}/{version}/{category}/{subcategory}/{topic
 Route::get('/{region}/{lang}/{product}/{version}/{category}/{subcategory}/{subsubcategory}/{topic}', 'PageController@showTopic2');
 
 // sub category
-Route::get('/{region}/{lang}/{year}/{product}/{version}/{category}/{subcategory}', 'PageController@showSubCategory');
+Route::get('/{region}/{lang}/{product}/{version}/{category}/{subcategory}', 'PageController@showSubCategory');
 
 // category
-Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory')->name('category');
+Route::get('/{region}/{lang}/{product}/{version}/{category}', 'PageController@showCategory')->name('category');
 
 
 Route::post('logemail', 'Controller@logEmail');

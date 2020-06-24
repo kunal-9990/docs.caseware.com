@@ -1,44 +1,27 @@
-@php
-// $en = Route::current();
-// $en = Route::current();
-// $en->setParameter('lang', 'en');
-// // dd($en->urir());
-// $fr = Route::current();
-// $fr->setParameter('lang', 'fr');
-// $es = Route::current();
-// $es->setParameter('lang', 'es');
-// $nl = Route::current();
-// $nl->setParameter('lang', 'nl');
-// $cn = Route::current();
-// $cn->setParameter('lang', 'cn');
-// $de = Route::current();
-// $de->setParameter('lang', 'de');
 
-@endphp
 <div class="language__dropdown">
     @php
     $languages = array("en"=>"EN", "fr"=>"FR", "es"=>"ES", "nl"=>"NL","cn"=>"CN", "de"=>"DE");
     $segments = Request::segments();
-    $segments[3] = 'en';
+    // dd(Request::segments()); 
+    $segments[1] = 'en';
     $enLink = '/' . implode('/', $segments);
-    $segments[3] = 'fr';
+    $segments[1] = 'fr';
     $frLink = '/' . implode('/', $segments);
-    $segments[3] = 'es';
+    $segments[1] = 'es';
     $esLink = '/' . implode('/', $segments);
-    $segments[3] = 'nl';
+    $segments[1] = 'nl';
     $nlLink = '/' . implode('/', $segments);
-    $segments[3] = 'cn';
+    $segments[1] = 'cn';
     $cnLink = '/' . implode('/', $segments);
-    $segments[3] = 'de';
+    $segments[1] = 'de';
     $deLink = '/' . implode('/', $segments);
     if(strpos(Request::url(), '/search/') == true || strpos(Request::url(), '/se-search/') == true) {
         $currentLanguage = $languages[Request::segments()[4]];
     }
     else {
-        $currentLanguage = $languages[Request::segments()[3]];
+        $currentLanguage = $languages[Request::segments()[1]];
     }
-
-
     @endphp
     <a href="#"><i class="fas fa-globe-americas"></i> {{$currentLanguage}} <i class="fas fa-angle-down"></i></a>
     <div class="dropdown-content">
@@ -49,7 +32,4 @@
         <a href="{{ $cnLink }}">Chinese</a>
         <a href="{{ $deLink }}">German</a>
     </div>
-</div>
-<div class="filters__dropdown">
-    <a href="#"><i class="fas fa-filter"></i> {{ __('strings.products') }} <i class="fas fa-angle-down"></i></a>
 </div>

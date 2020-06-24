@@ -94,7 +94,7 @@ class PageController extends Controller
     }
     
     // topic
-    function showTopic($year, $product, $version, $lang, $category, $subcategory, $topic){
+    function showTopic($region, $lang, $product, $version, $category, $subcategory, $topic){
 
         App::setLocale($lang);
         
@@ -115,11 +115,11 @@ class PageController extends Controller
                 $product =  strtolower($product);
 
                 try {
-                    $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$lang."/".$category."/".$subcategory."/".$topic ));
+                    $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$region."/".$lang."/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$topic ));
                     $doNotTranslate = true;
                 } catch (Exception $e) {
                     try {
-                        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/en/".$category."/".$subcategory."/".$topic ));
+                        $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$region."/en/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$topic ));
                         } catch (Exception $e) {
                             return response()->view('errors.404');
                         }
@@ -154,11 +154,11 @@ class PageController extends Controller
         $product =  strtolower($product);
 
         try {
-            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$lang."/".$category."/".$subcategory."/".$topic ));
+            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$region."/".$lang."/".$product."/".$version."/Content/".$category."/".$subcategory."/".$topic ));
             $doNotTranslate = true;
         } catch (Exception $e) {
             try {
-                $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/en/".$category."/".$subcategory."/".$topic ));
+                $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$region."/en/".$version."/"."Content/".$category."/".$subcategory."/".$topic ));
                 } catch (Exception $e) {
                     return response()->view('errors.404');
                 }
@@ -176,7 +176,7 @@ class PageController extends Controller
     }
 
     // topics with subsubcategory
-    function showTopic2($year, $product, $version, $lang, $category, $subcategory, $subsubcategory, $topic){
+    function showTopic2($region, $lang, $product, $version, $category, $subcategory, $subsubcategory, $topic){
 
         App::setLocale($lang);
                 
@@ -191,11 +191,11 @@ class PageController extends Controller
         }
 
         try {
-            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$lang."/".$category."/".$subcategory."/".$subsubcategory."/".$topic ));
+            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$region."/".$lang."/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$subsubcategory."/".$topic ));
             $doNotTranslate = true;        
         } catch (Exception $e) {
             try {
-            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/en/".$category."/".$subcategory."/".$subsubcategory."/".$topic ));
+            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$region."/en/".$product."/".$version."/"."Content/".$category."/".$subcategory."/".$subsubcategory."/".$topic ));
                 } catch (Exception $e) {
                     return response()->view('errors.404');
                 }
@@ -210,7 +210,7 @@ class PageController extends Controller
     }
 
     // subcategory
-    function showSubCategory($year, $product, $version, $lang, $category, $subcategory){
+    function showSubCategory($region, $lang, $product, $version, $category, $subcategory){
 
         App::setLocale($lang);
                 
@@ -222,11 +222,11 @@ class PageController extends Controller
         $product =  strtolower($product);
 
         try {
-            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/".$lang."/".$category."/".$subcategory ));
+            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$region."/".$lang."/".$product."/".$version."/"."Content/".$category."/".$subcategory ));
             $doNotTranslate = true;        
         } catch (Exception $e) {
             try {
-            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."Content/en/".$category."/".$subcategory ));
+            $dom = HtmlDomParser::str_get_html(file_get_contents( env('PATH_TO_PUBLIC').'documentation_files/'.$region."/en/".$product."/".$version."/"."Content/".$category."/".$subcategory ));
                 } catch (Exception $e) {
                     return response()->view('errors.404');
                 }
@@ -238,7 +238,7 @@ class PageController extends Controller
     }
     
     // category
-    function showCategory($year, $product, $version, $lang, $category){
+    function showCategory($region, $lang, $product, $version, $category){
 
         App::setLocale($lang);
         
@@ -247,13 +247,14 @@ class PageController extends Controller
         }
 
         $product =  strtolower($product);
-
+        $path = env('PATH_TO_PUBLIC').'documentation_files/'.$region."/".$lang."/".$product."/".$version."/Content/".$category ;
+        // dd($path);
         try {
-            $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."/Content/".$lang."/".$category ));
+            $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$region."/".$lang."/".$product."/".$version."/Content/".$category ));
             $doNotTranslate = true;        
         } catch (Exception $e) {
             try {
-            $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$year."/".$product."/".$version."/"."/Content/en/".$category ));
+            $dom = HtmlDomParser::str_get_html(file_get_contents(env('PATH_TO_PUBLIC').'documentation_files/'.$region."/en/".$product."/".$version."/Content/".$category ));
                 } catch (Exception $e) {
                     return response()->view('errors.404');
                 }

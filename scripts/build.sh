@@ -21,18 +21,23 @@
 # wait until the script says "done." 
 #dos2unix scripts/build.sh
 
-sudo chmod -R 777 .
+# $1 region
+# $2 lang
+# $3 product
+# $4 version
 
-echo "Backing up current content..."
-sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
+# sudo chmod -R 777 .
+
+# echo "Backing up current content..."
+# sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
 
 
 echo 'Copying new content into place...'
-mkdir -p public/documentation_files/$1/$2/$3/Content/$4
-cp -R tmp/$4/$3/* public/documentation_files/$1/$2/$3/Content/$4
-cd public/documentation_files/$1/$2/$3/Content/$4
+mkdir -p public/documentation_files/$1/$2/$3/$4/Content/
+cp -R tmp/$1/$2/$3/$4/* public/documentation_files/$1/$2/$3/$4/Content
+cd public/documentation_files/$1/$2/$3/$4/Content
 
-sudo chmod -R 777 .
+# sudo chmod -R 777 .
 
 echo 'Renaming some files...'
 
@@ -66,7 +71,7 @@ else
 fi 
 
 
-prefix="\/documentation_files\/$1\/$2\/$3\/Content\/$4\/Resources\/"
+prefix="\/documentation_files\/$1\/$2\/$3\/$4\/Content\/Resources\/"
 prefix="$prefix"
 
 # echo $prefix
@@ -127,6 +132,6 @@ echo 'Setting File permissions...'
 
 # find . ! -name '*.sh' -type f -exec chmod 644 {} \;    
 # find . ! -name 'scripts' -type d -exec chmod 755 {} \;
-sudo chmod -R 777 . 
+# sudo chmod -R 777 . 
 
 echo 'Done.'

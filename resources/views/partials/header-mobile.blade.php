@@ -5,11 +5,11 @@
     </div>
     <div class="header-mobile__input-search-wrapper">
         @php
-        $year = Route::current()->parameters()["year"];
+        $region = Route::current()->parameters()["region"];
+        $lang = Route::current()->parameters()["lang"];
         $product = Route::current()->parameters()["product"];
         $version = Route::current()->parameters()["version"];
-        $lang = Route::current()->parameters()["lang"];
-        $searchURL = route('search', [$year, $product, $version, $lang]);
+        $searchURL = route('search', [$region, $lang, $product, $version]);
         @endphp
         <form method="GET" action="{{$searchURL}}">
             <input type="text" name="search" placeholder="Search" autocomplete="off">

@@ -1,4 +1,6 @@
 module.exports = () => {
+
+    
     function UrlExists(url) {
         var http = new XMLHttpRequest();
         http.open('HEAD', url, false);
@@ -17,52 +19,41 @@ module.exports = () => {
 
     // they are the same for now but might change in the future to
     // to have different TOCxml routes
-    if (0) {
-        // used for staging
 
-        var year = routeComponents[1];
-        console.log(year);
-        var product = routeComponents[2].toLowerCase();
-        var version = routeComponents[3];
-        var lang = routeComponents[4];
-        var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
-        var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
-    } else {
-        // used for live
-        var year = routeComponents[1];
-        var product = routeComponents[2].toLowerCase();
-        var version = routeComponents[3];
-        var lang = routeComponents[4];
-        var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
-        //hardcoding which toc to return based on language. currently, NL is the only language to have a properly translated TOC
-        //this should be changed so that if a properly translated toc doesn't exist, it defaults to english
-        // if(lang == "nl"){
-        //     var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
-        // }
-        var properlyTranslated = ["en", "nl"];
-        if (window.location.href.indexOf("SE-Authoring") > -1) {
-            if (properlyTranslated.includes(lang)) {
-                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/SE-Authoring-TOC.xml";
-            }
-            else {
-                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/en/SE-Authoring-TOC.xml";
-            }
-        }
-        if (window.location.href.indexOf("SE-Builder") > -1) {
-            if (properlyTranslated.includes(lang)) {
-                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/SE-Builder-TOC.xml";
-            }
-            else {
-                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/en/SE-Builder-TOC.xml";
-            }
+    // used for live
+    var region = routeComponents[1];
+    var lang = routeComponents[2];
+    var product = routeComponents[3].toLowerCase();
+    var version = routeComponents[4];
+    var linkPrefix = "/" + region + "/" + lang + "/" + product + "/" + version;
+    //hardcoding which toc to return based on language. currently, NL is the only language to have a properly translated TOC
+    //this should be changed so that if a properly translated toc doesn't exist, it defaults to english
+    // if(lang == "nl"){
+    //     var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
+    // }
+    var properlyTranslated = ["en", "nl"];
+    if (window.location.href.indexOf("SE-Authoring") > -1) {
+        if (properlyTranslated.includes(lang)) {
+            var TOCxml = "/documentation_files/" + region + "/" + lang + "/" + product + "/" + version + "/Content/SE-Authoring-TOC.xml";
         }
         else {
-            if (properlyTranslated.includes(lang)) {
-                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
-            }
-            else {
-                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/en/OnlineOutput.xml";
-            }
+            var TOCxml = "/documentation_files/" + region + "/" + lang + "/" + product + "/" + version + "/Content/SE-Authoring-TOC.xml";
+        }
+    }
+    if (window.location.href.indexOf("SE-Builder") > -1) {
+        if (properlyTranslated.includes(lang)) {
+            var TOCxml = "/documentation_files/" + region + "/" + lang + "/" + product + "/" + version + "/Content/SE-Builder-TOC.xml";
+        }
+        else {
+            var TOCxml = "/documentation_files/" + region + "/" + lang + "/" + product + "/" + version + "/Content/SE-Builder-TOC.xml";
+        }
+    }
+    else {
+        if (properlyTranslated.includes(lang)) {
+            var TOCxml = "/documentation_files/" + region + "/" + lang + "/" + product + "/" + version + "/Content/OnlineOutput.xml";
+        }
+        else {
+            var TOCxml = "/documentation_files/" + region + "/" + lang + "/" + product + "/" + version + "/Content/OnlineOutput.xml";
         }
     }
 

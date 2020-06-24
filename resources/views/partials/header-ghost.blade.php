@@ -1,7 +1,3 @@
-@php 
-
-@endphp
-
 <header class="header header--ghost">
     <div class="container header__container">
         {{-- <div class="row"> --}}
