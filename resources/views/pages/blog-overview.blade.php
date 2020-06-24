@@ -17,7 +17,6 @@
 </head>
 <body>
     <div class="page-wrap">
-       
         <div class="blog-overview">
 
             @include('partials.header-ghost')

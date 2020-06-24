@@ -49,13 +49,13 @@ class PageController extends Controller
     function blogOverview(){
 
         // App::setLocale($lang);
-
+        
         $page = $this->cms->page('blog');
+
         $pageContent = $page['results'][0];
         $posts = $this->cms->posts();
         $categories = $this->cms->categories();
         $tags = $this->cms->tags();
-
         return view('pages.blog-overview', compact('pageContent', 'posts', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
     }
 

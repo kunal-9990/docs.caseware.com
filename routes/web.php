@@ -30,13 +30,13 @@ Route::get('/', function() {
 
 // TEMPORARY HARD CODE
 
-Route::get('/{region}/{lang}/blog', 'PageController@blogOverview');
-Route::get('/{region}/{lang}/blog/{post}', 'PageController@blogDetail');
-Route::get('/{region}/{lang}/csh', 'PageController@csh');
-Route::get('/{region}/{lang}/faq', 'PageController@faq');
 
 Route::get('/videos', 'PageController@videosOverview');
 Route::get('/videos/{slug}', 'PageController@videosLightbox');
+Route::get('/blog', 'PageController@blogOverview');
+Route::get('/blog/{post}', 'PageController@blogDetail');
+Route::get('/{region}/{lang}/csh', 'PageController@csh');
+Route::get('/{region}/{lang}/faq', 'PageController@faq');
 
 
 

@@ -85,7 +85,7 @@ class DocsCmsApi
     //         '_embed' => 1
     //     ], $lifetime);
     //  }
-     public function page($region, $lang, $slug, $lifetime = null)
+     public function page($region, $lang = null, $slug = null, $lifetime = null)
      {
         if($lang == "en"){
             $lang = "";
