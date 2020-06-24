@@ -26,6 +26,9 @@ Route::get('/api/vote/getData', 'VoteController@getVoteData');
 
 // TEMPORARY HARD CODE
 
+Route::get('/{region}/{lang}/{product}/{version}/webapps', function() {
+        return redirect('/ca/en/csh');
+});
 
 Route::get('/videos', 'PageController@videosOverview');
 Route::get('/videos/{slug}', 'PageController@videosLightbox');
