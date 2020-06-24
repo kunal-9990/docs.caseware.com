@@ -21,7 +21,7 @@
 # wait until the script says "done." 
 #dos2unix scripts/build.sh
 
-sudo chmod -R 777 .
+# sudo chmod -R 777 .
 
 echo "Backing up current content..."
 sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
@@ -32,7 +32,7 @@ mkdir -p public/documentation_files/$1/$2/$3/Content/$4
 cp -R tmp/$4/$3/* public/documentation_files/$1/$2/$3/Content/$4
 cd public/documentation_files/$1/$2/$3/Content/$4
 
-sudo chmod -R 777 .
+# sudo chmod -R 777 .
 
 echo 'Renaming some files...'
 
@@ -129,6 +129,6 @@ echo 'Setting File permissions...'
 
 # find . ! -name '*.sh' -type f -exec chmod 644 {} \;    
 # find . ! -name 'scripts' -type d -exec chmod 755 {} \;
-sudo chmod -R 777 . 
+# sudo chmod -R 777 . 
 
 echo 'Done.'
