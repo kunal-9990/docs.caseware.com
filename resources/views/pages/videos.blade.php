@@ -35,6 +35,7 @@
                         <div class="col-sm-12">
                             <div
                                 data-component="videos" 
+                                data-prop-posts-per-page="{{ $pageContent->acf->posts_per_page }}"
                                 data-prop-videos="{{htmlspecialchars(json_encode($videos))}}"
                                 data-prop-video-slug="{{ (isset($slug) && !empty($slug)) ? $slug : null }}"
                                 data-prop-tags="{{htmlspecialchars(json_encode($tags))}}" 

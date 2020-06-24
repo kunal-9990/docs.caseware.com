@@ -12,12 +12,16 @@ class Videos extends Component {
     this.state = {
       dropdownOptions: [],
       selectedFilters: [],
-      selectedVideos: []
+      selectedVideos: [],
+      paginatedVideos: [],
+      pageNumber: 0,
+      postsPerPage: (this.props.postsPerPage && this.props.postsPerPage > 0) ? this.props.postsPerPage : 9
     }
 
     this.allVideos = []
     this.allVideoFilters = []
     this.updateSelectedFilters = this.updateSelectedFilters.bind(this)
+    this.handlePageClick = this.handlePageClick.bind(this)
   }
 
 
@@ -65,7 +69,7 @@ class Videos extends Component {
           label: "Filters",
           options: tags
         }]
-    })
+    }, () => this.paginateVideos())
   }
 
   updateSelectedFilters(selectedFilters) {  
@@ -81,12 +85,21 @@ class Videos extends Component {
     })
     this.setState({ 
       selectedVideos: this.state.selectedFilters.length > 0 ? filteredVideos : this.allVideos
-    // }, () => this.paginatePosts())
+    }, () => this.paginateVideos())
+  }
+
+  handlePageClick(data) {
+    this.setState({ pageNumber: data.selected }, () => { this.paginateVideos() })
+  }
+
+  paginateVideos() {
+    this.setState({
+        paginatedVideos: this.state.selectedVideos.slice(this.state.pageNumber * this.state.postsPerPage, (this.state.pageNumber + 1) * this.state.postsPerPage)
     })
   }
 
   render() {
-    // let pageCount = Math.ceil(this.state.selectedPosts.length / this.state.postsPerPage)
+    let pageCount = Math.ceil(this.state.selectedVideos.length / this.state.postsPerPage)
     return (
       <div>
         <div className="filter">
@@ -100,10 +113,10 @@ class Videos extends Component {
         </div>
         <Grid 
           type="videos"
-          items={this.state.selectedVideos} 
+          items={this.state.paginatedVideos} 
           slug={this.props.videoSlug}
         />
-        {/* { pageCount > 1 && (
+        { pageCount > 1 && (
           <ReactPaginate
               previousLabel="&lsaquo;"
               nextLabel="&rsaquo;"
@@ -117,7 +130,7 @@ class Videos extends Component {
               subContainerClassName={'pages pagination'}
               activeClassName={'active'}
           />
-        )}*/}
+        )}
       </div> 
     )
   }
