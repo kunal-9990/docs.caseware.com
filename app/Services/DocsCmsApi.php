@@ -129,6 +129,12 @@ class DocsCmsApi
          ], $lifetime);
      }
 
+     // TEMP???
+     public function get_custom_post_by_type($post_type, $lifetime = null)
+     {
+        return $this->_get('/wp-json/wp/v2/' . $post_type, [], $lifetime);
+     }
+
      public function get_custom_post_by_name($locale, $post_type, $post_name, $lifetime = null)
      {
         $prepend = getWpLang($locale, request()->session()->get('lang'));

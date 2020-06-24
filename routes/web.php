@@ -35,6 +35,13 @@ Route::get('/{region}/{lang}/blog/{post}', 'PageController@blogDetail');
 Route::get('/{region}/{lang}/csh', 'PageController@csh');
 Route::get('/{region}/{lang}/faq', 'PageController@faq');
 
+Route::get('/videos', 'PageController@videosOverview');
+Route::get('/videos/{slug}', 'PageController@videosLightbox');
+
+
+
+
+
 // search
 Route::get('/search/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
 

@@ -88,6 +88,29 @@ class PageController extends Controller
         return view('pages.faq', compact('pageContent', 'recent', 'exclusiveTo','title'));
     }
 
+    // TEMP - Videos overview
+    function videosOverview(){
+        // App::setLocale($lang);
+        $page = $this->cms->page('videos');
+        $pageContent = $page['results'][0];
+        $videos = $this->cms->get_custom_post_by_type('videos');
+        $categories = $this->cms->categories();
+        $tags = $this->cms->tags();
+        return view('pages.videos', compact('pageContent', 'videos', 'categories', 'tags', 'title'));
+    }
+
+    // TEMP - Videos lightbox - same as overview but sends slug details to overview page 
+    function videosLightbox($slug){
+        // App::setLocale($lang);
+        $page = $this->cms->page('videos');
+        $pageContent = $page['results'][0];
+        $videos = $this->cms->get_custom_post_by_type('videos');
+        $categories = $this->cms->categories();
+        $tags = $this->cms->tags();
+        return view('pages.videos', compact('slug', 'pageContent', 'videos', 'categories', 'tags', 'title'));
+    }
+
+
     // search
     function search($year, $product, $version, $lang){
         return view('pages.search', compact('recent'));
