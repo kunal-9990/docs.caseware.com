@@ -27,7 +27,7 @@ class FAQ extends Component {
           filterLabels.push(option.label)
         })
         q.tags.map(tag => {
-          if (filterLabels.indexOf(tag.name) === -1) {
+          if (tag && tag.name && filterLabels.indexOf(tag.name) === -1) {
             dropdownOptions.push({ "value": tag.slug, "label": tag.name })
           }
         })
