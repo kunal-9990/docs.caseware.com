@@ -23,10 +23,6 @@ Route::middleware('throttle:30|180,1')->group(function () {
 Route::get('/api/vote/getData', 'VoteController@getVoteData');
 
 // home page - to come
-Route::get('/{region}/{lang}/', 'PageController@home');
-Route::get('/', function() {
-        return redirect('/ca/en');
-});
 
 // TEMPORARY HARD CODE
 
@@ -38,6 +34,10 @@ Route::get('/blog/{post}', 'PageController@blogDetail');
 Route::get('/{region}/{lang}/csh', 'PageController@csh');
 Route::get('/{region}/{lang}/faq', 'PageController@faq');
 
+Route::get('/{region}/{lang}/', 'PageController@home');
+Route::get('/', function() {
+        return redirect('/ca/en');
+});
 
 
 
