@@ -41,6 +41,16 @@
 *********************/
 
 .product-nav {
+    &__full > div {
+        margin: 6.2rem 0;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     &__grid {
         display: flex;
         flex-direction: row;
@@ -114,10 +124,10 @@
         img {
             margin-bottom: 2.4rem;
         }
+    }
 
-        span {
-            margin-bottom: 1.2rem;
-        }
+    &__links {
+        padding: 1.2rem 0;
     }
 
     &__cta {
