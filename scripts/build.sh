@@ -36,10 +36,10 @@ cd public/documentation_files/$1/$2/$3/Content/$4
 
 echo 'Renaming some files...'
 
-find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content//g'
+find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content\//\//g'
 
 #mv Online\ Output.fltoc OnlineOutput.xml
-#mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml
+#mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml 
 
 echo "Copying over TOC and redirect xml files..."
 

@@ -5,10 +5,7 @@ $version = Route::current()->parameters()["version"];
 $lang = Route::current()->parameters()["lang"];
 $searchroute = '';
 
-if(strpos(Request::url(), '/SE-Authoring/') == true && strpos(Request::url(), '/se-search/') == true) {
-    $searchroute = "se-search";
-}
-else if(strpos(Request::url(), '/SE-Builder/') == true && strpos(Request::url(), '/se-builder-search/') == true) {
+if(strpos(Request::url(), '/SE-Authoring/') == true || strpos(Request::url(), '/se-search/') == true) {
     $searchroute = "se-search";
 }
 else {

@@ -41,6 +41,7 @@ module.exports = () => {
         // }
         var properlyTranslated = ["en", "nl"];
         if (window.location.href.indexOf("SE-Authoring") > -1) {
+            console.log("se authoring");
             if (properlyTranslated.includes(lang)) {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/SE-Authoring-TOC.xml";
             }
