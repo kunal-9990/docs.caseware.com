@@ -22,14 +22,7 @@
             <div class="col-sm-12">
 
         <!-- TODO un hardcode -->
-            <!-- @foreach($footer as $parent)
-            <div class="col">
-                <span><?=$parent->title?></span>
-                @foreach($parent->child_items as $children)
-                <a href="<?=$children->url?>" target="_blank"><?=$children->title?></a>
-                @endforeach
-            </div>
-            @endforeach -->
+           
 
                 <div class="col">
                     <span>Products</span>

@@ -116,7 +116,7 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'd
 @endif
 
 @php
-$routeLang = isset(Route::current()->parameters()["lang"]) ? Route::current()->parameters()["lang"]: "en" ;
+$routeLang = isset($segments[1]) ? $segments[1]: "en" ;
 if(!isset($hideOlark)){
 	$hideOlark = true;
 }

@@ -37,10 +37,13 @@ Route::get('/blog/{post}', 'PageController@blogDetail');
 Route::get('/{region}/{lang}/csh', 'PageController@csh');
 Route::get('/{region}/{lang}/faq', 'PageController@faq');
 
+Route::get('/{region}/{lang}/{slug}', 'PageController@product');
 Route::get('/{region}/{lang}/', 'PageController@home');
+
 Route::get('/', function() {
         return redirect('/ca/en');
 });
+
 
 
 

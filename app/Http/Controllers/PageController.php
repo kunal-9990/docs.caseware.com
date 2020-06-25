@@ -21,27 +21,34 @@ class PageController extends Controller
         // App::setLocale($lang);
 
         $page = $this->cms->page($region, $lang, 'home');
-        $pageContent = $page['results'][0];
-
-        return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title' ));
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else{        
+            $pageContent = $page['results'][0];
+            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title' ));
+        }
     }
 
-    function product($region, $lang, $product){
-
+    function product($region, $lang, $productSlug){
         // App::setLocale($lang);
 
-        $page = $this->cms->page($region, $lang, 'product-cloud-31');
-        $pageContent = $page['results'][0];
+        $page = $this->cms->page($region, $lang, $productSlug);
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else{        
+            $pageContent = $page['results'][0];
+            // // TODO - update
+            // if(startsWith(strtolower($product), "product")){
+            //     $page = $this->cms->page(removeFileExt(strtolower($product)));
+            //     $pageContent = $page['results'][0];
+            //     // dd($pageContent);
+            //     return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title'));
+            // }
 
-        // // TODO - update
-        // if(startsWith(strtolower($product), "product")){
-        //     $page = $this->cms->page(removeFileExt(strtolower($product)));
-        //     $pageContent = $page['results'][0];
-        //     // dd($pageContent);
-        //     return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title'));
-        // }
-
-        return view('pages.home', compact('pageContent', 'recent', 'exclusiveTo','title'));
+            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title'));
+            }
     }
 
     
@@ -49,21 +56,24 @@ class PageController extends Controller
     function blogOverview(){
 
         // App::setLocale($lang);
-        
-        $page = $this->cms->page('blog');
-
-        $pageContent = $page['results'][0];
-        $posts = $this->cms->posts();
-        $categories = $this->cms->categories();
-        $tags = $this->cms->tags();
-        return view('pages.blog-overview', compact('pageContent', 'posts', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else{        
+            $page = $this->cms->page('blog');
+            $pageContent = $page['results'][0];
+            $posts = $this->cms->posts();
+            $categories = $this->cms->categories();
+            $tags = $this->cms->tags();
+            return view('pages.blog-overview', compact('pageContent', 'posts', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
+        }
     }
 
     // Blog Detail
     function blogDetail($post){
 
         // App::setLocale($lang);
-
+        
         $postContent = $this->cms->post('en', $post)['results'][0]; // TODO - remove hardcode english... if post doesnt exist show 404
         $posts = $this->cms->posts();
         $categories = $this->cms->categories();
@@ -76,27 +86,42 @@ class PageController extends Controller
     function csh($region, $lang){
         // App::setLocale($lang);
         $page = $this->cms->page($region, $lang, 'context-sensitive-help');
-        $pageContent = $page['results'][0];
-        return view('pages.csh', compact('pageContent', 'recent', 'exclusiveTo','title'));
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else{        
+            $pageContent = $page['results'][0];
+            return view('pages.csh', compact('pageContent', 'recent', 'exclusiveTo','title'));
+        }
     }
+
 
     // TEMP - FAQ
     function faq($region, $lang){
-        // App::setLocale($lang);
-        $page = $this->cms->page($region, $lang, 'faq');
-        $pageContent = $page['results'][0];
-        return view('pages.faq', compact('pageContent', 'recent', 'exclusiveTo','title'));
+        $page =$this->cms->page($region, $lang, 'faqs');
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else{
+            $pageContent = $page['results'][0];
+            return view('pages.faq', compact('pageContent', 'recent', 'exclusiveTo','title'));
+        }
     }
 
     // TEMP - Videos overview
     function videosOverview(){
         // App::setLocale($lang);
         $page = $this->cms->page('videos');
-        $pageContent = $page['results'][0];
-        $videos = $this->cms->get_custom_post_by_type('videos');
-        $categories = $this->cms->categories();
-        $tags = $this->cms->tags();
-        return view('pages.videos', compact('pageContent', 'videos', 'categories', 'tags', 'title'));
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else{
+            $pageContent = $page['results'][0];
+            $videos = $this->cms->get_custom_post_by_type('videos');
+            $categories = $this->cms->categories();
+            $tags = $this->cms->tags();
+            return view('pages.videos', compact('pageContent', 'videos', 'categories', 'tags', 'title'));
+        }
     }
 
     // TEMP - Videos lightbox - same as overview but sends slug details to overview page 
