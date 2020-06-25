@@ -4,22 +4,21 @@ import Modal from 'react-modal'
 import YouTube from 'react-youtube'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTag, faTags } from '@fortawesome/free-solid-svg-icons'
+// let fetchVideoInfo = require('youtube-info');
 
 Modal.setAppElement('#main');
 
 
 const YouTubeOptions = {
   // height: '390',
-  // width: '640',
   playerVars: {
     // https://developers.google.com/youtube/player_parameters
     autoplay: 0
   }
 }
 
-const VideoLightbox = ({ item, handleCloseModal }) => {
-  console.log(item)
 
+const VideoLightbox = ({ item, handleCloseModal }) => {
   return(
     <div className="video-lightbox__container">
       <div className="video-lightbox__header">
@@ -30,10 +29,38 @@ const VideoLightbox = ({ item, handleCloseModal }) => {
         >&times;</button>
       </div>
       <div className="video-lightbox__content">
-        <YouTube videoId={item.acf.youtube_id} opts={YouTubeOptions} onReady={this._onReady} />
+        <YouTube 
+          videoId={item.acf.youtube_id} 
+          opts={YouTubeOptions} 
+          onReady={this._onReady} 
+          containerClassName="iframe-video-wrapper"
+        />
         <div className="video-lightbox__details">
-          <h2 dangerouslySetInnerHTML={{__html: item.title}}></h2>
-          <div dangerouslySetInnerHTML={{__html: item.acf.description}} />
+          {(item.acf.video_title || item.acf.video_title_prepend) ? (
+            <div className="video-lightbox__title">
+              { item.acf.video_title_prepend && <h3>{ item.acf.video_title_prepend }</h3> }
+              { item.acf.video_title && <h1>{ item.acf.video_title }</h1> }
+            </div>
+          ) : (
+            <div className="video-lightbox__title"><h2 dangerouslySetInnerHTML={{__html: item.title}}></h2></div>
+          )}
+          <div className="video-lightbox__description">
+            <div className="grid-item__filter">
+              { item.videoFilters.length > 0 && (<FontAwesomeIcon icon={ item.videoFilters.length > 1 ? faTags : faTag } />) }
+              { item.videoFilters.join(', ')} 
+            </div>
+            <div dangerouslySetInnerHTML={{__html: item.acf.description}} />
+          </div>
+          {(item.acf.cta && (item.acf.cta.strapline || item.acf.cta.button_link)) && (
+            <div className="video-lightbox__cta">
+              {item.acf.cta.strapline && <p>{ item.acf.cta.strapline} </p>}
+              {(item.acf.cta.button_label && item.acf.cta.button_link) && (
+                <a href={item.acf.cta.button_link} className="mk4btn" target="_blanks">
+                  { item.acf.cta.button_label }
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -63,7 +90,6 @@ class VideoGridItem extends Component {
 
   render() {
     const item = this.props.item
-    console.log(item)
     return (
       <React.Fragment>
         {/* --- Grid Item --- */}
@@ -75,7 +101,7 @@ class VideoGridItem extends Component {
             >
             </div>
             <div className="grid-item__play">
-            <img src="/img/play.png" className="play-btn" alt="play" />
+              <img src="/img/play.png" className="play-btn" alt="play" />
             </div>
             <div className="grid-item__wrapper">
               <h2 dangerouslySetInnerHTML={{__html: item.title}}></h2>

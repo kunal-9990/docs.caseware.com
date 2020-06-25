@@ -19,7 +19,7 @@ class Dropdown extends React.Component {
       <div>
         <Select
 					name="filters"
-					placeholder="Filters"
+					placeholder="Filters" //TODO
 					className="select"
 					classNamePrefix="select"
           value={this.state.multiValue}
