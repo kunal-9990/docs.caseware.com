@@ -16,6 +16,11 @@ header.header {
         width: 100%;
         background: none;
         border-bottom: none;
+
+        .dropdown > a {
+            color: $white;
+            font-weight: 300;
+        }
     }
 
     .header__container {
