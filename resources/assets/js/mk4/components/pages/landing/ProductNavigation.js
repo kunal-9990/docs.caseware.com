@@ -1,14 +1,33 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 
+const ProductCta = ({ link, label, accent}) => (
+  <div className="product-nav__button">
+    <a 
+      href={link} 
+      target="_blank" 
+      style={{ backgroundColor: accent }}
+    >
+      <span>{ label }</span>
+    </a>
+  </div>
+)
+
 const ProductNavigation = props => {
   let navGrid = props.navigation.map((navItem, key) => (
     <Fade bottom key={key}>
       <div className="product-nav__wrapper">
-        { navItem.branding === 'icon' ? 
-          navItem.icon && <img src={navItem.icon.url} alt={navItem.icon.alt} /> :
-          navItem.text && <h2>{ navItem.text }</h2>
-        }
+        <div className="product-nav__title">
+          <div>
+          { navItem.branding === 'icon' ? 
+            navItem.icon && <img src={navItem.icon.url} alt={navItem.icon.alt} /> :
+            navItem.text && <h2>{ navItem.text }</h2>
+          }
+          </div>
+          {(props.settings.layout === 'full' && navItem.button.label && navItem.button.link) && 
+            <ProductCta label={navItem.button.label} link={navItem.button.link} accent={navItem.accent_colour} />
+           }
+        </div>
         <div className="product-nav__item" key={key} style={{ borderLeft: '6px solid ' + navItem.accent_colour}}>
           <div>
             { navItem.description && (<span>{ navItem.description }</span>) }
@@ -20,19 +39,10 @@ const ProductNavigation = props => {
               ))}
             </div>
           </div>
-          {(navItem.button.label && navItem.button.link) && (
-            <div className="product-nav__button">
-              <a 
-                href={navItem.button.link} 
-                target="_blank" 
-                style={{ backgroundColor: navItem.accent_colour }}
-              >
-                <span>{ navItem.button.label }</span>
-              </a>
-            </div>
-          )}
+           {(props.settings.layout === 'grid' && navItem.button.label && navItem.button.link) && 
+            <ProductCta label={navItem.button.label} link={navItem.button.link} accent={navItem.accent_colour} />
+           }
         </div>
-
       </div>
     </Fade>
   ))
