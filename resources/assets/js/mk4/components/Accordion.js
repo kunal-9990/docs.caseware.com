@@ -2,7 +2,6 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTag, faTags } from '@fortawesome/free-solid-svg-icons'
 
-
 const SubAccordion = ({ subgroup }) => (
   <div className="tab tab--subgroup">
     <input type="checkbox" id={subgroup.title.replace(/ /g, '-')}/>
@@ -22,8 +21,12 @@ const SubAccordion = ({ subgroup }) => (
 
 const Accordion = ({ id, title, outerDetails, innerDetails, content, contents }) => (
   <div className="tab tab--group" key={id}>
-    <input type="checkbox" id={id}/>
-    <label className="tab__label" htmlFor={id}>
+    <input 
+      type="checkbox" 
+      id={id} 
+      checked={(window.location.hash && (window.location.hash.replace('#', '').toLowerCase() === id.toLowerCase()))}
+    />
+    <label htmlFor={id} className="tab__label" >
       <h2 className="light">{ title }</h2>
     </label>
     { outerDetails && (
@@ -35,9 +38,9 @@ const Accordion = ({ id, title, outerDetails, innerDetails, content, contents })
     <div className="tab__content">
       { innerDetails && <p>{ innerDetails }</p> }
       { content && <div dangerouslySetInnerHTML={{__html: content}} />}
-      { contents && contents.map(content => {
+      { contents && contents.map((content, i) => {
         if (content.acf_fc_layout == 'sub_group') {
-          return <SubAccordion subgroup={content.sub_group} />
+          return <SubAccordion subgroup={content.sub_group} key={i} />
         } else {
           return content.links.map((link, i) => (
             <div className="link" key={i}>
