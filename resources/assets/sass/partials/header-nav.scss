@@ -1,6 +1,7 @@
 .header__nav-wrap,
 .mobile-nav__wrapper {
-    .language__dropdown {
+    .language__dropdown,
+    .region__dropdown {
         position: relative;
         margin-left: 25px;
         
@@ -34,14 +35,18 @@
     }
 
     .language__dropdown,
+    .region__dropdown,
     .filters__dropdown {
         .fa-angle-down {
             margin-left: 5px;
         }
     }
     
-    .language__dropdown:hover .dropdown-content {
-        display: block;
+    .language__dropdown,
+    .region__dropdown {
+        &:hover .dropdown-content {
+            display: block;
+        }
     }
     
     .filters__dropdown {

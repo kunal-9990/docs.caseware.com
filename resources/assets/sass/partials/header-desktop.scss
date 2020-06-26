@@ -8,12 +8,11 @@ header.header-desktop {
 
     .language__dropdown,
     .filters__dropdown,
+    .region__dropdown,
     .expanded-filters,
     .header__input-search-wrapper {
         display: none !important;
     }
-
-
 
     @include mq(sm) {
         display: block;
