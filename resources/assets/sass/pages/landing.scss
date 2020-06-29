@@ -102,6 +102,30 @@
         }
     }
 
+    &__title {
+        display: flex;
+        flex-direction: column;
+
+        @include mq(sm) {
+            flex-direction: row;
+        }
+
+        & > div:first-child {
+            flex: 1;
+            margin-right: 1.2rem;
+        }
+
+        .product-nav__button {
+            display: flex;
+            margin-top: 1.2rem;
+
+            @include mq(sm) {
+                margin: 0;
+            }
+
+        }
+    }
+
     &__item {
         display: flex;
         flex-direction: column;
