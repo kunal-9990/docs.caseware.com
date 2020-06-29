@@ -107,10 +107,10 @@ class PageController extends Controller
         }
     }
 
-    // TEMP - Videos overview
-    function videosOverview(){
+    // TEMP - Videos overview 
+    function videosOverview($region, $lang){
         // App::setLocale($lang);
-        $page = $this->cms->page('videos');
+        $page = $this->cms->page($region, $lang, 'videos');
         if(empty($page['results'])){
             return response()->view('errors.404');
         }
