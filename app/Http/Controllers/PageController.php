@@ -54,13 +54,12 @@ class PageController extends Controller
     
     // Blog Overview
     function blogOverview(){
-
+        $page = $this->cms->page('int', 'en', 'blog');
         // App::setLocale($lang);
         if(empty($page['results'])){
             return response()->view('errors.404');
         }
         else{        
-            $page = $this->cms->page('blog');
             $pageContent = $page['results'][0];
             $posts = $this->cms->posts();
             $categories = $this->cms->categories();

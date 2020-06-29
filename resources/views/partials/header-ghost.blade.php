@@ -1,6 +1,8 @@
 @php 
-$region = Route::current()->parameters()["region"];
-$lang = Route::current()->parameters()["lang"];
+isset(Route::current()->parameters()["region"]) ? $region = Route::current()->parameters()["region"] : $region = '';
+isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = '';
+// $region = Route::current()->parameters()["region"];
+// $lang = Route::current()->parameters()["lang"];
 @endphp
 
 <header class="header header--ghost">

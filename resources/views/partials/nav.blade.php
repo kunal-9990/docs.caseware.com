@@ -20,12 +20,13 @@
         $currentLanguage = $languages[Request::segments()[4]];
     }
     else {
-        $currentLanguage = $languages[Request::segments()[1]];
+        // $currentLanguage = $languages[Request::segments()[1]];
+        isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = 'Language';
     }
     @endphp
-    <a href="#"><i class="fas fa-globe-americas"></i> {{$currentLanguage}} <i class="fas fa-angle-down"></i></a>
+    <a href="#"><i class="fas fa-globe-americas"></i> {{$lang}} <i class="fas fa-angle-down"></i></a>
     <div class="dropdown-content">
-        <a href="{{ $enLink }}">English</a>
+        <a href="{{ str_replace('/'.$lang.'/','en', Request::path()) }}">English</a>
         <a href="{{ $frLink }}">French</a>
         <a href="{{ $esLink }}">Spanish</a>
         <a href="{{ $nlLink }}">Dutch</a>
@@ -50,11 +51,12 @@
         $currentRegion = $regions[Request::segments()[3]];
     }
     else {
-        $currentRegion = $regions[Request::segments()[0]];
+        // $currentRegion = $regions[Request::segments()[0]];
+        isset(Route::current()->parameters()["region"]) ? $region = Route::current()->parameters()["region"] : $region = 'Region';
     }
     @endphp
     <a href="#">
-        <i class="fas fa-globe-americas"></i> {{$currentRegion}} <i class="fas fa-angle-down"></i>
+        <i class="fas fa-globe-americas"></i> {{$region}} <i class="fas fa-angle-down"></i>
     </a>
     <div class="dropdown-content">
         <a href="{{ $caLink }}">Canada</a>
