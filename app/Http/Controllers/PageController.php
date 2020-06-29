@@ -97,7 +97,7 @@ class PageController extends Controller
 
     // TEMP - FAQ
     function faq($region, $lang){
-        $page =$this->cms->page($region, $lang, 'faqs');
+        $page =$this->cms->page($region, $lang, 'faq');
         if(empty($page['results'])){
             return response()->view('errors.404');
         }
