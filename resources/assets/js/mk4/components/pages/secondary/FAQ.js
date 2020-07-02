@@ -77,6 +77,7 @@ class FAQ extends Component {
             <Dropdown 
               options={this.state.dropdownOptions} 
               onChange={this.updateSelectedFilters}
+              isMultui="true"
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Select from 'react-select'
+import PropTypes from 'prop-types';
 
 class Dropdown extends React.Component {
   constructor() {
@@ -11,6 +12,7 @@ class Dropdown extends React.Component {
   }
 
   handleChange(option) {
+    console.log(option)
     this.setState({ multiValue: option }, () => this.props.onChange(this.state.multiValue));
   }
 
@@ -19,19 +21,29 @@ class Dropdown extends React.Component {
       <div>
         <Select
 					name="filters"
-					placeholder="Filters" //TODO
+					placeholder={this.props.placeholder}
 					className="select"
 					classNamePrefix="select"
           value={this.state.multiValue}
           options={this.props.options}
 					onChange={this.handleChange}
 					onClick={e => { e.preventDefault(); e.stopPropagation(); }}
-					isMulti
+					isMulti={this.props.isMulti}
           group
         />
       </div>
     );
   }
+}
+
+Dropdown.defaultProps = {
+  placeholder: 'Filter',
+  isMulti: false
+}
+
+Dropdown.propTypes = {
+  placeholder: PropTypes.string.isRequired,
+  isMulti: PropTypes.bool
 }
 
 export default Dropdown

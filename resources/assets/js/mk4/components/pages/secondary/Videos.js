@@ -108,6 +108,7 @@ class Videos extends Component {
             <Dropdown 
               options={this.state.dropdownOptions} 
               onChange={this.updateSelectedFilters}
+              isMulti="true"
             />
           </div>
         </div>

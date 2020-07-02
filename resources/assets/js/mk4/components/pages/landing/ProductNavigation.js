@@ -28,7 +28,7 @@ const ProductNavigation = props => {
             <ProductCta label={navItem.button.label} link={navItem.button.link} accent={navItem.accent_colour} />
            }
         </div>
-        <div className="product-nav__item" key={key} style={{ borderLeft: '6px solid ' + navItem.accent_colour}}>
+        <div className="product-nav__item" key={key} style={{ borderLeft: '5px solid ' + navItem.accent_colour}}>
           <div>
             { navItem.description && (<span>{ navItem.description }</span>) }
             <div className="product-nav__links">

@@ -21,7 +21,7 @@ const YouTubeOptions = {
 const VideoLightbox = ({ item, handleCloseModal }) => {
   return(
     <div className="video-lightbox__container">
-      <div className="video-lightbox__header">
+      <div className="lightbox__header">
         <button 
           onClick={handleCloseModal}
           name="close"
@@ -123,9 +123,9 @@ class VideoGridItem extends Component {
           onRequestClose={this.handleCloseModal}
           contentLabel="Video Lightbox"
           id={item.slug}
-          portalClassName="video-lightbox"
-          overlayClassName="video-lightbox__overlay"
-          className="video-lightbox__wrapper"
+          portalClassName="lightbox"
+          overlayClassName="lightbox__overlay"
+          className="lightbox__video"
         >
           <VideoLightbox item={item} handleCloseModal={this.handleCloseModal} />
         </Modal>
