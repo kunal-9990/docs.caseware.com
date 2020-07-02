@@ -35,10 +35,9 @@ class RegionLightbox extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      // modalOpen: this.props.item.slug === this.props.slug ? true : false
-      modalOpen: true,
+      modalOpen: true, // TODO - check for cookie here? (i.e. regionCookie ? false : true)
       dropdownOptions: [],
-
+      selectedRegion: ''
     }
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
@@ -47,21 +46,22 @@ class RegionLightbox extends Component {
 
   handleOpenModal () {
     this.setState({ modalOpen: true })
-    // window.history.pushState({}, 'videos', '/videos/' + this.props.item.slug)
   }
   
   handleCloseModal () {
     this.setState({ modalOpen: false });
-    // window.history.pushState({}, '/videos/' + this.props.item.slug, '/videos')
   }
 
-  handleRegionChange () {
-    console.log("REGION CHANGE")
+  handleRegionChange (region) {
+    console.log("SELECTED REGION: " + region.label)
+    this.setState({ 
+      selectedRegion: region.value 
+    }, () => window.location.href = '/' + this.state.selectedRegion) // TODO - fix to include page and language parameters
   }
 
   render() {
     let regionOptions = [
-      { "value": "canada", "label": "Canada" },
+      { "value": "ca", "label": "Canada" },
       { "value": "us", "label": "USA" }
     ]
 
@@ -76,7 +76,7 @@ class RegionLightbox extends Component {
         >
           <RegionWrapper 
             handleCloseModal={this.handleCloseModal}
-            handleRegionChange={this.handleRegionChange()}
+            handleRegionChange={this.handleRegionChange}
             regionOptions={regionOptions}
           />
         </Modal>
