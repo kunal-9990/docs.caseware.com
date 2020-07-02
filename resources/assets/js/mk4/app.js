@@ -19,6 +19,7 @@ import BlogLightbox from './components/pages/blog/BlogLightbox'
 import CSH from './components/pages/secondary/CSH'
 import FAQ from './components/pages/secondary/FAQ'
 import Videos from './components/pages/secondary/Videos'
+import RegionLightbox from './components/RegionLightbox'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -101,6 +102,10 @@ const containers = [
   {
     id: 'videos',
     component: Videos
+  },
+  {
+    id: 'region-lightbox',
+    component: RegionLightbox
   }
 ];
 

@@ -129,6 +129,10 @@
         </main>
     </div>
     </div>
+    
+
+    <div data-component="region-lightbox"></div>
+
 
         @include('partials.cookie-consent')
         @include('partials.footer')

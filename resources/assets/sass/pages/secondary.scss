@@ -93,7 +93,7 @@
     z-index: 10000;
 }
 
-.video-lightbox {
+.lightbox {
 
     &__overlay {
         position: fixed;
@@ -104,7 +104,7 @@
         background-color: rgba(#323232, 0.9);
     }
 
-    &__wrapper {
+    &__video {
         position: absolute;
         top: 2.4rem;
         left: 2.4rem;
@@ -115,11 +115,16 @@
         color: $white;
     }
 
-    &__container {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        overflow: hidden;
+    &__region {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 50rem;
+        height: auto;
+        background-color: $white;
+        border: 0;
     }
 
     &__header {
@@ -135,6 +140,16 @@
             font-size: 4.8rem;
             line-height: 1;
         }
+    }
+}
+
+.video-lightbox {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
     }
 
     &__content {
@@ -192,9 +207,13 @@
     }
 }
 
+.region-lightbox {
+    padding: 0 2.4rem 2.4rem;
+}
+
 @include mq(md) {
-    .video-lightbox {
-        &__wrapper {
+    .lightbox {
+        &__video {
             position: absolute;
             top: 2.4rem;
             left: 2.4rem;
@@ -204,6 +223,9 @@
             outline: none;
             color: $white;
         }
+    }
+
+    .video-lightbox {
         &__content {
             flex-direction: row;
             & > div:first-child {
