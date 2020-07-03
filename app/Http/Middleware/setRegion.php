@@ -24,19 +24,24 @@ class setRegion
     public function handle($request, Closure $next)
     {
         $regionCookieSet = (is_null(Cookie::get('region'))) ? false : true;
+        $regionSlug = $request->segments()[0];
+        $requestRegion;
         if(!$regionCookieSet) {
+
             $ip = $request->ip();
             $ip = '66.207.217.22';
-            
             $method = 'https://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
             $response = Unirest::get($method);
-            $regionSlug = $request->segments()[0].'/';
-            $requestRegion = strtolower($response->body->country_code).'/';
-            Cookie::queue('region', strtolower($response->body->country_code), 60*24*365);
+            $requestRegion = strtolower($response->body->country_code);
+            Cookie::queue('region', strtolower($requestRegion), 60*24*365);
+            // return redirect(str_replace($regionSlug, $requestRegion, $request->path()));    
+        }
 
-            return redirect(str_replace($regionSlug, $requestRegion, $request->path()));
-   
-            
+        if($regionSlug !== Cookie::get('region')){
+            $request->session()->flash('openRegionLightbox', true);
+        }
+        else{
+            $request->session()->flash('openRegionLightbox', false);
         }
 
         return $next($request);

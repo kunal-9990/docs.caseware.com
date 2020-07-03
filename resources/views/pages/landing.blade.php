@@ -131,7 +131,9 @@
     </div>
     
 
-    <div data-component="region-lightbox"></div>
+    <div data-component="region-lightbox"
+            data-prop-open={{session('openRegionLightbox')}}
+    ></div>
 
 
         @include('partials.cookie-consent')

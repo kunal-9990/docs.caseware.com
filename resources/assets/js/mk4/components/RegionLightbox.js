@@ -35,7 +35,7 @@ class RegionLightbox extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      modalOpen: true, // TODO - check for cookie here? (i.e. regionCookie ? false : true)
+      modalOpen: this.props.open, // TODO - check for cookie here? (i.e. regionCookie ? false : true)
       dropdownOptions: [],
       selectedRegion: ''
     }
