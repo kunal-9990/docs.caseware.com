@@ -33,7 +33,7 @@
 
 .arrow-cta {
     position: relative;
-    color: $caseware-blue;
+    color: $caseware-blue-AA;
     font-weight: bold;
 
     & > div {
@@ -156,7 +156,7 @@ a.btn--arrow {
             }
 
             &:first-child{
-                background-color: $caseware-blue;
+                background-color: $caseware-blue-AA;
                 &:hover {
                     background-color: #1a8fb5;
                 }
