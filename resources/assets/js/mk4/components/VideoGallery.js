@@ -52,7 +52,7 @@ const VideoGallery = ({ videos, cta, label, link }) => {
           <Slide
             url={videos[0].url}
           />
-          { cta && (<a href={ link } className="mk4btn" target="_blank">{ label }</a> )}
+          { cta && (<a href={ link } className="mk4btn" target="_blank" rel="noopener">{ label }</a> )}
         </div>
         <Slider {...settings}>
           {desktopSlider}
