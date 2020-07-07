@@ -7,6 +7,7 @@ const ProductCta = ({ link, label, accent}) => (
       href={link} 
       target="_blank" 
       style={{ backgroundColor: accent }}
+      rel="noopener"
     >
       <span>{ label }</span>
     </a>
@@ -34,7 +35,7 @@ const ProductNavigation = props => {
             <div className="product-nav__links">
               { navItem.links && navItem.links.map((link, key) => (
                 <div key={key}>
-                  <a href={link.link} target="_blank" className="product-nav__cta">{ link.label }<span style={{ color: navItem.accent_colour }}>&#8250;</span></a>
+                  <a href={link.link} target="_blank" rel="noopener" className="product-nav__cta">{ link.label }<span style={{ color: navItem.accent_colour }}>&#8250;</span></a>
                 </div>
               ))}
             </div>

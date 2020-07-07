@@ -27,7 +27,7 @@ class Voter extends Component {
 
   render() {
     return (
-        <div className={"voter voter--" + this.props.hierarchy} id={this.props.id}>
+        <div className={"voter voter--" + this.props.hierarchy}>
           <div 
             onClick={() => { this.props.upVote(); this.updateRevealCount() }} 
             className={'arrow arrow--up' + (this.props.hasVoted === 'up' ? ' arrow--voted' : '')}

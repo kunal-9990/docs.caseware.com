@@ -10,7 +10,7 @@ const Banner = ({ banner, shortBanner }) => {
   let ctas = ''
   if (banner.cta) {
     ctas = banner.cta.map((button, i) => (
-      <a href={button.cta_link} target="_blank" key={i}>
+      <a href={button.cta_link} target="_blank" key={i} rel="noopener">
         {button.cta_label}
       </a>
     ))
