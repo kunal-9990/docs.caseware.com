@@ -12,21 +12,30 @@ const RegionWrapper = ({ handleCloseModal, handleRegionChange, regionOptions }) 
           aria-label="close"
         >&times;</button>
       </div>
-      <div>
-        <p>Choose another country or region to see content specific to your location.</p>
+      <div class="message">
+        <p>You're visiting a page outside of your detected region.</p>
       </div>
-      <Dropdown 
+      {/* <Dropdown 
         options={regionOptions} 
         onChange={handleRegionChange}
         placeholder="Select Region"
         isMulti={false}
-      />
-      <button 
-        onClick={handleCloseModal}
-        name="continue"
-        aria-label="continue"
-        className="mk4btn"
-      >Continue</button>
+      /> */}
+      <div class="btn-container">
+        <a href="https://caseware.com">
+        <button 
+          name="continue"
+          aria-label="continue"
+          className="mk4btn"
+        >Continue to this page</button></a>
+        <a href="https://caseware.com">
+        <button 
+          name="continue"
+          aria-label="continue"
+          className="mk4btn"
+        >Change to my region's site</button></a>
+        
+      </div>
   </div>
 )
 
@@ -35,7 +44,7 @@ class RegionLightbox extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      modalOpen: this.props.open, // TODO - check for cookie here? (i.e. regionCookie ? false : true)
+      modalOpen: this.props.open,
       dropdownOptions: [],
       selectedRegion: ''
     }
@@ -60,6 +69,8 @@ class RegionLightbox extends Component {
   }
 
   render() {
+    let redirect = this.props.redirect;
+
     let regionOptions = [
       { "value": "ca", "label": "Canada" },
       { "value": "us", "label": "USA" }

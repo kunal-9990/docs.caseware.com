@@ -24,15 +24,15 @@ class setRegion
     public function handle($request, Closure $next)
     {
         $regionCookieSet = (is_null(Cookie::get('region'))) ? false : true;
-        $regionSlug = $request->segments()[0];
         $requestRegion;
+        $regionSlug = (empty($request->segments()[0])) ? $request->segments()[0] : '';
         if(!$regionCookieSet) {
 
             $ip = $request->ip();
             $ip = '66.207.217.22';
             $method = 'https://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
             $response = Unirest::get($method);
-            $requestRegion = strtolower($response->body->country_code);
+            $requestRegion = (empty($response->body->country_code)) ? strtolower($response->body->country_code) : 'ca';
             Cookie::queue('region', strtolower($requestRegion), 60*24*365);
             // return redirect(str_replace($regionSlug, $requestRegion, $request->path()));    
         }

@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+
 @yield('html')
 <head>
     <meta charset="utf-8">
@@ -133,6 +134,7 @@
 
     <div data-component="region-lightbox"
             data-prop-open={{session('openRegionLightbox')}}
+            data-prop-redirect={{str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.Cookie::get('region').'/', app('request')->path)}}
     ></div>
 
 
