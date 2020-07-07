@@ -91,21 +91,17 @@ Route::get('/se-search/{year}/{product}/{version}/{lang}/{category}/{subcategory
         return redirect('/'.$year.'/'.$product.'/'.$version.'/'.$lang.'/'.$category.'/'.$subcategory);
 });
 
-
-
-
+//Flare Content routes
+// topics
+Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');
 
 // topics
-Route::get('/{region}/{lang}/{product}/{version}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');
-
-// topics
-Route::get('/{region}/{lang}/{product}/{version}/{category}/{subcategory}/{subsubcategory}/{topic}', 'PageController@showTopic2');
+Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{subsubcategory}/{topic}', 'PageController@showTopic2');
 
 // sub category
-Route::get('/{region}/{lang}/{product}/{version}/{category}/{subcategory}', 'PageController@showSubCategory');
+Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');
 
 // category
-Route::get('/{region}/{lang}/{product}/{version}/{category}', 'PageController@showCategory')->name('category');
-
+Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory')->name('category');
 
 Route::post('logemail', 'Controller@logEmail');

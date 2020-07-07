@@ -21,30 +21,25 @@
 # wait until the script says "done." 
 #dos2unix scripts/build.sh
 
-# $1 region
-# $2 lang
-# $3 product
-# $4 version
-
 # sudo chmod -R 777 .
 
-# echo "Backing up current content..."
-# sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
+echo "Backing up current content..."
+sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
 
 
 echo 'Copying new content into place...'
-mkdir -p public/documentation_files/$1/$2/$3/$4/Content/
-cp -R tmp/$1/$2/$3/$4/* public/documentation_files/$1/$2/$3/$4/Content
-cd public/documentation_files/$1/$2/$3/$4/Content
+mkdir -p public/documentation_files/$1/$2/$3/Content/$4
+cp -R tmp/$4/$3/* public/documentation_files/$1/$2/$3/Content/$4
+cd public/documentation_files/$1/$2/$3/Content/$4
 
 # sudo chmod -R 777 .
 
 echo 'Renaming some files...'
 
-find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content//g'
+find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content\//\//g'
 
 #mv Online\ Output.fltoc OnlineOutput.xml
-#mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml
+#mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml 
 
 echo "Copying over TOC and redirect xml files..."
 
@@ -71,7 +66,7 @@ else
 fi 
 
 
-prefix="\/documentation_files\/$1\/$2\/$3\/$4\/Content\/Resources\/"
+prefix="\/documentation_files\/$1\/$2\/$3\/Content\/$4\/Resources\/"
 prefix="$prefix"
 
 # echo $prefix
