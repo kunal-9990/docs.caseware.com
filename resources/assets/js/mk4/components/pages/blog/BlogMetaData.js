@@ -17,8 +17,6 @@ const BlogMetaData = ({ postTitle, author, date, readTime, tags, allTags, catego
     </React.Fragment>
   )
 
-  console.log(filters)
-
   return (
     <div className="metadata">
       <div className="metadata__breadcrumb">
