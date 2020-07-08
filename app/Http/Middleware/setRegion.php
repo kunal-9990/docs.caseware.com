@@ -25,7 +25,7 @@ class setRegion
     {
         $regionCookieSet = (is_null(Cookie::get('region'))) ? false : true;
         $requestRegion;
-        $regionSlug = (empty($request->segments()[0])) ? $request->segments()[0] : '';
+        $regionSlug = (!empty($request->segments()[0])) ? $request->segments()[0] : '';
         if(!$regionCookieSet) {
 
             $ip = $request->ip();

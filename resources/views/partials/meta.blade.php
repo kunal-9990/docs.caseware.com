@@ -53,18 +53,32 @@ $deLink = env('DOMAIN') . implode('/', $segments);
 <link rel="alternate" hreflang="de" href="{{$deLink}}" />
 <link rel="alternate" hreflang="cn" href="{{$cnLink}}" /> 
 
-
 {{-- google analytics --}}
-<script>/* <![CDATA[ */
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-97702818-1', 'auto', 'Global');
-	ga('create', 'UA-97702818-2', 'auto', 'Cloud');
-	ga('Global.send', 'pageview', { 'page': location.pathname + location.search + location.hash});
-	ga('Cloud.send', 'pageview', { 'page': location.pathname + location.search + location.hash});
-/* ]]> */</script>
+@php
+isset(Route::current()->parameters()["product"]) ? $product = Route::current()->parameters()["product"] : $product = '';
+@endphp
+@if($product == 'workingpaper' || $product  == 'audit')
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79260220-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-79260220-1');
+	</script>
+@else
+	<script>/* <![CDATA[ */
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-97702818-1', 'auto', 'Global');
+		ga('create', 'UA-97702818-2', 'auto', 'Cloud');
+		ga('Global.send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+		ga('Cloud.send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	/* ]]> */</script>
+@endif
 {{-- google analytics end--}}
 
 @if(isset($doNotTranslate))
