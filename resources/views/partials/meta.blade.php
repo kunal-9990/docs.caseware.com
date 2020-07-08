@@ -33,17 +33,17 @@
 {{-- Tell Google about localized versions of our pages --}}
 @php
 $segments = Request::segments();
-$segments[3] = 'en';
+$segments[2] = 'en';
 $enLink = env('DOMAIN') . implode('/', $segments);
-$segments[3] = 'fr';
+$segments[2] = 'fr';
 $frLink = env('DOMAIN') . implode('/', $segments);
-$segments[3] = 'es';
+$segments[2] = 'es';
 $esLink = env('DOMAIN') . implode('/', $segments);
-$segments[3] = 'nl';
+$segments[2] = 'nl';
 $nlLink = env('DOMAIN') . implode('/', $segments);
-$segments[3] = 'cn';
+$segments[2] = 'cn';
 $cnLink = env('DOMAIN') . implode('/', $segments);
-$segments[3] = 'de';
+$segments[2] = 'de';
 $deLink = env('DOMAIN') . implode('/', $segments);
 @endphp
 <link rel="alternate" hreflang="en" href="{{$enLink}}" />
@@ -52,7 +52,6 @@ $deLink = env('DOMAIN') . implode('/', $segments);
 <link rel="alternate" hreflang="nl" href="{{$nlLink}}" />
 <link rel="alternate" hreflang="de" href="{{$deLink}}" />
 <link rel="alternate" hreflang="cn" href="{{$cnLink}}" /> 
-
 
 {{-- google analytics --}}
 <script>/* <![CDATA[ */
