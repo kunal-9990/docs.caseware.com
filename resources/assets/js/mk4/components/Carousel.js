@@ -23,7 +23,7 @@ const Slide = ({ image, title, url, i }) =>
     <div style={{backgroundImage: 'url(' + image.url + ')', backgroundSize: 'cover'}} key={i}>
       <div className="slide__ribbon">
         <h2>{title}</h2>
-        <a href={url} target="_blank">Learn more &#8250;</a>
+        <a href={url} target="_blank" rel="noopener">Learn more &#8250;</a>
       </div>
     </div>
   </div>

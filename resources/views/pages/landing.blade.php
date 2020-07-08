@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+
 @yield('html')
 <head>
     <meta charset="utf-8">
@@ -28,6 +29,9 @@
                 data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
             ></div>
         </div>
+        @php
+            dd($pageContent);
+        @endphp
         <main id="main">
             @foreach($pageContent->acf->modular_template as $section)
                  
@@ -131,7 +135,10 @@
     </div>
     
 
-    <div data-component="region-lightbox"></div>
+    <div data-component="region-lightbox"
+            data-prop-open={{session('openRegionLightbox')}}
+            data-prop-redirect={{str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.Cookie::get('region').'/', app('request')->path)}}
+    ></div>
 
 
         @include('partials.cookie-consent')

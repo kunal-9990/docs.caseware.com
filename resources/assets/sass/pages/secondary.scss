@@ -209,6 +209,17 @@
 
 .region-lightbox {
     padding: 0 2.4rem 2.4rem;
+
+    .btn-container {
+        padding-top:2.4rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .message {
+        display:flex;
+        justify-content: center;
+    }
 }
 
 @include mq(md) {
