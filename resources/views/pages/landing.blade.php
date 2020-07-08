@@ -29,6 +29,9 @@
                 data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
             ></div>
         </div>
+        @php
+            dd($pageContent);
+        @endphp
         <main id="main">
             @foreach($pageContent->acf->modular_template as $section)
                  
