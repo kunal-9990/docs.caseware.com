@@ -14,6 +14,8 @@
 */
 $current_version = env("CURRENT_VERSION");
 
+
+
 //allow unauthenticated users to cast a max of 10 votes per minute
 Route::middleware('throttle:30|180,1')->group(function () {        
         Route::post('/api/vote/create', 'VoteController@createVote');
@@ -36,9 +38,10 @@ Route::get('/2020/webapps/31/en/Explore/Products/Provided-By-Client-(PBC)-Reques
     return redirect('/latest/webapps/en/Explore/Cloud-Apps/CaseWare-PBC-Requests.htm');
 });
 
-
-
-
+// temportary redirect
+Route::get('/2020/webapps/31/en/Engagements/Accounts-and-Analysis/Analytics-ai-workflow.htm', function () {
+        return redirect('/2020/webapps/31/en/Explore/AnalyticsAI/Analytics-ai-workflow.htm');
+    });
 
 
 // search
