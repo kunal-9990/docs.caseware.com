@@ -12,7 +12,7 @@ const RegionWrapper = ({ handleCloseModal, handleRegionChange, regionOptions }) 
           aria-label="close"
         >&times;</button>
       </div>
-      <div class="message">
+      <div className="message">
         <p>You're visiting a page outside of your detected region.</p>
       </div>
       {/* <Dropdown 
