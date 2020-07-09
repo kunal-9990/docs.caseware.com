@@ -244,12 +244,12 @@
                 width: 100%;
                 height: auto;
                 path {
-                    fill: $grey-1;
+                    fill: #ddd;
                 }
             }
 
             h3 {
-                color: $grey-1;
+                color: $grey-2;
                 text-align: center;
             }
 
@@ -274,7 +274,7 @@
             }
 
             &.grey {
-                color: $grey-1;
+                color: #ddd;
                 display: block;
                 white-space: nowrap;
             }
