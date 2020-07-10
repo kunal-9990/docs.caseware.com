@@ -41,8 +41,10 @@ Route::get('/2020/webapps/31/en/Explore/Products/Provided-By-Client-(PBC)-Reques
 // temportary redirect
 Route::get('/2020/webapps/31/en/Engagements/Accounts-and-Analysis/Analytics-ai-workflow.htm', function () {
         return redirect('/2020/webapps/31/en/Explore/AnalyticsAI/Analytics-ai-workflow.htm');
-    });
-
+});
+Route::get('/2020/webapps/31/en/Practice/Templates-and-Authoring/Modify-or-add-a-checklist.htm', function () {
+        return redirect('/2020/webapps/31/en/Engagements/Template-and-Authoring/Modify-or-add-a-checklist.htm');
+});
 
 // search
 Route::get('/search/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
