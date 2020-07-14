@@ -287,6 +287,37 @@ In This Article
             }
         }
 
+        &__monitor {
+            position: relative;
+
+            .wrapper {
+                position: absolute;
+                right: 0;
+                top: 2rem;
+                bottom: 0;
+                width: 60%;
+                z-index: 10;
+            }
+
+            .monitor {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                height: 100%;
+                width: auto;
+            }
+
+            .screen {
+                position: relative;
+                margin-top: 2%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 89%;
+                height: 70%;
+            }
+        }
+
         &--mobile {
             display: block;
 
@@ -296,8 +327,16 @@ In This Article
         }
     }
 
-    .slick-dots {
-        // bottom: 0;
+    .slick-arrow {
+        &:before {
+            color: $dark-grey !important;
+        }
+        &.slick-prev:before {
+            content: '\2039';
+        }
+        &.slick-next:before {
+            content: '\203A';
+        }
     }
 }
 
