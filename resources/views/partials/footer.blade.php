@@ -39,10 +39,7 @@
                     <a href="https://www.caseware.com/ca/cloud-security-compliance" target="_blank" rel="noopener">Certifications</a>
                 </div>
                 <div class="col stretch">
-                    <span>Resources</span>
-                    <a href="https://www.caseware.com/ca/resources/articles" target="_blank" rel="noopener">Articles</a>
-                    <a href="https://www.caseware.com/ca/resources/events" target="_blank" rel="noopener">Webinars</a>
-                    <!-- TODO -->
+                    <span>Legal</span>
                     <a href="https://www.caseware.com/generic/privacy-policy-caseware-cloud" target="_blank" rel="noopener">Privacy Policy</a>
                     <a href="https://www.caseware.com/support/cloud/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>
                     <a href="https://www.caseware.com/support/cloud/services-agreement" target="_blank" rel="noopener">Cloud Services Agreement</a>
