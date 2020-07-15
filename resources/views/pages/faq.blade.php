@@ -20,7 +20,12 @@
        
         <div class="faq">
 
-            @include('partials.header-ghost')
+            @if ($pageContent->acf->banner->banner_background_type === 'none')
+                @include('partials.header')
+                @include('partials.header-mobile')
+            @else
+                @include('partials.header-ghost')
+            @endif
 
             <div class="faq__banner">
                 <div

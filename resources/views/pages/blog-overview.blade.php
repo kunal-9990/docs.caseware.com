@@ -19,7 +19,12 @@
     <div class="page-wrap">
         <div class="blog-overview">
 
-            @include('partials.header-ghost')
+            @if ($pageContent->acf->banner->banner_background_type === 'none')
+                @include('partials.header')
+                @include('partials.header-mobile')
+            @else
+                @include('partials.header-ghost')
+            @endif
 
             <div class="blog-overview__banner">
                 <div
