@@ -29,7 +29,7 @@
                 <div
                     data-component="banner" 
                     data-prop-banner="{{htmlspecialchars(json_encode($banner))}}"
-                    data-prop-short-banner="true"
+                    data-prop-background-type="small"
                 ></div>
             </div>
             <div class="relative">

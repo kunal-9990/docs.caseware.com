@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Banner = ({ banner, shortBanner }) => {
+const Banner = ({ banner, backgroundType }) => {
 
   const BannerStyle = {
     backgroundImage: 'url(' + banner.background_image.url + ')',
@@ -17,7 +17,10 @@ const Banner = ({ banner, shortBanner }) => {
   }
 
   return (
-    <section className={'banner' + (shortBanner ? ' banner--short' : '')} style={BannerStyle}>
+    <section 
+      className={'banner banner--' + (backgroundType ? backgroundType : banner.banner_background_type)} 
+      style={banner.banner_background_type !== "none" ? BannerStyle : []}
+    >
       <div className="container container--mk4">
         <div className="row">
           <div className="col-sm-12">
