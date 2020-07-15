@@ -50,7 +50,7 @@ const ProductNavigation = props => {
 
   return (
     <div className="product-nav">
-      <div className={props.settings.layout === 'full' ? 'product-nav__full' : ('product-nav__grid ' + (navGrid.length > 4 ? 'product-nav__grid--3col' : 'product-nav__grid--2col')) }>
+      <div className={props.settings.layout === 'full' ? 'product-nav__full' : 'product-nav__grid product-nav__grid--2col' }>
         { navGrid }
       </div>
     </div>
