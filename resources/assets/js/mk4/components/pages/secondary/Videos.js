@@ -20,6 +20,7 @@ class Videos extends Component {
 
     this.allVideos = []
     this.allVideoFilters = []
+    this.hashFilter = []
     this.updateSelectedFilters = this.updateSelectedFilters.bind(this)
     this.handlePageClick = this.handlePageClick.bind(this)
   }
@@ -40,6 +41,12 @@ class Videos extends Component {
     })
 
     this.allVideoFilters = categories.concat(tags)
+
+    if (window.location.hash) {
+      this.hashFilter = this.allVideoFilters.filter(filter => filter.value === window.location.hash.replace('#', '').toLowerCase())
+    }
+
+    console.log(this.hashFilter)
 
     this.props.videos.results.map((item, i) => {
       let tagList = item.tags.map(id => this.props.tags.results.find(o => o.id === id).name);

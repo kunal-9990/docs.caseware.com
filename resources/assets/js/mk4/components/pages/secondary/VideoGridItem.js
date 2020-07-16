@@ -86,17 +86,26 @@ class VideoGridItem extends Component {
     }
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
-    this.currentVideoUrl = this.props.slug ? window.location.href.substring(0, window.location.href.lastIndexOf('/')) : window.location.href
+    this.videoOverviewUrl = window.location.href
+  }
+
+  componentDidMount() {
+    if (this.props.slug) {
+      this.videoOverviewUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'))
+    }
+    if (window.location.hash) {
+      this.videoOverviewUrl = window.location.href.split("#")[0];
+    }
   }
 
   handleOpenModal () {
     this.setState({ modalOpen: true })
-    window.history.pushState(null, null, this.currentVideoUrl + '/' + this.props.item.slug)
+    window.history.pushState(null, null, this.videoOverviewUrl + '/' + this.props.item.slug)
   }
   
   handleCloseModal () {
     this.setState({ modalOpen: false });
-    window.history.pushState(null, null, this.currentVideoUrl)
+    window.history.pushState(null, null, this.videoOverviewUrl)
   }
 
   render() {
@@ -140,7 +149,7 @@ class VideoGridItem extends Component {
         >
           <VideoLightbox 
             item={item} 
-            videoPage={this.currentVideoUrl}
+            videoPage={this.videoOverviewUrl}
             handleCloseModal={this.handleCloseModal} 
           />
         </Modal>
