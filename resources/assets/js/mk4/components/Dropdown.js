@@ -3,12 +3,17 @@ import Select from 'react-select'
 import PropTypes from 'prop-types';
 
 class Dropdown extends React.Component {
-  constructor() {
-    super();
+  
+  constructor(props) {
+    super(props)
     this.state = {
-			multiValue: []
+			multiValue: this.props.preSelected
     }
     this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({ multiValue: this.props.preSelected })
   }
 
   handleChange(option) {
@@ -23,7 +28,7 @@ class Dropdown extends React.Component {
 					placeholder={this.props.placeholder}
 					className="select"
 					classNamePrefix="select"
-          value={this.state.multiValue}
+          value={this.props.preSelected.length > 0 ? this.props.preSelected : this.state.multiValue}
           options={this.props.options}
 					onChange={this.handleChange}
 					onClick={e => { e.preventDefault(); e.stopPropagation(); }}
@@ -36,13 +41,15 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.defaultProps = {
+  isMulti: false,
   placeholder: 'Filter',
-  isMulti: false
+  preSelected: []
 }
 
 Dropdown.propTypes = {
+  isMulti: PropTypes.bool,
   placeholder: PropTypes.string.isRequired,
-  isMulti: PropTypes.bool
+  preSelected: PropTypes.array
 }
 
 export default Dropdown

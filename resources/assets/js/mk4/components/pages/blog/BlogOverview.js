@@ -20,6 +20,7 @@ class BlogOverview extends Component {
 
     this.allPosts = []
     this.allPostFilters = []
+    this.hashFilter = []
     this.updateSelectedFilters = this.updateSelectedFilters.bind(this)
     this.handlePageClick = this.handlePageClick.bind(this)
   }
@@ -40,6 +41,10 @@ class BlogOverview extends Component {
     })
 
     this.allPostFilters = categories.concat(tags)
+
+    if (window.location.hash) {
+      this.hashFilter = this.allPostFilters.filter(filter => filter.value === window.location.hash.replace('#', '').toLowerCase())
+    }
     
     this.props.posts.results.map((item, i) => {
       let tagList = item.tags.map(id => this.props.tags.results.find(o => o.id === id).name);
@@ -60,7 +65,7 @@ class BlogOverview extends Component {
 
     this.setState({ 
       selectedPosts: this.allPosts,
-      selectedFilters: this.allPostFilters,       
+      selectedFilters: this.hashFilter.length > 0 ? this.hashFilter : this.allPostFilters,       
       dropdownOptions: [
         {
           label: "Products",
@@ -70,7 +75,7 @@ class BlogOverview extends Component {
           label: "Filters",
           options: tags
         }]
-    }, () => this.paginatePosts())
+    }, () => this.filterPosts())
   }
 
   updateSelectedFilters(selectedFilters) {  
@@ -79,14 +84,20 @@ class BlogOverview extends Component {
 
   filterPosts() {
     let filteredPosts = []
-    this.allPosts.map((post, i) => {
-      if (this.state.selectedFilters.some(r => post.postFilters.includes(r.label))) {
-        filteredPosts.push(post)
-      }
-    })
-    this.setState({ 
-      selectedPosts: this.state.selectedFilters.length > 0 ? filteredPosts : this.allPosts
-    }, () => this.paginatePosts())
+    if (this.state.selectedFilters && this.state.selectedFilters.length > 0) {
+      this.allPosts.map((post, i) => {
+        if (this.state.selectedFilters.some(r => post.postFilters.includes(r.label))) {
+          filteredPosts.push(post)
+        }
+      })
+      this.setState({ 
+        selectedPosts: filteredPosts
+      }, () => this.paginatePosts())
+    } else {
+      this.setState({ 
+        selectedPosts: this.allPosts
+      }, () => this.paginatePosts())
+    }
   }
 
   handlePageClick(data) {
@@ -108,6 +119,7 @@ class BlogOverview extends Component {
             <FontAwesomeIcon icon={faFilter} />
             <Dropdown 
               options={this.state.dropdownOptions} 
+              preSelected={this.hashFilter.length > 0 ? this.state.selectedFilters : []}
               onChange={this.updateSelectedFilters}
               isMulti="true"
             />
