@@ -66,7 +66,7 @@ class Videos extends Component {
 
     this.setState({ 
       selectedVideos: this.allVideos,
-      selectedFilters: this.allVideoFilters,
+      selectedFilters: this.hashFilter.length > 0 ? this.hashFilter : this.allVideoFilters,
       dropdownOptions: [
         {
           label: "Products",
@@ -76,7 +76,7 @@ class Videos extends Component {
           label: "Filters",
           options: tags
         }]
-    }, () => this.paginateVideos())
+    }, () => this.filterVideos())
   }
 
   updateSelectedFilters(selectedFilters) {  
@@ -85,14 +85,20 @@ class Videos extends Component {
 
   filterVideos() {
     let filteredVideos = []
-    this.allVideos.map((video, i) => {
-      if (this.state.selectedFilters.some(r => video.videoFilters.includes(r.label))) {
-        filteredVideos.push(video)
-      }
-    })
-    this.setState({ 
-      selectedVideos: this.state.selectedFilters.length > 0 ? filteredVideos : this.allVideos
-    }, () => this.paginateVideos())
+    if (this.state.selectedFilters && this.state.selectedFilters.length > 0) {
+      this.allVideos.map((video, i) => {
+        if (this.state.selectedFilters.some(r => video.videoFilters.includes(r.label))) {
+          filteredVideos.push(video)
+        }
+      })
+      this.setState({ 
+        selectedVideos: filteredVideos
+      }, () => this.paginateVideos())
+    } else {
+      this.setState({
+        selectedVideos: this.allVideos
+      }, () => this.paginateVideos())
+    }
   }
 
   handlePageClick(data) {
@@ -114,6 +120,7 @@ class Videos extends Component {
             <FontAwesomeIcon icon={faFilter} />
             <Dropdown 
               options={this.state.dropdownOptions} 
+              preSelected={this.hashFilter.length > 0 ? this.state.selectedFilters : []}
               onChange={this.updateSelectedFilters}
               isMulti="true"
             />
