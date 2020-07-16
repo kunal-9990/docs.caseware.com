@@ -60,7 +60,7 @@
                     @endif
 
                     @if($section->acf_fc_layout == "carousel")
-                        <div class="container container--mk4 landing__carousel">
+                        <div class="container container--mk4--extended landing__carousel">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div
@@ -73,7 +73,7 @@
                     @endif
 
                     @if($section->acf_fc_layout == "video_gallery")
-                        <div class="container container--mk4 landing__video-gallery">
+                        <div class="container container--mk4--extended landing__video-gallery">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div

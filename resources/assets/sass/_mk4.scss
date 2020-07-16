@@ -12,6 +12,10 @@
     max-width: 93rem;
 }
 
+.container--mk4--extended {
+    max-width: 102rem;
+}
+
 #main.mk4 > div {
     margin: 4.8rem auto;
 }
@@ -284,16 +288,28 @@ In This Article
             padding: 2.4rem 4.8rem 1.8rem;
             bottom: 2.4rem;
             min-width: 50%;
-            background-color: $caseware-blue;
-            color: $white;
+            background-color: $white;
+            color: $dark-grey;
+            -webkit-box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
+            -moz-box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
+            box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
             z-index: 1;
 
             h2 {
                 margin-top: 0;
+                font-weight: 300;
             }
 
             a {
-                color: $white;
+                color: $dark-grey;
+                font-weight: bold;
+
+                &:after {
+                    content: '\203A';
+                    position: absolute;
+                    color: $caseware-blue;
+                    margin-left: 0.6rem;
+                }
             }
         }
 
@@ -340,6 +356,7 @@ In This Article
     .slick-arrow {
         &:before {
             color: $dark-grey !important;
+            font-size: 4.8rem;
         }
         &.slick-prev:before {
             content: '\2039';

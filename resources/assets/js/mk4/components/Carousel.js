@@ -18,17 +18,17 @@ const settings = {
   }]
 }
 
-const Slide = ({ image, title, url, i }) => 
+const Slide = ({ image, title, label, url, i }) => 
   <div className="slide" key={i}>
     <div style={{backgroundImage: 'url(' + image.url + ')', backgroundSize: 'cover'}}>
       <div className="slide__ribbon">
         <h2>{title}</h2>
-        <a href={url} target="_blank" rel="noopener">Learn more &#8250;</a>
+        <a href={url} target="_blank" rel="noopener">{ label ? label : 'Learn more'}</a>
       </div>
     </div>
   </div>
 
-const MonitorSlide = ({ image, title, url, i }) => 
+const MonitorSlide = ({ image, title, label, url, i }) => 
 <div className="slide" key={i}>
   <div className="slide__monitor" style={{backgroundImage: 'url(/img/banner.jpg)', backgroundSize: 'cover'}}>
     <div className="wrapper">
@@ -37,7 +37,7 @@ const MonitorSlide = ({ image, title, url, i }) =>
     </div>
     <div className="slide__ribbon">
       <h2>{title}</h2>
-      <a href={url} target="_blank" rel="noopener">Learn more &#8250;</a>
+      <a href={url} target="_blank" rel="noopener">{ label ? label : 'Learn more'}</a>
     </div>
   </div>
 </div>
@@ -50,6 +50,7 @@ const Carousel = ({ carousel }) => {
       <MonitorSlide
         image={slide.image}
         title={slide.title}
+        label={slide.label}
         url={slide.url}
         key={i}
       />
@@ -57,6 +58,7 @@ const Carousel = ({ carousel }) => {
       <Slide
         image={slide.image}
         title={slide.title}
+        label={slide.label}
         url={slide.url}
         key={i}
       />
@@ -71,12 +73,14 @@ const Carousel = ({ carousel }) => {
           <MonitorSlide
             image={carousel[0].image}
             title={carousel[0].title}
+            label={carousel[0].label}
             url={carousel[0].url}
           />
         ) : ( 
           <Slide
             image={carousel[0].image}
             title={carousel[0].title}
+            label={carousel[0].label}
             url={carousel[0].url}
           />
         )}
