@@ -23,7 +23,7 @@ $indexURL = route('category', [$year, $product, $version, $lang, 'webapps']);
                 <a href="{{$indexURL}}"><img class="header__logo" src="/img/CaseWare_logo_4C_horz.svg"
                         alt="CaseWare logo"></a>
                 @if(strpos(Request::url(), '/SE-Authoring/') == false)
-                @include('partials.nav')
+                    @include('partials.nav')
                 @endif
             </div>
             <div class="header__input-search-wrapper">
@@ -31,13 +31,6 @@ $indexURL = route('category', [$year, $product, $version, $lang, 'webapps']);
                     <input type="text" name="search" placeholder="{{ __('strings.search') }}" autocomplete="off">
                 </form>
             </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="expanded-filters">
-            {{-- <div class="dropdown-content"> --}}
-            @include('partials.filters', ['mobile' => false])
-            {{-- </div> --}}
         </div>
     </div>
 </header>

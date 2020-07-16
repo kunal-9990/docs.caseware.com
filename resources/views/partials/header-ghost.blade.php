@@ -7,7 +7,6 @@ isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parame
 
 <header class="header header--ghost">
     <div class="container header__container">
-        {{-- <div class="row"> --}}
         <div class="header__search-wrap">
             <div class="header__nav-wrap">
                 <a href="/{{$region}}/{{$lang}}">
@@ -17,11 +16,6 @@ isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parame
                     @include('partials.nav')
                 @endif
             </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="expanded-filters">
-
         </div>
     </div>
 </header>

@@ -36,8 +36,12 @@ header.header {
     }
 
     .header__nav-wrap {
-        display: flex;
+        display: contents;
         align-items: center;
+
+        .nav-container {
+            display: flex;
+        }
     }
 
     .header__search-wrap {
