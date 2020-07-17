@@ -112,7 +112,6 @@
         bottom: 0;
         overflow: auto;
         outline: none;
-        color: $white;
     }
 
     &__region {
@@ -168,7 +167,9 @@
     }
 
     &__details {
-        padding: 4.8rem 0;
+        padding: 2.4rem;
+        margin-top: 2.4rem;
+        background-color: $white;
         overflow-y: auto;
         flex: 1;
 
@@ -176,7 +177,7 @@
             font-weight: 300;
 
             a {
-                font-weight: bold;
+                font-weight: 400;
             }
         }
     }
@@ -203,7 +204,7 @@
         display: flex;
         flex-direction: column;
         align-self: start;
-        margin-top: 2.4rem;
+        margin-top: 4.8rem;
     }
 }
 
@@ -232,7 +233,6 @@
             bottom: 6.2rem;
             overflow: auto;
             outline: none;
-            color: $white;
         }
     }
 
@@ -241,13 +241,14 @@
             flex-direction: row;
             & > div:first-child {
                 flex: 0 0 65%;
-                height: auto;
             }
         }
         &__details {
-            padding: 0 0 0 2.4rem;
-            display: flex;
-            flex-direction: column;
+            margin: 0 0 0 2.4rem;
+            padding: 4.8rem;
+            // display: flex;
+            // flex-direction: column;
+            display: block;
         }
         &__description {
             flex: 1;

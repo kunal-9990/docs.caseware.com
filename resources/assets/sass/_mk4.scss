@@ -134,7 +134,18 @@ a.btn--arrow {
         .banner__wrapper {
             height: auto;
             min-height: 0;
-            padding-top: 6.2rem;
+            padding: 4.2rem 0 0;
+        }
+
+        span {
+            font-size: 1.8rem;
+        }
+
+        .cta > a {
+            background-color: $caseware-blue-AA !important;
+            &:hover {
+                background-color: #1a8fb5 !important;
+            }
         }
     }
 

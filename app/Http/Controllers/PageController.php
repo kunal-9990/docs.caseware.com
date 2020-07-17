@@ -110,7 +110,7 @@ class PageController extends Controller
     }
 
     // TEMP - Videos overview 
-    function videosOverview($region, $lang){
+    function videosOverview($region, $lang, $slug = null){
         // App::setLocale($lang);
         $page = $this->cms->page($region, $lang, 'videos');
         if(empty($page['results'])){
@@ -121,19 +121,8 @@ class PageController extends Controller
             $videos = $this->cms->get_custom_post_by_type('videos');
             $categories = $this->cms->categories();
             $tags = $this->cms->tags();
-            return view('pages.videos', compact('pageContent', 'videos', 'categories', 'tags', 'title'));
+            return view('pages.videos', compact('slug', 'pageContent', 'videos', 'categories', 'tags', 'title'));
         }
-    }
-
-    // TEMP - Videos lightbox - same as overview but sends slug details to overview page 
-    function videosLightbox($slug){
-        // App::setLocale($lang);
-        $page = $this->cms->page('videos');
-        $pageContent = $page['results'][0];
-        $videos = $this->cms->get_custom_post_by_type('videos');
-        $categories = $this->cms->categories();
-        $tags = $this->cms->tags();
-        return view('pages.videos', compact('slug', 'pageContent', 'videos', 'categories', 'tags', 'title'));
     }
 
 

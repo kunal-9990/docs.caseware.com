@@ -10,7 +10,12 @@ translate
 const BlogMetaData = ({ postTitle, author, date, readTime, tags, allTags, categories, allCategories }) => {
   let tagList = tags.map(id => allTags.results.find(o => o.id === id).name);
   let categoryList = categories.map(id => allCategories.results.find(o => o.id === id).name);
-  let filters = categoryList.concat(tagList).join(', ')
+  let filters = categoryList.concat(tagList).map((filter, i) => 
+    <React.Fragment>
+      <a href={"/blog#" + filter.replace(/ /g, '-').toLowerCase() } rel="noopener" key={i} >{ filter }</a>
+      { i + 1 !== categoryList.concat(tagList).length && <span>, </span> }
+    </React.Fragment>
+  )
 
   return (
     <div className="metadata">

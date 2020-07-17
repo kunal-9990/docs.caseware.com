@@ -18,7 +18,17 @@ const YouTubeOptions = {
 }
 
 
-const VideoLightbox = ({ item, handleCloseModal }) => {
+const VideoLightbox = ({ item, videoPage, handleCloseModal }) => {
+  // let videoTags = item.videoFilters.join(', ')
+
+  console.log(videoPage)
+  
+  let videoTags = item.videoFilters.map((filter, i) => 
+    <React.Fragment>
+      <a href={videoPage + '#' + filter.replace(/ /g, '-').toLowerCase() } rel="noopener" key={i} >{ filter }</a>
+      { i + 1 !== item.videoFilters.length && <span>, </span> }
+    </React.Fragment>
+  )
   return(
     <div className="video-lightbox__container">
       <div className="lightbox__header">
@@ -47,7 +57,7 @@ const VideoLightbox = ({ item, handleCloseModal }) => {
           <div className="video-lightbox__description">
             <div className="grid-item__filter">
               { item.videoFilters.length > 0 && (<FontAwesomeIcon icon={ item.videoFilters.length > 1 ? faTags : faTag } />) }
-              { item.videoFilters.join(', ')} 
+              { videoTags } 
             </div>
             <div dangerouslySetInnerHTML={{__html: item.acf.description}} />
           </div>
@@ -76,16 +86,26 @@ class VideoGridItem extends Component {
     }
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.videoOverviewUrl = window.location.href
+  }
+
+  componentDidMount() {
+    if (this.props.slug) {
+      this.videoOverviewUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'))
+    }
+    if (window.location.hash) {
+      this.videoOverviewUrl = window.location.href.split("#")[0];
+    }
   }
 
   handleOpenModal () {
     this.setState({ modalOpen: true })
-    window.history.pushState({}, 'videos', '/videos/' + this.props.item.slug)
+    window.history.pushState(null, null, this.videoOverviewUrl + '/' + this.props.item.slug)
   }
   
   handleCloseModal () {
     this.setState({ modalOpen: false });
-    window.history.pushState({}, '/videos/' + this.props.item.slug, '/videos')
+    window.history.pushState(null, null, this.videoOverviewUrl)
   }
 
   render() {
@@ -127,7 +147,11 @@ class VideoGridItem extends Component {
           overlayClassName="lightbox__overlay"
           className="lightbox__video"
         >
-          <VideoLightbox item={item} handleCloseModal={this.handleCloseModal} />
+          <VideoLightbox 
+            item={item} 
+            videoPage={this.videoOverviewUrl}
+            handleCloseModal={this.handleCloseModal} 
+          />
         </Modal>
       </React.Fragment>
     )
