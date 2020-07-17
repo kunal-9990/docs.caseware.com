@@ -3,7 +3,7 @@
     isset(Route::current()->parameters()["region"]) ? $region = Route::current()->parameters()["region"] : $region = '';
 @endphp
 <div class="nav-container">
-@if(!empty($lang))
+@if(!empty($region))
     <div class="region__dropdown dropdown">
         <a href="#"><i class="fas fa-globe-americas"></i> {{strtoupper($region)}} <i class="fas fa-angle-down"></i></a>
         <div class="dropdown-content">

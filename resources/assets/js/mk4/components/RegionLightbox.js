@@ -22,18 +22,18 @@ const RegionWrapper = ({ handleCloseModal, handleRegionChange, regionOptions }) 
         isMulti={false}
       /> */}
       <div class="btn-container">
-        <a href="https://caseware.com">
         <button 
+          onClick = {handleCloseModal}
           name="continue"
           aria-label="continue"
           className="mk4btn"
-        >Continue to this page</button></a>
-        <a href="https://caseware.com">
+        >Continue to this page</button>
         <button 
-          name="continue"
-          aria-label="continue"
+          onClick = {handleCloseModal}
+          name="redirect"
+          aria-label="redirect"
           className="mk4btn"
-        >Change to my region's site</button></a>
+        >Change to my region's site</button>
         
       </div>
   </div>
@@ -65,7 +65,7 @@ class RegionLightbox extends Component {
     console.log("SELECTED REGION: " + region.label)
     this.setState({ 
       selectedRegion: region.value 
-    }, () => window.location.href = '/' + this.state.selectedRegion) // TODO - fix to include page and language parameters
+    }, () => window.location.href =  this.props.redirect) // TODO - fix to include page and language parameters
   }
 
   render() {
