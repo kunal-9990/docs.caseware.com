@@ -35,8 +35,8 @@ Route::group(['middleware' => 'setregion'], function () {
         Route::get('/{region}/{lang}/videos/{slug?}', 'PageController@videosOverview');
         Route::get('/blog', 'PageController@blogOverview');
         Route::get('/blog/{post}', 'PageController@blogDetail');
-        Route::get('/{region}/{lang}/csh-{slug}', 'PageController@csh');
-        Route::get('/{region}/{lang}/faq-{slug}', 'PageController@faq');
+        Route::get('/{region}/{lang}/{product}/context-specific-help', 'PageController@csh');
+        Route::get('/{region}/{lang}/{product}/frequently-asked-questions', 'PageController@faq');
 
         Route::get('/{region}/{lang}/{slug}', 'PageController@product');
         Route::get('/{region}/{lang}/', 'PageController@home');
