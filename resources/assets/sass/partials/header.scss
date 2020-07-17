@@ -36,11 +36,17 @@ header.header {
     }
 
     .header__nav-wrap {
-        display: contents;
+        display: flex;
         align-items: center;
+
+        &.right-align-dropdowns {
+            display: contents;
+            
+        }
 
         .nav-container {
             display: flex;
+            margin-right: 6rem;
         }
     }
 

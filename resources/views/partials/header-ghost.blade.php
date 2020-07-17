@@ -8,7 +8,7 @@ isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parame
 <header class="header header--ghost">
     <div class="container header__container">
         <div class="header__search-wrap">
-            <div class="header__nav-wrap">
+            <div class="header__nav-wrap right-align-dropdowns">
                 <a href="/{{$region}}/{{$lang}}">
                     <img class="header__logo" src="/img/CaseWare_logo_RGB_horz_White.png" alt="CaseWare logo">
                 </a>
