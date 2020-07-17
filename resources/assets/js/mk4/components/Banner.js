@@ -26,7 +26,8 @@ const Banner = ({ banner, backgroundType }) => {
           <div className="col-sm-12">
             <div className="banner__wrapper">
               <div>
-              <h1 className="banner-size">{ banner.header }</h1>
+                <h1 className="banner-size"><img class="product-logo" src={banner.product_logo.url} alt="" />{banner.header}</h1>
+              
               { banner.strapline && (
                 <span>{ banner.strapline }</span>
               ) }

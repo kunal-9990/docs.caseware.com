@@ -46,7 +46,7 @@ header.header {
 
         .nav-container {
             display: flex;
-            margin-right: 6rem;
+            margin-right: 4rem;
         }
     }
 
@@ -80,7 +80,7 @@ header.header {
         min-width: 210px;
 
         @media (min-width: 850px) {
-            min-width: 280px;
+            width: 50%;
         }
 
         .desktop-search--is-open & {
