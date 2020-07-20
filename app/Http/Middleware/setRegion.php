@@ -35,7 +35,7 @@ class setRegion
             if($ip == '127.0.0.1'){
                 $ip = '66.207.217.22';
             }
-            $method = 'https://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
+            $method = 'http://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
             $response = Unirest::get($method);
             $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'int';
             //set region cookie according to geolocation
