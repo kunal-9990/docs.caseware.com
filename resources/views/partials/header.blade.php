@@ -20,7 +20,7 @@ $indexURL = route('category', [$year, $product, $version, $lang, 'webapps']);
         {{-- <div class="row"> --}}
         <div class="header__search-wrap">
             <div class="header__nav-wrap">
-                <a href="{{$indexURL}}"><img class="header__logo" src="/img/CaseWare_logo_4C_horz.svg" alt="CaseWare logo"></a>
+                <a href="/"><img class="header__logo" src="/img/CaseWare_logo_4C_horz.svg" alt="CaseWare logo"></a>
                 @if(strpos(Request::url(), '/SE-Authoring/') == false)
                     @include('partials.nav')
                 @endif
