@@ -63,7 +63,7 @@ class RegionLightbox extends Component {
   }
 
   handleDismissModal () {
-    document.cookie = "modalDismissed=1";
+    document.cookie = "modalDismissed=1;path=/";
     this.setState({ modalOpen: false });
   }
 
