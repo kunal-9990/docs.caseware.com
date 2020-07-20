@@ -27,10 +27,10 @@ class Controller extends BaseController
 
         //Grab the menus
         View::share('header', $cms->menu('header')->get('results')->items);
-        //Grab the menus
-        View::share('header', $cms->menu('header')->get('results')->items);
-        $footerRegion =  isset($request->route()->parameters['region']) ? $request->route()->parameters['region'] : 'int';
-        View::share('footer', $cms->menu('Footer-'.$footerRegion)->get('results')->items);
+        View::share('footer-products', $cms->menu('footer-products')->get('results')->items);
+        View::share('footer-about', $cms->menu('footer-about')->get('results')->items);
+        View::share('footer-resources', $cms->menu('footer-resources')->get('results')->items);
+        View::share('footer', $cms->menu('footer')->get('results')->items);
  
 
         //Build a breadcrumb array
