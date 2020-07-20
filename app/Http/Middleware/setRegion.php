@@ -26,6 +26,7 @@ class setRegion
         $regionCookieSet = (is_null(Cookie::get('region'))) ? false : true;
         $requestRegion;
         $regionSlug = (!empty($request->segments()[0])) ? $request->segments()[0] : '';
+        $response;
         if(!$regionCookieSet) {
 
             $ip = $request->ip();
@@ -35,11 +36,13 @@ class setRegion
             }
             $method = 'https://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
             $response = Unirest::get($method);
-            $requestRegion = (empty($response->body->country_code)) ? strtolower($response->body->country_code) : 'int';
+            $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'int';
+            //set region cookie according to geolocation
             Cookie::queue('region', strtolower($requestRegion), 60*24*365);
-            // return redirect(str_replace($regionSlug, $requestRegion, $request->path()));    
         }
-        if($regionSlug !== Cookie::get('region')){
+        // show lightbox if geolocation doesn't match region url parameter
+        if(strtolower($regionSlug) !== strtolower(Cookie::get('region'))){
+            
             $request->session()->flash('openRegionLightbox', true);
         }
         else{

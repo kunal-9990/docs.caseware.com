@@ -29,7 +29,7 @@ const RegionWrapper = ({ handleCloseModal, handleRegionChange, regionOptions }) 
           className="mk4btn"
         >Continue to this page</button>
         <button 
-          onClick = {handleCloseModal}
+          onClick = {handleRegionChange}
           name="redirect"
           aria-label="redirect"
           className="mk4btn"
@@ -61,11 +61,8 @@ class RegionLightbox extends Component {
     this.setState({ modalOpen: false });
   }
 
-  handleRegionChange (region) {
-    console.log("SELECTED REGION: " + region.label)
-    this.setState({ 
-      selectedRegion: region.value 
-    }, () => window.location.href =  this.props.redirect) // TODO - fix to include page and language parameters
+  handleRegionChange () {
+    window.location.href = this.props.redirect;
   }
 
   render() {

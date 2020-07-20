@@ -136,10 +136,9 @@
     </div>
     </div>
 
-    
     <div data-component="region-lightbox"
-            data-prop-open={{session('openRegionLightbox')}}
-            data-prop-redirect={{str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.Cookie::get('region').'/', app('request')->path)}}
+            data-prop-open={{json_encode(session('openRegionLightbox'))}}
+            data-prop-redirect={{str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.Cookie::get('region').'/', Request::url())}}
     ></div>
 
 
