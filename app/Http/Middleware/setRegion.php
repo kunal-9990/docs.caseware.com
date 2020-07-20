@@ -30,7 +30,7 @@ class setRegion
         $response;
         if(!$regionCookieSet) {
 
-            $ip = $request->ip();
+            $ip = $request->getClientIp();
 
             if($ip == '127.0.0.1'){
                 $ip = '66.207.217.22';
@@ -40,7 +40,7 @@ class setRegion
             $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'int';
             //set region cookie according to geolocation
             Cookie::queue('region', strtolower($requestRegion), 60*24*365);
-            Log::info("Log response:".var_dump($response));
+            // Log::info("Log response:".var_dump($response));
         }
         
         if(!isset($requestRegion)){
