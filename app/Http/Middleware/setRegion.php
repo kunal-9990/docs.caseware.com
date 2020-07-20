@@ -30,7 +30,7 @@ class setRegion
         $response;
         if(!$regionCookieSet) {
 
-            $ip = $request->getClientIp();
+            $ip = $request->ip();
 
             if($ip == '127.0.0.1'){
                 $ip = '66.207.217.22';
