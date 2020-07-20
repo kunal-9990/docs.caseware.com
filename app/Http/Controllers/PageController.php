@@ -82,7 +82,7 @@ class PageController extends Controller
     }
 
     // TEMP - CSH
-    function csh($region, $lang, $zlug){
+    function csh($region, $lang, $slug){
         // App::setLocale($lang);
         // dd($slug);
 
