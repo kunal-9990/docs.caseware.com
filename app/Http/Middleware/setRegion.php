@@ -39,9 +39,11 @@ class setRegion
             $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'int';
             //set region cookie according to geolocation
             Cookie::queue('region', strtolower($requestRegion), 60*24*365);
+
         }
+        $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : Cookie::get('region');
         // show lightbox if geolocation doesn't match region url parameter
-        if(strtolower($regionSlug) !== strtolower(Cookie::get('region'))){
+        if(strtolower($regionSlug) !== $requestRegion){
             
             $request->session()->flash('openRegionLightbox', true);
         }
