@@ -36,6 +36,7 @@
             
             <main id="main">
                 <div class="container container--mk4">
+                    {{ Breadcrumbs::render('videos') }}
                     <div class="row">
                         <div class="col-sm-12">
                             <div

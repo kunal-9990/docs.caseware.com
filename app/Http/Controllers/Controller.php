@@ -22,9 +22,8 @@ class Controller extends BaseController
     public $cms;
 
     public function __construct(DocsCmsApi $cms, Request $request) {
+
         $this->cms = $cms;
-
-
         //Grab the menus
         View::share('header', $cms->menu('header')->get('results')->items);
         View::share('footer-products', $cms->menu('footer-products')->get('results')->items);
@@ -34,7 +33,7 @@ class Controller extends BaseController
  
 
         //Build a breadcrumb array
-        //View::share('breadcrumbs', $this->generateBreadcrumbs($request->segments()));
+        // View::share('breadcrumbs', $this->generateBreadcrumbs($request->segments()));
     }
     
         // default

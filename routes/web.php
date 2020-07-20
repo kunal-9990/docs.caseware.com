@@ -32,24 +32,19 @@ Route::get('/{region}/{lang}/{product}/{version}/webapps', function() {
 
 Route::group(['middleware' => 'setregion'], function () {
 
-        Route::get('/{region}/{lang}/videos/{slug?}', 'PageController@videosOverview');
-        Route::get('/blog', 'PageController@blogOverview');
-        Route::get('/blog/{post}', 'PageController@blogDetail');
-        Route::get('/{region}/{lang}/{product}/context-specific-help', 'PageController@csh');
-        Route::get('/{region}/{lang}/{product}/frequently-asked-questions', 'PageController@faq');
-
-        Route::get('/{region}/{lang}/{slug}', 'PageController@product');
-        Route::get('/{region}/{lang}/', 'PageController@home');
+        Route::get('/{region}/{lang}/videos/{slug?}', 'PageController@videosOverview')->name('videos');
+        Route::get('/blog', 'PageController@blogOverview')->name('blogoverview');
+        Route::get('/blog/{post}', 'PageController@blogDetail')->name('blogdetail');
+        Route::get('/{region}/{lang}/{slug}/context-specific-help', 'PageController@csh')->name('csh');
+        Route::get('/{region}/{lang}/{slug}/frequently-asked-questions', 'PageController@faq')->name('faq');
+        Route::get('/{region}/{lang}/{slug}', 'PageController@product')->name('product');
+        Route::get('/{region}/{lang}/', 'PageController@home')->name('home');
 
         Route::get('/', function() {
                 return redirect('/ca/en');
         });
 
 });
-
-
-
-
 
 // search
 Route::get('/search/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('search');

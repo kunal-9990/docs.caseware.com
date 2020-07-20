@@ -33,9 +33,9 @@
                     data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
                 ></div>
             </div>
-            
             <main id="main">
                 <div class="container container--mk4">
+                    {{ Breadcrumbs::render('faq') }}
                     <div class="row">
                         <div class="col-sm-12">
                            <div 

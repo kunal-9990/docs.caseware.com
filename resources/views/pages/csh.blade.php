@@ -36,6 +36,7 @@
             
             <main id="main">
                 <div class="container container--mk4">
+                    {{ Breadcrumbs::render('csh') }}
                     <div class="row">
                         <div class="col-sm-12">
                            <div 
@@ -52,7 +53,7 @@
             data-prop-open={{json_encode(session('openRegionLightbox'))}}
             data-prop-redirect={{str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.Cookie::get('region').'/', Request::url())}}
     ></div>
-    
+
         @include('partials.cookie-consent')
         @include('partials.footer')
         

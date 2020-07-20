@@ -34,7 +34,22 @@
                 data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
             ></div>
         </div>
+
+        
         <main id="main">
+
+            {{-- breacrumbs --}}
+            <div class="container container--mk4 landing__block">
+                <div class="row">
+                    <div class="col-sm-12">
+                        @if(Request::route()->getName() == 'home')
+                            {{ Breadcrumbs::render('home') }}
+                        @elseif(Request::route()->getName() == 'product')
+                            {{ Breadcrumbs::render('product') }}
+                        @endif                    
+                    </div>
+                </div>
+            </div>            
             @foreach($pageContent->acf->modular_template as $section)
                  
                     @if($section->acf_fc_layout == "text_block")
@@ -135,12 +150,10 @@
         </main>
     </div>
     </div>
-
     <div data-component="region-lightbox"
             data-prop-open={{json_encode(session('openRegionLightbox'))}}
             data-prop-redirect={{str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.Cookie::get('region').'/', Request::url())}}
     ></div>
-
 
         @include('partials.cookie-consent')
         @include('partials.footer')

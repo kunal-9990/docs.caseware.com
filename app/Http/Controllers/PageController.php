@@ -82,11 +82,11 @@ class PageController extends Controller
     }
 
     // TEMP - CSH
-    function csh($region, $lang, $product){
+    function csh($region, $lang, $zlug){
         // App::setLocale($lang);
         // dd($slug);
 
-        $page = $this->cms->page($region, $lang, 'csh-'.$product);
+        $page = $this->cms->page($region, $lang, 'csh-'.$slug);
         if(empty($page['results'])){
             return response()->view('errors.404');
         }
@@ -98,8 +98,8 @@ class PageController extends Controller
 
 
     // TEMP - FAQ
-    function faq($region, $lang, $product){
-        $page =$this->cms->page($region, $lang, 'faq-'.$product);
+    function faq($region, $lang, $slug){
+        $page =$this->cms->page($region, $lang, 'faq-'.$slug);
         if(empty($page['results'])){
             return response()->view('errors.404');
         }
