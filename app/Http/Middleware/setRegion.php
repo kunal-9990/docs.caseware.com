@@ -40,7 +40,7 @@ class setRegion
             $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'int';
             //set region cookie according to geolocation
             Cookie::queue('region', strtolower($requestRegion), 60*24*365);
-            // Log::info("Log response:".var_dump($response));
+            Log::info("Log response:".var_dump($response));
         }
         
         if(!isset($requestRegion)){

@@ -148,7 +148,9 @@
         </main>
     </div>
     </div>
- 
+    @php
+        var_dump(Cookie::get('modalDismissed'));
+    @endphp
     <div data-component="region-lightbox"
             data-prop-open={{json_encode(session('openRegionLightbox'))}}
             data-prop-redirect={{str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.session('requestRegion').'/', Request::url())}}

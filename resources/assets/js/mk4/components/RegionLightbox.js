@@ -23,11 +23,11 @@ const RegionWrapper = ({ handleCloseModal, handleRegionChange, regionOptions }) 
       /> */}
       <div class="btn-container">
         <button 
-          onClick = {handleCloseModal}
+          onClick = {handleDismissModal}
           name="continue"
           aria-label="continue"
           className="mk4btn"
-        >Continue to this page</button>
+        >Continue and dismiss</button>
         <button 
           onClick = {handleRegionChange}
           name="redirect"
@@ -58,6 +58,11 @@ class RegionLightbox extends Component {
   }
   
   handleCloseModal () {
+    this.setState({ modalOpen: false });
+  }
+
+  handleDismissModal () {
+    document.cookie = "modalDismissed=1";
     this.setState({ modalOpen: false });
   }
 
