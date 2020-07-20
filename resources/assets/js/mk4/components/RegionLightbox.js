@@ -62,7 +62,8 @@ class RegionLightbox extends Component {
   }
 
   handleRegionChange () {
-    window.location.href = this.props.redirect;
+    window.location.replace(this.props.redirect);
+    // window.location.href = this.props.redirect;
   }
 
   render() {
