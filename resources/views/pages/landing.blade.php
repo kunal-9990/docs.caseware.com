@@ -42,9 +42,7 @@
             <div class="container container--mk4 landing__block">
                 <div class="row">
                     <div class="col-sm-12">
-                        @if(Request::route()->getName() == 'home')
-                            {{ Breadcrumbs::render('home') }}
-                        @elseif(Request::route()->getName() == 'product')
+                       @if(Request::route()->getName() == 'product')
                             {{ Breadcrumbs::render('product') }}
                         @endif                    
                     </div>
