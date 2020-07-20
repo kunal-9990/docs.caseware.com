@@ -129,6 +129,7 @@
     &__header {
         display: flex;
         justify-content: flex-end;
+        color: $white;
 
         button {
             margin: 0;
@@ -192,6 +193,7 @@
         h3 {
             font-weight: bold;
             font-size: 1.8rem;
+            margin-bottom: 1.2rem;
         }
     }
 
