@@ -42,14 +42,14 @@ Breadcrumbs::register('videos', function ($trail) {
 //     $trail->push('Blog', route('blog'));
 // });
 
-// Home > Blog > [Category]
-Breadcrumbs::register('category', function ($trail, $category) {
-    $trail->parent('blog');
-    $trail->push($category->title, route('category', $category->id));
-});
+// // Home > Blog > [Category]
+// Breadcrumbs::register('category', function ($trail, $category) {
+//     $trail->parent('blog');
+//     $trail->push($category->title, route('category', $category->id));
+// });
 
-// Home > Blog > [Category] > [Post]
-Breadcrumbs::register('post', function ($trail, $post) {
-    $trail->parent('category', $post->category);
-    $trail->push($post->title, route('post', $post->id));
-});
+// // Home > Blog > [Category] > [Post]
+// Breadcrumbs::register('post', function ($trail, $post) {
+//     $trail->parent('category', $post->category);
+//     $trail->push($post->title, route('post', $post->id));
+// });
