@@ -6,8 +6,12 @@
         > div {
             position: relative;
             display: block;
-            padding-top: 2.4rem;
-            padding-bottom: 2.4rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+
+            &:first-child {
+                padding-top: 0;
+            }
         }
     }
 
