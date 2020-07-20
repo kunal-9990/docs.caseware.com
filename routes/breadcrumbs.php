@@ -8,7 +8,14 @@ Breadcrumbs::register('home', function ($trail) {
 // Home > Product
 Breadcrumbs::register('product', function ($trail) {
     $trail->parent('home');
-    $trail->push(ucfirst(Route::current()->parameters()["slug"]), route('product', ['region' => Route::current()->parameters()["region"], 'lang' => Route::current()->parameters()["lang"], 'product' => Route::current()->parameters()["slug"]]));
+    $productName;
+    if (strlen(Route::current()->parameters()["slug"]) == 2){
+        $productName = strtoupper(Route::current()->parameters()["slug"]);
+    }
+    else {
+        $productName = ucfirst(Route::current()->parameters()["slug"]);
+    }
+    $trail->push($productName, route('product', ['region' => Route::current()->parameters()["region"], 'lang' => Route::current()->parameters()["lang"], 'product' => Route::current()->parameters()["slug"]]));
 });
 
 // Home > Product > FAQ
