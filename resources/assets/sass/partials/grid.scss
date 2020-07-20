@@ -125,6 +125,12 @@
             font-size: 1.2rem;
             font-weight: bold;
         }
+
+        .select__value-container--is-multi.select__value-container--has-value {
+            // border: 1px solid lime;
+            // position: absolute;
+            // top: 100%;
+        }
     }
 }
 
