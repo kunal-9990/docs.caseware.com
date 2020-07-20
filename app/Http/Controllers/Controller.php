@@ -26,7 +26,8 @@ class Controller extends BaseController
         $this->cms = $cms;
         //Grab the menus
         View::share('header', $cms->menu('header')->get('results')->items);
-        View::share('footer', $cms->menu('footer')->get('results')->items);
+        $footerRegion =  isset($request->route()->parameters['region']) ? $request->route()->parameters['region'] : 'int';
+        View::share('footer', $cms->menu('footer-'.$footerRegion)->get('results')->items);
  
 
         //Build a breadcrumb array
