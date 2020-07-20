@@ -32,7 +32,7 @@ class setRegion
 
             $ip = $request->ip();
 
-            if($ip == '127.0.0.1'){
+            if($ip == '127.0.0.1' || $ip == '192.168.207.56'){
                 $ip = '66.207.217.22';
             }
             $method = 'http://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
