@@ -124,10 +124,15 @@ a.btn--arrow {
         z-index: 1;
     }
     
-    &--small {
+    &--small,
+    &--solid {
         .banner__wrapper {
             height: 35vh;
         }
+    }
+
+    &--solid {
+        background-image: linear-gradient($caseware-blue, #00688a);
     }
 
     &--none {
