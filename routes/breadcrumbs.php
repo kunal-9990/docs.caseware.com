@@ -9,7 +9,7 @@ Breadcrumbs::register('home', function ($trail) {
 Breadcrumbs::register('product', function ($trail) {
     $trail->parent('home');
     $productName;
-    if (strlen(Route::current()->parameters()["slug"]) == 2){
+    if (strlen(Route::current()->parameters()["slug"]) == 3){
         $productName = strtoupper(Route::current()->parameters()["slug"]);
     }
     else {
