@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Unirest\Request as Unirest;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Cookie;
 
@@ -39,7 +40,7 @@ class setRegion
             $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'int';
             //set region cookie according to geolocation
             Cookie::queue('region', strtolower($requestRegion), 60*24*365);
-
+            Log::info("Log response:".$response->body->country_code);
         }
         
         if(!isset($requestRegion)){
