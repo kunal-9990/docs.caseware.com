@@ -21,9 +21,9 @@ const RegionWrapper = ({ handleCloseModal, handleRegionChange, regionOptions }) 
         placeholder="Select Region"
         isMulti={false}
       /> */}
-      <div class="btn-container">
+      <div className="btn-container">
         <button 
-          onClick = {handleDismissModal}
+          onClick = {() => handleDismissModal}
           name="continue"
           aria-label="continue"
           className="mk4btn"
