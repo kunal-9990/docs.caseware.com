@@ -35,19 +35,19 @@
             ></div>
         </div>
 
-        
+        {{-- breacrumbs --}}
+            @if(Request::route()->getName() == 'product')
+                <div class="container container--mk4 breadcrumb-container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                                {{ Breadcrumbs::render('product') }}
+                        </div>
+                    </div>
+                </div> 
+            @endif    
+
         <main id="main">
 
-            {{-- breacrumbs --}}
-            <div class="container container--mk4 landing__block">
-                <div class="row">
-                    <div class="col-sm-12">
-                       @if(Request::route()->getName() == 'product')
-                            {{ Breadcrumbs::render('product') }}
-                        @endif                    
-                    </div>
-                </div>
-            </div>            
             @foreach($pageContent->acf->modular_template as $section)
                  
                     @if($section->acf_fc_layout == "text_block")
