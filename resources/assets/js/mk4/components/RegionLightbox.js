@@ -3,7 +3,7 @@ import Dropdown from './Dropdown'
 import Modal from 'react-modal'
 Modal.setAppElement('body');
 
-const RegionWrapper = ({ handleCloseModal, handleRegionChange, regionOptions }) => (
+const RegionWrapper = ({ handleCloseModal, handleRegionChange, regionOptions, handleDismissModal }) => (
   <div className="region-lightbox">
       <div className="lightbox__header">
         <button 
@@ -23,13 +23,13 @@ const RegionWrapper = ({ handleCloseModal, handleRegionChange, regionOptions }) 
       /> */}
       <div className="btn-container">
         <button 
-          onClick = {() => handleDismissModal}
+          onClick={handleDismissModal}
           name="continue"
           aria-label="continue"
           className="mk4btn"
         >Continue and dismiss</button>
         <button 
-          onClick = {handleRegionChange}
+          onClick={handleRegionChange}
           name="redirect"
           aria-label="redirect"
           className="mk4btn"
@@ -50,6 +50,7 @@ class RegionLightbox extends Component {
     }
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    this.handleDismissModal = this.handleDismissModal.bind(this);
     this.handleRegionChange = this.handleRegionChange.bind(this);
   }
 
@@ -90,6 +91,7 @@ class RegionLightbox extends Component {
           <RegionWrapper 
             handleCloseModal={this.handleCloseModal}
             handleRegionChange={this.handleRegionChange}
+            handleDismissModal={this.handleDismissModal}
             regionOptions={regionOptions}
           />
         </Modal>
