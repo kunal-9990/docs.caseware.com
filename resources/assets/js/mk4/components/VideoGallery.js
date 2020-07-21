@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 const Slide = ({ url, i }) => 
   <div className="slide iframe-video-wrapper" key={i}>
-        <iframe  
+    <iframe  
       src={url} 
       className="yt-video-iframe" 
       frameBorder="0"
@@ -16,12 +16,16 @@ const Slide = ({ url, i }) =>
 
 
 const VideoGallery = ({ videos, cta, label, link }) => {
-
+  console.log(videos)
   const settings = {
     customPaging: function(i) {
       return (
-        <div className="thumbnails__block" style={{backgroundImage: 'url(' + videos[i].thumbnail.url + ')', backgroundSize: 'cover'}}>
-          <div></div>
+        <div 
+          className="thumbnails__block" 
+          style={{backgroundImage: 'url(' + videos[i].thumbnail.url + ')', backgroundSize: 'cover'}}
+          title={ videos[i].video_title }
+        >
+          {/* <div><span>{ videos[i].video_title }</span></div> */}
         </div>
       );
     },

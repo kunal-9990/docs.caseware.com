@@ -102,6 +102,10 @@
         right: 0;
         bottom: 0;
         background-color: rgba(#323232, 0.9);
+
+        & > div {
+            outline: none;
+        }
     }
 
     &__video {
@@ -124,10 +128,17 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
-        max-width: 50rem;
+        max-width: 51rem;
         height: auto;
         background-color: $white;
         border: 0;
+
+        p {
+            width: 75%;
+            text-align: center;
+            font-size: 2.1rem;
+            font-weight: 300;
+        }
     }
 
     &__header {
@@ -136,7 +147,7 @@
 
         button {
             margin: 0;
-            padding: 0 0 2.4rem 0;
+            padding: 0 0 1.2rem 0;
             background: none;
             border: 0;
             outline: none;
@@ -214,17 +225,41 @@
 }
 
 .region-lightbox {
-    padding: 0 2.4rem 2.4rem;
+    padding: 0 2.1rem 2.1rem;
 
     .btn-container {
-        padding-top:2.4rem;
-        display: flex;
-        justify-content: space-between;
+        display: block;
+        padding-top: 2.4rem;
+
+        button {
+            width: 100%;
+
+            &:first-child {
+                margin: 0 0 1.2rem 0;
+            }
+        }
     }
     
     .message {
         display:flex;
         justify-content: center;
+    }
+
+    @include mq(md) {
+        padding: 2.1rem 4.2rem 4.2rem;
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                width: auto;
+
+                &:first-child {
+                    margin: 0 1.2rem 0 0;
+                }
+            }
+        }
     }
 }
 
