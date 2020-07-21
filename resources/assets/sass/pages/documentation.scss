@@ -12,6 +12,10 @@
 
     .docs__content {
         flex: 1;
+
+        table.table > * {
+            word-break: break-word;
+        }
     }
 
     .docs__sub-toc {
