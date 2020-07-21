@@ -124,8 +124,7 @@ a.btn--arrow {
         z-index: 1;
     }
     
-    &--small,
-    &--solid {
+    &--small {
         .banner__wrapper {
             height: 35vh;
         }
@@ -133,6 +132,16 @@ a.btn--arrow {
 
     &--solid {
         background-image: linear-gradient($caseware-blue, #00688a);
+
+        .banner__wrapper {
+            height: 30vh;
+            padding-bottom: 4.2rem;
+
+            span {
+                padding: 0;
+                font-size: 1.6rem;
+            }
+        }
     }
 
     &--none {
@@ -141,10 +150,11 @@ a.btn--arrow {
             height: auto;
             min-height: 0;
             padding: 4.2rem 0 2.4rem;
-        }
 
-        span {
-            font-size: 1.8rem;
+            span {
+                font-size: 1.8rem;
+                padding: 0;
+            }
         }
 
         .cta > a {
