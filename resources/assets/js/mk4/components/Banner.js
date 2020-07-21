@@ -19,7 +19,7 @@ const Banner = ({ banner, backgroundType }) => {
   return (
     <section 
       className={'banner banner--' + (backgroundType ? backgroundType : banner.banner_background_type)} 
-      style={banner.banner_background_type !== "none" ? BannerStyle : []}
+      style={(banner.banner_background_type !== "none" && banner.banner_background_type !== "solid") ? BannerStyle : []}
     >
       <div className="container container--mk4">
         <div className="row">

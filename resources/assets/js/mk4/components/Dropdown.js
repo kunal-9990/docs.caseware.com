@@ -25,8 +25,7 @@ class Dropdown extends React.Component {
       <div>
         <Select
 					name="filters"
-					// placeholder={this.props.placeholder}
-          placeholder="test123"
+					placeholder={this.props.placeholder}
           className="select"
 					classNamePrefix="select"
           value={this.props.preSelected.length > 0 ? this.props.preSelected : this.state.multiValue}

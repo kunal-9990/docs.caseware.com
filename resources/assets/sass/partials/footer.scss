@@ -112,6 +112,10 @@
     .footer {
         min-height: 30rem;
         padding-top: 2.4rem;
+
+        .container {
+            min-width: 80rem;
+        }
         
         .row {
             flex-wrap: nowrap;
@@ -127,7 +131,7 @@
             }
 
             &.stretch {
-                flex-basis: 6rem;
+                flex-basis: 5rem;
             }
 
             &.contact {
