@@ -16,12 +16,16 @@ const Slide = ({ url, i }) =>
 
 
 const VideoGallery = ({ videos, cta, label, link }) => {
-
+  console.log(videos)
   const settings = {
     customPaging: function(i) {
       return (
-        <div className="thumbnails__block" style={{backgroundImage: 'url(' + videos[i].thumbnail.url + ')', backgroundSize: 'cover'}}>
-          <div></div>
+        <div 
+          className="thumbnails__block" 
+          style={{backgroundImage: 'url(' + videos[i].thumbnail.url + ')', backgroundSize: 'cover'}}
+          title={ videos[i].video_title }
+        >
+          {/* <div><span>{ videos[i].video_title }</span></div> */}
         </div>
       );
     },
