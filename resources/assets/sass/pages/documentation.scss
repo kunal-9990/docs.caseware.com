@@ -22,6 +22,20 @@
             display: block;
         }
     }
+    
+    .codeSnippetCopyButton {
+        color: #32363a;
+        background-color: #f4f5f7;
+        text-decoration: none;
+        border: 1px solid #d3dce4;
+        display: inline-block;
+        /* text-align: center; */
+        cursor: pointer;
+        height: 30px;
+        /* width: 47px; */
+        padding: 0 10px;
+        margin-bottom: 1rem;
+    }
 }
 
 .filtermsg {
