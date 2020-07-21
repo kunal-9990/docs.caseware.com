@@ -13,10 +13,8 @@
     .docs__content {
         flex: 1;
 
-        table.table {
-            & > * {
-                word-break: break-word;
-            }
+        table.table > * {
+            word-break: break-word;
         }
     }
 
