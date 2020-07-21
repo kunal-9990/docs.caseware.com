@@ -1,7 +1,7 @@
 .footer {
     position: relative;
     margin-top: 4.8rem;
-    min-height: 85rem;
+    min-height: 78rem;
     background: $blue-horizon;
     color: $white;
     z-index: 1;
@@ -108,13 +108,13 @@
     }
 }
 
-@include mq($from: sm) {
+@include mq($from: footer) {
     .footer {
         min-height: 30rem;
         padding-top: 2.4rem;
 
         .container {
-            min-width: 80rem;
+            min-width: 79rem;
         }
         
         .row {
