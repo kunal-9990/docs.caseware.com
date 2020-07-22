@@ -78,7 +78,7 @@
                                 <div class="col-sm-12">
                                     <div
                                         data-component="carousel"
-                                        data-prop-carousel="{{htmlspecialchars(json_encode($section->carousel))}}"
+                                        data-props="{{htmlspecialchars(json_encode($section))}}"
                                     ></div>
                                 </div>  
                             </div>
@@ -91,12 +91,7 @@
                                 <div class="col-sm-12">
                                     <div
                                         data-component="video-gallery"
-                                        data-prop-videos="{{htmlspecialchars(json_encode($section->video_gallery))}}"
-                                        data-props='{
-                                            "cta":"{{$section->yt_cta}}",
-                                            "label":"{{$section->cta_label}}",
-                                            "link":"{{$section->cta_link}}"
-                                        }'
+                                        data-props="{{htmlspecialchars(json_encode($section))}}"
                                         ></div>
                                 </div>
                             </div>

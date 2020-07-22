@@ -43,9 +43,9 @@ const MonitorSlide = ({ image, title, label, url, i }) =>
 </div>
 
 
-const Carousel = ({ carousel }) => {
+const Carousel = ( props ) => {
 
-  let desktopSlider = carousel.map((slide, i) => 
+  let desktopSlider = props.carousel.map((slide, i) => 
     slide.image_type === 'screenshot' ? (
       <MonitorSlide
         image={slide.image}
@@ -68,20 +68,24 @@ const Carousel = ({ carousel }) => {
   return (
     <Fade bottom>
       <div className="carousel">
+        <div className="inner-container">
+          {props.header && <h2>{props.header}</h2>}
+          {props.description && <div dangerouslySetInnerHTML={{__html: props.description}}></div>}
+        </div>
         <div className="slide slide--mobile"> 
-        {carousel[0].image_type === 'screenshot' ? (
+        {props.carousel[0].image_type === 'screenshot' ? (
           <MonitorSlide
-            image={carousel[0].image}
-            title={carousel[0].title}
-            label={carousel[0].label}
-            url={carousel[0].url}
+            image={props.carousel[0].image}
+            title={props.carousel[0].title}
+            label={props.carousel[0].label}
+            url={props.carousel[0].url}
           />
         ) : ( 
           <Slide
-            image={carousel[0].image}
-            title={carousel[0].title}
-            label={carousel[0].label}
-            url={carousel[0].url}
+            image={props.carousel[0].image}
+            title={props.carousel[0].title}
+            label={props.carousel[0].label}
+            url={props.carousel[0].url}
           />
         )}
         </div>
