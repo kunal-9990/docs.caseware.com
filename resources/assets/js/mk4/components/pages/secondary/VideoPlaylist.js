@@ -16,12 +16,11 @@ class VideoPlaylist extends Component {
   componentDidMount() {
 
   }
-  
+
   render() {
-    console.log(this.props)
     return (
       <div>
-        <h1>video Playlist</h1>
+        {/* <h1>video Playlist</h1> */}
       </div>
     )
   }

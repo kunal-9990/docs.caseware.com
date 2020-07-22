@@ -15,17 +15,18 @@ const Slide = ({ url, i }) =>
   </div>
 
 
-const VideoGallery = ( props ) => {
+const VideoGallery = props => {
   const settings = {
     customPaging: function(i) {
       return (
-        <div 
-          className="thumbnails__block" 
-          style={{backgroundImage: 'url(' + props.video_gallery[i].thumbnail.url + ')', backgroundSize: 'cover'}}
-          title={ props.video_gallery[i].video_title }
-        >
-          {/* <div><span>{ videos[i].video_title }</span></div> */}
-        </div>
+        <h1>hello</h1>
+        // <div 
+        //   className="thumbnails__block" 
+        //   style={{backgroundImage: 'url(' + props.video_gallery[i].thumbnail.url + ')', backgroundSize: 'cover'}}
+        //   title={ props.video_gallery[i].video_title }
+        // >
+        //   {/* <div><span>{ videos[i].video_title }</span></div> */}
+        // </div>
       );
     },
     dots: true,
