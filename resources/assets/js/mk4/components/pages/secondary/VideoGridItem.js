@@ -45,33 +45,33 @@ const VideoLightbox = ({ item, videoPage, handleCloseModal }) => {
           onReady={this._onReady} 
           containerClassName="iframe-video-wrapper"
         />
-        <div className="video-lightbox__details">
-          {(item.acf.video_title || item.acf.video_title_prepend) ? (
-            <div className="video-lightbox__title">
-              { item.acf.video_title_prepend && <h3>{ item.acf.video_title_prepend }</h3> }
-              { item.acf.video_title && <h1>{ item.acf.video_title }</h1> }
-            </div>
-          ) : (
-            <div className="video-lightbox__title"><h2 dangerouslySetInnerHTML={{__html: item.title}}></h2></div>
-          )}
-          <div className="video-lightbox__description">
-            <div className="grid-item__filter">
-              { item.videoFilters.length > 0 && (<FontAwesomeIcon icon={ item.videoFilters.length > 1 ? faTags : faTag } />) }
-              { videoTags } 
-            </div>
-            <div dangerouslySetInnerHTML={{__html: item.acf.description}} />
+      </div>
+      <div className="video-lightbox__details">
+        {(item.acf.video_title || item.acf.video_title_prepend) ? (
+          <div className="video-lightbox__title">
+            { item.acf.video_title_prepend && <h3>{ item.acf.video_title_prepend }</h3> }
+            { item.acf.video_title && <h1>{ item.acf.video_title }</h1> }
           </div>
-          {(item.acf.cta && (item.acf.cta.strapline || item.acf.cta.button_link)) && (
-            <div className="video-lightbox__cta">
-              {item.acf.cta.strapline && <p>{ item.acf.cta.strapline} </p>}
-              {(item.acf.cta.button_label && item.acf.cta.button_link) && (
-                <a href={item.acf.cta.button_link} className="mk4btn" target="_blanks">
-                  { item.acf.cta.button_label }
-                </a>
-              )}
-            </div>
-          )}
+        ) : (
+          <div className="video-lightbox__title"><h2 dangerouslySetInnerHTML={{__html: item.title}}></h2></div>
+        )}
+        <div className="video-lightbox__description">
+          <div className="grid-item__filter">
+            { item.videoFilters.length > 0 && (<FontAwesomeIcon icon={ item.videoFilters.length > 1 ? faTags : faTag } />) }
+            { videoTags } 
+          </div>
+          <div dangerouslySetInnerHTML={{__html: item.acf.description}} />
         </div>
+        {(item.acf.cta && (item.acf.cta.strapline || item.acf.cta.button_link)) && (
+          <div className="video-lightbox__cta">
+            {item.acf.cta.strapline && <p>{ item.acf.cta.strapline} </p>}
+            {(item.acf.cta.button_label && item.acf.cta.button_link) && (
+              <a href={item.acf.cta.button_link} className="mk4btn" target="_blanks">
+                { item.acf.cta.button_label }
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   )

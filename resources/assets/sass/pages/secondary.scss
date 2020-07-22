@@ -182,9 +182,16 @@
     }
 
     &__details {
+        position: absolute;
         padding: 2.4rem;
-        margin-top: 2.4rem;
+        bottom: 0;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
         background-color: $white;
+        -webkit-box-shadow: 0 0 15px 0 rgba(80,80,80,0.6);
+        -moz-box-shadow: 0 0 15px 0 rgba(80,80,80,0.6);
+        box-shadow: 0 0 15px 0 rgba(80,80,80,0.6);
         overflow-y: auto;
         flex: 1;
 
@@ -286,7 +293,7 @@
             left: 2.4rem;
             right: 4.8rem;
             bottom: 6.2rem;
-            overflow: auto;
+            overflow: visible;
             outline: none;
         }
     }
@@ -295,18 +302,23 @@
         &__content {
             flex-direction: row;
             & > div:first-child {
-                flex: 0 0 65%;
+                flex: 0 0 80%;
             }
         }
         &__details {
-            margin: 0 0 0 2.4rem;
+            margin: 0;
             padding: 4.8rem;
-            // display: flex;
-            // flex-direction: column;
-            display: block;
+            right: -4.8rem;
+            top: 50%;
+            bottom: auto;
+            left: unset;
+            transform: translate(0, -40%);
+            width: 30%;
+            max-height: 75%;
         }
         &__description {
             flex: 1;
+            word-break: break-word;
         }
     }
 }

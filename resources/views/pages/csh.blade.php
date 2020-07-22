@@ -23,10 +23,26 @@
                     data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
                 ></div>
             </div>
+            <div class="container container--mk4 breadcrumb-container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        {{ Breadcrumbs::render('csh') }}
+                    </div>
+                </div>
+            </div> 
             
-            <main id="main">
+            <main id="main" class="mk4">
+                                 
+                @if(isset($pageContent->acf->intro_text))
+                <div class="container container--mk4 landing__block">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div>{!! $pageContent->acf->intro_text !!}</div>
+                        </div>
+                    </div>
+                </div>
+                @endif
                 <div class="container container--mk4">
-                    {{ Breadcrumbs::render('csh') }}
                     <div class="row">
                         <div class="col-sm-12">
                            <div 
