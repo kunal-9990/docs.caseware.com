@@ -142,6 +142,11 @@ class DocsCmsApi
         return $this->_get($prepend . '/wp-json/wp/v2/' . $post_type . '?slug=' . $post_name . '&_embed', [], $lifetime);
      }
 
+     public function get_custom_post_by_id($post_type, $id, $lifetime = null)
+     {
+        return $this->_get('/wp-json/wp/v2/' . $post_type . '/' . $id, [], $lifetime);
+     }
+
 
     public function people($locale, $page=1, $lifetime = null)
     {

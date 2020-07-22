@@ -302,8 +302,8 @@ In This Article
 .carousel {
     position: relative;
     margin-bottom: 4rem;
-    padding-bottom: 50%;
-    height: 0;
+    // padding-bottom: 50%;
+    // height: 0;
     top: 0;
 
     .slide {
@@ -334,15 +334,16 @@ In This Article
         &__ribbon {
             position: absolute;
             display: inline-block;
-            padding: 2.4rem 4.8rem 1.8rem;
-            bottom: 2.4rem;
-            min-width: 50%;
+            padding: 1.2rem;
+            bottom: 0.6rem;
+            width: 100%;
+            // min-width: 50%;
             background-color: $white;
             color: $dark-grey;
             -webkit-box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
             -moz-box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
             box-shadow: 0 0 10px 0 rgba(80,80,80,0.8);
-            z-index: 5;
+            z-index: 15;
 
             h2 {
                 margin-top: 0;
@@ -393,25 +394,35 @@ In This Article
             }
         }
 
-        &--mobile {
-            display: block;
+        // &--mobile {
+        //     display: block;
 
-            .slide__ribbon {
-                width: 100%;
-            }
-        }
+        //     .slide__ribbon {
+        //         width: 100%;
+        //     }
+        // }
     }
 
     .slick-arrow {
+        z-index: 10;
+
         &:before {
-            color: $dark-grey !important;
-            font-size: 4.8rem;
+            color: $white !important;
+            font-size: 3.2rem;
+            line-height: 0;
+            opacity: 1;
         }
-        &.slick-prev:before {
-            content: '\2039';
+        &.slick-prev {
+            left: 0;
+            &:before {
+                content: '\2039';
+            }
         }
-        &.slick-next:before {
-            content: '\203A';
+        &.slick-next {
+            right: 0;
+            &:before {
+                content: '\203A';
+            }
         }
     }
 }
@@ -576,6 +587,25 @@ In This Article
 
     .carousel {
         margin-bottom: 7.2rem;
+
+        .slide__ribbon {
+            padding: 2.4rem 2.4rem 1.8rem;
+            bottom: 2.4rem;
+            width: auto;
+        }
+
+        .slick-arrow {
+            &:before {
+                color: $dark-grey !important;
+                line-height: 0;
+            }
+            &.slick-prev {
+                left: -2.4rem;
+            }
+            &.slick-next {
+                right: -2.4rem;
+            }
+        }
     }
 
 }

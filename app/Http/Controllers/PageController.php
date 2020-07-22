@@ -19,12 +19,14 @@ class PageController extends Controller
     function home($region, $lang){
 
         $page = $this->cms->page($region, $lang, 'home');
+        $playlists = $this->getPlaylists($page);
+
         if(empty($page['results'])){
             return response()->view('errors.404');
         }
         else{        
             $pageContent = $page['results'][0];
-            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title' ));
+            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists' ));
         }
     }
 
@@ -107,9 +109,12 @@ class PageController extends Controller
     }
 
     // TEMP - Videos overview 
+    
+
+    
     function videosOverview($region, $lang, $slug = null){
-        // App::setLocale($lang);
         $page = $this->cms->page($region, $lang, 'videos');
+        $playlists = $this->getPlaylists($page);
         if(empty($page['results'])){
             return response()->view('errors.404');
         }
@@ -118,11 +123,12 @@ class PageController extends Controller
             $videos = $this->cms->get_custom_post_by_type('videos');
             $categories = $this->cms->categories();
             $tags = $this->cms->tags();
-            return view('pages.videos', compact('slug', 'pageContent', 'videos', 'categories', 'tags', 'title'));
+            return view('pages.videos', compact('slug', 'pageContent', 'videos', 'categories', 'tags', 'title', 'playlists'));
         }
     }
-
-
+    
+ 
+    
     // search
     function search($year, $product, $version, $lang){
         return view('pages.search', compact('recent'));
@@ -299,5 +305,25 @@ class PageController extends Controller
         return view('pages.one-column', compact('maincontentarea', 'recent'));
     }
 
-
+          
+    function getPlaylists($page)
+    {
+        $playlists = array();
+        foreach($page['results'][0]->acf->modular_template as $template){
+            $playlists = array();
+            if($template->acf_fc_layout == 'playlist'){
+                $playlistVids = array();
+                foreach($template->playlist as $video){
+                    $videoContent = $this->cms->get_custom_post_by_id(
+                        'videos',
+                        $video->ID
+                    )->get('results');
+                    array_push($playlistVids, $videoContent);
+                }
+                $playlist = array($template->header => $playlistVids);
+                array_push($playlists, $playlist);
+            }
+        }
+        return $playlists;
+    }   
 }
