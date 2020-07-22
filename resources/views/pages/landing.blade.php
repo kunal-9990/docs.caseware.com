@@ -94,22 +94,24 @@
                     <div class="landing__links">
                         <div class="container container--mk4">
                             <div class="row">
-                                <div class="col-sm-12 links">
-                                    @foreach($section->link_block as $block)
+                                @foreach($section->link_block as $block)
+                                    <div class="col-sm-12 links">
                                         <div class="links__block">
                                             @if(isset($block->header))
                                                 <h2>{{$block->header}}</h2>
                                             @endif
-                                            @foreach($block->links as $link)
-                                                <div>
-                                                    <a href="{{$link->link_url}}" target="_blank" class="btn--arrow">
-                                                        {{ $link->link_text }}
-                                                    </a>
-                                                </div>
-                                            @endforeach
+                                            <div class="row">
+                                                @foreach($block->links as $link)
+                                                    <div class="col-sm-6">
+                                                        <a href="{{$link->link_url}}" target="_blank" class="btn--arrow">
+                                                            {{ $link->link_text }}
+                                                        </a>
+                                                    </div>
+                                                @endforeach
+                                            </div>
                                         </div>
-                                    @endforeach
-                                </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
