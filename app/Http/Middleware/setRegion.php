@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Unirest\Request as Unirest;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Cookie;
 
@@ -31,22 +32,26 @@ class setRegion
 
             $ip = $request->ip();
 
-            if($ip == '127.0.0.1'){
+            if($ip == '127.0.0.1' || $ip == '192.168.207.56'){
                 $ip = '66.207.217.22';
             }
-            $method = 'https://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
+            $method = 'http://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
             $response = Unirest::get($method);
             $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'int';
             //set region cookie according to geolocation
             Cookie::queue('region', strtolower($requestRegion), 60*24*365);
-
+            // Log::info("Log response:".var_dump($response));
         }
         
-        $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : Cookie::get('region');
+        if(!isset($requestRegion)){
+            $requestRegion = Cookie::get('region');
+        } 
+
         // show lightbox if geolocation doesn't match region url parameter
         if(strtolower($regionSlug) !== $requestRegion){
             
             $request->session()->flash('openRegionLightbox', true);
+            $request->session()->flash('requestRegion', $requestRegion);
         }
         else{
             $request->session()->flash('openRegionLightbox', false);
