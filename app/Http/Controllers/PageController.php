@@ -18,8 +18,6 @@ class PageController extends Controller
     // home
     function home($region, $lang){
 
-        // App::setLocale($lang);
-
         $page = $this->cms->page($region, $lang, 'home');
         if(empty($page['results'])){
             return response()->view('errors.404');
@@ -81,7 +79,6 @@ class PageController extends Controller
         return view('pages.blog-detail', compact('postContent', 'posts', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
     }
 
-    // TEMP - CSH
     function csh($region, $lang, $slug){
         // App::setLocale($lang);
         // dd($slug);
