@@ -5,7 +5,9 @@
 <meta property="og:description" name="description" content="{{ $og_description or '' }}">
 <meta property="og:image" content="/path/to/image.jpg" />
 <meta name="csrf-token" content="{{ csrf_token() }}">
-
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 {{-- While WIP on live server to prevent indexing --}}
 @if(env('APP_ENV') != "production")
@@ -13,7 +15,7 @@
 @endif
 <link rel="canonical" href="{{ $canonical or ''}}" />
 <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-<link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
+
 {{-- FontAwesome icons --}}
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
