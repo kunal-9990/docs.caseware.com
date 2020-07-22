@@ -11,11 +11,11 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  responsive: [{
-    breakpoint: 768,
-    settings: "unslick",
-    slidesToShow: 1
-  }]
+  // responsive: [{
+  //   breakpoint: 768,
+  //   settings: "unslick",
+  //   slidesToShow: 1
+  // }]
 }
 
 const Slide = ({ image, title, label, url, i }) => 
@@ -45,7 +45,7 @@ const MonitorSlide = ({ image, title, label, url, i }) =>
 
 const Carousel = ( props ) => {
 
-  let desktopSlider = props.carousel.map((slide, i) => 
+  let carouselSlider = props.carousel.map((slide, i) => 
     slide.image_type === 'screenshot' ? (
       <MonitorSlide
         image={slide.image}
@@ -72,25 +72,8 @@ const Carousel = ( props ) => {
           {props.header && <h2>{props.header}</h2>}
           {props.description && <div dangerouslySetInnerHTML={{__html: props.description}}></div>}
         </div>
-        <div className="slide slide--mobile"> 
-        {props.carousel[0].image_type === 'screenshot' ? (
-          <MonitorSlide
-            image={props.carousel[0].image}
-            title={props.carousel[0].title}
-            label={props.carousel[0].label}
-            url={props.carousel[0].url}
-          />
-        ) : ( 
-          <Slide
-            image={props.carousel[0].image}
-            title={props.carousel[0].title}
-            label={props.carousel[0].label}
-            url={props.carousel[0].url}
-          />
-        )}
-        </div>
         <Slider {...settings}>
-          {desktopSlider}
+          {carouselSlider}
         </Slider>
       </div>
     </Fade>
