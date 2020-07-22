@@ -13,6 +13,11 @@
 @endif
 <link rel="canonical" href="{{ $canonical or ''}}" />
 <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+<link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
+{{-- FontAwesome icons --}}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
 
 {{-- json ld --}}
 <script type="application/ld+json">
@@ -32,26 +37,14 @@
 
 {{-- Tell Google about localized versions of our pages --}}
 @php
-$segments = Request::segments();
-$segments[3] = 'en';
-$enLink = env('DOMAIN') . implode('/', $segments);
-$segments[3] = 'fr';
-$frLink = env('DOMAIN') . implode('/', $segments);
-$segments[3] = 'es';
-$esLink = env('DOMAIN') . implode('/', $segments);
-$segments[3] = 'nl';
-$nlLink = env('DOMAIN') . implode('/', $segments);
-$segments[3] = 'cn';
-$cnLink = env('DOMAIN') . implode('/', $segments);
-$segments[3] = 'de';
-$deLink = env('DOMAIN') . implode('/', $segments);
+isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = '';
 @endphp
-<link rel="alternate" hreflang="en" href="{{$enLink}}" />
-<link rel="alternate" hreflang="fr" href="{{$frLink}}" />
-<link rel="alternate" hreflang="es" href="{{$esLink}}" />
-<link rel="alternate" hreflang="nl" href="{{$nlLink}}" />
-<link rel="alternate" hreflang="de" href="{{$deLink}}" />
-<link rel="alternate" hreflang="cn" href="{{$cnLink}}" /> 
+<link rel="alternate" hreflang="en" href="{{str_replace('/'.$lang.'/', '/en/', Request::url())}}" />
+<link rel="alternate" hreflang="fr" href="{{str_replace('/'.$lang.'/', '/fr/', Request::url())}}" />
+<link rel="alternate" hreflang="es" href="{{str_replace('/'.$lang.'/', '/es/', Request::url())}}" />
+<link rel="alternate" hreflang="nl" href="{{str_replace('/'.$lang.'/', '/nl/', Request::url())}}" />
+<link rel="alternate" hreflang="de" href="{{str_replace('/'.$lang.'/', '/de/', Request::url())}}" />
+<link rel="alternate" hreflang="cn" href="{{str_replace('/'.$lang.'/', '/cn/', Request::url())}}" /> 
 @if(env('APP_ENV') == "production")
 	{{-- google analytics --}}
 	@php
@@ -128,20 +121,4 @@ new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'd
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
 {{-- google translate end--}}
-@endif
-
-@php
-$routeLang = isset($segments[1]) ? $segments[1]: "en" ;
-if(!isset($hideOlark)){
-	$hideOlark = true;
-}
-@endphp
-@if($routeLang == "en" || !$hideOlark)
-<!-- begin olark code -->
-<script type="text/javascript" async>
-	;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
-			/* custom configuration goes here (www.olark.com/documentation) */
-			olark.identify('4439-775-10-8635');
-</script>
-<!-- end olark code -->
 @endif
