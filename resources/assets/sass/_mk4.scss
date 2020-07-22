@@ -204,6 +204,7 @@ a.btn--arrow {
 
             &:first-child{
                 background-color: $caseware-blue-AA;
+                margin-bottom: 1.2rem;
                 &:hover {
                     background-color: #1a8fb5;
                 }
@@ -538,11 +539,21 @@ In This Article
     }
 }
 
+.inner-container {
+    margin: auto;
+    max-width: 93rem;
+    padding: 0 1.5rem 2.1rem;
+
+}
+
 @include mq(sm) {
 
     .banner {
         &__wrapper span {
             max-width: 75%;
+        }
+        .cta a:first-child {
+            margin-bottom: 0;
         }
     }
 

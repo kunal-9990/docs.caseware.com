@@ -27,7 +27,7 @@ const Banner = ({ banner, backgroundType }) => {
             <div className="banner__wrapper">
               <div>
                 <h1 className="banner-size">
-                  {banner.product_logo.url && (<img class="product-logo" src={banner.product_logo.url} alt="" />)}
+                  {(banner.product_logo && banner.product_logo.url) && (<img class="product-logo" src={banner.product_logo.url} alt="" />)}
                   {banner.header}
                 </h1>
               

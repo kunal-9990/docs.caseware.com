@@ -15,15 +15,14 @@ const Slide = ({ url, i }) =>
   </div>
 
 
-const VideoGallery = ({ videos, cta, label, link }) => {
-  console.log(videos)
+const VideoGallery = ( props ) => {
   const settings = {
     customPaging: function(i) {
       return (
         <div 
           className="thumbnails__block" 
-          style={{backgroundImage: 'url(' + videos[i].thumbnail.url + ')', backgroundSize: 'cover'}}
-          title={ videos[i].video_title }
+          style={{backgroundImage: 'url(' + props.video_gallery[i].thumbnail.url + ')', backgroundSize: 'cover'}}
+          title={ props.video_gallery[i].video_title }
         >
           {/* <div><span>{ videos[i].video_title }</span></div> */}
         </div>
@@ -42,7 +41,7 @@ const VideoGallery = ({ videos, cta, label, link }) => {
     }]
   }
 
-  let desktopSlider = videos.map((slide, i) => (
+  let desktopSlider = props.video_gallery.map((slide, i) => (
     <Slide
       url={slide.url}
       key={i}
@@ -52,11 +51,15 @@ const VideoGallery = ({ videos, cta, label, link }) => {
   return (
     <Fade bottom>
       <div className="video-gallery">
+        <div className="inner-container">
+          {props.header && <h2>{props.header}</h2>}
+          {props.description && <div dangerouslySetInnerHTML={{__html: props.description}}></div>}
+        </div>
         <div className="slide slide--mobile">  
           <Slide
-            url={videos[0].url}
+            url={props.video_gallery[0].url}
           />
-          { cta && (<a href={ link } className="mk4btn" target="_blank" rel="noopener">{ label }</a> )}
+          { props.cta && (<a href={ props.cta_link } className="mk4btn" target="_blank" rel="noopener">{ props.cta_label }</a> )}
         </div>
         <Slider {...settings}>
           {desktopSlider}
