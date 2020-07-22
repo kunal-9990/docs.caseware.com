@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick-theme.css'
 const Slide = ({ url, i }) => 
   <div className="slide iframe-video-wrapper" key={i}>
     <iframe  
-      src={url} 
+      src={url+'?enablejsapi=1&rel=0'}
       className="yt-video-iframe" 
       frameBorder="0"
       allowFullScreen

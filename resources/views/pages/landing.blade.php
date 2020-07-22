@@ -172,5 +172,6 @@
         
         <script src="{{ mix('/js/mk2/app.js') }}"></script>
         <script src="{{ mix('/js/mk4/app.js') }}"></script>
+
 </body>
 </html>
