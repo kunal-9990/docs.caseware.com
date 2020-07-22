@@ -97,4 +97,5 @@ function getRecentlyViewed(){
         return $featureInfo;
     }
 
+
 ?>
