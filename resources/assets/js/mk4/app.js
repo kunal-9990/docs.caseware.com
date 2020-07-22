@@ -19,6 +19,7 @@ import BlogLightbox from './components/pages/blog/BlogLightbox'
 import CSH from './components/pages/secondary/CSH'
 import FAQ from './components/pages/secondary/FAQ'
 import Videos from './components/pages/secondary/Videos'
+import VideoPlaylist from './components/pages/secondary/VideoPlaylist'
 import RegionLightbox from './components/RegionLightbox'
 
 import 'react-app-polyfill/ie9'
@@ -66,6 +67,10 @@ const containers = [
   {
     id: 'video-gallery',
     component: VideoGallery
+  },
+  {
+    id: 'video-playlist',
+    component: VideoPlaylist
   },
   {
     id: 'downloads',
