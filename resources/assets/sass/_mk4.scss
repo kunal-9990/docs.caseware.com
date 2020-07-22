@@ -136,9 +136,10 @@ a.btn--arrow {
     }
 
     &--solid {
-        background-image: linear-gradient($caseware-blue, #00688a);
-
+        background-color: $caseware-blue;
+        
         .banner__wrapper {
+            position: relative;
             height: 35vh;
             padding-bottom: 4.2rem;
 
@@ -146,6 +147,16 @@ a.btn--arrow {
                 padding: 0;
                 font-size: 1.8rem;
             }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            background-image: linear-gradient(rgba($dark-grey, 0), rgba($dark-grey, 0.6));
         }
     }
 
