@@ -115,7 +115,6 @@ class PageController extends Controller
     function videosOverview($region, $lang, $slug = null){
         $page = $this->cms->page($region, $lang, 'videos');
         $playlists = $this->getPlaylists($page);
-        dd($playlists);
         if(empty($page['results'])){
             return response()->view('errors.404');
         }
@@ -323,7 +322,6 @@ class PageController extends Controller
                 }
                 $playlist = array($template->header => $playlistVids);
                 array_push($playlists, $playlist);
-                var_dump(count($playlists));
             }
 
             if($template->acf_fc_layout == 'video_gallery'){
