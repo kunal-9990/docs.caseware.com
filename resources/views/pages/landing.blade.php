@@ -132,8 +132,6 @@
                     @endif
 
                 @endforeach
-
-                <!-- <?php echo '<pre>';var_dump($pageContent->acf);echo'</pre>';?> -->
         </main>
     </div>
     </div>

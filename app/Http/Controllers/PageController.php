@@ -319,7 +319,6 @@ class PageController extends Controller
                         $video->ID
                     )->get('results');
                     array_push($playlistVids, $videoContent);
-                    dd($videoContent);
                 }
                 $template->playlist = $playlistVids;
             }
