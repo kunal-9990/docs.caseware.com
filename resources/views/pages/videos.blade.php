@@ -58,6 +58,7 @@
                     </div>
                 </div>
 
+
                 @foreach($pageContent->acf->modular_template as $section)
                  
                     @if($section->acf_fc_layout == "text_block")
@@ -70,13 +71,26 @@
                         </div>
                     @endif
 
+                    <!-- @if($section->acf_fc_layout == "playlist")
+                        <div class="container container--mk4 landing__block">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div
+                                        data-component="playlist"
+                                        data-props="{{htmlspecialchars(json_encode($section))}}"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif -->
+
                     @if($section->acf_fc_layout == "video_gallery")
                         <div class="container container--mk4--extended landing__video-gallery">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div
                                         data-component="video-gallery"
-                                        data-prop-videos="{{htmlspecialchars(json_encode($section->video_gallery))}}"
+                                        data-props="{{htmlspecialchars(json_encode($section))}}"
                                     ></div>
                                 </div>
                             </div>
