@@ -115,6 +115,7 @@ class PageController extends Controller
     function videosOverview($region, $lang, $slug = null){
         $page = $this->cms->page($region, $lang, 'videos');
         $playlists = $this->getPlaylists($page);
+        dd($playlists);
         if(empty($page['results'])){
             return response()->view('errors.404');
         }
@@ -310,7 +311,7 @@ class PageController extends Controller
     {
         $playlists = array();
         foreach($page['results'][0]->acf->modular_template as $template){
-            $playlists = array();
+
             if($template->acf_fc_layout == 'playlist'){
                 $playlistVids = array();
                 foreach($template->playlist as $video){
@@ -322,7 +323,23 @@ class PageController extends Controller
                 }
                 $playlist = array($template->header => $playlistVids);
                 array_push($playlists, $playlist);
+                var_dump(count($playlists));
             }
+
+            if($template->acf_fc_layout == 'video_gallery'){
+                $playlistVids = array();
+                foreach($template->video_gallery as $video){
+                    $videoContent = $this->cms->get_custom_post_by_id(
+                        'videos',
+                        $video->ID
+                    )->get('results');
+                    array_push($playlistVids, $videoContent);
+                }
+                $playlist = array($template->header => $playlistVids);
+                array_push($playlists, $playlist);
+
+            }
+
         }
         return $playlists;
     }   

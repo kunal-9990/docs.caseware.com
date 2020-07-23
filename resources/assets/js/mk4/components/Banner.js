@@ -2,11 +2,6 @@ import React from 'react'
 
 const Banner = ({ banner, backgroundType }) => {
 
-  const BannerStyle = {
-    backgroundImage: 'url(' + banner.background_image.url + ')',
-    backgroundSize: 'cover'
-  }
-
   let ctas = ''
   if (banner.cta) {
     ctas = banner.cta.map((button, i) => (
@@ -19,7 +14,23 @@ const Banner = ({ banner, backgroundType }) => {
   return (
     <section 
       className={'banner banner--' + (backgroundType ? backgroundType : banner.banner_background_type)} 
-      style={(banner.banner_background_type !== "none" && banner.banner_background_type !== "solid") ? BannerStyle : []}
+      style={(() => {
+        switch (backgroundType ? backgroundType : banner.banner_background_type) {
+          case 'solid' : 
+            return {
+              backgroundColor: banner.background_color
+            }
+          case 'large':
+          case 'small':
+            return {
+              backgroundImage: 'url(' + banner.background_image.url + ')',
+              backgroundSize: 'cover'
+            }
+          case 'none':
+          default:
+            return []
+        }
+      })()}
     >
       <div className="container container--mk4">
         <div className="row">
