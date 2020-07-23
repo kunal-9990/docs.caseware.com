@@ -19,7 +19,8 @@ class PageController extends Controller
     function home($region, $lang){
 
         $page = $this->cms->page($region, $lang, 'home');
-        $playlists = $this->getPlaylists($page);
+        $page = $this->getPlaylists($page);
+
 
         if(empty($page['results'])){
             return response()->view('errors.404');
@@ -114,7 +115,7 @@ class PageController extends Controller
     
     function videosOverview($region, $lang, $slug = null){
         $page = $this->cms->page($region, $lang, 'videos');
-        $playlists = $this->getPlaylists($page);
+        $page = $this->getPlaylists($page);
         if(empty($page['results'])){
             return response()->view('errors.404');
         }
@@ -307,12 +308,11 @@ class PageController extends Controller
 
           
     function getPlaylists($page)
-    {
+    {   
         $playlists = array();
         foreach($page['results'][0]->acf->modular_template as $template){
 
             if($template->acf_fc_layout == 'playlist'){
-                $playlistVids = array();
                 foreach($template->playlist as $video){
                     $videoContent = $this->cms->get_custom_post_by_id(
                         'videos',
@@ -320,8 +320,7 @@ class PageController extends Controller
                     )->get('results');
                     array_push($playlistVids, $videoContent);
                 }
-                $playlist = array($template->header => $playlistVids);
-                array_push($playlists, $playlist);
+                $template->playlist = $playlistVids;
             }
 
             if($template->acf_fc_layout == 'video_gallery'){
@@ -333,12 +332,9 @@ class PageController extends Controller
                     )->get('results');
                     array_push($playlistVids, $videoContent);
                 }
-                $playlist = array($template->header => $playlistVids);
-                array_push($playlists, $playlist);
-
+                $template->video_gallery = $playlistVids;
             }
-
         }
-        return $playlists;
+        return $page;
     }   
 }
