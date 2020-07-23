@@ -16,17 +16,17 @@ const Slide = ({ url, i }) =>
 
 
 const VideoGallery = props => {
+  console.log(props.video_gallery)
   const settings = {
     customPaging: function(i) {
       return (
-        <h1>hello</h1>
-        // <div 
-        //   className="thumbnails__block" 
-        //   style={{backgroundImage: 'url(' + props.video_gallery[i].thumbnail.url + ')', backgroundSize: 'cover'}}
-        //   title={ props.video_gallery[i].video_title }
-        // >
-        //   {/* <div><span>{ videos[i].video_title }</span></div> */}
-        // </div>
+        <div 
+          className="thumbnails__block" 
+          style={{backgroundImage: 'url(' + props.video_gallery[i].acf.thumbnail_image.url + ')', backgroundSize: 'cover'}}
+          title={ props.video_gallery[i].acf.video_title }
+        >
+          {/* <div><span>{ videos[i].video_title }</span></div> */}
+        </div>
       );
     },
     dots: true,
@@ -44,7 +44,7 @@ const VideoGallery = props => {
 
   let desktopSlider = props.video_gallery.map((slide, i) => (
     <Slide
-      url={slide.url}
+      url={"https://www.youtube.com/embed/" + slide.acf.youtube_id}
       key={i}
     />
   ))
@@ -58,7 +58,7 @@ const VideoGallery = props => {
         </div>
         <div className="slide slide--mobile">  
           <Slide
-            url={props.video_gallery[0].url}
+            url={"https://www.youtube.com/embed/" + props.video_gallery[0].acf.youtube_id }
           />
           { props.cta && (<a href={ props.cta_link } className="mk4btn" target="_blank" rel="noopener">{ props.cta_label }</a> )}
         </div>
