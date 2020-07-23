@@ -58,6 +58,7 @@
                     </div>
                 </div>
 
+
                 @foreach($pageContent->acf->modular_template as $section)
                  
                     @if($section->acf_fc_layout == "text_block")
@@ -75,8 +76,8 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div
-                                        data-component="video-playlist"
-                                        data-props="{{htmlspecialchars(json_encode($section->playlist))}}"
+                                        data-component="playlist"
+                                        data-props="{{htmlspecialchars(json_encode($section))}}"
                                     ></div>
                                 </div>
                             </div>
