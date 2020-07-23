@@ -12,15 +12,15 @@ class VideoPlaylist extends Component {
     }
   }
 
-
   componentDidMount() {
 
   }
 
   render() {
     return (
-      <div>
-        {/* <h1>video Playlist</h1> */}
+      <div className="playlist">
+        <h1>{this.props.header}</h1>
+        <span>{this.props.description}</span>
       </div>
     )
   }

@@ -76,7 +76,7 @@
                                 <div class="col-sm-12">
                                     <div
                                         data-component="video-playlist"
-                                        data-prop-playlist="{{htmlspecialchars(json_encode($section->playlist))}}"
+                                        data-props="{{htmlspecialchars(json_encode($section->playlist))}}"
                                     ></div>
                                 </div>
                             </div>
