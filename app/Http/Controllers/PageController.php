@@ -311,7 +311,7 @@ class PageController extends Controller
     {   
         $playlists = array();
         foreach($page['results'][0]->acf->modular_template as $template){
-
+            $playlistVids = array();
             if($template->acf_fc_layout == 'playlist'){
                 foreach($template->playlist as $video){
                     $videoContent = $this->cms->get_custom_post_by_id(
@@ -319,12 +319,13 @@ class PageController extends Controller
                         $video->ID
                     )->get('results');
                     array_push($playlistVids, $videoContent);
+                    dd($videoContent);
                 }
                 $template->playlist = $playlistVids;
             }
 
             if($template->acf_fc_layout == 'video_gallery'){
-                $playlistVids = array();
+
                 foreach($template->video_gallery as $video){
                     $videoContent = $this->cms->get_custom_post_by_id(
                         'videos',
