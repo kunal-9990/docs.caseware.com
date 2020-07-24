@@ -42,7 +42,6 @@ class PlaylistGridItem extends Component {
   }
 
   render() {
-    console.log("thislide", this.props.slide)
     return (
       <React.Fragment>
         <div 

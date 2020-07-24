@@ -103,8 +103,6 @@ a.btn--arrow {
 
 
 
-
-
 /********************
     Banner
 *********************/
@@ -435,6 +433,31 @@ In This Article
                 content: '\203A';
             }
         }
+    }
+}
+
+.custom-slick-arrow {
+
+    position: absolute;
+    display: block;
+    top: 30%;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    line-height: 0;
+    transform: translate(0, -50%);
+    color: $grey-2;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    &--prev {
+        left: -2.4rem
+    }
+
+    &--next {
+        right: -2.4rem;
     }
 }
 
