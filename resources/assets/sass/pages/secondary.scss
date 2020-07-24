@@ -285,6 +285,40 @@
     }
 }
 
+.playlist {
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        padding: 1.2rem;
+    }
+
+    &__thumbnail {
+        position: relative;
+        .time {
+            position: absolute;
+            padding: 0.2rem 1.2rem;
+            background-color: $caseware-blue-AA;
+            color: $white;
+            right: 0;
+            bottom: 1.2rem;
+        }
+    }
+    
+    &__details {
+        padding: 1.2rem;
+
+        h3 {
+            margin-top: 0;
+        }
+
+        span {
+            color: $grey-4;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
 @include mq(md) {
     .lightbox {
         &__video {
