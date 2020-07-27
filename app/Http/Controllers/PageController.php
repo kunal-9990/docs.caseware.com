@@ -38,6 +38,8 @@ class PageController extends Controller
 
         $page = $this->cms->page($region, $lang, $productSlug);
         $page = $this->getPlaylists($page);
+        $page = $this->getDownloads($page);
+
 
         if(empty($page['results'])){
             return response()->view('errors.404');
