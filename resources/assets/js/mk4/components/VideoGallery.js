@@ -16,7 +16,6 @@ const Slide = ({ url, i }) =>
 
 
 const VideoGallery = props => {
-  console.log(props.video_gallery)
   const settings = {
     customPaging: function(i) {
       return (

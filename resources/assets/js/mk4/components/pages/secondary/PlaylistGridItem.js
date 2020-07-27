@@ -39,7 +39,6 @@ class PlaylistGridItem extends Component {
   }
 
   handleOpenModal () {
-    console.log("Click")
     this.setState({ modalOpen: true })
     window.history.pushState(null, null, this.videoOverviewUrl + '/' + this.props.slide.slug)
   }
@@ -50,9 +49,6 @@ class PlaylistGridItem extends Component {
   }
 
   render() {
-    // console.log("lide bad:", this.props.slide)
-    console.log("!", this.state.item)
-
     return (
       <React.Fragment>
         <div 
