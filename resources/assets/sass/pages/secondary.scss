@@ -286,10 +286,17 @@
 }
 
 .playlist {
+
     &__slide {
         display: flex;
         flex-direction: column;
-        padding: 0 1.2rem;
+        padding: 1.2rem;
+        cursor: pointer;
+        border: 1px solid red;
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(#323232, 0.2);
+        }
     }
 
     &__thumbnail {
@@ -315,6 +322,16 @@
             color: $grey-4;
             font-size: 1.2rem;
             text-transform: uppercase;
+        }
+    }
+
+    &__filter {
+        color: $grey-3;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+
+        svg {
+            margin-right: 1.2rem;
         }
     }
 

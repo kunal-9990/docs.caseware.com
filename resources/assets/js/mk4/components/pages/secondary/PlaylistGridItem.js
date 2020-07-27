@@ -72,7 +72,7 @@ class PlaylistGridItem extends Component {
                 </React.Fragment>
               )}
               {this.state.item.videoFilters && (
-                <div className="grid-item__filter">
+                <div className="playlist__filter">
                   { this.state.item.videoFilters.length > 0 && (<FontAwesomeIcon icon={ this.state.item.videoFilters.length > 1 ? faTags : faTag } />) }
                   { this.state.item.videoFilters.join(', ')} 
                 </div>
