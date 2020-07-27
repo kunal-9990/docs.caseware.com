@@ -37,21 +37,15 @@ class PageController extends Controller
         // App::setLocale($lang);
 
         $page = $this->cms->page($region, $lang, $productSlug);
+        $page = $this->getPlaylists($page);
+
         if(empty($page['results'])){
             return response()->view('errors.404');
         }
-        else{        
+        else {        
             $pageContent = $page['results'][0];
-            // // TODO - update
-            // if(startsWith(strtolower($product), "product")){
-            //     $page = $this->cms->page(removeFileExt(strtolower($product)));
-            //     $pageContent = $page['results'][0];
-            //     // dd($pageContent);
-            //     return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title'));
-            // }
-
-            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title'));
-            }
+            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists'));
+        }
     }
 
     
