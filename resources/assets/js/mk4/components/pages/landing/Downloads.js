@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 
 const Downloads = props => {
-  let quickLinks = props.quick_link.map((link, i) => {
+  let quickLinks = props.quick_links.map((link, i) => {
     return (
       <div key={i} className="downloads">
           <div className="icon icon--desktop">
