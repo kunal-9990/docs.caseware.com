@@ -46,8 +46,6 @@ class Videos extends Component {
       this.hashFilter = this.allVideoFilters.filter(filter => filter.value === window.location.hash.replace('#', '').toLowerCase())
     }
 
-    console.log(this.hashFilter)
-
     this.props.videos.results.map((item, i) => {
       let tagList = item.tags.map(id => this.props.tags.results.find(o => o.id === id).name);
       let catList = item.categories.filter(c => c !== 1).map(id => this.props.categories.results.find(o => o.id === id).name);

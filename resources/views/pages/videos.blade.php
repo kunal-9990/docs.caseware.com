@@ -78,6 +78,8 @@
                                     <div
                                         data-component="playlist"
                                         data-props="{{htmlspecialchars(json_encode($section))}}"
+                                        data-prop-tags="{{htmlspecialchars(json_encode($tags))}}" 
+                                        data-prop-categories="{{htmlspecialchars(json_encode($categories))}}"
                                     ></div>
                                 </div>
                             </div>

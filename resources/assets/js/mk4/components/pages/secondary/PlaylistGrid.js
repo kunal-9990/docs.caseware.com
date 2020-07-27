@@ -7,13 +7,13 @@ import PlaylistGridItem from './PlaylistGridItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-const ArrowPrev = ({ onClick }) => (
-  <div onClick={onClick} className="custom-slick-arrow custom-slick-arrow--prev">
+const ArrowPrev = ({ className, onClick }) => (
+  <div onClick={onClick} className={className + ' custom-slick-arrow custom-slick-arrow--prev'}>
       <FontAwesomeIcon icon={faChevronLeft} />
   </div>
 )
-const ArrowNext = ({ onClick }) => (
-  <div onClick={onClick} className="custom-slick-arrow custom-slick-arrow--next">      
+const ArrowNext = ({ className, onClick }) => (
+  <div onClick={onClick} className={className + ' custom-slick-arrow custom-slick-arrow--next'}>      
     <FontAwesomeIcon icon={faChevronRight} />
   </div>
 );
@@ -36,11 +36,12 @@ const settings = {
 }
 
 const PlaylistGrid = ( props ) => {
-  console.log(props)
   let playlistSlider = props.playlist.map((slide, i) => 
     <PlaylistGridItem 
       slide={slide} 
       key={i}
+      categories={props.categories}
+      tags={props.tags}
     />
   )
   return (

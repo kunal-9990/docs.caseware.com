@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import VideoLightbox from '../../VideoLightbox'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSort, faFilter } from '@fortawesome/free-solid-svg-icons'
+import { faTag, faTags } from '@fortawesome/free-solid-svg-icons'
 
 Modal.setAppElement('#main');
 
@@ -14,7 +14,8 @@ class PlaylistGridItem extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      modalOpen: this.props.slide.slug === this.props.slug ? true : false
+      modalOpen: this.props.slide.slug === this.props.slug ? true : false,
+      item: this.props.slide
     }
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
@@ -28,6 +29,13 @@ class PlaylistGridItem extends Component {
     if (window.location.hash) {
       this.videoOverviewUrl = window.location.href.split("#")[0];
     }
+
+    let tagList = this.props.slide.tags.map(id => this.props.tags.results.find(o => o.id === id).name);
+    let catList = this.props.slide.categories.filter(c => c !== 1).map(id => this.props.categories.results.find(o => o.id === id).name);
+    
+    this.setState({
+      item: ({...this.state.item, videoFilters:catList.concat(tagList) })
+    })
   }
 
   handleOpenModal () {
@@ -42,6 +50,9 @@ class PlaylistGridItem extends Component {
   }
 
   render() {
+    // console.log("lide bad:", this.props.slide)
+    console.log("!", this.state.item)
+
     return (
       <React.Fragment>
         <div 
@@ -53,16 +64,24 @@ class PlaylistGridItem extends Component {
               <img src={this.props.slide.acf.thumbnail_image.url} alt={this.props.slide.acf.thumbnail_image.alt} />
               {this.props.slide.acf.time && <div className="time">{this.props.slide.acf.time}</div>}
             </div>
-            {(this.props.slide.acf.video_title_prepend || this.props.slide.acf.video_title) ? (
-              <div className="playlist__details">
-                {this.props.slide.acf.video_title_prepend && <span>{this.props.slide.acf.video_title_prepend}</span>}
-                {this.props.slide.acf.video_title && <h3>{this.props.slide.acf.video_title}</h3>}
-              </div>
-            ) : (
-              <div className="playlist__details">
-                <h3 dangerouslySetInnerHTML={{__html: this.props.slide.title.rendered}}></h3>
-              </div>
-            )}
+            <div className="playlist__details">
+              {(this.props.slide.acf.video_title_prepend || this.props.slide.acf.video_title) ? (
+                <React.Fragment>
+                  {this.props.slide.acf.video_title_prepend && <span>{this.props.slide.acf.video_title_prepend}</span>}
+                  {this.props.slide.acf.video_title && <h3>{this.props.slide.acf.video_title}</h3>}
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <h3 dangerouslySetInnerHTML={{__html: this.props.slide.title.rendered}}></h3>
+                </React.Fragment>
+              )}
+              {this.state.item.videoFilters && (
+                <div className="grid-item__filter">
+                  { this.state.item.videoFilters.length > 0 && (<FontAwesomeIcon icon={ this.state.item.videoFilters.length > 1 ? faTags : faTag } />) }
+                  { this.state.item.videoFilters.join(', ')} 
+                </div>
+              )}
+            </div>
         </div>
         <Modal
           isOpen={this.state.modalOpen}
@@ -74,7 +93,7 @@ class PlaylistGridItem extends Component {
           className="lightbox__video"
         >
           <VideoLightbox 
-            item={this.props.slide} 
+            item={this.state.item} 
             videoPage={this.videoOverviewUrl}
             handleCloseModal={this.handleCloseModal} 
           />
