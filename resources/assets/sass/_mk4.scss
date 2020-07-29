@@ -684,6 +684,10 @@ In This Article
     .banner {
         h1 {
             font-size: 6rem;
+
+            &.includes-logo {
+                font-size: 4.2rem;
+            }
         }
     }
 
