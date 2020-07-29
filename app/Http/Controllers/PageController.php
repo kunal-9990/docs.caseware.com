@@ -20,6 +20,8 @@ class PageController extends Controller
 
         $page = $this->cms->page($region, $lang, 'home');
         $page = $this->getPlaylists($page);
+        $page = $this->getDownloads($page);
+        $page = $this->getProductNavigation($page);
 
 
         if(empty($page['results'])){
@@ -36,6 +38,8 @@ class PageController extends Controller
 
         $page = $this->cms->page($region, $lang, $productSlug);
         $page = $this->getPlaylists($page);
+        $page = $this->getDownloads($page);
+
 
         if(empty($page['results'])){
             return response()->view('errors.404');
@@ -327,6 +331,42 @@ class PageController extends Controller
                     array_push($playlistVids, $videoContent);
                 }
                 $template->video_gallery = $playlistVids;
+            }
+        }
+        return $page;
+    }   
+
+    function getDownloads($page)
+    {   
+        foreach($page['results'][0]->acf->modular_template as $template){
+            $downloads = array();
+            if($template->acf_fc_layout == 'downloads'){
+                foreach($template->quick_links as $dl){
+                    $dlContent = $this->cms->get_custom_post_by_id(
+                        'downloads',
+                        $dl->ID
+                    )->get('results')->acf;
+                    array_push($downloads, $dlContent);
+                }
+                $template->quick_links = $downloads;
+            }
+        }
+        return $page;
+    }   
+
+    function getProductNavigation($page)
+    {   
+        foreach($page['results'][0]->acf->modular_template as $template){
+            $productBlocks = array();
+            if($template->acf_fc_layout == 'product_navigation'){
+                foreach($template->navigation as $pb){
+                    $pbContent = $this->cms->get_custom_post_by_id(
+                        'product_blocks',
+                        $pb->ID
+                    )->get('results')->acf;
+                    array_push($productBlocks, $pbContent);
+                }
+                $template->navigation = $productBlocks;
             }
         }
         return $page;

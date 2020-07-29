@@ -19,9 +19,9 @@ const ProductNavigation = props => {
       <div className="product-nav__wrapper">
         <div className="product-nav__title">
           <div>
-          { navItem.branding === 'icon' ? 
-            navItem.icon && <img src={navItem.icon.url} alt={navItem.icon.alt} /> :
-            navItem.text && <h2>{ navItem.text }</h2>
+          { navItem.branding === 'text' ? 
+            navItem.text && <h2>{ navItem.text }</h2> :
+            navItem.icon && <img src={navItem.icon.url} alt={navItem.icon.alt} /> 
           }
           </div>
           {(props.settings.layout === 'full' && navItem.button.label && navItem.button.link) && 
