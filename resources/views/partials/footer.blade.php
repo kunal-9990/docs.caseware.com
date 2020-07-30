@@ -24,13 +24,14 @@
         <!-- TODO un hardcode -->
            
 
-                <div class="col stretch">
+                <div class="col">
                     <span>Products</span>
-                    <a href="https://www.caseware.com/ca/products/working-papers" target="_blank" rel="noopener">CaseWare Working Papers</a>
-                    <a href="https://www.caseware.com/ca/products/cloud" target="_blank" rel="noopener">CaseWare Cloud</a>
-                    <a href="https://idea.caseware.com/products/idea" target="_blank" rel="noopener">IDEA</a>
-                    <a href="https://www.caseware.com/ca/products/audit" target="_blank" rel="noopener">CaseWare Audit</a>
-                    <a href="https://www.caseware.com/ca/products/financials" target="_blank" rel="noopener">CaseWare Financials</a>
+                    <a href="https://docs.caseware.com/ca/en/cloud" target="_blank" rel="noopener">CaseWare Cloud</a>
+                    <a href="https://docs.caseware.com/ca/en/hybrid" target="_blank" rel="noopener">Hybrid Cloud</a>
+                    <a href="https://docs.caseware.com/ca/en/rct" target="_blank" rel="noopener">CaseWare RCT</a>
+                    <a href="https://docs.caseware.com/ca/en/audit" target="_blank" rel="noopener">CaseWare Audit</a>
+                    <a href="https://docs.caseware.com/ca/en/pbc" target="_blank" rel="noopener">PBC Requests</a>
+                    <a href="https://docs.caseware.com/ca/en/aai" target="_blank" rel="noopener">AnalyticsAI</a>
                 </div>
                 <div class="col">
                     <span>About</span>
