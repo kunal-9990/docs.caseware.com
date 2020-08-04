@@ -198,8 +198,15 @@ a.btn--arrow {
 
         .product-logo {
             margin-right: 2rem;
-            margin-bottom: 1rem;
             max-height: 80px;
+        }
+
+        & > div {
+            display: flex;
+
+            & > div {
+                align-self: flex-end;
+            }
         }
     }  
     
@@ -649,6 +656,9 @@ In This Article
     .banner {
         h1 {
             font-size: 6rem;
+            &.includes-logo {
+                font-size: 4.2rem;
+            }
         }
     }
 
