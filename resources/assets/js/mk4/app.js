@@ -21,6 +21,7 @@ import FAQ from './components/pages/secondary/FAQ'
 import Videos from './components/pages/secondary/Videos'
 import Playlist from './components/pages/secondary/Playlist'
 import RegionLightbox from './components/RegionLightbox'
+import VideoControl from './components/VideoControl'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -123,6 +124,7 @@ class Mk4 extends ReactHabitat.Bootstrapper {
             builder.register(container.component).as(container.id);
         }
         this.setContainer(builder.build());
+        VideoControl();
     }
 }
 

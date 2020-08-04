@@ -147,7 +147,5 @@
         @include('partials.footer')
         @include('partials.footer-includes')
         
-
-
 </body>
 </html>
