@@ -14,7 +14,7 @@ class PlaylistGridItem extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      modalOpen: this.props.slide.slug === this.props.slug ? true : false,
+      modalOpen: this.props.slide.slug === this.props.videoSlug ? true : false,
       item: this.props.slide
     }
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -23,7 +23,7 @@ class PlaylistGridItem extends Component {
   }
 
   componentDidMount() {
-    if (this.props.slug) {
+    if (this.props.videoSlug) {
       this.videoOverviewUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/'))
     }
     if (window.location.hash) {
@@ -49,6 +49,9 @@ class PlaylistGridItem extends Component {
   }
 
   render() {
+    // console.log("state", this.state);
+    console.log("vidOverview", this.videoOverviewUrl)
+    // console.log("props", this.props)
     return (
       <React.Fragment>
         <div 

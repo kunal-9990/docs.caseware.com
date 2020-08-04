@@ -80,6 +80,7 @@
                                         data-props="{{htmlspecialchars(json_encode($section))}}"
                                         data-prop-tags="{{htmlspecialchars(json_encode($tags))}}" 
                                         data-prop-categories="{{htmlspecialchars(json_encode($categories))}}"
+                                        data-prop-video-slug="{{(isset($slug) && !empty($slug)) ? $slug : null}}"
                                     ></div>
                                 </div>
                             </div>

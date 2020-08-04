@@ -15,7 +15,7 @@ const VideoLightbox = ({ item, videoPage, handleCloseModal }) => {
   // let videoTags = item.videoFilters.join(', ')
   
   let videoTags = item.videoFilters.map((filter, i) => 
-    <React.Fragment>
+    <React.Fragment key={i}>
       <a href={videoPage + '#' + filter.replace(/ /g, '-').toLowerCase() } rel="noopener" key={i} >{ filter }</a>
       { i + 1 !== item.videoFilters.length && <span>, </span> }
     </React.Fragment>
@@ -44,7 +44,7 @@ const VideoLightbox = ({ item, videoPage, handleCloseModal }) => {
             { item.acf.video_title && <h1>{ item.acf.video_title }</h1> }
           </div>
         ) : (
-          <div className="video-lightbox__title"><h2 dangerouslySetInnerHTML={{__html: item.title}}></h2></div>
+          <div className="video-lightbox__title"><h2 dangerouslySetInnerHTML={{__html: item.title.rendered}}></h2></div>
         )}
         <div className="video-lightbox__description">
           <div className="grid-item__filter">

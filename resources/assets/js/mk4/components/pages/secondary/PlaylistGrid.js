@@ -42,6 +42,7 @@ const PlaylistGrid = ( props ) => {
       key={i}
       categories={props.categories}
       tags={props.tags}
+      videoSlug={props.videoSlug}
     />
   )
   return (
