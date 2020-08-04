@@ -8,12 +8,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 const ArrowPrev = ({ className, onClick }) => (
-  <div onClick={onClick} className={className + ' custom-slick-arrow custom-slick-arrow--prev'}>
+  <div onClick={onClick} className={className + ' custom-slick-arrow custom-slick-arrow--playlist custom-slick-arrow--prev'}>
       <FontAwesomeIcon icon={faChevronLeft} />
   </div>
 )
 const ArrowNext = ({ className, onClick }) => (
-  <div onClick={onClick} className={className + ' custom-slick-arrow custom-slick-arrow--next'}>      
+  <div onClick={onClick} className={className + ' custom-slick-arrow custom-slick-arrow--playlist custom-slick-arrow--next'}>      
     <FontAwesomeIcon icon={faChevronRight} />
   </div>
 );

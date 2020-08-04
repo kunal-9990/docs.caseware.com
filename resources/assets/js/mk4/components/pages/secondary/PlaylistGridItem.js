@@ -49,9 +49,6 @@ class PlaylistGridItem extends Component {
   }
 
   render() {
-    // console.log("state", this.state);
-    console.log("vidOverview", this.videoOverviewUrl)
-    // console.log("props", this.props)
     return (
       <React.Fragment>
         <div 
