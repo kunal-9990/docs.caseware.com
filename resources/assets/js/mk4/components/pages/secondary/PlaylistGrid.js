@@ -25,14 +25,18 @@ const settings = {
   dots: false,
   infinite: false,
   speed: 500,
+  rows: 1,
   slidesToShow: 3,
   slidesToScroll: 3,
-  
-  // responsive: [{
-  //   breakpoint: 768,
-  //   settings: "unslick",
-  //   slidesToShow: 1
-  // }]
+  responsive: [{
+    breakpoint: 768,
+    settings: {
+      rows: 2,
+      slidesToShow: 2,
+      slidesToScroll: 4,
+
+    }
+  }]
 }
 
 const PlaylistGrid = ( props ) => {

@@ -449,11 +449,11 @@ In This Article
     }
 
     &--prev {
-        left: -2.8rem
+        left: -2rem !important;
     }
 
     &--next {
-        right: -2.8rem;
+        right: -2rem !important;
     }
 }
 
