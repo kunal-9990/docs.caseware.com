@@ -103,8 +103,6 @@ a.btn--arrow {
 
 
 
-
-
 /********************
     Banner
 *********************/
@@ -411,37 +409,58 @@ In This Article
                 height: 70%;
             }
         }
+    }
+}
 
-        // &--mobile {
-        //     display: block;
-
-        //     .slide__ribbon {
-        //         width: 100%;
-        //     }
-        // }
+.custom-slick-arrow {
+    &:before {
+        display: none;
     }
 
-    .slick-arrow {
-        z-index: 10;
+    &.slick-prev,
+    &.slick-next {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        line-height: 0;
+        transform: translate(0, -50%);
+        color: $grey-2;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: inherit;
+        transition: all 0.5s;
 
-        &:before {
-            color: $white !important;
-            font-size: 3.2rem;
-            line-height: 0;
-            opacity: 1;
+        &.custom-slick-arrow--playlist {
+            top: 30%;
         }
-        &.slick-prev {
-            left: 0;
-            &:before {
-                content: '\2039';
-            }
+
+        &.custom-slick-arrow--carousel {
+            width: 3rem;
+            height: 3rem;
+            font-size: 2rem;
         }
-        &.slick-next {
-            right: 0;
-            &:before {
-                content: '\203A';
-            }
+
+        &:hover {
+            color: $grey-3;
         }
+    }
+
+    &.slick-disabled {
+        display: none;
+    }
+
+    &--prev {
+        left: -2rem !important;
+    }
+
+    &--next {
+        right: -2rem !important;
     }
 }
 
@@ -610,19 +629,6 @@ In This Article
             padding: 2.4rem 2.4rem 1.8rem;
             bottom: 2.4rem;
             width: auto;
-        }
-
-        .slick-arrow {
-            &:before {
-                color: $dark-grey !important;
-                line-height: 0;
-            }
-            &.slick-prev {
-                left: -2.4rem;
-            }
-            &.slick-next {
-                right: -2.4rem;
-            }
         }
     }
 

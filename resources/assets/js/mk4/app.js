@@ -19,7 +19,7 @@ import BlogLightbox from './components/pages/blog/BlogLightbox'
 import CSH from './components/pages/secondary/CSH'
 import FAQ from './components/pages/secondary/FAQ'
 import Videos from './components/pages/secondary/Videos'
-import Playlist from './components/pages/secondary/Playlist'
+import PlaylistGrid from './components/pages/secondary/PlaylistGrid'
 import RegionLightbox from './components/RegionLightbox'
 import VideoControl from './components/VideoControl'
 
@@ -71,7 +71,7 @@ const containers = [
   },
   {
     id: 'playlist',
-    component: Playlist
+    component: PlaylistGrid
   },
   {
     id: 'downloads',

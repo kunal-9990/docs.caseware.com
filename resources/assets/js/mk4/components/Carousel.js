@@ -3,9 +3,25 @@ import Fade from 'react-reveal/Fade'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+
+
+const ArrowPrev = ({ className, onClick }) => (
+  <div onClick={onClick} className={className + ' custom-slick-arrow custom-slick-arrow--carousel custom-slick-arrow--prev'}>
+      <FontAwesomeIcon icon={faChevronLeft} />
+  </div>
+)
+const ArrowNext = ({ className, onClick }) => (
+  <div onClick={onClick} className={className + ' custom-slick-arrow custom-slick-arrow--carousel custom-slick-arrow--next'}>      
+    <FontAwesomeIcon icon={faChevronRight} />
+  </div>
+);
 
 const settings = {
   arrows: true,
+  prevArrow: <ArrowPrev />,
+  nextArrow: <ArrowNext />,
   dots: true,
   infinite: true,
   speed: 500,
