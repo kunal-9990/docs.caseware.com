@@ -26,9 +26,9 @@ Route::get('/api/vote/getData', 'VoteController@getVoteData');
 
 // TEMPORARY HARD CODE
 
-Route::get('/{region}/{lang}/{product}/{version}/webapps', function() {
-        return redirect('/ca/en/csh');
-});
+// Route::get('/{region}/{lang}/{product}/{version}/webapps', function() {
+//         return redirect('/ca/en/csh');
+// });
 
 Route::group(['middleware' => 'setregion'], function () {
 
