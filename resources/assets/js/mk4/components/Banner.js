@@ -37,17 +37,17 @@ const Banner = ({ banner, backgroundType }) => {
           <div className="col-sm-12">
             <div className="banner__wrapper">
               <div>
-                <h1 className={'banner-size' + ((banner.product_logo && banner.product_logo.url) ? ' with-logo' : '')}>
-                  {(banner.product_logo && banner.product_logo.url) && (<img class="product-logo" src={banner.product_logo.url} alt="" />)}
-                  {banner.header}
-                </h1>
-              
-              { banner.strapline && (
-                <span>{ banner.strapline }</span>
-              ) }
-              { banner.cta && (
-                <div className="cta">{ ctas }</div>
-              )}
+                {(banner.product_logo && banner.product_logo.url) && (
+                  <div>
+                    <img class="product-logo" src={banner.product_logo.url} alt="" />
+                  </div>
+                )}
+                <div>
+                  <h1 className={'banner-size' + ((banner.product_logo && banner.product_logo.url) ? ' includes-logo' : '')}>
+                    {banner.header}
+                  </h1>
+                  { banner.strapline && <span>{ banner.strapline }</span> }
+                </div>
               </div>
               { banner.cta && <div className="cta">{ ctas }</div> }
             </div>
