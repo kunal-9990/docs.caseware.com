@@ -55,7 +55,7 @@ class VideoLightbox extends Component {
 
         <div className="video-lightbox__wrapper">
 
-          {(this.props.item.acf.cta || this.props.item.acf.description !== null) && (
+          {(this.props.item.acf.cta.button_label !== '' && this.props.item.acf.description !== '') && (
             <div onClick={() => this.toggleDetails()} className="button button--chevron">
               <FontAwesomeIcon icon={faChevronUp} className={this.state.showDetails ? 'down' : 'up'}/>
             </div>
@@ -76,7 +76,7 @@ class VideoLightbox extends Component {
             { <VideoTags item={this.props.item} videoPage={this.props.videoPage}/> } 
           </div>
 
-          {(this.props.item.acf.cta || this.props.item.acf.description !== null) && (
+          {(this.props.item.acf.cta.button_label !== '' && this.props.item.acf.description !== '') && (
             <div onClick={() => this.toggleDetails()} className="button button--text">
               {this.state.showDetails ? 'Show Less' : 'Show More'}
             </div>
