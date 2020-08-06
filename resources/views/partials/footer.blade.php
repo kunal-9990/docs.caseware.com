@@ -41,10 +41,11 @@
                 </div>
                 <div class="col stretch">
                     <span>Legal</span>
-                    <a href="https://www.caseware.com/generic/privacy-policy-caseware-cloud" target="_blank" rel="noopener">Privacy Policy</a>
+                    <a href="https://www.caseware.com/generic/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+                    <!-- <a href="https://www.caseware.com/generic/privacy-policy-caseware-cloud" target="_blank" rel="noopener">Privacy Policy</a>
                     <a href="https://www.caseware.com/support/cloud/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>
                     <a href="https://www.caseware.com/support/cloud/services-agreement" target="_blank" rel="noopener">Cloud Services Agreement</a>
-                    <a href="https://www.caseware.com/support/cloud/service-level-agreement" target="_blank" rel="noopener">Service Level Agreement</a>
+                    <a href="https://www.caseware.com/support/cloud/service-level-agreement" target="_blank" rel="noopener">Service Level Agreement</a> -->
                 </div>
                 <div class="col">
                     <a href="https://www.caseware.com/ca/support" target="_blank" rel="noopener"><span>Support</span></a>
