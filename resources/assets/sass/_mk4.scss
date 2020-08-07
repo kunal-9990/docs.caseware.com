@@ -138,7 +138,7 @@ a.btn--arrow {
         
         .banner__wrapper {
             position: relative;
-            height: 35vh;
+            height: 40vh;
             padding-bottom: 4.2rem;
 
             span {
@@ -603,7 +603,7 @@ In This Article
 
     .banner {
         &__wrapper span {
-            max-width: 75%;
+            // max-width: 75%;
         }
         .cta a:first-child {
             margin-bottom: 0;
