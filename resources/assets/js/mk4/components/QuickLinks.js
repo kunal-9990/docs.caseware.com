@@ -16,7 +16,7 @@ const QuickLinks = ({ header, quickLinks }) => (
           </div>
           <div>
             <p>{quickLink.link_text} </p>
-            <a href={quickLink.url} target="_blank">Learn more</a>
+            <a href={quickLink.url} target="_blank" rel="noopener">Learn more</a>
           </div>
         </div>
       )}

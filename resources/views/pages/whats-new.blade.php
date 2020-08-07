@@ -62,7 +62,12 @@
                 "strapline":"{{$pageContent->acf->strapline}}"
             }'
         ></div>
-
+        <div class="relative">
+            <div 
+                data-component="social-share"
+                data-prop-message="{{ isset($pageContent->acf->social_message) ? $pageContent->acf->social_message : 'Check out this page from CaseWare!' }}"
+            ></div>
+        </div>
         <main id="main">
             <div class="whats-new">
                 <div class="whats-new__intro">
@@ -82,10 +87,6 @@
                                     </a>
                                     </li></ul>
                                     @endforeach
-                                    <div 
-                                        data-component="social-share"
-                                        data-prop-message="{{ isset($pageContent->acf->social_message) ? $pageContent->acf->social_message : 'Check out this page from CaseWare!' }}"
-                                    ></div>
                                 </div>
                                 <div class="col-sm-8" style="padding: 0">
                                     @if($pageContent->acf->featured_video !== "" || !empty($pageContent->acf->featured_video_thumbnail))
@@ -120,7 +121,7 @@
                         <div class="col-sm-12">
                             <div class="docs__container">
                                 @if(isset($pageContent->acf->ribbon))
-                                    <p class="ribbon">{!! $pageContent->acf->ribbon !!}</p>
+                                    <div class="ribbon">{!! $pageContent->acf->ribbon !!}</div>
                                 @endif                                
                                 <div>
                                     @foreach($pageContent->acf->features as $feature)

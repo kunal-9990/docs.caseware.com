@@ -1,7 +1,7 @@
 module.exports = () => {
     const MOBILE_NAV_TOGGLE = document.querySelectorAll('.header-mobile__nav-toggle');
     const MOBILE_SEARCH_TOGGLE = document.querySelectorAll('.header-mobile__search--js');
-    const MOBILE_FILTER_TOGGLE = document.querySelector('.mobile-nav__close-bar-wrap .filters__dropdown');
+    // const MOBILE_FILTER_TOGGLE = document.querySelector('.mobile-nav__close-bar-wrap .filters__dropdown');
     const BODY = document.querySelector('body');
 
     function toggleMobileNav() {
@@ -31,7 +31,7 @@ module.exports = () => {
         btn.addEventListener('click', () => toggleMobilesearch());
     });
 
-    MOBILE_FILTER_TOGGLE.addEventListener('click', () => toggleMobileFilters());
+    // MOBILE_FILTER_TOGGLE.addEventListener('click', () => toggleMobileFilters());
 
     // close mobile nav if click is outside nav bounds
     window.addEventListener('click', (event) => {

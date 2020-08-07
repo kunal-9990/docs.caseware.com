@@ -191,7 +191,6 @@ class Feature extends Component {
           <div className={ "feature__header" + (feature.allow_voting ? " feature__header--voter" : " feature__header--no-voter")}>
             {feature.allow_voting && (
               <Voter 
-                id="1"
                 votes={this.state.votes}
                 hasVoted={this.state.hasVoted}
                 upVote={() => this.handleUpVote()}

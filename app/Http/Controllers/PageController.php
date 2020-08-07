@@ -16,34 +16,118 @@ class PageController extends Controller
 {
 
     // home
-    function home(){
+    function home($region, $lang){
 
-        // App::setLocale($lang);
+        $page = $this->cms->page($region, $lang, 'home');
+        $page = $this->getPlaylists($page);
+        $page = $this->getDownloads($page);
+        $page = $this->getProductNavigation($page);
 
-        $page = $this->cms->page('home');
-        $pageContent = $page['results'][0];
 
-        return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title' ));
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else{        
+            $pageContent = $page['results'][0];
+            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists' ));
+        }
     }
 
-    function product($product){
-
+    function product($region, $lang, $productSlug){
         // App::setLocale($lang);
 
-        $page = $this->cms->page('product-cloud-31');
-        $pageContent = $page['results'][0];
+        $page = $this->cms->page($region, $lang, $productSlug);
+        $page = $this->getPlaylists($page);
+        $page = $this->getDownloads($page);
 
-        // // TODO - update
-        // if(startsWith(strtolower($product), "product")){
-        //     $page = $this->cms->page(removeFileExt(strtolower($product)));
-        //     $pageContent = $page['results'][0];
-        //     // dd($pageContent);
-        //     return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title'));
-        // }
 
-        return view('pages.home', compact('pageContent', 'recent', 'exclusiveTo','title'));
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else {        
+            $pageContent = $page['results'][0];
+            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists'));
+        }
     }
 
+    
+    // Blog Overview
+    function blogOverview(){
+        $page = $this->cms->page('int', 'en', 'blog');
+        // App::setLocale($lang);
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else{        
+            $pageContent = $page['results'][0];
+            $posts = $this->cms->posts();
+            $categories = $this->cms->categories();
+            $tags = $this->cms->tags();
+            return view('pages.blog-overview', compact('pageContent', 'posts', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
+        }
+    }
+
+    // Blog Detail
+    function blogDetail($post){
+
+        // App::setLocale($lang);
+        
+        $postContent = $this->cms->post('en', $post)['results'][0]; // TODO - remove hardcode english... if post doesnt exist show 404
+        $posts = $this->cms->posts();
+        $categories = $this->cms->categories();
+        $tags = $this->cms->tags();
+
+        return view('pages.blog-detail', compact('postContent', 'posts', 'tags', 'categories', 'recent', 'exclusiveTo','title' ));
+    }
+
+    function csh($region, $lang, $slug){
+        // App::setLocale($lang);
+        // dd($slug);
+
+        $page = $this->cms->page($region, $lang, 'csh-'.$slug);
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else{        
+            $pageContent = $page['results'][0];
+            return view('pages.csh', compact('pageContent', 'recent', 'exclusiveTo','title'));
+        }
+    }
+
+
+    // TEMP - FAQ
+    function faq($region, $lang, $slug){
+        $page =$this->cms->page($region, $lang, 'faq-'.$slug);
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else{
+            $pageContent = $page['results'][0];
+            return view('pages.faq', compact('pageContent', 'recent', 'exclusiveTo','title'));
+        }
+    }
+
+    // TEMP - Videos overview 
+    
+
+    
+    function videosOverview($region, $lang, $slug = null){
+        $page = $this->cms->page($region, $lang, 'videos');
+        $page = $this->getPlaylists($page);
+        if(empty($page['results'])){
+            return response()->view('errors.404');
+        }
+        else{
+            $pageContent = $page['results'][0];
+            $videos = $this->cms->get_custom_post_by_type('videos');
+            $categories = $this->cms->categories();
+            $tags = $this->cms->tags();
+            return view('pages.videos', compact('slug', 'pageContent', 'videos', 'categories', 'tags', 'title', 'playlists'));
+        }
+    }
+    
+ 
+    
     // search
     function search($year, $product, $version, $lang){
         return view('pages.search', compact('recent'));
@@ -220,5 +304,71 @@ class PageController extends Controller
         return view('pages.one-column', compact('maincontentarea', 'recent'));
     }
 
+          
+    function getPlaylists($page)
+    {   
+        $playlists = array();
+        foreach($page['results'][0]->acf->modular_template as $template){
+            $playlistVids = array();
+            if($template->acf_fc_layout == 'playlist'){
+                foreach($template->playlist as $video){
+                    $videoContent = $this->cms->get_custom_post_by_id(
+                        'videos',
+                        $video->ID
+                    )->get('results');
+                    array_push($playlistVids, $videoContent);
+                }
+                $template->playlist = $playlistVids;
+            }
 
+            if($template->acf_fc_layout == 'video_gallery'){
+
+                foreach($template->video_gallery as $video){
+                    $videoContent = $this->cms->get_custom_post_by_id(
+                        'videos',
+                        $video->ID
+                    )->get('results');
+                    array_push($playlistVids, $videoContent);
+                }
+                $template->video_gallery = $playlistVids;
+            }
+        }
+        return $page;
+    }   
+
+    function getDownloads($page)
+    {   
+        foreach($page['results'][0]->acf->modular_template as $template){
+            $downloads = array();
+            if($template->acf_fc_layout == 'downloads'){
+                foreach($template->quick_links as $dl){
+                    $dlContent = $this->cms->get_custom_post_by_id(
+                        'downloads',
+                        $dl->ID
+                    )->get('results')->acf;
+                    array_push($downloads, $dlContent);
+                }
+                $template->quick_links = $downloads;
+            }
+        }
+        return $page;
+    }   
+
+    function getProductNavigation($page)
+    {   
+        foreach($page['results'][0]->acf->modular_template as $template){
+            $productBlocks = array();
+            if($template->acf_fc_layout == 'product_navigation'){
+                foreach($template->navigation as $pb){
+                    $pbContent = $this->cms->get_custom_post_by_id(
+                        'product_blocks',
+                        $pb->ID
+                    )->get('results')->acf;
+                    array_push($productBlocks, $pbContent);
+                }
+                $template->navigation = $productBlocks;
+            }
+        }
+        return $page;
+    }   
 }

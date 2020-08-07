@@ -1,5 +1,6 @@
 .whats-new {
-
+    position: relative;
+    
     &__intro {
         position: relative;
         padding: 2.4rem 0;
@@ -134,8 +135,8 @@
         flex-direction: row;
         align-items: center;
         margin-bottom: 2.4rem;
-        width: 10rem;
-        // color: $light-grey-2;
+        width: 18rem;
+        // color: $grey-1-2;
         line-height: 1;
 
         .arrow {

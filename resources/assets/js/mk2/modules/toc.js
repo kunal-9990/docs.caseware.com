@@ -44,16 +44,13 @@ module.exports = () => {
             console.log("se authoring");
             if (properlyTranslated.includes(lang)) {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/SE-Authoring-TOC.xml";
-            }
-            else {
+            } else {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/en/SE-Authoring-TOC.xml";
             }
-        }
-        else {
+        } else {
             if (properlyTranslated.includes(lang)) {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
-            }
-            else {
+            } else {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/en/OnlineOutput.xml";
             }
         }
@@ -74,15 +71,13 @@ module.exports = () => {
                                 var classes;
                                 if (($(this).attr("conditions"))) {
                                     producttags = $(this).attr("conditions").replace("Product.", "toc__filters--").toLowerCase() + "-js";
-                                }
-                                else {
+                                } else {
                                     producttags = " ";
                                 };
 
                                 if ($(this).attr("Link") && loc.includes($(this).attr("Link").replace(".htm", ""))) {
                                     topicList.append('<li class="current-page ' + producttags + '"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
-                                }
-                                else {
+                                } else {
                                     topicList.append('<li class="' + producttags + '"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
                                 }
 
@@ -99,8 +94,7 @@ module.exports = () => {
                         } else {
                             if ($(this).attr("Link") && loc.includes($(this).attr("Link"))) {
                                 subCatList.append('<li class="current-page toc__sub-category"><a class="chevron" href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a>');
-                            }
-                            else {
+                            } else {
                                 subCatList.append('<li class="toc__sub-category"><a class="chevron" href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a>');
                             }
                         }

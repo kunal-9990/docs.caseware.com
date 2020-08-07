@@ -1,55 +1,29 @@
 @php
-// $en = Route::current();
-// $en = Route::current();
-// $en->setParameter('lang', 'en');
-// // dd($en->urir());
-// $fr = Route::current();
-// $fr->setParameter('lang', 'fr');
-// $es = Route::current();
-// $es->setParameter('lang', 'es');
-// $nl = Route::current();
-// $nl->setParameter('lang', 'nl');
-// $cn = Route::current();
-// $cn->setParameter('lang', 'cn');
-// $de = Route::current();
-// $de->setParameter('lang', 'de');
-
+    isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = '';
+    isset(Route::current()->parameters()["region"]) ? $region = Route::current()->parameters()["region"] : $region = '';
 @endphp
-<div class="language__dropdown">
-    @php
-    $languages = array("en"=>"EN", "fr"=>"FR", "es"=>"ES", "nl"=>"NL","cn"=>"CN", "de"=>"DE");
-    $segments = Request::segments();
-    $segments[3] = 'en';
-    $enLink = '/' . implode('/', $segments);
-    $segments[3] = 'fr';
-    $frLink = '/' . implode('/', $segments);
-    $segments[3] = 'es';
-    $esLink = '/' . implode('/', $segments);
-    $segments[3] = 'nl';
-    $nlLink = '/' . implode('/', $segments);
-    $segments[3] = 'cn';
-    $cnLink = '/' . implode('/', $segments);
-    $segments[3] = 'de';
-    $deLink = '/' . implode('/', $segments);
-    if(strpos(Request::url(), '/search/') == true || strpos(Request::url(), '/se-search/') == true) {
-        $currentLanguage = $languages[Request::segments()[4]];
-    }
-    else {
-        $currentLanguage = $languages[Request::segments()[3]];
-    }
-
-
-    @endphp
-    <a href="#"><i class="fas fa-globe-americas"></i> {{$currentLanguage}} <i class="fas fa-angle-down"></i></a>
-    <div class="dropdown-content">
-        <a href="{{ $enLink }}">English</a>
-        <a href="{{ $frLink }}">French</a>
-        <a href="{{ $esLink }}">Spanish</a>
-        <a href="{{ $nlLink }}">Dutch</a>
-        <a href="{{ $cnLink }}">Chinese</a>
-        <a href="{{ $deLink }}">German</a>
+<div class="nav-container">
+@if(!empty($region))
+    <div class="region__dropdown dropdown">
+        <a href="#"><i class="fas fa-globe-americas"></i> {{strtoupper($region)}} <i class="fas fa-angle-down"></i></a>
+        <div class="dropdown-content">
+            <a href="/{{ str_replace($region.'/' , 'int/', Request::path()) }}">International</a>
+            <a href="/{{ str_replace($region.'/' , 'ca/', Request::path()) }}">Canada</a>
+            <a href="/{{ str_replace($region.'/' , 'us/', Request::path()) }}">US</a>
+        </div>
     </div>
-</div>
-<div class="filters__dropdown">
-    <a href="#"><i class="fas fa-filter"></i> {{ __('strings.products') }} <i class="fas fa-angle-down"></i></a>
+@endif
+@if(!empty($lang))
+    <div class="language__dropdown dropdown">
+        <a href="#"><i class="fas fa-language"></i> {{strtoupper($lang)}} <i class="fas fa-angle-down"></i></a>
+        <div class="dropdown-content">
+            <a href="/{{ str_replace('/'.$lang ,'/en', Request::path()) }}">English</a>
+            <a href="/{{ str_replace('/'.$lang ,'/fr', Request::path()) }}">French</a>
+            <a href="/{{ str_replace('/'.$lang ,'/es', Request::path()) }}">Spanish</a>
+            <a href="/{{ str_replace('/'.$lang ,'/nl', Request::path()) }}">Dutch</a>
+            <a href="/{{ str_replace('/'.$lang ,'/cn', Request::path()) }}">Chinese</a>
+            <a href="/{{ str_replace('/'.$lang ,'/de', Request::path()) }}">German</a>
+        </div>
+    </div>
+    @endif
 </div>

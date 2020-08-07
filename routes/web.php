@@ -23,27 +23,29 @@ Route::middleware('throttle:30|180,1')->group(function () {
 });
 
 Route::get('/api/vote/getData', 'VoteController@getVoteData');
-// Route::get('/api/vote/dumpVotes', 'VoteController@dumpVotes');
 
 // home page - to come
-//Route::get('/', 'PageController@home');
 
-// cloud index
-Route::get('/', function () {
-    return redirect('/2019/webapps/30/en/webapps');
-});
+// TEMPORARY HARD CODE
 
-// temportary redirect - hard coding because it wasn't working in nginx for whatever reason
-Route::get('/2020/webapps/31/en/Explore/Products/Provided-By-Client-(PBC)-Requests.htm', function () {
-    return redirect('/latest/webapps/en/Explore/Cloud-Apps/CaseWare-PBC-Requests.htm');
-});
+// Route::get('/{region}/{lang}/{product}/{version}/webapps', function() {
+//         return redirect('/ca/en/csh');
+// });
 
-// temportary redirect
-Route::get('/2020/webapps/31/en/Engagements/Accounts-and-Analysis/Analytics-ai-workflow.htm', function () {
-        return redirect('/2020/webapps/31/en/Explore/AnalyticsAI/Analytics-ai-workflow.htm');
-});
-Route::get('/2020/webapps/31/en/Practice/Templates-and-Authoring/Modify-or-add-a-checklist.htm', function () {
-        return redirect('/2020/webapps/31/en/Engagements/Template-and-Authoring/Modify-or-add-a-checklist.htm');
+Route::group(['middleware' => 'setregion'], function () {
+
+        Route::get('/{region}/{lang}/videos/{slug?}', 'PageController@videosOverview')->name('videos');
+        Route::get('/blog', 'PageController@blogOverview')->name('blogoverview');
+        Route::get('/blog/{post}', 'PageController@blogDetail')->name('blogdetail');
+        Route::get('/{region}/{lang}/{slug}/context-specific-help', 'PageController@csh')->name('csh');
+        Route::get('/{region}/{lang}/{slug}/frequently-asked-questions', 'PageController@faq')->name('faq');
+        Route::get('/{region}/{lang}/{slug}', 'PageController@product')->name('product');
+        Route::get('/{region}/{lang}/', 'PageController@home')->name('home');
+
+        Route::get('/', function() {
+                return redirect('/ca/en');
+        });
+
 });
 
 // search
@@ -85,27 +87,7 @@ Route::get('/se-search/{year}/{product}/{version}/{lang}/{category}/{subcategory
         return redirect('/'.$year.'/'.$product.'/'.$version.'/'.$lang.'/'.$category.'/'.$subcategory);
 });
 
-// search redirect
-Route::get('/se-builder-search/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', function($year, $product, $version, $lang, $category, $subcategory, $topic){
-        return redirect('/'.$year.'/'.$product.'/'.$version.'/'.$lang.'/'.$category.'/'.$subcategory.'/'.$topic);
-});
-// search redirect
-Route::get('/se-builder-search/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{subsubcategory}/{topic}', function($year, $product, $version, $lang, $category, $subcategory, $subsubcategory, $topic){
-        return redirect('/'.$year.'/'.$product.'/'.$version.'/'.$lang.'/'.$category.'/'.$subcategory.'/'.$subsubcategory.'/'.$topic);
-});
-// search redirect
-Route::get('/se-builder-search/{year}/{product}/{version}/{lang}/{category}', function($year, $product, $version, $lang, $category){
-        return redirect('/'.$year.'/'.$product.'/'.$version.'/'.$lang.'/'.$category);
-});
-// search redirect
-Route::get('/se-builder-search/{year}/{product}/{version}/{lang}/{category}/{subcategory}', function($year, $product, $version, $lang, $category, $subcategory){
-        return redirect('/'.$year.'/'.$product.'/'.$version.'/'.$lang.'/'.$category.'/'.$subcategory);
-});
-
-
-
-
-
+//Flare Content routes
 // topics
 Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');
 
@@ -117,6 +99,5 @@ Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}', 'PageC
 
 // category
 Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory')->name('category');
-
 
 Route::post('logemail', 'Controller@logEmail');

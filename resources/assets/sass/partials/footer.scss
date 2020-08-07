@@ -1,7 +1,7 @@
 .footer {
     position: relative;
     margin-top: 4.8rem;
-    min-height: 85rem;
+    min-height: 78rem;
     background: $blue-horizon;
     color: $white;
     z-index: 1;
@@ -103,15 +103,19 @@
 
     &__container {
         height: 100%;
-        background-color: $light-grey;
+        background-color: $grey-1;
         box-shadow: 0 10px 5px rgba(#323232, 0.4);
     }
 }
 
-@include mq($from: sm) {
+@include mq($from: footer) {
     .footer {
-        min-height: 40rem;
+        min-height: 30rem;
         padding-top: 2.4rem;
+
+        .container {
+            min-width: 79rem;
+        }
         
         .row {
             flex-wrap: nowrap;
@@ -126,8 +130,8 @@
                 justify-content: flex-start;
             }
 
-            &:first-child {
-                flex-basis: 7rem;
+            &.stretch {
+                flex-basis: 5rem;
             }
 
             &.contact {

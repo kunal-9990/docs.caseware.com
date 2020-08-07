@@ -1,0 +1,436 @@
+.csh {
+    main#main > div {
+        margin-top: 4.8rem;
+    }
+} 
+
+.accordion {
+
+    h2, h3 {
+        margin: 0;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+
+        &:checked {
+            + .tab__label {
+                &::after {
+                    content: "-";
+                }
+            }
+            ~ .tab__content {
+                max-height: 100vh;
+                padding-bottom: 1.2rem;
+            }
+        }
+    }
+
+    .tab {
+        width: 100%;
+        overflow: hidden;
+
+        &--group {
+            margin-bottom: 1.2rem;
+        }
+        
+        &__label {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.2rem 0;
+            font-weight: bold;
+            cursor: pointer;
+
+            &::after {
+                content: "+";
+                text-align: center;
+                transition: all 0.5s;
+                font-size: 2.8rem;
+                font-weight: 300;
+                line-height: 1;
+            }
+        }
+
+        &__outer-details {
+            display: block;
+            margin: -1rem 0 2.4rem;
+            color: $grey-2;
+            font-size: 1.2rem;
+            font-weight: 100;
+            text-transform: uppercase;
+
+            svg {
+                margin-right: 1rem;
+            }
+        }
+
+        &__content {
+            max-height: 0;
+            padding-left: 4.8rem;
+            padding-right: 4.8rem;
+            transition: all 0.5s;
+
+            .link {
+                display: block;
+
+                a {
+                    display: inline;
+                }
+            }
+        }
+    }
+
+    &__faq {
+        & > h2 {
+            margin: 6rem 0 4.8rem;
+        }
+    }
+}
+
+.ReactModal__Overlay {
+    z-index: 10000;
+}
+
+.lightbox {
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(#323232, 0.9);
+
+        & > div {
+            outline: none;
+        }
+    }
+
+    &__video {
+        position: absolute;
+        top: 2.4rem;
+        left: 2.4rem;
+        right: 2.4rem;
+        bottom: 0;
+        overflow: auto;
+        outline: none;
+
+        .lightbox__header {
+            color: $white;
+        }
+    }
+
+    &__region {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 51rem;
+        height: auto;
+        background-color: $white;
+        border: 0;
+
+        p {
+            width: 75%;
+            text-align: center;
+            font-size: 2.1rem;
+            font-weight: 300;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            margin: 0;
+            padding: 0 0 1.2rem 0;
+            background: none;
+            border: 0;
+            outline: none;
+            font-size: 4.8rem;
+            line-height: 1;
+        }
+    }
+}
+
+.video-lightbox {
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+
+        & > div:first-child{
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .iframe-video-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        iframe {
+            max-width: 100%;
+        }
+    }
+
+    &__wrapper {
+        position: absolute;
+        padding: 2.4rem;
+        bottom: 0;
+        width: 100%;
+        background-color: $white;
+        -webkit-box-shadow: 0 0 15px 0 rgba(80,80,80,0.6);
+        -moz-box-shadow: 0 0 15px 0 rgba(80,80,80,0.6);
+        box-shadow: 0 0 15px 0 rgba(80,80,80,0.6);
+        overflow-y: auto;
+        flex: 1;
+
+        p {
+            font-weight: 300;
+
+            a {
+                font-weight: 400;
+            }
+        }
+        .button {
+            cursor: pointer;
+            color: $grey-3;
+
+            &--chevron {
+                position: absolute;
+                top: 0.6rem;
+                right: 1.2rem;
+                svg {
+                    transition: 0.3s all ease-in-out;
+                }
+                .down {
+                    transform: rotate(180deg);
+                }
+            }
+            &--text {
+                display: table;
+                padding-top: 2.4rem;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 1.2rem;
+
+        h1, h2, h3 {
+            margin: 0
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__description {
+
+        padding-top: 4.8rem;
+
+        &--open {
+            border: 2px solid red;
+            height: 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+        &--close {
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
+            border: 2px dashed yellow;
+        }
+        .grid-item__filter {
+            font-size: inherit;
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    &__cta {
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        margin-top: 4.8rem;
+    }
+}
+
+.region-lightbox {
+    padding: 0 2.1rem 2.1rem;
+
+    .btn-container {
+        display: block;
+        padding-top: 2.4rem;
+
+        button {
+            width: 100%;
+
+            &:first-child {
+                margin: 0 0 1.2rem 0;
+            }
+        }
+    }
+    
+    .message {
+        display:flex;
+        justify-content: center;
+    }
+
+    @include mq(md) {
+        padding: 2.1rem 4.2rem 4.2rem;
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                width: auto;
+
+                &:first-child {
+                    margin: 0 1.2rem 0 0;
+                }
+            }
+        }
+    }
+}
+
+.videos {
+    #main{
+        & > div {
+            position: relative;
+            display: block;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+.playlist {
+
+    // .slick-slide {
+    //     position: relative;
+    //     & > div {
+    //         position: absolute;
+    //         top: 0;
+    //         left: 0;
+    //         bottom: 0;
+    //         right: 0;
+    //         height: 100%;
+    //         width: 100%;
+    //     }
+    // }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        padding: 1.2rem;
+        cursor: pointer;
+        // border: 1px solid red;
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(#323232, 0.2);
+        }
+    }
+
+    &__thumbnail {
+        position: relative;
+        .time {
+            position: absolute;
+            padding: 0.2rem 1.2rem;
+            background-color: $caseware-blue-AA;
+            color: $white;
+            right: 0;
+            bottom: 1.2rem;
+        }
+    }
+    
+    &__details {
+        padding: 1.2rem;
+
+        h3 {
+            margin-top: 0;
+        }
+
+        span {
+            color: $grey-4;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+    }
+
+    &__filter {
+        color: $grey-3;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+
+        svg {
+            margin-right: 1.2rem;
+        }
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+}
+
+@include mq(md) {
+    .lightbox {
+        &__video {
+            position: absolute;
+            top: 2.4rem;
+            left: 2.4rem;
+            right: 4.8rem;
+            bottom: 0;
+            overflow: visible;
+            outline: none;
+        }
+    }
+
+    .video-lightbox {
+        &__wrapper {
+            padding: 4.8rem 4.8rem 2.4rem;
+            width: 80%;
+            max-width: 98rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__content {
+            margin: auto;
+            max-width: 110rem;
+            top: 0;
+            transform: translateY(0);
+
+            .iframe-video-wrapper {
+                top: 0;
+                iframe {
+                    max-height: 80vh;
+                }
+            }
+        }
+    }
+}

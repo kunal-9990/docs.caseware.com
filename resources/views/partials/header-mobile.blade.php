@@ -4,13 +4,13 @@
         <img class="header-mobile__logo" src="/img/CaseWare_logo_4C_horz.svg" alt="CaseWare Cloud logo">
     </div>
     <div class="header-mobile__input-search-wrapper">
-        @php
-        $year = Route::current()->parameters()["year"];
-        $product = Route::current()->parameters()["product"];
-        $version = Route::current()->parameters()["version"];
-        $lang = Route::current()->parameters()["lang"];
-        $searchURL = route('search', [$year, $product, $version, $lang]);
-        @endphp
+    @php
+        isset(Route::current()->parameters()["year"]) ? $year = Route::current()->parameters()["year"] : $year = '';
+        isset(Route::current()->parameters()["product"]) ? $product = Route::current()->parameters()["product"] : $product = '';
+        isset(Route::current()->parameters()["version"]) ? $version = Route::current()->parameters()["version"] : $version = '';
+        isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = '';
+        isset(Route::current()->parameters()["region"]) ? $region = Route::current()->parameters()["region"] : $region = '';        $searchURL = route('search', [$region, $lang, $product, $version]);
+    @endphp
         <form method="GET" action="{{$searchURL}}">
             <input type="text" name="search" placeholder="Search" autocomplete="off">
         </form>

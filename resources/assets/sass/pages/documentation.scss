@@ -21,6 +21,14 @@
         }
     }
 
+    table.table>* {
+        word-break: break-word;
+
+        th {
+            min-width: 120px;
+        }
+    }
+
     .docs__sub-toc {
         flex: 0 0 250px;
         display: none;
@@ -81,7 +89,7 @@
 
 .reqpcr {
     img {
-        max-width: 75px;
+        max-width: 85px;
     }
 }
 

@@ -22,42 +22,39 @@
             <div class="col-sm-12">
 
         <!-- TODO un hardcode -->
-            <!-- @foreach($footer as $parent)
-            <div class="col">
-                <span><?=$parent->title?></span>
-                @foreach($parent->child_items as $children)
-                <a href="<?=$children->url?>" target="_blank"><?=$children->title?></a>
-                @endforeach
-            </div>
-            @endforeach -->
+           
 
                 <div class="col">
                     <span>Products</span>
-                    <a href="https://www.caseware.com/ca/products/working-papers" target="_blank">CaseWare Working Papers</a>
-                    <a href="https://www.caseware.com/ca/products/cloud" target="_blank">CaseWare Cloud</a>
-                    <a href="https://idea.caseware.com/products/idea" target="_blank">IDEA</a>
-                    <a href="https://www.caseware.com/ca/products/audit" target="_blank">CaseWare Audit</a>
-                    <a href="https://www.caseware.com/ca/products/financials" target="_blank">CaseWare Financials</a>
+                    <a href="https://docs.caseware.com/ca/en/cloud" target="_blank" rel="noopener">CaseWare Cloud</a>
+                    <a href="https://docs.caseware.com/ca/en/hybrid" target="_blank" rel="noopener">Hybrid Cloud</a>
+                    <a href="https://docs.caseware.com/ca/en/rct" target="_blank" rel="noopener">CaseWare RCT</a>
+                    <a href="https://docs.caseware.com/ca/en/audit" target="_blank" rel="noopener">CaseWare Audit</a>
+                    <a href="https://docs.caseware.com/ca/en/pbc" target="_blank" rel="noopener">PBC Requests</a>
+                    <a href="https://docs.caseware.com/ca/en/aai" target="_blank" rel="noopener">AnalyticsAI</a>
                 </div>
                 <div class="col">
                     <span>About</span>
-                    <a href="https://www.caseware.com/ca/about" target="_blank">Who we are</a>
-                    <a href="https://www.caseware.com/ca/careers" target="_blank">Where you fit</a>
-                    <a href="https://www.caseware.com/ca/cloud-security-compliance" target="_blank">Certifications</a>
+                    <a href="https://www.caseware.com/ca/about" target="_blank" rel="noopener">Who we are</a>
+                    <a href="https://www.caseware.com/ca/careers" target="_blank" rel="noopener">Where you fit</a>
+                    <a href="https://www.caseware.com/ca/cloud-security-compliance" target="_blank" rel="noopener">Certifications</a>
+                </div>
+                <div class="col stretch">
+                    <span>Legal</span>
+                    <a href="https://www.caseware.com/generic/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+                    <!-- <a href="https://www.caseware.com/generic/privacy-policy-caseware-cloud" target="_blank" rel="noopener">Privacy Policy</a>
+                    <a href="https://www.caseware.com/support/cloud/terms-of-use" target="_blank" rel="noopener">Terms of Use</a>
+                    <a href="https://www.caseware.com/support/cloud/services-agreement" target="_blank" rel="noopener">Cloud Services Agreement</a>
+                    <a href="https://www.caseware.com/support/cloud/service-level-agreement" target="_blank" rel="noopener">Service Level Agreement</a> -->
                 </div>
                 <div class="col">
-                    <span>Resources</span>
-                    <a href="https://www.caseware.com/ca/resources/articles" target="_blank">Articles</a>
-                    <a href="https://www.caseware.com/ca/resources/events" target="_blank">Webinars</a>
+                    <a href="https://www.caseware.com/ca/support" target="_blank" rel="noopener"><span>Support</span></a>
+                    <a href="https://www.caseware.com/ca/training" target="_blank" rel="noopener"><span>Training</span></a>
+                    <a href="https://www.caseware.com/ca/distributors" target="_blank" rel="noopener"><span>Distributors</span></a>
+                    <a href="https://www.caseware.com/ca/resources/events" target="_blank" rel="noopener"><span>Events</span></a>
+                    <a href="https://my.caseware.com/account/login?ReturnUrl=%2F" target="_blank" rel="noopener"><span>MyCaseWare</span></a>
                 </div>
-                <div class="col">
-                    <a href="https://www.caseware.com/ca/support" target="_blank"><span>Support</span></a>
-                    <a href="https://www.caseware.com/ca/training" target="_blank"><span>Training</span></a>
-                    <a href="https://www.caseware.com/ca/distributors" target="_blank"><span>Distributors</span></a>
-                    <a href="https://www.caseware.com/ca/resources/events" target="_blank"><span>Events</span></a>
-                    <a href="https://my.caseware.com/account/login?ReturnUrl=%2F" target="_blank"><span>MyCaseWare</span></a>
-                </div>
-                <div class="col contact">
+                <div class="col stretch contact">
                     <span>Contact</span>
                     <div>
                         CaseWare International Inc.<br />

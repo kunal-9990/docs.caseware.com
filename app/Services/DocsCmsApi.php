@@ -45,6 +45,11 @@ class DocsCmsApi
         ], $lifetime);
      }
 
+     public function tags($lifetime = null)
+     {
+         return $this->_get('/wp-json/wp/v2/tags', [], $lifetime);
+     }
+
     /**
      * Get posts based on category
      * @param integer $category Wordpress category ID
@@ -80,18 +85,21 @@ class DocsCmsApi
     //         '_embed' => 1
     //     ], $lifetime);
     //  }
-     public function page($slug, $lifetime = null)
+     public function page($region, $lang = null, $slug = null, $lifetime = null)
      {
-
-        return $this->_get('/wp-json/wp/v2/pages?slug='. $slug, [
+        if($lang == "en"){
+            $lang = "";
+        }
+        return $this->_get('/'.$lang.'/wp-json/wp/v2/pages?slug='.$region.'-'.$slug, [
             '_embed' => 1
         ], $lifetime);
      }
 
+     // TODO - FIX
      public function post($locale, $slug, $lifetime = null)
      {
-        $prepend = getWpLang($locale, request()->session()->get('lang'));
-
+        // $prepend = getWpLang($locale, request()->session()->get('lang'));
+        $prepend = '';
         return $this->_get($prepend . '/wp-json/wp/v2/posts?slug='. $slug, [
             '_embed' => 1
         ], $lifetime);
@@ -121,12 +129,24 @@ class DocsCmsApi
          ], $lifetime);
      }
 
+     // TEMP???
+     public function get_custom_post_by_type($post_type, $lifetime = null)
+     {
+        return $this->_get('/wp-json/wp/v2/' . $post_type, [], $lifetime);
+     }
+
      public function get_custom_post_by_name($locale, $post_type, $post_name, $lifetime = null)
      {
         $prepend = getWpLang($locale, request()->session()->get('lang'));
 
         return $this->_get($prepend . '/wp-json/wp/v2/' . $post_type . '?slug=' . $post_name . '&_embed', [], $lifetime);
      }
+
+     public function get_custom_post_by_id($post_type, $id, $lifetime = null)
+     {
+        return $this->_get('/wp-json/wp/v2/' . $post_type . '/' . $id, [], $lifetime);
+     }
+
 
     public function people($locale, $page=1, $lifetime = null)
     {

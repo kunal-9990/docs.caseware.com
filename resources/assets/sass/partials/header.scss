@@ -16,6 +16,11 @@ header.header {
         width: 100%;
         background: none;
         border-bottom: none;
+
+        .dropdown > a {
+            color: $white;
+            font-weight: 300;
+        }
     }
 
     .header__container {
@@ -33,6 +38,16 @@ header.header {
     .header__nav-wrap {
         display: flex;
         align-items: center;
+
+        &.right-align-dropdowns {
+            display: contents;
+            
+        }
+
+        .nav-container {
+            display: flex;
+            margin-right: 4rem;
+        }
     }
 
     .header__search-wrap {
@@ -65,7 +80,7 @@ header.header {
         min-width: 210px;
 
         @media (min-width: 850px) {
-            min-width: 280px;
+            width: 50%;
         }
 
         .desktop-search--is-open & {

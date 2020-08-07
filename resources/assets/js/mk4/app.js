@@ -1,17 +1,27 @@
 import ReactHabitat from 'react-habitat'
 
-import WNBanner from './components/whats-new/WNBanner'
-import Feature from './components/whats-new/Feature'
-import EmbeddedVideo from './components/whats-new/EmbeddedVideo'
-import LandingBanner from './components/landing/LandingBanner'
-import ProductNavigation from './components/landing/ProductNavigation'
-import Downloads from './components/landing/Downloads'
+import WNBanner from './components/pages/whats-new/WNBanner'
+import Feature from './components/pages/whats-new/Feature'
+import EmbeddedVideo from './components/pages/whats-new/EmbeddedVideo'
+import Banner from './components/Banner'
+import ProductNavigation from './components/pages/landing/ProductNavigation'
+import Downloads from './components/pages/landing/Downloads'
 import Announcement from './components/Announcement'
 import Survey from './components/Survey'
 import SocialShare from './components/SocialShare'
 import QuickLinks from './components/QuickLinks'
 import Carousel from './components/Carousel'
 import VideoGallery from './components/VideoGallery'
+import BlogOverview from './components/pages/blog/BlogOverview'
+import BlogMetaData from './components/pages/blog/BlogMetaData'
+import RelatedArticles from './components/pages/blog/RelatedArticles'
+import BlogLightbox from './components/pages/blog/BlogLightbox'
+import CSH from './components/pages/secondary/CSH'
+import FAQ from './components/pages/secondary/FAQ'
+import Videos from './components/pages/secondary/Videos'
+import PlaylistGrid from './components/pages/secondary/PlaylistGrid'
+import RegionLightbox from './components/RegionLightbox'
+import VideoControl from './components/VideoControl'
 
 import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/ie11'
@@ -24,8 +34,8 @@ const containers = [
     component: WNBanner
   },
   {
-    id: 'landing-banner',
-    component: LandingBanner
+    id: 'banner',
+    component: Banner
   },
   {
     id: 'announcement',
@@ -60,12 +70,48 @@ const containers = [
     component: VideoGallery
   },
   {
+    id: 'playlist',
+    component: PlaylistGrid
+  },
+  {
     id: 'downloads',
     component: Downloads
   },
   {
     id: 'product-navigation',
     component: ProductNavigation
+  },
+  {
+    id: 'blog-overview',
+    component: BlogOverview
+  },
+  {
+    id: 'blog-lightbox',
+    component: BlogLightbox
+  },
+  {
+    id: 'blog-metadata',
+    component: BlogMetaData
+  },
+  {
+    id: 'related-articles',
+    component: RelatedArticles
+  },
+  {
+    id: 'csh',
+    component: CSH
+  },
+  {
+    id: 'faq',
+    component: FAQ
+  },
+  {
+    id: 'videos',
+    component: Videos
+  },
+  {
+    id: 'region-lightbox',
+    component: RegionLightbox
   }
 ];
 
@@ -78,6 +124,7 @@ class Mk4 extends ReactHabitat.Bootstrapper {
             builder.register(container.component).as(container.id);
         }
         this.setContainer(builder.build());
+        VideoControl();
     }
 }
 
