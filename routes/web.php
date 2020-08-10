@@ -35,8 +35,8 @@ Route::get('/api/vote/getData', 'VoteController@getVoteData');
 Route::group(['middleware' => 'setregion'], function () {
 
         Route::get('/{region}/{lang}/videos/{slug?}', 'PageController@videosOverview')->name('videos');
-        Route::get('/blog', 'PageController@blogOverview')->name('blogoverview');
-        Route::get('/blog/{post}', 'PageController@blogDetail')->name('blogdetail');
+        // Route::get('/blog', 'PageController@blogOverview')->name('blogoverview');
+        // Route::get('/blog/{post}', 'PageController@blogDetail')->name('blogdetail');
         Route::get('/{region}/{lang}/{slug}/context-specific-help', 'PageController@csh')->name('csh');
         Route::get('/{region}/{lang}/{slug}/frequently-asked-questions', 'PageController@faq')->name('faq');
         Route::get('/{region}/{lang}/{slug}', 'PageController@product')->name('product');
