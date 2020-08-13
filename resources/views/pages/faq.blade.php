@@ -3,6 +3,7 @@
 @yield('html')
 <head>
     @include('partials.meta')
+    {!! $pageContent->yoast_head !!}
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>

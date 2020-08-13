@@ -20,6 +20,7 @@
         'doNotTranslate' => isset($doNotTranslate) ? $doNotTranslate : false,
         'hideOlark' => isset($pageContent->acf->hide_olark_chat) ?$pageContent->acf->hide_olark_chat : false
     ])
+    {!! $pageContent->yoast_head !!}
 
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
     {{-- FontAwesome icons --}}
