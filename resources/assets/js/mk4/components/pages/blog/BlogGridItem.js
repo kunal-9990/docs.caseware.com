@@ -17,7 +17,7 @@ const BlogGridItem = ({ item }) => (
               { item.excerpt && (<div dangerouslySetInnerHTML={{__html: item.excerpt.rendered}} className="grid-item__excerpt" />)} 
               <div className="grid-item__filter">
                 { item.postFilters.length > 0 && (<FontAwesomeIcon icon={ item.postFilters.length > 1 ? faTags : faTag } />) }
-                { item.postFilters.join(', ')} 
+                <span dangerouslySetInnerHTML={{__html: item.videoFilters.join(', ')}}/> 
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import Accordion from '../../Accordion'
 import Dropdown from '../../Dropdown'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilter } from '@fortawesome/free-solid-svg-icons'
+import { filter } from 'lodash'
 
 
 class FAQ extends Component {
@@ -42,30 +43,34 @@ class FAQ extends Component {
 
   updateSelectedFilters(filters) {
     let selectedFilters = []
-    Object.keys(filters).map(i => {
-      selectedFilters.push(filters[i].label)
-    })
-    let filteredSections = []
-    this.props.faqs.map(faq => {
-        let filteredQuestions = []
-        faq.section.questions.map(j => {
-          let questionTags = []
-          j.tags.map(t => questionTags.push(t.name))
-          if (selectedFilters.some(r => questionTags.includes(r))) {
-            filteredQuestions.push(j)
-          }
-        })
-        filteredSections = [
-          ...filteredSections, 
-          { 
-            "section": { 
-              "section_title": faq.section.section_title, 
-              "questions": filteredQuestions 
+    if (filters) {
+      Object.keys(filters).map(i => {
+        selectedFilters.push(filters[i])
+      })
+      let filteredSections = []
+      this.props.faqs.map(faq => {
+          let filteredQuestions = []
+          faq.section.questions.map(j => {
+            let questionTags = []
+            j.tags.map(t => questionTags.push(t.name))
+            if (selectedFilters.some(r => questionTags.includes(r.label))) {
+              filteredQuestions.push(j)
             }
-          }
-        ]
-    })
-    this.setState({ faqs : filters.length > 0 ? filteredSections : this.props.faqs })
+          })
+          filteredSections = [
+            ...filteredSections, 
+            { 
+              "section": { 
+                "section_title": faq.section.section_title, 
+                "questions": filteredQuestions 
+              }
+            }
+          ]
+      })
+      this.setState({ faqs : selectedFilters.length > 0 ? filteredSections : this.props.faqs })
+    } else {
+      this.setState({ faqs : this.props.faqs })
+    } 
   }
 
   render () {
@@ -77,7 +82,7 @@ class FAQ extends Component {
             <Dropdown 
               options={this.state.dropdownOptions} 
               onChange={this.updateSelectedFilters}
-              isMultui="true"
+              isMulti="true"
             />
           </div>
         </div>
