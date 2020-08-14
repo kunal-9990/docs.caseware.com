@@ -4,8 +4,6 @@ import Accordion from '../../Accordion'
 import Dropdown from '../../Dropdown'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilter } from '@fortawesome/free-solid-svg-icons'
-import { filter } from 'lodash'
-
 
 class FAQ extends Component {
 
