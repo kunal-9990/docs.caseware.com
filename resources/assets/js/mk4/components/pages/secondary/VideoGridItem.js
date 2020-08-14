@@ -60,7 +60,7 @@ class VideoGridItem extends Component {
                 <div>
                   <div className="grid-item__filter">
                     { item.videoFilters.length > 0 && (<FontAwesomeIcon icon={ item.videoFilters.length > 1 ? faTags : faTag } />) }
-                    { item.videoFilters.join(', ')} 
+                    <span dangerouslySetInnerHTML={{__html: item.videoFilters.join(', ')}}/> 
                   </div>
                 </div>
               </div>
