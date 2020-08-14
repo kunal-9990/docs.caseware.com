@@ -25,11 +25,13 @@ class FAQ extends Component {
         dropdownOptions.map(option => {
           filterLabels.push(option.label)
         })
-        q.tags.map(tag => {
-          if (tag && tag.name && filterLabels.indexOf(tag.name) === -1) {
-            dropdownOptions.push({ "value": tag.slug, "label": tag.name })
-          }
-        })
+        if(q.tags){
+          q.tags.map(tag => {
+            if (tag && tag.name && filterLabels.indexOf(tag.name) === -1) {
+              dropdownOptions.push({ "value": tag.slug, "label": tag.name })
+            }
+          })
+        }
       })
     })
 
@@ -92,7 +94,9 @@ class FAQ extends Component {
                 <h2>{ faq.section['section_title'] }</h2>
                 { faq.section['questions'].map((q, i) => {
                   let outerDetails = []
-                  q.tags.map(tag => outerDetails.push(tag.name))
+                  if(q.tags){
+                    q.tags.map(tag => outerDetails.push(tag.name))
+                  }
                   return (
                     <Accordion 
                       key={i}
