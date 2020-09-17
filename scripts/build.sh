@@ -21,7 +21,7 @@
 # wait until the script says "done." 
 #dos2unix scripts/build.sh
 
-# sudo chmod -R 777 .
+sudo chmod -R 777 /usr/share/nginx/docs
 
 echo "Backing up current content..."
 sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
@@ -127,6 +127,8 @@ echo 'Setting File permissions...'
 
 # find . ! -name '*.sh' -type f -exec chmod 644 {} \;    
 # find . ! -name 'scripts' -type d -exec chmod 755 {} \;
-# sudo chmod -R 777 . 
-
+sudo find /usr/share/nginx/docs -type f -exec chmod 664 {} \;    
+sudo find /usr/share/nginx/docs -type d -exec chmod 775 {} \;
+sudo chmod -R 777 storage
+sudo chmod -R 777 scripts
 echo 'Done.'
