@@ -120,13 +120,16 @@ fi
 # cp -R en de
 # cp -R en nl
 
-cd ../../../..
+cd ../../../../..
 
 
 echo 'Setting File permissions...'
 
 # find . ! -name '*.sh' -type f -exec chmod 644 {} \;    
 # find . ! -name 'scripts' -type d -exec chmod 755 {} \;
-sudo chmod -R 777 /usr/share/nginx/docs
-
+sudo find /usr/share/nginx/docs -type f -exec chmod 664 {} \;    
+sudo find /usr/share/nginx/docs -type d -exec chmod 775 {} \;
+pwd
+sudo chmod -R 777 storage
+sudo chmod -R 777 scripts
 echo 'Done.'
