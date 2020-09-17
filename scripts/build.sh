@@ -127,6 +127,6 @@ echo 'Setting File permissions...'
 
 # find . ! -name '*.sh' -type f -exec chmod 644 {} \;    
 # find . ! -name 'scripts' -type d -exec chmod 755 {} \;
-# sudo chmod -R 777 . 
+sudo chmod -R 777 /usr/share/nginx/docs
 
 echo 'Done.'
