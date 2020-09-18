@@ -43,11 +43,11 @@ class PageController extends Controller
             return response()->view('errors.languageunavailable');
         }
         else {        
+            $page = $this->getPlaylists($page);
+            $page = $this->getDownloads($page);
             $pageContent = $page['results'][0];
             return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists'));
         }
-        $page = $this->getPlaylists($page);
-        $page = $this->getDownloads($page);
     }
 
     
