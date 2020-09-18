@@ -84,7 +84,7 @@ class PageController extends Controller
         // App::setLocale($lang);
         // dd($slug);
 
-        $page = $this->cms->get_custom_post_by_name($region, $lang, 'csh', $slug);
+        $page = $this->cms->page($region, $lang, 'csh-'.$slug);
         if(empty($page['results'])){
             return response()->view('errors.languageunavailable');
         }
@@ -97,7 +97,7 @@ class PageController extends Controller
 
     // TEMP - FAQ
     function faq($region, $lang, $slug){
-        $page = $this->cms->get_custom_post_by_name($region, $lang, 'faq', $slug);
+        $page = $this->cms->page($region, $lang, 'faq-'.$slug);
         if(empty($page['results'])){
             return response()->view('errors.languageunavailable');
         }
