@@ -95,6 +95,14 @@ class DocsCmsApi
         ], $lifetime);
      }
 
+     public function get_custom_post_by_name($region, $lang = null, $post_type, $post_name, $lifetime = null)
+     {
+        if($lang == "en"){
+            $lang = "";
+        }         
+        return $this->_get('/'.$lang.'/wp-json/wp/v2/' . $post_type . '?slug=' . $post_name . '&_embed', [], $lifetime);
+     }     
+
      // TODO - FIX
      public function post($locale, $slug, $lifetime = null)
      {
@@ -135,12 +143,12 @@ class DocsCmsApi
         return $this->_get('/wp-json/wp/v2/' . $post_type, [], $lifetime);
      }
 
-     public function get_custom_post_by_name($locale, $post_type, $post_name, $lifetime = null)
-     {
-        $prepend = getWpLang($locale, request()->session()->get('lang'));
+    //  public function get_custom_post_by_name($locale, $post_type, $post_name, $lifetime = null)
+    //  {
+    //     $prepend = getWpLang($locale, request()->session()->get('lang'));
 
-        return $this->_get($prepend . '/wp-json/wp/v2/' . $post_type . '?slug=' . $post_name . '&_embed', [], $lifetime);
-     }
+    //     return $this->_get($prepend . '/wp-json/wp/v2/' . $post_type . '?slug=' . $post_name . '&_embed', [], $lifetime);
+    //  }
 
      public function get_custom_post_by_id($post_type, $id, $lifetime = null)
      {

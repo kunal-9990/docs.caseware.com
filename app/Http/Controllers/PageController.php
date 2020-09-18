@@ -19,35 +19,35 @@ class PageController extends Controller
     function home($region, $lang){
 
         $page = $this->cms->page($region, $lang, 'home');
-        $page = $this->getPlaylists($page);
-        $page = $this->getDownloads($page);
-        $page = $this->getProductNavigation($page);
-
-
+        
+        
         if(empty($page['results'])){
-            return response()->view('errors.404');
+            return response()->view('errors.languageunavailable');
         }
         else{        
             $pageContent = $page['results'][0];
             return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists' ));
         }
+        $page = $this->getPlaylists($page);
+        $page = $this->getDownloads($page);
+        $page = $this->getProductNavigation($page);
     }
 
     function product($region, $lang, $productSlug){
         // App::setLocale($lang);
 
         $page = $this->cms->page($region, $lang, $productSlug);
-        $page = $this->getPlaylists($page);
-        $page = $this->getDownloads($page);
-
-
+        
+        
         if(empty($page['results'])){
-            return response()->view('errors.404');
+            return response()->view('errors.languageunavailable');
         }
         else {        
             $pageContent = $page['results'][0];
             return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists'));
         }
+        $page = $this->getPlaylists($page);
+        $page = $this->getDownloads($page);
     }
 
     
@@ -56,7 +56,7 @@ class PageController extends Controller
         $page = $this->cms->page('int', 'en', 'blog');
         // App::setLocale($lang);
         if(empty($page['results'])){
-            return response()->view('errors.404');
+            return response()->view('errors.languageunavailable');
         }
         else{        
             $pageContent = $page['results'][0];
@@ -84,9 +84,9 @@ class PageController extends Controller
         // App::setLocale($lang);
         // dd($slug);
 
-        $page = $this->cms->page($region, $lang, 'csh-'.$slug);
+        $page = $this->cms->get_custom_post_by_name($region, $lang, 'csh', $slug);
         if(empty($page['results'])){
-            return response()->view('errors.404');
+            return response()->view('errors.languageunavailable');
         }
         else{        
             $pageContent = $page['results'][0];
@@ -97,9 +97,9 @@ class PageController extends Controller
 
     // TEMP - FAQ
     function faq($region, $lang, $slug){
-        $page =$this->cms->page($region, $lang, 'faq-'.$slug);
+        $page = $this->cms->get_custom_post_by_name($region, $lang, 'faq', $slug);
         if(empty($page['results'])){
-            return response()->view('errors.404');
+            return response()->view('errors.languageunavailable');
         }
         else{
             $pageContent = $page['results'][0];
@@ -113,9 +113,8 @@ class PageController extends Controller
     
     function videosOverview($region, $lang, $slug = null){
         $page = $this->cms->page($region, $lang, 'videos');
-        $page = $this->getPlaylists($page);
         if(empty($page['results'])){
-            return response()->view('errors.404');
+            return response()->view('errors.languageunavailable');
         }
         else{
             $pageContent = $page['results'][0];
@@ -124,6 +123,7 @@ class PageController extends Controller
             $tags = $this->cms->tags();
             return view('pages.videos', compact('slug', 'pageContent', 'videos', 'categories', 'tags', 'title', 'playlists'));
         }
+        $page = $this->getPlaylists($page);
     }
     
  
@@ -228,6 +228,9 @@ class PageController extends Controller
 
         if($subcategory == "TranslatedDocs"){
             $doNotTranslate = true;
+        }
+        if($subsubcategory == "en" || $subsubcategory == "fr" || $subsubcategory == "es"){
+            $subsubcategory = strtoupper($subsubcategory);
         }
 
         try {
