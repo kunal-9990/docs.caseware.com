@@ -29,7 +29,7 @@ $noHeader = true;
                 <span class="big-text">404</span> <span>We couldn't find<br /> this page</span>
             </div>
             <div class="page-404__back-home">
-                Let's go back <a href="/2018/webapps/29/en/webapps.htm">home</a>
+                Let's go back <a href="/">home</a>
             </div>
         </div>
     </div>
