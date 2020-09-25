@@ -26,7 +26,7 @@ class PageController extends Controller
         }
         else{        
             $page = $this->getPlaylists($page);
-            $page = $this->getDownloads($page);
+            $page = $this->getDownloads($page); 
             $page = $this->getProductNavigation($page);
             $pageContent = $page['results'][0];
             return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists' ));
@@ -277,7 +277,9 @@ class PageController extends Controller
 
         $maincontentarea = $dom->find('body', 0);
         $recent = getRecentlyViewed();
-        return view('pages.documentation', compact('maincontentarea', 'recent'));
+        $title = strip_tags($maincontentarea->find('h1', 0));
+
+        return view('pages.documentation', compact('maincontentarea', 'recent', 'title'));
     }
     
     // category
