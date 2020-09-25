@@ -19,6 +19,10 @@
                 min-width:120px;
             }
         }
+
+        code {
+            word-break: break-all;
+        }
     }
 
     table.table>* {
