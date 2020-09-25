@@ -276,8 +276,9 @@ class PageController extends Controller
         }          
 
         $maincontentarea = $dom->find('body', 0);
+        $title = strip_tags($maincontentarea->find('h1', 0));
         $recent = getRecentlyViewed();
-        return view('pages.documentation', compact('maincontentarea', 'recent'));
+        return view('pages.documentation', compact('maincontentarea', 'recent', 'title'));
     }
     
     // category
