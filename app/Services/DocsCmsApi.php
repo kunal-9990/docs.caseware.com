@@ -95,7 +95,7 @@ class DocsCmsApi
         ], $lifetime);
      }
 
-     public function get_custom_post_by_name($region, $lang = null, $post_type, $post_name, $lifetime = null)
+     public function get_custom_post_by_name($lang = null, $post_type, $post_name, $lifetime = null)
      {
         if($lang == "en"){
             $lang = "";
