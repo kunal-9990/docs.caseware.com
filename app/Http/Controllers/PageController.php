@@ -18,7 +18,7 @@ class PageController extends Controller
     // home
     function home($region, $lang){
 
-        $page = $this->cms->page($region, $lang, 'home');
+        $page = $this->cms->get_custom_post_by_name($lang, 'home', $region);
         
         
         if(empty($page['results'])){
@@ -36,7 +36,7 @@ class PageController extends Controller
     function product($region, $lang, $productSlug){
         // App::setLocale($lang);
 
-        $page = $this->cms->page($region, $lang, $productSlug);
+        $page = $this->cms->get_custom_post_by_name($lang, 'product', "{$region}-{$productSlug}");
         
         
         if(empty($page['results'])){
@@ -81,10 +81,9 @@ class PageController extends Controller
     }
 
     function csh($region, $lang, $slug){
-        // App::setLocale($lang);
-        // dd($slug);
 
-        $page = $this->cms->page($region, $lang, 'csh-'.$slug);
+
+        $page = $this->cms->get_custom_post_by_name($lang, 'csh', "{$region}-{$slug}");
         if(empty($page['results'])){
             return response()->view('errors.languageunavailable');
         }
@@ -97,7 +96,7 @@ class PageController extends Controller
 
     // TEMP - FAQ
     function faq($region, $lang, $slug){
-        $page = $this->cms->page($region, $lang, 'faq-'.$slug);
+        $page = $this->cms->get_custom_post_by_name($lang, 'faq', "{$region}-{$slug}");
         if(empty($page['results'])){
             return response()->view('errors.languageunavailable');
         }
@@ -141,8 +140,8 @@ class PageController extends Controller
         //first check if the topic is a what's new page. 
         //if so - get the content from the cms and return What's New template
         //assume the cms permalink for all WN pages is: "whats-new-product-version"
-        if(startsWith(strtolower($topic), "whats-new")){
-            $page = $this->cms->page(removeFileExt(strtolower($topic)));
+        if($subcategory == "Whats-New"){
+            $page = $this->cms->get_custom_post_by_name($lang, 'whats-new', $topic);
 
             //if the slug is not present in the cms, try displaying the flare-based WN page:
             if(!$page["totalPages"]){
