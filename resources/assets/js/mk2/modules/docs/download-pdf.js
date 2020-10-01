@@ -65,7 +65,7 @@ module.exports = () => {
     
     function downloadPDF() {
         togglePDFModalOverLay();
-        window.open("/downloads/" + fileName, "_blank");
+        window.open("/downloads/" + fileName + "?ts=" + Date.now(), "_blank");
     }
 
     DOWNLOAD_LINKS.forEach((link) => {
