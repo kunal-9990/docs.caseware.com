@@ -56,6 +56,4 @@ mix
     .sass('resources/assets/sass/app_search.scss', 'public/css')
     .browserSync(BROWSERSYNC_URL);
 
-if (mix.inProduction()) {
-    mix.version();
-}
+mix.version();
