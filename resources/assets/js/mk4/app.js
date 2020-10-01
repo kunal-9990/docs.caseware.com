@@ -28,7 +28,7 @@ import 'react-app-polyfill/ie11'
 import 'react-app-polyfill/stable'
 
 
-const containers = [
+const containers = [ 
   {
     id: 'whats-new-banner',
     component: WNBanner
