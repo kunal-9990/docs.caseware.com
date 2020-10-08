@@ -1,14 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use Request;
+
 use App\Vote;
 use App\Feature;
 use App\Product;
-// use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log; 
-use Illuminate\Support\Facades\Cookie;
 
 class VoteController extends Controller
 {
@@ -109,8 +108,7 @@ class VoteController extends Controller
         }
         
         // $request->session()->push('user.Votes', [$featureId => $voteElementState]);
-        // $userVotes = $request->session()->get('user.Votes');
-        $userVotes =  Request::cookie('user.Votes');;
+        $userVotes = $request->session()->get('user.Votes');
         if($voteElementState == 1) {
             $userVotes[$featureId] = 'up';
         }
@@ -120,9 +118,7 @@ class VoteController extends Controller
         else{
             $userVotes[$featureId] = 'neutral';
         }
-        // $request->session()->put('user.Votes', $userVotes);
-        Cookie::queue('user.Votes', $userVotes, 60*24*365);
-
+        $request->session()->put('user.Votes', $userVotes);
 
         // if(array_key_exists($featureId, $userVotes)){
         //     $userVotes[$featureId] = $voteElementState;

@@ -2,7 +2,7 @@
 // comment
 namespace App\Http\Controllers;
 
-use Request;
+use Illuminate\Http\Request;
 use Sunra\PhpSimple\HtmlDomParser;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redirect;
@@ -26,7 +26,7 @@ class PageController extends Controller
         }
         else{        
             $page = $this->getPlaylists($page);
-            $page = $this->getDownloads($page); 
+            $page = $this->getDownloads($page);
             $page = $this->getProductNavigation($page);
             $pageContent = $page['results'][0];
             return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists' ));
@@ -177,9 +177,7 @@ class PageController extends Controller
 
             $pageContent = $page['results'][0];
             $voteData = getVoteData($pageContent->acf->product, $pageContent->acf->version);
-            $userVotes =  Request::cookie('user.Votes');;
-
-            // $userVotes = session('user.Votes');
+            $userVotes = session('user.Votes');
 
             $topicVersion = substr($topic, strrpos($topic, '-') + 1);
 
@@ -279,8 +277,6 @@ class PageController extends Controller
         $maincontentarea = $dom->find('body', 0);
         $title = strip_tags($maincontentarea->find('h1', 0));
         $recent = getRecentlyViewed();
-        $title = strip_tags($maincontentarea->find('h1', 0));
-
         return view('pages.documentation', compact('maincontentarea', 'recent', 'title'));
     }
     
