@@ -2,7 +2,7 @@
 // comment
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
 use Sunra\PhpSimple\HtmlDomParser;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redirect;
@@ -177,7 +177,9 @@ class PageController extends Controller
 
             $pageContent = $page['results'][0];
             $voteData = getVoteData($pageContent->acf->product, $pageContent->acf->version);
-            $userVotes = session('user.Votes');
+            $userVotes =  Request::cookie('user.Votes');;
+
+            // $userVotes = session('user.Votes');
 
             $topicVersion = substr($topic, strrpos($topic, '-') + 1);
 
