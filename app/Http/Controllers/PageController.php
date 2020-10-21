@@ -141,7 +141,7 @@ class PageController extends Controller
         //if so - get the content from the cms and return What's New template
         //assume the cms permalink for all WN pages is: "whats-new-product-version"
         if($subcategory == "Whats-New"){
-            $page = $this->cms->get_custom_post_by_name($lang, 'whats-new', $topic);
+            $page = $this->cms->get_custom_post_by_name($lang, 'whats-new', str_replace(".htm", "", $topic));
 
             //if the slug is not present in the cms, try displaying the flare-based WN page:
             if(!$page["totalPages"]){
