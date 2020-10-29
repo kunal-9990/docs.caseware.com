@@ -36,11 +36,13 @@ const settings = {
 
 const Slide = ({ image, title, label, url, i }) => 
   <div className="slide" key={i}>
-    <div style={{backgroundImage: 'url(' + image.url + ')', backgroundSize: 'cover'}}>
+    <div style={{backgroundImage: 'url(' + image.url + ')', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
+      {(title || url) && (
       <div className="slide__ribbon">
-        <h2>{title}</h2>
-        <a href={url} target="_blank" rel="noopener">{ label ? label : 'Learn more'}</a>
+        {title && <h2>{title}</h2>}
+        {url && <a href={url} target="_blank" rel="noopener">{ label ? label : 'Learn more'}</a>}
       </div>
+      )}
     </div>
   </div>
 
