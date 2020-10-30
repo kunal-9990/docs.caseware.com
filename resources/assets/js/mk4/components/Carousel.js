@@ -36,12 +36,22 @@ const settings = {
 
 const Slide = ({ image, title, label, url, i }) => 
   <div className="slide" key={i}>
-    <div style={{backgroundImage: 'url(' + image.url + ')', backgroundSize: 'cover'}}>
-      <div className="slide__ribbon">
-        <h2>{title}</h2>
-        <a href={url} target="_blank" rel="noopener">{ label ? label : 'Learn more'}</a>
+    {(!title && !label) ? (
+      url ? (
+      <a href={url} target="_blank" rel="noopener">
+        <div style={{backgroundImage: 'url(' + image.url + ')', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
+        </div>
+      </a>
+      ) : ( <div style={{backgroundImage: 'url(' + image.url + ')', backgroundSize: 'cover', backgroundPosition: 'center center'}}></div> )
+    ) : (
+      <div style={{backgroundImage: 'url(' + image.url + ')', backgroundSize: 'cover', backgroundPosition: 'center center'}}>
+        <div className="slide__ribbon">
+          {(url && !title && !label) && <h1>yes</h1>}
+          {title && <h2>{title}</h2>}
+          {url && <a href={url} target="_blank" rel="noopener">{ label ? label : 'Learn more'}</a>}
+        </div>
       </div>
-    </div>
+    )}
   </div>
 
 const MonitorSlide = ({ image, title, label, url, i }) => 
