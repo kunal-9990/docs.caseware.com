@@ -55,4 +55,5 @@ mix
     .sass('resources/assets/sass/app.scss', 'public/css')
     .sass('resources/assets/sass/app_search.scss', 'public/css')
     .browserSync(BROWSERSYNC_URL);
+
 mix.version();

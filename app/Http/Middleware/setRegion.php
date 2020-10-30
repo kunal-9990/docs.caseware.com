@@ -38,6 +38,9 @@ class setRegion
             $method = 'http://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
             $response = Unirest::get($method);
             $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'int';
+            if ($requestRegion !== 'ca' && $requestRegion !== 'us') {
+                $requestRegion = 'int';
+            }
             //set region cookie according to geolocation
             Cookie::queue('region', strtolower($requestRegion), 60*24*365);
             // Log::info("Log response:".var_dump($response));
