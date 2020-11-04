@@ -66,3 +66,8 @@ img {
 .activity-root { display: hide !important;} 
 .status-message { display: hide !important;}
 .started-activity-container { display: hide !important;}
+
+
+button.olark-launch-button {
+    z-index: 1000!important;
+}
