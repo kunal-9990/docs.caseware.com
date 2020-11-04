@@ -145,7 +145,7 @@ class PageController extends Controller
 
             //if the slug is not present in the cms, try displaying the flare-based WN page:
             if(!$page["totalPages"]){
-                if(!endsWith($topic,".htm")){
+                if(empty(endsWith($topic,".htm"))){
                     $topic .= ".htm";
                 } 
 
