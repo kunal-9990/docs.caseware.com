@@ -337,7 +337,7 @@ class DocsCmsApi
                         'results' => $response->body
                     ]);
                  } else {
-                    throw new \Exception($response->body);
+                    throw new \Exception(json_encode($response->body));
                  }
 
              });
