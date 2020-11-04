@@ -142,9 +142,8 @@ class PageController extends Controller
         //assume the cms permalink for all WN pages is: "whats-new-product-version"
         if($subcategory == "Whats-New"){
             $page = $this->cms->get_custom_post_by_name($lang, 'whats-new', str_replace(".htm", "", $topic));
-
             //if the slug is not present in the cms, try displaying the flare-based WN page:
-            if(!$page["totalPages"]){
+            if(empty($page["totalPages"])){
                 if(!endsWith($topic,".htm")){
                     $topic .= ".htm";
                 } 
