@@ -48,18 +48,15 @@
         }
     }
 
-    .icon * {
-        display: inline-block;
-    }
-
+    
     .docs__container {
         flex-direction: column;
         margin-top: 4.8rem;
-
+        
         &>div {
             max-width: 100%;
         }
-
+        
         .ribbon {
             border-bottom: #0082ad solid 3px;
             padding: 1rem;
@@ -68,9 +65,10 @@
         }
     }
 
+    
     .feature {
         padding: 1.2rem 0;
-
+        
         &__header {
             display: flex;
             flex-direction: column-reverse;
@@ -91,6 +89,7 @@
 
         &__content {
             padding-left: 0;
+            border: 1px solid
         }
 
         h2 {
