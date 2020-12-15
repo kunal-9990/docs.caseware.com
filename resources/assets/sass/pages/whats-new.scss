@@ -48,6 +48,10 @@
         }
     }
 
+    .icon * {
+        display: inline-block;
+    }
+
     .docs__container {
         flex-direction: column;
         margin-top: 4.8rem;
