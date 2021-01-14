@@ -25,12 +25,13 @@ class SearchController extends Controller
     }
 
     function searchform(Request $request){
+
         $query = $request->input('search');
         $cloud = $request->input('cloud');
         $hybrid = $request->input('hybrid');
         $year = $request->input('year');
         $version = $request->input('version');
-        $language = $request->input('language');
+        $lang = $request->input('lang');
         $filters = "";
         
         // if($year){
@@ -41,9 +42,9 @@ class SearchController extends Controller
 
         //     $filters .= " AND version:".$version;
         // }
-        // if($language){
+        // if($lang){
 
-        //     $filters .= " AND language:".$language;
+        //     $filters .= " AND language:".$lang;
         // }
 
         // if(empty($cloud)){
@@ -58,12 +59,6 @@ class SearchController extends Controller
 
 
         
-
-       
-
-
-
-
         $results = $this->search->search($query, $filters);
         return view('pages.new-search', compact('results','query'));
     }

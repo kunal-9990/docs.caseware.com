@@ -77,16 +77,14 @@ class DocsSearchApi
                             $title = strip_tags($dom->find('h1', 0));
                             $body = strip_tags($dom->find('body', 0)->plaintext);
                             // $url =  str_replace('\\', '/', "/".str_replace(env('PATH_TO_PUBLIC'), "", substr($filename, strpos($filename, "\\documentation_files\\") + 21)));
-                            $url =  str_replace('\\', '/', "/".str_replace("\\Content\\", "/", substr($filename, strpos($filename, "\\documentation_files\\") + 21)));
+                            $url =  str_replace("/Content/", "/" , str_replace(env('PATH_TO_PUBLIC')."documentation_files", "", $filename));
                             $params = explode("/", $url);
-
                             echo $url;
                             echo "\n";
 
                             if(!empty($body) && !empty($title)){
 
-                                array_push($records, ["title"=>$title, "body"=>$body, "url"=>$url, "year"=>$params[1], "product"=>$params[2], "version"=>$params[3], "language"=>$params[4]]);
-
+                                array_push($records, ["title"=>$title, "body"=>$body, "url"=>$url, "product"=>$params[1], "version"=>$params[2]]);
                             }
 
                         }
