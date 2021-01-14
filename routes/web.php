@@ -24,7 +24,12 @@ Route::middleware('throttle:30|180,1')->group(function () {
 
 Route::get('/api/vote/getData', 'VoteController@getVoteData');
 
-// home page - to come
+Route::get('/new-search', 'SearchController@searchform');
+Route::get('/new-search/all', 'SearchController@all'); 
+Route::get('/new-search/{query}', 'SearchController@search');
+
+
+
 
 // TEMPORARY HARD CODE
 
