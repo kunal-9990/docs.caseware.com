@@ -34,7 +34,7 @@ class DocsSearchApi
          
         $this->index = $this->client->initIndex( env('ALGOLIA_INDEX_NAME'));
         $res = $this->index->search($query, [
-            "filters" => 'language:"en"'
+            "filters" => $filters
         ]);
         return $res;
      }

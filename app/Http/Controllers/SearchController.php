@@ -33,6 +33,8 @@ class SearchController extends Controller
         $version = $request->input('version');
         $lang = $request->input('lang');
         $filters = "";
+
+
         
         if($year){
 
@@ -58,7 +60,7 @@ class SearchController extends Controller
         // }
 
 
-        
+        dd($filters);
         $results = $this->search->search($query, $filters);
         return view('pages.new-search', compact('results','query'));
     }
