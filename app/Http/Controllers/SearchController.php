@@ -34,18 +34,18 @@ class SearchController extends Controller
         $lang = $request->input('lang');
         $filters = "";
         
-        // if($year){
+        if($year){
 
-        //     $filters .= "year:".$year;
-        // }
-        // if($version){
+            $filters .= "year:".$year;
+        }
+        if($version){
 
-        //     $filters .= " AND version:".$version;
-        // }
-        // if($lang){
+            $filters .= " AND version:".$version;
+        }
+        if($lang){
 
-        //     $filters .= " AND language:".$lang;
-        // }
+            $filters .= " AND language:".$lang;
+        }
 
         // if(empty($cloud)){
 
