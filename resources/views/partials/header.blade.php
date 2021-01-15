@@ -1,6 +1,6 @@
 @php
-    isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = '';
-    isset(Route::current()->parameters()["year"]) ? $year = Route::current()->parameters()["year"] : $year = '';
+    isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = 'en';
+    isset(Route::current()->parameters()["year"]) ? $year = Route::current()->parameters()["year"] : $year = '2020';
 @endphp
 <header class="header">
     <div class="container header__container">
