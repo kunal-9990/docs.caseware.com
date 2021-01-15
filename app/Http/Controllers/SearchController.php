@@ -46,7 +46,7 @@ class SearchController extends Controller
         }
         if($lang){
 
-            $filters .= " AND language:".$lang;
+            $filters .= " AND lang:".$lang;
         }
 
         // if(empty($cloud)){
@@ -58,7 +58,6 @@ class SearchController extends Controller
 
         //     $filters .= " AND NOT product:hybrid";
         // }
-
 
         $results = $this->search->search($query, $filters);
         return view('pages.new-search', compact('results','query'));
