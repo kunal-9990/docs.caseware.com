@@ -34,7 +34,7 @@ class DocsSearchApi
          
         $this->index = $this->client->initIndex( env('ALGOLIA_INDEX_NAME'));
         $res = $this->index->search($query, [
-            "filters" => $filters
+            "filters" => 'language:"en"'
         ]);
         return $res;
      }
@@ -84,8 +84,7 @@ class DocsSearchApi
 
                             if(!empty($body) && !empty($title)){
                                 if(!str_contains($url, "DEPRECATED")){
-
-                                    array_push($records, ["title"=>$title, "body"=>$body, "url"=>$url, "product"=>$params[1], "version"=>$params[2]]);
+                                    array_push($records, ["title"=>$title, "body"=>$body, "url"=>$url,  "year"=>$params[1], "product"=>$params[2], "version"=>$params[3], "lang"=>$params[4]]);
                                 }
                             }
 
