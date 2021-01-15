@@ -60,7 +60,6 @@ class SearchController extends Controller
         // }
 
 
-        dd($filters);
         $results = $this->search->search($query, $filters);
         return view('pages.new-search', compact('results','query'));
     }
