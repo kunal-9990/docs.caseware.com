@@ -24,7 +24,7 @@ class Controller extends BaseController
     public $search;
 
     public function __construct(DocsCmsApi $cms, DocsSearchApi $search, Request $request) {
-
+      
         $this->search = $search;
         $this->cms = $cms;
         //Grab the menus
@@ -34,7 +34,7 @@ class Controller extends BaseController
  
 
         //Build a breadcrumb array
-        View::share('breadcrumbs', $this->generateBreadcrumbs($request->segments()));
+        // View::share('breadcrumbs', $this->generateBreadcrumbs($request->segments()));
     }
     
         // default
