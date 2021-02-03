@@ -23,8 +23,8 @@
 
 sudo chmod -R 777 /usr/share/nginx/docs
 
-echo "Backing up current content..."
-sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
+# echo "Backing up current content..."
+# sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
 
 
 echo 'Copying new content into place...'
