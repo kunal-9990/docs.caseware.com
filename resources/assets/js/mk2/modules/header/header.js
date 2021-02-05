@@ -4,8 +4,8 @@ const HEADER_DESKTOP = require('./header-desktop');
 const FILTER = require('./filter');
 
 module.exports = () => {
-    // HEADER_MOBILE();
-    // HEADER_DESKTOP();
+    HEADER_MOBILE();
+    HEADER_DESKTOP();
     // NAV();
     // FILTER();
 };
