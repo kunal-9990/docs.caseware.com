@@ -1,6 +1,7 @@
 @php
     isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = 'en';
     isset(Route::current()->parameters()["year"]) ? $year = Route::current()->parameters()["year"] : $year = '2020';
+    isset(Route::current()->parameters()["category"]) ? $category = Route::current()->parameters()["category"] : $category = '';
 @endphp
 <header class="header">
     <div class="container header__container">
@@ -13,6 +14,7 @@
                     <input type="text" name="search" placeholder="{{ __('strings.search') }}" autocomplete="off">
                     <input type="hidden" name="lang" value={{$lang}}>
                     <input type="hidden" name="year" value={{$year}}>
+                    <input type="hidden" name="category" value={{$category}}>
                 </form>
             </div>
             <div class="header__nav-wrap">

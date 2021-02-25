@@ -31,6 +31,7 @@ class SearchController extends Controller
         $year = $request->input('year');
         $version = $request->input('version');
         $lang = $request->input('lang');
+        $category = $request->input('category');
         $filters = "";
 
 
@@ -47,6 +48,10 @@ class SearchController extends Controller
 
             $filters .= " AND lang:".$lang;
         }
+        if($category == "SE-Authoring"){
+
+            $filters .= " AND category:SE-Authoring";
+        }
 
         // if(empty($cloud)){
 
@@ -57,7 +62,6 @@ class SearchController extends Controller
 
         //     $filters .= " AND NOT product:hybrid";
         // }
-
         $results = $this->search->search($query, $filters);
         return view('pages.new-search', compact('results','query'));
     }
