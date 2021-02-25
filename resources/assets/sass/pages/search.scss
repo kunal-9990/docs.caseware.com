@@ -9,7 +9,7 @@ body {
     margin-bottom: 25px;
 }
 
-#resultList > li {
+#resultList>li {
     list-style: none;
     margin-bottom: 25px;
 
@@ -19,7 +19,7 @@ body {
 }
 
 .url {
-    color:green;
+    color: green;
 }
 
 #pagination {
@@ -28,12 +28,20 @@ body {
     padding-top: 10px;
 }
 
-#pagination > .specificPage, 
-#pagination > .previousPage, 
-#pagination > .nextPage {
+#pagination>.specificPage,
+#pagination>.previousPage,
+#pagination>.nextPage {
 
     padding: 12px;
     font-size: 22px;
     margin: 25px 10px;
-    
+
+}
+
+#newResultList {
+
+    li {
+
+        list-style-type: none;
+    }
 }

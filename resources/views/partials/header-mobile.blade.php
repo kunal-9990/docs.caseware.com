@@ -1,3 +1,7 @@
+@php
+isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = 'en';
+isset(Route::current()->parameters()["year"]) ? $year = Route::current()->parameters()["year"] : $year = '2020';
+@endphp
 <header class="header-mobile">
     <span class="glyphicon glyphicon-menu-hamburger header-mobile__nav-toggle" aria-hidden="true"></span>
     <div>
@@ -5,9 +9,11 @@
     </div>
     <div class="header-mobile__input-search-wrapper">
 
-        <form method="GET" action="">
-            <input type="text" name="search" placeholder="Search" autocomplete="off">
-        </form>
+            <form method="GET" action="/search">
+                <input type="text" name="search" placeholder="{{ __('strings.search') }}" autocomplete="off">
+                <input type="hidden" name="lang" value={{$lang}}>
+                <input type="hidden" name="year" value={{$year}}>
+            </form>
         <span class="glyphicon glyphicon-remove header-mobile__close-search header-mobile__search--js"
             aria-hidden="true"></span>
     </div>

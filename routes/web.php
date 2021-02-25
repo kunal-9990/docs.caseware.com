@@ -14,7 +14,9 @@
 */
 $current_version = env("CURRENT_VERSION");
 
-
+// search
+Route::get('/search', 'SearchController@searchform');
+Route::get('/search/{query}', 'SearchController@searchform');
 
 //allow unauthenticated users to cast a max of 10 votes per minute
 Route::middleware('throttle:30|180,1')->group(function () {        
@@ -24,9 +26,7 @@ Route::middleware('throttle:30|180,1')->group(function () {
 
 Route::get('/api/vote/getData', 'VoteController@getVoteData');
 
-Route::get('/new-search', 'SearchController@searchform');
-Route::get('/new-search/all', 'SearchController@all'); 
-Route::get('/new-search/{query}', 'SearchController@search');
+
 
 
 
@@ -53,8 +53,7 @@ Route::group(['middleware' => 'setregion'], function () {
 
 });
 
-// search
-Route::get('/search/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('search');
+
 
 // se-search
 Route::get('/se-search/{year}/{product}/{version}/{lang}/search', 'PageController@search')->name('se-search');

@@ -9,7 +9,7 @@
                 <a href="/"><img class="header__logo" src="/img/CaseWare_logo_4C_horz.svg" alt="CaseWare logo"></a>
             </div>
             <div class="header__input-search-wrapper">
-                <form method="GET" action="/new-search">
+                <form method="GET" action="/search">
                     <input type="text" name="search" placeholder="{{ __('strings.search') }}" autocomplete="off">
                     <input type="hidden" name="lang" value={{$lang}}>
                     <input type="hidden" name="year" value={{$year}}>

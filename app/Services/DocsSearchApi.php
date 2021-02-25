@@ -84,7 +84,7 @@ class DocsSearchApi
 
                             if(!empty($body) && !empty($title)){
                                 if(!str_contains($url, "DEPRECATED")){
-                                    array_push($records, ["title"=>$title, "body"=>$body, "url"=>$url,  "year"=>$params[1], "product"=>$params[2], "version"=>$params[3], "lang"=>$params[4]]);
+                                    array_push($records, ["title"=>$title, "body"=>$body, "url"=>$url,  "year"=>$params[1], "product"=>$params[2], "version"=>$params[3], "lang"=>$params[4], "category"=>$params[5]]);
                                 }
                             }
 

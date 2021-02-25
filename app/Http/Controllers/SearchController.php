@@ -25,7 +25,6 @@ class SearchController extends Controller
     }
 
     function searchform(Request $request){
-
         $query = $request->input('search');
         $cloud = $request->input('cloud');
         $hybrid = $request->input('hybrid');
