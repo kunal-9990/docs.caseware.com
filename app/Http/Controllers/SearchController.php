@@ -52,6 +52,10 @@ class SearchController extends Controller
 
             $filters .= " AND category:SE-Authoring";
         }
+        else{
+            $filters .= " AND NOT category:SE-Authoring";
+
+        }
 
         // if(empty($cloud)){
 
