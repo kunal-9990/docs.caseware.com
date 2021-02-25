@@ -10,7 +10,7 @@
     </div>
     <div class="header-mobile__input-search-wrapper">
 
-        <form method="GET" action="/search">
+        <form method="GET" action="/new-search">
             <input type="text" name="search" placeholder="{{ __('strings.search') }}" autocomplete="off">
             <input type="hidden" name="lang" value={{$lang}}>
             <input type="hidden" name="year" value={{$year}}>

@@ -15,8 +15,8 @@
 $current_version = env("CURRENT_VERSION");
 
 // search
-Route::get('/search', 'SearchController@searchform');
-Route::get('/search/{query}', 'SearchController@searchform');
+Route::get('/new-search', 'SearchController@searchform');
+Route::get('/new-search/{query}', 'SearchController@searchform');
 
 //allow unauthenticated users to cast a max of 10 votes per minute
 Route::middleware('throttle:30|180,1')->group(function () {        
