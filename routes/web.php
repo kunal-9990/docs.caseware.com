@@ -14,13 +14,17 @@
 */
 $current_version = env("CURRENT_VERSION");
 
-
+Route::get('/2020/webapps/31/en/Explore/Whats-New/Whats-new-CaseWare-RCT.htm', function(){
+        return redirect('/2020/webapps/31/en/Explore/Whats-New/whats-new-rct-winter-2020');
+});
 
 //allow unauthenticated users to cast a max of 10 votes per minute
 Route::middleware('throttle:30|180,1')->group(function () {        
         Route::post('/api/vote/create', 'VoteController@createVote');
         Route::post('/api/vote/updateVoteState', 'VoteController@updateVoteState');
 });
+
+
 
 Route::get('/api/vote/getData', 'VoteController@getVoteData');
 
