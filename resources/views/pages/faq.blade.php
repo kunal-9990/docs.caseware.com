@@ -21,7 +21,7 @@
             <div class="faq__banner">
                 <div
                     data-component="banner" 
-                    data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
+                    data-prop-banner="{{json_encode($pageContent->acf->banner)}}"
                 ></div>
             </div>
 
@@ -38,7 +38,7 @@
                         <div class="col-sm-12">
                            <div 
                                 data-component="faq" 
-                                data-prop-faqs="{{htmlspecialchars(json_encode($pageContent->acf->faq))}}" 
+                                data-prop-faqs="{{json_encode($pageContent->acf->faq)}}" 
                             ></div>
                         </div>
                     </div>

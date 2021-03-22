@@ -21,7 +21,7 @@
             <div class="csh__banner">
                 <div
                     data-component="banner" 
-                    data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
+                    data-prop-banner="{{json_encode($pageContent->acf->banner)}}"
                 ></div>
             </div>
             <div class="container container--mk4 breadcrumb-container">
@@ -48,7 +48,7 @@
                         <div class="col-sm-12">
                            <div 
                                 data-component="csh" 
-                                data-props="{{htmlspecialchars(json_encode($pageContent->acf->group))}}" 
+                                data-props="{{json_encode($pageContent->acf->group)}}" 
                             ></div>
                         </div>
                     </div>

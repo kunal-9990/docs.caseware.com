@@ -28,7 +28,7 @@
             <div class="blog-detail__banner">
                 <div
                     data-component="banner" 
-                    data-prop-banner="{{htmlspecialchars(json_encode($banner))}}"
+                    data-prop-banner="{{json_encode($banner)}}"
                     data-prop-background-type="small"
                 ></div>
             </div>
@@ -48,10 +48,10 @@
                                 data-prop-author="{{ $postContent->_embedded->author[0]->name }}"
                                 data-prop-date="{{ $postContent->date }}"
                                 data-prop-read-time="{{ isset($postContent->acf->read_time) ? $postContent->acf->read_time : false }}"
-                                data-prop-tags="{{ htmlspecialchars(json_encode($postContent->tags)) }}"
-                                data-prop-all-tags="{{ htmlspecialchars(json_encode($tags)) }}"
-                                data-prop-categories="{{ htmlspecialchars(json_encode($postContent->categories)) }}"
-                                data-prop-all-categories="{{ htmlspecialchars(json_encode($categories)) }}"
+                                data-prop-tags="{{ json_encode($postContent->tags) }}"
+                                data-prop-all-tags="{{json_encode($tags) }}"
+                                data-prop-categories="{{ json_encode($postContent->categories) }}"
+                                data-prop-all-categories="{{ json_encode($categories) }}"
                             ></div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                                 <div class="col-sm-12">
                                     <div
                                         data-component="blog-lightbox"
-                                        data-props="{{ htmlspecialchars(json_encode($section->gallery)) }}"
+                                        data-props="{{ json_encode($section->gallery) }}"
                                     ></div>
                                 </div>  
                             </div>
@@ -97,9 +97,9 @@
                             <div 
                                 data-component="related-articles"
                                 data-prop-filter-post-id="{{ $postContent->id }}"
-                                data-prop-posts="{{ htmlspecialchars(json_encode($posts)) }}"
-                                data-prop-tags="{{ htmlspecialchars(json_encode($postContent->tags)) }}"
-                                data-prop-categories="{{ htmlspecialchars(json_encode($postContent->categories)) }}"
+                                data-prop-posts="{{ json_encode($posts) }}"
+                                data-prop-tags="{{ json_encode($postContent->tags) }}"
+                                data-prop-categories="{{ json_encode($postContent->categories) }}"
                             ></div>
                         </div>
                     </div>

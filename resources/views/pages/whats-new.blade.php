@@ -50,7 +50,7 @@
         @if ($pageContent->acf->announcement)
         <div 
             data-component="announcement"
-            data-props="{{htmlspecialchars(json_encode($pageContent->acf->announcement))}}"
+            data-props="{{json_encode($pageContent->acf->announcement)}}"
         ></div>
         @endif
 
@@ -93,7 +93,7 @@
                                     @if($pageContent->acf->featured_video !== "" || !empty($pageContent->acf->featured_video_thumbnail))
                                         <div 
                                             data-component="embedded-video"
-                                            data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? htmlspecialchars(json_encode($pageContent->acf->featured_video_thumbnail)) : '' }}"
+                                            data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? json_encode($pageContent->acf->featured_video_thumbnail) : '' }}"
                                             data-prop-video-src="{{ $pageContent->acf->featured_video !== '' ? $pageContent->acf->featured_video : null}}"
                                             data-props='{"disableOnResponsiveSize": ["md", "lg"]}'
                                         ></div>
@@ -108,7 +108,7 @@
                                 @if($pageContent->acf->featured_video !== "" || !empty($pageContent->acf->featured_video_thumbnail))
                                     <div 
                                         data-component="embedded-video"
-                                        data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? htmlspecialchars(json_encode($pageContent->acf->featured_video_thumbnail)) : '' }}"
+                                        data-prop-thumbnail="{{ !empty($pageContent->acf->featured_video_thumbnail) ? json_encode($pageContent->acf->featured_video_thumbnail) : '' }}"
                                         data-prop-video-src="{{ $pageContent->acf->featured_video !== '' ? $pageContent->acf->featured_video : null}}"
                                         data-props='{"disableOnResponsiveSize": ["xs", "sm", "lg-x"]}'
                                     ></div>
@@ -125,6 +125,9 @@
                                     <div class="ribbon">{!! $pageContent->acf->ribbon !!}</div>
                                 @endif                                
                                 <div>
+                                    {{-- @php
+                                        dd($pageContent->acf->features);
+                                    @endphp --}}
                                     @foreach($pageContent->acf->features as $feature)
                                     @php
                                         $featureVotes = (isset($voteData[$feature->title]["score"])) ? $voteData[$feature->title]["score"] : 0;
@@ -133,7 +136,7 @@
                                     @endphp
                                         <div 
                                             data-component="feature" 
-                                            data-prop-feature="{{htmlspecialchars(json_encode($feature))}}"
+                                            data-prop-feature="{{json_encode($feature)}}"
                                             data-n-prop-votes={{$featureVotes}}
                                             data-prop-hasvoted={{$state}}
                                             data-prop-id="{{$featureId}}"
@@ -151,7 +154,7 @@
                                             @endphp
                                             <div 
                                                 data-component="feature" 
-                                                data-prop-feature="{{htmlspecialchars(json_encode($subFeature))}}"
+                                                data-prop-feature="{{json_encode($subFeature)}}"
                                                 data-n-prop-votes={{$subFeatureVotes}} 
                                                 data-prop-hasvoted={{$state}}
                                                 data-prop-id="{{$subFeatureId}}"

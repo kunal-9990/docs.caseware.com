@@ -30,7 +30,7 @@
             <div class="blog-overview__banner">
                 <div
                     data-component="banner" 
-                    data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
+                    data-prop-banner="{{json_encode($pageContent->acf->banner)}}"
                 ></div>
             </div>
             
@@ -41,9 +41,9 @@
                            <div 
                                 data-component="blog-overview" 
                                 data-prop-posts-per-page="{{ $pageContent->acf->posts_per_page }}"
-                                data-prop-posts="{{htmlspecialchars(json_encode($posts))}}" 
-                                data-prop-tags="{{htmlspecialchars(json_encode($tags))}}" 
-                                data-prop-categories="{{htmlspecialchars(json_encode($categories))}}" 
+                                data-prop-posts="{{json_encode($posts)}}" 
+                                data-prop-tags="{{json_encode($tags)}}" 
+                                data-prop-categories="{{json_encode($categories)}}" 
                             ></div>
                         </div>
                     </div>

@@ -23,8 +23,8 @@
 
 sudo chmod -R 777 /usr/share/nginx/docs
 
-echo "Backing up current content..."
-sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
+# echo "Backing up current content..."
+# sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
 
 
 echo 'Copying new content into place...'
@@ -85,34 +85,9 @@ cd ../../../../../../..
 echo 'Copying Data folders into place...'
 
 #end-user search results
-mkdir -p public/search/$1/$2/$3/$4
-cp -R tmp/$4/$3/Data public/search/$1/$2/$3/$4
-cd public/search/$1/$2/$3
-
-cp -R en fr
-cp -R en es
-cp -R en cn
-cp -R en de
-# cp -R en nl
-
-cd ../../../../..
-
-#se-search results
-mkdir -p public/se-search/$1/$2/$3/$4
-cp -R tmp/$4/$3/Data-SE public/se-search/$1/$2/$3/$4
-cd public/se-search/$1/$2/$3/$4
-rm -R Data
-mv Data-SE Data
-cd ..
-
-if [ $4 = "en" ]; then
-    cp -R en fr
-    cp -R en es
-    cp -R en cn
-    cp -R en de
-else
-  cp -R en nl
-fi
+# mkdir -p public/search/$1/$2/$3/$4
+# cp -R tmp/$4/$3/Data public/search/$1/$2/$3/$4
+# cd public/search/$1/$2/$3
 
 # cp -R en fr
 # cp -R en es
@@ -120,7 +95,32 @@ fi
 # cp -R en de
 # cp -R en nl
 
-cd ../../../../..
+# cd ../../../../..
+
+#se-search results
+# mkdir -p public/se-search/$1/$2/$3/$4
+# cp -R tmp/$4/$3/Data-SE public/se-search/$1/$2/$3/$4
+# cd public/se-search/$1/$2/$3/$4
+# rm -R Data
+# mv Data-SE Data
+# cd ..
+
+# if [ $4 = "en" ]; then
+#     cp -R en fr
+#     cp -R en es
+#     cp -R en cn
+#     cp -R en de
+# else
+#   cp -R en nl
+# fi
+
+# cp -R en fr
+# cp -R en es
+# cp -R en cn
+# cp -R en de
+# cp -R en nl
+
+# cd ../../../../..
 
 
 echo 'Setting File permissions...'
