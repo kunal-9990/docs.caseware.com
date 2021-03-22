@@ -1,16 +1,5 @@
 @extends('default_search')
 
-@section('meta')
-    @include('partials.meta', [
-        'canonical' => url('/'),
-        'url' => url('/'),
-        'title' => 'CaseWare Cloud Search Results', 
-        'og_description' => 'CaseWare Cloud Search Results',
-        'canonical' => 'CaseWare Cloud Search Results',
-        'doNotTranslate' => isset($doNotTranslate) ? $doNotTranslate : false
-    ])
-@stop
-
 
 @section('content')
 <div class="container search-page">
