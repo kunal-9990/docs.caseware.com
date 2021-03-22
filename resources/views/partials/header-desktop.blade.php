@@ -1,22 +1,8 @@
 @php
-$year = Route::current()->parameters()["year"];
-$product = Route::current()->parameters()["product"];
-$version = Route::current()->parameters()["version"];
-$lang = Route::current()->parameters()["lang"];
-$searchroute = '';
-
-if(strpos(Request::url(), '/SE-Authoring/') == true && strpos(Request::url(), '/se-search/') == true) {
-$searchroute = "se-search";
-}
-else if(strpos(Request::url(), '/SE-Builder/') == true && strpos(Request::url(), '/se-builder-search/') == true) {
-$searchroute = "se-search";
-}
-else {
-$searchroute = "search";
-}
-
-$searchURL = route($searchroute, [$year, $product, $version, $lang]);
-$indexURL = route('category', [$year, $product, $version, $lang, 'webapps']);
+isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = 'en';
+isset(Route::current()->parameters()["year"]) ? $year = Route::current()->parameters()["year"] : $year = '2020';
+isset(Route::current()->parameters()["category"]) ? $category = Route::current()->parameters()["category"] : $category =
+'';
 @endphp
 <header class="header-desktop">
     <div class="container header__container">
@@ -38,8 +24,11 @@ $indexURL = route('category', [$year, $product, $version, $lang, 'webapps']);
                 @endif
             </div>
             <div class="header__input-search-wrapper">
-                <form method="GET" action="{{$searchURL}}">
+                <form method="GET" action="/new-search">
                     <input type="text" name="search" placeholder="{{ __('strings.search') }}" autocomplete="off">
+                    <input type="hidden" name="lang" value={{$lang}}>
+                    <input type="hidden" name="year" value={{$year}}>
+                    <input type="hidden" name="category" value={{$category}}>
                 </form>
             </div>
         </div>
