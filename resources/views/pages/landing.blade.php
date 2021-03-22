@@ -23,7 +23,7 @@
         <div class="landing__banner">
             <div
                 data-component="banner" 
-                data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
+                data-prop-banner="{{json_encode($pageContent->acf->banner)}}"
             ></div>
         </div>
 
@@ -59,7 +59,7 @@
                         <div class="container container--mk4 landing__product-nav">
                             <div class="row">
                                 <div class="col-sm-12">  
-                                    <div data-component="product-navigation" data-props="{{ htmlspecialchars(json_encode($section)) }}"></div>
+                                    <div data-component="product-navigation" data-props="{{ json_encode($section) }}"></div>
                                 </div>
                             </div>
                         </div>                                
@@ -71,7 +71,7 @@
                                 <div class="col-sm-12">
                                     <div
                                         data-component="carousel"
-                                        data-props="{{htmlspecialchars(json_encode($section))}}"
+                                        data-props="{{json_encode($section)}}"
                                     ></div>
                                 </div>  
                             </div>
@@ -84,7 +84,7 @@
                                 <div class="col-sm-12">
                                     <div
                                         data-component="video-gallery"
-                                        data-props="{{htmlspecialchars(json_encode($section))}}"
+                                        data-props="{{json_encode($section)}}"
                                         ></div>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
                                 <div class="col-sm-12">
                                     <div
                                         data-component="downloads"
-                                        data-props="{{htmlspecialchars(json_encode($section))}}"
+                                        data-props="{{json_encode($section)}}"
                                     ></div>
                                 </div>
                             </div>
