@@ -31,7 +31,7 @@
             <div class="videos__banner">
                 <div
                     data-component="banner" 
-                    data-prop-banner="{{htmlspecialchars(json_encode($pageContent->acf->banner))}}"
+                    data-prop-banner="{{json_encode($pageContent->acf->banner)}}"
                 ></div>
             </div>
 
@@ -50,10 +50,10 @@
                             <div
                                 data-component="videos" 
                                 data-prop-posts-per-page="{{ $pageContent->acf->posts_per_page }}"
-                                data-prop-videos="{{htmlspecialchars(json_encode($videos))}}"
+                                data-prop-videos="{{json_encode($videos)}}"
                                 data-prop-video-slug="{{(isset($slug) && !empty($slug)) ? $slug : null}}"
-                                data-prop-tags="{{htmlspecialchars(json_encode($tags))}}" 
-                                data-prop-categories="{{htmlspecialchars(json_encode($categories))}}" 
+                                data-prop-tags="{{json_encode($tags)}}" 
+                                data-prop-categories="{{json_encode($categories)}}" 
                             ></div>
                         </div>
                     </div>
@@ -78,9 +78,9 @@
                                 <div class="col-sm-12">
                                     <div
                                         data-component="playlist"
-                                        data-props="{{htmlspecialchars(json_encode($section))}}"
-                                        data-prop-tags="{{htmlspecialchars(json_encode($tags))}}" 
-                                        data-prop-categories="{{htmlspecialchars(json_encode($categories))}}"
+                                        data-props="{{json_encode($section)}}"
+                                        data-prop-tags="{{json_encode($tags))}}" 
+                                        data-prop-categories="{{json_encode($categories)}}"
                                         data-prop-video-slug="{{(isset($slug) && !empty($slug)) ? $slug : null}}"
                                     ></div>
                                 </div>
@@ -94,7 +94,7 @@
                                 <div class="col-sm-12">
                                     <div
                                         data-component="video-gallery"
-                                        data-props="{{htmlspecialchars(json_encode($section))}}"
+                                        data-props="{{json_encode($section)}}"
                                     ></div>
                                 </div>
                             </div>

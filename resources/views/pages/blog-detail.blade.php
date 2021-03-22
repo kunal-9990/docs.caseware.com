@@ -28,7 +28,7 @@
             <div class="blog-detail__banner">
                 <div
                     data-component="banner" 
-                    data-prop-banner="{{htmlspecialchars(json_encode($banner))}}"
+                    data-prop-banner="{{json_encode($banner)}}"
                     data-prop-background-type="small"
                 ></div>
             </div>
