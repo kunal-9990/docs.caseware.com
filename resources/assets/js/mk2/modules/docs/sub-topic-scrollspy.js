@@ -68,23 +68,30 @@ module.exports = () => {
     if (window.location.hash) {
       const anchor = document.getElementById(window.location.hash.substr(1));
       anchor.scrollIntoView();
+      SUB_TOC_CONTAINER.classList.add("affix");
     }
-  });
-
-  /* eslint-disable */
-  var waypoint = new Waypoint({
-    element: SUB_TOC_CONTAINER,
-    handler: function(direction) {
-      if (
-        window.location.hash ||
-        (direction === "down" && window.pageYOffset !== 0)
-      ) {
+    $(window).scroll(function() {
+      var yPos = $(this).scrollTop();
+      if (yPos > 50){
         SUB_TOC_CONTAINER.classList.add("affix");
       } else {
         SUB_TOC_CONTAINER.classList.remove("affix");
       }
-    },
-    offset: 20
+    });
   });
-  /* eslint-enable */
+
+  // /* eslint-disable */
+  // var waypoint = new Waypoint({
+  //   element: SUB_TOC_CONTAINER,
+  //   handler: function(direction) {
+  //     console.log(direction, window.pageYOffset);
+  //     if (direction === "down" && window.pageYOffset !== 0) {
+  //       SUB_TOC_CONTAINER.classList.add("affix");
+  //     } else {
+  //       SUB_TOC_CONTAINER.classList.remove("affix");
+  //     }
+  //   },
+  //   offset: 20
+  // });
+  // /* eslint-enable */
 };
