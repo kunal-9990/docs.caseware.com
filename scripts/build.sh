@@ -132,4 +132,7 @@ echo 'Setting File permissions...'
 # pwd
 sudo chmod -R 777 storage
 sudo chmod -R 777 scripts
+
+sudo rm -R /tmp/docs_content/*
+sudo rm -R /usr/share/nginx/docs/tmp/$4/$3/*
 echo 'Done.'
