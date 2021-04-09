@@ -130,13 +130,11 @@
     @php
         $redirecturl;
         if(app('request')->route()->parameters['region'] == "nl"){
-        $redirecturl = str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.session('requestRegion').'/',
-        Request::url();
-        $redirecturl = str_replace('/'.app('request')->route()->parameters['lang'].'/', '/nl/', Request::url();
+        $redirecturl = str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.session('requestRegion').'/', Request::url());
+        $redirecturl = str_replace('/'.app('request')->route()->parameters['lang'].'/', '/nl/', Request::url());
         }
         else {
-        $redirecturl = str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.session('requestRegion').'/',
-        Request::url();
+        $redirecturl = str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.session('requestRegion').'/', Request::url());
         }
     @endphp
     <div data-component="region-lightbox" data-prop-open={{json_encode(session('openRegionLightbox'))}}
