@@ -133,6 +133,7 @@ echo 'Setting File permissions...'
 sudo chmod -R 777 storage
 sudo chmod -R 777 scripts
 
-# sudo rm -R /tmp/docs_content/*
-# sudo rm -R /usr/share/nginx/docs/tmp/$4/$3/*
+sudo rm -R /tmp/docs_content/*
+sudo rm -R /usr/share/nginx/docs/tmp/$4/$3/*
+sudo find /usr/share/nginx/docs/public/documentation_files/2020/webapps/31/Content/en/ -mindepth 1 -type f -mmin +15 -delete
 echo 'Done.'
