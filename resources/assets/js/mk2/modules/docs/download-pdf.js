@@ -45,6 +45,10 @@ module.exports = () => {
                 },
             );
             downloadPDF();
+            ga('Global.send', 'event', fileName, 'User Download + Subscription', window.location.href); // eslint-disable-line
+            ga('Cloud.send', 'event', fileName, 'User Download + Subscription', window.location.href); // eslint-disable-line
+
+
         } else {
             $('#error').show();
         }
@@ -61,6 +65,9 @@ module.exports = () => {
             },
         );
         downloadPDF();
+        ga('Global.send', 'event', fileName, 'User Download', window.location.href); // eslint-disable-line
+        ga('Cloud.send', 'event', fileName, 'User Download', window.location.href); // eslint-disable-line
+
     }
     
     function downloadPDF() {
