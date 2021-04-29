@@ -26,6 +26,8 @@ const Downloads = props => {
             href={link.file_upload.url} 
             target="_blank" 
             download={link.file_upload.title}
+            onClick={() => {ga('Cloud.send', 'event', link.file_upload.title, 'User Download', window.location.href); ga('Global.send', 'event', link.file_upload.title, 'User Download', window.location.href)}}
+
           >
             {link.button_label}
           </a>
