@@ -96,7 +96,7 @@ isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parame
 
 	if(myURL.indexOf("/en/") !== -1){
 	document.cookie="googtrans" + "=" + "/en/en/";
-	}else if(myURL.indexOf("/fr/") !== -1){
+	}else if(myURL.indexOf("/fr/") !== -1 || myURL.indexOf("/ca/fr") !== -1){
 	document.cookie="googtrans" + "=" + "/en/fr/";
 	}else if (myURL.indexOf("/es/") !== -1){
 	document.cookie="googtrans" + "=" + "/en/es/";
