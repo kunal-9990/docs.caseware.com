@@ -9,7 +9,7 @@
         <div class="dropdown-content">
             <a href="/{{ str_replace($region.'/' , 'int/', Request::path()) }}">International</a>
             <a href="/{{ str_replace($region.'/' , 'ca/', Request::path()) }}">Canada</a>
-            <a href="/{{ str_replace($region.'/' , 'us/', Request::path()) }}"><span class="notranslate">US</span></a>
+            <a href="/{{ str_replace($region.'/' , 'us/', Request::path()) }}">@if($lang=='fr')<span class="notranslate">&#201;-U</span>@else<span class="notranslate">US</span>@endif</a>
             <a href="/{{ str_replace($region.'/' , 'nl/', Request::path()) }}"><span class="notranslate">NL</span></a>
         </div>
     </div>
