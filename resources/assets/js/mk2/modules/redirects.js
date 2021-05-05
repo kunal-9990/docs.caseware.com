@@ -1,5 +1,7 @@
 module.exports = () => {
 
+
+
   String.prototype.replaceAll = function (strReplace, strWith) {
       // See http://stackoverflow.com/a/3561711/556609
       var esc = strReplace.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
@@ -56,6 +58,7 @@ module.exports = () => {
         scrollTop: $("#" + accordianID).offset().top - 100 
       }, 600);  
     }
+
     
     // $(document).ready(function () {
     //   if (!accordianID) {
