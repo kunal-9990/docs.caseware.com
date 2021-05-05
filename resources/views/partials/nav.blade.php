@@ -5,18 +5,18 @@
 <div class="nav-container">
 @if(!empty($region))
     <div class="region__dropdown dropdown">
-        <a href="#"><i class="fas fa-globe-americas"></i> {{strtoupper($region)}} <i class="fas fa-angle-down"></i></a>
+        <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{strtoupper($region)}}</span> <i class="fas fa-angle-down"></i></a>
         <div class="dropdown-content">
             <a href="/{{ str_replace($region.'/' , 'int/', Request::path()) }}">International</a>
             <a href="/{{ str_replace($region.'/' , 'ca/', Request::path()) }}">Canada</a>
-            <a href="/{{ str_replace($region.'/' , 'us/', Request::path()) }}">US</a>
-            <a href="/{{ str_replace($region.'/' , 'nl/', Request::path()) }}">NL</a>
+            <a href="/{{ str_replace($region.'/' , 'us/', Request::path()) }}"><span class="notranslate">US</span></a>
+            <a href="/{{ str_replace($region.'/' , 'nl/', Request::path()) }}"><span class="notranslate">NL</span></a>
         </div>
     </div>
 @endif
 @if(!empty($lang))
     <div class="language__dropdown dropdown">
-        <a href="#"><i class="fas fa-language"></i> {{strtoupper($lang)}} <i class="fas fa-angle-down"></i></a>
+        <a href="#"><i class="fas fa-language"></i> <span class="notranslate">{{strtoupper($lang)}}</span> <i class="fas fa-angle-down"></i></a>
         <div class="dropdown-content">
             <a href="/{{ str_replace('/'.$lang ,'/en', Request::path()) }}">English</a>
             <a href="/{{ str_replace('/'.$lang ,'/fr', Request::path()) }}">French</a>
