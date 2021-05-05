@@ -14,9 +14,7 @@
 */
 $current_version = env("CURRENT_VERSION");
 
-Route::get('/2020/webapps/31/en/Explore/Whats-New/Whats-new-CaseWare-RCT.htm', function(){
-        return redirect('/2020/webapps/31/en/Explore/Whats-New/whats-new-rct-winter-2020');
-});
+
 // search
 Route::get('/new-search', 'SearchController@searchform');
 Route::get('/new-search/{query}', 'SearchController@searchform');
