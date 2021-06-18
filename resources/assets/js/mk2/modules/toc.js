@@ -18,7 +18,11 @@ module.exports = () => {
 
 
         const urlParams = new URLSearchParams(window.location.search);
-        const region = "_"+urlParams.get('region');
+        const region = "";
+        if (!urlParams.get('region') === null){
+            const region = "_"+urlParams.get('region');
+        }
+
         var year = routeComponents[1];
         var product = routeComponents[2].toLowerCase();
         var version = routeComponents[3];
@@ -44,6 +48,7 @@ module.exports = () => {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + `/Content/en/Online Output${region}.xml`;
             }
         }
+        console.log(TOCxml);
 
     $.ajax({
         type: "GET",
