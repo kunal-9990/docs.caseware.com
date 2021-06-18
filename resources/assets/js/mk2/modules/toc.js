@@ -18,9 +18,9 @@ module.exports = () => {
 
 
         const urlParams = new URLSearchParams(window.location.search);
-        const region = "";
-        if (!urlParams.get('region') === null){
-            const region = "_"+urlParams.get('region');
+        var region = "";
+        if (urlParams.get('region')){
+            region = "_"+urlParams.get('region');
         }
 
         var year = routeComponents[1];
