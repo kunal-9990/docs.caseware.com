@@ -44,7 +44,6 @@ module.exports = () => {
                 var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + `/Content/en/Online Output${region}.xml`;
             }
         }
-        alert(TOCxml);
 
     $.ajax({
         type: "GET",
