@@ -43,19 +43,10 @@ find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content\//\//g'
 
 echo "Copying over TOC and redirect xml files..."
 
-file=./Online\ Output.fltoc
-if [ -e "$file" ]; then
-    mv Online\ Output.fltoc OnlineOutput.xml
-else 
-    echo "Online Output.fltoc was not included in upload"
-fi 
 
-file=./Online\ Output\ \(SE\ Authoring\).fltoc
-if [ -e "$file" ]; then
-    mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml
-else 
-    echo "Online Output (SE Authoring).fltoc was not included in upload"
-fi 
+for toc in *.fltoc; do 
+    mv -- "$toc" "${toc%.xml}.xml"
+done
 
 file=./csh_redirect.xml
 if [ -e "$file" ]; then

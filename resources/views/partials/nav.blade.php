@@ -1,6 +1,7 @@
 @php
     isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = '';
     isset(Route::current()->parameters()["region"]) ? $region = Route::current()->parameters()["region"] : $region = '';
+    (null !== Request::input('region')) ? $tocregion = Request::input('region') : $tocregion = 'int';
 @endphp
 <div class="nav-container">
 @if(!empty($region))
@@ -26,5 +27,16 @@
             <a href="/{{ str_replace('/'.$lang ,'/de', Request::path()) }}">German</a>
         </div>
     </div>
-    @endif
+@endif
+@if(!empty($lang))
+    <div class="language__dropdown dropdown">
+        <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{strtoupper($tocregion)}}</span> <i class="fas fa-angle-down"></i></a>
+        <div class="dropdown-content">
+            <a href="?region=ca">Canada</a>
+            <a href="?region=us">US</a>
+            <a href="?region=int">International</a>
+            <a href="?region=nl">Netherlands</a>
+        </div>
+    </div>
+@endif
 </div>
