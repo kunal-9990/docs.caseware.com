@@ -44,9 +44,10 @@ find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content\//\//g'
 echo "Copying over TOC and redirect xml files..."
 
 
-for toc in *.fltoc; do 
-    mv -- "$toc" "${toc%.xml}.xml"
+for f in *.fltoc; do 
+    mv -- "$f" "${f%.fltoc}.xml"
 done
+
 
 file=./csh_redirect.xml
 if [ -e "$file" ]; then
