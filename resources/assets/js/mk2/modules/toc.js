@@ -113,6 +113,17 @@ module.exports = () => {
             tocExpandToggle();
 
             CheckExpandedLists();
+
+            if (urlParams.get('region')) {
+                $(".toc__container").find("a").each(function () {
+                    var href = $(this).attr('href');
+
+                    if (href) {
+                        href += (href.match(/\?/) ? '&' : '?') + "region=" + urlParams.get('region');
+                        $(this).attr('href', href);
+                    }
+                });
+            }
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(jqXHR);
