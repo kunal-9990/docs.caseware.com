@@ -29,7 +29,7 @@ class PageController extends Controller
             $page = $this->getDownloads($page);
             $page = $this->getProductNavigation($page);
             $pageContent = $page['results'][0];
-            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists' ));
+            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists', 'region' ));
         }
     }
 

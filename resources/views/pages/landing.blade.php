@@ -52,12 +52,10 @@
                 </div>
                 @endif
                 @if($section->acf_fc_layout == "navigation" || $section->acf_fc_layout == "product_navigation")
-
-
                 <div class="container container--mk4 landing__product-nav">
                     <div class="row">
                         <div class="col-sm-12">
-                            <div data-component="product-navigation" data-props="{{ json_encode($section) }}"></div>
+                            <div data-component="product-navigation" data-props="{{ json_encode($section) }}" data-prop-region="{{ $region }}"></div>
                         </div>
                     </div>
                 </div>
