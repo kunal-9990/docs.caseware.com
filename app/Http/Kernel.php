@@ -62,7 +62,8 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'processsearch' => \App\Http\Middleware\ProcessSearch::class,
-        'setregion' => \App\Http\Middleware\setRegion::class
+        'setregion' => \App\Http\Middleware\SetRegion::class,
+        'checkregionquery' => \App\Http\Middleware\CheckRegionQuery::class
 
     ];
 }

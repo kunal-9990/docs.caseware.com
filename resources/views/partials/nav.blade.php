@@ -5,8 +5,10 @@
     (null !== Request::input('region')) ? $tocregion = Request::input('region') : $tocregion = 'int';
 @endphp
 <div class="nav-container">
-{{-- region is controlled via query string on topic pages and using a route parameter on cms pages. checking the version tells us whether
+{{-- region is controlled via query string on topic pages and controlled using a route parameter on cms pages. checking the version tells us whether
 we're on a topic page or cms page as only topic pages have the version in the url. display the region dropdown accordingly: --}}
+
+{{-- on topic pages --}}
 @if(!empty($version))
 <div class="language__dropdown dropdown">
         <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{strtoupper($tocregion)}}</span> <i
@@ -18,6 +20,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
             <a href="?region=nl">Netherlands</a>
         </div>
 </div>
+{{-- on cms pages --}}
 @else
 <div class="region__dropdown dropdown">
         <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{strtoupper($region)}}</span> <i
