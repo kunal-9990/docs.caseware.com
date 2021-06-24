@@ -25,7 +25,7 @@ module.exports = () => {
         var lang = routeComponents[4];
         var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
         var region = "";
-        if (urlParams.get('region') && urlParams.get('region') !== "nl") {
+        if (urlParams.get('region') && lang !== "nl") {
             region = "_"+urlParams.get('region');
         }
         //hardcoding which toc to return based on language. currently, NL is the only language to have a properly translated TOC
