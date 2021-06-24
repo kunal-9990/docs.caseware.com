@@ -18,16 +18,16 @@ module.exports = () => {
 
 
         const urlParams = new URLSearchParams(window.location.search);
-        var region = "";
-        if (urlParams.get('region')){
-            region = "_"+urlParams.get('region');
-        }
-
+        
         var year = routeComponents[1];
         var product = routeComponents[2].toLowerCase();
         var version = routeComponents[3];
         var lang = routeComponents[4];
         var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
+        var region = "";
+        if (urlParams.get('region') && urlParams.get('region') !== "nl") {
+            region = "_"+urlParams.get('region');
+        }
         //hardcoding which toc to return based on language. currently, NL is the only language to have a properly translated TOC
         //this should be changed so that if a properly translated toc doesn't exist, it defaults to english
         // if(lang == "nl"){

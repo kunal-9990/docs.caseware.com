@@ -26,10 +26,10 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{strtoupper($region)}}</span> <i
                 class="fas fa-angle-down"></i></a>
         <div class="dropdown-content">
-            <a href="/{{ str_replace($region.'/' , 'int/', Request::fullUrl()) }}">International</a>
-            <a href="/{{ str_replace($region.'/' , 'ca/', Request::fullUrl()) }}">Canada</a>
-            <a href="/{{ str_replace($region.'/' , 'us/', Request::fullUrl()) }}"><span class="notranslate">US</span></a>
-            <a href="/{{ str_replace($region.'/' , 'nl/', Request::fullUrl()) }}"><span class="notranslate">NL</span></a>
+            <a href="/{{ str_replace($region.'/' , 'int/', Request::path()) }}">International</a>
+            <a href="/{{ str_replace($region.'/' , 'ca/', Request::path()) }}">Canada</a>
+            <a href="/{{ str_replace($region.'/' , 'us/', Request::path()) }}"><span class="notranslate">US</span></a>
+            <a href="/{{ str_replace($region.'/' , 'nl/', Request::path()) }}"><span class="notranslate">NL</span></a>
         </div>
 </div>
 @endif
