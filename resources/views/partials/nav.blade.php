@@ -17,7 +17,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
             <a href="?region=ca">Canada</a>
             <a href="?region=us">US</a>
             <a href="?region=int">International</a>
-            <a href="?region=nl">Netherlands</a>
+            <a href="/{{ str_replace('/'.$lang ,'/nl', Request::path()) }}?region=nl">Netherlands</a>
         </div>
 </div>
 {{-- on cms pages --}}
