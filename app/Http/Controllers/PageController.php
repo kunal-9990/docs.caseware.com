@@ -29,7 +29,7 @@ class PageController extends Controller
             $page = $this->getDownloads($page);
             $page = $this->getProductNavigation($page);
             $pageContent = $page['results'][0];
-            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists' ));
+            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists', 'region' ));
         }
     }
 
@@ -209,8 +209,6 @@ class PageController extends Controller
         $recent = getRecentlyViewed();
         $title = strip_tags($dom->find('h1', 0));
         
-        // TODO - undo comment below
-        // return view('pages.whats-new', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
         return view('pages.documentation', compact('maincontentarea', 'recent', 'exclusiveTo','title'));
     }
 

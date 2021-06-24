@@ -35,7 +35,6 @@
 	  }
 	}
 </script>
-
 @php
 isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = '';
 isset(Route::current()->parameters()["region"]) ? $region = Route::current()->parameters()["region"] : $region = '';

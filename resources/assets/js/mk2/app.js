@@ -86,3 +86,13 @@ $(document).ready(() => {
         window.location.replace('https://docs.caseware.com/2020/webapps/31/en/Engagements/Template-and-Authoring/Update-the-firm-template.htm')
     }
 });
+// javascript for anchor based redirects:
+if (window.location.pathname == "/2020/webapps/31/en/Engagements/Template-and-Authoring/Manage-the-firm-template.htm" && window.location.hash == "#Updatethefirmtemplate") {
+    window.location.replace('https://docs.caseware.com/latest/webapps/en/Engagements/Template-and-Authoring/Update-the-firm-template.htm')
+}
+if (window.location.pathname == "/2020/webapps/31/en/Explore/Whats-New/whats-new-audit-winter-2020.htm" && window.location.hash == "#Simple-Electronic-Signature") {
+    window.location.replace('https://docs.caseware.com/latest/webapps/en/Explore/Whats-New/Release-history-Audit-Winter-2020.htm#Simple-Electronic-Signature')
+}
+if (window.location.pathname == "/2020/webapps/31/en/Engagements/Template-and-Authoring/Manage-the-firm-template.htm" && window.location.hash == "#Update") {
+    window.location.replace('https://docs.caseware.com/2020/webapps/31/en/Engagements/Template-and-Authoring/Update-the-firm-template.htm')
+}

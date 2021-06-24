@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Cookie;
 
 
 
-class setRegion
+class SetRegion
 {
     /**
      * Handle an incoming request.

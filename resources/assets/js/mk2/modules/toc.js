@@ -15,20 +15,14 @@ module.exports = () => {
     pathname = pathname.replace(/\/\/+/g, '/');
     var routeComponents = pathname.split("/");
 
-    // they are the same for now but might change in the future to
-    // to have different TOCxml routes
-    if (0) {
-        // used for staging
 
-        var year = routeComponents[1];
-        console.log(year);
-        var product = routeComponents[2].toLowerCase();
-        var version = routeComponents[3];
-        var lang = routeComponents[4];
-        var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
-        var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
-    } else {
-        // used for live
+
+        const urlParams = new URLSearchParams(window.location.search);
+        var region = "";
+        if (urlParams.get('region')){
+            region = "_"+urlParams.get('region');
+        }
+
         var year = routeComponents[1];
         var product = routeComponents[2].toLowerCase();
         var version = routeComponents[3];
@@ -49,12 +43,12 @@ module.exports = () => {
             }
         } else {
             if (properlyTranslated.includes(lang)) {
-                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
+                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + `/Online Output${region}.xml`;
             } else {
-                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/en/OnlineOutput.xml";
+                var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + `/Content/en/Online Output${region}.xml`;
             }
         }
-    }
+        console.log(TOCxml);
 
     $.ajax({
         type: "GET",
@@ -119,6 +113,17 @@ module.exports = () => {
             tocExpandToggle();
 
             CheckExpandedLists();
+
+            if (urlParams.get('region')) {
+                $(".toc__container").find("a").each(function () {
+                    var href = $(this).attr('href');
+
+                    if (href) {
+                        href += (href.match(/\?/) ? '&' : '?') + "region=" + urlParams.get('region');
+                        $(this).attr('href', href);
+                    }
+                });
+            }
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(jqXHR);

@@ -25,20 +25,7 @@ Route::middleware('throttle:30|180,1')->group(function () {
         Route::post('/api/vote/updateVoteState', 'VoteController@updateVoteState');
 });
 
-
-
 Route::get('/api/vote/getData', 'VoteController@getVoteData');
-
-
-
-
-
-
-// TEMPORARY HARD CODE
-
-// Route::get('/{region}/{lang}/{product}/{version}/webapps', function() {
-//         return redirect('/ca/en/csh');
-// });
 
 Route::group(['middleware' => 'setregion'], function () {
 
@@ -55,18 +42,23 @@ Route::group(['middleware' => 'setregion'], function () {
         });
 });
 
+Route::group(['middleware' => 'checkregionquery'], function () {
 
-//Flare Content routes
-// topics
-Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');
+        //Flare Content routes
+        // topics
+        Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{topic}', 'PageController@showTopic')->name('topic');
+        
+        // topics
+        Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{subsubcategory}/{topic}', 'PageController@showTopic2');
+        
+        // sub category
+        Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');
+        
+        // category
+        Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory')->name('category');
 
-// topics
-Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}/{subsubcategory}/{topic}', 'PageController@showTopic2');
+});
 
-// sub category
-Route::get('/{year}/{product}/{version}/{lang}/{category}/{subcategory}', 'PageController@showSubCategory');
 
-// category
-Route::get('/{year}/{product}/{version}/{lang}/{category}', 'PageController@showCategory')->name('category');
 
 Route::post('logemail', 'Controller@logEmail');

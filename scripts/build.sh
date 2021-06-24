@@ -43,19 +43,11 @@ find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content\//\//g'
 
 echo "Copying over TOC and redirect xml files..."
 
-file=./Online\ Output.fltoc
-if [ -e "$file" ]; then
-    mv Online\ Output.fltoc OnlineOutput.xml
-else 
-    echo "Online Output.fltoc was not included in upload"
-fi 
 
-file=./Online\ Output\ \(SE\ Authoring\).fltoc
-if [ -e "$file" ]; then
-    mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml
-else 
-    echo "Online Output (SE Authoring).fltoc was not included in upload"
-fi 
+for f in *.fltoc; do 
+    mv -- "$f" "${f%.fltoc}.xml"
+done
+
 
 file=./csh_redirect.xml
 if [ -e "$file" ]; then
@@ -136,5 +128,4 @@ sudo chmod -R 777 scripts
 sudo rm -R /tmp/docs_content/*
 sudo rm -R /usr/share/nginx/docs/tmp/$4/$3/*
 sudo find /usr/share/nginx/docs/public/documentation_files/$1/$2/$3/Content/$4/ -mindepth 1 -type f -mmin +15 -delete
-
 echo 'Done.'

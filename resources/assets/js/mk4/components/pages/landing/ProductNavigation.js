@@ -14,6 +14,7 @@ const ProductCta = ({ link, label, accent}) => (
 )
 
 const ProductNavigation = props => {
+  let region = props.region;
   let navGrid = props.navigation.map((navItem, key) => (
     <Fade bottom key={key}>
       <div className="product-nav__wrapper">
@@ -34,7 +35,7 @@ const ProductNavigation = props => {
             <div className="product-nav__links">
               { navItem.links && navItem.links.map((link, key) => (
                 <div key={key}>
-                  <a href={link.link} rel="noopener" className="product-nav__cta">{ link.label }<span style={{ color: navItem.accent_colour }}>&#8250;</span></a>
+                  <a href={link.link+"?region="+region} rel="noopener" className="product-nav__cta">{ link.label }<span style={{ color: navItem.accent_colour }}>&#8250;</span></a>
                 </div>
               ))}
             </div>
