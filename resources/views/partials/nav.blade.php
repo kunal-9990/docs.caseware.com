@@ -26,10 +26,10 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{strtoupper($region)}}</span> <i
                 class="fas fa-angle-down"></i></a>
         <div class="dropdown-content">
-            <a href="/{{ str_replace($region.'/' , 'int/', Request::path()) }}">International</a>
-            <a href="/{{ str_replace($region.'/' , 'ca/', Request::path()) }}">Canada</a>
-            <a href="/{{ str_replace($region.'/' , 'us/', Request::path()) }}"><span class="notranslate">US</span></a>
-            <a href="/{{ str_replace($region.'/' , 'nl/', Request::path()) }}"><span class="notranslate">NL</span></a>
+            <a href="/{{ str_replace($region.'/' , 'int/', Request::fullUrl()) }}">International</a>
+            <a href="/{{ str_replace($region.'/' , 'ca/', Request::fullUrl()) }}">Canada</a>
+            <a href="/{{ str_replace($region.'/' , 'us/', Request::fullUrl()) }}"><span class="notranslate">US</span></a>
+            <a href="/{{ str_replace($region.'/' , 'nl/', Request::fullUrl()) }}"><span class="notranslate">NL</span></a>
         </div>
 </div>
 @endif
@@ -37,12 +37,12 @@ we're on a topic page or cms page as only topic pages have the version in the ur
     <div class="language__dropdown dropdown">
         <a href="#"><i class="fas fa-language"></i> <span class="notranslate">{{strtoupper($lang)}}</span> <i class="fas fa-angle-down"></i></a>
         <div class="dropdown-content">
-            <a href="/{{ str_replace('/'.$lang ,'/en', Request::path()) }}">English</a>
-            <a href="/{{ str_replace('/'.$lang ,'/fr', Request::path()) }}">French</a>
-            <a href="/{{ str_replace('/'.$lang ,'/es', Request::path()) }}">Spanish</a>
-            <a href="/{{ str_replace('/'.$lang ,'/nl', Request::path()) }}">Dutch</a>
-            <a href="/{{ str_replace('/'.$lang ,'/cn', Request::path()) }}">Chinese</a>
-            <a href="/{{ str_replace('/'.$lang ,'/de', Request::path()) }}">German</a>
+            <a href="/{{ str_replace('/'.$lang ,'/en', Request::fullUrl()) }}">English</a>
+            <a href="/{{ str_replace('/'.$lang ,'/fr', Request::fullUrl()) }}">French</a>
+            <a href="/{{ str_replace('/'.$lang ,'/es', Request::fullUrl()) }}">Spanish</a>
+            <a href="/{{ str_replace('/'.$lang ,'/nl', Request::fullUrl()) }}">Dutch</a>
+            <a href="/{{ str_replace('/'.$lang ,'/cn', Request::fullUrl()) }}">Chinese</a>
+            <a href="/{{ str_replace('/'.$lang ,'/de', Request::fullUrl()) }}">German</a>
         </div>
     </div>
 @endif
