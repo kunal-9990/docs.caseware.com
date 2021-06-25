@@ -46,7 +46,7 @@ class PageController extends Controller
             $page = $this->getPlaylists($page);
             $page = $this->getDownloads($page);
             $pageContent = $page['results'][0];
-            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists'));
+            return view('pages.landing', compact('pageContent', 'recent', 'exclusiveTo','title', 'playlists', 'region'));
         }
     }
 
@@ -89,7 +89,7 @@ class PageController extends Controller
         }
         else{        
             $pageContent = $page['results'][0];
-            return view('pages.csh', compact('pageContent', 'recent', 'exclusiveTo','title'));
+            return view('pages.csh', compact('pageContent', 'recent', 'exclusiveTo','title', 'region'));
         }
     }
 
@@ -102,7 +102,7 @@ class PageController extends Controller
         }
         else{
             $pageContent = $page['results'][0];
-            return view('pages.faq', compact('pageContent', 'recent', 'exclusiveTo','title'));
+            return view('pages.faq', compact('pageContent', 'recent', 'exclusiveTo','title', 'region'));
         }
     }
 
