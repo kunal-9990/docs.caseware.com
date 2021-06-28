@@ -28,6 +28,9 @@ class CheckRegionQuery
             $method = 'http://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
             $response = Unirest::get($method);
             $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'ca';
+            if ($requestRegion !== 'ca' && $requestRegion !== 'us') {
+                $requestRegion = 'int';
+            }
             return redirect($request->path().'?region='.$requestRegion);
         }
 
