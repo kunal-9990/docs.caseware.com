@@ -36,7 +36,7 @@ echo 'Renaming stuff...'
 
 find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content//g'
 
-mv Online\ Output.fltoc OnlineOutput.xml
+mv Online\ Output.fltoc Online Output.xml
 
 prefix="\/documentation_files\/$1\/$2\/$3\/Content\/$4\/Resources\/"
 prefix="$prefix"
