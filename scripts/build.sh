@@ -29,6 +29,12 @@ sudo chmod -R 777 /usr/share/nginx/docs
 
 echo 'Copying new content into place...'
 # mkdir -p public/documentation_files/$1/$2/$3/Content/$4
+
+if [ $4 = "nl" ]; then
+    echo "Moving NL toc into place..."
+    cp -R tmp/$4/$3/Project/TOCs/Online\ Output_nl.fltoc public/documentation_files/$1/$2/$3/Content/$4/Online\ Output_nl.xml 
+fi
+
 cp -R tmp/$4/$3/* public/documentation_files/$1/$2/$3/Content/$4
 cd public/documentation_files/$1/$2/$3/Content/$4
 
@@ -38,7 +44,7 @@ echo 'Renaming some files...'
 
 find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content\//\//g'
 
-mv Online\ Output.fltoc Online Output.xml
+#mv Online\ Output.fltoc OnlineOutput.xml
 #mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml 
 
 echo "Copying over TOC and redirect xml files..."
