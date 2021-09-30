@@ -30,10 +30,10 @@ sudo chmod -R 777 /usr/share/nginx/docs
 echo 'Copying new content into place...'
 # mkdir -p public/documentation_files/$1/$2/$3/Content/$4
 
-#if [ $4 = "nl" ]; then
-#    echo "Moving NL toc into place..."
-#    cp -R tmp/$4/$3/Online\ Output_nl.fltoc public/documentation_files/$1/$2/$3/Content/$4/ 
-#fi
+if [ $4 = "nl" ]; then
+   echo "Moving NL toc into place..."
+   cp -R tmp/$4/$3/Online\ Output\ \(SE\ Authoring\).fltoc public/documentation_files/$1/$2/$3/Content/$4/SE-Authoring-TOC.fltoc
+fi
 
 cp -R tmp/$4/$3/* public/documentation_files/$1/$2/$3/Content/$4
 cd public/documentation_files/$1/$2/$3/Content/$4
@@ -131,7 +131,7 @@ echo 'Setting File permissions...'
 sudo chmod -R 777 storage
 sudo chmod -R 777 scripts
 
-sudo rm -R /tmp/docs_content/*
-sudo rm -R /usr/share/nginx/docs/tmp/$4/$3/*
-sudo find /usr/share/nginx/docs/public/documentation_files/$1/$2/$3/Content/$4/ -mindepth 1 -type f -mmin +15 -delete
+# sudo rm -R /tmp/docs_content/*
+# sudo rm -R /usr/share/nginx/docs/tmp/$4/$3/*
+# sudo find /usr/share/nginx/docs/public/documentation_files/$1/$2/$3/Content/$4/ -mindepth 1 -type f -mmin +15 -delete
 echo 'Done.'
