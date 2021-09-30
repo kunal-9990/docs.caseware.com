@@ -30,10 +30,10 @@ sudo chmod -R 777 /usr/share/nginx/docs
 echo 'Copying new content into place...'
 # mkdir -p public/documentation_files/$1/$2/$3/Content/$4
 
-if [ $4 = "nl" ]; then
-    echo "Moving NL toc into place..."
-    cp -R tmp/$4/$3/Project/TOCs/Online\ Output_nl.fltoc public/documentation_files/$1/$2/$3/Content/$4/Online\ Output_nl.xml 
-fi
+#if [ $4 = "nl" ]; then
+#    echo "Moving NL toc into place..."
+#    cp -R tmp/$4/$3/Online\ Output_nl.fltoc public/documentation_files/$1/$2/$3/Content/$4/ 
+#fi
 
 cp -R tmp/$4/$3/* public/documentation_files/$1/$2/$3/Content/$4
 cd public/documentation_files/$1/$2/$3/Content/$4
