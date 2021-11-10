@@ -15,7 +15,7 @@
     body.mobile-nav--is-open &,
     body.desktop-search--is-open & {
         background-color: rgba(24, 48, 85, 0.3);
-        z-index: -1;
+        z-index: 25;
     }
 
     .mobile-nav__toc .toc__container {
