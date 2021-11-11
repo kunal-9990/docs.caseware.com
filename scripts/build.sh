@@ -31,7 +31,7 @@ if [ $4 = "nl" ]; then
    echo "Moving NL toc into place..."
    cp -R tmp/$4/$3/Online\ Output\ \(SE\ Authoring\).fltoc public/documentation_files/$1/$2/$3/Content/$4/SE-Authoring-TOC.fltoc
 fi
-mv public/documentation_files/$1/$2/$3/Content/$4 /tmp
+mv public/documentation_files/$1/$2/$3/Content/$4/* /tmp/old
 cp -R tmp/$4/$3/* public/documentation_files/$1/$2/$3/Content/$4
 cd public/documentation_files/$1/$2/$3/Content/$4
 
