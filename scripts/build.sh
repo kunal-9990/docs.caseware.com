@@ -29,6 +29,8 @@ sudo chmod -R 777 /usr/share/nginx/docs
 
 echo 'Copying new content into place...'
 # mkdir -p public/documentation_files/$1/$2/$3/Content/$4
+mv public/documentation_files/$1/$2/$3/Content/$4 /tmp
+
 cp -R tmp/$4/$3/* public/documentation_files/$1/$2/$3/Content/$4
 cd public/documentation_files/$1/$2/$3/Content/$4
 
