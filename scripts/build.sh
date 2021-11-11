@@ -23,9 +23,6 @@
 
 sudo chmod -R 777 /usr/share/nginx/docs
 
-# echo "Backing up current content..."
-# sudo mv public/documentation_files/$1/$2/$3/Content/$4 tmp/Content_backups/en_$(date -d "today" +"%Y%m%d%H%M")
-
 
 echo 'Copying new content into place...'
 # mkdir -p public/documentation_files/$1/$2/$3/Content/$4
@@ -34,18 +31,15 @@ if [ $4 = "nl" ]; then
    echo "Moving NL toc into place..."
    cp -R tmp/$4/$3/Online\ Output\ \(SE\ Authoring\).fltoc public/documentation_files/$1/$2/$3/Content/$4/SE-Authoring-TOC.fltoc
 fi
-
+mv public/documentation_files/$1/$2/$3/Content/$4 /tmp
 cp -R tmp/$4/$3/* public/documentation_files/$1/$2/$3/Content/$4
 cd public/documentation_files/$1/$2/$3/Content/$4
 
-# sudo chmod -R 777 .
 
 echo 'Renaming some files...'
 
 find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content\//\//g'
 
-#mv Online\ Output.fltoc OnlineOutput.xml
-#mv Online\ Output\ \(SE\ Authoring\).fltoc SE-Authoring-TOC.xml 
 
 echo "Copying over TOC and redirect xml files..."
 
@@ -70,7 +64,6 @@ prefix="$prefix"
 # echo $prefix
 
 echo 'Updating img src paths...'
-#cd public/documentation_files/$1/$2/$3/Content/$4
 
 find . -type f -print0 | xargs -0 sed -i 's/src="\/...\/...\/Resources/src="'"$prefix"'/g'
 find . -type f -print0 | xargs -0 sed -i 's/src="..\/Resources/src="'"$prefix"'/g'
@@ -79,55 +72,11 @@ find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/..\/Resources/src="'"$p
 find . -type f -print0 | xargs -0 sed -i 's/src="\/Resources/src="'"$prefix"'/g'
 
 cd ../../../../../../..
-#pwd
 echo 'Copying Data folders into place...'
-
-#end-user search results
-# mkdir -p public/search/$1/$2/$3/$4
-# cp -R tmp/$4/$3/Data public/search/$1/$2/$3/$4
-# cd public/search/$1/$2/$3
-
-# cp -R en fr
-# cp -R en es
-# cp -R en cn
-# cp -R en de
-# cp -R en nl
-
-# cd ../../../../..
-
-#se-search results
-# mkdir -p public/se-search/$1/$2/$3/$4
-# cp -R tmp/$4/$3/Data-SE public/se-search/$1/$2/$3/$4
-# cd public/se-search/$1/$2/$3/$4
-# rm -R Data
-# mv Data-SE Data
-# cd ..
-
-# if [ $4 = "en" ]; then
-#     cp -R en fr
-#     cp -R en es
-#     cp -R en cn
-#     cp -R en de
-# else
-#   cp -R en nl
-# fi
-
-# cp -R en fr
-# cp -R en es
-# cp -R en cn
-# cp -R en de
-# cp -R en nl
-
-# cd ../../../../..
-
 
 echo 'Setting File permissions...'
 
-# find . ! -name '*.sh' -type f -exec chmod 644 {} \;    
-# find . ! -name 'scripts' -type d -exec chmod 755 {} \;
-# sudo find /usr/share/nginx/docs -type f -exec chmod 664 {} \;    
-# sudo find /usr/share/nginx/docs -type d -exec chmod 775 {} \;
-# pwd
+
 sudo chmod -R 777 storage
 sudo chmod -R 777 scripts
 
