@@ -54,7 +54,7 @@ class DocsSearchApi
      }
 
      public function clearObjects(){
-         $this->index->clearObjects();
+         $this->index->clearObjects()->wait();
      }
      
     //  This function is written to perform the indexing on the linux based ec2 instance that is hosting the site, and not in my local windows dev environment
@@ -101,7 +101,7 @@ class DocsSearchApi
             [
                 'autoGenerateObjectIDIfNotExist' => true
             ]
-            );
+            )->wait();
 
 
 
