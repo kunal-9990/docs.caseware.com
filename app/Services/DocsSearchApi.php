@@ -96,10 +96,10 @@ class DocsSearchApi
                 
             }
             
-            $res = $this->index->saveObjects(
+            $res = $this->index->replaceAllObjects(
             $records,
             [
-                'autoGenerateObjectIDIfNotExist' => true
+                'safe' => true
             ]
             )->wait();
 
