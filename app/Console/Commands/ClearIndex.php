@@ -39,8 +39,8 @@ class ClearIndex extends Command
      */
     public function handle()
     {
-        $this->search->clearObjects();
-        echo "Index Cleared.";
+        // $this->search->clearObjects();
+        // echo "Index Cleared.";
 
     }
 }
