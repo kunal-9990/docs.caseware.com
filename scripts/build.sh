@@ -21,9 +21,8 @@
 # wait until the script says "done." 
 #dos2unix scripts/build.sh
 
-echo 'Resetting group ownership to nginx for /usr/share/nginx/docs'
-chgrp -R app /usr/share/nginx/docs
-
+# echo 'Resetting group ownership to nginx for /usr/share/nginx/docs'
+# chgrp -R jenkins /usr/share/nginx/docs
 
 echo 'Copying new content into place...'
 # mkdir -p public/documentation_files/$1/$2/$3/Content/$4
