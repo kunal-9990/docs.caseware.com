@@ -21,7 +21,8 @@
 # wait until the script says "done." 
 #dos2unix scripts/build.sh
 
-sudo chmod -R 777 /usr/share/nginx/docs
+echo 'Resetting group ownership to nginx for /usr/share/nginx/docs'
+chgrp -R app /usr/share/nginx/docs
 
 
 echo 'Copying new content into place...'
@@ -75,11 +76,9 @@ find . -type f -print0 | xargs -0 sed -i 's/src="\/Resources/src="'"$prefix"'/g'
 cd ../../../../../../..
 echo 'Copying Data folders into place...'
 
-echo 'Setting File permissions...'
-
-
-#sudo chmod -R 777 storage
-#sudo chmod -R 777 scripts
+# echo 'Setting File permissions...'
+# sudo chmod -R 777 storage
+# sudo chmod -R 777 scripts
 
 echo 'Starting sudo rm'
 sudo rm -R /tmp/docs_content/*
