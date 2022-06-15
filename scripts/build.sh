@@ -78,8 +78,8 @@ echo 'Copying Data folders into place...'
 echo 'Setting File permissions...'
 
 
-sudo chmod -R 777 storage
-sudo chmod -R 777 scripts
+#sudo chmod -R 777 storage
+#sudo chmod -R 777 scripts
 
 echo 'Starting sudo rm'
 sudo rm -R /tmp/docs_content/*
