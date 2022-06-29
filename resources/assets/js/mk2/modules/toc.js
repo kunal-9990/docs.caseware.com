@@ -40,7 +40,7 @@ module.exports = () => {
         // if(lang == "nl"){
         //     var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
         // }
-        var properlyTranslated = ["en", "nl"];
+        var properlyTranslated = ["en", "nl", "de"];
         if (window.location.href.indexOf("SE-Authoring") > -1) {
             console.log("se authoring");
             if (properlyTranslated.includes(lang)) {
