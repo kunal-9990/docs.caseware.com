@@ -61,7 +61,7 @@
                 <div class="col stretch contact">
                     <span>Contact</span>
                     <div>
-                        CaseWare International Inc.<br />
+                        Caseware International Inc.<br />
                         351 King St E, Suite 1100, <br />
                         Toronto, ON M5A 2W4, Canada<br />
                         <a href="tel:14168679504">Tel: 416-867-9504</a>
