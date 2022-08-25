@@ -27,6 +27,11 @@ Route::middleware('throttle:30|180,1')->group(function () {
 
 Route::get('/api/vote/getData', 'VoteController@getVoteData');
 
+//redirect to with apostrophes in the anchor - ISERV-1432
+Route::get('/latest/webapps/en/Explore/Whats-New/Whats-new-OnPointAudit.htm#StatementofPartners/MembersEquity', function () {
+        return redirect('/latest/webapps/en/Explore/Whats-New/Whats-new-OnPointAudit.htm#StatementofPartners\'/Members\'Equity', 301);
+});
+
 Route::group(['middleware' => 'setregion'], function () {
 
         Route::get('/{region}/{lang}/videos/{slug?}', 'PageController@videosOverview')->name('videos');
