@@ -40,7 +40,7 @@ class IndexTopics extends Command
     public function handle()
     {
 
-        $this->search->clearObjects();
+        // $this->search->clearObjects();
 
         $this->search->index();
 
