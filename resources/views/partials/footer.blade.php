@@ -47,7 +47,7 @@
                     <span>Legal</span>
                     <!-- <a href="https://www.caseware.com/generic/privacy-policy-caseware-international" target="_blank" rel="noopener">CaseWare International Privacy Policy</a> -->
                     <a href="https://www.caseware.com/generic/privacy-policy-caseware-cloud" target="_blank" rel="noopener">CaseWare Cloud Privacy Policy</a>
-                    <a href="https://docs.caseware.com/2020/webapps/31/{{ $lang }}/Setup/Licenses/CaseWare-Cloud-Terms-of-Use.htm" rel="noopener">Terms of Use</a>
+                    <a href="https://www.caseware.com/generic/terms" target="_blank" rel="noopener">Terms of Use</a>
                     <a href="https://docs.caseware.com/latest/webapps/{{ $lang }}/Setup/Licenses/CaseWare-Cloud-Services-Agreement.htm" rel="noopener">Cloud Services Agreement</a>
                     <a href="https://www.caseware.com/support/cloud/service-level-agreement" target="_blank" rel="noopener">Cloud Service Level Agreement</a>
                 </div>
