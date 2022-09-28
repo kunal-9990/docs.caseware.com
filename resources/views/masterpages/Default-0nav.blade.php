@@ -97,10 +97,7 @@
       /* ]]> */</script>
     </head>
     <body>
-        <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXKK445"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+        @include('partials.gtm-body')
         <div class="colcontainer container">
             <div class="row">
                 <div class="toccol col-xs-12 col-sm-pull-0 col-md-pull-0 col-lg-pull-0 col-xs-pull-3 hidden-xs col-lg-3 col-md-4 col-sm-4 hidden-sm">
