@@ -10,6 +10,7 @@
 </head>
 
 <body>
+        @include('partials.gtm-body')
     <div class="page-wrap">
 
         <div class="landing">

@@ -98,10 +98,7 @@
       /* ]]> */</script>
     </head>
     <body>
-        <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXKK445"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+        @include('partials.gtm-body')
         <nav class="navbar navbar-default topnav fullnav" role="navigation">
             <div class="container-fluid navcontainer">
                 <div class="wrapper">
