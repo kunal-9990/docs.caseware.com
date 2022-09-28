@@ -65,6 +65,7 @@
       /* ]]> */</script>
     </head>
     <body>
+        @include('partials.gtm-body')
         <div class="colcontainer container">
             <div class="row">
                 <div class="toccol col-xs-12 col-sm-pull-0 col-md-pull-0 col-lg-pull-0 col-xs-pull-3 hidden-xs col-lg-3 col-md-4 col-sm-4 hidden-sm">
