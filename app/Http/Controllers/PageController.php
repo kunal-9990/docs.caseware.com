@@ -143,6 +143,12 @@ class PageController extends Controller
             return redirect('https://www.caseware.com/privacy-statement', 301);
         }
         
+        // check if the topic is CaseWare-Cloud-Terms-of-Use.htm
+        // If yes, redirect it to CaseWare-Cloud-Services-Agreement page
+        if($topic == "CaseWare-Cloud-Terms-of-Use.htm") {
+            return redirect('/latest/webapps/'.$lang.'/Setup/Licenses/CaseWare-cloud-Services-Agreement.htm', 301);
+        }
+        
         //first check if the topic is a what's new page. 
         //if so - get the content from the cms and return What's New template
         //assume the cms permalink for all WN pages is: "whats-new-product-version"
