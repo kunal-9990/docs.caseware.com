@@ -146,7 +146,7 @@ class PageController extends Controller
         // check if the topic is CaseWare-Cloud-Terms-of-Use.htm
         // If yes, redirect it to CaseWare-Cloud-Services-Agreement page
         if($topic == "CaseWare-Cloud-Terms-of-Use.htm") {
-            return redirect('/latest/webapps/'.$lang.'/Setup/Licenses/CaseWare-cloud-Services-Agreement.htm', 301);
+            return redirect('/latest/webapps/'.$lang.'/Setup/Licenses/CaseWare-Cloud-Services-Agreement.htm', 301);
         }
         
         //first check if the topic is a what's new page. 
