@@ -37,7 +37,7 @@ class CheckRegionQuery
                 Log::info('Ipstack called from CheckRegionQuery middleware and IP is: '.$ip);
 
                 return $response;
-            })
+            });
             
 
             $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'ca';
