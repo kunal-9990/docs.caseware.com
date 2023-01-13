@@ -4,6 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Unirest\Request as Unirest;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class CheckRegionQuery
 {
@@ -26,7 +28,18 @@ class CheckRegionQuery
                 $ip = '66.207.217.22';
             }
             $method = 'http://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
-            $response = Unirest::get($method);
+
+            $response = Cache::rememberForever("ipstackDetectedRegion", function() use ($method, $ip) {
+                //If not send the request
+                $response = Unirest::get($method);
+
+                //added logging for ipstack call
+                Log::info('Ipstack called from CheckRegionQuery middleware and IP is: '.$ip);
+
+                return $response;
+            });
+            
+
             $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'ca';
             if ($requestRegion !== 'ca' && $requestRegion !== 'us') {
                 $requestRegion = 'int';
