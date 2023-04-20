@@ -25,7 +25,7 @@ module.exports = () => {
         var lang = routeComponents[4];
         var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
         var region = "";
-        if (urlParams.get('region') && (lang !== "nl" || lang !== "de")) {
+        if (urlParams.get('region') && lang !== "nl" && lang !== "de") {
             console.log("got here");
             region = "_"+urlParams.get('region');
         }
