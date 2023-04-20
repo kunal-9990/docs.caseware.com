@@ -140,3 +140,6 @@ if (window.location.pathname == "/2020/webapps/31/en/Explore/Whats-New/whats-new
 if (window.location.pathname == "/2020/webapps/31/en/Engagements/Template-and-Authoring/Manage-the-firm-template.htm" && window.location.hash == "#Update") {
   window.location.replace('https://docs.caseware.com/2020/webapps/31/en/Engagements/Template-and-Authoring/Update-the-firm-template.htm')
 }
+if (window.location.pathname == "/2020/webapps/31/en/Explore/Whats-New/Whats-new-OnPointAudit.htm" && window.location.hash == "#StatementofPartners/MembersEquity") {
+  window.location.replace('https://docs.caseware.com/latest/webapps/en/Explore/Whats-New/Whats-new-OnPointAudit.htm#StatementofPartners\'/Members\'Equity')
+}

@@ -39,14 +39,6 @@
 isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = '';
 isset(Route::current()->parameters()["region"]) ? $region = Route::current()->parameters()["region"] : $region = '';
 @endphp
-@if($lang == 'en' && ($region !== 'int' || $region == ""))
-<!-- begin olark code -->
-<script type="text/javascript" async>
-	;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
-                /* custom configuration goes here (www.olark.com/documentation) */
-                olark.identify('4439-775-10-8635');
-</script>
-@endif
 
 {{-- Tell Google about localized versions of our pages --}}
 @php
@@ -73,19 +65,18 @@ isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parame
 
 		gtag('config', 'UA-79260220-1');
 		</script>
-	@else
-		<script>/* <![CDATA[ */
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-97702818-1', 'auto', 'Global');
-			ga('create', 'UA-97702818-2', 'auto', 'Cloud');
-			ga('Global.send', 'pageview', { 'page': location.pathname + location.search + location.hash});
-			ga('Cloud.send', 'pageview', { 'page': location.pathname + location.search + location.hash});
-		/* ]]> */</script>
 	@endif
 	{{-- google analytics end--}}
+@endif
+
+@if(env('APP_ENV') == "production")
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KXKK445');</script>
+	<!-- End Google Tag Manager -->
 @endif
 
 @if(strpos(URL::current(), '/TranslatedDocs/') === false)

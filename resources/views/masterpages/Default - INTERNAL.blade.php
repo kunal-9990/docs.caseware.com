@@ -66,6 +66,7 @@
       /* ]]> */</script>
     </head>
     <body>
+        @include('partials.gtm-body')
         <nav class="navbar navbar-default topnav fullnav" role="navigation">
             <div class="container-fluid navcontainer">
                 <div class="wrapper">
