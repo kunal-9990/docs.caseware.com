@@ -35,6 +35,7 @@ module.exports = () => {
         else if(lang == "de") {
             region = "_de";
         }
+        console.log(region);
         //hardcoding which toc to return based on language. currently, NL is the only language to have a properly translated TOC
         //this should be changed so that if a properly translated toc doesn't exist, it defaults to english
         // if(lang == "nl"){
