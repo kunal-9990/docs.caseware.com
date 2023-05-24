@@ -148,6 +148,103 @@ class PageController extends Controller
         if($topic == "CaseWare-Cloud-Terms-of-Use.htm") {
             return redirect('/latest/webapps/'.$lang.'/Setup/Licenses/CaseWare-Cloud-Services-Agreement.htm', 301);
         }
+
+        //as a result of product rename
+        // check for ReviewCompTax URLs and redirect it to ReviewComp
+        if($category == "Explore" && $subcategory == "CaseWare-ReviewCompTax") {            
+            $redirectURL = '/latest/webapps/'.$lang.'/'.$category.'/Caseware-ReviewComp';
+
+            if($topic == 'RCT-Index.htm' || $topic == 'RCT-Index'){
+                $redirectURL += '/ReviewComp-Index.htm';
+            }
+            else if($topic == 'Start-a-CaseWare-RCT-engagement.htm'){
+                $redirectURL += '/Start-a-Caseware-ReviewComp-engagement.htm';
+            }
+            else if($topic == 'Edit-the-CaseWare-RCT-engagement-letter.htm'){
+                $redirectURL += '/Edit-the-Caseware-ReviewComp-engagement-letter.htm';
+            }
+            else if($topic == 'Plan-your-CaseWare-RCT-engagement.htm'){
+                $redirectURL += '/Plan-your-Caseware-ReviewComp-engagement.htm';
+            }
+            else if($topic == 'Transfer-data-from-Working-Papers-to-CaseWare-RCT.htm'){
+                $redirectURL += '/Transfer-data-from-Working-Papers-to-Caseware-ReviewComp.htm';
+            }
+            else if($topic == 'Perform-fieldwork-in-a-CaseWare-RCT-engagement.htm'){
+                $redirectURL += '/Perform-fieldwork-in-a-Caseware-ReviewComp-engagement.htm';
+            }
+            else if($topic == 'Conclude-your-CaseWare-RCT-engagement.htm'){
+                $redirectURL += '/Conclude-your-Caseware-ReviewComp-engagement.htm';
+            }
+            else {
+                $redirectURL += '/'.$topic;
+            }
+            return redirect($redirectURL, 301);
+        }
+        if($category == 'Explore' && $subcategory == 'Cloud-Apps' && $topic == 'CaseWare-RCT.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Cloud-Apps/Caseware-ReviewComp.htm';
+            return redirect($redirectURL, 301);
+        }
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Whats-new-CaseWare-RCT.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Whats-New/Whats-new-Caseware-ReviewComp.htm';
+            return redirect($redirectURL, 301);
+        }
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Release-history-RCT-Summer-2022.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Whats-New/Release-history-ReviewComp-Summer-2022.htm';
+            return redirect($redirectURL, 301);
+        }
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Release-history-RCT-Winter-2021.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Whats-New/Release-history-ReviewComp-Winter-2021.htm';
+            return redirect($redirectURL, 301);
+        }
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Release-history-RCT-Fall-2021.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Whats-New/Release-history-ReviewComp-Fall-2021.htm';
+            return redirect($redirectURL, 301);
+        }
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Release-history-RCT-Spring-2021.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Whats-New/Release-history-ReviewComp-Spring-2021.htm';
+            return redirect($redirectURL, 301);
+        }
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Release-history-RCT-Winter-2020.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Whats-New/Release-history-ReviewComp-Winter-2020.htm';
+            return redirect($redirectURL, 301);
+        }     
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Release-history-RCT-Fall-2020.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Whats-New/Release-history-ReviewComp-Fall-2020.htm';
+            return redirect($redirectURL, 301);
+        }
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Release-history-RCT-Spring-2020.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Whats-New/Release-history-ReviewComp-Spring-2020.htm';
+            return redirect($redirectURL, 301);
+        }       
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Release-history-RCT-Winter-2019.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Whats-New/Release-history-ReviewComp-Winter-2019.htm';
+            return redirect($redirectURL, 301);
+        }
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Release-history-RCT-Fall-2019.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Whats-New/Release-history-ReviewComp-Fall-2019.htm';
+            return redirect($redirectURL, 301);
+        }
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Release-history-RCT-Summer-2019.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Whats-New/Release-history-ReviewComp-Summer-2019.htm';
+            return redirect($redirectURL, 301);
+        }       
+        if($category == 'Explore' && $subcategory == 'Getting-Started' && $topic == 'Get-started-with-CaseWare-RCT-Firm-Admin.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-ReviewComp-Firm-Admin.htm';
+            return redirect($redirectURL, 301);
+        }        
+        if($category == 'Explore' && $subcategory == 'Getting-Started' && $topic == 'Get-started-with-CaseWare-RCT.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-ReviewComp.htm';
+            return redirect($redirectURL, 301);
+        } 
+        if($category == 'Explore' && $subcategory == 'Getting-Started' && $topic == 'Get-started-with-CaseWare-RCT-Contact.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-ReviewComp-Contact.htm';
+            return redirect($redirectURL, 301);
+        }        
+        if($category == 'Engagements' && $subcategory == 'File-Preparation' && $topic == 'Import-engagement-data-from-CaseWare-Working-Papers-to-CW-RCT.htm'){
+            $redirectURL = '/latest/webapps/'.$lang.'/Engagements/File-Preparation/Import-engagement-data-from-Caseware-Working-Papers-to-Caseware-ReviewComp.htm';
+            return redirect($redirectURL, 301);
+        }
+
         
         //first check if the topic is a what's new page. 
         //if so - get the content from the cms and return What's New template
