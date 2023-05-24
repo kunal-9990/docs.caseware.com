@@ -155,28 +155,28 @@ class PageController extends Controller
             $redirectURL = '/latest/webapps/'.$lang.'/'.$category.'/Caseware-ReviewComp';
 
             if($topic == 'RCT-Index.htm' || $topic == 'RCT-Index'){
-                $redirectURL += '/ReviewComp-Index.htm';
+                $redirectURL .= '/ReviewComp-Index.htm';
             }
             else if($topic == 'Start-a-CaseWare-RCT-engagement.htm'){
-                $redirectURL += '/Start-a-Caseware-ReviewComp-engagement.htm';
+                $redirectURL .= '/Start-a-Caseware-ReviewComp-engagement.htm';
             }
             else if($topic == 'Edit-the-CaseWare-RCT-engagement-letter.htm'){
-                $redirectURL += '/Edit-the-Caseware-ReviewComp-engagement-letter.htm';
+                $redirectURL .= '/Edit-the-Caseware-ReviewComp-engagement-letter.htm';
             }
             else if($topic == 'Plan-your-CaseWare-RCT-engagement.htm'){
-                $redirectURL += '/Plan-your-Caseware-ReviewComp-engagement.htm';
+                $redirectURL .= '/Plan-your-Caseware-ReviewComp-engagement.htm';
             }
             else if($topic == 'Transfer-data-from-Working-Papers-to-CaseWare-RCT.htm'){
-                $redirectURL += '/Transfer-data-from-Working-Papers-to-Caseware-ReviewComp.htm';
+                $redirectURL .= '/Transfer-data-from-Working-Papers-to-Caseware-ReviewComp.htm';
             }
             else if($topic == 'Perform-fieldwork-in-a-CaseWare-RCT-engagement.htm'){
-                $redirectURL += '/Perform-fieldwork-in-a-Caseware-ReviewComp-engagement.htm';
+                $redirectURL .= '/Perform-fieldwork-in-a-Caseware-ReviewComp-engagement.htm';
             }
             else if($topic == 'Conclude-your-CaseWare-RCT-engagement.htm'){
-                $redirectURL += '/Conclude-your-Caseware-ReviewComp-engagement.htm';
+                $redirectURL .= '/Conclude-your-Caseware-ReviewComp-engagement.htm';
             }
             else {
-                $redirectURL += '/'.$topic;
+                $redirectURL .= '/'.$topic;
             }
             return redirect($redirectURL, 301);
         }
