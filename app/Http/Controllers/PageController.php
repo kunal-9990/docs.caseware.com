@@ -136,6 +136,18 @@ class PageController extends Controller
     function showTopic($year, $product, $version, $lang, $category, $subcategory, $topic){
 
         App::setLocale($lang);
+
+        // check if the topic is CaseWare-Cloud-Privacy-Policy.htm
+        // If yes, redirect it to caseware.com privacy statement page
+        if($topic == "CaseWare-Cloud-Privacy-Policy.htm") {
+            return redirect('https://www.caseware.com/privacy-statement', 301);
+        }
+        
+        // check if the topic is CaseWare-Cloud-Terms-of-Use.htm
+        // If yes, redirect it to CaseWare-Cloud-Services-Agreement page
+        if($topic == "CaseWare-Cloud-Terms-of-Use.htm") {
+            return redirect('/latest/webapps/'.$lang.'/Setup/Licenses/CaseWare-Cloud-Services-Agreement.htm', 301);
+        }
         
         //first check if the topic is a what's new page. 
         //if so - get the content from the cms and return What's New template

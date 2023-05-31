@@ -36,7 +36,18 @@ class SetRegion
                 $ip = '66.207.217.22';
             }
             $method = 'http://api.ipstack.com/'.$ip.'?access_key='.env("IP_STACK_KEY");
-            $response = Unirest::get($method);
+
+            //added Cache::rememberForever to limit the number of API calls ISERV-1462
+            $response = Cache::rememberForever("ipstackDetectedRegion", function() use ($method, $ip){
+                //If not send the request
+                $response = Unirest::get($method);
+
+                //added logs
+                Log::info('Ipstack called from setRegion middleware and IP is: '. $ip);
+
+                return $response;
+            });
+
             $requestRegion = isset($response->body->country_code) ? strtolower($response->body->country_code) : 'int';
             if ($requestRegion !== 'ca' && $requestRegion !== 'us') {
                 $requestRegion = 'int';

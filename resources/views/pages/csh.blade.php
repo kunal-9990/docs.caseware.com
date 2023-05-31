@@ -7,6 +7,7 @@
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
+        @include('partials.gtm-body')
     <div class="page-wrap">
        
         <div class="csh">
