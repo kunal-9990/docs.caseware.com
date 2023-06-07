@@ -21,68 +21,80 @@
 # wait until the script says "done." 
 #dos2unix scripts/build.sh
 
-# echo 'Resetting group ownership to nginx for /usr/share/nginx/docs'
+function usage {
+    cat << EOF
+Usage: ./build.sh <year> <product> <version> <language>
+Supply the year, product, version, and language as parameters.
+
+Example: ./build.sh 2018 webapps 30 en
+EOF
+}
+
+if [ "$#" != 4 ]; then
+  usage
+  exit 1
+fi
+
+year=$1
+product=$2
+version=$3
+language=$4
+
+# echo 'Resetting group ownership to jenkins for /usr/share/nginx/docs'
 # chgrp -R jenkins /usr/share/nginx/docs
 
 echo 'Copying new content into place...'
-# mkdir -p public/documentation_files/$1/$2/$3/Content/$4
+# mkdir -p public/documentation_files/$year/$product/$version/Content/$language
 
-if [ $4 = "nl" ]; then
-   echo "Moving NL toc into place..."
-   cp -R tmp/$4/$3/Online\ Output\ \(SE\ Authoring\).fltoc public/documentation_files/$1/$2/$3/Content/$4/SE-Authoring-TOC.fltoc
+if [ $language = "nl" || $language = "de" ]; then
+   echo "Moving $language toc into place..."
+   cp -R "tmp/$language/$version/Online Output_$language.fltoc" public/documentation_files/$year/$product/$version/Content/$language/SE-Authoring-TOC.fltoc
 fi
-sudo rm -R /tmp/old/*
-mv public/documentation_files/$1/$2/$3/Content/$4/* /tmp/old
-cp -R tmp/$4/$3/* public/documentation_files/$1/$2/$3/Content/$4
-cd public/documentation_files/$1/$2/$3/Content/$4
+echo "Backing up old content into /tmp/old..."
+rm -R /tmp/old/*
+mv public/documentation_files/$year/$product/$version/Content/$language/* /tmp/old
 
+echo "Copying new content into place: from tmp/$language/$version/ to public/documentation_files/$year/$product/$version/Content/$language"
+cp -R tmp/$language/$version/* public/documentation_files/$year/$product/$version/Content/$language
 
-echo 'Renaming some files...'
+echo "Changing dir to public/documentation_files/$year/$product/$version/Content/$language"
+pushd "public/documentation_files/$year/$product/$version/Content/$language"
 
-find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content\//\//g'
+    echo 'Stripping out /Content/ from .fltoc files...'
 
+    find -name "*.fltoc" -print0 | xargs -0 sed -i 's/\/Content\//\//g'
 
-echo "Copying over TOC and redirect xml files..."
+    echo "Renaming .fltoc extension to .xml"
+    for f in *.fltoc; do 
+        mv -- "$f" "${f%.fltoc}.xml"
+    done
 
-
-for f in *.fltoc; do 
-    mv -- "$f" "${f%.fltoc}.xml"
-done
-
-
-file=./csh_redirect.xml
-if [ -e "$file" ]; then
-    mv csh_redirect.xml ../..
     echo "Moving csh_redirect.xml..."
-else 
-    echo "csh_redirect.xml was not included in upload"
-fi 
+    if [ -e "./csh_redirect.xml" ]; then
+        mv csh_redirect.xml ../..
+        echo "Moving csh_redirect.xml..."
+    else 
+        echo "csh_redirect.xml was not included in upload"
+    fi 
 
+    echo 'Updating img src paths...'
+    prefix="\/documentation_files\/$year\/$product\/$version\/Content\/$language\/Resources\/"
+    find . -type f -print0 | xargs -0 sed -i 's/src="\/...\/...\/Resources/src="'"$prefix"'/g'
+    find . -type f -print0 | xargs -0 sed -i 's/src="..\/Resources/src="'"$prefix"'/g'
+    find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/Resources/src="'"$prefix"'/g'
+    find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/..\/Resources/src="'"$prefix"'/g'
+    find . -type f -print0 | xargs -0 sed -i 's/src="\/Resources/src="'"$prefix"'/g'
 
-prefix="\/documentation_files\/$1\/$2\/$3\/Content\/$4\/Resources\/"
-prefix="$prefix"
-
-# echo $prefix
-
-echo 'Updating img src paths...'
-
-find . -type f -print0 | xargs -0 sed -i 's/src="\/...\/...\/Resources/src="'"$prefix"'/g'
-find . -type f -print0 | xargs -0 sed -i 's/src="..\/Resources/src="'"$prefix"'/g'
-find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/Resources/src="'"$prefix"'/g'
-find . -type f -print0 | xargs -0 sed -i 's/src="..\/..\/..\/Resources/src="'"$prefix"'/g'
-find . -type f -print0 | xargs -0 sed -i 's/src="\/Resources/src="'"$prefix"'/g'
-
-cd ../../../../../../..
-echo 'Copying Data folders into place...'
+echo "Changing dir back to /usr/share/nginx/docs"
+popd
 
 # echo 'Setting File permissions...'
 # sudo chmod -R 777 storage
 # sudo chmod -R 777 scripts
 
-echo 'Starting sudo rm'
-sudo rm -R /tmp/docs_content/*
-echo 'successfully removed /tmp/docs_content/'
-sudo rm -R /usr/share/nginx/docs/tmp/$4/$3/*
-echo 'successfully removed /usr/share/nginx/docs/tmp/'
-#sudo find /usr/share/nginx/docs/public/documentation_files/$1/$2/$3/Content/$4/ -mindepth 1 -type f -mmin +15 -delete
+echo "Cleaning up /tmp/docs_content"
+rm -R /tmp/docs_content/*
+echo "Cleaning up /usr/share/nginx/docs/tmp/$language/$version..."
+sudo rm -R /usr/share/nginx/docs/tmp/$language/$version/*
+#find /usr/share/nginx/docs/public/documentation_files/$year/$product/$version/Content/$language/ -mindepth 1 -type f -mmin +15 -delete
 echo 'Done.'
