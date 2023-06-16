@@ -247,6 +247,7 @@ class PageController extends Controller
 
         
 
+      
         //as a result of product rename from OnPoint Tax -> OnPoint Taxflow
         // check for OnPoint-Tax URLs and redirect it to OnPoint-Taxflow
         if($category == "Explore" && $subcategory == "OnPoint-Tax") {            
