@@ -246,6 +246,29 @@ class PageController extends Controller
         }
 
         
+
+      
+        //as a result of product rename from OnPoint Tax -> OnPoint Taxflow
+        // check for OnPoint-Tax URLs and redirect it to OnPoint-Taxflow
+        if($category == "Explore" && $subcategory == "OnPoint-Tax") {            
+            $redirectURL = '/2020/webapps/31/'.$lang.'/'.$category.'/OnPoint-Taxflow';
+
+            if($topic == 'OnPoint-Tax-Index.htm'){
+                $redirectURL .= '/OnPoint-Taxflow-Index.htm';
+            }
+            else if($topic == 'What-is-OnPoint-Tax.htm'){
+                $redirectURL .= '/What-is-OnPoint-Taxflow.htm';
+            }
+            else if($topic == 'Start-the-OnPoint-Tax-engagement.htm'){
+                $redirectURL .= '/Start-the-OnPoint-Taxflow-engagement.htm';
+            }
+            else {
+                $redirectURL .= '/'.$topic;
+            }
+            return redirect($redirectURL, 301);
+        }
+
+        
         //first check if the topic is a what's new page. 
         //if so - get the content from the cms and return What's New template
         //assume the cms permalink for all WN pages is: "whats-new-product-version"
