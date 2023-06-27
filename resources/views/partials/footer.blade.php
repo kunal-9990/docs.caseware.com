@@ -47,7 +47,6 @@
                     <a href="https://www.caseware.com/ca/support" target="_blank" rel="noopener">Support</a>
                     <a href="https://www.caseware.com/ca/training" target="_blank" rel="noopener">Training</a>
                     <a href="https://www.caseware.com/ca/distributors" target="_blank" rel="noopener">Distributors</a>
-                    <a href="https://www.caseware.com/ca/resources/events" target="_blank" rel="noopener">Events</a>
                     <a href="https://my.caseware.com/account/login?ReturnUrl=%2F" target="_blank" rel="noopener">MyCaseware</a>
                 </div>
                 <div class="col stretch contact">
