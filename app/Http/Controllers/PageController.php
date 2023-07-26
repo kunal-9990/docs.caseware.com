@@ -180,6 +180,11 @@ class PageController extends Controller
             }
             return redirect($redirectURL, 301);
         }
+
+        if($category == "Explore" && $subcategory == "OnPoint-PCR" && $topic == "Financial-statements.htm"){
+            $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/OnPoint-PCR/Financial-Statements-and-Presentation-and-disclosure-checklists.htm';
+            return redirect($redirectURL, 301);
+        }
         if($category == 'Explore' && $subcategory == 'Cloud-Apps' && $topic == 'CaseWare-RCT.htm'){
             $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Cloud-Apps/Caseware-ReviewComp.htm';
             return redirect($redirectURL, 301);
