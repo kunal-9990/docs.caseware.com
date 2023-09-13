@@ -253,19 +253,19 @@ class PageController extends Controller
         
 
       
-        //as a result of product rename from OnPoint Tax -> OnPoint Taxflow
+        //as a result of product rename from OnPoint Tax -> OnPoint Taxflow -> Caseware Taxflow
         // check for OnPoint-Tax URLs and redirect it to OnPoint-Taxflow
-        if($category == "Explore" && $subcategory == "OnPoint-Tax") {            
-            $redirectURL = '/2020/webapps/31/'.$lang.'/'.$category.'/OnPoint-Taxflow';
+        if($category == "Explore" && ($subcategory == "OnPoint-Tax" || $subcategory == "OnPoint-Taxflow")) {            
+            $redirectURL = '/2020/webapps/31/'.$lang.'/'.$category.'/Caseware-Taxflow';
 
-            if($topic == 'OnPoint-Tax-Index.htm'){
-                $redirectURL .= '/OnPoint-Taxflow-Index.htm';
+            if($topic == 'OnPoint-Tax-Index.htm' || $topic == 'OnPoint-Taxflow-Index.htm'){
+                $redirectURL .= '/Caseware-Taxflow-Index.htm';
             }
-            else if($topic == 'What-is-OnPoint-Tax.htm'){
-                $redirectURL .= '/What-is-OnPoint-Taxflow.htm';
+            else if($topic == 'What-is-OnPoint-Tax.htm' || $topic == 'What-is-OnPoint-Taxflow.htm'){
+                $redirectURL .= '/What-is-Caseware-Taxflow.htm';
             }
-            else if($topic == 'Start-the-OnPoint-Tax-engagement.htm'){
-                $redirectURL .= '/Start-the-OnPoint-Taxflow-engagement.htm';
+            else if($topic == 'Start-the-OnPoint-Tax-engagement.htm' || $topic == 'Start-the-OnPoint-Taxflow-engagement.htm'){
+                $redirectURL .= '/Start-the-Caseware-Taxflow-engagement.htm';
             }
             else {
                 $redirectURL .= '/'.$topic;
