@@ -27,8 +27,8 @@
 echo 'Copying new content into place...'
 # mkdir -p public/documentation_files/$1/$2/$3/Content/$4
 
-if [ $4 = "nl" ]; then
-   echo "Moving NL toc into place..."
+if [ $4 = "nl" ] || [ $4 = "de" ]; then
+   echo "Moving NL/DE toc into place..."
    cp -R tmp/$4/$3/Online\ Output\ \(SE\ Authoring\).fltoc public/documentation_files/$1/$2/$3/Content/$4/SE-Authoring-TOC.fltoc
 fi
 sudo rm -R /tmp/old/*

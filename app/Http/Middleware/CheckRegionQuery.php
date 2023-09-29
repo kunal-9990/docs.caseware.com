@@ -21,7 +21,7 @@ class CheckRegionQuery
 
         $region = $request->input('region');
 
-        if(($region !== 'ca' && $region !== 'us' && $region !== 'int' && $region !== 'nl') || empty($region) ) {
+        if(($region !== 'ca' && $region !== 'us' && $region !== 'int' && $region !== 'nl' && $region !== 'de') || empty($region) ) {
             $ip = $request->ip();
 
             if($ip == '127.0.0.1' || $ip == '192.168.207.56'){
