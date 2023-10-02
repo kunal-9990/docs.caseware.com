@@ -26,12 +26,14 @@ module.exports = () => {
         var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
         var region = "";
         if (urlParams.get('region') && (lang !== "nl" && lang !== "de")) {
-        if (urlParams.get('region') && lang !== "nl" && lang !== "de") {
             console.log("got here");
             region = "_"+urlParams.get('region');
         }
         else if(lang == "nl") {
             region = "_nl";
+        }
+        else if(lang == "de") {
+            region = "_de";
         }
         //hardcoding which toc to return based on language. currently, NL is the only language to have a properly translated TOC
         //this should be changed so that if a properly translated toc doesn't exist, it defaults to english
