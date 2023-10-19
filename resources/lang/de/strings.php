@@ -9,5 +9,9 @@ return [
   'was_this_helpful' => 'War dieser Beitrag hilfreich?',
   'yes' => 'Ja',
   'no' => 'Nein',
-  'search' => 'Suchen'
+  'search' => 'Suchen',
+  'products' => 'PRODUKTE',
+  'it_wasnt_clear' => "Nicht verständlich",
+  'it_wasnt_accurate' => "Nicht genau genug",
+  'it_wasnt_relevant' => "Nicht sinnvoll"
 ];
