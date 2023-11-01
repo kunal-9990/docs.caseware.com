@@ -29,34 +29,32 @@
            
 
                 <div class="col">
-                    <span>About</span>
-                    <a href="https://www.caseware.com/ca/about" target="_blank" rel="noopener">Who we are</a>
-                    <a href="https://www.caseware.com/ca/careers" target="_blank" rel="noopener">Where you fit</a>
-                    <a href="https://www.caseware.com/security-certifications/" target="_blank" rel="noopener">Certifications</a>
+                    <span>{{ __('strings.footer_link_about') }}</span>
+                    <a href="https://www.caseware.com/ca/about" target="_blank" rel="noopener">{{ __('strings.footer_link_who_we_are') }}</a>
+                    <a href="https://www.caseware.com/ca/careers" target="_blank" rel="noopener">{{ __('strings.footer_link_where_you_fit') }}</a>
+                    <a href="https://www.caseware.com/security-certifications/" target="_blank" rel="noopener">{{ __('strings.footer_link_certifications') }}</a>
                 </div>
                 <div class="col stretch">
-                    <span>Legal</span>
+                    <span>{{ __('strings.footer_link_legal') }}</span>
                     <!-- <a href="https://www.caseware.com/generic/privacy-policy-caseware-international" target="_blank" rel="noopener">CaseWare International Privacy Policy</a> -->
-                    <a href="https://www.caseware.com/privacy-statement/" target="_blank" rel="noopener">Caseware Cloud Privacy Policy</a>
-                    <a href="https://www.caseware.com/terms-of-use/" target="_blank" rel="noopener">Terms of Use</a>
-                    <a href="https://docs.caseware.com/latest/webapps/{{ $lang }}/Setup/Licenses/CaseWare-Cloud-Services-Agreement.htm" rel="noopener">Cloud Services Agreement</a>
-                    <a href="https://docs.caseware.com/latest/webapps/en/Setup/Licenses/CaseWare-Cloud-Services-Agreement.htm?region=int" target="_blank" rel="noopener">Cloud Service Level Agreement</a>
+                    <a href="https://www.caseware.com/privacy-statement/" target="_blank" rel="noopener">{{ __('strings.footer_link_caseware_cloud_privacy_policy') }}</a>
+                    <a href="https://www.caseware.com/terms-of-use/" target="_blank" rel="noopener">{{ __('strings.footer_link_terms_of_use') }}</a>
+                    <a href="https://docs.caseware.com/latest/webapps/{{ $lang }}/Setup/Licenses/CaseWare-Cloud-Services-Agreement.htm" rel="noopener">{{ __('strings.footer_link_cloud_services_agreement') }}</a>
+                    <a href="https://docs.caseware.com/latest/webapps/en/Setup/Licenses/CaseWare-Cloud-Services-Agreement.htm?region=int" target="_blank" rel="noopener">{{ __('strings.footer_link_cloud_service_level_agreement') }}</a>
                 </div>
                 <div class="col">
-                    <span>Resources</span>
-                    <a href="https://www.caseware.com/ca/support" target="_blank" rel="noopener">Support</a>
-                    <a href="https://www.caseware.com/ca/training" target="_blank" rel="noopener">Training</a>
-                    <a href="https://www.caseware.com/ca/distributors" target="_blank" rel="noopener">Distributors</a>
-                    <a href="https://my.caseware.com/account/login?ReturnUrl=%2F" target="_blank" rel="noopener">MyCaseware</a>
+                    <span>{{ __('strings.footer_link_resources') }}</span>
+                    <a href="https://www.caseware.com/ca/support" target="_blank" rel="noopener">{{ __('strings.footer_link_support') }}</a>
+                    <a href="https://www.caseware.com/ca/training" target="_blank" rel="noopener">{{ __('strings.footer_link_training') }}</a>
+                    <a href="https://www.caseware.com/ca/distributors" target="_blank" rel="noopener">{{ __('strings.footer_link_distributors') }}</a>
+                    <a href="https://my.caseware.com/account/login?ReturnUrl=%2F" target="_blank" rel="noopener">{{ __('strings.footer_link_mycaseware') }}</a>
                 </div>
                 <div class="col stretch contact">
-                    <span>Contact</span>
+                    <span>{{ __('strings.footer_link_contact') }}</span>
                     <div>
-                        Caseware International Inc.<br />
-                        351 King St E, Suite 1100, <br />
-                        Toronto, ON M5A 2W4, Canada<br />
-                        <a href="tel:14168679504">Tel: 416-867-9504</a>
-                        <a href="tel:14168671906">Fax: 416-867-1906</a>
+                        {{ __('strings.footer_address') }}
+                        <a href="tel:14168679504">{{ __('strings.footer_telephone') }}</a>
+                        <a href="tel:14168671906">{{ __('strings.footer_fax') }}</a>
                     </div>
                 </div>
             </div>

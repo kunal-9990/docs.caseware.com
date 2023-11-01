@@ -1,18 +1,35 @@
 <?php
-
 return [
-
-
   //MyCaseWare
   'in_this_article' => 'In dit artikel',
-  'recently_viewed' => 'Onlangs bekeken artikelen',
-  'was_this_helpful' => 'Was dit artikel nuttig?',
+  'recently_viewed' => 'Recent bekeken',
+  'was_this_helpful' => 'Heeft dit u geholpen?',
   'products' => 'PRODUCTEN',
   'yes' => 'Ja',
   'no' => 'Nee',
   'search' => 'Zoeken',
-  'it_wasnt_clear' => "De informatie is niet duidelijk",
-  'it_wasnt_accurate' => "De informatie klopt niet",
-  'it_wasnt_relevant' => " De informatie is niet relevant",
-
+  'it_wasnt_clear' => "Het was onduidelijk",
+  'it_wasnt_accurate' => "Het was onjuist",
+  'it_wasnt_relevant' => "Het was irrelevant",
+  'cookie_header' => "",
+  'cookie_notice' => "",
+  'cookie_button_text' => "",
+  'footer_link_about' => "Info",
+  'footer_link_who_we_are' => "Wie zijn we",
+  'footer_link_where_you_fit' => "Vacatures",
+  'footer_link_certifications' => "Certificaten",
+  'footer_link_legal' => "Juridisch",
+  'footer_link_caseware_cloud_privacy_policy' => "Caseware Cloud-privacybeleid",
+  'footer_link_terms_of_use' => "Gebruiksvoorwaarden",
+  'footer_link_cloud_services_agreement' => "Cloud-dienstverleningsovereenkomst",
+  'footer_link_cloud_service_level_agreement' => "Cloud-serviceniveau-overeenkomst",
+  'footer_link_resources' => "Bronnen",
+  'footer_link_support' => "Ondersteuning",
+  'footer_link_training' => "Training",
+  'footer_link_distributors' => "Distributeurs",
+  'footer_link_mycaseware' => "MyCaseware",
+  'footer_link_contact' => "Contact",
+  'footer_address' => "Caseware International Inc.<br />351 King St E, Suite 1100, <br />Toronto, ON M5A 2W4, Canada<br />",
+  'footer_telephone' => "Tel: 416-867-9504",
+  'footer_tax' => "Fax: 416-867-1906"
 ];

@@ -1,17 +1,35 @@
 <?php
-
 return [
-
-
   //MyCaseWare
   'in_this_article' => 'In diesem Beitrag',
   'recently_viewed' => 'Zuletzt angesehen',
   'was_this_helpful' => 'War dieser Beitrag hilfreich?',
+  'products' => 'PRODUKTE',
   'yes' => 'Ja',
   'no' => 'Nein',
   'search' => 'Suchen',
-  'products' => 'PRODUKTE',
-  'it_wasnt_clear' => "Nicht verständlich",
+  'it_wasnt_clear' => "Nicht verst�ndlich",
   'it_wasnt_accurate' => "Nicht genau genug",
-  'it_wasnt_relevant' => "Nicht sinnvoll"
+  'it_wasnt_relevant' => "Nicht relevant",
+  'cookie_header' => "",
+  'cookie_notice' => "",
+  'cookie_button_text' => "",
+  'footer_link_about' => "�ber uns",
+  'footer_link_who_we_are' => "Unternehmen",
+  'footer_link_where_you_fit' => "Karriere",
+  'footer_link_certifications' => "Zertifizierungen",
+  'footer_link_legal' => "Rechtliches",
+  'footer_link_caseware_cloud_privacy_policy' => "Caseware Cloud Datenschutzerkl�rung",
+  'footer_link_terms_of_use' => "Allgemeine Gesch�ftsbedingungen",
+  'footer_link_cloud_services_agreement' => "Rahmenvereinbarung f�r Produkte und Dienstleistungen",
+  'footer_link_cloud_service_level_agreement' => "Caseware Cloud Vereinbarung zum Service-Level",
+  'footer_link_resources' => "Mehr erfahren",
+  'footer_link_support' => "Support",
+  'footer_link_training' => "Schulung",
+  'footer_link_distributors' => "Distributoren",
+  'footer_link_mycaseware' => "MyCaseware",
+  'footer_link_contact' => "Kontakt",
+  'footer_address' => "CaseWare Germany GmbH<br />Toulouser Allee 19a<br />40211 D�sseldorf<br />Deutschland",
+  'footer_telephone' => "Telefon: +49 211 5 20 59-438",
+  'footer_fax' => "Fax: 416-867-1906"
 ];
