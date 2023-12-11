@@ -3,7 +3,7 @@
   <div class="container">
     <div class="cookie__wrapper">
       <div>
-        <h2>{{ __('strings.cookie_header') }}</h2>
+        <h2>{{ trans('strings.cookie_header') }}</h2>
         <p>{{ __('strings.cookie_notice') }}</p>
       </div>
       <div>
