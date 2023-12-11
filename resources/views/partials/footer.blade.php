@@ -16,10 +16,10 @@
                 </a>
             </div>
             <div class="col col-sm-6 col--sm-full footer__social-media">
-                {!! __(strings.social_media_1) !!}
-                {!! __(strings.social_media_2) !!}
-                {!! __(strings.social_media_3) !!}
-                {!! __(strings.social_media_4) !!}
+                {!! __('strings.social_media_1') !!}
+                {!! __('strings.social_media_2') !!}
+                {!! __('strings.social_media_3') !!}
+                {!! __('strings.social_media_4') !!}
             </div>
         </div>
         <div class="row footer__links">
