@@ -16,7 +16,7 @@ return [
   'cookie_button_text' => "OK",
   'social_media_1' =>'<a href="https://www.linkedin.com/company/caseware-germany"><i class="fab fa-linkedin"></i></a>',
   'social_media_2' => '',
-  'social_media_3' => '<a href="https://www.xing.com/pages/audicongmbh"><i class="fab fa-xing"></i></a>',
+  'social_media_3' => '<a href="https://www.xing.com/pages/audicongmbh"><i class="fab fa-xing-square"></i></a>',
   'social_media_4' => '<a href="https://www.youtube.com/@CasewareDE/featured"><i class="fab fa-youtube-square"></i></a>',
   'footer_text_about' => "Über uns",
   'footer_href_who_we_are' => "https://www.caseware.net/unternehmen/",
