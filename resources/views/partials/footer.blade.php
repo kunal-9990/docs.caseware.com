@@ -40,7 +40,7 @@
                     <a href="{{ __('strings.footer_href_caseware_cloud_privacy_policy') }}" target="_blank" rel="noopener">{{ __('strings.footer_text_caseware_cloud_privacy_policy') }}</a>
                     <a href="{{ __('strings.footer_href_terms_of_use') }}" target="_blank" rel="noopener">{{ __('strings.footer_text_terms_of_use') }}</a>
                     <a href="{{ __('strings.footer_href_cloud_services_agreement') }}" rel="noopener">{{ __('strings.footer_text_cloud_services_agreement') }}</a>
-                    @if(({{ __('strings.footer_text_cloud_service_level_agreement') }}) !== "")
+                    @if(( __('strings.footer_text_cloud_service_level_agreement') ) !== "")
                     <a href="{{ __('strings.footer_href_cloud_service_level_agreement') }}" target="_blank" rel="noopener">{{ __('strings.footer_text_cloud_service_level_agreement') }}</a>
                     @endif
                 </div>
