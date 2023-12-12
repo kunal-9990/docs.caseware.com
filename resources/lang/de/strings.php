@@ -32,8 +32,8 @@ return [
   'footer_text_terms_of_use' => "Allgemeine Geschäftsbedingungen",
   'footer_href_cloud_services_agreement' => "https://docs.caseware.com/2020/webapps/31/de/Setup/Licenses/CaseWare-Cloud-Services-Agreement.htm?region=int",
   'footer_text_cloud_services_agreement' => "Rahmenvereinbarung für Produkte und Dienstleistungen",
-  'footer_href_cloud_service_level_agreement' => "https://docs.caseware.com/latest/webapps/en/Setup/Licenses/CaseWare-Cloud-Services-Agreement.htm?region=int",
-  'footer_text_cloud_service_level_agreement' => "Caseware Cloud Vereinbarung zum Service-Level",
+  'footer_href_cloud_service_level_agreement' => "",
+  'footer_text_cloud_service_level_agreement' => "",
   'footer_text_resources' => "Mehr erfahren",
   'footer_href_support' => "https://www.caseware.net/support/",
   'footer_text_support' => "Support",
@@ -46,5 +46,5 @@ return [
   'footer_text_contact' => "Kontakt",
   'footer_address' => "CaseWare Germany GmbH<br />Toulouser Allee 19a<br />40211 Düsseldorf<br />Deutschland",
   'footer_telephone' => "Telefon: +49 211 5 20 59-438",
-  'footer_fax' => "Fax: 416-867-1906"
+  'footer_fax' => ""
 ];
