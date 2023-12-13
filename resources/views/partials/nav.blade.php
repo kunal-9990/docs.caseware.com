@@ -16,7 +16,7 @@ $lang_array = [
     "de"=> "Deutsch",
     "nl"=> "Nederlands"
 ];
-$selected_option = ($lang_array[$lang])." (".$region_array[$tocregion].")";
+$selected_option = ($lang_array[$lang])." (".$region_array[$region].")";
 
 //list of URLs for the dropdown options 
 $ca_en = Request::path();
