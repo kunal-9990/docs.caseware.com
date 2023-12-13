@@ -31,7 +31,7 @@ return [
   'footer_href_terms_of_use' => "https://www.caseware.com/terms-of-use/",
   'footer_text_terms_of_use' => "Allgemeine Geschäftsbedingungen",
   'footer_href_cloud_services_agreement' => "https://docs.caseware.com/2020/webapps/31/de/Setup/Licenses/CaseWare-Cloud-Services-Agreement.htm?region=int",
-  'footer_text_cloud_services_agreement' => "Rahmenvereinbarung für Produkte und Dienstleistungen",
+  'footer_text_cloud_services_agreement' => "Rahmenvereinbarungen",
   'footer_href_cloud_service_level_agreement' => "",
   'footer_text_cloud_service_level_agreement' => "",
   'footer_text_resources' => "Mehr erfahren",
