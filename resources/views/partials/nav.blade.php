@@ -33,7 +33,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
 
     {{-- on topic pages --}}
     @if(!empty($version))
-
+        @php
         $ca_en = str_replace('/'.$lang ,'/en', $ca_en);
         $ca_en.="?region=ca";
         $us_en = str_replace('/'.$lang ,'/en', $us_en);
@@ -46,7 +46,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         $int_nl.="?region=int";
         $int_de = str_replace('/'.$lang ,'/de', $int_de);
         $int_de.="?region=int";
-
+        @endphp
         <div class="language__dropdown dropdown">
             <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{$selected_option}}</span> <i class="fas fa-angle-down"></i></a>
             <div class="dropdown-content">
@@ -69,7 +69,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
     </div> -->
     {{-- on cms pages --}}
     @else
-    
+    @php
         $ca_en = str_replace('/'.$lang ,'/en', $ca_en);
         $ca_en = str_replace($region.'/' , 'ca/', $ca_en);
         $us_en = str_replace('/'.$lang ,'/en', $us_en);
@@ -82,7 +82,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         $int_nl = str_replace($region.'/' , 'int/', $int_nl);
         $int_de = str_replace('/'.$lang ,'/de', $int_de);
         $int_de = str_replace($region.'/' , 'int/', $int_de);
-
+    @endphp
         <div class="language__dropdown dropdown">
             <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{$selected_option}}</span> <i class="fas fa-angle-down"></i></a>
             <div class="dropdown-content">
