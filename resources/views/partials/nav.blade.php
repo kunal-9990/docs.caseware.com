@@ -6,14 +6,15 @@ isset(Route::current()->parameters()["version"]) ? $version = Route::current()->
 
 //array to identify region & language together for dropdown
 $region_array = [
-    "ca": "Canada",
-    "us": "US",
-    "int": "International"
+    "ca"=> "Canada",
+    "us"=> "US",
+    "int"=> "International"
 ];
 $lang_array = [
-    "en": "English",
-    "fr": "Français",
-    "nl": "Nederlands"
+    "en"=> "English",
+    "fr"=> "Français",
+    "de"=> "Deutsch",
+    "nl"=> "Nederlands"
 ];
 $selected_option = ($lang_array[$lang])." (".$region_array[$tocregion].")";
 
