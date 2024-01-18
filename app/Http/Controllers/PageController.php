@@ -252,7 +252,7 @@ class PageController extends Controller
             }
 
             if($topic == 'Staff---Contact-collaboration-(old-query-layout).htm'){
-                $redirectURL = '/2020/webapps/31/'.$lang.'/Engagements/File-Preparation/Staff---Contact-collaboration-(old-query-layout).htm';
+                $redirectURL = '/2020/webapps/31/'.$lang.'/Engagements/File-Preparation/Staff-Contact-collaboration-(Queries).htm';
                 return redirect($redirectURL, 301);
             }
             
