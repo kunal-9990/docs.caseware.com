@@ -17,6 +17,9 @@ $lang_array = [
     "nl"=> "Nederlands"
 ];
 $selected_option = ($lang_array[$lang])." (".$region_array[$tocregion].")";
+if($lang == "de") {
+    $selected_option = str_replace('(International)','', $selected_option);
+}
 
 //list of URLs for the dropdown options 
 $ca_en = Request::path();
@@ -55,7 +58,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
                 <a href="/{{ $int_en }}"> English (International) </a>
                 <a href="/{{ $ca_fr }}"> Français (Canada) </a>
                 <a href="/{{ $int_nl }}"> Nederlands (Nederland) </a>
-                <a href="/{{ $int_de }}"> Deutsch (Deutschland) </a>
+                <a href="/{{ $int_de }}"> Deutsch </a>
             </div>
         </div>
 
@@ -91,7 +94,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
                 <a href="/{{ $int_en }}"> English (International) </a>
                 <a href="/{{ $ca_fr }}"> Français (Canada) </a>
                 <a href="/{{ $int_nl }}"> Nederlands (Nederland) </a>
-                <a href="/{{ $int_de }}"> Deutsch (Deutschland) </a>
+                <a href="/{{ $int_de }}"> Deutsch </a>
             </div>
         </div>
 
