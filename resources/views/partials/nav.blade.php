@@ -20,6 +20,10 @@ $selected_option = ($lang_array[$lang])." (".$region_array[$tocregion].")";
 if($lang == "de") {
     $selected_option = str_replace('(International)','', $selected_option);
 }
+echo "<script>console.log('Lang: ".$lang."'); </script>";
+echo "<script>console.log('Region: ".$region."'); </script>";
+echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
+echo "<script>console.log('Toc region: ".$tocregion."'); </script>";
 
 //list of URLs for the dropdown options 
 $ca_en = Request::path();
