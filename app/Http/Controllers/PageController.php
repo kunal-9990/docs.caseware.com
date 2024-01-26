@@ -245,9 +245,27 @@ class PageController extends Controller
             $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-ReviewComp-Contact.htm';
             return redirect($redirectURL, 301);
         }        
-        if($category == 'Engagements' && $subcategory == 'File-Preparation' && $topic == 'Import-engagement-data-from-CaseWare-Working-Papers-to-CW-RCT.htm'){
-            $redirectURL = '/2020/webapps/31/'.$lang.'/Engagements/File-Preparation/Import-engagement-data-from-Caseware-Working-Papers-to-Caseware-ReviewComp.htm';
-            return redirect($redirectURL, 301);
+        if($category == 'Engagements' && $subcategory == 'File-Preparation'){
+            if($topic == 'Import-engagement-data-from-CaseWare-Working-Papers-to-CW-RCT.htm'){
+                $redirectURL = '/2020/webapps/31/'.$lang.'/Engagements/File-Preparation/Import-engagement-data-from-Caseware-Working-Papers-to-Caseware-ReviewComp.htm';
+                return redirect($redirectURL, 301);
+            }
+
+            if($topic == 'Staff---Contact-collaboration-(old-query-layout).htm'){
+                $redirectURL = '/2020/webapps/31/'.$lang.'/Engagements/File-Preparation/Staff-Contact-collaboration-(Queries).htm';
+                return redirect($redirectURL, 301);
+            }
+            
+            if($topic == 'Respond-to-queries.htm'){
+                $redirectURL = '/2020/webapps/31/'.$lang.'/Engagements/File-Preparation/Respond-to-a-query.htm';
+                return redirect($redirectURL, 301);
+            }
+        }
+        if($category == 'Engagements' && $subcategory == 'Planning'){
+            if($topic == 'Send-a-query-to-clients-(old-query-layout).htm'){
+                $redirectURL = '/2020/webapps/31/'.$lang.'/Engagements/File-Preparation/Send-the-query-to-contacts.htm';
+                return redirect($redirectURL, 301);
+            }
         }
 
         
