@@ -8,7 +8,9 @@ isset(Route::current()->parameters()["version"]) ? $version = Route::current()->
 $region_array = [
     "ca"=> "Canada",
     "us"=> "US",
-    "int"=> "International"
+    "int"=> "International",
+    "de"=> "",
+    "nl"=> "Nederland"
 ];
 $lang_array = [
     "en"=> "English",
@@ -16,10 +18,7 @@ $lang_array = [
     "de"=> "Deutsch",
     "nl"=> "Nederlands"
 ];
-$selected_option = ($lang_array[$lang])." (".$region_array[$tocregion].")";
-if($lang == "de") {
-    $selected_option = str_replace('(International)','', $selected_option);
-}
+
 echo "<script>console.log('Lang: ".$lang."'); </script>";
 echo "<script>console.log('Region: ".$region."'); </script>";
 echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
@@ -41,6 +40,14 @@ we're on a topic page or cms page as only topic pages have the version in the ur
     {{-- on topic pages --}}
     @if(!empty($version))
         @php
+        
+        //set the selected option text for the lang/region dropdown
+        if($lang == "de" || $lang == "nl") {
+            $selected_option = ($lang_array[$lang])." (".$region_array[$lang].")";
+        } else {
+            $selected_option = ($lang_array[$lang])." (".$region_array[$tocregion].")";
+        }
+
         $ca_en = str_replace('/'.$lang ,'/en', $ca_en);
         $ca_en.="?region=ca";
         $us_en = str_replace('/'.$lang ,'/en', $us_en);
@@ -77,6 +84,14 @@ we're on a topic page or cms page as only topic pages have the version in the ur
     {{-- on cms pages --}}
     @else
     @php
+        
+        //set the selected option text for the lang/region dropdown
+        if($lang == "de" || $lang == "nl") {
+            $selected_option = ($lang_array[$lang])." (".$region_array[$lang].")";
+        } else {
+            $selected_option = ($lang_array[$lang])." (".$region_array[$region].")";
+        }
+
         $ca_en = str_replace('/'.$lang ,'/en', $ca_en);
         $ca_en = str_replace($region.'/' , 'ca/', $ca_en);
         $us_en = str_replace('/'.$lang ,'/en', $us_en);
