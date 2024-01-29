@@ -87,9 +87,9 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         
         //set the selected option text for the lang/region dropdown
         if($lang == "de" || $lang == "nl") {
-            $selected_option = ($lang_array[$lang])." (".$region_array[$lang].")";
+            $selected_option = ($lang_array[$lang]).$region_array[$lang];
         } else {
-            $selected_option = ($lang_array[$lang])." (".$region_array[$region].")";
+            $selected_option = ($lang_array[$lang]).$region_array[$region];
         }        
         echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
 
