@@ -6,11 +6,11 @@ isset(Route::current()->parameters()["version"]) ? $version = Route::current()->
 
 //array to identify region & language together for dropdown
 $region_array = [
-    "ca"=> "Canada",
-    "us"=> "US",
-    "int"=> "International",
+    "ca"=> " (Canada)",
+    "us"=> " (US)",
+    "int"=> " (International)",
     "de"=> "",
-    "nl"=> "Nederland"
+    "nl"=> " (Nederland)"
 ];
 $lang_array = [
     "en"=> "English",
@@ -42,9 +42,9 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         
         //set the selected option text for the lang/region dropdown
         if($lang == "de" || $lang == "nl") {
-            $selected_option = ($lang_array[$lang])." (".$region_array[$lang].")";
+            $selected_option = ($lang_array[$lang]).$region_array[$lang];
         } else {
-            $selected_option = ($lang_array[$lang])." (".$region_array[$tocregion].")";
+            $selected_option = ($lang_array[$lang]).$region_array[$tocregion];
         }
         echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
 
@@ -64,12 +64,12 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         <div class="language__dropdown dropdown">
             <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{$selected_option}}</span> <i class="fas fa-angle-down"></i></a>
             <div class="dropdown-content">
-                <a href="/{{ $ca_en }}"> English (Canada) </a>
-                <a href="/{{ $us_en }}"> English (US) </a>
-                <a href="/{{ $int_en }}"> English (International) </a>
-                <a href="/{{ $ca_fr }}"> Français (Canada) </a>
-                <a href="/{{ $int_nl }}"> Nederlands (Nederland) </a>
-                <a href="/{{ $int_de }}"> Deutsch </a>
+                <a href="/{{ $ca_en }}"><span class="notranslate"> English (Canada) </span></a>
+                <a href="/{{ $us_en }}"><span class="notranslate"> English (US) </span></a>
+                <a href="/{{ $int_en }}"><span class="notranslate"> English (International) </span></a>
+                <a href="/{{ $ca_fr }}"><span class="notranslate"> Français (Canada) </span></a>
+                <a href="/{{ $int_nl }}"><span class="notranslate"> Nederlands (Nederland) </span></a>
+                <a href="/{{ $int_de }}"><span class="notranslate"> Deutsch </span></a>
             </div>
         </div>
 
@@ -109,12 +109,12 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         <div class="language__dropdown dropdown">
             <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{$selected_option}}</span> <i class="fas fa-angle-down"></i></a>
             <div class="dropdown-content">
-                <a href="/{{ $ca_en }}"> English (Canada) </a>
-                <a href="/{{ $us_en }}"> English (US) </a>
-                <a href="/{{ $int_en }}"> English (International) </a>
-                <a href="/{{ $ca_fr }}"> Français (Canada) </a>
-                <a href="/{{ $int_nl }}"> Nederlands (Nederland) </a>
-                <a href="/{{ $int_de }}"> Deutsch </a>
+                <a href="/{{ $ca_en }}"><span class="notranslate"> English (Canada) </span></a>
+                <a href="/{{ $us_en }}"><span class="notranslate"> English (US) </span></a>
+                <a href="/{{ $int_en }}"><span class="notranslate"> English (International) </span></a>
+                <a href="/{{ $ca_fr }}"><span class="notranslate"> Français (Canada) </span></a>
+                <a href="/{{ $int_nl }}"><span class="notranslate"> Nederlands (Nederland) </span></a>
+                <a href="/{{ $int_de }}"><span class="notranslate"> Deutsch </span></a>
             </div>
         </div>
 
