@@ -10,13 +10,15 @@ $region_array = [
     "us"=> " (US)",
     "int"=> " (International)",
     "de"=> "",
-    "nl"=> " (Nederland)"
+    "nl"=> " (Nederland)",
+    "es"=>""
 ];
 $lang_array = [
     "en"=> "English",
     "fr"=> "Français",
     "de"=> "Deutsch",
-    "nl"=> "Nederlands"
+    "nl"=> "Nederlands",
+    "es"=> "Español"
 ];
 
 echo "<script>console.log('Lang: ".$lang."'); </script>";
@@ -30,6 +32,7 @@ $int_en = Request::path();
 $ca_fr = Request::path();
 $int_nl = Request::path();
 $int_de = Request::path();
+$int_es = Request::path();
 
 @endphp
 <div class="nav-container">
@@ -41,7 +44,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         @php
         
         //set the selected option text for the lang/region dropdown
-        if($lang == "de" || $lang == "nl") {
+        if($lang == "de" || $lang == "nl" || $lang == "es") {
             $selected_option = ($lang_array[$lang]).$region_array[$lang];
         } else {
             $selected_option = ($lang_array[$lang]).$region_array[$tocregion];
@@ -60,6 +63,8 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         $int_nl.="?region=int";
         $int_de = str_replace('/'.$lang ,'/de', $int_de);
         $int_de.="?region=int";
+        $int_es = str_replace('/'.$lang ,'/es', $int_es);
+        $int_es.="?region=int";
         @endphp
         <div class="language__dropdown dropdown">
             <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{$selected_option}}</span> <i class="fas fa-angle-down"></i></a>
@@ -70,6 +75,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
                 <a href="/{{ $ca_fr }}"><span class="notranslate"> Français (Canada) </span></a>
                 <a href="/{{ $int_nl }}"><span class="notranslate"> Nederlands (Nederland) </span></a>
                 <a href="/{{ $int_de }}"><span class="notranslate"> Deutsch </span></a>
+                <a href="/{{ $int_es }}"><span class="notranslate"> Español </span></a>
             </div>
         </div>
 
@@ -86,7 +92,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
     @php
         
         //set the selected option text for the lang/region dropdown
-        if($lang == "de" || $lang == "nl") {
+        if($lang == "de" || $lang == "nl" || $lang == "es") {
             $selected_option = ($lang_array[$lang]).$region_array[$lang];
         } else {
             $selected_option = ($lang_array[$lang]).$region_array[$region];
@@ -105,6 +111,8 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         $int_nl = str_replace($region.'/' , 'int/', $int_nl);
         $int_de = str_replace('/'.$lang ,'/de', $int_de);
         $int_de = str_replace($region.'/' , 'int/', $int_de);
+        $int_es = str_replace('/'.$lang ,'/es', $int_es);
+        $int_es = str_replace($region.'/' , 'int/', $int_es);
     @endphp
         <div class="language__dropdown dropdown">
             <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{$selected_option}}</span> <i class="fas fa-angle-down"></i></a>
@@ -115,6 +123,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
                 <a href="/{{ $ca_fr }}"><span class="notranslate"> Français (Canada) </span></a>
                 <a href="/{{ $int_nl }}"><span class="notranslate"> Nederlands (Nederland) </span></a>
                 <a href="/{{ $int_de }}"><span class="notranslate"> Deutsch </span></a>
+                <a href="/{{ $int_es }}"><span class="notranslate"> Español </span></a>
             </div>
         </div>
 
