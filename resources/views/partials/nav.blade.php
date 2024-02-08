@@ -21,9 +21,9 @@ $lang_array = [
     "es"=> "Español"
 ];
 
-echo "<script>console.log('Lang: ".$lang."'); </script>";
-echo "<script>console.log('Region: ".$region."'); </script>";
-echo "<script>console.log('Toc region: ".$tocregion."'); </script>";
+//echo "<script>console.log('Lang: ".$lang."'); </script>";
+//echo "<script>console.log('Region: ".$region."'); </script>";
+//echo "<script>console.log('Toc region: ".$tocregion."'); </script>";
 
 //list of URLs for the dropdown options 
 $ca_en = Request::path();
@@ -49,7 +49,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         } else {
             $selected_option = ($lang_array[$lang]).$region_array[$tocregion];
         }
-        echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
+        //echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
 
         $ca_en = str_replace('/'.$lang ,'/en', $ca_en);
         $ca_en.="?region=ca";
@@ -97,7 +97,7 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         } else {
             $selected_option = ($lang_array[$lang]).$region_array[$region];
         }        
-        echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
+        //echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
 
         $ca_en = str_replace('/'.$lang ,'/en', $ca_en);
         $ca_en = str_replace($region.'/' , 'ca/', $ca_en);
