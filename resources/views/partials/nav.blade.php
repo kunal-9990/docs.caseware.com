@@ -93,11 +93,13 @@ we're on a topic page or cms page as only topic pages have the version in the ur
         
         //set the selected option text for the lang/region dropdown
         if($lang == "de" || $lang == "nl" || $lang == "es") {
-            $selected_option = ($lang_array[$lang]).$region_array[$lang];
+            $selected_option = ((!empty($lang_array[$lang])) ? $lang_array[$lang] : '').((!empty($region_array[$lang])) ? $region_array[$lang] : '');
+            //$selected_option = ($lang_array[$lang]).$region_array[$lang];
         } else {
-            $selected_option = ($lang_array[$lang]).$region_array[$region];
+            $selected_option = ((!empty($lang_array[$lang])) ? $lang_array[$lang] : '').((!empty($region_array[$region])) ? $region_array[$region] : '');
+            //$selected_option = ($lang_array[$lang]).$region_array[$region];
         }        
-        //echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
+        echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
 
         $ca_en = str_replace('/'.$lang ,'/en', $ca_en);
         $ca_en = str_replace($region.'/' , 'ca/', $ca_en);
