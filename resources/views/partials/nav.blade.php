@@ -21,9 +21,9 @@ $lang_array = [
     "es"=> "Español"
 ];
 
-//echo "<script>console.log('Lang: ".$lang."'); </script>";
-//echo "<script>console.log('Region: ".$region."'); </script>";
-//echo "<script>console.log('Toc region: ".$tocregion."'); </script>";
+echo "<script>console.log('Lang: ".$lang."'); </script>";
+echo "<script>console.log('Region: ".$region."'); </script>";
+echo "<script>console.log('Toc region: ".$tocregion."'); </script>";
 
 //list of URLs for the dropdown options 
 $ca_en = Request::path();
