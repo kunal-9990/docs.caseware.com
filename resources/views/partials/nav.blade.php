@@ -27,6 +27,11 @@ echo "<script>console.log('Region: ".$region."'); </script>";
 echo "<script>console.log('Toc region: ".$tocregion."'); </script>";
 echo "<script>console.log('searchparameter: ".$searchparameter."'); </script>";
 
+$fullurl = Request::fullurl();
+$query = Request::query();
+echo "<script>console.log('fullurl: ".$fullurl."'); </script>";
+echo "<script>console.log('query: ".$query."'); </script>";
+
 //list of URLs for the dropdown options 
 $ca_en = Request::path();
 $us_en = Request::path();
