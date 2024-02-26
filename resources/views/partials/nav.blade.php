@@ -100,25 +100,25 @@ $int_es = Request::path();
                 $region = Request::input('region');          
                 
                 //set the URLs for region dropdown
-                $ca_en = Request::fullurl();
+                $ca_en = str_replace(Request::url(), '', Request::fullUrl());
                 $ca_en = str_replace($lang ,'en', $ca_en);
                 $ca_en = str_replace($region , 'ca', $ca_en);
-                $us_en = Request::fullurl();
+                $us_en = str_replace(Request::url(), '', Request::fullUrl());
                 $us_en = str_replace($lang ,'en', $us_en);
                 $us_en = str_replace($region , 'us', $us_en);
-                $int_en = Request::fullurl();
+                $int_en = str_replace(Request::url(), '', Request::fullUrl());
                 $int_en = str_replace($lang ,'en', $int_en);
                 $int_en = str_replace($region , 'int', $int_en);
-                $ca_fr = Request::fullurl();
+                $ca_fr = str_replace(Request::url(), '', Request::fullUrl());
                 $ca_fr = str_replace($lang ,'fr', $ca_fr);
                 $ca_fr = str_replace($region , 'ca', $ca_fr);
-                $int_nl = Request::fullurl();
+                $int_nl = str_replace(Request::url(), '', Request::fullUrl());
                 $int_nl = str_replace($lang ,'nl', $int_nl);
                 $int_nl = str_replace($region , 'int', $int_nl);
-                $int_de = Request::fullurl();
+                $int_de = str_replace(Request::url(), '', Request::fullUrl());
                 $int_de = str_replace($lang ,'de', $int_de);
                 $int_de = str_replace($region , 'int', $int_de);
-                $int_es = Request::fullurl();
+                $int_es = str_replace(Request::url(), '', Request::fullUrl());
                 $int_es = str_replace($lang ,'es', $int_es);
                 $int_es = str_replace($region , 'int', $int_es);
             } else {
