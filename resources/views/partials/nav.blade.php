@@ -27,11 +27,6 @@ echo "<script>console.log('Region: ".$region."'); </script>";
 echo "<script>console.log('Toc region: ".$tocregion."'); </script>";
 echo "<script>console.log('searchparameter: ".$searchparameter."'); </script>";
 
-$fullurl = Request::fullurl();
-$query = Request::query();
-echo "<script>console.log('fullurl: ".$fullurl."'); </script>";
-dd($query);
-
 //list of URLs for the dropdown options 
 $ca_en = Request::path();
 $us_en = Request::path();
@@ -99,8 +94,48 @@ $int_es = Request::path();
 
             //if the page is search page
             if($searchparameter !== 'none') {
+
+                //get lang & region from the query parameter
                 $lang = Request::input('lang');
-                $region = $tocregion;
+                $region = Request::input('region');          
+                
+                //set the URLs for region dropdown
+                $ca_en = Request::fullurl();
+                $ca_en = str_replace($lang ,'en', $ca_en);
+                $ca_en = str_replace($region , 'ca', $ca_en);
+                $us_en = Request::fullurl();
+                $us_en = str_replace($lang ,'en', $us_en);
+                $us_en = str_replace($region , 'us', $us_en);
+                $int_en = Request::fullurl();
+                $int_en = str_replace($lang ,'en', $int_en);
+                $int_en = str_replace($region , 'int', $int_en);
+                $ca_fr = Request::fullurl();
+                $ca_fr = str_replace($lang ,'fr', $ca_fr);
+                $ca_fr = str_replace($region , 'ca', $ca_fr);
+                $int_nl = Request::fullurl();
+                $int_nl = str_replace($lang ,'nl', $int_nl);
+                $int_nl = str_replace($region , 'int', $int_nl);
+                $int_de = Request::fullurl();
+                $int_de = str_replace($lang ,'de', $int_de);
+                $int_de = str_replace($region , 'int', $int_de);
+                $int_es = Request::fullurl();
+                $int_es = str_replace($lang ,'es', $int_es);
+                $int_es = str_replace($region , 'int', $int_es);
+            } else {
+                $ca_en = str_replace('/'.$lang ,'/en', $ca_en);
+                $ca_en = str_replace($region.'/' , 'ca/', $ca_en);
+                $us_en = str_replace('/'.$lang ,'/en', $us_en);
+                $us_en = str_replace($region.'/' , 'us/', $us_en);
+                $int_en = str_replace('/'.$lang ,'/en', $int_en);
+                $int_en = str_replace($region.'/' , 'int/', $int_en);
+                $ca_fr = str_replace('/'.$lang ,'/fr', $ca_fr);
+                $ca_fr = str_replace($region.'/' , 'ca/', $ca_fr);
+                $int_nl = str_replace('/'.$lang ,'/nl', $int_nl);
+                $int_nl = str_replace($region.'/' , 'int/', $int_nl);
+                $int_de = str_replace('/'.$lang ,'/de', $int_de);
+                $int_de = str_replace($region.'/' , 'int/', $int_de);
+                $int_es = str_replace('/'.$lang ,'/es', $int_es);
+                $int_es = str_replace($region.'/' , 'int/', $int_es);
             }
             
             //set the selected option text for the lang/region dropdown
@@ -111,20 +146,7 @@ $int_es = Request::path();
             }        
             echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
 
-            $ca_en = str_replace('/'.$lang ,'/en', $ca_en);
-            $ca_en = str_replace($region.'/' , 'ca/', $ca_en);
-            $us_en = str_replace('/'.$lang ,'/en', $us_en);
-            $us_en = str_replace($region.'/' , 'us/', $us_en);
-            $int_en = str_replace('/'.$lang ,'/en', $int_en);
-            $int_en = str_replace($region.'/' , 'int/', $int_en);
-            $ca_fr = str_replace('/'.$lang ,'/fr', $ca_fr);
-            $ca_fr = str_replace($region.'/' , 'ca/', $ca_fr);
-            $int_nl = str_replace('/'.$lang ,'/nl', $int_nl);
-            $int_nl = str_replace($region.'/' , 'int/', $int_nl);
-            $int_de = str_replace('/'.$lang ,'/de', $int_de);
-            $int_de = str_replace($region.'/' , 'int/', $int_de);
-            $int_es = str_replace('/'.$lang ,'/es', $int_es);
-            $int_es = str_replace($region.'/' , 'int/', $int_es);
+            
         @endphp
         <div class="language__dropdown dropdown">
             <a href="#"><i class="fas fa-globe-americas"></i> <span class="notranslate">{{$selected_option}}</span> <i class="fas fa-angle-down"></i></a>
