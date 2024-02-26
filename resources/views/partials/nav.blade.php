@@ -91,14 +91,18 @@ $int_es = Request::path();
     {{-- on cms pages --}}
     @else
         @php
+
+            //if the page is search page
+            if($searchparameter !== 'none') {
+                $lang = Request::input('lang');
+                $region = $tocregion;
+            }
             
             //set the selected option text for the lang/region dropdown
             if($lang == "de" || $lang == "nl" || $lang == "es") {
                 $selected_option = ((!empty($lang_array[$lang])) ? $lang_array[$lang] : '').((!empty($region_array[$lang])) ? $region_array[$lang] : '');
-                //$selected_option = ($lang_array[$lang]).$region_array[$lang];
             } else {
                 $selected_option = ((!empty($lang_array[$lang])) ? $lang_array[$lang] : '').((!empty($region_array[$region])) ? $region_array[$region] : '');
-                //$selected_option = ($lang_array[$lang]).$region_array[$region];
             }        
             echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
 
