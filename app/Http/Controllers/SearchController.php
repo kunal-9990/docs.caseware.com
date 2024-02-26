@@ -32,6 +32,7 @@ class SearchController extends Controller
         $version = $request->input('version');
         $lang = $request->input('lang');
         $category = $request->input('category');
+        $region = $request->input('region');
         $filters = "";
 
 
