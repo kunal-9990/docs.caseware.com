@@ -100,7 +100,7 @@ $int_es = Request::path();
                 $region = Request::input('region');          
                 
                 //set the URLs for region dropdown
-                $ca_en = str_replace(Request::url(), '', Request::fullUrl());
+                $ca_en = $ca_en.str_replace(Request::url(), '', Request::fullUrl());
                 $ca_en = str_replace($lang ,'en', $ca_en);
                 $ca_en = str_replace($region , 'ca', $ca_en);
                 $us_en = str_replace(Request::url(), '', Request::fullUrl());
