@@ -30,7 +30,7 @@ echo "<script>console.log('searchparameter: ".$searchparameter."'); </script>";
 $fullurl = Request::fullurl();
 $query = Request::query();
 echo "<script>console.log('fullurl: ".$fullurl."'); </script>";
-echo "<script>console.log('query: ".$query."'); </script>";
+dd($query);
 
 //list of URLs for the dropdown options 
 $ca_en = Request::path();
