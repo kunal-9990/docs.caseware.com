@@ -22,10 +22,7 @@ $lang_array = [
     "es"=> "Español"
 ];
 
-echo "<script>console.log('Lang: ".$lang."'); </script>";
-echo "<script>console.log('Region: ".$region."'); </script>";
-echo "<script>console.log('Toc region: ".$tocregion."'); </script>";
-echo "<script>console.log('searchparameter: ".$searchparameter."'); </script>";
+//echo "<script>console.log('Lang: ".$lang."'); </script>";
 
 //list of URLs for the dropdown options 
 $ca_en = Request::path();
@@ -92,7 +89,7 @@ $int_es = Request::path();
     @else
         @php
 
-            //if the page is search page
+            //check if the page is search page
             if($searchparameter !== 'none') {
 
                 //get lang & region from the query parameter
@@ -144,7 +141,7 @@ $int_es = Request::path();
             } else {
                 $selected_option = ((!empty($lang_array[$lang])) ? $lang_array[$lang] : '').((!empty($region_array[$region])) ? $region_array[$region] : '');
             }        
-            echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
+            //echo "<script>console.log('Selected Option: ".$selected_option."'); </script>";
 
             
         @endphp
