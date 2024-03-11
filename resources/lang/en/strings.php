@@ -14,6 +14,7 @@ return [
   'cookie_header' => "Cookie Notice",
   'cookie_notice' => 'Our sites use cookies to improve your online experience. Cookies are stored on your browser to provide secure log-in, gather statistics to improve site behavior, and to show you content that is relevant to your region. You can change your cookie preferences at any time from your browser settings. For information on our privacy practices, see our <a href="https://www.caseware.com/ca/generic/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.',
   'cookie_button_text' => "I understand",
+  'footer_logo_url' => 'https://www.caseware.com',
   'social_media_1' =>'<a href="https://www.linkedin.com/groups/1935174/profile"><i class="fab fa-linkedin"></i></a>',
   'social_media_2' => '<a href="http://www.facebook.com/pages/CaseWare-International-Inc/54418196590?ref=ts"><i class="fab fa-facebook-square"></i></a>',
   'social_media_3' => '<a href="https://twitter.com/CaseWare"><i class="fab fa-twitter-square"></i></a>',

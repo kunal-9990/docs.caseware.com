@@ -14,6 +14,7 @@ return [
   'cookie_header' => "Hinweis zum Einsatz von Cookies",
   'cookie_notice' => 'Wir setzen Cookies ein, um die Nutzung der Website für Sie zu optimieren. Cookies werden in Ihrem Browser gespeichert, um eine sichere Anmeldung zu ermöglichen, Statistikdaten zur Verbesserung des Website-Verhaltens zu sammeln und Ihnen Inhalte anzuzeigen, die für Ihre Region relevant sind. Sie können Ihre Cookie-Einstellungen jederzeit über die Einstellungen Ihres Browsers ändern. Informationen zu unseren Datenschutzmaßnahmen finden Sie in unseren <a href="https://www.caseware.com/ca/generic/privacy-policy" target="_blank" rel="noopener">Datenschutzbestimmungen (EN)</a>.',
   'cookie_button_text' => "OK",
+  'footer_logo_url' => 'https://www.caseware.net',
   'social_media_1' =>'<a href="https://www.linkedin.com/company/caseware-germany"><i class="fab fa-linkedin"></i></a>',
   'social_media_2' => '',
   'social_media_3' => '',

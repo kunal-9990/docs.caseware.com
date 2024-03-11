@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col col-sm-6 col--sm-full">        
-                <a href="https://www.caseware.com">
+                <a href="{{ __('strings.footer_logo_url') }}">
                     <img class="footer__logo" src="/img/CaseWare-Logo-RGB-Primary_Light-TM.png" class="footerlogo" alt="CaseWare logo" />
                 </a>
             </div>
