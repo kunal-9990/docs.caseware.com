@@ -46,7 +46,7 @@ language=$4
 echo 'Copying new content into place...'
 # mkdir -p public/documentation_files/$year/$product/$version/Content/$language
 
-if [ $language = "nl" || $language = "de" ]; then
+if [[ $language = "nl" ]] || [[ $language = "de" ]]; then
    echo "Moving $language toc into place..."
    cp -R "tmp/$language/$version/Online Output_$language.fltoc" public/documentation_files/$year/$product/$version/Content/$language/SE-Authoring-TOC.fltoc
 fi
