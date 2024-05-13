@@ -2,6 +2,7 @@
     isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = 'en';
     isset(Route::current()->parameters()["year"]) ? $year = Route::current()->parameters()["year"] : $year = '2020';
     isset(Route::current()->parameters()["category"]) ? $category = Route::current()->parameters()["category"] : $category = '';
+    (null !== Request::input('region')) ? $region = Request::input('region') : $region = 'int';
 @endphp
 <header class="header">
     <div class="container header__container">
@@ -15,6 +16,7 @@
                     <input type="hidden" name="lang" value={{$lang}}>
                     <input type="hidden" name="year" value={{$year}}>
                     <input type="hidden" name="category" value={{$category}}>
+                    <input type="hidden" name="region" value={{$region}}>
                 </form>
             </div>
             <div class="header__nav-wrap">
