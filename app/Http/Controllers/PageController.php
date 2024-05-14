@@ -189,6 +189,10 @@ class PageController extends Controller
             $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Cloud-Apps/Caseware-ReviewComp.htm';
             return redirect($redirectURL, 301);
         }
+        if($category == 'Explore' && $subcategory == 'Cloud-Apps' && $topic == 'OnPoint-Collaborate.htm'){
+            $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Cloud-Apps/Caseware-PBC.htm';
+            return redirect($redirectURL, 301);
+        }
         if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Whats-new-CaseWare-RCT.htm'){
             $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Whats-New/Whats-new-Caseware-ReviewComp.htm';
             return redirect($redirectURL, 301);
@@ -233,18 +237,36 @@ class PageController extends Controller
             $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Whats-New/Release-history-ReviewComp-Summer-2019.htm';
             return redirect($redirectURL, 301);
         }       
+        if($category == 'Explore' && $subcategory == 'Whats-New' && $topic == 'Whats-new-OnPointCollaborate.htm'){
+            $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Whats-New/Whats-new-Caseware-PBC.htm';
+            return redirect($redirectURL, 301);
+        }       
         if($category == 'Explore' && $subcategory == 'Getting-Started' && $topic == 'Get-started-with-CaseWare-RCT-Firm-Admin.htm'){
             $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-ReviewComp-Firm-Admin.htm';
             return redirect($redirectURL, 301);
         }        
-        if($category == 'Explore' && $subcategory == 'Getting-Started' && $topic == 'Get-started-with-CaseWare-RCT.htm'){
-            $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-ReviewComp.htm';
-            return redirect($redirectURL, 301);
-        } 
-        if($category == 'Explore' && $subcategory == 'Getting-Started' && $topic == 'Get-started-with-CaseWare-RCT-Contact.htm'){
-            $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-ReviewComp-Contact.htm';
-            return redirect($redirectURL, 301);
-        }        
+        if($category == 'Explore' && $subcategory == 'Getting-Started'){
+            if($topic == 'Get-started-with-CaseWare-RCT.htm'){
+                $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-ReviewComp.htm';
+                return redirect($redirectURL, 301);
+            } 
+            if($topic == 'Get-started-with-CaseWare-RCT-Contact.htm'){
+                $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-ReviewComp-Contact.htm';
+                return redirect($redirectURL, 301);
+            }    
+            if($topic == 'Get-started-with-OnPoint-Collaborate-Firm-Admin.htm'){
+                $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-PBC-Firm-Admin.htm';
+                return redirect($redirectURL, 301);
+            }   
+            if($topic == 'Get-started-with-OnPoint-Collaborate.htm'){
+                $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-PBC.htm';
+                return redirect($redirectURL, 301);
+            } 
+            if($topic == 'Get-started-with-OnPoint-Collaborate-Contact.htm'){
+                $redirectURL = '/2020/webapps/31/'.$lang.'/Explore/Getting-Started/Get-started-with-Caseware-PBC-Contact.htm';
+                return redirect($redirectURL, 301);
+            } 
+        }   
         if($category == 'Engagements' && $subcategory == 'File-Preparation'){
             if($topic == 'Import-engagement-data-from-CaseWare-Working-Papers-to-CW-RCT.htm'){
                 $redirectURL = '/2020/webapps/31/'.$lang.'/Engagements/File-Preparation/Import-engagement-data-from-Caseware-Working-Papers-to-Caseware-ReviewComp.htm';
@@ -267,9 +289,6 @@ class PageController extends Controller
                 return redirect($redirectURL, 301);
             }
         }
-
-        
-
       
         //as a result of product rename from OnPoint Tax -> OnPoint Taxflow -> Caseware Taxflow
         // check for OnPoint-Tax URLs and redirect it to OnPoint-Taxflow
@@ -291,6 +310,62 @@ class PageController extends Controller
             return redirect($redirectURL, 301);
         }
 
+        //as a result of product rename from OnPoint Collaborate to Caseware PBC
+        if($category == "Explore" && $subcategory == "OnPoint-Collaborate") {
+            $redirectURL = '/2020/webapps/31/'.$lang.'/'.$category.'/US-Caseware-PBC';
+            if($topic == "OnPoint-Collaborate-index.htm"){
+                $redirectURL .= '/Caseware-PBC-index.htm';
+            }
+            if($topic == "Known-issues.htm"){
+                $redirectURL .= '/Known-issues.htm';
+            }
+            if($topic == "PBC-Request-document-workflow.htm"){
+                $redirectURL .= '/PBC-Request-document-workflow.htm';
+            }
+            if($topic == "Create-an-OnPoint-Collaborate-engagement-file.htm"){
+                $redirectURL .= '/Create-a-Caseware-PBC-engagement-file.htm';
+            }
+            if($topic == "Complete-the-client-optimization-document.htm"){
+                $redirectURL .= '/Complete-the-client-optimization-document.htm';
+            }
+            if($topic == "Review-the-PBC-Request-document.htm"){
+                $redirectURL .= '/Review-the-PBC-Request-document.htm';
+            }
+            if($topic == "Send-the-PBC-Request-to-clients.htm"){
+                $redirectURL .= '/Send-the-PBC-Request-to-clients.htm';
+            }
+            if($topic == "Clients-respond-to-the-PBC-Request.htm"){
+                $redirectURL .= '/Clients-respond-to-the-PBC-Request.htm';
+            }
+            if($topic == "Review-client-progress-and-responses.htm"){
+                $redirectURL .= '/Review-client-progress-and-responses.htm';
+            }
+            if($topic == "Collaborate-with-clients.htm"){
+                $redirectURL .= '/Collaborate-with-clients.htm';
+            }
+            if($topic == "Reopen-the-PBC-Request.htm"){
+                $redirectURL .= '/Reopen-the-PBC-Request.htm';
+            }
+            if($topic == "View-the-status-of-the-PBC-Request.htm"){
+                $redirectURL .= '/View-the-status-of-the-PBC-Request.htm';
+            }
+            if($topic == "Complete-the-PBC-Request.htm"){
+                $redirectURL .= '/Complete-the-PBC-Request.htm';
+            }
+            if($topic == "Locate-the-clients-documents.htm"){
+                $redirectURL .= '/Locate-the-clients-documents.htm';
+            }
+            if($topic == "Wrap-up-the-engagement.htm"){
+                $redirectURL .= '/Wrap-up-the-engagement.htm';
+            }
+            if($topic == "Lock-down-the-engagement.htm"){
+                $redirectURL .= '/Lock-down-the-engagement.htm';
+            }
+            if($topic == "Carry-forward-your-OnPoint-Collaborate-engagement.htm"){
+                $redirectURL .= '/Carry-forward-your-Caseware-PBC-engagement.htm';
+            }
+            return redirect($redirectURL, 301);
+        }
         
         //first check if the topic is a what's new page. 
         //if so - get the content from the cms and return What's New template
