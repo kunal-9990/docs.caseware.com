@@ -3,12 +3,12 @@
   <div class="container">
     <div class="cookie__wrapper">
       <div>
-        <h2>Cookie Notice</h2>
-        <p>Our sites use cookies to improve your online experience. Cookies are stored on your browser to provide secure log-in, gather statistics to improve site behavior, and to show you content that is relevant to your region. You can change your cookie preferences at any time from your browser settings. For information on our privacy practices, see our <a href="https://www.caseware.com/ca/generic/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+        <h2>{{ __('strings.cookie_header') }}</h2>
+        <p>{!! __('strings.cookie_notice') !!}</p>
       </div>
       <div>
         <div class="cookie__btn">
-          <span>I understand</span>
+          <span>{{ __('strings.cookie_button_text') }}</span>
         </div>
       </div>
     </div>
