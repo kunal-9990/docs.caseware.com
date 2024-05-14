@@ -17,7 +17,7 @@ class PageController extends Controller
 
     // home
     function home($region, $lang){
-
+        App::setLocale($lang);
         $page = $this->cms->get_custom_post_by_name($lang, 'home', $region);
         
         

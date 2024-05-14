@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 
 
-  var languages = ["en","fr","es","nl","cn"];
+  var languages = ["en","fr","es","nl","cn","de"];
   var link = window.location.href;
   for (i = 0; i < languages.length; i++){
     if(link.search("/"+languages[i]+"/")!==-1){
