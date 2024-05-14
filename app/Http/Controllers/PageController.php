@@ -361,7 +361,7 @@ class PageController extends Controller
             if($topic == "Wrap-up-the-engagement.htm"){
                 $redirectURL .= '/Wrap-up-the-engagement.htm';
             }
-            if($topic == "/Lock-down-the-engagement.htm"){
+            if($topic == "Lock-down-the-engagement.htm"){
                 $redirectURL .= '/Lock-down-the-engagement.htm';
             }
             if($topic == "Carry-forward-your-OnPoint-Collaborate-engagement.htm"){
