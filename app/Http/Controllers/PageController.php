@@ -289,9 +289,6 @@ class PageController extends Controller
                 return redirect($redirectURL, 301);
             }
         }
-
-        
-
       
         //as a result of product rename from OnPoint Tax -> OnPoint Taxflow -> Caseware Taxflow
         // check for OnPoint-Tax URLs and redirect it to OnPoint-Taxflow
@@ -369,7 +366,6 @@ class PageController extends Controller
             }
             return redirect($redirectURL, 301);
         }
-
         
         //first check if the topic is a what's new page. 
         //if so - get the content from the cms and return What's New template
