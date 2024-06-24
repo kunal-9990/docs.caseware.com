@@ -44,7 +44,8 @@ class CheckRegionQuery
             if ($requestRegion !== 'ca' && $requestRegion !== 'us') {
                 $requestRegion = 'int';
             }
-            return redirect($request->path().'?region='.$requestRegion);
+            // Update URL to https and redirect with region
+            return redirect(preg_replace("/^http:/i", "https:", $request->url()).'?region='.$requestRegion);
         }
 
         return $next($request);
