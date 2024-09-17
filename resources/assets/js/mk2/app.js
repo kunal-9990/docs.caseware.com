@@ -29,7 +29,6 @@ const LAYOUT_GRID = require('./modules/grid');
 const TOC = require('./modules/toc');
 const REDIRECTS = require('./modules/redirects');
 const COOKIE_CONSENT = require('./modules/cookie-consent');
-
 $(document).ready(() => {
     
     // cookie consent notification
