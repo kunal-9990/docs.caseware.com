@@ -25,7 +25,7 @@ module.exports = () => {
         var lang = routeComponents[4];
         var linkPrefix = "/" + year + "/" + product + "/" + version + "/" + lang;
         var region = "";
-        if (urlParams.get('region') && (lang !== "nl" && lang !== "de" && lang !== "fr")) {
+        if (urlParams.get('region') && (lang !== "nl" && lang !== "de" && lang !== "fr" && lang !== "es")) {
             console.log("got here test file");
             region = "_"+urlParams.get('region');
         }
@@ -38,12 +38,15 @@ module.exports = () => {
         else if(lang == "fr") {
             region = "_fr";
         }
+        else if(lang == "es") {
+            region = "_es";
+        }
         //hardcoding which toc to return based on language. currently, NL is the only language to have a properly translated TOC
         //this should be changed so that if a properly translated toc doesn't exist, it defaults to english
         // if(lang == "nl"){
         //     var TOCxml = "/documentation_files/" + year + "/" + product + "/" + version + "/Content/" + lang + "/OnlineOutput.xml";
         // }
-        var properlyTranslated = ["en", "nl", "de","fr"];
+        var properlyTranslated = ["en", "nl", "de","fr","es"];
         if (window.location.href.indexOf("SE-Authoring") > -1) {
             console.log("se authoring");
             if (properlyTranslated.includes(lang)) {
