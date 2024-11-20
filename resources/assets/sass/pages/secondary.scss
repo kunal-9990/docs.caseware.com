@@ -434,19 +434,3 @@
         }
     }
 }
-/* Basic chevron styling */
-.chevron {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
-    transform: rotate(45deg);
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-}
-
-/* Rotate chevron when expanded */
-.chevron.expanded {
-    transform: rotate(-135deg); /* Rotate the chevron to point down */
-}
