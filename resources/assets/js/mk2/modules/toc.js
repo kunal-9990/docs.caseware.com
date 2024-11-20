@@ -93,6 +93,7 @@ module.exports = () => {
                             // Check if it's the current page
                             if (link && loc.includes(link.replace(".htm", ""))) {
                                 anchor.addClass('current-page');
+                                li.addClass('active');  // Mark the current page as active
                             }
                             anchor.attr('href', linkPrefix + link);
                         } else {
@@ -104,7 +105,7 @@ module.exports = () => {
         
                         // If the current TocEntry has children, process them recursively
                         if (hasChildren) {
-                            var subList = $('<ul class="toc__sub-category-wrap">');
+                            var subList = $('<ul class="toc__sub-category-wrap toc__sub-category-wrap--collapsed">');  // Initially collapsed
                             processTocEntries(tocEntry.children('TocEntry'), subList); // Recursively process child entries
                             li.append(subList); // Append sublist to the current li
                         }
