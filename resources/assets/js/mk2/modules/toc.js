@@ -62,18 +62,19 @@ module.exports = () => {
             }
         }
         console.log(TOCxml);
+
         $.ajax({
             type: "GET",
             url: TOCxml,
             success: function (xml) {
                 var ul_main = $('<ul class="toc notranslate">');
                 
-                // Recursive function to handle nested TocEntries
+                // Recursive function to process nested TocEntries
                 function processTocEntries(tocEntries, parentUl) {
                     tocEntries.each(function () {
                         var tocEntry = $(this);
                         var li = $('<li class="toc__category">');
-        
+                        
                         var title = tocEntry.attr('Title');
                         var link = tocEntry.attr('Link');
                         var hasChildren = tocEntry.children('TocEntry').length > 0;
@@ -83,12 +84,12 @@ module.exports = () => {
                         // If the current TocEntry has a link, create an anchor tag with the right classes
                         if (link) {
                             if (link && loc.includes(link.replace(".htm", ""))) {
-                                li.append('<a href="' + linkPrefix + link + '" class="current-page ' + producttags + '">' + title + '</a>');
+                                li.append('<a href="' + linkPrefix + link + '" class="current-page ' + producttags + '"><span class="chevron"></span>' + title + '</a>');
                             } else {
-                                li.append('<a href="' + linkPrefix + link + '" class="' + producttags + '">' + title + '</a>');
+                                li.append('<a href="' + linkPrefix + link + '" class="' + producttags + '"><span class="chevron"></span>' + title + '</a>');
                             }
                         } else {
-                            li.append('<a href="#" class="' + producttags + '">' + title + '</a>');
+                            li.append('<a href="#" class="' + producttags + '"><span class="chevron"></span>' + title + '</a>');
                         }
         
                         // If the current TocEntry has children, process them recursively
@@ -173,18 +174,10 @@ module.exports = () => {
                             if (nextElSiblingClass.contains('toc__sub-category-wrap')) {
                                 if (nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded')) {
                                     nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode);
+                                    toggleChevron(event.target, false);
                                 } else {
                                     nextElSiblingClass.add('toc__sub-category-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode);
-                                }
-                            } else if (nextElSiblingClass.contains('toc__topic-wrap')) {
-                                if (nextElSiblingClass.contains('toc__topic-wrap--is-expanded')) {
-                                    nextElSiblingClass.remove('toc__topic-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode);
-                                } else {
-                                    nextElSiblingClass.add('toc__topic-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode);
+                                    toggleChevron(event.target, true);
                                 }
                             }
                         }
@@ -194,11 +187,22 @@ module.exports = () => {
         }
         
         // toggle class that handles rotating chevron
+        function toggleChevron(el, isExpanded) {
+            const chevron = el.querySelector('.chevron');
+            if (isExpanded) {
+                chevron.classList.add('expanded');  // You can customize the chevron icon or rotate it here
+            } else {
+                chevron.classList.remove('expanded');
+            }
+        }
+        
+        // toggle class that handles rotating chevron
         function toggleParentisExpandClass(el) {
             el.classList.contains('toc__category--is-open') ?
                 el.classList.remove('toc__category--is-open') :
                 el.classList.add('toc__category--is-open');
         }
+        
 
 
 };
