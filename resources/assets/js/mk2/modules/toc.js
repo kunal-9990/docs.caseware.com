@@ -89,12 +89,14 @@ module.exports = () => {
                             anchor.addClass('chevron');
                         }
         
+                        // Mark the current page as active
+                        if (link && loc.includes(link.replace(".htm", ""))) {
+                            anchor.addClass('current-page');
+                            li.addClass('active');  // Mark the current page as active
+                        }
+        
+                        // If a link exists, set the href
                         if (link) {
-                            // Check if it's the current page
-                            if (link && loc.includes(link.replace(".htm", ""))) {
-                                anchor.addClass('current-page');
-                                li.addClass('active');  // Mark the current page as active
-                            }
                             anchor.attr('href', linkPrefix + link);
                         } else {
                             anchor.attr('href', '#');
@@ -176,12 +178,14 @@ module.exports = () => {
                     const nextElementSibling = event.target.nextElementSibling;
                     const thisElParentNode = event.target.parentNode;
         
+                    // Only toggle if the link has a chevron (indicating it has children)
                     if (link.classList.contains('chevron')) {
                         event.preventDefault();
         
                         if (nextElementSibling !== null) {
                             const nextElSiblingClass = nextElementSibling.classList;
         
+                            // Toggle the visibility of child elements
                             if (nextElSiblingClass.contains('toc__sub-category-wrap')) {
                                 if (nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded')) {
                                     nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded');
