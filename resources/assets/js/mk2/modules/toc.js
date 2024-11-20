@@ -62,88 +62,55 @@ module.exports = () => {
             }
         }
         console.log(TOCxml);
-
-    $.ajax({
-        type: "GET",
-        url: TOCxml,
-        success: function (xml) {
-            var ul_main = $('<ul class="toc notranslate">');
-            $(xml).find("TocEntry").each(function () {
-                if ($(this).children().length && $(this).parent().is("CatapultToc")) {
-                    var subCatList = $('<ul class="toc__sub-category-wrap">');
-                    $(this).children().each(function () {
-                        if ($(this).children().length) {
-                            var topicList = $('<ul class="toc__topic-wrap">');
-                            $(this).children().each(function () {
-                                var classes;
-                                if (($(this).attr("conditions"))) {
-                                    producttags = $(this).attr("conditions").replace("Product.", "toc__filters--").toLowerCase() + "-js";
-                                } else {
-                                    producttags = " ";
-                                };
-
-                                if ($(this).attr("Link") && loc.includes($(this).attr("Link").replace(".htm", ""))) {
-                                    topicList.append('<li class="current-page ' + producttags + '"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
-                                } else {
-                                    topicList.append('<li class="' + producttags + '"><a href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a></li>');
-                                }
-
-                            });
-                            var link;
-                            if ($(this).attr("Link")) {
-                                link = '<a href="' + linkPrefix + $(this).attr("Link") + '">';
-                            } else {
-                                link = '';
-                            }
-                            var li = $('<li class="toc__sub-category"><a class="chevron" href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a>');
-
-                            subCatList.append(li.append(topicList));
+        $.ajax({
+            type: "GET",
+            url: TOCxml,
+            success: function (xml) {
+                var ul_main = $('<ul class="toc notranslate">');
+                
+                // Recursive function to handle nested TocEntries
+                function processTocEntries(tocEntries, parentUl) {
+                    tocEntries.each(function () {
+                        var tocEntry = $(this);
+                        var li = $('<li class="toc__category">');
+        
+                        var title = tocEntry.attr('Title');
+                        var link = tocEntry.attr('Link');
+                        var hasChildren = tocEntry.children('TocEntry').length > 0;
+        
+                        // If the current TocEntry has a link, create an anchor tag
+                        if (link) {
+                            li.append('<a href="' + linkPrefix + link + '">' + title + '</a>');
                         } else {
-                            if ($(this).attr("Link") && loc.includes($(this).attr("Link"))) {
-                                subCatList.append('<li class="current-page toc__sub-category"><a class="chevron" href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a>');
-                            } else {
-                                subCatList.append('<li class="toc__sub-category"><a class="chevron" href="' + linkPrefix + $(this).attr("Link") + '">' + $(this).attr("Title") + '</a>');
-                            }
+                            li.append('<a href="#">' + title + '</a>');
                         }
+        
+                        // If the current TocEntry has children, process them recursively
+                        if (hasChildren) {
+                            var subList = $('<ul class="toc__sub-category-wrap">');
+                            processTocEntries(tocEntry.children('TocEntry'), subList); // Recursively process child entries
+                            li.append(subList); // Append sublist to the current li
+                        }
+        
+                        // Append the li to the parent ul
+                        parentUl.append(li);
                     });
-                    var li = $('<li class="toc__category"><a class="chevron" href="#">' + $(this).attr("Title") + '</a>');
-                    ul_main.append(li.append(subCatList));
                 }
-            });
-
-            $(".toc__container").append(ul_main);
-
-            //expand section of current page
-            $(".current-page").parent().addClass("toc__topic-wrap--is-expanded");
-            $(".current-page").parent().parent().parent().addClass("toc__sub-category-wrap--is-expanded");
-
-
-            $(".current-page").parent().addClass("toc__sub-category-wrap--is-expanded");
-            $(".current-page").parent().parent().parent().addClass("toc__sub-category-wrap--is-expanded");
-
-            ifSiblingElementExists();
-
-            tocExpandToggle();
-
-            CheckExpandedLists();
-
-            if (urlParams.get('region')) {
-                $(".toc__container").find("a").each(function () {
-                    var href = $(this).attr('href');
-
-                    if (href) {
-                        href += (href.match(/\?/) ? '&' : '?') + "region=" + urlParams.get('region');
-                        $(this).attr('href', href);
-                    }
-                });
+        
+                // Start processing the XML from the root level
+                processTocEntries($(xml).find('TocEntry'), ul_main);
+        
+                $(".toc__container").append(ul_main);
+        
+                // Additional functionality like expanding sections and adding classes can be done here...
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                console.log(errorThrown);
             }
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            console.log(jqXHR);
-            console.log(textStatus);
-            console.log(errorThrown);
-        }
-    });
+        });
+        
 
     // checks to see where to add class to rotate the chevron for expanded toc lists
     // TODO: might have to polyfill .closest() for IE`
