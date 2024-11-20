@@ -70,9 +70,9 @@ module.exports = () => {
                 var ul_main = $('<ul class="toc notranslate">');
                 $(xml).find("TocEntry").each(function () {
                     if ($(this).children().length && $(this).parent().is("CatapultToc")) {
-                        var subCatList = generateTocTree($(this));
+                        var subCatList = generateTocTree($(this)); // Recursively generate the TOC tree
                         var li = $('<li class="toc__category"><a class="chevron" href="#">' + $(this).attr("Title") + '</a>');
-                        ul_main.append(li.append(subCatList));
+                        ul_main.append(li.append(subCatList)); // Append the sub-category list
                     }
                 });
         
@@ -106,31 +106,32 @@ module.exports = () => {
             }
         });
         
-        // Recursive function to generate TOC tree structure
+        // Recursive function to generate the nested TOC tree
         function generateTocTree(entry) {
-            var ul = $('<ul class="toc__sub-category-wrap">');
+            var ul = $('<ul class="toc__sub-category-wrap">');  // Create a container for sub-categories or topics
+            
             entry.children().each(function () {
-                var subCatLink = $(this).attr("Link") ? linkPrefix + $(this).attr("Link") : '#';
                 var producttags = $(this).attr("conditions") ? $(this).attr("conditions").replace("Product.", "toc__filters--").toLowerCase() + "-js" : '';
         
-                // Check if there are nested elements
-                if ($(this).children().length) {
-                    var topicList = $('<ul class="toc__topic-wrap">');
-                    $(this).children().each(function () {
-                        var link = $(this).attr("Link") ? linkPrefix + $(this).attr("Link") : '#';
-                        var title = $(this).attr("Title");
-                        var listItem = '<li class="' + producttags + '"><a href="' + link + '">' + title + '</a></li>';
-                        topicList.append(listItem);
-                    });
+                var link = $(this).attr("Link") ? linkPrefix + $(this).attr("Link") : '#';
+                var title = $(this).attr("Title");
         
-                    var li = $('<li class="toc__sub-category"><a class="chevron" href="' + subCatLink + '">' + $(this).attr("Title") + '</a>');
-                    ul.append(li.append(topicList));
+                if ($(this).children().length) {
+                    // If this entry has children (i.e., it's a category with topics or sub-categories), create a nested list
+                    var topicList = generateTocTree($(this));  // Recursively create topics/sub-categories
+                    var li = $('<li class="toc__sub-category"><a class="chevron" href="' + link + '">' + title + '</a>');
+                    ul.append(li.append(topicList));  // Append the nested list of topics/sub-categories
                 } else {
-                    var li = $('<li class="toc__sub-category"><a class="chevron" href="' + subCatLink + '">' + $(this).attr("Title") + '</a>');
-                    ul.append(li);
+                    // If this entry doesn't have children (i.e., it's a topic), create a simple list item
+                    if (loc.includes($(this).attr("Link"))) {
+                        ul.append('<li class="current-page toc__sub-category"><a href="' + link + '">' + title + '</a></li>');
+                    } else {
+                        ul.append('<li class="toc__sub-category"><a href="' + link + '">' + title + '</a></li>');
+                    }
                 }
             });
-            return ul;
+        
+            return ul;  // Return the constructed list for this level
         }
         
         // checks to see where to add class to rotate the chevron for expanded toc lists
