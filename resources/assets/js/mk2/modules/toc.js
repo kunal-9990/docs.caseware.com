@@ -82,15 +82,25 @@ module.exports = () => {
                         var producttags = "";
         
                         // If the current TocEntry has a link, create an anchor tag with the right classes
-                        if (link) {
-                            if (link && loc.includes(link.replace(".htm", ""))) {
-                                li.append('<a href="' + linkPrefix + link + '" class="current-page ' + producttags + '"><span class="chevron"></span>' + title + '</a>');
-                            } else {
-                                li.append('<a href="' + linkPrefix + link + '" class="' + producttags + '"><span class="chevron"></span>' + title + '</a>');
-                            }
-                        } else {
-                            li.append('<a href="#" class="' + producttags + '"><span class="chevron"></span>' + title + '</a>');
+                        var anchor = $('<a href="#">' + title + '</a>');
+        
+                        // Add chevron class to anchor if there are children
+                        if (hasChildren) {
+                            anchor.addClass('chevron');
                         }
+        
+                        if (link) {
+                            // Check if it's the current page
+                            if (link && loc.includes(link.replace(".htm", ""))) {
+                                anchor.addClass('current-page');
+                            }
+                            anchor.attr('href', linkPrefix + link);
+                        } else {
+                            anchor.attr('href', '#');
+                        }
+        
+                        // Append the anchor to the list item
+                        li.append(anchor);
         
                         // If the current TocEntry has children, process them recursively
                         if (hasChildren) {
@@ -188,9 +198,9 @@ module.exports = () => {
         
         // toggle class that handles rotating chevron
         function toggleChevron(el, isExpanded) {
-            const chevron = el.querySelector('.chevron');
+            const chevron = el; // 'el' itself is the anchor with the chevron class
             if (isExpanded) {
-                chevron.classList.add('expanded');  // You can customize the chevron icon or rotate it here
+                chevron.classList.add('expanded');  // Rotate chevron or change icon as per your CSS
             } else {
                 chevron.classList.remove('expanded');
             }
