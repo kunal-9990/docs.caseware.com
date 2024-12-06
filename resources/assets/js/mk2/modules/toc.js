@@ -98,6 +98,18 @@ module.exports = () => {
                         }
                     });
                 }
+        
+                // Ensure parent categories are expanded for third-level TOC items on page load
+                $(".current-page").each(function () {
+                    var currentElement = $(this);
+                    
+                    // Check and add class for each level of parents
+                    currentElement.parents(".toc__sub-category").each(function () {
+                        $(this).addClass('toc__sub-category-wrap--is-expanded'); // Expand all parent levels of the current page
+                        $(this).closest('.toc__category').addClass('toc__category--is-open'); // Add the open class to the parent category
+                    });
+                });
+        
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log(jqXHR);
