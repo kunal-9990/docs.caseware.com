@@ -99,14 +99,18 @@ module.exports = () => {
                     });
                 }
         
-                // Ensure parent categories are expanded for third-level TOC items on page load
+                // Ensure parent <ul> elements have the right classes for third-level TOC items
                 $(".current-page").each(function () {
                     var currentElement = $(this);
                     
-                    // Check and add class for each level of parents
+                    // Add classes to the parent <ul> (toc__sub-category-wrap) of each current page
+                    currentElement.parents(".toc__sub-category-wrap").each(function () {
+                        $(this).addClass('toc__sub-category-wrap--is-expanded'); // Expand the parent <ul> of current page
+                    });
+        
+                    // Add classes to parent <li> (toc__category) for rotating chevron
                     currentElement.parents(".toc__sub-category").each(function () {
-                        $(this).addClass('toc__sub-category-wrap--is-expanded'); // Expand all parent levels of the current page
-                        $(this).closest('.toc__category').addClass('toc__category--is-open'); // Add the open class to the parent category
+                        $(this).closest('.toc__category').addClass('toc__category--is-open');
                     });
                 });
         
