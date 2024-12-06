@@ -157,6 +157,19 @@ module.exports = () => {
         // toc event listener to expand and collapse navs
         function tocExpandToggle() {
             const tocLinks = document.querySelectorAll('.toc__container a');
+            
+            // On page load, check for expanded state and set the parent as expanded if needed
+            document.addEventListener("DOMContentLoaded", function() {
+                const expandedSubCategories = document.querySelectorAll('.toc__sub-category-wrap--is-expanded, .toc__topic-wrap--is-expanded');
+                
+                expandedSubCategories.forEach((el) => {
+                    let parent = el.closest('.toc__sub-category');
+                    if (parent) {
+                        parent.classList.add('toc__category--is-open');  // Ensure parent is expanded
+                    }
+                });
+            });
+        
             tocLinks.forEach((link) => {
                 link.addEventListener('click', (event) => {
                     const nextElementSibling = event.target.nextElementSibling;
@@ -164,25 +177,25 @@ module.exports = () => {
         
                     if (link.classList.contains('chevron')) {
                         event.preventDefault();
-                        
+        
                         if (nextElementSibling !== null) {
                             const nextElSiblingClass = nextElementSibling.classList;
         
                             if (nextElSiblingClass.contains('toc__sub-category-wrap')) {
                                 if (nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded')) {
                                     nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode, false); // Collapse parent
+                                    toggleParentisExpandClass(thisElParentNode, false);  // Collapse parent
                                 } else {
                                     nextElSiblingClass.add('toc__sub-category-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode, true); // Expand parent
+                                    toggleParentisExpandClass(thisElParentNode, true);  // Expand parent
                                 }
                             } else if (nextElSiblingClass.contains('toc__topic-wrap')) {
                                 if (nextElSiblingClass.contains('toc__topic-wrap--is-expanded')) {
                                     nextElSiblingClass.remove('toc__topic-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode, false); // Collapse parent
+                                    toggleParentisExpandClass(thisElParentNode, false);  // Collapse parent
                                 } else {
                                     nextElSiblingClass.add('toc__topic-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode, true); // Expand parent
+                                    toggleParentisExpandClass(thisElParentNode, true);  // Expand parent
                                 }
                             }
                         }
@@ -199,6 +212,5 @@ module.exports = () => {
                 el.classList.remove('toc__category--is-open');
             }
         }
-
 
 };
