@@ -62,6 +62,7 @@ module.exports = () => {
             }
         }
         console.log(TOCxml);
+
         $.ajax({
             type: "GET",
             url: TOCxml,
@@ -81,9 +82,22 @@ module.exports = () => {
                 $(".current-page").parent().addClass("toc__topic-wrap--is-expanded");
                 $(".current-page").parent().parent().parent().addClass("toc__sub-category-wrap--is-expanded");
         
+                $(".current-page").parent().addClass("toc__sub-category-wrap--is-expanded");
+                $(".current-page").parent().parent().parent().addClass("toc__sub-category-wrap--is-expanded");
+        
                 ifSiblingElementExists();
                 tocExpandToggle();
                 CheckExpandedLists();
+        
+                if (urlParams.get('region')) {
+                    $(".toc__container").find("a").each(function () {
+                        var href = $(this).attr('href');
+                        if (href) {
+                            href += (href.match(/\?/) ? '&' : '?') + "region=" + urlParams.get('region');
+                            $(this).attr('href', href);
+                        }
+                    });
+                }
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log(jqXHR);
@@ -95,8 +109,10 @@ module.exports = () => {
         // Recursive function to generate the nested TOC tree
         function generateTocTree(entry) {
             var ul = $('<ul class="toc__sub-category-wrap">');  // Create a container for sub-categories or topics
-        
+            
             entry.children().each(function () {
+                var producttags = $(this).attr("conditions") ? $(this).attr("conditions").replace("Product.", "toc__filters--").toLowerCase() + "-js" : '';
+        
                 var link = $(this).attr("Link") ? linkPrefix + $(this).attr("Link") : '#';
                 var title = $(this).attr("Title");
         
@@ -118,24 +134,17 @@ module.exports = () => {
             return ul;  // Return the constructed list for this level
         }
         
-        // Function to toggle the 'toc__category--is-open' class on the parent <li> element
-        function toggleParentisExpandClass(el, expand) {
-            if (expand) {
-                el.classList.add('toc__category--is-open');
-            } else {
-                el.classList.remove('toc__category--is-open');
-            }
-        }
-        
-        // Checks for the expanded state of categories when the page is loaded
+        // checks to see where to add class to rotate the chevron for expanded toc lists
         function CheckExpandedLists() {
             const CURRENT_PAGE = document.querySelectorAll('.current-page') || null;
             CURRENT_PAGE.forEach(el => {
                 el.closest('.toc__sub-category').classList.add('toc__category--is-open');
+                el.closest('.toc__category').classList.add('toc__category--is-open');
             });
         }
         
-        // Remove the chevron if there's no child <ul>
+        // if an anchor in the toc doesn't have a ul as a next sibling
+        // remove the chevron
         function ifSiblingElementExists() {
             const tocLinks = document.querySelectorAll('.toc__container a');
             tocLinks.forEach((btn) => {
@@ -145,42 +154,34 @@ module.exports = () => {
             });
         }
         
-        // TOC event listener to expand and collapse navs
+        // toc event listener to expand and collapse navs
         function tocExpandToggle() {
             const tocLinks = document.querySelectorAll('.toc__container a');
-        
             tocLinks.forEach((link) => {
                 link.addEventListener('click', (event) => {
                     const nextElementSibling = event.target.nextElementSibling;
                     const thisElParentNode = event.target.parentNode;
         
                     if (link.classList.contains('chevron')) {
-                        event.preventDefault();  // Prevent default anchor behavior
-        
+                        event.preventDefault();
                         if (nextElementSibling !== null) {
                             const nextElSiblingClass = nextElementSibling.classList;
         
                             if (nextElSiblingClass.contains('toc__sub-category-wrap')) {
-                                // Toggle sub-category visibility
                                 if (nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded')) {
                                     nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode, false);  // Collapse parent
+                                    toggleParentisExpandClass(thisElParentNode);
                                 } else {
                                     nextElSiblingClass.add('toc__sub-category-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode, true);  // Expand parent
-                                    // Propagate parent expansion
-                                    propagateParentExpansion(thisElParentNode);
+                                    toggleParentisExpandClass(thisElParentNode);
                                 }
                             } else if (nextElSiblingClass.contains('toc__topic-wrap')) {
-                                // Toggle topic visibility
                                 if (nextElSiblingClass.contains('toc__topic-wrap--is-expanded')) {
                                     nextElSiblingClass.remove('toc__topic-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode, false);  // Collapse parent
+                                    toggleParentisExpandClass(thisElParentNode);
                                 } else {
                                     nextElSiblingClass.add('toc__topic-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode, true);  // Expand parent
-                                    // Propagate parent expansion
-                                    propagateParentExpansion(thisElParentNode);
+                                    toggleParentisExpandClass(thisElParentNode);
                                 }
                             }
                         }
@@ -189,13 +190,12 @@ module.exports = () => {
             });
         }
         
-        // Function to propagate parent expansion up the TOC hierarchy
-        function propagateParentExpansion(el) {
-            let parent = el.closest('.toc__sub-category'); // Find the parent <li>
-            while (parent) {
-                parent.classList.add('toc__category--is-open');  // Add the class to mark as expanded
-                parent = parent.closest('.toc__sub-category');  // Move up to the next parent
-            }
+        // toggle class that handles rotating chevron
+        function toggleParentisExpandClass(el) {
+            el.classList.contains('toc__category--is-open') ?
+                el.classList.remove('toc__category--is-open') :
+                el.classList.add('toc__category--is-open');
         }
+
 
 };
