@@ -62,7 +62,6 @@ module.exports = () => {
             }
         }
         console.log(TOCxml);
-
         $.ajax({
             type: "GET",
             url: TOCxml,
@@ -82,22 +81,9 @@ module.exports = () => {
                 $(".current-page").parent().addClass("toc__topic-wrap--is-expanded");
                 $(".current-page").parent().parent().parent().addClass("toc__sub-category-wrap--is-expanded");
         
-                $(".current-page").parent().addClass("toc__sub-category-wrap--is-expanded");
-                $(".current-page").parent().parent().parent().addClass("toc__sub-category-wrap--is-expanded");
-        
                 ifSiblingElementExists();
                 tocExpandToggle();
                 CheckExpandedLists();
-        
-                if (urlParams.get('region')) {
-                    $(".toc__container").find("a").each(function () {
-                        var href = $(this).attr('href');
-                        if (href) {
-                            href += (href.match(/\?/) ? '&' : '?') + "region=" + urlParams.get('region');
-                            $(this).attr('href', href);
-                        }
-                    });
-                }
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.log(jqXHR);
@@ -111,8 +97,6 @@ module.exports = () => {
             var ul = $('<ul class="toc__sub-category-wrap">');  // Create a container for sub-categories or topics
         
             entry.children().each(function () {
-                var producttags = $(this).attr("conditions") ? $(this).attr("conditions").replace("Product.", "toc__filters--").toLowerCase() + "-js" : '';
-        
                 var link = $(this).attr("Link") ? linkPrefix + $(this).attr("Link") : '#';
                 var title = $(this).attr("Title");
         
@@ -134,17 +118,24 @@ module.exports = () => {
             return ul;  // Return the constructed list for this level
         }
         
-        // checks to see where to add class to rotate the chevron for expanded toc lists
+        // Function to toggle the 'toc__category--is-open' class on the parent <li> element
+        function toggleParentisExpandClass(el, expand) {
+            if (expand) {
+                el.classList.add('toc__category--is-open');
+            } else {
+                el.classList.remove('toc__category--is-open');
+            }
+        }
+        
+        // Checks for the expanded state of categories when the page is loaded
         function CheckExpandedLists() {
             const CURRENT_PAGE = document.querySelectorAll('.current-page') || null;
             CURRENT_PAGE.forEach(el => {
                 el.closest('.toc__sub-category').classList.add('toc__category--is-open');
-                el.closest('.toc__category').classList.add('toc__category--is-open');
             });
         }
         
-        // if an anchor in the toc doesn't have a ul as a next sibling
-        // remove the chevron
+        // Remove the chevron if there's no child <ul>
         function ifSiblingElementExists() {
             const tocLinks = document.querySelectorAll('.toc__container a');
             tocLinks.forEach((btn) => {
@@ -154,22 +145,9 @@ module.exports = () => {
             });
         }
         
-        // toc event listener to expand and collapse navs
+        // TOC event listener to expand and collapse navs
         function tocExpandToggle() {
             const tocLinks = document.querySelectorAll('.toc__container a');
-        
-            // On page load, check for expanded state and set the parent as expanded if needed
-            document.addEventListener("DOMContentLoaded", function () {
-                const expandedSubCategories = document.querySelectorAll('.toc__sub-category-wrap--is-expanded, .toc__topic-wrap--is-expanded');
-        
-                expandedSubCategories.forEach((el) => {
-                    let parent = el.closest('.toc__sub-category');
-                    if (parent) {
-                        // Propagate the expansion to parent categories up the chain
-                        propagateParentExpansion(parent);
-                    }
-                });
-            });
         
             tocLinks.forEach((link) => {
                 link.addEventListener('click', (event) => {
@@ -177,29 +155,31 @@ module.exports = () => {
                     const thisElParentNode = event.target.parentNode;
         
                     if (link.classList.contains('chevron')) {
-                        event.preventDefault();
+                        event.preventDefault();  // Prevent default anchor behavior
         
                         if (nextElementSibling !== null) {
                             const nextElSiblingClass = nextElementSibling.classList;
         
                             if (nextElSiblingClass.contains('toc__sub-category-wrap')) {
+                                // Toggle sub-category visibility
                                 if (nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded')) {
                                     nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded');
                                     toggleParentisExpandClass(thisElParentNode, false);  // Collapse parent
                                 } else {
                                     nextElSiblingClass.add('toc__sub-category-wrap--is-expanded');
                                     toggleParentisExpandClass(thisElParentNode, true);  // Expand parent
-                                    // Propagate parent expansion up the chain
+                                    // Propagate parent expansion
                                     propagateParentExpansion(thisElParentNode);
                                 }
                             } else if (nextElSiblingClass.contains('toc__topic-wrap')) {
+                                // Toggle topic visibility
                                 if (nextElSiblingClass.contains('toc__topic-wrap--is-expanded')) {
                                     nextElSiblingClass.remove('toc__topic-wrap--is-expanded');
                                     toggleParentisExpandClass(thisElParentNode, false);  // Collapse parent
                                 } else {
                                     nextElSiblingClass.add('toc__topic-wrap--is-expanded');
                                     toggleParentisExpandClass(thisElParentNode, true);  // Expand parent
-                                    // Propagate parent expansion up the chain
+                                    // Propagate parent expansion
                                     propagateParentExpansion(thisElParentNode);
                                 }
                             }
@@ -207,15 +187,6 @@ module.exports = () => {
                     }
                 });
             });
-        }
-        
-        // Function to toggle the 'toc__category--is-open' class on the parent <li> element
-        function toggleParentisExpandClass(el, expand) {
-            if (expand) {
-                el.classList.add('toc__category--is-open');
-            } else {
-                el.classList.remove('toc__category--is-open');
-            }
         }
         
         // Function to propagate parent expansion up the TOC hierarchy
