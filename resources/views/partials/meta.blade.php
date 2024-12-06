@@ -35,6 +35,71 @@
 	  }
 	}
 </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+	 h2.collapsible {
+            cursor: pointer;
+            padding-left: 30px; /* Add padding to the left for the arrow */
+            position: relative; /* Ensure proper positioning of the arrow */
+        }
+
+        /* Add styling for the arrow */
+        .arrow {
+            position: absolute;
+            left: 0; /* Position the arrow to the left */
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+        }
+
+        /* Add padding to the left of h1/h2 to make space for the arrow */
+         h2.collapsible {
+            padding-left: 25px; /* Adjust as needed */
+        }
+</style>
+<script>
+ $(document).ready(function() {
+
+
+ 	$('section.toc-content').find('h2.collapsible').each(function() {
+    var $heading = $(this);
+    
+    // Create a new div for content-data
+    var $contentDataDiv = $('<div class="content-data"></div>');
+    
+    // Append all following siblings until the next h1 or h2 into the content-data div
+    var nextElements = $heading.nextUntil('h2');
+    $contentDataDiv.append(nextElements);
+    
+    // Insert the content-data div right after the current heading
+    $heading.after($contentDataDiv);
+  });
+
+ 	
+ 	 $('h2.collapsible').each(function() {
+            $(this).prepend('<span class="arrow">►</span>');
+        });
+
+        $('.content-data').hide(); 
+        $('h2.collapsible').click(function() {
+            var $this = $(this); // Store reference to clicked header
+            var $content = $this.next('.content-data'); // Get the associated content
+
+            $content.slideToggle();
+
+            var $arrow = $this.find('.arrow'); 
+
+            // Toggle the arrow text between ▼ and ▲
+            if ($arrow.text() === '►') {
+                $arrow.text('▼'); // Change to up arrow
+            } else {
+                $arrow.text('►'); // Change to down arrow
+            }
+        });
+       
+    });
+</script>
 @php
 isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parameters()["lang"] : $lang = '';
 isset(Route::current()->parameters()["region"]) ? $region = Route::current()->parameters()["region"] : $region = '';
@@ -55,17 +120,17 @@ isset(Route::current()->parameters()["lang"]) ? $lang = Route::current()->parame
 	@php
 	isset(Route::current()->parameters()["product"]) ? $product = Route::current()->parameters()["product"] : $product = '';
 	@endphp
-	@if($product == 'workingpaper' || $product  == 'audit')
+	
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-79260220-1"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCYGGP6FPM"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-		gtag('config', 'UA-79260220-1');
+		gtag('config', 'G-SCYGGP6FPM');
 		</script>
-	@endif
+
 	{{-- google analytics end--}}
 @endif
 

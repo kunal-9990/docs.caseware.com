@@ -129,8 +129,8 @@
     @php
         $redirecturl = str_replace('/'.app('request')->route()->parameters['region'].'/', '/'.session('requestRegion').'/', Request::url());
     @endphp
-    <div data-component="region-lightbox" data-prop-open={{json_encode(session('openRegionLightbox'))}}
-        data-prop-redirect={{$redirecturl}}></div>
+    <!-- <div data-component="region-lightbox" data-prop-open={{json_encode(session('openRegionLightbox'))}}
+        data-prop-redirect={{$redirecturl}}></div> -->
     @endif
 
     @include('partials.cookie-consent')

@@ -164,24 +164,25 @@ module.exports = () => {
         
                     if (link.classList.contains('chevron')) {
                         event.preventDefault();
+                        
                         if (nextElementSibling !== null) {
                             const nextElSiblingClass = nextElementSibling.classList;
         
                             if (nextElSiblingClass.contains('toc__sub-category-wrap')) {
                                 if (nextElSiblingClass.contains('toc__sub-category-wrap--is-expanded')) {
                                     nextElSiblingClass.remove('toc__sub-category-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode);
+                                    toggleParentisExpandClass(thisElParentNode, false); // Collapse parent
                                 } else {
                                     nextElSiblingClass.add('toc__sub-category-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode);
+                                    toggleParentisExpandClass(thisElParentNode, true); // Expand parent
                                 }
                             } else if (nextElSiblingClass.contains('toc__topic-wrap')) {
                                 if (nextElSiblingClass.contains('toc__topic-wrap--is-expanded')) {
                                     nextElSiblingClass.remove('toc__topic-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode);
+                                    toggleParentisExpandClass(thisElParentNode, false); // Collapse parent
                                 } else {
                                     nextElSiblingClass.add('toc__topic-wrap--is-expanded');
-                                    toggleParentisExpandClass(thisElParentNode);
+                                    toggleParentisExpandClass(thisElParentNode, true); // Expand parent
                                 }
                             }
                         }
@@ -190,11 +191,13 @@ module.exports = () => {
             });
         }
         
-        // toggle class that handles rotating chevron
-        function toggleParentisExpandClass(el) {
-            el.classList.contains('toc__category--is-open') ?
-                el.classList.remove('toc__category--is-open') :
+        // Function to toggle the 'toc__category--is-open' class on the parent <li> element
+        function toggleParentisExpandClass(el, expand) {
+            if (expand) {
                 el.classList.add('toc__category--is-open');
+            } else {
+                el.classList.remove('toc__category--is-open');
+            }
         }
 
 
